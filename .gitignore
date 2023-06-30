@@ -1,0 +1,18 @@
+/.env
+/.idea
+/vendor
+*.DS_Store
+.cache-loader
+node_modules
+npm-debug.log
+yarn-error.log
+*.map
+
+# User uploads
+/web/uploads
+/web/transforms
+
+# Generated files
+/web/imager
+/web/build
+/web/mix-manifest.json

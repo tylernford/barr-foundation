@@ -1,0 +1,93 @@
+field: 7a658649-0b9f-4917-a7fb-8c192eb75e51 # Secondary Navigation
+fieldLayouts:
+  ccfc2ad7-d900-487a-bad3-6bfccc7a9266:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a264141d-3bd5-4c73-bc73-4873cd88b3df # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c19ff4d-289a-4aaa-9207-38ad9276d0b6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: af27ad55-3cfd-445a-a28c-fe25480703f4 # Target
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 51998111-ef2e-4721-a9c5-9786fbac9d84
+            userCondition: null
+            warning: null
+            width: 25
+        name: Content
+        uid: 32a04bb0-184b-448f-b0bf-1d10c5a04e88
+        userCondition: null
+fields:
+  a264141d-3bd5-4c73-bc73-4873cd88b3df: # Label
+    columnSuffix: tglqarso
+    contentColumnType: text
+    fieldGroup: null
+    handle: navLabel
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  af27ad55-3cfd-445a-a28c-fe25480703f4: # Target
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navTarget
+    instructions: null
+    name: Target
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Internal Page'
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: internalItem
+name: 'Internal Page'
+sortOrder: 1

@@ -1,0 +1,200 @@
+field: 689b3da4-dd76-4bb5-aac9-5f5238eacd3d # Social Links
+fieldLayouts:
+  74f94ce6-cb4f-4ea3-9fec-43b02c0da55a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 203b4e8b-42f5-4a2b-8708-a3e3940c2f98 # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a98297b5-44c0-4e3c-9f63-da8f1dc55fc5
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: a760930d-4516-4f70-b076-d7831ed9df0a # Target
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 61b32e51-7504-4ef0-ba2d-480a160eceb0
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 088f2e70-0122-404b-922d-a80dd061a35a
+        userCondition: null
+fields:
+  203b4e8b-42f5-4a2b-8708-a3e3940c2f98: # Label
+    columnSuffix: dcjpfayz
+    contentColumnType: text
+    fieldGroup: null
+    handle: navLabel
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a760930d-4516-4f70-b076-d7831ed9df0a: # Target
+    columnSuffix: pjmsuitu
+    contentColumnType: text
+    fieldGroup: null
+    handle: navTarget
+    instructions: null
+    name: Target
+    searchable: false
+    settings:
+      addRowLabel: Account
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - actionURL
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Type
+                -
+                  - handle
+                  - actionType
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - select
+                -
+                  - options
+                  -
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Apple
+                        -
+                          - value
+                          - apple
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Facebook
+                        -
+                          - value
+                          - facebook
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Instagram
+                        -
+                          - value
+                          - instagram
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - LinkedIn
+                        -
+                          - value
+                          - linkedin
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Snapchat
+                        -
+                          - value
+                          - snapchat
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Spotify
+                        -
+                          - value
+                          - spotify
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Twitter
+                        -
+                          - value
+                          - twitter
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - YouTube
+                        -
+                          - value
+                          - youtube
+                        -
+                          - default
+                          - false
+      defaults: null
+      maxRows: 1
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+handle: externalItem
+name: 'Social Account'
+sortOrder: 1

@@ -1,0 +1,150 @@
+field: 8b6f4e86-b264-4d36-99a2-2bd8c177c514 # Primary Navigation
+fieldLayouts:
+  efed81c1-f09e-4308-9666-353f4b9bc577:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5bd95319-8b0b-4be7-8a7f-b40373b24105 # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e15a4699-8bdd-499a-ae61-9958178a4b29
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: d8653b35-a1ac-4282-8083-902f060bcc6e # Target
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: efd26263-07c8-407a-9610-9f0dd2b8287b
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: c954d828-974b-402e-92e2-3057b737e6ed # Menu
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27ca75c4-87a7-4c26-81c4-582e6d002d54
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: adfc9440-8ef2-4063-a70a-3b9fc6567521
+        userCondition: null
+fields:
+  5bd95319-8b0b-4be7-8a7f-b40373b24105: # Label
+    columnSuffix: qmytjhkk
+    contentColumnType: text
+    fieldGroup: null
+    handle: navLabel
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c954d828-974b-402e-92e2-3057b737e6ed: # Menu
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navMenu
+    instructions: 'Assign either an internal or external page to the menu item.'
+    name: Menu
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1239609564
+      columns:
+        __assoc__:
+          -
+            - 34277eb7-c13d-43b3-becd-be1f5d99e24d
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 208aca1e-823d-4a72-9486-d1009a9b7227
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 3627c784-eaaf-466a-8d92-f26f0ef310ee
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_navmenu}}'
+      fieldLayout: table
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Add a menu item'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  d8653b35-a1ac-4282-8083-902f060bcc6e: # Target
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navTarget
+    instructions: null
+    name: Target
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Internal Page'
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: nestedItem
+name: 'Nested Menu'
+sortOrder: 3

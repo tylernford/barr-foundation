@@ -1,0 +1,111 @@
+/* _config.scss */
+@use "sass:math";
+/* ---------------------------------------------------------------------
+ _config contains project-specific settings
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------------
+ Breakpoints Map
+------------------------------------------------------------------------ */
+$breakpoints: (
+	"xxs": "0",
+	"xs": "375px",
+	"sm": "576px",
+	"md": "768px", 
+	"lg": "1024px",
+	"xl": "1280px",
+	"xxl": "1440px"
+);
+
+/* ---------------------------------------------------------------------
+ Fonts
+ font url is relative to our compiled stylesheet
+------------------------------------------------------------------------ */
+@mixin getFont($fontname, $filename) {
+	
+	@font-face {
+		$downloadable-path: '../fonts/#{$filename}/#{$filename}';
+		$local-path: '#{$filename}';
+		font-family: $fontname;
+		font-display: block; // prevent FOUT
+		src: local('#{$local-path}.eot'), url('#{$downloadable-path}.eot'),
+		     local('#{$local-path}.woff'), url('#{$downloadable-path}.woff') format('woff'),
+             local('#{$local-path}.woff2'), url('#{$downloadable-path}.woff2') format('woff2'),
+		     local('#{$local-path}.ttf'), url('#{$downloadable-path}.ttf') format('truetype');
+	}
+}
+
+// Define project fonts
+$primary-name: 'Surt Bold';
+$primary-file: 'surt-bold';
+$primary-serif: 'sans-serif'; // e.g. sans-serif || serif
+
+$secondary-name: 'Surt Light';
+$secondary-file: 'surt-light';
+$secondary-serif: 'sans-serif';
+
+$tertiary-name: '';
+$tertiary-file: '';
+$tertiary-serif: '';
+
+@include getFont($primary-name, $primary-file);
+@include getFont($secondary-name, $secondary-file);
+@include getFont($tertiary-name, $tertiary-file);
+
+$font-primary: $primary-name, $primary-serif;
+$font-secondary: $secondary-name, $secondary-serif;
+$font-tertiary: $tertiary-name, $tertiary-serif;
+
+/* ---------------------------------------------------------------------
+ palettes() Map
+ Maps global color families, assigning a "core" or default to each one;
+ Hexidecimals per family should be defined in increments of 10.
+
+ Example:
+
+ 'yellow': (
+	core: #FBF8E9,
+	10: #FFA319,
+	20: #F7EDBA,
+	30: #EC9213
+  )
+------------------------------------------------------------------------ */
+$palettes: (
+
+	'white': (
+		core: #FFFFFF
+	),
+	'black': (
+		core: #000000
+	)
+
+);
+
+/* ---------------------------------------------------------------------
+ getColor()
+ Retrieves color from palettes() map based on hue, and optional tone parameters
+
+ // Props to https://www.ibm.com/design/language/resources for the conditional
+ // which enforces the %10 convention within the palette map
+
+ // Usage:
+ // background: getColor('gray', 10); // #ecf0f4
+ // background: getColor('gray');     // #5E788D
+------------------------------------------------------------------------ */
+@function getColor($color, $tone: 'core') {
+
+	@if type-of($tone) == 'number' {
+
+		@if $tone % 10 == $tone {
+			$tone: $tone * 10;
+		}
+
+	}
+
+	$color-family: map-get($palettes, $color);
+	// Make sure color family exists; default to black
+	$color-hex: if($color-family,map-get($color-family, $tone),#000);
+
+	@return $color-hex;
+
+}

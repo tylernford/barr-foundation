@@ -1,0 +1,19 @@
+columnSuffix: zgjmckjc
+contentColumnType: text
+fieldGroup: 0d4f7ac0-2b34-4c5d-a241-66e53ad33d2d # Images
+handle: byline
+instructions: 'Attribute the piece to its artist'
+name: Byline
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

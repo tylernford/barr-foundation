@@ -1,0 +1,52 @@
+childBlocks: null
+conditions: null
+description: null
+enabled: true
+field: 85c752c0-899b-4d86-ad80-757b76b23ea2 # Page Builder: Default
+fieldLayouts:
+  fac46095-1145-41ba-ab8f-914d536f279f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 506fdf00-1b11-44fc-8731-932352cd324f # Section Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c2b31bdf-4d14-450d-9b58-0ff466613c6c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3773b065-a1ba-4cb5-9736-0c43859bf5e4 # Carousel Block
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c9afeccf-d864-43db-b806-7d84f2524bf2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Carousel
+        uid: 3b6e27b8-e758-451d-9419-181c0316a97c
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: carousel
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Carousel
+sortOrder: 4
+topLevel: true

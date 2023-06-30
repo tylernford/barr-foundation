@@ -1,0 +1,182 @@
+{# _modals.html #}
+{% import 'macros/_assets' as assets %}
+
+{# popupModal()
+
+    @param {str} $selector - base class name, js hook
+    @param {str} $tmpl     - path/to/template 
+    @param {obj} $obj      - template args
+
+    Example usage:
+    {% set selector, tmpl = 'newsletter', 'partials/_newsletter-form' %}
+    {% set obj = {
+        'newsletterId': 'newsletter',
+        'newsletterName': 'newsletterForm'
+    } %}
+
+    {{ dialog.popupDialog(selector,tmpl,obj) }}
+
+#}
+{% macro popupModal(selector,tmpl,obj = null) %}
+<div 
+    class="{{ selector }}-dialog"
+    id="{{ selector }}_dialog"
+    aria-labelledby="{{ selector }}_dialog_title"
+    aria-hidden="true"
+    tab-index="-1">
+    <div 
+        class="{{ selector }}-content" 
+        id="{{ selector }}_content" 
+        role="document">
+        <div class="{{ selector }}-wrapper">
+            <button 
+                id="close_dialog" 
+                class="{{ selector }}-trigger {{ selector }}-trigger--close" 
+                role="button" 
+                type="button"  
+                aria-label="Close dialog"
+                tabindex="-1"
+                data-popup-close="{{ selector }}">
+                <span class="{{ selector }}-trigger-label">Close</span>
+                <svg class="{{ selector }}-trigger-icon">
+                    <use xlink:href="/build/spritemap.svg#icon-close-18"></use>
+                </svg>
+            </button>
+
+            {% if obj %}
+                {% include tmpl with obj %}
+            {% else %}
+                {% include tmpl %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{# staticModal()
+
+    Initialized as an A11y Dialog 
+
+    @param {str} $selector - base class name, js hook
+    @param {str} $tmpl     - path/to/template 
+    @param {obj} $obj      - template args
+
+    Example usage:
+    {% set selector, tmpl = 'bio', 'partials/_bio' %}
+    {% set obj = {
+        'id': entry.id
+    } %}
+
+    {{ dialog.modalDialog(selector,tmpl,obj) }}
+
+#}
+{% macro staticModal(selector,tmpl,obj = null) %}
+{% set isHidden = 'true' %}
+<div 
+    class="{{ selector }}-dialog"
+    id="{{ selector }}_dialog"
+    aria-labelledby="{{ selector }}_dialog_title"
+    aria-hidden="{{ isHidden }}">
+    <div 
+        class="{{ selector }}-overlay" 
+        data-a11y-dialog-hide="{{ selector }}_dialog">
+    </div>
+    
+    <div 
+        class="{{ selector }}-content" 
+        id="{{ selector }}_content" 
+        role="document">
+        <div class="{{ selector }}-wrapper">
+            <button 
+                id="close_dialog" 
+                class="{{ selector }}-trigger {{ selector }}-trigger--close" 
+                role="button" 
+                type="button" 
+                data-a11y-dialog-hide="{{ selector }}_dialog" 
+                aria-label="Close dialog">
+                <span class="{{ selector }}-trigger-label">Close</span>
+                <svg class="{{ selector }}-trigger-icon">
+                    <use xlink:href="/build/spritemap.svg#icon-close-18"></use>
+                </svg>
+            </button>
+
+            {% if obj %}
+                {% include tmpl with obj %}
+            {% else %}
+                {% include tmpl %}
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+
+{% endmacro %}
+
+{# sprigModal()
+
+    1. Initialized as an A11y Dialog 
+    2. Toggles Sprig modal state
+
+    @param {str} $selector - base class name, js hook
+    @param {str} $modal    - modal state, e.g. on|off
+    @param {str} $tmpl     - path/to/template 
+    @param {obj} $obj      - template args
+
+    Example usage:
+    {% set selector, tmpl = 'bio', 'partials/_bio' %}
+    {% set obj = {
+        'id': entry.id
+    } %}
+
+    {{ dialog.modalDialog(selector,tmpl,obj) }}
+
+#}
+{% macro sprigModal(selector,modal,tmpl,obj = null) %}
+
+{% set modal = modal|default('off') %}
+{% set isHidden = modal == 'on' ? 'false' : 'true' %}
+<div 
+    class="{{ selector }}-dialog"
+    id="{{ selector }}_dialog"
+    aria-labelledby="{{ selector }}_dialog_title"
+    aria-hidden="{{ isHidden }}">
+    <div 
+        class="{{ selector }}-overlay" 
+        sprig
+        s-val:modal="off" 
+        s-push-url="."
+        data-a11y-dialog-hide="{{ selector }}_dialog">
+    </div>
+    
+    <div 
+        class="{{ selector }}-content" 
+        id="{{ selector }}_content" 
+        role="document">
+        <div class="{{ selector }}-wrapper">
+            <button 
+                id="close_dialog" 
+                class="{{ selector }}-trigger {{ selector }}-trigger--close" 
+                role="button" 
+                type="button" 
+                data-a11y-dialog-hide="{{ selector }}_dialog" 
+                sprig
+                s-val:modal="off" 
+                aria-label="Close dialog"
+                s-push-url=".">
+                <span class="{{ selector }}-trigger-label">Close</span>
+                <svg class="{{ selector }}-trigger-icon">
+                    <use xlink:href="/build/spritemap.svg#icon-close-18"></use>
+                </svg>
+            </button>
+
+            {% if obj %}
+                {% include tmpl with obj %}
+            {% else %}
+                {% include tmpl %}
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+
+{% endmacro %}

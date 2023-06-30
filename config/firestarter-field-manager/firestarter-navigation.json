@@ -1,0 +1,431 @@
+[
+    {
+        "name": "Firestarter Navigation",
+        "handle": "firestarterNavigation",
+        "instructions": "Nav items can be reordered via drag & drop.",
+        "required": null,
+        "searchable": false,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Matrix",
+        "settings": {
+            "minBlocks": null,
+            "maxBlocks": null,
+            "contentTable": "{{%matrixcontent_firestarternavigation}}",
+            "propagationMethod": "all",
+            "propagationKeyFormat": null,
+            "blockTypes": {
+                "new1": {
+                    "name": "Internal Page",
+                    "handle": "internalItem",
+                    "fields": {
+                        "new1": {
+                            "name": "Label",
+                            "handle": "navLabel",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 25
+                        },
+                        "new2": {
+                            "name": "Target",
+                            "handle": "navTarget",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Entries",
+                            "typesettings": {
+                                "allowSelfRelations": false,
+                                "localizeRelations": false,
+                                "maxRelations": 1,
+                                "minRelations": null,
+                                "selectionLabel": "Internal Page",
+                                "showSiteMenu": true,
+                                "source": null,
+                                "sources": "*",
+                                "targetSiteId": null,
+                                "validateRelatedElements": false,
+                                "viewMode": null,
+                                "selectionCondition": {
+                                    "elementType": "craft\\elements\\Entry",
+                                    "fieldContext": "global",
+                                    "class": "craft\\elements\\conditions\\entries\\EntryCondition",
+                                    "conditionRules": []
+                                }
+                            },
+                            "width": 25
+                        }
+                    }
+                },
+                "new2": {
+                    "name": "External Link",
+                    "handle": "externalItem",
+                    "fields": {
+                        "new1": {
+                            "name": "Label",
+                            "handle": "navLabel",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 25
+                        },
+                        "new2": {
+                            "name": "Target",
+                            "handle": "navTarget",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Table",
+                            "typesettings": {
+                                "addRowLabel": "External Link",
+                                "maxRows": 1,
+                                "minRows": null,
+                                "columns": {
+                                    "col1": {
+                                        "heading": "URL",
+                                        "handle": "actionURL",
+                                        "width": "",
+                                        "type": "singleline"
+                                    },
+                                    "col2": {
+                                        "heading": "Type",
+                                        "handle": "actionType",
+                                        "width": "",
+                                        "type": "select",
+                                        "options": [
+                                            {
+                                                "label": "External",
+                                                "value": "external",
+                                                "default": true
+                                            },
+                                            {
+                                                "label": "Apple",
+                                                "value": "apple",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "Download",
+                                                "value": "download",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "Email",
+                                                "value": "email",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "Facebook",
+                                                "value": "facebook",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "Instragram",
+                                                "value": "instragram",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "LinkedIn",
+                                                "value": "linkedin",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "Snapchat",
+                                                "value": "snapchat",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "Spotify",
+                                                "value": "spotify",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "Twitter",
+                                                "value": "twitter",
+                                                "default": false
+                                            },
+                                            {
+                                                "label": "YouTube",
+                                                "value": "youtube",
+                                                "default": false
+                                            }
+                                        ]
+                                    }
+                                },
+                                "defaults": null,
+                                "columnType": "text"
+                            },
+                            "width": 50
+                        }
+                    }
+                },
+                "new3": {
+                    "name": "Nested Menu",
+                    "handle": "nestedItem",
+                    "fields": {
+                        "new1": {
+                            "name": "Label",
+                            "handle": "navLabel",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 25
+                        },
+                        "new2": {
+                            "name": "Target",
+                            "handle": "navTarget",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Entries",
+                            "typesettings": {
+                                "allowSelfRelations": false,
+                                "localizeRelations": false,
+                                "maxRelations": 1,
+                                "minRelations": null,
+                                "selectionLabel": "Internal Page",
+                                "showSiteMenu": true,
+                                "source": null,
+                                "sources": "*",
+                                "targetSiteId": null,
+                                "validateRelatedElements": false,
+                                "viewMode": null,
+                                "selectionCondition": {
+                                    "elementType": "craft\\elements\\Entry",
+                                    "fieldContext": "global",
+                                    "class": "craft\\elements\\conditions\\entries\\EntryCondition",
+                                    "conditionRules": []
+                                }
+                            },
+                            "width": 25
+                        },
+                        "new3": {
+                            "name": "Menu",
+                            "handle": "navMenu",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "verbb\\supertable\\fields\\SuperTableField",
+                            "typesettings": {
+                                "minRows": null,
+                                "maxRows": null,
+                                "contentTable": "{{%stc_9_navmenu}}",
+                                "propagationMethod": "all",
+                                "propagationKeyFormat": null,
+                                "staticField": null,
+                                "fieldLayout": "table",
+                                "selectionLabel": "Add a menu item",
+                                "columns": {
+                                    "5c8b3b5a-2a84-4b30-a685-dae7dd3c1c16": {
+                                        "width": "20%"
+                                    },
+                                    "7fdab071-fbcb-4eba-a6df-e521e9721fcb": {
+                                        "width": "20%"
+                                    },
+                                    "39c9b12a-5974-466a-ab50-fe517ff92263": {
+                                        "width": "60%"
+                                    }
+                                },
+                                "changedFieldIndicator": 1378105737,
+                                "blockTypeFields": 0,
+                                "blockTypes": {
+                                    "new1": {
+                                        "fields": {
+                                            "new1": {
+                                                "name": "Label",
+                                                "handle": "menuLabel",
+                                                "required": false,
+                                                "instructions": null,
+                                                "searchable": false,
+                                                "translationMethod": "none",
+                                                "translationKeyFormat": null,
+                                                "type": "craft\\fields\\PlainText",
+                                                "typesettings": {
+                                                    "uiMode": "normal",
+                                                    "placeholder": null,
+                                                    "code": false,
+                                                    "multiline": false,
+                                                    "initialRows": 4,
+                                                    "charLimit": null,
+                                                    "byteLimit": null,
+                                                    "columnType": null
+                                                },
+                                                "width": 100
+                                            },
+                                            "new2": {
+                                                "name": "Target",
+                                                "handle": "menuEntry",
+                                                "required": false,
+                                                "instructions": null,
+                                                "searchable": false,
+                                                "translationMethod": "site",
+                                                "translationKeyFormat": null,
+                                                "type": "craft\\fields\\Entries",
+                                                "typesettings": {
+                                                    "allowSelfRelations": false,
+                                                    "localizeRelations": false,
+                                                    "maxRelations": 1,
+                                                    "minRelations": null,
+                                                    "selectionLabel": "Internal Page",
+                                                    "showSiteMenu": true,
+                                                    "source": null,
+                                                    "sources": "*",
+                                                    "targetSiteId": null,
+                                                    "validateRelatedElements": false,
+                                                    "viewMode": null,
+                                                    "selectionCondition": {
+                                                        "elementType": "craft\\elements\\Entry",
+                                                        "fieldContext": "global",
+                                                        "class": "craft\\elements\\conditions\\entries\\EntryCondition",
+                                                        "conditionRules": []
+                                                    }
+                                                },
+                                                "width": 100
+                                            },
+                                            "new3": {
+                                                "name": "Target",
+                                                "handle": "menuLink",
+                                                "required": false,
+                                                "instructions": null,
+                                                "searchable": false,
+                                                "translationMethod": "none",
+                                                "translationKeyFormat": null,
+                                                "type": "craft\\fields\\Table",
+                                                "typesettings": {
+                                                    "addRowLabel": "External Link",
+                                                    "maxRows": 1,
+                                                    "minRows": null,
+                                                    "columns": {
+                                                        "col1": {
+                                                            "heading": "URL",
+                                                            "handle": "actionLabel",
+                                                            "width": "",
+                                                            "type": "url"
+                                                        },
+                                                        "col2": {
+                                                            "heading": "Type",
+                                                            "handle": "actionType",
+                                                            "width": "",
+                                                            "type": "select",
+                                                            "options": [
+                                                                {
+                                                                    "label": "External",
+                                                                    "value": "external",
+                                                                    "default": true
+                                                                },
+                                                                {
+                                                                    "label": "Apple",
+                                                                    "value": "apple",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "Download",
+                                                                    "value": "download",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "Email",
+                                                                    "value": "email",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "Facebook",
+                                                                    "value": "facebook",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "Instagram",
+                                                                    "value": "instagram",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "LinkedIn",
+                                                                    "value": "linkedin",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "Snapchat",
+                                                                    "value": "snapchat",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "Spotify",
+                                                                    "value": "spotify",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "Twitter",
+                                                                    "value": "twitter",
+                                                                    "default": false
+                                                                },
+                                                                {
+                                                                    "label": "YouTube",
+                                                                    "value": "youtube",
+                                                                    "default": false
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    "defaults": null,
+                                                    "columnType": "text"
+                                                },
+                                                "width": 100
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "width": 100
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

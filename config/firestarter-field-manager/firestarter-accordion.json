@@ -1,0 +1,181 @@
+[
+    {
+        "name": "Firestarter Accordion",
+        "handle": "firestarterAccordion",
+        "instructions": null,
+        "required": null,
+        "searchable": false,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Matrix",
+        "settings": {
+            "minBlocks": null,
+            "maxBlocks": null,
+            "contentTable": "{{%matrixcontent_firestarteraccordion}}",
+            "propagationMethod": "all",
+            "propagationKeyFormat": null,
+            "blockTypes": {
+                "new1": {
+                    "name": "Accordion",
+                    "handle": "accordion",
+                    "fields": {
+                        "new1": {
+                            "name": "Headline",
+                            "handle": "headline",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 100
+                        },
+                        "new2": {
+                            "name": "Content",
+                            "handle": "copy",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\redactor\\Field",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "redactorConfig": null,
+                                "availableVolumes": "*",
+                                "availableTransforms": "",
+                                "showUnpermittedVolumes": false,
+                                "showUnpermittedFiles": false,
+                                "showHtmlButtonForNonAdmins": false,
+                                "configSelectionMode": "choose",
+                                "manualConfig": "",
+                                "defaultTransform": "",
+                                "purifierConfig": null,
+                                "removeInlineStyles": false,
+                                "removeEmptyTags": false,
+                                "removeNbsp": false,
+                                "purifyHtml": true,
+                                "columnType": "text"
+                            },
+                            "width": 100
+                        },
+                        "new3": {
+                            "name": "Action",
+                            "handle": "action",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "modules\\controlpanel\\fields\\FirestarterActionTable",
+                            "typesettings": {
+                                "addRowLabel": "Add an action",
+                                "maxRows": null,
+                                "minRows": null,
+                                "columns": {
+                                    "col1": {
+                                        "heading": "Label",
+                                        "handle": "fieldLabel",
+                                        "type": "singleline"
+                                    },
+                                    "col2": {
+                                        "heading": "URL",
+                                        "handle": "fieldURL",
+                                        "type": "singleline"
+                                    },
+                                    "col3": {
+                                        "heading": "Type",
+                                        "handle": "fieldType",
+                                        "type": "select",
+                                        "options": {
+                                            "": "Select an action type",
+                                            "download": "Download",
+                                            "email": "Email",
+                                            "external": "External",
+                                            "internal": "Internal",
+                                            "apple": "Apple",
+                                            "facebook": "Facebook",
+                                            "instagram": "Instagram",
+                                            "linkedin": "LinkedIn",
+                                            "twitter": "Twitter",
+                                            "snapchat": "Snapchat",
+                                            "spotify": "Spotify",
+                                            "youtube": "YouTube"
+                                        }
+                                    },
+                                    "col4": {
+                                        "heading": "Variant",
+                                        "handle": "fieldVariant",
+                                        "type": "select",
+                                        "options": {
+                                            "button": "Button",
+                                            "link": "Link"
+                                        }
+                                    }
+                                },
+                                "defaults": [
+                                    []
+                                ],
+                                "columnType": "text"
+                            },
+                            "width": 100
+                        },
+                        "new4": {
+                            "name": "Image",
+                            "handle": "image",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Assets",
+                            "typesettings": {
+                                "restrictLocation": false,
+                                "restrictedLocationSource": "volume:6573ecfe-3a41-420a-9907-8a6299b0633e",
+                                "restrictedLocationSubpath": null,
+                                "allowSubfolders": false,
+                                "restrictedDefaultUploadSubpath": null,
+                                "defaultUploadLocationSource": "volume:6573ecfe-3a41-420a-9907-8a6299b0633e",
+                                "defaultUploadLocationSubpath": null,
+                                "allowUploads": true,
+                                "restrictFiles": false,
+                                "allowedKinds": null,
+                                "showUnpermittedVolumes": false,
+                                "showUnpermittedFiles": false,
+                                "previewMode": "full",
+                                "allowSelfRelations": false,
+                                "localizeRelations": false,
+                                "maxRelations": 1,
+                                "minRelations": null,
+                                "selectionLabel": "Add an image",
+                                "showSiteMenu": true,
+                                "source": null,
+                                "sources": "*",
+                                "targetSiteId": null,
+                                "validateRelatedElements": false,
+                                "viewMode": "large",
+                                "selectionCondition": {
+                                    "elementType": "craft\\elements\\Asset",
+                                    "fieldContext": "global",
+                                    "class": "craft\\elements\\conditions\\assets\\AssetCondition",
+                                    "conditionRules": []
+                                }
+                            },
+                            "width": 100
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

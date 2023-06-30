@@ -1,0 +1,57 @@
+/* _flyout-content.scss */
+@use "../utils/_utils" as *;
+@use "sass:math";
+@use "sass:meta";
+
+/* ---------------------------------------------------------------------
+  Flyout Content
+------------------------------------------------------------------------ */
+@mixin flyoutContent($selector,$responsive:true) {
+    
+    #{$selector} {
+        
+        &-content {
+            $fly-transition: transform .5s ease-in-out; 
+
+            height: 100vh;
+            width: 100vw;
+            left: 0;
+            top: 0;
+            position: fixed;
+            transform: translateX(100vw);
+            z-index: 100;
+
+            // Hooks added/removed via scripts/components/flyoutContent.js
+            // The closing hook enables a nice transition
+            // without incurring the transition on load
+            #{$selector}._is-closing & {
+                transform: translateX(100vw);
+                
+                @media ( prefers-reduced-motion: no-preference ) {
+                    transition: $fly-transition;
+                }
+
+            }
+
+            #{$selector}._is-open & {
+                transform: translateX(0);
+
+                @media ( prefers-reduced-motion: no-preference ) {
+                    transition: $fly-transition;
+                }
+            }
+
+            @if ( $responsive ) {
+                @include breakpoint(lg) {
+                    height: auto;
+                    width: auto;
+                    position: static;
+                    transform: translateX(0);
+                }
+            }
+        
+        }
+
+    }
+
+}

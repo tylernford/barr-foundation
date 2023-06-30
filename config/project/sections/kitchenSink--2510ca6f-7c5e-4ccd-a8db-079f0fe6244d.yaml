@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: false
+handle: kitchenSink
+name: 'Kitchen Sink'
+propagationMethod: all
+siteSettings:
+  915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr
+    enabledByDefault: true
+    hasUrls: true
+    template: kitchen-sink/_entry
+    uriFormat: kitchen-sink
+type: single

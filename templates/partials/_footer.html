@@ -1,0 +1,22 @@
+{% set env = getenv('CRAFT_ENVIRONMENT') %}
+
+<footer id="footer">
+</footer>
+
+<div id="viewport" class="viewport{{ env == 'dev' ? ' _is-debug' : '' }}"></div>
+
+{% block js %}
+
+{# Sprig #}
+{# Uncomment once Sprig is installed
+{{ sprig.script }}
+#}
+
+{# Scripts: Twigpack #}
+{# Uncomment once Twigpack is installed
+{{ craft.twigpack.includeJsModule("/build/scripts/manifest.js") }}
+{{ craft.twigpack.includeJsModule("/build/scripts/vendor.js") }}
+{{ craft.twigpack.includeJsModule("/build/scripts/main.js") }}
+#}
+
+{% endblock %}

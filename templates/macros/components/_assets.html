@@ -1,0 +1,71 @@
+{# _assets.html #}
+
+{#  supportsWebp: 
+    See https://imager-x.spacecat.ninja/usage/webp-avif-jpegxl.html#installing-an-encoder 
+#}
+{% macro supportsWebp() %}
+    {{ craft.imager.clientSupports('webp') }}
+{% endmacro %}
+
+{#  transformedImage: 
+    Assumes ImagerX plugin is installed; 
+    see config/imager-x-transforms.php for image definitions
+
+    @param {str} $hook   - base class name
+    @param {obj} $image  - image object
+    @param {str} $handle - imagerx handle (optional, if transforms are passed into $obj) 
+    @param {obj} $obj    - wildcard storage (optional)
+
+    Optional Example $obj:
+    {% set obj = {
+        'variant': '',
+        'lazy': false,
+        'transforms': $transforms
+    }%}
+
+    Example Template Usage:
+    {% set image = myBlock.image|length and myBlock.image.one() is not null ? myBlock.image.one() : null %}
+    {% set hook, handle = 'myImageContainer', 'myImageHandle' %}
+    {% if image %}
+        {{ assets.transformedImage(hook,image,handle) }}
+    {% endif %}
+
+#}
+{% macro transformedImage(hook,image,handle = null,obj = null) %}
+
+{# Set defaults #}
+{% set variant, attrs, lazy, transforms = null, null, null, null %}
+{% set dominantColor = '#CCC' %}
+{# Check for wildcards #}
+{% set keys = obj is not null ? obj|keys : null %}
+{% if keys %}
+    {% set variant = ('variant' in obj|keys) ? obj['variant'] : null %}
+    {% set lazy = ('lazy' in obj|keys) ? obj['lazy'] : null %}
+    {% set transforms = ('transforms' in obj|keys) ? obj['transforms'] : null %}
+{% endif %}
+{# Define transforms (if not yet defined); create webp images, if possible #}
+{% if not transforms %}
+    {% set handle = _self.supportsWebp() ? "#{handle}-webp" : handle %}
+    {% set transforms = craft.imagerx.transformImage(image,handle) %} 
+{% endif %}
+
+{% set placeholder = craft.imager.placeholder({ width: 16, height: 16, color: dominantColor }) %}
+
+<picture 
+    class="{{ hook }}-asset{% if variant %} {{ hook }}-asset--{{ variant }}{% endif %}" 
+    style="--bg-color: {{ dominantColor }}">
+    <img 
+        class="{{ hook }}-asset-image"
+        src="{{ placeholder }}" 
+        height="100%"
+        width="100%"
+        sizes="100vw" 
+        {% if transforms %}
+        srcset="{{ transforms | srcset }}"
+        {% endif %}
+        {% if lazy %}
+        loading="lazy"
+        {% endif %}
+        alt="{{ image.alt ?? image.caption ?? null }}"> 
+</picture>
+{% endmacro %}

@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 3b2f52f1-19d0-45f7-b3f6-e1e72a135f1c # Global
+handle: footerSecondaryNavigation
+instructions: 'Nav items can be reordered via drag & drop.'
+name: 'Footer Secondary Navigation'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_footersecondarynavigation}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,59 @@
+{% set env = getenv('CRAFT_ENVIRONMENT') %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {# SEO: SEO Ether plugin or basic #}
+    {#
+    {% include 'partials/_seo-ether.html' %}
+    {% include 'partials/_seo-basic.html' %}
+    #}
+
+    {# Styles: Twigpack #}
+    {# Uncomment once Twigpack is installed #}
+	{{ craft.twigpack.includeCssModule("/build/styles/main.css", false) }}
+    
+
+    <link rel="author" href="{{ siteUrl }}humans.txt">
+
+    {# Site Icons #}
+    {# Uncomment once icons are good-to-go
+    {% set iconPath = "/images/icons/" %}
+    <link rel="icon" sizes="192x192" href="{{ alias('@assetBasePath' ~ iconPath ~ 'icon-192.png') }}">
+    <link rel="apple-touch-icon" href="{{ alias('@assetBasePath' ~ iconPath ~ 'apple-touch-icon.png') }}">
+    <link rel="mask-icon" href="{{ alias('@assetBasePath' ~ iconPath ~ 'icon-pinned-16.svg') }}" color="#">
+    <link rel="shortcut icon" type="image/ico" href="{{ alias('@assetBasePath' ~ iconPath ~ 'favicon.ico') }}">
+    #}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    {# Uncomment once GA is ready
+    {% if env == 'production' %}
+    {% set gid = "" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ gid|raw }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', {{ gid|raw }});
+    </script>
+    {% endif %}
+    #}
+
+    {# SVG map #}
+    {# Uncomment once SVG package installed
+    <script>
+		var ajax = new XMLHttpRequest();
+		ajax.open('GET', '/build/spritemap.svg', true);
+		ajax.send();
+		ajax.onload = function(e) {
+			var div = document.createElement('div');
+			div.className = 'svg-defs _is-hidden';
+			div.setAttribute('aria-hidden', 'true');
+			div.innerHTML = ajax.responseText;
+			document.body.insertBefore(div, document.body.childNodes[0]);
+		}
+	</script>
+    #}
+</head>
+

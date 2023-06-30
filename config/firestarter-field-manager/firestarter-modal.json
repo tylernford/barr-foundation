@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Firestarter Modal",
+        "handle": "firestarterModal",
+        "instructions": null,
+        "required": null,
+        "searchable": false,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Entries",
+        "settings": {
+            "allowSelfRelations": false,
+            "localizeRelations": false,
+            "maxRelations": null,
+            "minRelations": null,
+            "selectionLabel": null,
+            "showSiteMenu": true,
+            "source": null,
+            "sources": "*",
+            "targetSiteId": null,
+            "validateRelatedElements": false,
+            "viewMode": null,
+            "selectionCondition": {
+                "elementType": "craft\\elements\\Entry",
+                "fieldContext": "global",
+                "class": "craft\\elements\\conditions\\entries\\EntryCondition",
+                "conditionRules": []
+            }
+        }
+    }
+]

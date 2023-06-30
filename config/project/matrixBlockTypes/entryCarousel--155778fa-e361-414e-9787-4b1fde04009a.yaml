@@ -1,0 +1,61 @@
+field: 3773b065-a1ba-4cb5-9736-0c43859bf5e4 # Carousel Block
+fieldLayouts:
+  75ecf1fc-1bdb-492f-ae73-fb15b54194a6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a1fe1670-32f8-416e-8fd1-7f624fa9ee71 # Entries
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1084cc3-2f66-48ab-aad1-c7e9030a523e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 56ced8fa-e873-49af-ba18-74e6325abd8f
+        userCondition: null
+fields:
+  a1fe1670-32f8-416e-8fd1-7f624fa9ee71: # Entries
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryList
+    instructions: 'Add up to 20 entries. Slides can be reordered by drag & drop.'
+    name: Entries
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 20
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: entryCarousel
+name: 'Entry Carousel'
+sortOrder: 2

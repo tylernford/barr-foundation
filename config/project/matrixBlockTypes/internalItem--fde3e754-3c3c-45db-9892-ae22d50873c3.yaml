@@ -1,0 +1,93 @@
+field: 8b6f4e86-b264-4d36-99a2-2bd8c177c514 # Primary Navigation
+fieldLayouts:
+  b5e49618-429f-4930-8306-d9e56d2ea293:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ef5ba8a1-901c-4a16-bdb6-f03dacd35312 # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e0970481-f202-4915-aedf-ef5656e4f708
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 3b0ee85b-3a90-4147-95da-96c517b5b684 # Target
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d929bf0e-2ed4-4250-a6f0-9ffba33094ae
+            userCondition: null
+            warning: null
+            width: 25
+        name: Content
+        uid: 4bf7b1f5-8580-4672-9d0d-7d95e34c4052
+        userCondition: null
+fields:
+  3b0ee85b-3a90-4147-95da-96c517b5b684: # Target
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navTarget
+    instructions: null
+    name: Target
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Internal Page'
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  ef5ba8a1-901c-4a16-bdb6-f03dacd35312: # Label
+    columnSuffix: wqboqhha
+    contentColumnType: text
+    fieldGroup: null
+    handle: navLabel
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: internalItem
+name: 'Internal Page'
+sortOrder: 1

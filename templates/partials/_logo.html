@@ -1,0 +1,13 @@
+{# _logo.html #}
+{% set siteSlug = siteName|slugify %}
+<a class="" href="/" title="{{ siteName }}">
+    <span class="">{{ siteName }}</span>
+    <svg 
+        class="" 
+        role="img">
+        <title>Organization Logo</title>
+        <desc></desc>
+        {% set svgPath = "/spritemap.svg#logo-{siteSlug}" %}
+        <use xlink:href="{{ alias('@assetBasePath' ~ svgPath) }}"></use>       
+    </svg> 
+</a>

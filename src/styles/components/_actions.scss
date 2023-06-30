@@ -1,0 +1,171 @@
+/* _actions.scss */
+@use "../utils/_utils" as *;
+@use "sass:string";
+@use "sass:math";
+
+/* ---------------------------------------------------------------------
+  Action Item: Structure
+  See templates/macros/_actions.html for markup
+
+  // Variants, e.g. button, arrow or link
+------------------------------------------------------------------------ */
+@mixin actionItem($selector,$default:true,$colors...) {
+   
+    // Button action
+    $v-padding: 1.2em;   
+    $h-padding: 1.8em;
+    $border-size: 1px; 
+    $icon-size-button: 18px;
+    // Arrow action
+    $icon-size-arrow: 18px;
+
+    #{$selector} {
+        @include flexParent($display:inline-flex,$values:row nowrap);
+        @include alignItems(center);
+        font-size: 1rem;
+        margin-right: 4em;
+
+        &:not(:first-of-type) {
+            margin-top: 2em;
+        }
+
+        &--button {
+            border-radius: 1px;
+            border: $border-size solid transparent;
+            padding: calc(#{$v-padding} - #{$border-size}) calc(#{$h-padding} - #{$border-size});
+            position: relative;
+
+            #{$selector}-icon {
+                height: $icon-size-button;
+                width: $icon-size-button;
+            }
+
+        }
+
+        &--arrow {
+
+            #{$selector}-label {
+                @include visuallyHide;
+            }
+
+            #{$selector}-icon {
+                height: $icon-size-arrow;
+                width: $icon-size-arrow;
+            }
+
+        }
+
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			text-decoration: none;
+		}
+
+        &-icon {
+            position: relative;
+            z-index: 1;
+            @include flexChild(0 1 auto);
+        }
+
+        &:hover {
+            cursor: pointer;
+		}
+    
+    }
+
+    @if $default != false {
+		@include actionItem--default($selector,$colors...);
+	}
+
+}
+
+/* -------------------------------------------------------------------------------
+ Action Button: Default Presentation
+---------------------------------------------------------------------------------- */
+@mixin actionItem--default($selector,$colors...) {
+
+    $color-count: length($colors);
+    // Define additional colors as needed
+    $color-primary: if($color-count >= 1,nth($colors,1),null);
+    $color-secondary: if($color-count >= 2,nth($colors,2),null);
+    $color-tertiary: if($color-count >= 3,nth($colors,3),null);
+
+    #{$selector} {
+
+        &--link {
+            color: $color-primary;
+
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
+                text-decoration: underline;
+                text-underline-offset: 1px;
+                text-decoration-color: $color-primary;
+            }
+
+            &:hover {
+                background: if($color-tertiary,$color-tertiary,$color-primary);
+                color: $color-secondary;
+                text-decoration-color: $color-secondary;
+
+                #{$selector}-icon {
+                    fill: $color-secondary;
+                }
+                
+            }
+
+            #{$selector}-icon {
+                fill: $color-primary;
+            }
+
+        }
+
+        &--button {
+            border-color: $color-primary;
+            color: $color-primary;
+
+            &:hover {
+                background: $color-primary;
+                color: $color-secondary;
+                border-color: $color-primary;
+                transition: all 0.1s ease-in-out;
+                
+                #{$selector}-icon {
+                    fill: $color-secondary;
+                }
+
+            }
+
+            #{$selector}-icon {
+                fill: $color-primary;
+            }
+
+        }
+
+        &--arrow {
+            border-color: $color-primary;
+            
+            #{$selector}-icon {
+                fill: $color-primary;
+            }
+
+            &:hover {
+                background: $color-primary;
+                
+                #{$selector}-icon {
+                    fill: $color-secondary;
+                }
+            
+            }
+        }
+
+        &-trigger {  
+            text-align: center;
+            text-decoration: none;
+        }
+
+    }
+
+}

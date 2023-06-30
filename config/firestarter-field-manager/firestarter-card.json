@@ -1,0 +1,274 @@
+[
+    {
+        "name": "Firestarter Card",
+        "handle": "firestarterCard",
+        "instructions": null,
+        "required": null,
+        "searchable": false,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Matrix",
+        "settings": {
+            "minBlocks": null,
+            "maxBlocks": null,
+            "contentTable": "{{%matrixcontent_firestartercard}}",
+            "propagationMethod": "all",
+            "propagationKeyFormat": null,
+            "blockTypes": {
+                "new1": {
+                    "name": "Card With Image",
+                    "handle": "cardWithImage",
+                    "fields": {
+                        "new1": {
+                            "name": "Heading",
+                            "handle": "heading",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 100
+                        },
+                        "new2": {
+                            "name": "Subheading",
+                            "handle": "subheading",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 100
+                        },
+                        "new3": {
+                            "name": "Eyebrow",
+                            "handle": "eyebrow",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 100
+                        },
+                        "new4": {
+                            "name": "Content",
+                            "handle": "copy",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\redactor\\Field",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "redactorConfig": null,
+                                "availableVolumes": "*",
+                                "availableTransforms": "",
+                                "showUnpermittedVolumes": false,
+                                "showUnpermittedFiles": false,
+                                "showHtmlButtonForNonAdmins": true,
+                                "configSelectionMode": "choose",
+                                "manualConfig": "",
+                                "defaultTransform": "",
+                                "purifierConfig": null,
+                                "removeInlineStyles": false,
+                                "removeEmptyTags": false,
+                                "removeNbsp": false,
+                                "purifyHtml": true,
+                                "columnType": "text"
+                            },
+                            "width": 100
+                        },
+                        "new5": {
+                            "name": "Image",
+                            "handle": "image",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Assets",
+                            "typesettings": {
+                                "restrictLocation": false,
+                                "restrictedLocationSource": "volume:6a327d64-65ae-4827-ae1f-e2a59275b468",
+                                "restrictedLocationSubpath": null,
+                                "allowSubfolders": false,
+                                "restrictedDefaultUploadSubpath": null,
+                                "defaultUploadLocationSource": "volume:6a327d64-65ae-4827-ae1f-e2a59275b468",
+                                "defaultUploadLocationSubpath": null,
+                                "allowUploads": true,
+                                "restrictFiles": false,
+                                "allowedKinds": null,
+                                "showUnpermittedVolumes": false,
+                                "showUnpermittedFiles": false,
+                                "previewMode": "full",
+                                "allowSelfRelations": false,
+                                "localizeRelations": false,
+                                "maxRelations": null,
+                                "minRelations": null,
+                                "selectionLabel": null,
+                                "showSiteMenu": true,
+                                "source": null,
+                                "sources": "*",
+                                "targetSiteId": null,
+                                "validateRelatedElements": false,
+                                "viewMode": "list",
+                                "selectionCondition": {
+                                    "elementType": "craft\\elements\\Asset",
+                                    "fieldContext": "global",
+                                    "class": "craft\\elements\\conditions\\assets\\AssetCondition",
+                                    "conditionRules": []
+                                }
+                            },
+                            "width": 100
+                        }
+                    }
+                },
+                "new2": {
+                    "name": "Card With Video",
+                    "handle": "cardWithVideo",
+                    "fields": {
+                        "new1": {
+                            "name": "Heading",
+                            "handle": "heading",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 100
+                        },
+                        "new2": {
+                            "name": "Subheading",
+                            "handle": "subheading",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 100
+                        },
+                        "new3": {
+                            "name": "Eyebrow",
+                            "handle": "eyebrow",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "placeholder": null,
+                                "code": false,
+                                "multiline": false,
+                                "initialRows": 4,
+                                "charLimit": null,
+                                "byteLimit": null,
+                                "columnType": null
+                            },
+                            "width": 100
+                        },
+                        "new4": {
+                            "name": "Content",
+                            "handle": "copy",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": true,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\redactor\\Field",
+                            "typesettings": {
+                                "uiMode": "normal",
+                                "redactorConfig": null,
+                                "availableVolumes": "*",
+                                "availableTransforms": "",
+                                "showUnpermittedVolumes": false,
+                                "showUnpermittedFiles": false,
+                                "showHtmlButtonForNonAdmins": true,
+                                "configSelectionMode": "choose",
+                                "manualConfig": "",
+                                "defaultTransform": "",
+                                "purifierConfig": null,
+                                "removeInlineStyles": false,
+                                "removeEmptyTags": false,
+                                "removeNbsp": false,
+                                "purifyHtml": true,
+                                "columnType": "text"
+                            },
+                            "width": 100
+                        },
+                        "new5": {
+                            "name": "Video",
+                            "handle": "video",
+                            "required": false,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "wrav\\oembed\\fields\\OembedField",
+                            "typesettings": {
+                                "url": ""
+                            },
+                            "width": 100
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

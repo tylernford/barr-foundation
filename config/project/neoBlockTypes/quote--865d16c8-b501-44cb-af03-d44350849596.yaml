@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: null
+enabled: true
+field: 85c752c0-899b-4d86-ad80-757b76b23ea2 # Page Builder: Default
+fieldLayouts:
+  4c15efde-228c-4659-9ee6-835e72ee487d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 8bb1eec8-80df-4ab2-a8b4-581b470556ac # Quote Block
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 169b9b54-2748-4bb0-953f-20724a1064c5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Quote
+        uid: a4fd1820-270c-42be-8888-8fad09a5b622
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: quote
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Quote
+sortOrder: 5
+topLevel: true

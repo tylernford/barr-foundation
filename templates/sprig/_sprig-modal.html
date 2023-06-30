@@ -1,0 +1,64 @@
+{# _sprig-modal.html
+
+This Sprig template requires several parameters to do its thing:
+
+@param $selector (str) - hook used for JS and styling 
+@param $tmpl (str)     - path to modal template/content
+@param $idList (arr)   - array of entries to be modalized
+
+Example usage:
+
+{% set idList = craft.entries().section('firestarterModals').ids() %}
+{% set selector, tmpl = 'fsSprigModal', 'firestarter/layouts/modals/_entry' %}
+{{ sprig('sprig/_sprig-modal', {
+    selector: selector,
+    tmpl: tmpl,
+    idList: idList
+}) }}
+
+#}
+
+{% import 'macros/components/_modals' as modals %}
+
+{# Content vars #}
+{% set idList    = idList ?? [] %}
+{% set entries   = craft.entries().id(idList) %}
+{% set selector  = selector ?? '' %}
+{% set tmpl      = tmpl ?? '' %}
+{% set obj       = obj ?? '' %}
+{% set label     = 'Open Dynamic Modal' %}
+
+{# Sprig vars #}
+{% set modal = modal ?? 'off' %}
+{% set id    = id ?? '' %}
+
+{{ hiddenInput('modal', modal) }}
+{{ hiddenInput('id', id) }}
+
+{# Call the sprig modal macro:
+   Append add'l key-value pairs as needed
+#}
+{% set obj = {'id': id} %}
+{{ modals.sprigModal(selector,modal,tmpl,obj) }}
+
+{% if entries %}
+<ul>
+{% for entry in entries %}
+    {% set entryId, entrySlug = entry.id, entry.slug %}
+    {% set label = entry.title %}
+    <li
+        class=""
+        id="modal_trigger_{{ entryId }}"
+        sprig
+        s-trigger="click"
+        s-replace="#{{ selector }}_dialog"
+        s-val:modal="on"
+        s-val:id="{{ entryId }}"
+        s-push-url="?q={{ entrySlug }}"
+        data-a11y-dialog-show="{{ selector }}_dialog"
+        >
+        {{ label }}
+    </li>
+{% endfor %}
+</ul> 
+{% endif %}

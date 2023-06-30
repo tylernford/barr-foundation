@@ -1,0 +1,278 @@
+changedFieldIndicator: 1717718609
+field: c954d828-974b-402e-92e2-3057b737e6ed # Menu
+fieldLayouts:
+  336640d8-29bb-441a-a921-80dd18cfa576:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: bc217c82-6048-4231-b0ad-06f04d79f3b3 # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b9227ee0-d87b-46a5-8d64-20de9deefe90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f04ce99a-aa20-4ed0-9e83-40f232197b48 # Target
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e730ee5a-49f1-40e9-9df9-cee694f21df4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 913352c4-df4b-4c6a-bf16-ee9d5e5bd194 # Target
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 585fdcb4-86c9-4024-9d1a-5614f62f988e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 440eaa49-c627-4245-8f32-9f2435fc6b94
+        userCondition: null
+fields:
+  913352c4-df4b-4c6a-bf16-ee9d5e5bd194: # Target
+    columnSuffix: zqfedwge
+    contentColumnType: text
+    fieldGroup: null
+    handle: menuLink
+    instructions: null
+    name: Target
+    searchable: false
+    settings:
+      addRowLabel: 'External Link'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - actionLabel
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - url
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Type
+                -
+                  - handle
+                  - actionType
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - select
+                -
+                  - options
+                  -
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - External
+                        -
+                          - value
+                          - external
+                        -
+                          - default
+                          - true
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Apple
+                        -
+                          - value
+                          - apple
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Download
+                        -
+                          - value
+                          - download
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Email
+                        -
+                          - value
+                          - email
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Facebook
+                        -
+                          - value
+                          - facebook
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Instagram
+                        -
+                          - value
+                          - instagram
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - LinkedIn
+                        -
+                          - value
+                          - linkedin
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Snapchat
+                        -
+                          - value
+                          - snapchat
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Spotify
+                        -
+                          - value
+                          - spotify
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - Twitter
+                        -
+                          - value
+                          - twitter
+                        -
+                          - default
+                          - false
+                    -
+                      __assoc__:
+                        -
+                          - label
+                          - YouTube
+                        -
+                          - value
+                          - youtube
+                        -
+                          - default
+                          - false
+      defaults: null
+      maxRows: 1
+      minRows: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  bc217c82-6048-4231-b0ad-06f04d79f3b3: # Label
+    columnSuffix: hsprjwko
+    contentColumnType: text
+    fieldGroup: null
+    handle: menuLabel
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f04ce99a-aa20-4ed0-9e83-40f232197b48: # Target
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: menuEntry
+    instructions: null
+    name: Target
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Internal Page'
+      showSiteMenu: true
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries

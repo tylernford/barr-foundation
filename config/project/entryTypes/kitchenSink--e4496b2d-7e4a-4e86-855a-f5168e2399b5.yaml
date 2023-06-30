@@ -1,0 +1,55 @@
+fieldLayouts:
+  15557aba-9d97-4e1f-ac85-34fb9a749af9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 636ffd3e-3ec2-4cb0-a14f-6690bf2bc193
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 85c752c0-899b-4d86-ad80-757b76b23ea2 # Page Builder: Default
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88fa65d5-7f9a-49e6-b1a6-4a5fae8e1c86
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Primary Content'
+        uid: ea2fa6a1-1aea-4210-a1e2-783a8964cafc
+        userCondition: null
+handle: kitchenSink
+hasTitleField: false
+name: 'Kitchen Sink'
+section: 2510ca6f-7c5e-4ccd-a8db-079f0fe6244d # Kitchen Sink
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
