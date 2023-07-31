@@ -1,4 +1,4 @@
-dateModified: 1688151374
+dateModified: 1689366046
 email:
   fromEmail: betsy@firebellydesign.com
   fromName: Barr
@@ -70,6 +70,7 @@ meta:
     18daf3e6-8020-4eb2-8821-2ded948b05ea: Label # Label
     28f610a0-d837-4df9-a971-f04b4d9f66ef: 'Image + Caption' # Image + Caption
     043e552d-0c17-47b8-b14d-e9005b1963ad: 'Link Carousel' # Link Carousel
+    48aa8bac-f5e1-487b-a042-3dca5b50c89c: Image # Image
     49c06f3d-a638-4770-943b-84efc843682d: 'Media Carousel' # Media Carousel
     64b4f1f5-0be2-4001-98bd-517df9e9b026: Target # Target
     70dd6f0e-8aa3-4520-b68c-48cbb2f3b70b: 'Nested Menu' # Nested Menu
@@ -86,6 +87,7 @@ meta:
     526d49cf-17dc-4ca3-bfe9-dd20789a28e7: Caption # Caption
     689b3da4-dd76-4bb5-aac9-5f5238eacd3d: 'Social Links' # Social Links
     804b176c-492e-48fc-9f81-f29caeb7a341: Menu # Menu
+    806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     840ed7ed-bedf-49ba-b164-465043984fde: Target # Target
     865d16c8-b501-44cb-af03-d44350849596: Quote # Quote
     914c6a3c-f48a-422f-ba86-dec3f3932b9f: Label # Label
@@ -104,8 +106,10 @@ meta:
     9901ad2a-d15c-4337-8b16-5f395d71a734: 'Image + Caption' # Image + Caption
     24052d58-898b-4447-805b-2a68d3a204ae: 'Rich Text' # Rich Text
     37348ab3-b1bb-48dc-b0f2-6fa4b4e8f8ad: Label # Label
+    53047e2b-0d89-45ec-9f87-fe728f47da26: Action # Action
     72510bcd-9969-41a0-9d22-91d58db388de: Header # Header
     79089f9c-e190-44e9-a175-907b75ff1d62: Description # Description
+    81445eab-2d97-4591-92d7-6e4f6db5bbba: Intro # Intro
     86125ca1-5070-4d71-91cf-ef53ea2337cb: Menu # Menu
     90045d2b-740a-4664-be15-670b6497ced6: Target # Target
     155778fa-e361-414e-9787-4b1fde04009a: 'Entry Carousel' # Entry Carousel
