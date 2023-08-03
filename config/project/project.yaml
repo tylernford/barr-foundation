@@ -1,4 +1,4 @@
-dateModified: 1689366046
+dateModified: 1691101416
 email:
   fromEmail: betsy@firebellydesign.com
   fromName: Barr
@@ -91,7 +91,7 @@ meta:
     840ed7ed-bedf-49ba-b164-465043984fde: Target # Target
     865d16c8-b501-44cb-af03-d44350849596: Quote # Quote
     914c6a3c-f48a-422f-ba86-dec3f3932b9f: Label # Label
-    915b78de-ea87-43f6-bd0e-f9dd749a57b5: Barr # Barr
+    915b78de-ea87-43f6-bd0e-f9dd749a57b5: $SITE_NAME # $SITE_NAME
     965e08ce-23da-42da-b6c8-253520e05d93: Label # Label
     988fce12-d901-434a-b5f9-3c7d50e66598: Label # Label
     1352a8b2-53ad-4d0b-a209-81020802f421: Target # Target
@@ -213,9 +213,10 @@ plugins:
 system:
   edition: solo
   live: true
-  name: Barr
+  name: $SITE_NAME
+  retryDuration: null
   schemaVersion: 4.4.0.4
-  timeZone: America/Los_Angeles
+  timeZone: $TIMEZONE
 users:
   allowPublicRegistration: false
   defaultGroup: null
