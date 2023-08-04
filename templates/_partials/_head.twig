@@ -3,16 +3,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {# SEO: SEO Ether plugin or basic #}
-    {#
-    {% include 'partials/_seo-ether.html' %}
-    {% include 'partials/_seo-basic.html' %}
-    #}
+    {# SEOmatic: Environment set via .env #}
+    {% if seomatic.config.environment != 'live' %}
+        {% do seomatic.tag.get("robots").content("noindex, nofollow") %}
+    {% endif %}
 
     {# Styles: Twigpack #}
-    {# Uncomment once Twigpack is installed #}
 	{{ craft.twigpack.includeCssModule("/build/styles/main.css", false) }}
-    
 
     <link rel="author" href="{{ siteUrl }}humans.txt">
 
@@ -25,10 +22,10 @@
     <link rel="shortcut icon" type="image/ico" href="{{ alias('@assetBasePath' ~ iconPath ~ 'favicon.ico') }}">
     #}
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     {# Uncomment once GA is ready
     {% if env == 'production' %}
     {% set gid = "" %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ gid|raw }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -41,7 +38,6 @@
     #}
 
     {# SVG map #}
-    {# Uncomment once SVG package installed
     <script>
 		var ajax = new XMLHttpRequest();
 		ajax.open('GET', '/build/spritemap.svg', true);
@@ -54,6 +50,4 @@
 			document.body.insertBefore(div, document.body.childNodes[0]);
 		}
 	</script>
-    #}
 </head>
-

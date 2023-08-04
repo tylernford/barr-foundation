@@ -1,0 +1,30 @@
+{# ===========================================================
+Site: Barr Foundation
+Template: _layouts/_base.twig
+URL: all
+===========================================================
+Main layout for site.
+Includes navigation, main content, and footer.
+=========================================================== #}
+
+<!DOCTYPE html>
+<html lang="en-US">
+    {% include '_partials/_head' %}
+
+    <body class="body">
+        <a class="skip-link" href="#main">
+            Skip to content
+        </a>
+
+        <header id="header">
+            {% include '_partials/_nav' %}
+        </header>
+
+        <main id="main" tabindex="-1">     
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        {% include '_partials/_footer' %}
+    </body>
+</html>
