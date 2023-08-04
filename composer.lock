@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02c36d34fe92af95b32416f631b9a647",
+    "content-hash": "65e717143f087d51f4bd8c1690b47334",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4116,73 +4116,6 @@
             "time": "2020-10-15T08:29:30+00:00"
         },
         {
-            "name": "percipioglobal/craft-colour-swatches",
-            "version": "4.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/percipioglobal/craft-colour-swatches.git",
-                "reference": "e42b9da2d407e38463b90413eef9c8047aa9ddab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/percipioglobal/craft-colour-swatches/zipball/e42b9da2d407e38463b90413eef9c8047aa9ddab",
-                "reference": "e42b9da2d407e38463b90413eef9c8047aa9ddab",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0",
-                "php": "^8.0.2"
-            },
-            "require-dev": {
-                "craftcms/phpstan": "dev-main"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Colour Swatches",
-                "handle": "colour-swatches",
-                "description": "Adding custom selectable colour palettes, gradients, classes and more to your field types.",
-                "developer": "percipiolondon",
-                "developerUrl": "https://percipio.london",
-                "documentationUrl": "https://github.com/percipioglobal/craft-colour-swatches/blob/v4/README.md",
-                "changelogUrl": "https://raw.githubusercontent.com/percipioglobal/craft-colour-swatches/v4/CHANGELOG.md",
-                "class": "percipiolondon\\colourswatches\\ColourSwatches"
-            },
-            "autoload": {
-                "psr-4": {
-                    "percipiolondon\\colourswatches\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Percipio Global",
-                    "homepage": "https://percipio.london"
-                }
-            ],
-            "description": "Let clients choose from a predefined set of colours and utilise associated colour codes and class names in your templates.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "color-swatches",
-                "colors",
-                "colour-swatches",
-                "colours",
-                "craft-plugin",
-                "craftcms",
-                "swatches"
-            ],
-            "support": {
-                "docs": "https://github.com/percipioglobal/craft-colour-swatches/blob/v4/README.md",
-                "email": "support@percipio.london",
-                "issues": "https://github.com/percipioglobal/craft-colour-swatches/issues",
-                "source": "https://github.com/percipioglobal/craft-colour-swatches/tree/4.3.0"
-            },
-            "time": "2023-03-09T12:32:06+00:00"
-        },
-        {
             "name": "phenx/php-font-lib",
             "version": "0.5.4",
             "source": {
@@ -5575,65 +5508,6 @@
                 "phar"
             ],
             "time": "2022-08-31T10:31:18+00:00"
-        },
-        {
-            "name": "simplygoodwork/craft-donkeytail",
-            "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/simplygoodwork/craft-donkeytail.git",
-                "reference": "c867fe0616d28d3a27f3abb9e8f7a599a41a3855"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/simplygoodwork/craft-donkeytail/zipball/c867fe0616d28d3a27f3abb9e8f7a599a41a3855",
-                "reference": "c867fe0616d28d3a27f3abb9e8f7a599a41a3855",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0.0",
-                "php": "^8.0.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Donkeytail",
-                "handle": "donkeytail",
-                "developer": "Good Work",
-                "developerUrl": "https://simplygoodwork.com",
-                "documentationUrl": "https://github.com/simplygoodwork/craft-donkeytail/blob/master/README.md",
-                "changelogUrl": "https://raw.githubusercontent.com/simplygoodwork/craft-donkeytail/v3/CHANGELOG.md",
-                "class": "simplygoodwork\\donkeytail\\Donkeytail"
-            },
-            "autoload": {
-                "psr-4": {
-                    "simplygoodwork\\donkeytail\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Good Work",
-                    "homepage": "https://simplygoodwork.com"
-                }
-            ],
-            "description": "Fieldtype that allows you to quickly and easily content manage points on images. You can use it for locations on a faux map, showcasing multiple products within an image, or even pinning the tail on a donkey.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-donkeytail",
-                "craft-plugin",
-                "craftcms",
-                "donkeytail"
-            ],
-            "support": {
-                "docs": "https://github.com/simplygoodwork/craft-donkeytail/blob/master/README.md",
-                "issues": "https://github.com/simplygoodwork/craft-donkeytail/issues",
-                "source": "https://github.com/simplygoodwork/craft-donkeytail/tree/3.0.1"
-            },
-            "time": "2022-08-31T01:04:16+00:00"
         },
         {
             "name": "spacecatninja/imager-x",
@@ -8808,76 +8682,6 @@
             "time": "2023-01-06T12:12:50+00:00"
         },
         {
-            "name": "wrav/oembed",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wrav/oembed.git",
-                "reference": "b6967288b3c967e65c12cd9646fef863d2977202"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wrav/oembed/zipball/b6967288b3c967e65c12cd9646fef863d2977202",
-                "reference": "b6967288b3c967e65c12cd9646fef863d2977202",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.0",
-                "embed/embed": "^3.3",
-                "ext-dom": "*"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "oEmbed",
-                "handle": "oembed",
-                "schemaVersion": "1.0.1",
-                "hasCpSettings": true,
-                "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/wrav/oembed/master/CHANGELOG.md",
-                "components": {
-                    "oembedService": "wrav\\oembed\\services\\OembedService"
-                },
-                "class": "wrav\\oembed\\Oembed"
-            },
-            "autoload": {
-                "psr-4": {
-                    "wrav\\oembed\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "reganlawton",
-                    "homepage": "https://github.com/reganlawton"
-                }
-            ],
-            "description": "A simple plugin to extract media information from websites, like youtube videos, twitter statuses or blog articles.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "facebook",
-                "gdpr",
-                "graphql",
-                "iframe",
-                "instagram",
-                "oembed",
-                "twitter",
-                "vimeo",
-                "youtube"
-            ],
-            "support": {
-                "docs": "https://github.com/wrav/oembed/blob/master/README.md",
-                "issues": "https://github.com/wrav/oembed/issues",
-                "source": "https://github.com/wrav/oembed/tree/2.3.0"
-            },
-            "time": "2023-02-02T06:02:48+00:00"
-        },
-        {
             "name": "yiisoft/yii2",
             "version": "2.0.47",
             "dist": {
@@ -9615,5 +9419,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
