@@ -56,56 +56,46 @@ $font-primary: $primary-name, $primary-serif;
 $font-secondary: $secondary-name, $secondary-serif;
 $font-tertiary: $tertiary-name, $tertiary-serif;
 
-/* ---------------------------------------------------------------------
- palettes() Map
- Maps global color families, assigning a "core" or default to each one;
- Hexidecimals per family should be defined in increments of 10.
-
- Example:
-
- 'yellow': (
-	core: #FBF8E9,
-	10: #FFA319,
-	20: #F7EDBA,
-	30: #EC9213
-  )
------------------------------------------------------------------------- */
-$palettes: (
-
-	'white': (
-		core: #FFFFFF
-	),
-	'black': (
-		core: #000000
-	)
-
-);
 
 /* ---------------------------------------------------------------------
- getColor()
- Retrieves color from palettes() map based on hue, and optional tone parameters
-
- // Props to https://www.ibm.com/design/language/resources for the conditional
- // which enforces the %10 convention within the palette map
-
- // Usage:
- // background: getColor('gray', 10); // #ecf0f4
- // background: getColor('gray');     // #5E788D
+	Colors
 ------------------------------------------------------------------------ */
-@function getColor($color, $tone: 'core') {
+:root {
+	--color-primary-teal-150: hsla(175, 98%, 17%, 1);
+	--color-primary-teal-100: hsla(173, 100%, 28%, 1);
+	--color-primary-teal-50: hsla(175, 83%, 36%, 1);
+	--color-primary-teal-25: hsla(175, 50%, 80%, 1);
 
-	@if type-of($tone) == 'number' {
+	--color-primary-navy-100: hsla(247, 44%, 23%, 1);
+	--color-primary-navy-50: hsla(247, 34%, 30%, 1);
 
-		@if $tone % 10 == $tone {
-			$tone: $tone * 10;
-		}
+	--color-program-green-150: hsla(129, 29%, 26%, 1);
+	--color-program-green-100: hsla(153, 100%, 25%, 1);
+	--color-program-green-50: hsla(136, 25%, 46%, 1);
 
-	}
+	--color-program-plum-150: hsla(336, 30%, 27%, 1);
+	--color-program-plum-100: hsla(326, 70%, 31%, 1);
+	--color-program-plum-50: hsla(328, 37%, 45%, 1);
 
-	$color-family: map-get($palettes, $color);
-	// Make sure color family exists; default to black
-	$color-hex: if($color-family,map-get($color-family, $tone),#000);
+	--color-program-marigold-150: hsla(30, 81%, 41%, 1);
+	--color-program-marigold-100: hsla(32, 80%, 52%, 1);
+	--color-program-marigold-50: hsla(31, 94%, 66%, 1);
 
-	@return $color-hex;
+	--color-tertiary-clouds-150: hsla(222, 53%, 36%, 1);
+	--color-tertiary-clouds-100: hsla(207, 63%, 45%, 1);
+	--color-tertiary-clouds-50: hsla(210, 53%, 56%, 1);
 
+	--color-tertiary-roses-150: hsla(344, 69%, 39%, 1);
+	--color-tertiary-roses-100: hsla(345, 72%, 50%, 1);
+	--color-tertiary-roses-50: hsla(353, 84%, 69%, 1);
+
+	--color-tertiary-citrus-150: hsla(64, 100%, 36%, 1);
+	--color-tertiary-citrus-100: hsla(61, 71%, 61%, 1);
+	--color-tertiary-citrus-50: hsla(64, 68%, 71%, 1);
+
+	--color-tertiary-grey-200: hsla(0, 0%, 0%, 1);
+	--color-tertiary-grey-150: hsla(220, 1%, 39%, 1);
+	--color-tertiary-grey-100: hsla(216, 2%, 59%, 1);
+	--color-tertiary-grey-50: hsla(200, 3%, 79%, 1);
+	--color-tertiary-grey-25: hsla(0, 0%, 96%, 1);
 }

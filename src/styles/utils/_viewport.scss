@@ -51,9 +51,9 @@
 	    left: 0;
 	    position: fixed;
 	    z-index: 2000;
-	    background: getColor('black');
-	    color: getColor('white');
-	    font: normal 1rem arial, helvetica;
+	    background: var(--color-tertiary-grey-200);;
+	    color: var(--color-tertiary-grey-25);;
+	    font: normal .75rem arial, helvetica;
     }
 
 }

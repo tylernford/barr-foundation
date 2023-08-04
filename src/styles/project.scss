@@ -12,7 +12,7 @@
 }
 
 html {
-	font-size: 62.5%; // Reset base font size for easier em & rem calculations: 1em = 10px
+	font-size: 1rem;
 	-webkit-overflow-scrolling: touch;
 	min-height: -webkit-fill-available;
 	
@@ -26,8 +26,8 @@ body {
 	$max: map-get($breakpoints,'xl');
 	min-height: -webkit-fill-available;
 	overflow-x: hidden;
-	background: getColor('white');
-	color: getColor('black');
+	background: var(--color-tertiary-grey-25);
+	color: var(--color-tertiary-grey-200);
 	font-family: $font-tertiary;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;	
@@ -110,7 +110,7 @@ img {
   Accessibility Skip
 ------------------------------------------------------------------------ */
 .skip-link {
-	border: 1px solid getColor('black');
+	border: 1px solid var(--color-tertiary-grey-200);
 	border-top: none;
 	display: block;
 	left: 50%;
@@ -119,8 +119,8 @@ img {
 	z-index: 100;
 	transform: translateY(-100%);
 	transition: transform 0.3s;
-	background: getColor('white');
-	color: getColor('black');
+	background: var(--color-tertiary-grey-25);
+	color: var(--color-tertiary-grey-200);
 	font-weight: 700;
 
 	@include breakpoint(sm) {
