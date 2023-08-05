@@ -21,40 +21,33 @@ $breakpoints: (
  Fonts
  font url is relative to our compiled stylesheet
 ------------------------------------------------------------------------ */
-@mixin getFont($fontname, $filename) {
-	
+@mixin getFont($fontname, $fallback, $filedirectory, $filename, $style, $weight) {
 	@font-face {
-		$downloadable-path: '../fonts/#{$filename}/#{$filename}';
-		$local-path: '#{$filename}';
-		font-family: $fontname;
-		font-display: block; // prevent FOUT
-		src: local('#{$local-path}.eot'), url('#{$downloadable-path}.eot'),
-		     local('#{$local-path}.woff'), url('#{$downloadable-path}.woff') format('woff'),
-             local('#{$local-path}.woff2'), url('#{$downloadable-path}.woff2') format('woff2'),
-		     local('#{$local-path}.ttf'), url('#{$downloadable-path}.ttf') format('truetype');
+		$downloadable-path: '../fonts/#{$filedirectory}/#{$filename}';
+		@if $fallback == sans  {
+			$fallback: Verdana, sans-serif;
+		} @else {
+			$fallback: Times New Roman, Times, serif;
+		}
+
+		font-display: swap;
+		font-family: $fontname, $fallback;
+		font-style: $style;
+		font-weight: $weight;
+		src: url('#{$downloadable-path}.woff2') format('woff2');
 	}
 }
 
 // Define project fonts
-$primary-name: 'Surt Bold';
-$primary-file: 'surt-bold';
-$primary-serif: 'sans-serif'; // e.g. sans-serif || serif
+@include getFont('Axiforma', sans, 'axiforma', 'axiforma--book--temp', normal, 400);
+@include getFont('Axiforma', sans, 'axiforma', 'axiforma--medium--temp', normal, 500);
 
-$secondary-name: 'Surt Light';
-$secondary-file: 'surt-light';
-$secondary-serif: 'sans-serif';
+@include getFont('Macklin Slab', serif, 'macklin-slab', 'macklin-slab--light-italic--temp', italic,300);
+@include getFont('Macklin Slab', serif, 'macklin-slab', 'macklin-slab--italic--temp', italic, 400);
 
-$tertiary-name: '';
-$tertiary-file: '';
-$tertiary-serif: '';
-
-@include getFont($primary-name, $primary-file);
-@include getFont($secondary-name, $secondary-file);
-@include getFont($tertiary-name, $tertiary-file);
-
-$font-primary: $primary-name, $primary-serif;
-$font-secondary: $secondary-name, $secondary-serif;
-$font-tertiary: $tertiary-name, $tertiary-serif;
+@include getFont('Macklin Text', serif, 'macklin-text', 'macklin-text--light--temp', normal, 300);
+@include getFont('Macklin Text', serif, 'macklin-text', 'macklin-text--regular--temp', normal, 400);
+@include getFont('Macklin Text', serif, 'macklin-text', 'macklin-text--bold--temp', normal, 700);
 
 
 /* ---------------------------------------------------------------------

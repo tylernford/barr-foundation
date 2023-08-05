@@ -18,40 +18,40 @@ $svg-path: '../svgs/';
  1. ems based on 1rem-sized parent
  2. relative line-heights
 ------------------------------------------------------------------------ */
-$text-map: (	
+// $text-map: (	
 	
-	// Headlines
-	"h0-lg": (
-		font: 10em/86% $font-primary,
-		letter-spacing: 0.02em
-	),	
-	"h0-sm": (),
+// 	// Headlines
+// 	"h0-lg": (
+// 		font: 10em/86% $font-primary,
+// 		letter-spacing: 0.02em
+// 	),	
+// 	"h0-sm": (),
 
-	"h1-lg": (
-		font: 5em/86% $font-primary
-	),	
-	"h1-sm": (),
+// 	"h1-lg": (
+// 		font: 5em/86% $font-primary
+// 	),	
+// 	"h1-sm": (),
 
-	"h4-lg": (
-		font: 3em/86% $font-primary,
-		letter-spacing: 0.015em
-	),	
-	"h4-sm": (),
+// 	"h4-lg": (
+// 		font: 3em/86% $font-primary,
+// 		letter-spacing: 0.015em
+// 	),	
+// 	"h4-sm": (),
 
-	"h5-lg": (
-		font: 2em/86% $font-primary,
-		letter-spacing: 0.015em
-	),	
-	"h5-sm": (),
+// 	"h5-lg": (
+// 		font: 2em/86% $font-primary,
+// 		letter-spacing: 0.015em
+// 	),	
+// 	"h5-sm": (),
 	
-	// Non-headlines
-	"p1": (
-		font: 2em/150% $font-secondary,
-		letter-spacing: 0.015em
-	),
-	"p2": (),
-	"p3": (),
-);
+// 	// Non-headlines
+// 	"p1": (
+// 		font: 2em/150% $font-secondary,
+// 		letter-spacing: 0.015em
+// 	),
+// 	"p2": (),
+// 	"p3": (),
+// );
 
 
 /* ---------------------------------------------------------------------
