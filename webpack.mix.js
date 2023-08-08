@@ -17,11 +17,13 @@ mix.setPublicPath('web');
 // https://browsersync.io/docs/options/ and
 // https://github.com/ddev/ddev-browsersync
 mix.browserSync({
-  proxy: 'localhost',
-  host: proxy_url,
-  watch: true,
-  open: false,
-  ui: false
+  // proxy: 'localhost',
+  // host: proxy_url,
+  // watch: true,
+  // open: false,
+  // ui: false
+  proxy: proxy_url,
+  open: false
 });
 
 // Browsersync without ddev-browsersync installed:
