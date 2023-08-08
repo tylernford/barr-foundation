@@ -1,0 +1,10 @@
+/* __elements.scss */
+
+/* ---------------------------------------------------------------------
+ Aggregate file that contains elements for the app
+ 1. Double-underscore naming convention to denote this is an aggregate file
+ 2. Order matters
+ 3. @forward make everything available when __elements is loaded via @use rule within other stylesheets
+------------------------------------------------------------------------ */
+
+@forward 'actions';

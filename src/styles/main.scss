@@ -1,3 +1,5 @@
 /* main.scss */
 @use "utils/_reset";
 @use "project";
+@use "01_elements/__elements" as *;
+@use "02_components/__components" as *;
