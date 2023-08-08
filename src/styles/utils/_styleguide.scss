@@ -18,40 +18,11 @@ $svg-path: '../svgs/';
  1. ems based on 1rem-sized parent
  2. relative line-heights
 ------------------------------------------------------------------------ */
-// $text-map: (	
-	
-// 	// Headlines
-// 	"h0-lg": (
-// 		font: 10em/86% $font-primary,
-// 		letter-spacing: 0.02em
-// 	),	
-// 	"h0-sm": (),
+$text-map: (	
+	// Headlines
 
-// 	"h1-lg": (
-// 		font: 5em/86% $font-primary
-// 	),	
-// 	"h1-sm": (),
-
-// 	"h4-lg": (
-// 		font: 3em/86% $font-primary,
-// 		letter-spacing: 0.015em
-// 	),	
-// 	"h4-sm": (),
-
-// 	"h5-lg": (
-// 		font: 2em/86% $font-primary,
-// 		letter-spacing: 0.015em
-// 	),	
-// 	"h5-sm": (),
-	
-// 	// Non-headlines
-// 	"p1": (
-// 		font: 2em/150% $font-secondary,
-// 		letter-spacing: 0.015em
-// 	),
-// 	"p2": (),
-// 	"p3": (),
-// );
+	// Actions
+);
 
 
 /* ---------------------------------------------------------------------
@@ -63,33 +34,8 @@ $svg-path: '../svgs/';
 @mixin getType($name) {
 	$type-attrs: map-get($text-map, $name);
 
-	@if $type-attrs {
-		$type-length: list.length($type-attrs);
-		$sizing: nth($type-attrs,1);
-		$family: nth($type-attrs,2);
-		$spacing: if($type-length >= 3,nth($type-attrs,3),null);
-		$decoration: if($type-length >= 4,nth($type-attrs,4),null);
-		$transform: if($type-length >= 5,nth($type-attrs,5),null);
-		$style: if($type-length >= 6,nth($type-attrs,6),null);
-		
-		@if ($spacing != null) {
-			letter-spacing: $spacing;
-		}
-		@if ($decoration != null) {
-			text-decoration: $decoration;
-		}	
-		@if ($transform != null) {
-			text-transform: $transform;
-		}	
-		// Declare type
-		@if ($style != null) {
-			font: $style string.unquote($sizing) $family;
-		}
-		@else {
-			font: normal string.unquote($sizing) $family;
-		}
-	}
-	@else {
-		font: normal 1em Arial, sans-serif;
+	// Explode the attr-props
+	@each $attr, $prop in $type-attrs {
+		#{$attr}: $prop;
 	}
 }

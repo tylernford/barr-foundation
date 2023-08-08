@@ -21,17 +21,12 @@ $breakpoints: (
  Fonts
  font url is relative to our compiled stylesheet
 ------------------------------------------------------------------------ */
-@mixin getFont($fontname, $fallback, $filedirectory, $filename, $style, $weight) {
+@mixin getFont($fontname, $filedirectory, $filename, $style, $weight) {
 	@font-face {
 		$downloadable-path: '../fonts/#{$filedirectory}/#{$filename}';
-		@if $fallback == sans  {
-			$fallback: Verdana, sans-serif;
-		} @else {
-			$fallback: Times New Roman, Times, serif;
-		}
 
 		font-display: swap;
-		font-family: $fontname, $fallback;
+		font-family: $fontname;
 		font-style: $style;
 		font-weight: $weight;
 		src: url('#{$downloadable-path}.woff2') format('woff2');
@@ -39,16 +34,25 @@ $breakpoints: (
 }
 
 // Define project fonts
-@include getFont('Axiforma', sans, 'axiforma', 'axiforma--book--temp', normal, 400);
-@include getFont('Axiforma', sans, 'axiforma', 'axiforma--medium--temp', normal, 500);
+@include getFont('Axiforma', 'axiforma', 'axiforma--book--temp', normal, 400);
+@include getFont('Axiforma', 'axiforma', 'axiforma--medium--temp', normal, 500);
 
-@include getFont('Macklin Slab', serif, 'macklin-slab', 'macklin-slab--light-italic--temp', italic,300);
-@include getFont('Macklin Slab', serif, 'macklin-slab', 'macklin-slab--italic--temp', italic, 400);
+@include getFont('Macklin Slab', 'macklin-slab', 'macklin-slab--light-italic--temp', italic,300);
+@include getFont('Macklin Slab', 'macklin-slab', 'macklin-slab--italic--temp', italic, 400);
 
-@include getFont('Macklin Text', serif, 'macklin-text', 'macklin-text--light--temp', normal, 300);
-@include getFont('Macklin Text', serif, 'macklin-text', 'macklin-text--regular--temp', normal, 400);
-@include getFont('Macklin Text', serif, 'macklin-text', 'macklin-text--bold--temp', normal, 700);
+@include getFont('Macklin Text', 'macklin-text', 'macklin-text--light--temp', normal, 300);
+@include getFont('Macklin Text', 'macklin-text', 'macklin-text--regular--temp', normal, 400);
+@include getFont('Macklin Text', 'macklin-text', 'macklin-text--bold--temp', normal, 700);
 
+
+/* ---------------------------------------------------------------------
+	Font Family
+------------------------------------------------------------------------ */
+:root {
+	--ff-axiforma: Axiforma, Verdana, sans-serif;
+	--ff-macklin-slab: "Macklin Slab", "Times New Roman", Times, serif;
+	--ff-macklin-text: "Macklin Text", "Times New Roman", Times, serif;
+}
 
 /* ---------------------------------------------------------------------
 	Colors

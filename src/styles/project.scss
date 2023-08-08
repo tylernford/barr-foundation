@@ -4,7 +4,6 @@
  Project-specific generic element declarations
 ------------------------------------------------------------------------ */
 @use "utils/_utils" as *;
-@use "sass:math";
 
 * {
 	box-sizing: border-box;
@@ -27,21 +26,11 @@ body {
 	overflow-x: hidden;
 	background: var(--color-tertiary-grey-25);
 	color: var(--color-tertiary-grey-200);
-	// font-family: $font-tertiary;
+	font-family: var(--ff-macklin-text);
+	font-weight: 400;
+	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;	
-
-	@include breakpoint(md) {
-		//font-size: 200%;
-	}
-
-	@include breakpoint(lg) {
-		//font-size: 150%;
-	}
-
-	@include breakpoint(xl) {
-	}
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,7 +54,7 @@ img {
 
 .viewport {
 	&._is-debug::before {
-		font-size: 1.1em;
+		font-size: .75rem;
 	}
 }
 
@@ -120,10 +109,12 @@ img {
 	transition: transform 0.3s;
 	background: var(--color-tertiary-grey-25);
 	color: var(--color-tertiary-grey-200);
+	font-family: var(--ff-axiforma);
 	font-weight: 700;
 
 	@include breakpoint(sm) {
-		// font: normal 1.8em/133% $font-secondary;
+		font-size: 1.8rem;
+		line-height: 1.33;
 	}
 }
   
