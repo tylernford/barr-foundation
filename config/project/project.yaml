@@ -1,4 +1,4 @@
-dateModified: 1691175570
+dateModified: 1691442949
 email:
   fromEmail: betsy@firebellydesign.com
   fromName: Barr
@@ -107,6 +107,7 @@ meta:
     9901ad2a-d15c-4337-8b16-5f395d71a734: 'Image + Caption' # Image + Caption
     24052d58-898b-4447-805b-2a68d3a204ae: 'Rich Text' # Rich Text
     37348ab3-b1bb-48dc-b0f2-6fa4b4e8f8ad: Label # Label
+    46145c57-f9fd-4619-87db-2eaa3726cfb8: Simple # Simple
     53047e2b-0d89-45ec-9f87-fe728f47da26: Action # Action
     72510bcd-9969-41a0-9d22-91d58db388de: Header # Header
     79089f9c-e190-44e9-a175-907b75ff1d62: Description # Description
@@ -167,6 +168,10 @@ meta:
     fb5ce141-f9f1-45d8-832f-cf04b69c8348: Intro # Intro
     fde3e754-3c3c-45db-9892-ae22d50873c3: 'Internal Page' # Internal Page
 plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   field-manager:
     edition: standard
     enabled: true
@@ -191,10 +196,6 @@ plugins:
     enabled: true
     licenseKey: HOIBFWABBHQUM6AGWJCHRWYS
     schemaVersion: 3.6.2
-  redactor:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.3.0
   seomatic:
     edition: standard
     enabled: true
