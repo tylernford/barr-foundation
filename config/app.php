@@ -24,4 +24,8 @@ use craft\helpers\App;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+    'aliases' => [
+        '@svg' => craft\helpers\App::env('SVG_BASE_PATH'),
+        '@icon' => craft\helpers\App::env('ICON_BASE_PATH'),
+    ],
 ];

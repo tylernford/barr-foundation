@@ -51,7 +51,11 @@ let SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 let svgSpriteDestination = publicPath`svgs-defs.svg`;
 mix.webpackConfig({
   plugins: [
-    new SVGSpritemapPlugin('src/svgs/*.svg', {
+    new SVGSpritemapPlugin(
+      [
+        'src/svgs/*.svg',
+        'src/svgs/icons/*.svg'
+      ], {
       output: {
         filename: 'build/spritemap.svg',
         chunk: {
