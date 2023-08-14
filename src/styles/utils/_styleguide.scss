@@ -22,6 +22,15 @@ $text-map: (
 	// Headlines
 
 	// Actions
+	"action": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-12),
+		font-weight: 500,
+		line-height: var(--line-height-loose),
+		letter-spacing: var(--letter-spacing),
+		text-decoration: none,
+		text-transform: uppercase
+	),
 );
 
 

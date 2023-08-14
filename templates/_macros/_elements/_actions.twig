@@ -1,0 +1,60 @@
+{# =======================================
+  Macro: Action
+==========================================
+  Params: 
+    - attributes
+      - type (required):
+        'button', 'link'
+      - isReversed (required):
+        true, false
+      - icon (required):
+        false, 'linkType', 'specified-icon'
+      - iconOnly:
+        true, false
+      - text (required)
+      - url (required)
+      - linkType (required):
+        entry, url, asset
+      - target:
+        '_blank'
+======================================= #}
+
+{% macro action(attributes) %}
+  {% set type = attributes.type %}
+  {% set isReversed = attributes.isReversed %}
+  {% set icon = attributes.icon %}
+  {% set text = attributes.text %}
+  {% set iconOnly = attributes.iconOnly ?? false %}
+  {% set url = attributes.url %}
+  {% set linkType = attributes.linkType %}
+  {% set target = attributes.target is defined and attributes.target != '' ? attributes.target %}
+
+  {% switch icon %}
+    {% case false %}
+      {% set icon = false %}
+
+    {% case 'linkType' %}
+      {% set icon =
+        linkType == 'entry' ? 'arrow' :
+        linkType == 'url' ? 'link-out' :
+        linkType == 'asset' ? 'download'
+      %}
+
+    {% default %}
+      {% set icon = icon %}
+  {% endswitch %}
+
+  <a
+    class="action action--{{ type }}"
+    data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}"{{ iconOnly == true ? ' data-icon-only="true"' }}
+    href="{{ url }}"{{ target == '_blank' ? ' target=_"blank"' }}
+  >
+    <span class="action__text">{{ text }}</span>
+
+    {% if icon != false %}
+      <svg class="action__icon">
+        <use xlink:href="{{ alias('@icon') }}{{ icon }}-20"></use>
+      </svg>
+    {% endif %}
+  </a>
+{% endmacro %}

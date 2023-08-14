@@ -55,6 +55,30 @@ $breakpoints: (
 }
 
 /* ---------------------------------------------------------------------
+	Type
+------------------------------------------------------------------------ */
+:root {
+	--type-12: .75rem;
+
+	// --line-height-extra-tight: 1.17;
+	// --line-height-tight: 1.25;
+	// --line-height-snug: 1.33;
+	// --line-height-base: 1.5;
+	--line-height-loose: 1.6666666667;
+	// --line-height-relaxed: 1.82;
+
+	// --type-width-tight: 8em;
+	// --type-width-snug: 20em;
+	// --type-width-base: 30em;
+	// --type-width-loose: 40em;
+
+	// --text-col-width: 34rem; // 544px
+	
+	--letter-spacing: 0.15em;
+	// --letter-spacing-wide: 0.15em;
+}
+
+/* ---------------------------------------------------------------------
 	Colors
 ------------------------------------------------------------------------ */
 :root {
@@ -62,6 +86,7 @@ $breakpoints: (
 	--color-primary-teal-100: hsla(173, 100%, 28%, 1);
 	--color-primary-teal-50: hsla(175, 83%, 36%, 1);
 	--color-primary-teal-25: hsla(175, 50%, 80%, 1);
+	--color-primary-teal-20: hsla(176, 49%, 80%, 1);
 
 	--color-primary-navy-100: hsla(247, 44%, 23%, 1);
 	--color-primary-navy-50: hsla(247, 34%, 30%, 1);
@@ -95,4 +120,18 @@ $breakpoints: (
 	--color-tertiary-grey-100: hsla(216, 2%, 59%, 1);
 	--color-tertiary-grey-50: hsla(200, 3%, 79%, 1);
 	--color-tertiary-grey-25: hsla(0, 0%, 96%, 1);
+}
+
+
+/* ---------------------------------------------------------------------
+	Misc
+------------------------------------------------------------------------ */
+:root {
+	--shadow-action: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+
+	--radius-action: 2.1875rem; // 35px
+	--radius-action-s: 0.125rem; // 2px
+
+	--icon-size: 1.25rem; // 20px
+	--icon-size-s: 0.625rem; // 10px
 }
