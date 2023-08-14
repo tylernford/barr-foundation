@@ -1,0 +1,23 @@
+{# =======================================
+  Macro: Section Title
+==========================================
+  Params:
+    - attributes
+      - level (required)
+      - title (required)
+      - variant:
+        'small'
+      - border:
+        true, false
+======================================= #}
+
+{% macro sectionTitle(attributes) %}
+  {% set level = attributes.level %}
+  {% set title = attributes.title %}
+  {% set variant = attributes.variant %}
+  {% set border = attributes.border %}
+
+  <div class="section-title"{{ variant == 'small' ? ' data-variant="small"' }}{{ border == false ? ' data-border="false"' }}>
+    <{{ level }}>{{ title }}</{{ level }}>
+  </div>
+{% endmacro %}

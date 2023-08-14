@@ -59,10 +59,13 @@ $breakpoints: (
 ------------------------------------------------------------------------ */
 :root {
 	--type-12: .75rem;
+	--type-22: 1.375rem;
+	--type-28: 1.75rem;
+	--type-38: 2.375rem;
 
-	// --line-height-extra-tight: 1.17;
-	// --line-height-tight: 1.25;
-	// --line-height-snug: 1.33;
+	--line-height-extra-tight: 1.1842105263;
+	--line-height-tight: 1.25;
+	--line-height-snug: 1.3636363636;
 	// --line-height-base: 1.5;
 	--line-height-loose: 1.6666666667;
 	// --line-height-relaxed: 1.82;
@@ -74,8 +77,8 @@ $breakpoints: (
 
 	// --text-col-width: 34rem; // 544px
 	
+	--letter-spacing-tight: -0.01em;
 	--letter-spacing: 0.15em;
-	// --letter-spacing-wide: 0.15em;
 }
 
 /* ---------------------------------------------------------------------
@@ -124,6 +127,24 @@ $breakpoints: (
 
 
 /* ---------------------------------------------------------------------
+	Space
+------------------------------------------------------------------------ */
+:root {
+	--base-24: 120px;
+	--base-20: 100px;
+	--base-14: 70px;
+	--base-10: 50px;
+	--base-8: 40px;
+	--base-6: 30px;
+	--base-5: 25px;
+	--base-4: 20px;
+	--base-3: 15px;
+	--base-2: 10px;
+	--base: 5px;
+}
+
+
+/* ---------------------------------------------------------------------
 	Misc
 ------------------------------------------------------------------------ */
 :root {
@@ -134,4 +155,27 @@ $breakpoints: (
 
 	--icon-size: 1.25rem; // 20px
 	--icon-size-s: 0.625rem; // 10px
+}
+
+
+/* ---------------------------------------------------------------------
+	Container
+------------------------------------------------------------------------ */
+@mixin container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: var(--base-4);
+	padding-left: var(--base-4);
+	width: 100%;
+	max-width: 81.25rem; // 1300px
+
+	@media (min-width: 36rem) {
+		padding-right: var(--base-5);
+		padding-left: var(--base-5);
+	}
+
+	@media (min-width: 64rem) {
+		padding-right: var(--base-10);
+		padding-left: var(--base-10);
+	}
 }

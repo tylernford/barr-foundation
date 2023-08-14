@@ -20,6 +20,29 @@ $svg-path: '../svgs/';
 ------------------------------------------------------------------------ */
 $text-map: (	
 	// Headlines
+	"h3-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-38),
+		font-weight: 500,
+		line-height: var(--line-height-extra-tight),
+		letter-spacing: var(--letter-spacing-tight)
+	),
+
+	"h4-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-28),
+		font-weight: 500,
+		line-height: var(--line-height-tight),
+		letter-spacing: var(--letter-spacing-tight)
+	),
+
+	"h5-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-22),
+		font-weight: 500,
+		line-height: var(--line-height-snug),
+		letter-spacing: var(--letter-spacing-tight)
+	),
 
 	// Actions
 	"action": (
