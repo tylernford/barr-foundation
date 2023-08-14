@@ -15,7 +15,7 @@
   > * {
     @include getType('h4-axiforma');
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       @include getType('h3-axiforma');
     }
   }
