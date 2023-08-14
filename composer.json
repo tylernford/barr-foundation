@@ -7,12 +7,12 @@
     "nystudio107/craft-seomatic": "^4.0",
     "nystudio107/craft-twigpack": "^4.0.0-beta.4",
     "putyourlightson/craft-sprig": "^2.6",
+    "sebastianlenz/linkfield": "^2.1",
     "spacecatninja/imager-x": "^4.1",
     "spicyweb/craft-neo": "^3.8",
     "topshelfcraft/wordsmith": "^4.2",
     "verbb/field-manager": "^3.0",
     "verbb/formie": "^2.0",
-    "verbb/hyper": "1.1.8",
     "verbb/super-table": "^3.0",
     "vlucas/phpdotenv": "^5.4.0"
   },

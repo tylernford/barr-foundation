@@ -1,4 +1,4 @@
-dateModified: 1691442949
+dateModified: 1692035308
 email:
   fromEmail: betsy@firebellydesign.com
   fromName: Barr
@@ -181,11 +181,6 @@ plugins:
     enabled: true
     licenseKey: 9JKRARXY1NJV1OMGB0A4ALBM
     schemaVersion: 2.0.10
-  hyper:
-    edition: standard
-    enabled: true
-    licenseKey: UZ91V4B6NMBDTGNID9X74HRJ
-    schemaVersion: 1.0.0
   imager-x:
     edition: lite
     enabled: true
@@ -258,6 +253,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
 system:
   edition: pro
   live: true
