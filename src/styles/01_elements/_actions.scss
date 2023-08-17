@@ -18,6 +18,10 @@
     --color-action-label-reversed: var(--color-tertiary-grey-200);
     --color-action-hover: var(--color-tertiary-grey-200);
     --color-action-focus: var(--color-tertiary-clouds-50);
+    --transition-action-in: all var(--transition) ease-out;
+    --transition-action-in--intermediate: all var(--transition-intermediate) ease-out;
+    --transition-action-out: all var(--transition) ease-in;
+    --transition-action-out--intermediate: all var(--transition-intermediate) ease-in;
 
     flex-shrink: 0;
     display: inline-flex;
@@ -51,20 +55,20 @@
     ------------------------------------------------------------------------ */
     &--button {
         border-radius: var(--radius-action);
-        transition: all .25s ease-in;
+        transition: var(--transition-action-out);
         
         // With text
         &:not([data-icon-only=true]) {
-            padding: 16px 28px 14px 28px;
+            padding: var(--base-3) var(--base-6); // 15px 30px
 
             .action__icon {
-                margin-top: -3px;
+                margin-top: -2px;
             }
         }
 
         // Icon only
         &[data-icon-only=true] {
-            padding: 15px;
+            padding: var(--base-3); // 15px
             
             .action__text {
                 @include totallyHide;
@@ -89,19 +93,19 @@
                 border-radius: var(--radius-action-s);
                 background-color: var(--color-action-hover);
                 color: var(--color-action-label);
-                transition: all .33s ease-out;
+                transition: var(--transition-action-in--intermediate);
             }
         }
 
         // Focus
         &:focus-visible {
             box-shadow: var(--shadow-action);
-            outline: 2px solid var(--color-action-focus);
-            outline-offset: 3px;
+            outline: var(--outline-width) solid var(--color-action-focus);
+            outline-offset: var(--outline-offset);
             border-radius: var(--radius-action-s);
             background-color: var(--color-action-hover);
             color: var(--color-action-label);
-            transition: all .33s ease-out;
+            transition: var(--transition-action-in--intermediate);
         }
     }
 
@@ -110,8 +114,9 @@
     Link
     ------------------------------------------------------------------------ */
     &--link {
+        padding: var(--base-2) 0; // 10px 0
         position: relative;
-        transition: color .25s ease-in;
+        transition: var(--transition-action-out);
 
         > * {
             position: relative;
@@ -124,13 +129,11 @@
             border-radius: var(--radius-action-s);
             background-color: var(--color-action-hover);
             opacity: 0;
-            transition: all .25s ease-in;
+            transition: var(--transition-action-out);
         }
 
         // With text
         &:not([data-icon-only=true]) {
-            padding: 11px 0 9px 0;
-
             &::before {
                 inset: 0 -.5rem; // -8px
             }
@@ -141,20 +144,18 @@
                 height: 1px;
                 position: absolute;
                 background-color: var(--color-action-hover);
-                transition: all .25s ease-in;
+                transition: var(--transition-action-out);
             }
 
             .action__icon {
-                margin-top: -3px;
+                margin-top: -2px;
             }
         }
 
         // With text
         &[data-icon-only=true] {
-            padding: 10px 0;
-
             &::before {
-                inset: 0 -10px;
+                inset: 0 var(--neg-base-2); // 0 -10px
             }
         }
 
@@ -178,16 +179,16 @@
         @media (hover: hover){
             &:hover {
                 color: var(--color-action-label);
-                transition: color .33s ease-in;
+                transition: var(--transition-action-out--intermediate);
 
                 &::before {
                     opacity: 1;
-                    transition: all .33s ease-out;
+                    transition: var(--transition-action-in--intermediate);
                 }
 
                 &::after {
                     background-color: var(--color-action-hover);
-                    transition: all .25s ease-out;
+                    transition: var(--transition-action-in);
                 }
             }
         }
@@ -195,18 +196,18 @@
         &:focus-visible {
             color: var(--color-action-label);
             outline: 0;
-            transition: color .33s ease-in;
+            transition: var(--transition-action-out--intermediate);
             
             &::before {
                 opacity: 1;
-                outline: 2px solid var(--color-action-focus);
-                outline-offset: 3px;
-                transition: all .33s ease-out;
+                outline: var(--outline-width) solid var(--color-action-focus);
+                outline-offset: var(--outline-offset);
+                transition: var(--transition-action-in--intermediate);
             }
 
             &::after {
                 background-color: var(--color-action-hover);
-                transition: all .25s ease-out;
+                transition: var(--transition-action-in);
             }
         }
     }

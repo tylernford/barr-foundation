@@ -144,6 +144,8 @@ $breakpoints: (
 	--base-3: 15px;
 	--base-2: 10px;
 	--base: 5px;
+	
+	--neg-base-2: -10px;
 }
 
 
@@ -158,6 +160,12 @@ $breakpoints: (
 
 	--icon-size: 1.25rem; // 20px
 	--icon-size-s: 0.625rem; // 10px
+
+	--outline-width: 2px;
+	--outline-offset: 3px;
+
+	--transition: 250ms;
+	--transition-intermediate: 330ms;
 }
 
 
@@ -181,4 +189,8 @@ $breakpoints: (
 		padding-right: var(--base-10);
 		padding-left: var(--base-10);
 	}
+}
+
+.container {
+	@include container;
 }
