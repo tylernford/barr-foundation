@@ -34,15 +34,18 @@ $breakpoints: (
 }
 
 // Define project fonts
-@include getFont('Axiforma', 'axiforma', 'axiforma--book--temp', normal, 400);
-@include getFont('Axiforma', 'axiforma', 'axiforma--medium--temp', normal, 500);
+@include getFont('Axiforma', 'axiforma', 'axiforma--book', normal, 400);
+@include getFont('Axiforma', 'axiforma', 'axiforma--medium', normal, 500);
 
-@include getFont('Macklin Slab', 'macklin-slab', 'macklin-slab--light-italic--temp', italic,300);
-@include getFont('Macklin Slab', 'macklin-slab', 'macklin-slab--italic--temp', italic, 400);
+@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light', normal, 200);
+@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light-italic', italic, 200);
+@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular', normal, 400);
+@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular-italic', italic, 400);
 
-@include getFont('Macklin Text', 'macklin-text', 'macklin-text--light--temp', normal, 300);
-@include getFont('Macklin Text', 'macklin-text', 'macklin-text--regular--temp', normal, 400);
-@include getFont('Macklin Text', 'macklin-text', 'macklin-text--bold--temp', normal, 700);
+@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book', normal, 300);
+@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book-italic', italic, 300);
+@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular', normal, 400);
+@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular-italic', italic, 400);
 
 
 /* ---------------------------------------------------------------------
@@ -50,8 +53,8 @@ $breakpoints: (
 ------------------------------------------------------------------------ */
 :root {
 	--ff-axiforma: Axiforma, Verdana, sans-serif;
-	--ff-macklin-slab: "Macklin Slab", "Times New Roman", Times, serif;
-	--ff-macklin-text: "Macklin Text", "Times New Roman", Times, serif;
+	--ff-messina-modern: "Messina Modern", "Times New Roman", Times, serif;
+	--ff-messina-serif: "Messina Serif", "Times New Roman", Times, serif;
 }
 
 /* ---------------------------------------------------------------------
