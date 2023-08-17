@@ -61,15 +61,21 @@ $breakpoints: (
 	Type
 ------------------------------------------------------------------------ */
 :root {
-	--type-12: .75rem;
-	--type-22: 1.375rem;
-	--type-28: 1.75rem;
+	--type-60: 3.75rem;
 	--type-38: 2.375rem;
+	--type-28: 1.75rem;
+	--type-26: 1.625rem;
+	--type-22: 1.375rem;
+	--type-18: 1.125rem;
+	--type-15: 0.9375rem;
+	--type-14: 0.875rem;
+	--type-12: 0.75rem;
 
+	--line-height-extra-extra-tight: 1.0833333333;
 	--line-height-extra-tight: 1.1842105263;
 	--line-height-tight: 1.25;
 	--line-height-snug: 1.3636363636;
-	// --line-height-base: 1.5;
+	--line-height-base: 1.4285714286;
 	--line-height-loose: 1.6666666667;
 	// --line-height-relaxed: 1.82;
 
@@ -80,8 +86,12 @@ $breakpoints: (
 
 	// --text-col-width: 34rem; // 544px
 	
-	--letter-spacing-tight: -0.01em;
-	--letter-spacing: 0.15em;
+	--letter-spacing-extra-tight: -0.01em;
+	--letter-spacing-tight: -0.005em;
+	--letter-spacing-narrow: 0.0025em;
+	--letter-spacing: 0.015em;
+	--letter-spacing-wide: 0.1005em;
+	--letter-spacing-extra-wide: 0.15em;
 }
 
 /* ---------------------------------------------------------------------
