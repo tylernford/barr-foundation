@@ -1,0 +1,115 @@
+/* _details.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Element: Details
+  See templates/_macros/_details.twig for markup
+
+  Variants: Tag, Location, Region, Byline, Job Title
+------------------------------------------------------------------------ */
+
+.details {
+  --color-details-primary: var(--color-primary-teal-150);
+  --color-details-secondary: var(--color-tertiary-grey-150);
+  --color-details-tertiary: var(--color-tertiary-grey-25);
+
+  &[data-is-reversed="true"] {
+    --color-details-primary: var(--color-primary-teal-25);
+    --color-details-secondary: var(--color-tertiary-grey-25);
+    --color-details-tertiary: var(--color-tertiary-grey-200);
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @include getType('detail-axiforma');
+
+  .details__icon {
+    margin-right: var(--base-2); // 10px
+    width: var(--icon-size);
+    height: var(--icon-size);
+    flex-shrink: 0;
+  }
+
+  margin-bottom: 25px;
+  
+  // Colors
+  .details__icon {
+    color: var(--color-details-primary);
+  }
+
+  color: var(--color-details-secondary);
+
+
+
+  // Tags
+  &[data-variant=tags] {
+    margin-top: -16px;
+
+    li {
+      margin: 16px var(--base-2) 0 0;
+
+      a {
+        padding: 0.1875rem 0.5625rem 0.125rem 0.5625rem; // 3px 9px 2px 9px
+        position: relative;
+        border: 1px solid var(--color-details-primary);
+        border-radius: var(--radius-action-s);
+        background-color: transparent;
+        color: var(--color-details-primary);
+        text-decoration: none;
+        transition: all var(--transition) ease-in;
+
+        // 8x8px triangle in upper left corner
+        &::after {
+          content: '';
+          inset: 0 auto auto 0;
+          width: 0;
+          height: 0;
+          position: absolute;
+          border-style: solid;
+          border-width: 0.5rem 0.5rem 0 0;
+          border-color: var(--color-details-primary) transparent transparent transparent;
+        }
+
+        // Hover & Focus
+        @media (hover: hover) {
+          &:hover {
+            box-shadow: var(--shadow-action);
+            background-color: var(--color-details-primary);
+            color: var(--color-details-tertiary);
+            transition: all var(--transition-intermediate) ease-out;
+          }
+        }
+
+        // Focus
+        &:focus-visible {
+          outline: var(--outline-width) solid var(--color-focus);
+          outline-offset: var(--outline-offset);
+          background-color: var(--color-details-primary);
+          color: var(--color-details-tertiary);
+          transition: all var(--transition-intermediate) ease-out;
+      }
+      }
+    }
+  }
+
+  // Byline
+  &[data-variant=byline] {
+    margin-top: var(--neg-base-2);
+
+    li {
+      margin: var(--base-2) var(--base-6) 0 0;
+      display: inline-flex;
+      align-items: center;
+
+      span {
+        margin-right: 0.3125rem;
+        width: 1.5625rem; // 25px
+        height: 1.5625rem; // 25px
+        display: block;
+        border: 2px solid var(--color-details-primary);
+        border-radius: 9999px;
+      }
+    }
+  }
+}

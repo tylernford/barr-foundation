@@ -1,0 +1,44 @@
+{# =======================================
+  Macro: Details
+==========================================
+  Params:
+    - variant (required):
+      - 'tags', 'location', 'region', 'byline', 'job-title'
+    - isReversed (required):
+      - true, false
+    - details
+      'details', ['detail', 'detail']
+======================================= #}
+
+{% macro detail(variant, isReversed, details) %}
+  {% if variant == 'tags' or variant == 'byline' %}
+    <ul class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
+      {% for detail in details %}
+        <li>
+          {% if variant == 'tags' %}
+            <a href="{{ detail.url }}">{{ detail.title }}</a>
+          {% elseif variant == 'byline' %}
+            <span></span> {{ detail.name }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% else %}
+    {% set icon =
+      variant == 'location' ? 'home' :
+      variant == 'region' ? 'map-pin' :
+      variant == 'job-title' ? 'person'
+    %}
+
+    {% set title = variant|title|replace({'-': ' '}) %}
+    
+    <p class="details" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
+      <svg class="details__icon">
+        <title>{{ title }}</title>
+        <use xlink:href="{{ alias('@icon') }}{{ icon }}-20"></use>
+      </svg>
+      {{ details }}
+    </p>
+  {% endif %}
+{% endmacro %}

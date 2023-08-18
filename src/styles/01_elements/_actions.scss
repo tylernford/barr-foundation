@@ -2,10 +2,10 @@
 @use "../utils/_utils" as *;
 
 /* ---------------------------------------------------------------------
-  Action Item: Structure
-  See templates/_macros/_actions.twig for markup
+  Element: Action
+  See templates/_macros/_elements/_actions.twig for markup
 
-  // Variants, e.g. button, link
+  Variants: Button, Link
 ------------------------------------------------------------------------ */
 
 .action {
@@ -17,7 +17,6 @@
     --color-action-label: var(--color-tertiary-grey-25);
     --color-action-label-reversed: var(--color-tertiary-grey-200);
     --color-action-hover: var(--color-tertiary-grey-200);
-    --color-action-focus: var(--color-tertiary-clouds-50);
     --transition-action-in: all var(--transition) ease-out;
     --transition-action-in--intermediate: all var(--transition-intermediate) ease-out;
     --transition-action-out: all var(--transition) ease-in;
@@ -99,8 +98,7 @@
 
         // Focus
         &:focus-visible {
-            box-shadow: var(--shadow-action);
-            outline: var(--outline-width) solid var(--color-action-focus);
+            outline: var(--outline-width) solid var(--color-focus);
             outline-offset: var(--outline-offset);
             border-radius: var(--radius-action-s);
             background-color: var(--color-action-hover);
@@ -200,7 +198,7 @@
             
             &::before {
                 opacity: 1;
-                outline: var(--outline-width) solid var(--color-action-focus);
+                outline: var(--outline-width) solid var(--color-focus);
                 outline-offset: var(--outline-offset);
                 transition: var(--transition-action-in--intermediate);
             }
