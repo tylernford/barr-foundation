@@ -1,0 +1,30 @@
+/* _subhead.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Element: Subhead
+------------------------------------------------------------------------ */
+
+.subhead {
+  @include getType('subhead');
+
+  p {
+    max-width: 34.5em;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5625rem; // 25px
+    }
+  }
+
+  a {
+    color: var(--color-primary-teal-100);
+    transition: color var(--transition) ease-in;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-tertiary-grey-200);
+        transition: color var(--transition-intermediate) ease-out;
+      }
+    }
+  }
+}
