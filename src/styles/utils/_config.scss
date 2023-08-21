@@ -66,6 +66,7 @@ $breakpoints: (
 	--type-28: 1.75rem;
 	--type-26: 1.625rem;
 	--type-22: 1.375rem;
+	--type-21: 1.3125rem;
 	--type-18: 1.125rem;
 	--type-15: 0.9375rem;
 	--type-14: 0.875rem;
@@ -158,6 +159,11 @@ $breakpoints: (
 	--base: 5px;
 	
 	--neg-base-2: -10px;
+	--neg-base-4: -20px;
+
+	--col-8: 66.6666666666%;
+	--col-10: 83.3333333333%;
+	--col-12: 100%;
 }
 
 

@@ -73,6 +73,15 @@ $text-map: (
 		line-height: var(--line-height-snug),
 	),
 
+	// Body
+	"body": (
+		font-family: var(--ff-messina-serif),
+		font-size: var(--type-21),
+		font-weight: 300,
+		line-height: var(--line-height-base),
+		letter-spacing: var(--letter-spacing-tight)
+	),
+
 	// Caption
 	"caption-axiforma": (
 		font-family: var(--ff-axiforma),

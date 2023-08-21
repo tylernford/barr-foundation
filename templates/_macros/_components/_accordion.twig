@@ -1,0 +1,40 @@
+{# =======================================
+  Macro: Accordion Component
+==========================================
+  Params:
+    - accordion (required)
+      [
+        { panel.title, panel.body },
+        { panel.title, panel.body }
+      ]
+    - variant:
+      'large', 'small'
+======================================= #}
+
+{% macro accordion(accordion, variant) %}
+  {% set accordionID = 'accordion-' ~ random() %}
+
+  <section class="accordion" role="group" id="{{ accordionID }}"{{ variant != false ? ' data-variant=' ~ variant }}>
+    {# Panels #}
+    {% for panel in accordion %}
+      {% set panelID = 'panel-' ~ random() %}
+      {% set panelTitle = panel.title %}
+      {% set panelBody = panel.body %}
+
+      {# Panel #}
+      <details {{ loop.index == 1 ? 'class="accordion-panel _is-open" open' : 'class="accordion-panel"' }}>
+        {# Panel Trigger #}
+        <summary class="accordion-panel__trigger" id="{{ panelID }}">
+          {{ panelTitle }}
+        </summary>
+
+        {# Panel Copy #}
+        <div class="accordion-panel__body">
+          <div class="copy">
+            {{ panelBody|raw }}
+          </div>
+        </div>
+      </details>
+    {% endfor %}
+  </section>
+{% endmacro %}

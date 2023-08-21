@@ -3,7 +3,7 @@
 
 /* ---------------------------------------------------------------------
   Element: Details
-  See templates/_macros/_details.twig for markup
+  See templates/_macros/_elements/_details.twig for markup
 
   Variants: Tag, Location, Region, Byline, Job Title
 ------------------------------------------------------------------------ */
@@ -30,8 +30,6 @@
     height: var(--icon-size);
     flex-shrink: 0;
   }
-
-  margin-bottom: 25px;
   
   // Colors
   .details__icon {
@@ -88,7 +86,7 @@
           background-color: var(--color-details-primary);
           color: var(--color-details-tertiary);
           transition: all var(--transition-intermediate) ease-out;
-      }
+        }
       }
     }
   }

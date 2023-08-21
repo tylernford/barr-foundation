@@ -1,6 +1,9 @@
 // Global Imports
-import appState from './utils/appState';
-import appForms from './utils/appForms';
+// import appState from './utils/appState';
+// import appForms from './utils/appForms';
+
+// Element Imports
+import './components/accordion';
 
 // Component Imports
 // Uncomment as needed
@@ -11,7 +14,7 @@ import appForms from './utils/appForms';
 // import popupDialog from './components/popupDialog';
 
 // Inits
-const currentState = new appState();
+// const currentState = new appState();
 
 // Component inits go here
 // Example:
@@ -19,9 +22,3 @@ const currentState = new appState();
 //     _id: 'modal',
 //     _hash: 'bio'
 // });
-
-
-
-
-
-           
