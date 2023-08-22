@@ -1,0 +1,31 @@
+{# =======================================
+  Macro: Quote Component
+==========================================
+  Params:
+    - quote (required)
+======================================= #}
+
+{% macro quote(quote, attribution) %}
+  {% import '_macros/01_elements/_details' as details %}
+
+  <blockquote class="quote">
+    {# Quote #}
+    <p>{{ quote }}</p>
+
+    {# Details #}
+    <footer class="quote__attribution">
+      {# Person #}
+      {{ details.detail('byline', false, attribution.person) }}
+
+      {# Title #}
+      {% if attribution.title %}
+        <span class="attribution__secondary">{{ attribution.title }}</span>
+      {% endif %}
+
+      {# Organisation #}
+      {% if attribution.organisation %}
+        <span class="attribution__secondary">{{ attribution.organisation }}</span>
+      {% endif %}
+    </footer>
+  </blockquote>
+{% endmacro %}

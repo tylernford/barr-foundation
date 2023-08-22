@@ -11,19 +11,28 @@
 ======================================= #}
 
 {% macro detail(variant, isReversed, details) %}
-  {% if variant == 'tags' or variant == 'byline' %}
-    <ul class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
-      {% for detail in details %}
-        <li>
-          {% if variant == 'tags' %}
-            <a href="{{ detail.url }}">{{ detail.title }}</a>
-          {% elseif variant == 'byline' %}
-            <span></span> {{ detail.name }}
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+  {# Tags #}
+  {% if variant == 'tags' %}
+    {{ _self.list(variant, isReversed, details) }}
 
+  {# Byline #}
+  {% elseif variant == 'byline' %}
+    {# Byline list #}
+    {% if details|length > 1 %}
+      {{ _self.list(variant, isReversed, details) }}
+    
+    {# Single #}
+    {% else %}
+      <span class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
+      {% for detail in details %}
+        <span>
+          <span></span> {{ detail.name }}
+        </span>
+      {% endfor %}
+      </span>
+    {% endif %}
+
+  {# Location, Region, and Job Title #}
   {% else %}
     {% set icon =
       variant == 'location' ? 'home' :
@@ -41,4 +50,19 @@
       {{ details }}
     </p>
   {% endif %}
+
+  {# List #}
+  {% macro list(variant, isReversed, details) %}
+    <ul class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
+      {% for detail in details %}
+        <li>
+          {% if variant == 'tags' %}
+            <a href="{{ detail.url }}">{{ detail.title }}</a>
+          {% elseif variant == 'byline' %}
+            <span></span> {{ detail.name }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endmacro %}
 {% endmacro %}
