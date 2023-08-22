@@ -1,0 +1,19 @@
+{# =======================================
+  Macro: Breadcrumb Element
+==========================================
+  Params:
+    - breadcrumb
+      - ['crumb', 'crumb']
+======================================= #}
+
+{% macro breadcrumb(crumbs) %}
+  <nav class="breadcrumb" aria-label="Breadcrumb" role="navigation">
+    <ol>
+      {% for crumb in crumbs %}
+        <li{% if loop.index != 3 %} aria-label="{{ loop.index == 1 ? 'Site section' : loop.index == 2 ? 'Subsection' }}"{% endif %}>
+          <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
+{% endmacro %}
