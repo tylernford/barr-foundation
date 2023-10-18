@@ -1,0 +1,34 @@
+{# =======================================
+  Macro: EXAMPLE ACCORDION MODULE
+==========================================
+  Params:
+    - title
+    - subhead
+    - accordion (required)
+======================================= #}
+
+
+{% macro accordionModule(title, subhead, accordion) %}
+  {% import '_macros/01_elements/_section-title' as sectionTitles %}
+  {% import '_macros/02_components/_accordion' as accordion %}
+
+  <section class="accordion-module">
+    {# Section Title #}
+    {% if title|length %}
+      {{ sectionTitles.sectionTitle(title) }}
+    {% endif %}
+    
+    {# Subhead & Accordion #}
+    <div class="container">
+      {# Subhead #}
+      {% if subhead|length %}
+      <div class="subhead" style="margin-bottom: 50px">
+        {{ subhead|raw }}
+      </div>
+      {% endif %}
+
+      {# Accordion #}
+      {{ accordion.accordion(accordion, '') }}
+    </div>
+  </section>
+{% endmacro %}
