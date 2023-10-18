@@ -42,7 +42,7 @@ mix
   .extract();
 
 // Assets
-mix.copy(src`images`,'web/build/images')
+// mix.copy(src`images`,'web/build/images')
 mix.copy(src`fonts`,'web/build/fonts')
 mix.copy(src`svgs`,'web/build/svgs')
 
