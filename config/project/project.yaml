@@ -1,4 +1,4 @@
-dateModified: 1692301225
+dateModified: 1698852482
 email:
   fromEmail: betsy@firebellydesign.com
   fromName: Barr
@@ -177,7 +177,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 9JKRARXY1NJV1OMGB0A4ALBM
-    schemaVersion: 2.0.10
+    schemaVersion: 2.0.11
   imager-x:
     edition: lite
     enabled: true
@@ -257,10 +257,10 @@ plugins:
 system:
   edition: pro
   live: true
-  name: $SITE_NAME
+  name: 'Barr Foundation'
   retryDuration: null
-  schemaVersion: 4.4.0.4
-  timeZone: $TIMEZONE
+  schemaVersion: 4.5.3.0
+  timeZone: $TZ
 users:
   allowPublicRegistration: false
   defaultGroup: null
