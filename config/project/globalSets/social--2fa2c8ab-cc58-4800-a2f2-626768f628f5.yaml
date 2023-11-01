@@ -6,13 +6,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 689b3da4-dd76-4bb5-aac9-5f5238eacd3d # Social Links
+            fieldUid: e80011d9-6840-4ef0-862e-d5b1ef15bc9b # Social Navigation
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ae9f9592-0604-41c4-be42-1908908ae420
+            uid: 94b64ada-b200-48e4-89cb-ce35e15011f4
             userCondition: null
             warning: null
             width: 100

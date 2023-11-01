@@ -1,4 +1,4 @@
-columnSuffix: ozcbfmsb
+columnSuffix: null
 contentColumnType: text
 fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Common
 handle: richText
@@ -8,20 +8,16 @@ searchable: false
 settings:
   availableTransforms: ''
   availableVolumes: '*'
+  ckeConfig: 46145c57-f9fd-4619-87db-2eaa3726cfb8 # Simple
   columnType: text
-  configSelectionMode: choose
-  defaultTransform: ''
-  manualConfig: ''
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
   purifierConfig: null
   purifyHtml: true
-  redactorConfig: Body.json
-  removeEmptyTags: false
-  removeInlineStyles: false
-  removeNbsp: false
-  showHtmlButtonForNonAdmins: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  uiMode: normal
+  showWordCount: false
+  wordLimit: null
 translationKeyFormat: null
 translationMethod: none
-type: craft\redactor\Field
+type: craft\ckeditor\Field

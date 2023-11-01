@@ -1,61 +1,33 @@
-changedFieldIndicator: 1483861989
-field: c954d828-974b-402e-92e2-3057b737e6ed # Menu
+field: 0814b33a-e40d-4c64-8fa1-aabdfe035850 # Footer Navigation
 fieldLayouts:
-  336640d8-29bb-441a-a921-80dd18cfa576:
+  48efa867-4258-4127-869c-08f857bb8110:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: f04ce99a-aa20-4ed0-9e83-40f232197b48 # Item
+            fieldUid: 2dec7473-aaa1-473a-a853-156a05b52a14 # Target
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e730ee5a-49f1-40e9-9df9-cee694f21df4
+            uid: f0c3eaf1-2318-47ca-8c08-23457b5ce84d
             userCondition: null
             warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 6cc3b73a-f6dd-45e3-89fd-4c871ad53903 # Is secondary?
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 735cc627-123b-4241-8891-3fce92b3438d
-            userCondition: null
-            warning: null
-            width: 100
+            width: 50
         name: Content
-        uid: 440eaa49-c627-4245-8f32-9f2435fc6b94
+        uid: cebef42f-c277-4793-84c1-d76fe9676777
         userCondition: null
 fields:
-  6cc3b73a-f6dd-45e3-89fd-4c871ad53903: # Is secondary?
-    columnSuffix: yhcvrvne
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: isSecondary
-    instructions: 'Secondary menu items will appear as smaller text within the primary navigation overlay. '
-    name: 'Is secondary?'
-    searchable: false
-    settings:
-      default: false
-      offLabel: null
-      onLabel: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
-  f04ce99a-aa20-4ed0-9e83-40f232197b48: # Item
+  2dec7473-aaa1-473a-a853-156a05b52a14: # Target
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: navTarget
     instructions: null
-    name: Item
+    name: Target
     searchable: false
     settings:
       allowCustomText: true
@@ -112,3 +84,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+handle: flatItem
+name: 'Flat Menu'
+sortOrder: 1

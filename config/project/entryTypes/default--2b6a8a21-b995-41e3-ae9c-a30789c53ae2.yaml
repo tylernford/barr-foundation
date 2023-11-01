@@ -1,0 +1,46 @@
+fieldLayouts:
+  a9ad71cf-aba9-4880-b878-8f3ea37dd782:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7057c312-bd04-4225-a0e4-016004397490
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b50ef442-9826-45d7-a734-b02ea290929e
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 7f9e1d78-1e0b-4ae3-a7cc-bf51f351b4da # Grantmaking
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

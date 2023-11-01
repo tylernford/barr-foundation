@@ -3,7 +3,7 @@ enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: $SITE_NAME
+name: 'Barr Foundation'
 primary: true
 siteGroup: 10c8f132-8019-4048-ac30-a3604b0e0270 # Barr
 sortOrder: 1

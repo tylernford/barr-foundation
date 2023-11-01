@@ -1,0 +1,46 @@
+fieldLayouts:
+  ac89c60f-eb96-49ce-88c1-d30b66544575:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d2df25c8-2105-4092-86d7-1b90cf88f5b0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7e15bb85-5d19-4560-9d77-3f524105e15a
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 1982f1d0-3929-4ddf-b0e0-76d519d91f39 # Program Areas
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

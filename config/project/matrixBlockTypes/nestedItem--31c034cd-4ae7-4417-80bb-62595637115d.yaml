@@ -1,134 +1,90 @@
-field: 8b6f4e86-b264-4d36-99a2-2bd8c177c514 # Primary Navigation
+field: 0814b33a-e40d-4c64-8fa1-aabdfe035850 # Footer Navigation
 fieldLayouts:
-  efed81c1-f09e-4308-9666-353f4b9bc577:
+  e6414a7c-52d1-4689-b96f-7f32baa40386:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 5bd95319-8b0b-4be7-8a7f-b40373b24105 # Label
+            fieldUid: 9db66fd5-d2b8-4de8-b376-dff8110ce3e9 # Label
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e15a4699-8bdd-499a-ae61-9958178a4b29
+            uid: f8eea21a-566c-4753-b7cc-d1aaf27d37eb
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
-            fieldUid: d8653b35-a1ac-4282-8083-902f060bcc6e # Target
+            fieldUid: 7dc7f3f2-241c-4c3e-a469-43097f42b717 # Target
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: efd26263-07c8-407a-9610-9f0dd2b8287b
+            uid: 5f07cf74-2ec9-4875-8183-ec636dbbe1c3
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
-            fieldUid: c0b3adea-77f8-4182-b17d-7209cb415314 # Description
+            fieldUid: 9c0f92d3-1fb7-4783-9367-f71647adcaeb # Description
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 92e73aca-d30c-46a0-bae6-1e3515d4eb0f
+            uid: 40f05711-9801-4fc5-9e82-cadacd27caed
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: c954d828-974b-402e-92e2-3057b737e6ed # Menu
+            fieldUid: 0e617ac1-3f0e-4444-b08b-ad43e7448faa # Menu
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 27ca75c4-87a7-4c26-81c4-582e6d002d54
+            uid: 64185d45-10ad-4ccd-8ffb-15049f616a92
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: adfc9440-8ef2-4063-a70a-3b9fc6567521
+        uid: 19612467-7367-4e3b-bc37-4416b2635d27
         userCondition: null
 fields:
-  5bd95319-8b0b-4be7-8a7f-b40373b24105: # Label
-    columnSuffix: qmytjhkk
-    contentColumnType: text
-    fieldGroup: null
-    handle: navLabel
-    instructions: null
-    name: Label
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  c0b3adea-77f8-4182-b17d-7209cb415314: # Description
-    columnSuffix: jtzwezft
-    contentColumnType: text
-    fieldGroup: null
-    handle: description
-    instructions: 'Brief description of section that also urges users to delve deeper/explore our work. (Word Limit: 200)'
-    name: Description
-    searchable: false
-    settings:
-      availableTransforms: ''
-      availableVolumes: ''
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
-      columnType: text
-      defaultTransform: null
-      enableSourceEditingForNonAdmins: true
-      purifierConfig: null
-      purifyHtml: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      showWordCount: true
-      wordLimit: 200
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\ckeditor\Field
-  c954d828-974b-402e-92e2-3057b737e6ed: # Menu
+  0e617ac1-3f0e-4444-b08b-ad43e7448faa: # Menu
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: navMenu
-    instructions: 'Assign a link to the menu item. (Max 3 primary items; 3-5 secondary items)'
+    instructions: 'Assign a link to the menu item.'
     name: Menu
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 177586450
+      changedFieldIndicator: 1131126003
       columns:
         __assoc__:
           -
-            - f04ce99a-aa20-4ed0-9e83-40f232197b48 # Item
+            - c7deb866-6362-47f8-8104-2d8bf7195864 # Item
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 6cc3b73a-f6dd-45e3-89fd-4c871ad53903 # Is secondary?
+            - 5aa8c652-d385-4a25-ba86-59ea7767d37e # Is secondary?
             -
               __assoc__:
                 -
                   - width
                   - 150px
-      contentTable: '{{%stc_10_navmenu}}'
+      contentTable: '{{%stc_23_navmenu}}'
       fieldLayout: table
       maxRows: null
       minRows: null
@@ -139,7 +95,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: verbb\supertable\fields\SuperTableField
-  d8653b35-a1ac-4282-8083-902f060bcc6e: # Target
+  7dc7f3f2-241c-4c3e-a469-43097f42b717: # Target
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -202,6 +158,50 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  9c0f92d3-1fb7-4783-9367-f71647adcaeb: # Description
+    columnSuffix: pjhmojuh
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: 'Brief description of section that also urges users to delve deeper/explore our work. (Word Limit: 200)'
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: 200
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  9db66fd5-d2b8-4de8-b376-dff8110ce3e9: # Label
+    columnSuffix: vmqjfpop
+    contentColumnType: text
+    fieldGroup: null
+    handle: navLabel
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
 handle: nestedItem
 name: 'Nested Menu'
 sortOrder: 2

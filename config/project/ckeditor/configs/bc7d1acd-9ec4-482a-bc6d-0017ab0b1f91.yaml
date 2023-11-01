@@ -1,12 +1,6 @@
-headingLevels:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
+headingLevels: false
 listPlugin: DocumentList
-name: Simple
+name: 'Extra Simple'
 toolbar:
   - heading
   - '|'
