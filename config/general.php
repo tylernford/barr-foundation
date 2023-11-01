@@ -29,5 +29,11 @@ return GeneralConfig::create()
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
+        '@assetBaseUrl' => App::env('ASSETS_BASE_URL'),
+        '@uploadBaseUrl' => App::env('UPLOADS_BASE_URL'),
+        '@assetBasePath' => App::env('ASSETS_BASE_PATH'),
+        '@svg' => App::env('SVG_BASE_PATH'),
+        '@icon' => App::env('ICON_BASE_PATH'),
     ])
+    ->timezone('America/Chicago')
 ;
