@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: text
-fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Common
-handle: richText
+fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Texts
+handle: textSimple
 instructions: null
-name: 'Rich Text'
+name: 'Text: Simple'
 searchable: false
 settings:
   availableTransforms: ''

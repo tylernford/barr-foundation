@@ -1,9 +1,9 @@
-columnSuffix: wcasjuvs
+columnSuffix: iaxogkyu
 contentColumnType: text
-fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Common
-handle: sectionTitle
+fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Texts
+handle: textHeading
 instructions: null
-name: 'Section Title'
+name: 'Text: Heading'
 searchable: false
 settings:
   byteLimit: null

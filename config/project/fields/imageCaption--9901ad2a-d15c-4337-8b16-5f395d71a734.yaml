@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Common
+fieldGroup: bc3ebb91-3067-4953-ad56-b033b2311d36 # Assets
 handle: imageCaption
 instructions: 'Select an image. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
 name: 'Image + Caption'

@@ -1,4 +1,4 @@
-dateModified: 1698866782
+dateModified: 1698940901
 elementSources:
   craft\elements\Entry:
     -
@@ -9,10 +9,8 @@ elementSources:
       key: '*'
       tableAttributes:
         - section
-        - postDate
-        - expiryDate
-        - author
         - link
+        - slug
       type: native
     -
       defaultSort:
@@ -23,6 +21,30 @@ elementSources:
       tableAttributes:
         - link
       type: native
+    -
+      heading: Globals
+      type: heading
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 170df442-bdd8-4e95-a39b-83cf3399b544
+            values:
+              - 2652042d-326e-45ff-b0bd-45f95f9e2507 # Header
+              - 4af5ef3d-2c87-48a7-9d3b-c568f714e378 # Footer
+              - e6d0fb6c-83de-4e6b-b2b0-ca04df252285 # Social
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:824aeae8-8ab4-4ac0-87bc-517e9ee04956'
+      label: Navigation
+      tableAttributes: '-'
+      type: custom
     -
       heading: Pages
       type: heading
@@ -102,8 +124,28 @@ elementSources:
         - section
       type: native
     -
-      heading: ''
+      heading: Posts
       type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+      tableAttributes:
+        - link
+        - section
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Blog Tags
+      tableAttributes:
+        - slug
+        - parent
+      type: native
 email:
   fromEmail: betsy@firebellydesign.com
   fromName: Barr
@@ -139,39 +181,52 @@ fs:
     url: $ASSETS_BASE_URL
 meta:
   __names__:
+    0a0fbbb0-ab8f-4950-afab-87e4e5f44c47: Image # Image
+    0c504d15-eff5-4c67-a859-9cef6adcd964: Footer # Footer
     0e617ac1-3f0e-4444-b08b-ad43e7448faa: Menu # Menu
+    0f725806-1cbe-40c2-91a6-cfc9a70879c2: 'Text: Heading' # Text: Heading
     1bf5f3e0-2b61-48a7-85fb-6a6e1ddae091: Homepage # Homepage
     1c92443d-eb12-4c8b-86e8-9199faa01efc: Content # Content
     1ca4d903-c22e-4a3c-b2f3-320fa136bd6b: Media # Media
+    2ae9dbb1-fe19-4d9a-ab52-ecf5bf2bf5b9: __blank__ # __blank__
     2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23: Images # Images
     2b6a8a21-b995-41e3-ae9c-a30789c53ae2: Default # Default
     2c440413-ae2b-4f69-880f-bd88d1199f2f: Call-to-Action # Call-to-Action
     2d7d0372-f9f3-45ff-9724-4904a361be13: Text # Text
     2dec7473-aaa1-473a-a853-156a05b52a14: Target # Target
-    2fa2c8ab-cc58-4800-a2f2-626768f628f5: Social # Social
+    2f4e1404-f866-4cdc-924e-3c5930d9dd76: 'Opener: Landing' # Opener: Landing
     3b0ee85b-3a90-4147-95da-96c517b5b684: Target # Target
     3b2f52f1-19d0-45f7-b3f6-e1e72a135f1c: Global # Global
     3b57b347-d307-44e5-874b-c98927dad390: 'Flat Menu' # Flat Menu
+    3da8a9db-c68d-4f61-a9ab-5645cc1f1c07: Menu # Menu
+    4af5ef3d-2c87-48a7-9d3b-c568f714e378: Footer # Footer
+    4c3f19fe-5d09-4c96-9f8a-0c1517623aff: Item # Item
     5aa8c652-d385-4a25-ba86-59ea7767d37e: 'Is secondary?' # Is secondary?
     5bd95319-8b0b-4be7-8a7f-b40373b24105: Label # Label
+    5de2e8df-6dad-4364-bf23-2d48496f0f1d: 'Text: Description' # Text: Description
     5df1d856-39cc-494f-bdd4-10ef2b5fd5ce: Body # Body
     5ef09b80-b3aa-4b57-99dc-4bb324d63fd0: 'Internal Page' # Internal Page
     6cc3b73a-f6dd-45e3-89fd-4c871ad53903: 'Is secondary?' # Is secondary?
     6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: Icon # Icon
     6f75cfac-8ebd-4032-8bde-3d2fe87bf929: Stats # Stats
+    7c4618eb-5889-426c-a0ac-a88ebbaa4f21: Blog # Blog
     7dc7f3f2-241c-4c3e-a469-43097f42b717: Target # Target
     7f9e1d78-1e0b-4ae3-a7cc-bf51f351b4da: Grantmaking # Grantmaking
     7f980c15-b877-4197-8872-51e7c252444b: New # New
+    8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5: Cards # Cards
     8b6f4e86-b264-4d36-99a2-2bd8c177c514: 'Primary Navigation' # Primary Navigation
     8bb1eec8-80df-4ab2-a8b4-581b470556ac: 'Quote Block' # Quote Block
+    8cd69cc8-ffde-4e53-be30-229cc92f26ae: 'Menu Block' # Menu Block
     8d0ad5ab-7127-4ad9-9610-601f5ce1bd8d: Action # Action
     8e01f9c0-5b32-400f-af60-ee3cf5e92d49: Documents # Documents
     8e567268-98e5-4afb-aac9-293cd9491b52: 'Flat Menu' # Flat Menu
     9c0f92d3-1fb7-4783-9367-f71647adcaeb: Description # Description
     9db66fd5-d2b8-4de8-b376-dff8110ce3e9: Label # Label
+    9f219bea-a6a0-49f3-a284-1696772cfd1a: Header # Header
     10c8f132-8019-4048-ac30-a3604b0e0270: Barr # Barr
     14d1fc6e-b42d-464e-8b7b-46441714b8d8: Image # Image
     17a9de48-5e07-4524-9f6e-8de470709982: Target # Target
+    19db2fce-b7de-453e-b53c-9280627d5d0c: 'Text: Eyebrow' # Text: Eyebrow
     28f610a0-d837-4df9-a971-f04b4d9f66ef: 'Image + Caption' # Image + Caption
     31c034cd-4ae7-4417-80bb-62595637115d: 'Nested Menu' # Nested Menu
     043e552d-0c17-47b8-b14d-e9005b1963ad: 'Link Carousel' # Link Carousel
@@ -185,30 +240,33 @@ meta:
     85c752c0-899b-4d86-ad80-757b76b23ea2: 'Page Builder: Default' # Page Builder: Default
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
     114e6010-b1c0-4faa-837c-c7bbe1e0daae: 'Page Builders' # Page Builders
+    370c6540-e981-4505-a2e5-5ad4e9d0655e: Subsection # Subsection
     0426fb2a-6010-410d-abe9-2cf75ab3f5f9: Target # Target
     436e597b-3937-4ac2-9ac6-4f73e18cbb74: 'Body Block' # Body Block
-    506fdf00-1b11-44fc-8731-932352cd324f: 'Section Title' # Section Title
     525fa7f5-6611-4eeb-9f32-cc5c09449bce: Action # Action
+    766d1cbd-4251-4b9d-9378-bf9d345ae492: Openers # Openers
     806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     0814b33a-e40d-4c64-8fa1-aabdfe035850: 'Footer Navigation' # Footer Navigation
     865d16c8-b501-44cb-af03-d44350849596: Quote # Quote
     914c6a3c-f48a-422f-ba86-dec3f3932b9f: Label # Label
     915b78de-ea87-43f6-bd0e-f9dd749a57b5: 'Barr Foundation' # Barr Foundation
     962d1b17-ec75-47e8-a297-39b0b971c535: Item # Item
+    966dbbfc-2617-4a97-8687-5547fcae76a9: Eyebrow # Eyebrow
     987e3f4a-b7d0-4c27-920d-47c1c4b02e68: Default # Default
     1982f1d0-3929-4ddf-b0e0-76d519d91f39: 'Program Areas' # Program Areas
+    2393b91e-3d52-4e68-aebf-3896dd26c9de: Heading # Heading
     2429c9a6-b825-4171-a2bc-924e52c085f3: Number # Number
     2510ca6f-7c5e-4ccd-a8db-079f0fe6244d: 'Kitchen Sink' # Kitchen Sink
     3773b065-a1ba-4cb5-9736-0c43859bf5e4: 'Carousel Block' # Carousel Block
+    6240c976-c45c-49e0-9b18-04c2bd1b9024: __blank__ # __blank__
     7617be4a-e651-4c54-8aa0-7ec58f5fc81f: Target # Target
     7862a906-f799-4a1d-9199-6c0de9f489c8: Headline # Headline
     9292c2d6-f5de-43b7-8f69-8ebc486b88b2: Target # Target
     9901ad2a-d15c-4337-8b16-5f395d71a734: 'Image + Caption' # Image + Caption
-    24052d58-898b-4447-805b-2a68d3a204ae: 'Rich Text' # Rich Text
+    24052d58-898b-4447-805b-2a68d3a204ae: 'Text: Simple' # Text: Simple
     37348ab3-b1bb-48dc-b0f2-6fa4b4e8f8ad: Label # Label
     46145c57-f9fd-4619-87db-2eaa3726cfb8: Simple # Simple
     53047e2b-0d89-45ec-9f87-fe728f47da26: Action # Action
-    72510bcd-9969-41a0-9d22-91d58db388de: Header # Header
     79089f9c-e190-44e9-a175-907b75ff1d62: Description # Description
     81445eab-2d97-4591-92d7-6e4f6db5bbba: Intro # Intro
     86125ca1-5070-4d71-91cf-ef53ea2337cb: Menu # Menu
@@ -217,20 +275,26 @@ meta:
     200639df-3b5e-4173-ac0e-cf104a92b13d: 'Action Prompt' # Action Prompt
     893525f3-f757-4575-a2f0-293b3b5de428: Attribution # Attribution
     1445186d-7111-49b1-a767-9cda00fa2fb9: Label # Label
+    2652042d-326e-45ff-b0bd-45f95f9e2507: Header # Header
     3628809f-8cae-4b4d-bdab-b68565e76f5e: 'Stats Block' # Stats Block
+    9750478c-5202-4300-b469-2a61639f0ec4: Description # Description
     16473880-bad4-495a-b955-024e9d543810: Quote # Quote
     30350917-c23e-4103-88f9-1446c132c2aa: 'Links + Images' # Links + Images
     a1fe1670-32f8-416e-8fd1-7f624fa9ee71: Entries # Entries
+    a327f0ca-e011-46bd-88a3-19344d2c596d: Social # Social
+    ace08f06-16e5-477e-b91c-f28e50048f67: Eyebrow # Eyebrow
     b9b1f0cc-1100-4e8e-a9d3-ce6063a100b7: Image # Image
     b9b6e7a8-8d17-42bb-9cf4-0bce7e392e44: Panel # Panel
     b75b1db0-3847-487e-a95f-30047f42b5ad: 'Contact Form' # Contact Form
     bb2adcc3-312b-469c-9bc0-baa0f6e42f72: Quote # Quote
+    bc3ebb91-3067-4953-ad56-b033b2311d36: Assets # Assets
     bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91: 'Extra Simple' # Extra Simple
+    bcf0f106-ae8e-4b7f-a6a2-c0c241588bac: Description # Description
     bcf141fb-c30c-480d-a8ad-4b3324856fa6: Heading # Heading
     bdfc66d8-2d4f-4612-949e-cbe2fec9b5b5: Videos # Videos
-    bede2d40-dbaf-48ca-bff6-bc45f9dc3e2b: Footer # Footer
     c0b3adea-77f8-4182-b17d-7209cb415314: Description # Description
     c0138d43-dd42-433f-bb42-0f49ef88e904: Link # Link
+    c2ff6d2c-f979-4a50-88dd-c960f6aa9e0b: __blank__ # __blank__
     c5ea3afb-cde7-4f5b-aa80-dc2a8210be51: Stat # Stat
     c7deb866-6362-47f8-8104-2d8bf7195864: Item # Item
     c48e87fe-1a72-4620-a84a-7f4b88f8fd94: Label # Label
@@ -241,19 +305,28 @@ meta:
     cdd5e71e-c036-4d6a-a415-7393fe9f08f3: Impact # Impact
     d3d7704e-a1f9-428d-b5df-30a5ddf0e7b9: Body # Body
     d5bc4a08-0b68-42b9-a0d7-b77a71d85ac3: 'About Us' # About Us
+    d5c91faf-3fe8-48c2-97b5-455e17b34578: 'Page Builder: Landing' # Page Builder: Landing
+    d7f2330b-e2ea-43de-bfcd-641190e6a5fc: 'Blog Tags' # Blog Tags
     d8a414ed-a375-490e-a719-a9e985bdc6cc: 'External Link' # External Link
     d9a44ad8-a466-43b8-b4f1-bce819296505: 'Accordion Block' # Accordion Block
     d8653b35-a1ac-4282-8083-902f060bcc6e: Target # Target
+    db8c1ab8-72a9-4372-8764-2fa0cec42651: __blank__ # __blank__
+    dc79a7ca-a5e2-4cb5-9342-2cd42dc98b29: Default # Default
     de56bc7f-5373-4530-8a91-dead644af69d: 'Footer Secondary Navigation' # Footer Secondary Navigation
     e07f9a85-827f-4b2d-a6bf-a6730899bc81: Default # Default
     e5b9dfae-2d4e-4b07-bc3f-5c6e30c0ee76: Accordion # Accordion
+    e6d0fb6c-83de-4e6b-b2b0-ca04df252285: Social # Social
     e4496b2d-7e4a-4e86-855a-f5168e2399b5: 'Kitchen Sink' # Kitchen Sink
+    e4877e61-528c-470a-bfb5-5548ec0153d5: Heading # Heading
     e43987a2-b938-448d-823f-6ac693fd5b61: Heading # Heading
     e80011d9-6840-4ef0-862e-d5b1ef15bc9b: 'Social Navigation' # Social Navigation
     ece18c92-ef79-46b2-8c0b-0f0283a012c1: Image # Image
-    edd90eb1-f0c8-450c-b3f6-e0728b546cc9: Common # Common
+    edd90eb1-f0c8-450c-b3f6-e0728b546cc9: Texts # Texts
+    ee292b33-f1a3-4fd6-9a25-9da4f1ef312a: 'Text: Action' # Text: Action
     eed3d9c1-7c15-405e-baef-a6e4212066c1: Image # Image
     f04ce99a-aa20-4ed0-9e83-40f232197b48: Item # Item
+    f8ab386e-c493-4eb3-9edd-cafee231f1a4: __blank__ # __blank__
+    f8f1ed84-0e9d-4487-906c-0b01afb56973: Default # Default
     f643ec52-c5ff-4bc4-b2fd-52b9c2d727b2: Content # Content
     fb0806d7-e248-4860-89e4-838a09409959: Carousel # Carousel
     fb5ce141-f9f1-45d8-832f-cf04b69c8348: Intro # Intro

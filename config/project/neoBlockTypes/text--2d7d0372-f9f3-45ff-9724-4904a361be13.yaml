@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 24052d58-898b-4447-805b-2a68d3a204ae # Rich Text
+            fieldUid: 24052d58-898b-4447-805b-2a68d3a204ae # Text: Simple
             instructions: null
             label: null
             required: false

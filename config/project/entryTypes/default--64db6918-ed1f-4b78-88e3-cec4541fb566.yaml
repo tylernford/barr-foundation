@@ -30,7 +30,36 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: bc09e28e-5177-4d2e-b06e-2bc25fb6d1e2
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 2f4e1404-f866-4cdc-924e-3c5930d9dd76 # Opener: Landing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5dcdc60d-5353-480e-a4d4-75ca82a87829
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: da409827-7c39-444d-9549-850a7b29f0b2
+            userCondition: null
+          -
+            elementCondition: null
+            template: control-panel/_opener-landing.html
+            type: craft\fieldlayoutelements\Template
+            uid: 963c4202-d307-4344-be41-56251270b7b5
+            userCondition: null
+            width: 100
+        name: Opener
         uid: 86a030c9-8fd3-4f9b-a19b-756dac9bc724
         userCondition: null
 handle: default

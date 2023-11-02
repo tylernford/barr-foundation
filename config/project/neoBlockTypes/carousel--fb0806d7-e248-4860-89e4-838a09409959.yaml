@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 506fdf00-1b11-44fc-8731-932352cd324f # Section Title
+            fieldUid: 506fdf00-1b11-44fc-8731-932352cd324f
             instructions: null
             label: null
             required: false

@@ -1,0 +1,19 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: d5c91faf-3fe8-48c2-97b5-455e17b34578 # Page Builder: Landing
+group: null
+groupChildBlockTypes: true
+handle: subsection
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Subsection
+sortOrder: 1
+topLevel: true

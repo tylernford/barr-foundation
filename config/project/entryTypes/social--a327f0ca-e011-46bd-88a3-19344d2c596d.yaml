@@ -1,5 +1,5 @@
 fieldLayouts:
-  7847b0d3-9761-463d-86a5-d266f075f1c7:
+  75ebfb07-8e86-4ea5-b7db-9bc0d6ef7fa4:
     tabs:
       -
         elementCondition: null
@@ -12,13 +12,21 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 94b64ada-b200-48e4-89cb-ce35e15011f4
+            uid: 4fa1cfe9-8b8f-42b3-9286-5715ea597ddf
             userCondition: null
             warning: null
             width: 100
         name: Navigation
-        uid: aa6731b6-2237-4fd9-9f65-4584c13d0762
+        uid: 1911b33c-8d83-4290-a1aa-9d56ffbb8b4d
         userCondition: null
 handle: social
+hasTitleField: false
 name: Social
-sortOrder: 3
+section: e6d0fb6c-83de-4e6b-b2b0-ca04df252285 # Social
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

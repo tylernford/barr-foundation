@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 766d1cbd-4251-4b9d-9378-bf9d345ae492 # Openers
+handle: openerLanding
+instructions: null
+name: 'Opener: Landing'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1251272864
+  contentTable: '{{%stc_openerlanding}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: 1
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Add a page opener'
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField
