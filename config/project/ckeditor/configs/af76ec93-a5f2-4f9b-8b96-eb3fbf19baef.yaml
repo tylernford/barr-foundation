@@ -1,0 +1,11 @@
+headingLevels: false
+listPlugin: DocumentList
+name: 'Body: Paragraph'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - bulletedList
+  - numberedList
+  - link

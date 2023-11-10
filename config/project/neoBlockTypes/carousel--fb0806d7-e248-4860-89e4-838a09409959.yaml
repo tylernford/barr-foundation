@@ -1,6 +1,6 @@
 childBlocks: null
 conditions: null
-description: null
+description: ''
 enabled: true
 field: 85c752c0-899b-4d86-ad80-757b76b23ea2 # Page Builder: Default
 fieldLayouts:
@@ -11,19 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 506fdf00-1b11-44fc-8731-932352cd324f
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c2b31bdf-4d14-450d-9b58-0ff466613c6c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 3773b065-a1ba-4cb5-9736-0c43859bf5e4 # Carousel Block
+            fieldUid: 3773b065-a1ba-4cb5-9736-0c43859bf5e4
             instructions: null
             label: null
             required: false

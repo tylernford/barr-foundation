@@ -1,4 +1,4 @@
-changedFieldIndicator: 1357852330
+changedFieldIndicator: 1998981893
 field: 2f4e1404-f866-4cdc-924e-3c5930d9dd76 # Opener: Landing
 fieldLayouts:
   6e82bb6d-b8cb-423a-9d60-b6137d324baf:
@@ -8,7 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 966dbbfc-2617-4a97-8687-5547fcae76a9 # Eyebrow
+            fieldUid: 966dbbfc-2617-4a97-8687-5547fcae76a9 # Text: Eyebrow
             instructions: null
             label: null
             required: false
@@ -20,7 +20,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: e4877e61-528c-470a-bfb5-5548ec0153d5 # Heading
+            fieldUid: e4877e61-528c-470a-bfb5-5548ec0153d5 # Text: Heading
             instructions: null
             label: null
             required: false
@@ -32,7 +32,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9750478c-5202-4300-b469-2a61639f0ec4 # Description
+            fieldUid: 9750478c-5202-4300-b469-2a61639f0ec4 # Text: Description
             instructions: null
             label: null
             required: false
@@ -44,7 +44,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 0a0fbbb0-ab8f-4950-afab-87e4e5f44c47 # Image
+            fieldUid: 0a0fbbb0-ab8f-4950-afab-87e4e5f44c47 # Asset: Image
             instructions: null
             label: null
             required: false
@@ -58,13 +58,13 @@ fieldLayouts:
         uid: dd2c4a5e-2a18-45a5-afbd-5f04b1dc058d
         userCondition: null
 fields:
-  0a0fbbb0-ab8f-4950-afab-87e4e5f44c47: # Image
+  0a0fbbb0-ab8f-4950-afab-87e4e5f44c47: # Asset: Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: image
+    handle: assetImage
     instructions: '(Optional) Select exactly one image. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
-    name: Image
+    name: 'Asset: Image'
     searchable: false
     settings:
       allowSelfRelations: false
@@ -97,7 +97,7 @@ fields:
             - class
             - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image'
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       sources:
@@ -108,13 +108,13 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  966dbbfc-2617-4a97-8687-5547fcae76a9: # Eyebrow
+  966dbbfc-2617-4a97-8687-5547fcae76a9: # Text: Eyebrow
     columnSuffix: ddqwzgvk
     contentColumnType: text
     fieldGroup: null
-    handle: eyebrow
+    handle: textEyebrow
     instructions: null
-    name: Eyebrow
+    name: 'Text: Eyebrow'
     searchable: true
     settings:
       byteLimit: null
@@ -128,13 +128,13 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  9750478c-5202-4300-b469-2a61639f0ec4: # Description
+  9750478c-5202-4300-b469-2a61639f0ec4: # Text: Description
     columnSuffix: foqjpqmg
     contentColumnType: text
     fieldGroup: null
-    handle: description
+    handle: textDescription
     instructions: 'Brief page description'
-    name: Description
+    name: 'Text: Description'
     searchable: true
     settings:
       availableTransforms: ''
@@ -152,13 +152,13 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\ckeditor\Field
-  e4877e61-528c-470a-bfb5-5548ec0153d5: # Heading
+  e4877e61-528c-470a-bfb5-5548ec0153d5: # Text: Heading
     columnSuffix: npccetmv
     contentColumnType: text
     fieldGroup: null
-    handle: heading
+    handle: textHeading
     instructions: null
-    name: Heading
+    name: 'Text: Heading'
     searchable: true
     settings:
       byteLimit: null

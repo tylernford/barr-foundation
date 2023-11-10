@@ -1,0 +1,76 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  7b4657d0-eba1-4cdf-9016-b5b0494501ea:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3a81b10-0ce7-4dff-8bfb-9e758409d07d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9e65ef79-1f80-4724-997d-ea1035b737c7 # Highlight: Stats
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 31bdc5ba-0903-4c90-bbc9-9ccc282ff379
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Extra Simple
+            instructions: '(Optional) Cite a source for the statistics'
+            label: 'Text: Caption'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7497c4ee-1539-4b86-b3aa-1633b9ed7d5a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: '(Optional) Select an infographic. Be sure to double-click the thumbnail preview to add Alt Text and if applicable, Byline.'
+            label: 'Asset: Infographic'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b818532-cd82-4cdd-9f87-d6974df4db51
+            userCondition: null
+            warning: null
+            width: 100
+        name: Stat
+        uid: 07617cb8-64ca-41a4-aedb-57157995caaf
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: highlightStat
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Highlight: Stat'
+sortOrder: 6
+topLevel: true

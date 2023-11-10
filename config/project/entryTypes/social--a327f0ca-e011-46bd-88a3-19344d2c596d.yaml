@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: e80011d9-6840-4ef0-862e-d5b1ef15bc9b # Social Navigation
+            fieldUid: e80011d9-6840-4ef0-862e-d5b1ef15bc9b # Navigation: Social
             instructions: null
             label: null
             required: false

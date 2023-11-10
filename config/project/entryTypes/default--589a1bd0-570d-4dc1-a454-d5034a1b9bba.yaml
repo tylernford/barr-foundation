@@ -1,0 +1,111 @@
+fieldLayouts:
+  367f6286-2331-4fdc-9720-c0eae4d20993:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: 'Grantee Name'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ffb6f15f-6783-4ba9-b5f2-8e1742de4961
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72aaa429-a7ee-42d2-a64b-facf936640d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a624779f-40f6-4b8a-ad77-73dcdee36afa
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: a14586b6-ea62-4ea9-8618-255f471f2b02 # Text: Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72355a8f-acd0-4595-9337-bcd204da5366
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 07e73dd4-602c-4d47-b4a7-e07e79d12633 # Entries: Region
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8651fed6-3b5f-4829-83ba-bd54e493090e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: efc7f807-db7f-44ff-9590-060fe9441233
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
+            instructions: 'Grantee website'
+            label: 'Action: URL'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d758e567-539f-4105-8188-cca1f85a4232
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b88c438e-afd1-48db-a1c5-15c3760d62c5
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: f4adca94-3a26-4dd3-a3d4-c816fe8e5580 # Grantees
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

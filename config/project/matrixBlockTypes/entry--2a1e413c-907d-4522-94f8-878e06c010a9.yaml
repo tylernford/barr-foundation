@@ -1,0 +1,64 @@
+field: 4d753cb0-1ca4-4b73-aecc-957826dee5de # Card: Group
+fieldLayouts:
+  460412d9-8cab-4564-ae3c-f8be68d45627:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 89c4c995-3705-4593-a789-14b55d172d15 # Entry: Blog, Directory or News
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ebda8f69-378b-4fa3-afc6-7f445ea4c739
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c06cf362-739d-48fe-8dc2-de661a252b92
+        userCondition: null
+fields:
+  89c4c995-3705-4593-a789-14b55d172d15: # Entry: Blog, Directory or News
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entriesWildcard
+    instructions: 'DEV NOTE: make more entries available?'
+    name: 'Entry: Blog, Directory or News'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: true
+      sources:
+        - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+        - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+        - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # News
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: entry
+name: Entry
+sortOrder: 1

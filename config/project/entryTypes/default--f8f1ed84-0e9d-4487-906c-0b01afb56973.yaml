@@ -36,7 +36,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: d7f2330b-e2ea-43de-bfcd-641190e6a5fc # Blog Tags
+section: d7f2330b-e2ea-43de-bfcd-641190e6a5fc # Categories
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

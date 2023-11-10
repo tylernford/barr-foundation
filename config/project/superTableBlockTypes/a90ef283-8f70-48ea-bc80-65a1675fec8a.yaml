@@ -1,0 +1,123 @@
+changedFieldIndicator: 953652740
+field: 6ab7462d-c8f9-4b02-abee-88859457f060 # Text: Bio
+fieldLayouts:
+  c2b318a1-a9d0-48ff-8e21-e6d7de266e5e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9b5d6e14-e157-4607-9bcb-aadca4a1863c # About
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e82ab9f8-2277-47c2-bee1-92e528037e69
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: df7d06ef-ac9b-48aa-a3b8-def9cd0be3f9 # Contact
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 68d6f139-a995-44f4-b2f2-753623a28ffe
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c471a54b-21ca-4485-bf9c-d6ff03cf71f3
+        userCondition: null
+fields:
+  9b5d6e14-e157-4607-9bcb-aadca4a1863c: # About
+    columnSuffix: atrpkgfi
+    contentColumnType: text
+    fieldGroup: null
+    handle: about
+    instructions: null
+    name: About
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  df7d06ef-ac9b-48aa-a3b8-def9cd0be3f9: # Contact
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: contact
+    instructions: null
+    name: Contact
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: email
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField

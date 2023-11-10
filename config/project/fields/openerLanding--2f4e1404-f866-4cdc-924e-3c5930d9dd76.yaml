@@ -7,7 +7,37 @@ name: 'Opener: Landing'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1251272864
+  changedFieldIndicator: 2096377560
+  columns:
+    __assoc__:
+      -
+        - 966dbbfc-2617-4a97-8687-5547fcae76a9 # Text: Eyebrow
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e4877e61-528c-470a-bfb5-5548ec0153d5 # Text: Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 9750478c-5202-4300-b469-2a61639f0ec4 # Text: Description
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0a0fbbb0-ab8f-4950-afab-87e4e5f44c47 # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_openerlanding}}'
   fieldLayout: matrix
   maxRows: 1

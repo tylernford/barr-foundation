@@ -1,0 +1,14 @@
+columnSuffix: yawahngg
+contentColumnType: boolean
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: flagFeature
+instructions: null
+name: 'Flag: Feature'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -67,7 +67,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: d5c91faf-3fe8-48c2-97b5-455e17b34578 # Page Builder: Landing
+            fieldUid: d5c91faf-3fe8-48c2-97b5-455e17b34578
             instructions: null
             label: null
             required: false

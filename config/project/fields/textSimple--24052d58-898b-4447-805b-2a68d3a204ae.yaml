@@ -4,7 +4,7 @@ fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Texts
 handle: textSimple
 instructions: null
 name: 'Text: Simple'
-searchable: false
+searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: '*'
@@ -16,7 +16,7 @@ settings:
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  showWordCount: false
+  showWordCount: true
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

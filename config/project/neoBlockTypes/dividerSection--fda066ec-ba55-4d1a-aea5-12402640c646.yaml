@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  c449afb7-9a77-40f4-8d44-89d40f65d31a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d3913ef-3235-444a-8c4c-f30dd53b8d24
+            userCondition: null
+            warning: null
+            width: 100
+        name: Section
+        uid: 8b0d0370-1dd6-4dd7-b50e-efa95bac9c99
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: dividerSection
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Divider: Section'
+sortOrder: 1
+topLevel: true

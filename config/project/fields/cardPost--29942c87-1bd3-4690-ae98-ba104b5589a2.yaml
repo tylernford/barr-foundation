@@ -1,0 +1,65 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
+handle: cardPost
+instructions: null
+name: 'Card: Post'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1611396894
+  columns:
+    __assoc__:
+      -
+        - 70d8712d-2a67-493a-a1a0-7ed698a9ee5d # Date: Published
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - b50dc00d-971b-4a33-a1f2-de240fbc64c6 # Entries: Authors
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 19bcf750-aecc-4f9c-b4fb-50e6d96af2eb # Tags: Categories or Program Areas
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d3b98f80-1cee-4849-a97b-9db551b73c5d # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ae2b1b26-277c-4619-ab71-b564ec89459b # Text: Supporting
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 7641cb7f-d1d2-444e-ba5d-e21e2386d119 # Action: URL
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_cardpost}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

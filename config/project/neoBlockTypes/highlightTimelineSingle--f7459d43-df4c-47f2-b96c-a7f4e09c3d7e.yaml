@@ -1,0 +1,52 @@
+childBlocks: null
+conditions: null
+description: 'Add only one event per milestone year.'
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  18318705-bcf1-40e4-b16f-dca1626c395c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eec7ea4c-d7d3-4f72-b303-b88a5456387c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ef35002b-b3dd-4be9-b1a6-9b34dd341c37 # Highlight: Single Event Timeline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7eb830ec-14e5-42bd-a54d-9b024d54b07a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Timeline
+        uid: c5c04f28-dc51-4b80-bbe4-2b28e960bd9d
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: highlightTimelineSingle
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Highlight: Timeline (Single)'
+sortOrder: 4
+topLevel: true

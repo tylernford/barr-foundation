@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
+handle: entriesTeam
+instructions: 'Select exactly 2 or 3 team entries. Drag & drop to rearrange.'
+name: 'Entries: Team'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 3
+  minRelations: 2
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a card'
+  showSiteMenu: false
+  sources:
+    - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

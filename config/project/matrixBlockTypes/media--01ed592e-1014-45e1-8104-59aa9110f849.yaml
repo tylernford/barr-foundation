@@ -1,0 +1,163 @@
+field: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
+fieldLayouts:
+  a4dca716-77fc-4fd9-b6ac-bb572a489318:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 57a475da-bd34-46ee-8693-6055079fb616 # Image(s) or Video(s)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a51490f-3a6a-4dbb-b3d3-ce456d5bb9b1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 362d5a4a-c308-43ab-8a6c-ba98cf045501 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 824841a7-79cb-4b53-893b-26c067e56b75
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9b6c92eb-d488-4fd4-a3fe-e55aec516915 # Layout
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c56e0c00-fee7-4ba3-877d-c31b8748d703
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b0c86955-177e-4978-a9c5-837032ebdfc2
+        userCondition: null
+fields:
+  9b6c92eb-d488-4fd4-a3fe-e55aec516915: # Layout
+    columnSuffix: wdiacjnv
+    contentColumnType: string(3)
+    fieldGroup: null
+    handle: layout
+    instructions: "By default, if a single image or video is added, the asset will span 50% of the width in larger viewports (i.e. desktop). \r\n\r\nSelect the 100% option to display the image or video the full width of the viewport. (If 2 images or videos are added, both will display at 50% regardless)."
+    name: Layout
+    searchable: true
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 50%
+            -
+              - value
+              - '50'
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 100%
+            -
+              - value
+              - '100'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  57a475da-bd34-46ee-8693-6055079fb616: # Image(s) or Video(s)
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: asset
+    instructions: 'Select or upload up 1 or 2 image, video or audio assets. Be sure to double-click the thumbnail preview to add Alt Text.'
+    name: 'Image(s) or Video(s)'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - audio
+        - image
+        - video
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 2
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image or video'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+        - 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  362d5a4a-c308-43ab-8a6c-ba98cf045501: # Description
+    columnSuffix: kelyjvar
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: media
+name: Media
+sortOrder: 3

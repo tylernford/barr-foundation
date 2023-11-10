@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  f1cf5f7b-2028-401e-8fb8-e805eb96d9db:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 469acf2e-4d4a-4fa1-9fd1-b5342ea60c76 # Asset: Media
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0f38649-f843-4faf-9986-bafd9d863de8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Media
+        uid: 180d05c8-30a7-47e4-bfe2-694c1da743da
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: assetsMedia
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Assets: Media'
+sortOrder: 7
+topLevel: true

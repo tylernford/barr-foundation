@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  a0c7703e-2000-4578-bc23-7a71c5386de9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc20347c-973c-4141-84dd-56b6a0a3af70
+            userCondition: null
+            warning: null
+            width: 100
+        name: Card
+        uid: 5ea0b1c0-790e-484e-aa40-8b0159843d16
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: cardAction
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Card: Action'
+sortOrder: 12
+topLevel: true

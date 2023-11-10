@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
+handle: entriesRegion
+instructions: 'Select one or many regions. Drag & drop to rearrange.'
+name: 'Entries: Region'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a region'
+  showSiteMenu: true
+  sources:
+    - 'section:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

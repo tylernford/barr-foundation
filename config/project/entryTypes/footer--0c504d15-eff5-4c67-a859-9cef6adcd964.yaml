@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 0814b33a-e40d-4c64-8fa1-aabdfe035850 # Footer Navigation
+            fieldUid: 0814b33a-e40d-4c64-8fa1-aabdfe035850 # Navigation: Footer
             instructions: null
             label: null
             required: false

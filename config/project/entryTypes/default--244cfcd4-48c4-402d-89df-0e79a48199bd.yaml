@@ -1,0 +1,63 @@
+fieldLayouts:
+  7db17122-4738-4e0d-b318-af7612c4aa90:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 641444b6-a29f-4a80-ad76-bd921a41168e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 9656e6d2-6948-4d4e-a28d-8238ae9533b3
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 29942c87-1bd3-4690-ae98-ba104b5589a2 # Card: Post
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 71a7e654-24f4-4aed-ae25-f10585900f5b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d8ce28e5-2c16-4596-8e67-362fdbad3822
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 4d548d8e-1537-4c78-9207-048346c5eda8 # Research
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

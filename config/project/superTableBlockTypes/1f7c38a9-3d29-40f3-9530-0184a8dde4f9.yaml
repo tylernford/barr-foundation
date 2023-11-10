@@ -1,0 +1,139 @@
+changedFieldIndicator: 1291160678
+field: 66cef11d-f827-4b38-8867-ece3eefda13c # Carousel: Quotes
+fieldLayouts:
+  d0ba3d88-8c61-42f4-9ba8-7c9bfe80d44c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5a2816d1-111d-44df-933d-9fe33d93acdb # Text: Quote
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f01685c-79ee-4b80-b6fa-b9da79a074b9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 135f1b4e-27cb-4cda-be94-52607d445f75 # Asset: Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2a7ad8a-08c0-4f6b-a633-bed85533156e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fbb4714a-4260-498d-b73b-2f62a22c4b99 # Attribution: Entry or Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ee031af-1bfa-4cb2-bd10-e15c75c92c84
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6b9d8870-5b15-469e-bd1c-b8d9ae476a4e
+        userCondition: null
+fields:
+  5a2816d1-111d-44df-933d-9fe33d93acdb: # Text: Quote
+    columnSuffix: qjnfbsaw
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: null
+    name: 'Text: Quote'
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  135f1b4e-27cb-4cda-be94-52607d445f75: # Asset: Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: assetImage
+    instructions: '(Optional) Select exactly one image.  Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
+    name: 'Asset: Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  fbb4714a-4260-498d-b73b-2f62a22c4b99: # Attribution: Entry or Text
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: attribution
+    instructions: 'Attribute the quote to a person within the Barr directory (i.e. staff, contributor, trustee), or  external to it.'
+    name: 'Attribution: Entry or Text'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_attribution_1}}'
+      maxBlocks: 1
+      minBlocks: null
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix

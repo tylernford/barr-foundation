@@ -1,6 +1,6 @@
 childBlocks: null
 conditions: null
-description: null
+description: ''
 enabled: true
 field: 85c752c0-899b-4d86-ad80-757b76b23ea2 # Page Builder: Default
 fieldLayouts:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Image + Caption
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
             instructions: null
             label: null
             required: false

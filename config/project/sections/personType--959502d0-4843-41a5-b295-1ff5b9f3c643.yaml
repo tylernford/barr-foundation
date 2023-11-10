@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: false
+handle: personType
+name: 'Person Type'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 676b8c63-1d81-4d45-a76b-5df07d66fd12
+type: structure

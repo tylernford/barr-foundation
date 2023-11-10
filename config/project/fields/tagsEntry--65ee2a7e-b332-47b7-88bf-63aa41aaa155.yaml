@@ -1,0 +1,36 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: tagsEntry
+instructions: 'Select one or many Categories or Program Areas.  Drag & drop to rearrange.'
+name: 'Tags: Categories or Program Areas'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: null
+  showSiteMenu: true
+  sources:
+    - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+    - 'section:1982f1d0-3929-4ddf-b0e0-76d519d91f39' # Program Areas
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

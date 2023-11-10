@@ -1,0 +1,62 @@
+field: fbb4714a-4260-498d-b73b-2f62a22c4b99 # Attribution: Entry or Text
+fieldLayouts:
+  14d647c1-d611-47ff-9392-96b8036061b8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6eab3484-4a8a-459d-b34c-6f48332b75d5 # __blank__
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 239298c5-ce74-4738-bc44-267e6089af60
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e3eed4ec-584d-48e1-93cc-9fd07f481605
+        userCondition: null
+fields:
+  6eab3484-4a8a-459d-b34c-6f48332b75d5: # __blank__
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: item
+    instructions: null
+    name: __blank__
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add a person'
+      showSiteMenu: true
+      sources:
+        - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: internal
+name: 'Internal Person'
+sortOrder: 1

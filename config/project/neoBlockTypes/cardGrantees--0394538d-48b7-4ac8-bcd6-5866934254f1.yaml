@@ -1,0 +1,64 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  56c7b9c7-45b6-4b3f-a45c-c7caa883c0a1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1cb4612c-38cd-4b27-809d-fd543e6b94cf # Flag: Feature
+            instructions: "Turn this flag on to designate the first card listed below as a \"feature.\" \r\nA \"feature\" card will display larger than its sibling cards."
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7dc70c02-6f78-4aad-b2f0-a375c1152ccb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b89b9ceb-1d0c-48ec-a0d7-0c392eb011af # Entries: Grantee
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a9a05bc-1ef3-4f06-8510-5a02af7c46bf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
+            instructions: null
+            label: 'Action: Explore More'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e215f33c-d063-49cb-af1b-0cda33098bdd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Cards
+        uid: 3c67527f-2bdc-4cf9-8d05-d5699107f1a7
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: cardGrantees
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Card: Grantees'
+sortOrder: 9
+topLevel: true

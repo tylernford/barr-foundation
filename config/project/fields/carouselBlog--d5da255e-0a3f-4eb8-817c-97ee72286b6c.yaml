@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 526592df-8835-48ec-80a2-b149d57b3e57 # Carousels
+handle: carouselBlog
+instructions: 'Add up to 5 blog posts to feature within a carousel. Drag & drop to rearrange.'
+name: 'Carousel: Blog Posts'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 5
+  minRelations: 5
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a blog post'
+  showSiteMenu: false
+  sources:
+    - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

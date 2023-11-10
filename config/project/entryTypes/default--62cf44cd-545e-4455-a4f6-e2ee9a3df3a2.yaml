@@ -62,6 +62,33 @@ fieldLayouts:
         name: Opener
         uid: b11eb691-2b4e-4506-a5d9-8873d4e1514d
         userCondition: null
+      -
+        elementCondition:
+          class: craft\elements\conditions\entries\EntryCondition
+          conditionRules:
+            -
+              class: craft\elements\conditions\SlugConditionRule
+              operator: '='
+              uid: 10243afe-19f9-45de-8369-e36ee048c7d7
+              value: blog
+          elementType: craft\elements\Entry
+          fieldContext: global
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 59639062-b610-4a0d-b1e4-e855ca711cb2 # Entries: Blog
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1f3e59f-22ce-4efc-9b0a-d33e6b775b31
+            userCondition: null
+            warning: null
+            width: 100
+        name: Features
+        uid: 790cac37-a87c-4593-851b-e9f5bb563eff
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

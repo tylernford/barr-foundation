@@ -1,4 +1,4 @@
-field: 8b6f4e86-b264-4d36-99a2-2bd8c177c514 # Primary Navigation
+field: 8b6f4e86-b264-4d36-99a2-2bd8c177c514 # Navigation: Primary
 fieldLayouts:
   efed81c1-f09e-4308-9666-353f4b9bc577:
     tabs:
@@ -111,7 +111,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 177586450
+      changedFieldIndicator: 446513601
       columns:
         __assoc__:
           -

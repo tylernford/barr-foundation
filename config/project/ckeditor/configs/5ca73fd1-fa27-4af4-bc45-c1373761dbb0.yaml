@@ -1,0 +1,8 @@
+headingLevels: false
+listPlugin: DocumentList
+name: Transcript
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic

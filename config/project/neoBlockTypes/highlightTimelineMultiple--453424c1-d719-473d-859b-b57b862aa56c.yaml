@@ -1,0 +1,52 @@
+childBlocks: null
+conditions: null
+description: 'Add multiple events per milestone.'
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  b6a2a0d2-0fe9-4d5a-b72b-d4b711dbfced:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c069cca8-3b05-4caa-af5b-fec7d838dd03
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0b12ba92-d669-4feb-9241-037faa9b352b # Highlight: Multi-Event Timeline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c39d442a-1219-4cd4-96d8-2b519adf7cb7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Timeline
+        uid: 118c562e-c6a6-44dc-b2cb-fd7cb91dfa62
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: highlightTimelineMultiple
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Highlight: Timeline (Multiple)'
+sortOrder: 5
+topLevel: true

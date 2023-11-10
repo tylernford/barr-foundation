@@ -1,0 +1,95 @@
+field: ef35002b-b3dd-4be9-b1a6-9b34dd341c37 # Highlight: Single Event Timeline
+fieldLayouts:
+  2c6507ec-dc31-45dd-8537-26d0fb512c24:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d1fb8e0a-7a87-4586-994b-e8ca07e4a9d9 # Year
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a98b2af-7f89-47da-b10b-c3211d65fd3d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cca24e52-76d4-414b-81b3-ceb3665a9962 # Event
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b8a2876-d1fb-4c06-bc85-cb261b9d83e3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 7b40ebc4-5c34-49fb-94b4-b907d99fc734
+        userCondition: null
+fields:
+  cca24e52-76d4-414b-81b3-ceb3665a9962: # Event
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: event
+    instructions: 'Select exactly 1 event to assign to this milestone. Be sure the event date matches the year above.'
+    name: Event
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add an event'
+      showSiteMenu: true
+      sources:
+        - 'section:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  d1fb8e0a-7a87-4586-994b-e8ca07e4a9d9: # Year
+    columnSuffix: kqkmfpet
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: year
+    instructions: 'The milestone year.'
+    name: Year
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: 4
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: milestone
+name: Milestone
+sortOrder: 1

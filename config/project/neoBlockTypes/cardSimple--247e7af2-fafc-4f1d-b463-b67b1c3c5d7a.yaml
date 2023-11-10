@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  86693671-bec7-4fa0-842b-dd57e4bb159e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd37a8d5-d3a3-4d7a-9863-dd2bbf7a1359
+            userCondition: null
+            warning: null
+            width: 100
+        name: Card
+        uid: d5e0342d-9b4d-48a7-9e30-c017ed75a82f
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: cardSimple
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Card: Simple'
+sortOrder: 11
+topLevel: true

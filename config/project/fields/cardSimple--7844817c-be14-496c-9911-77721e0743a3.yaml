@@ -1,0 +1,65 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
+handle: cardSimple
+instructions: null
+name: 'Card: Simple'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1588382764
+  columns:
+    __assoc__:
+      -
+        - 0a924836-f3f5-452c-86dd-92df3cc0ad85 # Text: Eyebrow
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - bf120ab6-d32a-4470-b0df-a0aa86834445 # Text: Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e7ad36b6-173f-4a91-aab3-c5472e6d0f20 # Text: Supporting
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0ac7255b-4b9d-49e0-948d-10bef69479d4 # Action: Entry or URL
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2c4256df-30bd-463f-aa51-5edff678315e # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - be780dcf-a746-4d47-ab45-5d3ab50366e7 # Style: Alignment
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_cardsimple}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

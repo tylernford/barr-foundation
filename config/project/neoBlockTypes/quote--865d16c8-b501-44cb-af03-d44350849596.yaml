@@ -1,6 +1,6 @@
 childBlocks: null
 conditions: null
-description: null
+description: ''
 enabled: true
 field: 85c752c0-899b-4d86-ad80-757b76b23ea2 # Page Builder: Default
 fieldLayouts:
@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 8bb1eec8-80df-4ab2-a8b4-581b470556ac # Quote Block
+            fieldUid: 8bb1eec8-80df-4ab2-a8b4-581b470556ac
             instructions: null
             label: null
             required: false

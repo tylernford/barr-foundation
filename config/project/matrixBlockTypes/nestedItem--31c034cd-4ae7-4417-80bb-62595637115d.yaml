@@ -1,4 +1,4 @@
-field: 0814b33a-e40d-4c64-8fa1-aabdfe035850 # Footer Navigation
+field: 0814b33a-e40d-4c64-8fa1-aabdfe035850 # Navigation: Footer
 fieldLayouts:
   e6414a7c-52d1-4689-b96f-7f32baa40386:
     tabs:
@@ -67,7 +67,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1131126003
+      changedFieldIndicator: 445863736
       columns:
         __assoc__:
           -
