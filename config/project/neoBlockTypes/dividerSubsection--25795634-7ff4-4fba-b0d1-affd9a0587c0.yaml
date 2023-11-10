@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
 fieldLayouts:
-  1fdaf737-6f46-4c13-92bc-5b0733f8fb9c:
+  9f900e2f-e49f-46a8-a064-6dd208bf6532:
     tabs:
       -
         elementCondition: null
@@ -12,33 +12,33 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 8927ac01-af8a-4422-87c4-913f25e2dd3f # Flag: Border
-            instructions: 'By default, this section heading will display with a top border.'
+            instructions: 'By default, this subsection heading will display with a top border.'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2c8a2486-4d05-44a8-bde3-a23050eddb8d
+            uid: 0939b873-1e9d-47df-9bc9-937fe804cf9d
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
+            fieldUid: 2f97f0f3-397f-4a92-a0af-4685f47a52f6 # Divider: Subsection
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9d3913ef-3235-444a-8c4c-f30dd53b8d24
+            uid: f4cb31eb-8195-4b8d-b94a-acce8db6f8e8
             userCondition: null
             warning: null
             width: 100
-        name: Section
-        uid: 8b0d0370-1dd6-4dd7-b50e-efa95bac9c99
+        name: Subsection
+        uid: c6b56cac-f4d8-4fa4-8d3c-0af43e948a2f
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: dividerSection
+handle: dividerSubsection
 icon: null
 ignorePermissions: true
 maxBlocks: 0
@@ -47,6 +47,6 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Divider: Section'
-sortOrder: 1
+name: 'Divider: Subsection'
+sortOrder: 2
 topLevel: true

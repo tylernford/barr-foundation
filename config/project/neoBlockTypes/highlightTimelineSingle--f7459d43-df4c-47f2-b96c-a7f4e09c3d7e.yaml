@@ -48,5 +48,5 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Highlight: Timeline (Single)'
-sortOrder: 4
+sortOrder: 8
 topLevel: true

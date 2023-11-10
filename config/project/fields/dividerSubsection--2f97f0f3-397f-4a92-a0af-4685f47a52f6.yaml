@@ -1,0 +1,30 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: dividerSubsection
+instructions: 'Create a subsection divider.'
+name: 'Divider: Subsection'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1395376179
+  columns:
+    __assoc__:
+      -
+        - 79e781f4-3675-4c4c-8202-14bbb9ba2f51 # Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_dividersubsection}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

@@ -1,4 +1,4 @@
-dateModified: 1699654232
+dateModified: 1699656571
 elementSources:
   craft\elements\Entry:
     -
@@ -306,6 +306,7 @@ meta:
     2d85d472-1f81-45ee-9294-8af027894cdd: Action # Action
     2dec7473-aaa1-473a-a853-156a05b52a14: Target # Target
     2f4e1404-f866-4cdc-924e-3c5930d9dd76: 'Opener: Landing' # Opener: Landing
+    2f97f0f3-397f-4a92-a0af-4685f47a52f6: 'Divider: Subsection' # Divider: Subsection
     3a2f39b7-ed74-4fe2-aa22-685cdd11a644: 'Text: First Name' # Text: First Name
     3b0ee85b-3a90-4147-95da-96c517b5b684: Target # Target
     3b2f52f1-19d0-45f7-b3f6-e1e72a135f1c: Global # Global
@@ -382,6 +383,7 @@ meta:
     73d1d23b-7a67-47ac-a884-f4eb2a7e7f5c: 'News + Insights' # News + Insights
     74b63598-5caa-49c6-8bb3-b035cc4ca287: Text # Text
     75ac338a-6d5c-4d09-b602-27629776857b: Icon # Icon
+    79e781f4-3675-4c4c-8202-14bbb9ba2f51: Heading # Heading
     85c752c0-899b-4d86-ad80-757b76b23ea2: 'Page Builder: Default' # Page Builder: Default
     89c4c995-3705-4593-a789-14b55d172d15: 'Entry: Blog, Directory or News' # Entry: Blog, Directory or News
     90ba97a8-3a0e-4559-ab6b-86981c8530b3: 'Full Name' # Full Name
@@ -423,6 +425,7 @@ meta:
     7617be4a-e651-4c54-8aa0-7ec58f5fc81f: Target # Target
     7641cb7f-d1d2-444e-ba5d-e21e2386d119: 'Action: URL' # Action: URL
     8231b9f6-69c4-4c30-b883-eaaabbdf19fc: 'Block: Accordion' # Block: Accordion
+    8927ac01-af8a-4422-87c4-913f25e2dd3f: 'Flag: Border' # Flag: Border
     9292c2d6-f5de-43b7-8f69-8ebc486b88b2: Target # Target
     9901ad2a-d15c-4337-8b16-5f395d71a734: 'Asset: Image' # Asset: Image
     10810a4a-e09d-468d-a10e-ef959a37224c: Default # Default
@@ -454,6 +457,7 @@ meta:
     7844817c-be14-496c-9911-77721e0743a3: 'Card: Simple' # Card: Simple
     8847309c-7a66-4668-9706-7698fa3614b4: 'Asset: Image' # Asset: Image
     9750478c-5202-4300-b469-2a61639f0ec4: 'Text: Description' # Text: Description
+    25795634-7ff4-4fba-b0d1-affd9a0587c0: 'Divider: Subsection' # Divider: Subsection
     39247735-ed77-47ee-a626-e60b8b135046: Event # Event
     48214827-a863-4fd5-a0c8-40ef46f89489: Default # Default
     59639062-b610-4a0d-b1e4-e855ca711cb2: 'Entries: Blog' # Entries: Blog

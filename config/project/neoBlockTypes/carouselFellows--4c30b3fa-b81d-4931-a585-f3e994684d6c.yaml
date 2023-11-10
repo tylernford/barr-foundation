@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
 fieldLayouts:
-  aba0a312-48ed-4c57-8278-be6bae1e7224:
+  c610fdf9-415d-4b21-82f8-5004b6201029:
     tabs:
       -
         elementCondition: null
@@ -36,5 +36,5 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Carousel: Fellows'
-sortOrder: 16
+sortOrder: 12
 topLevel: true
