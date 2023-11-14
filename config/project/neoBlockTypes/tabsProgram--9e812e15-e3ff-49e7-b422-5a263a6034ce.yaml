@@ -1,0 +1,64 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+fieldLayouts:
+  63e3b539-98f8-4680-ab10-2c93bca65432:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 19db2fce-b7de-453e-b53c-9280627d5d0c # Text: Eyebrow
+            instructions: 'e.g. Our Program Areas'
+            label: 'Text: Subheading'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4e17768-fd0a-4acd-9051-619ced001755
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9c15fd9a-81a5-4c31-bd58-95cc257be3fd # Text: Rich (Basic)
+            instructions: 'Brief, general description of program areas '
+            label: 'Text: Supporting'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfae7a63-5293-4073-bd56-a6c19920c652
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 46027ca9-2439-4af3-8620-4af52fe9e7c6 # Tabs: Program Finder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ff42dca-4c01-4e30-8327-53f9e0c5eb97
+            userCondition: null
+            warning: null
+            width: 100
+        name: Tabs
+        uid: ac1ece0a-0535-4b28-9802-bbc14ad63275
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: tabsProgram
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Tabs: Program Finder'
+sortOrder: 19
+topLevel: true

@@ -2,9 +2,9 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  7b4657d0-eba1-4cdf-9016-b5b0494501ea:
+  eb7870f1-1c17-4836-8a7e-c49ae2e56519:
     tabs:
       -
         elementCondition: null
@@ -12,65 +12,65 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: 'e.g. Team'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d8108495-4aa3-4397-a06d-7fff13cfcbf2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e3a81b10-0ce7-4dff-8bfb-9e758409d07d
+            uid: 1d6fe49d-f6fa-46e0-abc1-66556348200c
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9e65ef79-1f80-4724-997d-ea1035b737c7 # Highlight: Stats
+            fieldUid: b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400 # Entries: Team
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 31bdc5ba-0903-4c90-bbc9-9ccc282ff379
+            uid: 0e175bcb-3176-4c80-a137-5bf0a97ab6f6
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Rich (+Link)
-            instructions: '(Optional) Cite a source for the statistics'
-            label: 'Text: Caption'
+            fieldUid: 9a168c09-6501-475f-8cce-22b491c76e1a # Action: Pair
+            instructions: 'Create a pair of actions: one button link (e.g. View Staff Directory), one text link (e.g. View [Miscellaneous]).'
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7497c4ee-1539-4b86-b3aa-1633b9ed7d5a
+            uid: 98327822-5e80-4211-a67a-c47b8eae06bd
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
-            instructions: '(Optional) Select an infographic. Be sure to double-click the thumbnail preview to add Alt Text and if applicable, Byline.'
-            label: 'Asset: Infographic'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3b818532-cd82-4cdd-9f87-d6974df4db51
-            userCondition: null
-            warning: null
-            width: 100
-        name: Stat
-        uid: 07617cb8-64ca-41a4-aedb-57157995caaf
+        name: Cards
+        uid: 99ef66b1-2668-4ee9-8064-41cba640b39a
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: highlightStat
+handle: cardTeam
 icon: null
 ignorePermissions: true
-maxBlocks: 0
+maxBlocks: 1
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 0
+minBlocks: 1
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Highlight: Stat'
-sortOrder: 7
+name: 'Card: Team'
+sortOrder: 6
 topLevel: true

@@ -53,7 +53,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: bd681dfd-af4d-42fa-9b3d-405bb72ab5d7 # News
+section: bd681dfd-af4d-42fa-9b3d-405bb72ab5d7 # Newsroom
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

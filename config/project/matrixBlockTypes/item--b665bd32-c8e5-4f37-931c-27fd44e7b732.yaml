@@ -1,0 +1,295 @@
+field: 46027ca9-2439-4af3-8620-4af52fe9e7c6 # Tabs: Program Finder
+fieldLayouts:
+  5ac5a878-0acb-4915-bc83-32eae7161e4f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 30a0b344-d9b4-451b-9c8d-4fba8a91a75f # Flag: Primary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 64f5e203-f195-46c7-87ce-d3eb6f1ad30d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 37c0c73d-91bf-4c51-a716-25153c3f3366 # Text: Tab Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6c46507-342c-4916-a13b-b2a2ec7c45cd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 92b819ef-229c-4a42-beff-bc6edc8a0f66 # Asset: Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd4aa741-7f6d-45e0-923f-e81c976b4a82
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 03f8a74f-3d28-4a13-b76b-92af6c801a16 # Text: Supporting
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7379898b-a5c9-403e-a3d7-3bd60e3332a5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c5d69130-29fd-4e61-bada-77348bba96bf # Action: Entry
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9ad59245-ca77-4dc2-a0c4-b1eaad3bc4af
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0202bad0-be1f-4afa-96db-a840700c3d74 # Entry: News
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74ae7d44-5fff-4fbc-b7f0-6cc7c3823983
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cbe75514-2dc5-4fd5-a825-d040b39d4e4a
+        userCondition: null
+fields:
+  03f8a74f-3d28-4a13-b76b-92af6c801a16: # Text: Supporting
+    columnSuffix: mrzvxqkh
+    contentColumnType: text
+    fieldGroup: null
+    handle: textSupporting
+    instructions: null
+    name: 'Text: Supporting'
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: d7ab12fb-563d-4010-b197-b35b577d91c7 # Simple: Basic
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  30a0b344-d9b4-451b-9c8d-4fba8a91a75f: # Flag: Primary
+    columnSuffix: mnwjchsr
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: flagPrimary
+    instructions: 'Designate this program area as a primary tab; primary tabs will display their labels in larger text.'
+    name: 'Flag: Primary'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  37c0c73d-91bf-4c51-a716-25153c3f3366: # Text: Tab Label
+    columnSuffix: kogqchcv
+    contentColumnType: text
+    fieldGroup: null
+    handle: textLabel
+    instructions: null
+    name: 'Text: Tab Label'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  92b819ef-229c-4a42-beff-bc6edc8a0f66: # Asset: Image
+    columnSuffix: gqaahnvv
+    contentColumnType: string
+    fieldGroup: null
+    handle: assetImage
+    instructions: null
+    name: 'Asset: Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  0202bad0-be1f-4afa-96db-a840700c3d74: # Entry: News
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryNews
+    instructions: '(Optional) Cite a Blog or Newsroom post about this program area.'
+    name: 'Entry: News'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add an entry'
+      showSiteMenu: true
+      sources:
+        - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+        - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  c5d69130-29fd-4e61-bada-77348bba96bf: # Action: Entry
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: actionLink
+    instructions: 'Link to the program area landing page.'
+    name: 'Action: Entry'
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+handle: item
+name: Program
+sortOrder: 1

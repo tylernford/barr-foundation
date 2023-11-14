@@ -145,7 +145,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: false

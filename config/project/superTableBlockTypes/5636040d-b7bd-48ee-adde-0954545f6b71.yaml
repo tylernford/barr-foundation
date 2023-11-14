@@ -1,70 +1,46 @@
-changedFieldIndicator: 953652740
-field: 6ab7462d-c8f9-4b02-abee-88859457f060 # Text: Bio
+changedFieldIndicator: 597351966
+field: 9a168c09-6501-475f-8cce-22b491c76e1a # Action: Pair
 fieldLayouts:
-  c2b318a1-a9d0-48ff-8e21-e6d7de266e5e:
+  2cddae77-b556-4ba6-8df7-a42fc372b52d:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 9b5d6e14-e157-4607-9bcb-aadca4a1863c # About
+            fieldUid: 1842618e-7f9b-45c9-be4c-436bd476201e # Action: Entry or URL
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e82ab9f8-2277-47c2-bee1-92e528037e69
+            uid: 6f2d52bc-4234-4e2b-8ccd-6643766fcfaf
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: df7d06ef-ac9b-48aa-a3b8-def9cd0be3f9 # Contact
+            fieldUid: d82a1a8b-d1ee-434f-9583-06eb498d2c9c # Style: Button or Text
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 68d6f139-a995-44f4-b2f2-753623a28ffe
+            uid: 8db096dd-97ea-4bc3-b7bc-fed4c07dd2a8
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: c471a54b-21ca-4485-bf9c-d6ff03cf71f3
+        uid: a226c691-9747-4001-bf4d-d60419896e2b
         userCondition: null
 fields:
-  9b5d6e14-e157-4607-9bcb-aadca4a1863c: # About
-    columnSuffix: atrpkgfi
-    contentColumnType: text
-    fieldGroup: null
-    handle: about
-    instructions: null
-    name: About
-    searchable: true
-    settings:
-      availableTransforms: ''
-      availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
-      columnType: text
-      defaultTransform: null
-      enableSourceEditingForNonAdmins: true
-      purifierConfig: null
-      purifyHtml: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      showWordCount: true
-      wordLimit: null
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\ckeditor\Field
-  df7d06ef-ac9b-48aa-a3b8-def9cd0be3f9: # Contact
-    columnSuffix: null
+  1842618e-7f9b-45c9-be4c-436bd476201e: # Action: Entry or URL
+    columnSuffix: fovqwenv
     contentColumnType: string
     fieldGroup: null
-    handle: contact
+    handle: actionLink
     instructions: null
-    name: Contact
+    name: 'Action: Entry or URL'
     searchable: false
     settings:
       allowCustomText: true
@@ -72,7 +48,7 @@ fields:
       autoNoReferrer: false
       customTextMaxLength: 0
       customTextRequired: false
-      defaultLinkName: email
+      defaultLinkName: entry
       defaultText: ''
       enableAllLinkTypes: false
       enableAriaLabel: false
@@ -96,11 +72,11 @@ fields:
         email:
           allowAliases: false
           disableValidation: false
-          enabled: true
+          enabled: false
         entry:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: false
+          enabled: true
           sources: '*'
         site:
           enabled: false
@@ -121,3 +97,39 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
+  d82a1a8b-d1ee-434f-9583-06eb498d2c9c: # Style: Button or Text
+    columnSuffix: bnppkusi
+    contentColumnType: string(6)
+    fieldGroup: null
+    handle: styleLink
+    instructions: 'By default the action will be styled as a button.'
+    name: 'Style: Button or Text'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Button
+            -
+              - value
+              - button
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Text
+            -
+              - value
+              - text
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown

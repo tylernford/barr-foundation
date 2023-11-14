@@ -1,33 +1,33 @@
-field: 4d753cb0-1ca4-4b73-aecc-957826dee5de # Card: Group
+field: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News Group
 fieldLayouts:
-  460412d9-8cab-4564-ae3c-f8be68d45627:
+  7012959c-f49c-4980-99c2-3f810e5f4108:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 89c4c995-3705-4593-a789-14b55d172d15 # Entry: Blog, Directory or News
+            fieldUid: 890d73b0-e871-4780-aea2-81e638b832a5 # Entry: Blog or Newsroom
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ebda8f69-378b-4fa3-afc6-7f445ea4c739
+            uid: 63cd80d4-6f1b-4e56-97b4-d1af16e3f7a7
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: c06cf362-739d-48fe-8dc2-de661a252b92
+        uid: d6f1c2ae-a8f4-4129-9516-f6419080868c
         userCondition: null
 fields:
-  89c4c995-3705-4593-a789-14b55d172d15: # Entry: Blog, Directory or News
+  890d73b0-e871-4780-aea2-81e638b832a5: # Entry: Blog or Newsroom
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: entriesWildcard
-    instructions: 'DEV NOTE: make more entries available?'
-    name: 'Entry: Blog, Directory or News'
+    instructions: null
+    name: 'Entry: Blog or Newsroom'
     searchable: true
     settings:
       allowSelfRelations: false
@@ -51,7 +51,6 @@ fields:
       showSiteMenu: true
       sources:
         - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
-        - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
         - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
       targetSiteId: null
       validateRelatedElements: false

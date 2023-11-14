@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
-handle: news
-name: News
+handle: newsroom
+name: Newsroom
 previewTargets:
   -
     __assoc__:

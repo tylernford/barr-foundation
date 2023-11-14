@@ -2,9 +2,9 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  7b4657d0-eba1-4cdf-9016-b5b0494501ea:
+  02af02ea-cd7c-4a64-ad08-818a13897380:
     tabs:
       -
         elementCondition: null
@@ -12,7 +12,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: null
+            instructions: 'e.g. Learning & Evaluation'
             label: null
             required: false
             tip: null
@@ -47,30 +47,30 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
-            instructions: '(Optional) Select an infographic. Be sure to double-click the thumbnail preview to add Alt Text and if applicable, Byline.'
-            label: 'Asset: Infographic'
+            fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
+            instructions: 'Add supporting text urging visitors to take relevant action; for example, prompt them to check out the Learnings & Evaluation page. Text should be right-aligned.'
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3b818532-cd82-4cdd-9f87-d6974df4db51
+            uid: 55380713-a314-4a46-9908-64f489fdfa5a
             userCondition: null
             warning: null
             width: 100
         name: Stat
-        uid: 07617cb8-64ca-41a4-aedb-57157995caaf
+        uid: a033d165-ffc4-4906-b263-ff1452172b28
         userCondition: null
 group: null
 groupChildBlockTypes: true
 handle: highlightStat
 icon: null
 ignorePermissions: true
-maxBlocks: 0
+maxBlocks: 1
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 0
+minBlocks: 1
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Highlight: Stat'
-sortOrder: 7
+sortOrder: 4
 topLevel: true

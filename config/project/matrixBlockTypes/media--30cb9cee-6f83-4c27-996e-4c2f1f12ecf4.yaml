@@ -1,0 +1,77 @@
+field: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News Group
+fieldLayouts:
+  340c4411-5852-4b31-8bbc-030d15c86f94:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 190061ed-5acd-49bb-874e-8908f44a8608 # Media: Audio or Video
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 83ce9431-1106-476b-b738-8528981df48b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 719a4133-126a-4211-8c15-6822004a4aa9
+        userCondition: null
+fields:
+  190061ed-5acd-49bb-874e-8908f44a8608: # Media: Audio or Video
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: assetMedia
+    instructions: null
+    name: 'Media: Audio or Video'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - audio
+        - video
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: media
+name: Media
+sortOrder: 2

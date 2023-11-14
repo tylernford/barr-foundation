@@ -7,11 +7,11 @@ name: 'Highlight: Stats'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 2133381818
+  changedFieldIndicator: 695579474
   columns:
     __assoc__:
       -
-        - b6d8fb04-3837-4826-abf5-2ff06409e686 # Text: Heading
+        - b6d8fb04-3837-4826-abf5-2ff06409e686 # Text: Label
         -
           __assoc__:
             -
@@ -26,13 +26,6 @@ settings:
               - ''
       -
         - eaf269e1-7746-41ed-9136-dc532a61e2f7 # Text: Description
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - a607df79-ff66-4912-a3c7-e2073ea46b92 # Asset: Image
         -
           __assoc__:
             -

@@ -1,4 +1,4 @@
-changedFieldIndicator: 1998981893
+changedFieldIndicator: 1820555941
 field: 2f4e1404-f866-4cdc-924e-3c5930d9dd76 # Opener: Landing
 fieldLayouts:
   6e82bb6d-b8cb-423a-9d60-b6137d324baf:
@@ -6,18 +6,6 @@ fieldLayouts:
       -
         elementCondition: null
         elements:
-          -
-            elementCondition: null
-            fieldUid: 966dbbfc-2617-4a97-8687-5547fcae76a9 # Text: Eyebrow
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4ec2cf4c-87c6-4e2b-b326-f6cb238751c1
-            userCondition: null
-            warning: null
-            width: 100
           -
             elementCondition: null
             fieldUid: e4877e61-528c-470a-bfb5-5548ec0153d5 # Text: Heading
@@ -108,26 +96,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  966dbbfc-2617-4a97-8687-5547fcae76a9: # Text: Eyebrow
-    columnSuffix: ddqwzgvk
-    contentColumnType: text
-    fieldGroup: null
-    handle: textEyebrow
-    instructions: null
-    name: 'Text: Eyebrow'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   9750478c-5202-4300-b469-2a61639f0ec4: # Text: Description
     columnSuffix: foqjpqmg
     contentColumnType: text
@@ -139,7 +107,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true

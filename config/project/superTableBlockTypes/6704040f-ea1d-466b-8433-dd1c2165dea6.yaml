@@ -1,4 +1,4 @@
-changedFieldIndicator: 624999622
+changedFieldIndicator: 1627537790
 field: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
 fieldLayouts:
   8d55e71b-cdd7-4641-befb-d61027c0e790:
@@ -8,7 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 0a924836-f3f5-452c-86dd-92df3cc0ad85 # Text: Eyebrow
+            fieldUid: 0a924836-f3f5-452c-86dd-92df3cc0ad85 # Text: Label
             instructions: null
             label: null
             required: false
@@ -82,13 +82,13 @@ fieldLayouts:
         uid: 3e4de886-931b-47c0-95c5-3441bf91d7ea
         userCondition: null
 fields:
-  0a924836-f3f5-452c-86dd-92df3cc0ad85: # Text: Eyebrow
+  0a924836-f3f5-452c-86dd-92df3cc0ad85: # Text: Label
     columnSuffix: nyqykijk
     contentColumnType: text
     fieldGroup: null
-    handle: textEyebrow
+    handle: textLabel
     instructions: null
-    name: 'Text: Eyebrow'
+    name: 'Text: Label'
     searchable: true
     settings:
       byteLimit: null
@@ -282,7 +282,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Extra Simple
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true

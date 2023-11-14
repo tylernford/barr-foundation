@@ -50,17 +50,17 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All
+            fieldUid: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
             instructions: null
-            label: null
+            label: Blocks
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 16d4078e-1d2a-4ed6-9e85-936fdc2b3b30
+            uid: 2ca5c967-b50e-4399-953e-20678466ce58
             userCondition: null
             warning: null
             width: 100
-        name: 'Page Builder'
+        name: Content
         uid: a2aa9093-f006-4e5f-8ab3-29661df21671
         userCondition: null
 handle: homepage

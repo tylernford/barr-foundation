@@ -2,39 +2,39 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: 85c752c0-899b-4d86-ad80-757b76b23ea2 # Page Builder: Default
+field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  57ee7621-eede-4c6b-b1c4-a972c007a2c3:
+  51e0968d-1a37-4812-b20a-8d03848db4b9:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: d9a44ad8-a466-43b8-b4f1-bce819296505
-            instructions: null
+            fieldUid: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
+            instructions: 'Add a card about the Grants Database. Text should be aligned to the left.'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ee4a146a-f0aa-4ab6-b1df-c6b8b9103f4d
+            uid: fe41ffde-90e8-4d47-9bed-895c68d66051
             userCondition: null
             warning: null
             width: 100
-        name: Accordion
-        uid: f7c55501-9b38-4eec-a2ec-6b0401b93138
+        name: Cards
+        uid: a1fcb1e8-c139-438a-b307-076af74eff9d
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: accordion
+handle: cardGrantsDatabase
 icon: null
 ignorePermissions: true
-maxBlocks: 0
+maxBlocks: 1
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 0
+minBlocks: 1
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: Accordion
-sortOrder: 6
+name: 'Card: Grants Database'
+sortOrder: 2
 topLevel: true

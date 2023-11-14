@@ -1,64 +1,76 @@
-changedFieldIndicator: 1357029554
-field: 1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02 # Opener: Homepage
+changedFieldIndicator: 1693401701
+field: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
 fieldLayouts:
-  b85206fd-0e1c-471b-9e81-75bd78118b32:
+  e728bef5-5ed6-40e3-a010-51076e03c074:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: b1d50c66-833c-483e-97be-54b627a13e87 # Text: Heading
+            fieldUid: fe5d0c67-9025-4800-afaf-48ab29540919 # Text: Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0f54934b-961c-4dcc-802a-07114e556f48
+            uid: 678f6e42-ecb6-406c-83e5-f37c0348b4d4
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: e3cd05c5-cf00-462b-a36f-a0089a03c422 # Text: Description
+            fieldUid: 9683f361-9130-419a-ab35-052018c72c88 # Text: Supporting
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d3a0300e-61a3-4216-9458-9755931662f3
+            uid: b79676d5-3a15-41d5-bf9f-dfe13532cad3
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 8847309c-7a66-4668-9706-7698fa3614b4 # Asset: Image
+            fieldUid: dcfdc9ff-b7c1-4c3d-893c-b2470243ee77 # Action: Entry or URL
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 10325aa9-172a-4c29-a879-27217e116748
+            uid: 3a1434bd-a950-4a06-8889-0f0b51b4e71c
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: dde8cf44-ba37-4ca5-9a2e-be17caffa424 # Action: Entry
+            fieldUid: 8c222928-a7c2-4d90-96ea-c403c79d070f # Asset: Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7085c3af-7ea9-45c8-b020-e6015d03fb64
+            uid: 625d4ce2-b7ed-4c8d-b0d9-df309058e4d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2025f138-0b54-45d6-9c52-4ec1ecc89039 # Style: Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24134b94-e885-4154-a7e2-bf896b5207ac
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 4fb9855a-1d7a-4712-b3f3-c02d4ca3cc3f
+        uid: 0134a913-5924-4b6e-a320-e64bd7b6831e
         userCondition: null
 fields:
-  8847309c-7a66-4668-9706-7698fa3614b4: # Asset: Image
+  8c222928-a7c2-4d90-96ea-c403c79d070f: # Asset: Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -108,33 +120,73 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  b1d50c66-833c-483e-97be-54b627a13e87: # Text: Heading
-    columnSuffix: mulmmshe
-    contentColumnType: text
+  2025f138-0b54-45d6-9c52-4ec1ecc89039: # Style: Alignment
+    columnSuffix: tpflkisn
+    contentColumnType: string(5)
     fieldGroup: null
-    handle: textHeading
-    instructions: null
-    name: 'Text: Heading'
-    searchable: true
+    handle: styleAlignment
+    instructions: "(Optional) By default, text will display to the left of the image on larger viewports \r\n(i.e. desktop versus mobile browsers) "
+    name: 'Style: Alignment'
+    searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
       columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Right
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
-  dde8cf44-ba37-4ca5-9a2e-be17caffa424: # Action: Entry
+    type: craft\fields\RadioButtons
+  9683f361-9130-419a-ab35-052018c72c88: # Text: Supporting
+    columnSuffix: qfhhphew
+    contentColumnType: text
+    fieldGroup: null
+    handle: textSupporting
+    instructions: null
+    name: 'Text: Supporting'
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  dcfdc9ff-b7c1-4c3d-893c-b2470243ee77: # Action: Entry or URL
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: actionLink
-    instructions: null
-    name: 'Action: Entry'
+    instructions: 'Select an entry or link to an external site.'
+    name: 'Action: Entry or URL'
     searchable: true
     settings:
       allowCustomText: true
@@ -182,7 +234,7 @@ fields:
         url:
           allowAliases: false
           disableValidation: false
-          enabled: false
+          enabled: true
         user:
           allowCrossSiteLink: false
           allowCustomQuery: false
@@ -191,27 +243,23 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  e3cd05c5-cf00-462b-a36f-a0089a03c422: # Text: Description
-    columnSuffix: ylhscxsq
+  fe5d0c67-9025-4800-afaf-48ab29540919: # Text: Heading
+    columnSuffix: ukamzmwc
     contentColumnType: text
     fieldGroup: null
-    handle: textDescription
-    instructions: 'Brief page description'
-    name: 'Text: Description'
+    handle: textHeading
+    instructions: null
+    name: 'Text: Heading'
     searchable: true
     settings:
-      availableTransforms: ''
-      availableVolumes: '*'
-      ckeConfig: d7ab12fb-563d-4010-b197-b35b577d91c7 # Simple: Basic
-      columnType: text
-      defaultTransform: null
-      enableSourceEditingForNonAdmins: true
-      purifierConfig: null
-      purifyHtml: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      showWordCount: true
-      wordLimit: null
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: craft\ckeditor\Field
+    type: craft\fields\PlainText

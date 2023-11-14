@@ -7,7 +7,7 @@ name: 'Opener: Homepage'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1029296075
+  changedFieldIndicator: 350043632
   columns:
     __assoc__:
       -
@@ -26,6 +26,13 @@ settings:
               - ''
       -
         - 8847309c-7a66-4668-9706-7698fa3614b4 # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - dde8cf44-ba37-4ca5-9a2e-be17caffa424 # Action: Entry
         -
           __assoc__:
             -

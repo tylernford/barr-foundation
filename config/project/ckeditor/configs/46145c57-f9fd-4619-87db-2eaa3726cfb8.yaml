@@ -6,7 +6,7 @@ headingLevels:
   - 5
   - 6
 listPlugin: DocumentList
-name: Simple
+name: 'Simple: Headings'
 toolbar:
   - heading
   - '|'
