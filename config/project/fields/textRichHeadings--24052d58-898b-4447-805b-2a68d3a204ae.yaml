@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Texts
+handle: textRichHeadings
+instructions: null
+name: 'Text: Rich (+Headings)'
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: 46145c57-f9fd-4619-87db-2eaa3726cfb8 # Text: Basic + Headings
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

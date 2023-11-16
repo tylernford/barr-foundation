@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: c4298a25-8850-4817-a1a1-014ba04d9e07 # Blocks
+handle: blockAccordion
+instructions: 'Add as many accordion panels as needed. Drag & drop to rearrange.'
+name: 'Block: Accordion'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_blockaccordion}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,64 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+fieldLayouts:
+  6c763a76-0e30-4f4d-a43c-f74a1a329b70:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: 'e.g. News'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 527f9dc4-5d8d-40e8-bde7-4f80c0e9bc06
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News Group
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46fa81f9-a615-41f7-a029-76a8cb34c442
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
+            instructions: 'Add supporting text to urge visitors to checkout the Newsroom. Text should be center-aligned.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 49fde218-c868-4827-8c9e-0942fa19e6c5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Cards
+        uid: 06cb5c98-8c00-42e0-87ec-112989e02361
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: cardNews
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 1
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Card: News'
+sortOrder: 5
+topLevel: true

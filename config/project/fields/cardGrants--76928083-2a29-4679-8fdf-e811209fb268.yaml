@@ -1,0 +1,58 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
+handle: cardGrants
+instructions: null
+name: 'Card: Grants'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 796495348
+  columns:
+    __assoc__:
+      -
+        - fe5d0c67-9025-4800-afaf-48ab29540919 # Text: Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 9683f361-9130-419a-ab35-052018c72c88 # Text: Supporting
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - dcfdc9ff-b7c1-4c3d-893c-b2470243ee77 # Action: Entry or URL
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 8c222928-a7c2-4d90-96ea-c403c79d070f # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2025f138-0b54-45d6-9c52-4ec1ecc89039 # Style: Alignment
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_cardgrants}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

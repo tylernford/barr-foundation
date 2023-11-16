@@ -1,0 +1,44 @@
+changedFieldIndicator: 214190802
+field: 2f97f0f3-397f-4a92-a0af-4685f47a52f6 # Divider: Subsection
+fieldLayouts:
+  79b45096-d7fd-4c7b-ae11-bc281e267432:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 79e781f4-3675-4c4c-8202-14bbb9ba2f51 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8936144c-c0f4-486b-a26c-fa7d714cdbc7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e2b77e9a-3e22-49fd-a154-8ed302cec859
+        userCondition: null
+fields:
+  79e781f4-3675-4c4c-8202-14bbb9ba2f51: # Heading
+    columnSuffix: hmwrrsdn
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

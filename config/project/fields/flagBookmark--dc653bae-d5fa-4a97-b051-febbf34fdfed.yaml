@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: flagBookmark
+instructions: 'Toggle on to show a bookmark link for this Subject within the Page Opener.'
+name: 'Flag: Bookmark'
+searchable: true
+settings:
+  default: true
+  offLabel: Hide
+  onLabel: Show
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

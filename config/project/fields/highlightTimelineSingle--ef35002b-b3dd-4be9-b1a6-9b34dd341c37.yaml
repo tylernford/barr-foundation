@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34b92820-685d-43bf-9157-2989b9092b0d # Highlights
+handle: highlightTimelineSingle
+instructions: 'Create at least 3 or more milestones. Drag & drop to rearrange. If more than 3 milestones are added, the timeline will automatically be displayed as a carousel.'
+name: 'Highlight: Single Event Timeline'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_highlighttimelinesingle}}'
+  maxBlocks: null
+  minBlocks: 3
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

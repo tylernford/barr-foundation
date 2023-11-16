@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All (Do not Delete)
+fieldLayouts:
+  45eb772e-17fc-4bbd-820d-0d1b9e8210ba:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: db600239-720e-403b-b894-d8ef369fc205 # Highlight: Quote
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6dac1b1b-3f73-433a-b634-6d451e361cf4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Quote
+        uid: ef01a377-b1a8-4d75-a174-c12d632c796d
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: highlightQuote
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Highlight: Quote'
+sortOrder: 6
+topLevel: true

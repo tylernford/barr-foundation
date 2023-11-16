@@ -1,0 +1,265 @@
+changedFieldIndicator: 1693401701
+field: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
+fieldLayouts:
+  e728bef5-5ed6-40e3-a010-51076e03c074:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: fe5d0c67-9025-4800-afaf-48ab29540919 # Text: Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 678f6e42-ecb6-406c-83e5-f37c0348b4d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9683f361-9130-419a-ab35-052018c72c88 # Text: Supporting
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b79676d5-3a15-41d5-bf9f-dfe13532cad3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dcfdc9ff-b7c1-4c3d-893c-b2470243ee77 # Action: Entry or URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3a1434bd-a950-4a06-8889-0f0b51b4e71c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8c222928-a7c2-4d90-96ea-c403c79d070f # Asset: Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 625d4ce2-b7ed-4c8d-b0d9-df309058e4d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2025f138-0b54-45d6-9c52-4ec1ecc89039 # Style: Alignment
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24134b94-e885-4154-a7e2-bf896b5207ac
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0134a913-5924-4b6e-a320-e64bd7b6831e
+        userCondition: null
+fields:
+  8c222928-a7c2-4d90-96ea-c403c79d070f: # Asset: Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: assetImage
+    instructions: 'Select exactly one image. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
+    name: 'Asset: Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  2025f138-0b54-45d6-9c52-4ec1ecc89039: # Style: Alignment
+    columnSuffix: tpflkisn
+    contentColumnType: string(5)
+    fieldGroup: null
+    handle: styleAlignment
+    instructions: "(Optional) By default, text will display to the left of the image on larger viewports \r\n(i.e. desktop versus mobile browsers) "
+    name: 'Style: Alignment'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Right
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  9683f361-9130-419a-ab35-052018c72c88: # Text: Supporting
+    columnSuffix: qfhhphew
+    contentColumnType: text
+    fieldGroup: null
+    handle: textSupporting
+    instructions: null
+    name: 'Text: Supporting'
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  dcfdc9ff-b7c1-4c3d-893c-b2470243ee77: # Action: Entry or URL
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: actionLink
+    instructions: 'Select an entry or link to an external site.'
+    name: 'Action: Entry or URL'
+    searchable: true
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  fe5d0c67-9025-4800-afaf-48ab29540919: # Text: Heading
+    columnSuffix: ukamzmwc
+    contentColumnType: text
+    fieldGroup: null
+    handle: textHeading
+    instructions: null
+    name: 'Text: Heading'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

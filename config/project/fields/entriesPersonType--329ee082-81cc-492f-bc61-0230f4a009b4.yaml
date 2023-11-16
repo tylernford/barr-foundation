@@ -1,0 +1,55 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
+handle: entriesPersonType
+instructions: 'e.g. Staff'
+name: 'Entries: Person Type'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\LevelConditionRule
+              -
+                - uid
+                - 30099fd1-38e8-43ff-bde3-f65ee9a06f94
+              -
+                - operator
+                - '='
+              -
+                - value
+                - '2'
+              -
+                - maxValue
+                - ''
+  selectionLabel: 'Select a type'
+  showSiteMenu: true
+  sources:
+    - 'section:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

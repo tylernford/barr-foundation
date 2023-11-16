@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: dividerSection
+instructions: 'Create a section divider.'
+name: 'Divider: Section'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1099673605
+  columns:
+    __assoc__:
+      -
+        - ed00904c-55f9-4940-bedd-8162c46d1d36 # Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2d85d472-1f81-45ee-9294-8af027894cdd # Action
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_dividersection}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

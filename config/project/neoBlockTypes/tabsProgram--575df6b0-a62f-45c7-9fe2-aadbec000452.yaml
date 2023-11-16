@@ -1,0 +1,64 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+fieldLayouts:
+  f17523e6-40cf-4290-bb8e-d5a6b7e6a15c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
+            instructions: 'e.g. Our Program Areas'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 344365fa-bfdb-4902-ab48-14398a2b9a0b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9c15fd9a-81a5-4c31-bd58-95cc257be3fd # Text: Rich (Basic)
+            instructions: 'Brief, general description of program areas '
+            label: 'Text: Supporting'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dfae7a63-5293-4073-bd56-a6c19920c652
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 46027ca9-2439-4af3-8620-4af52fe9e7c6 # Tabs: Program Finder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ff42dca-4c01-4e30-8327-53f9e0c5eb97
+            userCondition: null
+            warning: null
+            width: 100
+        name: Tabs
+        uid: efcbf1ff-9af4-450b-a1c6-4c45fa654bf1
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: tabsProgram
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 1
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Tabs: Program Finder'
+sortOrder: 1
+topLevel: true

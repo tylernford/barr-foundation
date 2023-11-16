@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All (Do not Delete)
+fieldLayouts:
+  48cc5cf9-6a05-44d5-8b62-36fe0219b053:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 66cef11d-f827-4b38-8867-ece3eefda13c # Carousel: Quotes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f0864ef-d9a3-45c2-8ee9-ffe7895d85d1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Quote
+        uid: 02a766b3-f68a-4b97-8698-f3454a38606c
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: carouselQuotes
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Carousel: Quotes'
+sortOrder: 10
+topLevel: true

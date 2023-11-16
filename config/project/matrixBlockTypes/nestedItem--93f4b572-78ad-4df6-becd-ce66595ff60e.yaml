@@ -1,4 +1,4 @@
-field: 8b6f4e86-b264-4d36-99a2-2bd8c177c514 # Primary Navigation
+field: 8b6f4e86-b264-4d36-99a2-2bd8c177c514 # Navigation: Primary
 fieldLayouts:
   efed81c1-f09e-4308-9666-353f4b9bc577:
     tabs:
@@ -16,7 +16,7 @@ fieldLayouts:
             uid: e15a4699-8bdd-499a-ae61-9958178a4b29
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
             elementCondition: null
             fieldUid: d8653b35-a1ac-4282-8083-902f060bcc6e # Target
@@ -28,7 +28,19 @@ fieldLayouts:
             uid: efd26263-07c8-407a-9610-9f0dd2b8287b
             userCondition: null
             warning: null
-            width: 25
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: c0b3adea-77f8-4182-b17d-7209cb415314 # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 92e73aca-d30c-46a0-bae6-1e3515d4eb0f
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: c954d828-974b-402e-92e2-3057b737e6ed # Menu
@@ -65,41 +77,58 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  c0b3adea-77f8-4182-b17d-7209cb415314: # Description
+    columnSuffix: jtzwezft
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: 'Brief description of section that also urges users to delve deeper/explore our work. (Word Limit: 200)'
+    name: Description
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: 200
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
   c954d828-974b-402e-92e2-3057b737e6ed: # Menu
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: navMenu
-    instructions: 'Assign either an internal or external page to the menu item.'
+    instructions: 'Assign a link to the menu item. (Max 3 primary items; 3-5 secondary items)'
     name: Menu
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1239609564
+      changedFieldIndicator: 1042808750
       columns:
         __assoc__:
           -
-            - 34277eb7-c13d-43b3-becd-be1f5d99e24d
+            - f04ce99a-aa20-4ed0-9e83-40f232197b48 # Item
             -
               __assoc__:
                 -
                   - width
                   - ''
           -
-            - 208aca1e-823d-4a72-9486-d1009a9b7227
+            - 6cc3b73a-f6dd-45e3-89fd-4c871ad53903 # Is secondary?
             -
               __assoc__:
                 -
                   - width
-                  - ''
-          -
-            - 3627c784-eaaf-466a-8d92-f26f0ef310ee
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_navmenu}}'
+                  - 150px
+      contentTable: '{{%stc_10_navmenu}}'
       fieldLayout: table
       maxRows: null
       minRows: null
@@ -108,7 +137,7 @@ fields:
       selectionLabel: 'Add a menu item'
       staticField: null
     translationKeyFormat: null
-    translationMethod: site
+    translationMethod: none
     type: verbb\supertable\fields\SuperTableField
   d8653b35-a1ac-4282-8083-902f060bcc6e: # Target
     columnSuffix: null
@@ -119,32 +148,60 @@ fields:
     name: Target
     searchable: false
     settings:
-      allowSelfRelations: false
-      branchLimit: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: 1
-      minRelations: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Entry
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\entries\EntryCondition
-      selectionLabel: 'Internal Page'
-      showSiteMenu: true
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Entries
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
 handle: nestedItem
 name: 'Nested Menu'
-sortOrder: 3
+sortOrder: 2

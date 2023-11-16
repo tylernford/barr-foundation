@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
+handle: entriesBlog
+instructions: 'Select one or many blog posts. Drag & drop to rearrange.'
+name: 'Entries: Blog'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a post'
+  showSiteMenu: true
+  sources:
+    - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: tabsProgram
+instructions: 'Feature each program area in a vertically tabbed component. Drag & drop to rearrange the tab content.'
+name: 'Tabs: Program Finder'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_tabsprogram}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

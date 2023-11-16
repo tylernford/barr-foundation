@@ -1,0 +1,114 @@
+changedFieldIndicator: 53891294
+field: 0e617ac1-3f0e-4444-b08b-ad43e7448faa # Menu
+fieldLayouts:
+  e6ec7312-6bc7-446c-88f5-9c00d5b04e6b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c7deb866-6362-47f8-8104-2d8bf7195864 # Item
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45f68641-51bc-4cec-a8ee-96055f46a086
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5aa8c652-d385-4a25-ba86-59ea7767d37e # Is secondary?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aca9e3d0-991a-4869-af64-8617f84bdb77
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c2b27b3c-79ff-4fdf-b7d6-e54dcdc35159
+        userCondition: null
+fields:
+  5aa8c652-d385-4a25-ba86-59ea7767d37e: # Is secondary?
+    columnSuffix: wbjmmwsu
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: isSecondary
+    instructions: null
+    name: 'Is secondary?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  c7deb866-6362-47f8-8104-2d8bf7195864: # Item
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navTarget
+    instructions: null
+    name: Item
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField

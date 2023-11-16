@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 526592df-8835-48ec-80a2-b149d57b3e57 # Carousels
+handle: carouselQuotes
+instructions: 'Add at least 4 quotes to carousel. Drag & drop to rearrange.'
+name: 'Carousel: Quotes'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 208665115
+  columns:
+    __assoc__:
+      -
+        - 5a2816d1-111d-44df-933d-9fe33d93acdb # Text: Quote
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 135f1b4e-27cb-4cda-be94-52607d445f75 # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - fbb4714a-4260-498d-b73b-2f62a22c4b99 # Attribution: Entry or Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_carouselquotes}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: 4
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Add a quote'
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

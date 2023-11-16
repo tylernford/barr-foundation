@@ -1,0 +1,201 @@
+fieldLayouts:
+  1e4ebc26-0ab3-4dfd-96bb-53ed9bc01bd3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 027d3f60-3fac-408a-99e1-3a6cfd86c8e3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 89018b53-2891-452a-b5b3-64715ddab024
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 3a2f39b7-ed74-4fe2-aa22-685cdd11a644 # Text: First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c878b819-60ad-4552-a483-71e7098a4686
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: cb18e454-7f9b-4477-ab6b-e5c900f0c4e4 # Text: Middle initial
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ed60e9c-d568-4b26-b873-74ef58b20118
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 125122fd-5de1-4d94-93a2-ac947d442451 # Text: Last Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 19fed40c-fae4-416d-9eec-7875b7dc3e1b
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: b79fbb2a-3495-4126-aec7-ef3eea56e1a1 # Text: Pronouns
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3e307fc2-c1bf-4c6b-a930-16a3f342d84a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: aa3227ec-0bd2-4d61-80db-dd6c6e3a331a # Text: Job Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7799e7b4-5421-4fb7-b485-344eaaf2fde9
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9ecae88f-f550-4e14-8eb8-3aa61d39ab8a
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d453d55f-cf91-4609-9902-ae1370bdbc6d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8797d2b7-0618-41a9-9981-6a75d957809a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b7efd264-6630-4311-9e1f-02310640bb4c
+            userCondition: null
+          -
+            elementCondition: null
+            template: control-panel/_opener-person.html
+            type: craft\fieldlayoutelements\Template
+            uid: 748e1d33-337b-4ce2-8360-633a9e6ca5b2
+            userCondition: null
+            width: 100
+        name: Opener
+        uid: e76b9909-c157-4296-a6f9-ec19e892f6eb
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a06fd4ab-835d-4487-ab3d-7db24b84ace8 # Text: Body
+            instructions: 'Brief bio'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30162140-1fa2-4c06-873e-c39573555373
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 161d2b2c-037a-49db-9f03-d8f065e0d52d # Action: Contact
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45ed21e5-d582-4bd6-8763-0f72c0ca3dda
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 046b3809-5cc1-4bdb-ba9b-9c6d449d02de
+            userCondition: null
+          -
+            elementCondition: null
+            template: control-panel/_bio-description.html
+            type: craft\fieldlayoutelements\Template
+            uid: 74bd4f66-4f4c-4f03-bf39-ae82dd4567e7
+            userCondition: null
+            width: 100
+        name: Description
+        uid: d2615e6e-e628-417f-9479-8b2dc28f3ebd
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 45040e4a-50f0-43a4-a280-c21a86946d88 # Directory
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

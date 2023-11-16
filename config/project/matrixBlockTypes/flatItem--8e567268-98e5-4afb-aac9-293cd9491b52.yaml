@@ -1,0 +1,170 @@
+field: e80011d9-6840-4ef0-862e-d5b1ef15bc9b # Navigation: Social
+fieldLayouts:
+  0fd88508-f756-447e-aea8-26171ae1442e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 962d1b17-ec75-47e8-a297-39b0b971c535 # Item
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8e07c98d-478a-4f7c-9178-8d95fba15e29
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c # Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33f56fc4-4a78-400e-928a-1d267b84379b
+            userCondition: null
+            warning: null
+            width: 25
+        name: Content
+        uid: 5d42899a-db30-42d8-b8a6-d2deff8b1e81
+        userCondition: null
+fields:
+  6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: # Icon
+    columnSuffix: evqpdkjz
+    contentColumnType: string(9)
+    fieldGroup: null
+    handle: navIcon
+    instructions: 'Select a corresponding icon for the social account.'
+    name: Icon
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Facebook
+            -
+              - value
+              - facebook
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Twitter
+            -
+              - value
+              - twitter
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Linked In'
+            -
+              - value
+              - linkedIn
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Instagram
+            -
+              - value
+              - instagram
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - YouTube
+            -
+              - value
+              - youtube
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  962d1b17-ec75-47e8-a297-39b0b971c535: # Item
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navTarget
+    instructions: null
+    name: Item
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: url
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+handle: flatItem
+name: 'Flat Menu'
+sortOrder: 1

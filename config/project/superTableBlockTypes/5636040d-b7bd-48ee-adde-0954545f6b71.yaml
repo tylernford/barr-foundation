@@ -1,0 +1,135 @@
+changedFieldIndicator: 597351966
+field: 9a168c09-6501-475f-8cce-22b491c76e1a # Action: Pair
+fieldLayouts:
+  2cddae77-b556-4ba6-8df7-a42fc372b52d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1842618e-7f9b-45c9-be4c-436bd476201e # Action: Entry or URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f2d52bc-4234-4e2b-8ccd-6643766fcfaf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d82a1a8b-d1ee-434f-9583-06eb498d2c9c # Style: Button or Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8db096dd-97ea-4bc3-b7bc-fed4c07dd2a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a226c691-9747-4001-bf4d-d60419896e2b
+        userCondition: null
+fields:
+  1842618e-7f9b-45c9-be4c-436bd476201e: # Action: Entry or URL
+    columnSuffix: fovqwenv
+    contentColumnType: string
+    fieldGroup: null
+    handle: actionLink
+    instructions: null
+    name: 'Action: Entry or URL'
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  d82a1a8b-d1ee-434f-9583-06eb498d2c9c: # Style: Button or Text
+    columnSuffix: bnppkusi
+    contentColumnType: string(6)
+    fieldGroup: null
+    handle: styleLink
+    instructions: 'By default the action will be styled as a button.'
+    name: 'Style: Button or Text'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Button
+            -
+              - value
+              - button
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Text
+            -
+              - value
+              - text
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown

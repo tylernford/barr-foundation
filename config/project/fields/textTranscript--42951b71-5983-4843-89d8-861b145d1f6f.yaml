@@ -1,0 +1,23 @@
+columnSuffix: soaucyut
+contentColumnType: text
+fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Texts
+handle: textTranscript
+instructions: null
+name: 'Text: Transcript'
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: 5ca73fd1-fa27-4af4-bc45-c1373761dbb0 # Text: Transcript
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

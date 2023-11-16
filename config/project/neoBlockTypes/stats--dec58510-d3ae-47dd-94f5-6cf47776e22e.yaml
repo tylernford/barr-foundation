@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 9b53aeb1-a2da-4cc3-8309-f9194162e2bd # Page Builder: Careers
+fieldLayouts:
+  f8999c14-2dbb-4440-b846-179225482681:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9e65ef79-1f80-4724-997d-ea1035b737c7 # Highlight: Stats
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3bc35999-2ef7-4efd-9bdb-2c4314edf7c6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Highlight
+        uid: 94bb3a5b-fc16-40a7-8f83-66b42de19433
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: stats
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Stats
+sortOrder: 7
+topLevel: false

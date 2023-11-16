@@ -1,0 +1,23 @@
+columnSuffix: pcidrgok
+contentColumnType: text
+fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Texts
+handle: textBody
+instructions: null
+name: 'Text: Body'
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: af76ec93-a5f2-4f9b-8b96-eb3fbf19baef # Text: Body Options
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

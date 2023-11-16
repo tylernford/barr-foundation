@@ -1,0 +1,312 @@
+changedFieldIndicator: 1918152362
+field: 29942c87-1bd3-4690-ae98-ba104b5589a2 # Card: Post
+fieldLayouts:
+  fdae9137-bf26-4adb-b3fd-4b6789d14bcd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 70d8712d-2a67-493a-a1a0-7ed698a9ee5d # Date: Published
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ef53ace-1b9d-4385-9f8d-867be799763e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b50dc00d-971b-4a33-a1f2-de240fbc64c6 # Entries: Authors
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5106491c-8d28-4f38-8778-9231f9b85b57
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 19bcf750-aecc-4f9c-b4fb-50e6d96af2eb # Tags: Categories or Program Areas
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6cf7c560-15d3-49f6-aae5-e2af7f8f219f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d3b98f80-1cee-4849-a97b-9db551b73c5d # Asset: Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 84cea13f-1920-4943-b0f8-ca882ca86169
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ae2b1b26-277c-4619-ab71-b564ec89459b # Text: Supporting
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6c6e9d2-27b5-4334-beef-1570f1771b06
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7641cb7f-d1d2-444e-ba5d-e21e2386d119 # Action: URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf07edf9-a377-4911-a670-c20fbc60e704
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 658799ff-d86b-4aa6-8bdf-877ab5002424
+        userCondition: null
+fields:
+  19bcf750-aecc-4f9c-b4fb-50e6d96af2eb: # Tags: Categories or Program Areas
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: tagList
+    instructions: 'Select one or many Categories or Program Areas. Drag & drop to rearrange.'
+    name: 'Tags: Categories or Program Areas'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add a tag'
+      showSiteMenu: true
+      sources:
+        - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+        - 'section:1982f1d0-3929-4ddf-b0e0-76d519d91f39'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  70d8712d-2a67-493a-a1a0-7ed698a9ee5d: # Date: Published
+    columnSuffix: haaqflvx
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: datePublished
+    instructions: null
+    name: 'Date: Published'
+    searchable: true
+    settings:
+      max: null
+      min: null
+      minuteIncrement: 30
+      showDate: true
+      showTime: false
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  7641cb7f-d1d2-444e-ba5d-e21e2386d119: # Action: URL
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: actionLink
+    instructions: '(Optional) Add an external call-to-action'
+    name: 'Action: URL'
+    searchable: true
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: url
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  ae2b1b26-277c-4619-ab71-b564ec89459b: # Text: Supporting
+    columnSuffix: uhzxmdib
+    contentColumnType: text
+    fieldGroup: null
+    handle: textSupporting
+    instructions: null
+    name: 'Text: Supporting'
+    searchable: true
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: true
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  b50dc00d-971b-4a33-a1f2-de240fbc64c6: # Entries: Authors
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entriesAuthors
+    instructions: 'Select one or many authors. Drag & drop to rearrange.'
+    name: 'Entries: Authors'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add an author'
+      showSiteMenu: true
+      sources:
+        - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  d3b98f80-1cee-4849-a97b-9db551b73c5d: # Asset: Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: assetImage
+    instructions: 'Select exactly one image. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
+    name: 'Asset: Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

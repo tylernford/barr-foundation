@@ -1,0 +1,17 @@
+columnSuffix: rilutctb
+contentColumnType: datetime
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: dateOnly
+instructions: null
+name: 'Date: Date Only'
+searchable: true
+settings:
+  max: null
+  min: null
+  minuteIncrement: 30
+  showDate: true
+  showTime: false
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

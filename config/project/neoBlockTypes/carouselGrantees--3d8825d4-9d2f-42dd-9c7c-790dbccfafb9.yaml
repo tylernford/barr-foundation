@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All (Do not Delete)
+fieldLayouts:
+  049c7579-e081-48e3-9e94-12b2cecc5d91:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 918fd486-3aea-41b5-bdaa-88f4114147e7 # Carousel: Grantees
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c322747-836b-4b74-9751-aee8da71d49d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Carousel
+        uid: 51deded8-cb61-4b2f-b976-6b79242dbc58
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: carouselGrantees
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Carousel: Grantees'
+sortOrder: 11
+topLevel: true

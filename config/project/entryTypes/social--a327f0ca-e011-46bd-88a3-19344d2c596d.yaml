@@ -1,0 +1,32 @@
+fieldLayouts:
+  75ebfb07-8e86-4ea5-b7db-9bc0d6ef7fa4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e80011d9-6840-4ef0-862e-d5b1ef15bc9b # Navigation: Social
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4fa1cfe9-8b8f-42b3-9286-5715ea597ddf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Navigation
+        uid: 1911b33c-8d83-4290-a1aa-9d56ffbb8b4d
+        userCondition: null
+handle: social
+hasTitleField: false
+name: Social
+section: e6d0fb6c-83de-4e6b-b2b0-ca04df252285 # Social
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

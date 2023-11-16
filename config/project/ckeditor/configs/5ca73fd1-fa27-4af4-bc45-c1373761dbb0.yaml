@@ -1,0 +1,10 @@
+headingLevels: false
+listPlugin: DocumentList
+name: 'Text: Transcript'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - '|'
+  - sourceEditing

@@ -5,10 +5,13 @@ headingLevels:
   - 4
   - 5
   - 6
-name: Simple
+listPlugin: DocumentList
+name: 'Text: Basic + Headings'
 toolbar:
   - heading
   - '|'
   - bold
   - italic
   - link
+  - '|'
+  - sourceEditing

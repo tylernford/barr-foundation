@@ -1,0 +1,64 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
+fieldLayouts:
+  581719f7-9421-4e78-9b83-e21ae360a36a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd85c5ce-e51e-4003-a6c8-823160a619fe
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd58cf67-9732-4abd-af6b-5358d9aea08a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4280df4b-008d-49b9-9323-ace6b934dc5c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Group
+        uid: ae72400d-ff97-40da-95de-5ffcfc055643
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: groupType
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 1
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Group Type'
+sortOrder: 2
+topLevel: false

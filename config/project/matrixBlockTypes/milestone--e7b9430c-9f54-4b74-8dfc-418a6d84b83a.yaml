@@ -1,0 +1,95 @@
+field: 0b12ba92-d669-4feb-9241-037faa9b352b # Highlight: Multi-Event Timeline
+fieldLayouts:
+  6134ba21-adb5-40b4-9f97-63c009bdeb4a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9ca97f1f-7cb5-42af-b0fb-f46920dcf0ba # Year
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c616b88d-74d3-480e-9c45-aa7348131d00
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 39247735-ed77-47ee-a626-e60b8b135046 # Event
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8d475fb-762a-47d9-96a8-0cdea896178b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 20ab65ac-867d-4b11-a9e9-595dc328f735
+        userCondition: null
+fields:
+  9ca97f1f-7cb5-42af-b0fb-f46920dcf0ba: # Year
+    columnSuffix: ivbccmow
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: year
+    instructions: 'The milestone year.'
+    name: Year
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: 4
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  39247735-ed77-47ee-a626-e60b8b135046: # Event
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: event
+    instructions: 'Assign multiple events to this milestone. Be sure the event date matches the year above.'
+    name: Event
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: 1
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add an event'
+      showSiteMenu: true
+      sources:
+        - 'section:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: milestone
+name: Milestone
+sortOrder: 1

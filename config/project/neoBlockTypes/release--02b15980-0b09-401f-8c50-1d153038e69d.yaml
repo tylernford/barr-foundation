@@ -1,0 +1,76 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 633a6cc7-36f9-47b9-9948-e569afd25265 # Builder: Changelog
+fieldLayouts:
+  ec637b94-8b58-460a-bbab-f8348176bc8c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 50ac893d-c55d-48d8-a3e9-08de620039ab # Text: Version
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb41575d-47f6-486a-b046-3afcd4012e95
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 25949bb9-af67-45e6-9adb-fc8c568dba48 # Date: Date Only
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f054fb7a-4e48-43a3-bcf0-caa9edb7307c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: fe4eaace-d373-4052-9652-85f1ffe01dca # Tags: Changelog Types
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8354ec39-8989-4234-8934-2a2a3132f01d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b68fa7d0-ea0f-4788-841c-bbce45e4344a # Text: Notes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4824d023-2834-4b2c-9ac4-54f71c23931e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Notes
+        uid: f7d7731f-d103-4276-a686-c1d97ca12b81
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: release
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Release
+sortOrder: 1
+topLevel: true

@@ -1,0 +1,65 @@
+childBlocks:
+  - bodyContent
+  - entriesJobs
+  - entriesJobsBoard
+  - cardSimple
+  - cardGroup
+  - stats
+  - accordion
+  - quotes
+conditions: null
+description: ''
+enabled: true
+field: 9b53aeb1-a2da-4cc3-8309-f9194162e2bd # Page Builder: Careers
+fieldLayouts:
+  8ad7fdfd-c3ab-433f-a2d9-76cfe23f44aa:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
+            instructions: 'The label that represents this Subject. If this is flagged as a bookmark below, this text will display within the Page Opener, e.g. "Current Openings" or "Culture."'
+            label: 'Text: Bookmark'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da8efaee-8f3e-42ca-9653-ffb0e00e9dbb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dc653bae-d5fa-4a97-b051-febbf34fdfed # Flag: Bookmark
+            instructions: 'Toggle on to create a "jump link" for this subject within the Page Opener.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 969fc62f-d970-4971-a8ec-05a2eb83372f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: fd63d43a-11fc-47e8-9881-e3a40f062e19
+            userCondition: null
+        name: Subject
+        uid: 99e5bba5-885e-4ee2-b08f-8f6ed60e53c3
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: subject
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Subject
+sortOrder: 1
+topLevel: true

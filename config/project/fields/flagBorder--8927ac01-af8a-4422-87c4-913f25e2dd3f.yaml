@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: flagBorder
+instructions: null
+name: 'Flag: Border'
+searchable: false
+settings:
+  default: true
+  offLabel: Borderless
+  onLabel: Border
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -30,13 +30,46 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
+          -
+            elementCondition: null
+            fieldUid: 1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02 # Opener: Homepage
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f704c85d-d8f6-4b0f-9aa5-6b6fc6e44bd3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Opener
         uid: 2004220e-7b5b-4557-b285-3d922a051af1
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+            instructions: null
+            label: Blocks
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2ca5c967-b50e-4399-953e-20678466ce58
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a2aa9093-f006-4e5f-8ab3-29661df21671
         userCondition: null
 handle: homepage
 hasTitleField: false
 name: Homepage
 section: ca86b174-5e19-4ff8-9f7a-a5185330d56d # Homepage
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

@@ -1,0 +1,103 @@
+fieldLayouts:
+  62d46d3e-bed5-403c-ada7-357be92faa27:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 38629d3e-1592-467e-9c51-43f806f2e906
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c60fa38c-4805-4bbb-88b3-ac0010289cf6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: 'Select exactly one image to represent the audio or video file. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
+            label: 'Asset: Poster Image'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8db69ea3-586e-416f-90b3-c4b0c8693be0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: null
+            label: 'Text: Caption'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b698f9b7-ff72-4ba9-995f-ca9c5f55daac
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
+            instructions: null
+            label: 'Text: Byline'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1db12f29-558b-4e18-a4ea-892840321932
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 42951b71-5983-4843-89d8-861b145d1f6f # Text: Transcript
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c7db64d-bb16-41c8-aa3d-27c8368fbc7c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 606a7b6c-293b-48d4-a4f5-0fc7f01dcae9
+        userCondition: null
+fs: globalMedia
+handle: media
+name: Media
+sortOrder: 4
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: media

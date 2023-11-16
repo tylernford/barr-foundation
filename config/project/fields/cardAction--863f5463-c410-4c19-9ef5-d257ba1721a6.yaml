@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
+handle: cardAction
+instructions: null
+name: 'Card: Action'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1027275064
+  columns:
+    __assoc__:
+      -
+        - c80dff18-6eeb-4474-8278-fdfc55a4630c # Text: Supporting
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - dc3125b2-6f2a-41d8-9e43-c558e6b27568 # Action: Entry or URL
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_cardaction}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

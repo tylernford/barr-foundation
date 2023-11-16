@@ -1,0 +1,82 @@
+fieldLayouts:
+  d0b93c00-42a4-47b5-b9cd-413ee2e90ba6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: acded029-0265-4e55-9dba-0e747ea1c078
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa3227ec-0bd2-4d61-80db-dd6c6e3a331a # Text: Job Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ab48d853-de64-497b-87d2-bb00e1962fa3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a14586b6-ea62-4ea9-8618-255f471f2b02 # Text: Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e89f3d91-5cb6-4423-b3f3-19d50ec36d50
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8994c88-2ba5-4c94-ab73-d6883b9175a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2ad3577b-e608-49e8-b0b7-8eea27d6824a
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: f1998fc1-bb1b-41a0-91e1-37bd2431e262 # Jobs
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

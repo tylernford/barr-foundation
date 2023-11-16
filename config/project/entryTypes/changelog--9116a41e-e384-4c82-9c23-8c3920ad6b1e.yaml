@@ -1,0 +1,85 @@
+fieldLayouts:
+  ce9bff27-66b3-4429-809e-0123a237f066:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c41b3edd-ce47-4949-9a1f-831366fd06de
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 39e71284-c140-4fe2-a4b7-e3b08a358e0c
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 633a6cc7-36f9-47b9-9948-e569afd25265 # Builder: Changelog
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 35cc396c-ee95-49ed-b14f-173bd6e037f9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e154dc4d-a55b-4438-9502-7082d35615e4
+        userCondition:
+          class: craft\elements\conditions\users\UserCondition
+          conditionRules:
+            -
+              class: craft\elements\conditions\users\UsernameConditionRule
+              operator: '='
+              uid: a4dc9b4b-3da3-4b87-b072-1c5e965d2c25
+              value: fbdev
+          elementType: craft\elements\User
+          fieldContext: global
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            template: control-panel/_changelog.html
+            type: craft\fieldlayoutelements\Template
+            uid: bde336bf-9370-411f-8617-3b2a1792bc3d
+            userCondition: null
+            width: 100
+        name: 'Release Notes'
+        uid: d741b7de-58ce-4cdd-9ac5-0db02bdf5330
+        userCondition: null
+handle: changelog
+hasTitleField: false
+name: Changelog
+section: 66f36432-924e-4595-914f-17cb32843c88 # Changelog
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

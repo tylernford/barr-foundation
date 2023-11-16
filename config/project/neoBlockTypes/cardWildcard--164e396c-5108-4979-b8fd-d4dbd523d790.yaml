@@ -1,0 +1,52 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c984ca15-0cae-4c1d-9b3c-14e9d29347f7 # Page Builder: All (Do not Delete)
+fieldLayouts:
+  bdd7affb-44e6-478c-a92c-6b4a41db3025:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1cb4612c-38cd-4b27-809d-fd543e6b94cf # Flag: Feature
+            instructions: "Turn this flag on to designate the first card listed below as a \"feature.\" \r\nA \"feature\" card will display larger than its sibling cards."
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f5482651-9666-469c-a6bb-527f2b453f81
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4d753cb0-1ca4-4b73-aecc-957826dee5de # Card: Group
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8cd52bb0-b125-494e-84ef-d5bbf5c800a2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Cards
+        uid: 85960081-7e13-411e-9541-3fc5bdca4b69
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: cardWildcard
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Card: Wildcard'
+sortOrder: 14
+topLevel: true

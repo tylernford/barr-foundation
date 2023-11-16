@@ -1,0 +1,13 @@
+headingLevels: false
+listPlugin: DocumentList
+name: 'Text: Body Options'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - bulletedList
+  - numberedList
+  - link
+  - '|'
+  - sourceEditing

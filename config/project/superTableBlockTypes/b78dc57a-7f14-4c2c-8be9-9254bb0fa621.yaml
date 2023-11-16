@@ -1,0 +1,71 @@
+changedFieldIndicator: 779542884
+field: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
+fieldLayouts:
+  a0985cb2-1edc-4df9-8a63-a76f6b1a65d1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ed00904c-55f9-4940-bedd-8162c46d1d36 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 99bfc001-399c-48e4-9fba-701fc2a70540
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2d85d472-1f81-45ee-9294-8af027894cdd # Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fe009324-28f5-4bd0-ab78-169b487e87b0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ffac3975-7e02-4d6a-a38c-462c42733be6
+        userCondition: null
+fields:
+  2d85d472-1f81-45ee-9294-8af027894cdd: # Action
+    columnSuffix: uwpvtvxc
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: actionJump
+    instructions: 'By default, the Page Opener will include a link that will "jump" the visitor to this section. Toggle off the lightswitch to hide the link.'
+    name: Action
+    searchable: true
+    settings:
+      default: true
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  ed00904c-55f9-4940-bedd-8162c46d1d36: # Heading
+    columnSuffix: mbjmsdlc
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

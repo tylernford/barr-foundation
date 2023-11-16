@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: a283985a-2deb-422a-95d9-441935ccb1da # Page Builder: Fellowship
+fieldLayouts:
+  0da30766-0119-459a-9a5f-47aaf0aa0583:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34710f89-c278-4726-851d-10737bd1018e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Section
+        uid: 1efffd3a-27d7-4a22-8ea1-65950cbcf323
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: cardSimple
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Card: Simple'
+sortOrder: 3
+topLevel: false

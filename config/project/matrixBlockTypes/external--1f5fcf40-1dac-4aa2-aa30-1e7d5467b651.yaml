@@ -1,0 +1,185 @@
+field: fbb4714a-4260-498d-b73b-2f62a22c4b99 # Attribution: Entry or Text
+fieldLayouts:
+  82dfd933-42e1-4800-b74b-ff494f8fbbb8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2ae46801-59a1-4cf5-a238-a8ba9317eed9 # Organization
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26326d0f-302c-43a2-8aa0-f8bce1d9c200
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c5b61d17-072a-46ba-b6ab-f91256d7ac59 # Full Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5022687-2af5-41b0-b732-4c122de16422
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6e8ba94e-310e-4db0-a093-204c204e876f # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8e33173-74f3-4773-84d0-50a8d26a728a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 04fbe62b-bcae-44dd-8023-e56efe203cb3 # Action: URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c72cabb-d9f6-4d45-8fba-ba5369cb5535
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 79565a6d-e26a-49fc-8b64-2a4d69896aca
+        userCondition: null
+fields:
+  2ae46801-59a1-4cf5-a238-a8ba9317eed9: # Organization
+    columnSuffix: abbzfivg
+    contentColumnType: text
+    fieldGroup: null
+    handle: organization
+    instructions: null
+    name: Organization
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  04fbe62b-bcae-44dd-8023-e56efe203cb3: # Action: URL
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: actionLink
+    instructions: null
+    name: 'Action: URL'
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: url
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  6e8ba94e-310e-4db0-a093-204c204e876f: # Title
+    columnSuffix: kqebduhd
+    contentColumnType: text
+    fieldGroup: null
+    handle: jobTitle
+    instructions: null
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c5b61d17-072a-46ba-b6ab-f91256d7ac59: # Full Name
+    columnSuffix: mxoqhobk
+    contentColumnType: text
+    fieldGroup: null
+    handle: fullName
+    instructions: null
+    name: 'Full Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: external
+name: 'External Person'
+sortOrder: 2

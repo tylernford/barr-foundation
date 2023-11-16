@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 766d1cbd-4251-4b9d-9378-bf9d345ae492 # Openers
+handle: openerLanding
+instructions: null
+name: 'Opener: Landing'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 67458977
+  columns:
+    __assoc__:
+      -
+        - e4877e61-528c-470a-bfb5-5548ec0153d5 # Text: Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 9750478c-5202-4300-b469-2a61639f0ec4 # Text: Description
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0a0fbbb0-ab8f-4950-afab-87e4e5f44c47 # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_openerlanding}}'
+  fieldLayout: matrix
+  maxRows: 1
+  minRows: 1
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Add a page opener'
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

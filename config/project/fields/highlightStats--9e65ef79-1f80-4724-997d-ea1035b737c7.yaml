@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34b92820-685d-43bf-9157-2989b9092b0d # Highlights
+handle: highlightStats
+instructions: 'Add up to 4 statistics. Drag & drop to rearrange.'
+name: 'Highlight: Stats'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 695579474
+  columns:
+    __assoc__:
+      -
+        - b6d8fb04-3837-4826-abf5-2ff06409e686 # Text: Label
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 39bff6e7-a84b-482c-8a13-facf22132bd9 # Text: Stat
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - eaf269e1-7746-41ed-9136-dc532a61e2f7 # Text: Description
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_highlightstats}}'
+  fieldLayout: matrix
+  maxRows: 4
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: 'Add a stat'
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField
