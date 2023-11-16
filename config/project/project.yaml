@@ -1,11 +1,11 @@
-dateModified: 1700174651
+dateModified: 1700176426
 elementSources:
   craft\elements\Entry:
     -
       defaultSort:
         - postDate
         - desc
-      disabled: false
+      disabled: true
       key: '*'
       tableAttributes:
         - section
