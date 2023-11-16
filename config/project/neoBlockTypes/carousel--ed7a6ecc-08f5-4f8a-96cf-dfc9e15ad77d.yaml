@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 186d89de-97b1-4f8f-8d57-067c8383e385 # Page Builder: Grantmaking Process
+fieldLayouts:
+  36d0bd6b-039a-484f-b81e-545d083ce3cc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 918fd486-3aea-41b5-bdaa-88f4114147e7 # Carousel: Grantees
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 308f5b85-a738-4c59-9ac3-04528eb62734
+            userCondition: null
+            warning: null
+            width: 100
+        name: Highlight
+        uid: 134aa5e2-6591-4c8a-98a1-f9165bf12c65
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: carousel
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Carousel
+sortOrder: 3
+topLevel: false

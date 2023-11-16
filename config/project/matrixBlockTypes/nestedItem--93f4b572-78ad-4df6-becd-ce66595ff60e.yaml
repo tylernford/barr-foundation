@@ -88,7 +88,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: ''
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true
@@ -111,7 +111,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 446513601
+      changedFieldIndicator: 1042808750
       columns:
         __assoc__:
           -
@@ -155,7 +155,7 @@ fields:
       customTextRequired: false
       defaultLinkName: entry
       defaultText: ''
-      enableAllLinkTypes: true
+      enableAllLinkTypes: false
       enableAriaLabel: false
       enableElementCache: false
       enableTitle: false
@@ -181,7 +181,7 @@ fields:
         entry:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: false
+          enabled: true
           sources: '*'
         site:
           enabled: false
@@ -193,7 +193,7 @@ fields:
         url:
           allowAliases: false
           disableValidation: false
-          enabled: false
+          enabled: true
         user:
           allowCrossSiteLink: false
           allowCustomQuery: false

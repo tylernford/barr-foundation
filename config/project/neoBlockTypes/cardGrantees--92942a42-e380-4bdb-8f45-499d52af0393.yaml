@@ -1,0 +1,64 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: b74b53a0-8afc-42c5-9189-5ac586e95acc # Page Builder: Program Area
+fieldLayouts:
+  1eebedca-b05e-4b10-a44b-98ae44c8c34d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1cb4612c-38cd-4b27-809d-fd543e6b94cf # Flag: Feature
+            instructions: 'Toggle on to flag the first grantee card listed below as "featured." The featured grantee card will display larger than its siblings.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 623029ee-c616-4b8d-85e5-3d7ba2727c75
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b89b9ceb-1d0c-48ec-a0d7-0c392eb011af # Entries: Grantee
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dd023776-8036-4b42-9e4f-541734dabf6c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1ed6cf4e-2014-4731-a5d4-ec367e55a9f1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Card
+        uid: 08fb94ea-566b-430f-bf2b-e3c419f907bd
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: cardGrantees
+icon: null
+ignorePermissions: true
+maxBlocks: 1
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 1
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Card: Grantees'
+sortOrder: 3
+topLevel: false

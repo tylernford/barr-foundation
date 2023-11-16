@@ -1,0 +1,9 @@
+headingLevels: false
+listPlugin: List
+name: 'Developer: Release'
+toolbar:
+  - bulletedList
+  - numberedList
+  - bold
+  - italic
+  - link

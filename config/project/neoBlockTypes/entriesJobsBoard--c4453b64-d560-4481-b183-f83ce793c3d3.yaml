@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 9b53aeb1-a2da-4cc3-8309-f9194162e2bd # Page Builder: Careers
+fieldLayouts:
+  2a543936-ac2e-44ff-a6ca-dcbe5a4a79d7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3e11477d-216f-40bc-b1ab-c75a7eba26d0 # Entries: Jobs Board
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ed9884f-c41d-4fa0-ab2b-c4b8a331ce6c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Entries
+        uid: 80f6f1fa-54b5-4d18-98bb-4f99612ac168
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: entriesJobsBoard
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Entries: Jobs Board'
+sortOrder: 4
+topLevel: false

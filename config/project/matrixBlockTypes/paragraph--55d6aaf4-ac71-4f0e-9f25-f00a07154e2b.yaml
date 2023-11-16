@@ -32,7 +32,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: af76ec93-a5f2-4f9b-8b96-eb3fbf19baef # Body: Paragraph
+      ckeConfig: af76ec93-a5f2-4f9b-8b96-eb3fbf19baef # Text: Body Options
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true

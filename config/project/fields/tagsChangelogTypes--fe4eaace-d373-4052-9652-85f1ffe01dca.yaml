@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 9bdf93bb-bbb6-4791-a90b-ee8f56915270 # Developer
+handle: tagsChangelogTypes
+instructions: null
+name: 'Tags: Changelog Types'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a type'
+  showSiteMenu: false
+  sources:
+    - 'section:61455e6d-9939-41a1-a0aa-22f559aae37a' # Changelog Types
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

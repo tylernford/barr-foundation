@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 9b53aeb1-a2da-4cc3-8309-f9194162e2bd # Page Builder: Careers
+fieldLayouts:
+  0070a815-cd75-4d73-ba80-984d4065007f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7b7e6d25-da0c-40b9-b3e6-07f9632c0924 # Entries: Jobs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bdce98a1-515d-4ac7-a703-8dbbadb05a27
+            userCondition: null
+            warning: null
+            width: 100
+        name: Entries
+        uid: 067186d5-ce8c-4033-90d1-b74c1f7df81b
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: entriesJobs
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Entries: Jobs'
+sortOrder: 3
+topLevel: false

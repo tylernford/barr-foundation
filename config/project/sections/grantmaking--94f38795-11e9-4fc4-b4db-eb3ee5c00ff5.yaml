@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: grantmaking
+name: Grantmaking
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
+    enabledByDefault: true
+    hasUrls: true
+    template: grantmaking/_entry
+    uriFormat: 'grantmaking/{slug}'
+structure:
+  maxLevels: null
+  uid: f5489c1b-e0d5-4528-8d7e-c1ba46b923a4
+type: structure

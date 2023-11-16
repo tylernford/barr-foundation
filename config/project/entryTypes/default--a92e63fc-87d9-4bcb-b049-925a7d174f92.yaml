@@ -151,13 +151,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 6ab7462d-c8f9-4b02-abee-88859457f060 # Text: Bio
-            instructions: null
+            fieldUid: a06fd4ab-835d-4487-ab3d-7db24b84ace8 # Text: Body
+            instructions: 'Brief bio'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f94f3161-b3c9-40b1-acdb-523b44293f7d
+            uid: 30162140-1fa2-4c06-873e-c39573555373
             userCondition: null
             warning: null
             width: 100

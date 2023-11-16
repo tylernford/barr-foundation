@@ -53,6 +53,30 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: null
+            label: 'Text: Caption'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dff91603-f514-4d52-90ee-3b023e067d7b
+            userCondition: null
+            warning: null
+            width: 75
+          -
+            elementCondition: null
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
+            instructions: null
+            label: 'Text: Byline'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e896e17-d5ff-4107-acbb-c3438e7a9de0
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 9b2b9485-b122-48d6-b088-ea3019e0827b
         userCondition: null

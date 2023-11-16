@@ -1,0 +1,60 @@
+<style>
+.adminTip-heading {
+    font-size: 2.5em;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 0.5em;
+}
+
+.adminTip-subheading {
+    font-size: 1.8em;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 0.5em;
+}
+
+.adminTip-label {
+    color: #596673;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.adminTip-box {
+  background: #f3f7fc;
+  margin-top: 0;
+  padding: 1em;
+  border-radius: 10px;
+}
+.adminTip-box--details {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.adminTip-desc {
+    margin-top: 0;
+}
+.adminTip-list {
+    margin-left: 2em;
+    list-style-type: disc;
+}
+.adminTip-editor {
+    > ul {
+        margin-left: 2em;
+        font-size: 1.1em;
+        line-height: 2;
+        list-style-type: disc;
+    }
+}
+</style>
+
+<div>
+
+    {% set releaseList = element.builderChangelog.all()|reverse %}
+    
+    <h1 class="adminTip-heading">Release Notes</h1>
+    <div>
+    {% for release in releaseList %}
+        {% set changeType = release.tagsChangelogTypes|length ? release.tagsChangelogTypes.one().title : null %}
+        <h2 class="adminTip-subheading">{{ release.textVersion }} &ndash; {{ release.dateOnly|date('Y-m-d') }}{% if changeType %} ({{ changeType }}){% endif %}</h2>
+        <div class="adminTip-editor">
+            {{ release.textNotes }}
+        </div>
+    {% endfor %}
+    </div>
+</div>

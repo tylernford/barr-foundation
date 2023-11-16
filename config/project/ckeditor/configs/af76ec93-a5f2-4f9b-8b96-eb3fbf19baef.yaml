@@ -1,6 +1,6 @@
 headingLevels: false
 listPlugin: DocumentList
-name: 'Body: Paragraph'
+name: 'Text: Body Options'
 toolbar:
   - heading
   - '|'
@@ -9,3 +9,5 @@ toolbar:
   - bulletedList
   - numberedList
   - link
+  - '|'
+  - sourceEditing

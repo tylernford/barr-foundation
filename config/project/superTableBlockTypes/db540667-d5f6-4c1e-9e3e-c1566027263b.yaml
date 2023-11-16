@@ -1,4 +1,4 @@
-changedFieldIndicator: 661355858
+changedFieldIndicator: 916268792
 field: c954d828-974b-402e-92e2-3057b737e6ed # Menu
 fieldLayouts:
   336640d8-29bb-441a-a921-80dd18cfa576:
@@ -65,7 +65,7 @@ fields:
       customTextRequired: false
       defaultLinkName: entry
       defaultText: ''
-      enableAllLinkTypes: true
+      enableAllLinkTypes: false
       enableAriaLabel: false
       enableElementCache: false
       enableTitle: false
@@ -91,7 +91,7 @@ fields:
         entry:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: false
+          enabled: true
           sources: '*'
         site:
           enabled: false
@@ -103,7 +103,7 @@ fields:
         url:
           allowAliases: false
           disableValidation: false
-          enabled: false
+          enabled: true
         user:
           allowCrossSiteLink: false
           allowCustomQuery: false

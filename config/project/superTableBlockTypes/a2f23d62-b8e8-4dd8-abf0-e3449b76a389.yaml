@@ -112,7 +112,7 @@ fields:
       showSiteMenu: true
       sources:
         - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-        - 'section:1982f1d0-3929-4ddf-b0e0-76d519d91f39' # Program Areas
+        - 'section:1982f1d0-3929-4ddf-b0e0-76d519d91f39'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
@@ -211,7 +211,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true

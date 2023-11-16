@@ -1,4 +1,4 @@
-changedFieldIndicator: 1063166375
+changedFieldIndicator: 779542884
 field: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
 fieldLayouts:
   a0985cb2-1edc-4df9-8a63-a76f6b1a65d1:
@@ -36,28 +36,19 @@ fieldLayouts:
 fields:
   2d85d472-1f81-45ee-9294-8af027894cdd: # Action
     columnSuffix: uwpvtvxc
-    contentColumnType: string
+    contentColumnType: boolean
     fieldGroup: null
     handle: actionJump
-    instructions: 'By default, the Page Opener will include a link that will "jump" the visitor to this section. Uncheck the box to hide the link.'
+    instructions: 'By default, the Page Opener will include a link that will "jump" the visitor to this section. Toggle off the lightswitch to hide the link.'
     name: Action
     searchable: true
     settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - 'Create jump link'
-            -
-              - value
-              - isJump
-            -
-              - default
-              - '1'
+      default: true
+      offLabel: null
+      onLabel: null
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Checkboxes
+    type: craft\fields\Lightswitch
   ed00904c-55f9-4940-bedd-8162c46d1d36: # Heading
     columnSuffix: mbjmsdlc
     contentColumnType: text

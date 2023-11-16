@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 9b53aeb1-a2da-4cc3-8309-f9194162e2bd # Page Builder: Careers
+fieldLayouts:
+  95069f24-4baa-4d3c-adaa-b77ab7932b8c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: db600239-720e-403b-b894-d8ef369fc205 # Highlight: Quote
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba441bbe-a82f-4fc8-b97d-179e65443f1e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Highlight
+        uid: b86162a2-93bf-4668-83ab-4f0ccb37af9e
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: quotes
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Quotes
+sortOrder: 9
+topLevel: false

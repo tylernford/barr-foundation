@@ -1,0 +1,123 @@
+fieldLayouts:
+  c1c384b4-2fc6-475f-979d-d7ebb5b483c0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2d3b9b67-7d5d-4058-9932-7bc05f8b4ded
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 3f451a35-1a39-48cb-8006-72ceac562029
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 2f4e1404-f866-4cdc-924e-3c5930d9dd76 # Opener: Landing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 642b4921-0b2f-4338-91ea-9ac91be1e011
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d586f2f9-f4b8-4f64-a0d1-63306a5f129a
+            userCondition: null
+          -
+            elementCondition: null
+            template: control-panel/_opener-landing.html
+            type: craft\fieldlayoutelements\Template
+            uid: ca1422aa-d5fc-4d38-8e63-2a99a603797c
+            userCondition: null
+            width: 100
+        name: Opener
+        uid: 6e9730d7-f117-4332-a781-92ceaf9810e2
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\SlugConditionRule
+                  operator: '='
+                  uid: 4d69344e-d912-4167-b1a1-7c69ff4c8fe7
+                  value: blog
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: d5da255e-0a3f-4eb8-817c-97ee72286b6c # Carousel: Blog Posts
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5e855132-96a7-46cd-a112-6b552bd16bd8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\SlugConditionRule
+                  operator: '='
+                  uid: ba791f56-79d7-4f31-8310-59c0d26e690a
+                  value: research-initiative
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: d07afb10-c7ee-417d-8969-44060e0f3bc6 # Carousel: Research
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e699eca9-de1c-4178-8978-1701de80cba2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8e3500d3-bbdb-4e1f-a5e8-87925e6e73bd
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 5a3ec662-f801-451b-97a6-8d2d40b08a5d # News + Insights
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: newsInsights
+name: 'News + Insights'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
+    enabledByDefault: true
+    hasUrls: true
+    template: news-insights/_entry
+    uriFormat: 'news-insights/{slug}'
+structure:
+  maxLevels: null
+  uid: 7f9b1aa8-c43b-4c19-85a2-cb68c471d342
+type: structure

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24c9b1488e96cd3f96e5fa01263ba2c5",
+    "content-hash": "d03b71abfa99009c146aa2084727c68a",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4762,15 +4762,24 @@
         },
         {
             "name": "react/promise",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/c86753c76fd3be465d93b308f18d189f01a22be4",
-                "reference": "c86753c76fd3be465d93b308f18d189f01a22be4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
+                "reference": "e563d55d1641de1dea9f5e84f3cccc66d2bfe02c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "1.10.39 || 1.4.10",
+                "phpunit/phpunit": "^9.6 || ^7.5"
             },
             "type": "library",
             "autoload": {
@@ -4781,6 +4790,7 @@
                     "React\\Promise\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4811,7 +4821,17 @@
                 "promise",
                 "promises"
             ],
-            "time": "2023-07-11T16:12:49+00:00"
+            "support": {
+                "issues": "https://github.com/reactphp/promise/issues",
+                "source": "https://github.com/reactphp/promise/tree/v3.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/reactphp",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-11-16T16:21:57+00:00"
         },
         {
             "name": "rize/uri-template",
@@ -6992,11 +7012,11 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.30",
+            "version": "v5.4.31",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/c6980e82a6656f6ebfabfd82f7585794cb122554",
-                "reference": "c6980e82a6656f6ebfabfd82f7585794cb122554",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f387675d7f5fc4231f7554baa70681f222f73563",
+                "reference": "f387675d7f5fc4231f7554baa70681f222f73563",
                 "shasum": ""
             },
             "require": {
@@ -7037,7 +7057,7 @@
             ],
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
-            "time": "2023-10-27T18:36:14+00:00"
+            "time": "2023-11-03T14:41:28+00:00"
         },
         {
             "name": "theiconic/name-parser",
@@ -7335,6 +7355,60 @@
             ],
             "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
             "time": "2023-09-19T22:50:02+00:00"
+        },
+        {
+            "name": "verbb/cp-nav",
+            "version": "4.0.11",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/cp-nav/zipball/4be8544f2ce83fb9601fe160513abee136924db4",
+                "reference": "4be8544f2ce83fb9601fe160513abee136924db4",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0",
+                "php": "^8.0.2",
+                "verbb/base": "^2.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Control Panel Nav",
+                "handle": "cp-nav",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/cp-nav/craft-4/CHANGELOG.md",
+                "class": "verbb\\cpnav\\CpNav"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\cpnav\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Manage the Craft Control Panel navigation.",
+            "keywords": [
+                "cms",
+                "control panel nav",
+                "control panel navigation",
+                "cp nav",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/cp-nav/issues?state=open",
+                "source": "https://github.com/verbb/cp-nav",
+                "docs": "https://github.com/verbb/cp-nav",
+                "rss": "https://github.com/verbb/cp-nav/commits/v2.atom"
+            },
+            "time": "2023-10-25T00:26:33+00:00"
         },
         {
             "name": "verbb/field-manager",

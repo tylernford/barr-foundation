@@ -1,4 +1,4 @@
-changedFieldIndicator: 1627537790
+changedFieldIndicator: 1690642282
 field: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
 fieldLayouts:
   8d55e71b-cdd7-4641-befb-d61027c0e790:
@@ -87,7 +87,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: textLabel
-    instructions: null
+    instructions: (Optional)
     name: 'Text: Label'
     searchable: true
     settings:
@@ -236,7 +236,7 @@ fields:
               - left
             -
               - default
-              - ''
+              - '1'
         -
           __assoc__:
             -
@@ -260,17 +260,21 @@ fields:
     name: 'Text: Heading'
     searchable: true
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: c5338cc4-1c12-47a4-bf3b-ecd79f2164e3 # Text: Italic
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: craft\ckeditor\Field
   e7ad36b6-173f-4a91-aab3-c5472e6d0f20: # Text: Supporting
     columnSuffix: xbpwydru
     contentColumnType: text
@@ -282,7 +286,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true

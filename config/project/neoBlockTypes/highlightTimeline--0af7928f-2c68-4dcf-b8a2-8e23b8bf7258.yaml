@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: c1cb6131-3658-40a2-978b-b2583e21f29d # Page Builder: Learning
+fieldLayouts:
+  fec254e8-627b-4612-a326-406172733507:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0b12ba92-d669-4feb-9241-037faa9b352b # Highlight: Multi-Event Timeline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b0f099a2-fc8d-4303-9390-1dc6a18b3eef
+            userCondition: null
+            warning: null
+            width: 100
+        name: Highlight
+        uid: 254890aa-cfe0-457a-8dab-a04f67036f35
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: highlightTimeline
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Highlight: Timeline'
+sortOrder: 3
+topLevel: false

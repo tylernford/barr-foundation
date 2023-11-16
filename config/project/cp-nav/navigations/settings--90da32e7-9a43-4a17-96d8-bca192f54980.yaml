@@ -1,0 +1,17 @@
+currLabel: Settings
+customIcon: null
+enabled: true
+handle: settings
+icon: null
+layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default
+level: 2
+newWindow: false
+parent: 102b1751-2b64-4974-b41e-fa6e4bfa24e2
+prevLabel: Settings
+prevLevel: 2
+prevParent: 102b1751-2b64-4974-b41e-fa6e4bfa24e2
+prevUrl: formie/settings
+sortOrder: 10
+subnavBehaviour: null
+type: plugin
+url: formie/settings

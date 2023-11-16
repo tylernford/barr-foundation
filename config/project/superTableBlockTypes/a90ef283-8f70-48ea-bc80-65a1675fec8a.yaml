@@ -1,5 +1,5 @@
 changedFieldIndicator: 953652740
-field: 6ab7462d-c8f9-4b02-abee-88859457f060 # Text: Bio
+field: 6ab7462d-c8f9-4b02-abee-88859457f060
 fieldLayouts:
   c2b318a1-a9d0-48ff-8e21-e6d7de266e5e:
     tabs:
@@ -45,7 +45,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Simple: Link
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true

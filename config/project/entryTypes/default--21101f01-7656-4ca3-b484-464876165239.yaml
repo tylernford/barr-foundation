@@ -1,0 +1,130 @@
+fieldLayouts:
+  0f79948c-8488-4694-a0a1-aa563f84a3b8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ecea088f-3e3e-4ca2-b9d1-49ba3434436a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 094004e8-9d7e-4dd0-9c74-d5bcc484f0c8
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 2f4e1404-f866-4cdc-924e-3c5930d9dd76 # Opener: Landing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc64f841-b471-4ad1-917b-32efb60a4861
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 6213b2b2-9198-4c08-8b55-40aeaaeeb642
+            userCondition: null
+          -
+            elementCondition: null
+            template: control-panel/_opener-landing.html
+            type: craft\fieldlayoutelements\Template
+            uid: c16f7f2c-0d11-4efe-bcd7-cb17d3ac87db
+            userCondition: null
+            width: 100
+        name: Opener
+        uid: ecf46d2c-aa32-4bf5-8e6e-2ac3d0b7e906
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            template: control-panel/_content-about.html
+            type: craft\fieldlayoutelements\Template
+            uid: a564b79c-2a54-4107-a78c-a1cde98617ec
+            userCondition: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\SlugConditionRule
+                  operator: '='
+                  uid: e57ef610-c515-493d-979f-75fe36a97ba2
+                  value: people
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8fc48219-9299-4bb8-abd7-2cf79f00fc8a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\SlugConditionRule
+                  operator: '='
+                  uid: 04c5a05c-4e05-40e0-a9bb-77d799771a1b
+                  value: careers
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 9b53aeb1-a2da-4cc3-8309-f9194162e2bd # Page Builder: Careers
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 12380e02-603c-4327-9725-d1f8047b0d47
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6db8c713-2874-4655-9da6-5030fe3e6b04
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: f8db332e-6a63-4211-95bf-942e9a3a40ce # About Us
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

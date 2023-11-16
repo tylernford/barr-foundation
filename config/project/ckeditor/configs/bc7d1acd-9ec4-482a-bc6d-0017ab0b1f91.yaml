@@ -1,9 +1,11 @@
 headingLevels: false
 listPlugin: DocumentList
-name: 'Simple: Link'
+name: 'Text: Basic'
 toolbar:
   - heading
   - '|'
   - bold
   - italic
   - link
+  - '|'
+  - sourceEditing

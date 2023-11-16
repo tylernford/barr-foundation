@@ -37,7 +37,7 @@ fields:
       customTextRequired: false
       defaultLinkName: entry
       defaultText: ''
-      enableAllLinkTypes: true
+      enableAllLinkTypes: false
       enableAriaLabel: false
       enableElementCache: false
       enableTitle: false
@@ -63,7 +63,7 @@ fields:
         entry:
           allowCrossSiteLink: false
           allowCustomQuery: false
-          enabled: false
+          enabled: true
           sources: '*'
         site:
           enabled: false
@@ -75,7 +75,7 @@ fields:
         url:
           allowAliases: false
           disableValidation: false
-          enabled: false
+          enabled: true
         user:
           allowCrossSiteLink: false
           allowCustomQuery: false

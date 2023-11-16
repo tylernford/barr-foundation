@@ -38,7 +38,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 29942c87-1bd3-4690-ae98-ba104b5589a2 # Card: Post
-            instructions: null
+            instructions: "DEV NOTE: \r\nMight want to flatten this, if we're doing a migration."
             label: null
             required: false
             tip: null

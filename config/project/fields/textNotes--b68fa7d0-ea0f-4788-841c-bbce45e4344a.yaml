@@ -1,0 +1,23 @@
+columnSuffix: zgangeeo
+contentColumnType: text
+fieldGroup: 9bdf93bb-bbb6-4791-a90b-ee8f56915270 # Developer
+handle: textNotes
+instructions: null
+name: 'Text: Notes'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: 21dad0a7-2d67-433c-b04f-da4773293880 # Developer: Release
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

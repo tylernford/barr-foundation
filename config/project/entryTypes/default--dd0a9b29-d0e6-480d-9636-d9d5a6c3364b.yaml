@@ -1,0 +1,46 @@
+fieldLayouts:
+  b1a47395-4125-4159-8a71-80a488629572:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5526f1ea-c809-4c13-a873-6039b307617f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: befc14d8-b00c-4a1c-9526-a1e377191730
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 7ab5ee46-bcab-45a8-8db3-a8737add580a # Jobs Board
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

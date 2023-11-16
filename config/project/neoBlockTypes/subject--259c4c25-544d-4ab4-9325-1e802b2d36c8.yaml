@@ -1,0 +1,63 @@
+childBlocks:
+  - cardSimple
+conditions: null
+description: ''
+enabled: true
+field: 7c6a3d0e-02a5-45bf-9ac7-93dc9d4d0a12 # Page Builder: Completed Grantmaking
+fieldLayouts:
+  cbb4f6b9-6366-4251-9440-5cff0e10e7f4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
+            instructions: 'The label that represents this Subject. If this is flagged as a bookmark below, this text will display within the Page Opener, e.g. "Adapting Boldly" or "Spanning Sectors."'
+            label: 'Text: Bookmark'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45eaf462-0368-49e1-82e7-f23ad96e5a66
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dc653bae-d5fa-4a97-b051-febbf34fdfed # Flag: Bookmark
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e04bc84-852c-4b3f-be00-a489603a5d67
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 646b219f-a662-4941-9061-ed50b592dcb0
+            userCondition: null
+          -
+            elementCondition: null
+            type: benf\neo\fieldlayoutelements\ChildBlocksUiElement
+            uid: ad50e06e-9de8-442e-8884-d69707961a3a
+            userCondition: null
+        name: Subject
+        uid: 764bbefe-a6a5-4c81-85e5-9f0b934c8299
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: subject
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Subject
+sortOrder: 1
+topLevel: true

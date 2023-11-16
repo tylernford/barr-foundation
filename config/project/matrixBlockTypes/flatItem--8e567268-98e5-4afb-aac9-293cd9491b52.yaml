@@ -118,7 +118,7 @@ fields:
       customTextRequired: false
       defaultLinkName: url
       defaultText: ''
-      enableAllLinkTypes: true
+      enableAllLinkTypes: false
       enableAriaLabel: false
       enableElementCache: false
       enableTitle: false
@@ -156,7 +156,7 @@ fields:
         url:
           allowAliases: false
           disableValidation: false
-          enabled: false
+          enabled: true
         user:
           allowCrossSiteLink: false
           allowCustomQuery: false

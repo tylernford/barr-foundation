@@ -19,13 +19,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 37c0c73d-91bf-4c51-a716-25153c3f3366 # Text: Tab Label
+            fieldUid: 7d597c49-d3fd-4135-b2df-2710ea3dc872 # Entry: Program Area
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d6c46507-342c-4916-a13b-b2a2ec7c45cd
+            uid: 1d62e7f8-530c-460a-90f9-b49ea79ab652
             userCondition: null
             warning: null
             width: 100
@@ -50,18 +50,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7379898b-a5c9-403e-a3d7-3bd60e3332a5
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: c5d69130-29fd-4e61-bada-77348bba96bf # Action: Entry
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9ad59245-ca77-4dc2-a0c4-b1eaad3bc4af
             userCondition: null
             warning: null
             width: 100
@@ -92,7 +80,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: d7ab12fb-563d-4010-b197-b35b577d91c7 # Simple: Basic
+      ckeConfig: d7ab12fb-563d-4010-b197-b35b577d91c7 # Text: Bold + Italic
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: false
@@ -105,12 +93,48 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\ckeditor\Field
+  7d597c49-d3fd-4135-b2df-2710ea3dc872: # Entry: Program Area
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryProgramArea
+    instructions: 'Select the Program Area to feature in this tab. The title of this Program Area page will be the tab label, and the action button will link to the Program Area page selected.'
+    name: 'Entry: Program Area'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: 'Add program area'
+      showSiteMenu: true
+      sources:
+        - 'section:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
   30a0b344-d9b4-451b-9c8d-4fba8a91a75f: # Flag: Primary
     columnSuffix: mnwjchsr
     contentColumnType: boolean
     fieldGroup: null
     handle: flagPrimary
-    instructions: 'Designate this program area as a primary tab; primary tabs will display their labels in larger text.'
+    instructions: 'Designate this Program Area as a primary tab; primary tabs will display their labels in larger text.'
     name: 'Flag: Primary'
     searchable: false
     settings:
@@ -120,32 +144,12 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  37c0c73d-91bf-4c51-a716-25153c3f3366: # Text: Tab Label
-    columnSuffix: kogqchcv
-    contentColumnType: text
-    fieldGroup: null
-    handle: textLabel
-    instructions: null
-    name: 'Text: Tab Label'
-    searchable: true
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
   92b819ef-229c-4a42-beff-bc6edc8a0f66: # Asset: Image
     columnSuffix: gqaahnvv
     contentColumnType: string
     fieldGroup: null
     handle: assetImage
-    instructions: null
+    instructions: 'Add a feature image for this Program Area.'
     name: 'Asset: Image'
     searchable: true
     settings:
@@ -195,7 +199,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: entryNews
-    instructions: '(Optional) Cite a Blog or Newsroom post about this program area.'
+    instructions: '(Optional) Cite a Blog or Newsroom post about this Program Area.'
     name: 'Entry: News'
     searchable: true
     settings:
@@ -227,69 +231,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
-  c5d69130-29fd-4e61-bada-77348bba96bf: # Action: Entry
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: actionLink
-    instructions: 'Link to the program area landing page.'
-    name: 'Action: Entry'
-    searchable: false
-    settings:
-      allowCustomText: true
-      allowTarget: true
-      autoNoReferrer: false
-      customTextMaxLength: 0
-      customTextRequired: false
-      defaultLinkName: entry
-      defaultText: ''
-      enableAllLinkTypes: false
-      enableAriaLabel: false
-      enableElementCache: false
-      enableTitle: false
-      typeSettings:
-        asset:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        category:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        custom:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        email:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        entry:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: true
-          sources: '*'
-        site:
-          enabled: false
-          sites: '*'
-        tel:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        url:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        user:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-    translationKeyFormat: null
-    translationMethod: none
-    type: lenz\linkfield\fields\LinkField
 handle: item
 name: Program
 sortOrder: 1
