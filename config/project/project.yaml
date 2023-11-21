@@ -1,4 +1,4 @@
-dateModified: 1700587683
+dateModified: 1700605186
 elementSources:
   craft\elements\Entry:
     -
@@ -334,6 +334,7 @@ meta:
     0e617ac1-3f0e-4444-b08b-ad43e7448faa: Menu # Menu
     0f725806-1cbe-40c2-91a6-cfc9a70879c2: 'Text: Heading' # Text: Heading
     1a788826-fcfe-45be-b8ec-68bafc7d3790: 'Carousel: Quotes' # Carousel: Quotes
+    1af4f756-5ef3-465d-8a9a-ba0cf78e19f3: Heading # Heading
     1bf5f3e0-2b61-48a7-85fb-6a6e1ddae091: Homepage # Homepage
     1cb4612c-38cd-4b27-809d-fd543e6b94cf: 'Flag: Feature' # Flag: Feature
     01ed592e-1014-45e1-8104-59aa9110f849: Media # Media
@@ -436,7 +437,7 @@ meta:
     48aa8bac-f5e1-487b-a042-3dca5b50c89c: Image # Image
     48de2574-ea84-4b60-b7e2-2e3a4a515fa2: Miscellaneous # Miscellaneous
     50ac893d-c55d-48d8-a3e9-08de620039ab: 'Text: Version' # Text: Version
-    54f700ed-cca9-47c8-b73f-71ee87ddc640: 'Highlight: Timeline | Single' # Highlight: Timeline | Single
+    54f700ed-cca9-47c8-b73f-71ee87ddc640: 'Timeline: Single' # Timeline: Single
     55d6aaf4-ac71-4f0e-9f25-f00a07154e2b: Paragraph # Paragraph
     57a475da-bd34-46ee-8693-6055079fb616: 'Image(s) or Video(s)' # Image(s) or Video(s)
     57f1f03a-6ce0-4203-8800-c42f4ea916fa: Default # Default
@@ -488,7 +489,7 @@ meta:
     962d1b17-ec75-47e8-a297-39b0b971c535: Item # Item
     1610d4b7-514a-4e32-9da1-5faae34038d0: __blank__ # __blank__
     2025f138-0b54-45d6-9c52-4ec1ecc89039: 'Style: Alignment' # Style: Alignment
-    2247c8c0-1669-4ccf-8dd8-ee7002a4fd00: 'Highlight: Timeline | Multiple' # Highlight: Timeline | Multiple
+    2247c8c0-1669-4ccf-8dd8-ee7002a4fd00: 'Timeline: Multiple' # Timeline: Multiple
     2393b91e-3d52-4e68-aebf-3896dd26c9de: Heading # Heading
     2510ca6f-7c5e-4ccd-a8db-079f0fe6244d: 'Kitchen Sink' # Kitchen Sink
     5680cf36-ea78-4033-8638-c664068383d9: 'Card: Grants Database' # Card: Grants Database
@@ -527,6 +528,7 @@ meta:
     90045d2b-740a-4664-be15-670b6497ced6: Target # Target
     125122fd-5de1-4d94-93a2-ac947d442451: 'Text: Last Name' # Text: Last Name
     190061ed-5acd-49bb-874e-8908f44a8608: 'Media: Audio or Video' # Media: Audio or Video
+    363807ca-59e9-44be-88f0-344049c9886d: __blank__ # __blank__
     0394538d-48b7-4ac8-bcd6-5866934254f1: 'Card: Grantees' # Card: Grantees
     453424c1-d719-473d-859b-b57b862aa56c: 'Highlight: Timeline (Multiple)' # Highlight: Timeline (Multiple)
     526592df-8835-48ec-80a2-b149d57b3e57: Carousels # Carousels

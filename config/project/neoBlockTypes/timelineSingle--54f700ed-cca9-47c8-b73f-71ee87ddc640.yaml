@@ -4,29 +4,29 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  7260512f-b1e8-49cb-8355-e25b3afc3213:
+  2ac33da2-4160-439b-ac76-0fd2a8f0b8ee:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0b12ba92-d669-4feb-9241-037faa9b352b # Highlight: Multi-Event Timeline
+            fieldUid: ef35002b-b3dd-4be9-b1a6-9b34dd341c37 # Highlight: Single Event Timeline
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ef247274-dde7-4078-8e0a-d2683db095a3
+            uid: f57fa6d4-2d86-4600-a63d-9c03a4557d35
             userCondition: null
             warning: null
             width: 100
         name: Highlight
-        uid: 1c75fb36-ccaf-4837-b811-c4f4caaf48a2
+        uid: 24f95366-a335-41e1-b3d2-7662aa0b456b
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: highlightTimelineMultiple
+handle: timelineSingle
 icon: null
 ignorePermissions: true
 maxBlocks: 0
@@ -35,6 +35,6 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Highlight: Timeline | Multiple'
-sortOrder: 13
+name: 'Timeline: Single'
+sortOrder: 12
 topLevel: false
