@@ -9,8 +9,8 @@ childBlocks:
   - carouselQuotes
   - highlightQuote
   - highlightStats
-  - highlightTimelineSingle
-  - highlightTimelineMultiple
+  - timelineSingle
+  - timelineMultiple
   - textAccordion
   - textBody
 conditions: null
@@ -18,7 +18,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  0c7c0fba-b736-45ab-be35-b89794fa6018:
+  ed93b3a0-81f4-4f27-acb3-9297dbf678ee:
     tabs:
       -
         elementCondition: null
