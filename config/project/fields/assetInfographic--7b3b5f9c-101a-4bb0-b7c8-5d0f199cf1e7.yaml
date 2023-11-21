@@ -1,0 +1,37 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: b6fc45fa-5f55-4100-ab79-5b7379a538ec # Assets
+handle: assetInfographic
+instructions: '(Optional) Select an infographic, toggle the style button to set its width.'
+name: 'Asset: Infographic'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1470191380
+  columns:
+    __assoc__:
+      -
+        - ffd93142-6600-426b-8c4f-a5a5f9d318d9 # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - cfb7f673-e726-4e10-b627-eb563177ea3d # Style: Layout
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_assetinfographic}}'
+  fieldLayout: matrix
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

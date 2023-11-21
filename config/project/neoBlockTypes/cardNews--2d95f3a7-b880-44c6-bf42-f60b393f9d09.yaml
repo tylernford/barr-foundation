@@ -2,39 +2,39 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  e8367de0-eed3-4763-8427-7e5520556704:
+  018ca594-4817-4c7f-8fd3-26619835c127:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
-            instructions: 'Add a card about the Grantmaking Process. Text should be aligned to the right.'
+            fieldUid: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News / Media
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fe41ffde-90e8-4d47-9bed-895c68d66051
+            uid: 60555605-2bab-4a9e-b717-b956a4b5e717
             userCondition: null
             warning: null
             width: 100
         name: Cards
-        uid: dfb71758-bd15-4525-b65f-23c9a24250c8
+        uid: aee9201b-56ea-4ef5-b735-db0e1361aa6c
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardGrantmaking
+handle: cardNews
 icon: null
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: Grantmaking'
-sortOrder: 3
-topLevel: true
+name: 'Cards: News'
+sortOrder: 4
+topLevel: false

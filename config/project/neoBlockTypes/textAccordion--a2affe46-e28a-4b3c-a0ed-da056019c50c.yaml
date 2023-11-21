@@ -2,39 +2,39 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  e8367de0-eed3-4763-8427-7e5520556704:
+  7c341490-cede-433e-8eff-75602d53aeb7:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
-            instructions: 'Add a card about the Grantmaking Process. Text should be aligned to the right.'
+            fieldUid: 8231b9f6-69c4-4c30-b883-eaaabbdf19fc # Block: Accordion
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fe41ffde-90e8-4d47-9bed-895c68d66051
+            uid: 75b73759-81a2-46d4-87e0-01f15fb70b52
             userCondition: null
             warning: null
             width: 100
-        name: Cards
-        uid: dfb71758-bd15-4525-b65f-23c9a24250c8
+        name: Text
+        uid: 1fc76ea0-336c-40c0-be5a-909cff48e827
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardGrantmaking
+handle: textAccordion
 icon: null
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: Grantmaking'
-sortOrder: 3
-topLevel: true
+name: 'Text: Accordion'
+sortOrder: 14
+topLevel: false

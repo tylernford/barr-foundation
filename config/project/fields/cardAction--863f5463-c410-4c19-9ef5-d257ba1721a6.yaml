@@ -7,7 +7,7 @@ name: 'Card: Action'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1027275064
+  changedFieldIndicator: 1124496049
   columns:
     __assoc__:
       -
@@ -24,8 +24,15 @@ settings:
             -
               - width
               - ''
+      -
+        - 8e3c7135-1b3f-4b9c-a098-11afc16dafdb # Style: Alignment
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_cardaction}}'
-  fieldLayout: matrix
+  fieldLayout: row
   maxRows: null
   minRows: null
   propagationKeyFormat: null

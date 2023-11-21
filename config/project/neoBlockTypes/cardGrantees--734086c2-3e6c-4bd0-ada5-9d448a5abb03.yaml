@@ -2,63 +2,63 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  968416af-175f-48c7-bb1a-a23e050253b0:
+  0b8e86a5-3837-45e9-995f-a55b10859dc3:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: 'e.g. News'
+            fieldUid: 1cb4612c-38cd-4b27-809d-fd543e6b94cf # Flag: Feature
+            instructions: 'Toggle on to flag the first grantee card listed below as "featured." The featured grantee card will display larger than its siblings.'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 527f9dc4-5d8d-40e8-bde7-4f80c0e9bc06
+            uid: 623029ee-c616-4b8d-85e5-3d7ba2727c75
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News / Media
+            fieldUid: b89b9ceb-1d0c-48ec-a0d7-0c392eb011af # Entries: Grantee
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 46fa81f9-a615-41f7-a029-76a8cb34c442
+            uid: dd023776-8036-4b42-9e4f-541734dabf6c
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
-            instructions: 'Add supporting text to urge visitors to checkout the Newsroom. Text should be center-aligned.'
+            instructions: 'Add supporting text and call-to-action for these Grantee Cards.'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 49fde218-c868-4827-8c9e-0942fa19e6c5
+            uid: 1ed6cf4e-2014-4731-a5d4-ec367e55a9f1
             userCondition: null
             warning: null
             width: 100
         name: Cards
-        uid: 06cb5c98-8c00-42e0-87ec-112989e02361
+        uid: 200727aa-d6c2-4b2f-884d-642691e28351
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardNews
+handle: cardGrantees
 icon: null
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: News'
-sortOrder: 5
-topLevel: true
+name: 'Cards: Grantees'
+sortOrder: 3
+topLevel: false

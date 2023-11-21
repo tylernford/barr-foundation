@@ -2,39 +2,39 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  e8367de0-eed3-4763-8427-7e5520556704:
+  70db6c9b-521e-4ddc-a1cc-5ad7ee15568a:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
-            instructions: 'Add a card about the Grantmaking Process. Text should be aligned to the right.'
+            fieldUid: 918fd486-3aea-41b5-bdaa-88f4114147e7 # Carousel: Grantees
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fe41ffde-90e8-4d47-9bed-895c68d66051
+            uid: 0f2027e0-7373-4a52-8708-a477031d96e7
             userCondition: null
             warning: null
             width: 100
-        name: Cards
-        uid: dfb71758-bd15-4525-b65f-23c9a24250c8
+        name: Carousel
+        uid: e7b27e48-6e82-423e-9687-ad67cda854b8
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardGrantmaking
+handle: carouselGrantees
 icon: null
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: Grantmaking'
-sortOrder: 3
-topLevel: true
+name: 'Carousel: Grantees'
+sortOrder: 8
+topLevel: false
