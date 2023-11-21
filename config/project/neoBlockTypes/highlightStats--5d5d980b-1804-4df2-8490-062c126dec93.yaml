@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  968416af-175f-48c7-bb1a-a23e050253b0:
+  78dc9298-bf89-46a9-9e63-b4658e86b078:
     tabs:
       -
         elementCondition: null
@@ -12,45 +12,57 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: 'e.g. News'
+            instructions: 'e.g. Learning & Evaluation'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 527f9dc4-5d8d-40e8-bde7-4f80c0e9bc06
+            uid: e3a81b10-0ce7-4dff-8bfb-9e758409d07d
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News / Media
+            fieldUid: 9e65ef79-1f80-4724-997d-ea1035b737c7 # Highlight: Stats
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 46fa81f9-a615-41f7-a029-76a8cb34c442
+            uid: 31bdc5ba-0903-4c90-bbc9-9ccc282ff379
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Rich (+Link)
+            instructions: '(Optional) Cite a source for the statistics'
+            label: 'Text: Caption'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7497c4ee-1539-4b86-b3aa-1633b9ed7d5a
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
-            instructions: 'Add supporting text to urge visitors to checkout the Newsroom. Text should be center-aligned.'
+            instructions: 'Add supporting text urging visitors to take relevant action; for example, prompt them to check out the Learnings & Evaluation page. Text should be right-aligned.'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 49fde218-c868-4827-8c9e-0942fa19e6c5
+            uid: 55380713-a314-4a46-9908-64f489fdfa5a
             userCondition: null
             warning: null
             width: 100
-        name: Cards
-        uid: 06cb5c98-8c00-42e0-87ec-112989e02361
+        name: Stat
+        uid: a033d165-ffc4-4906-b263-ff1452172b28
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardNews
+handle: highlightStats
 icon: null
 ignorePermissions: true
 maxBlocks: 1
@@ -59,6 +71,6 @@ maxSiblingBlocks: 0
 minBlocks: 1
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: News'
-sortOrder: 5
+name: 'Highlight: Stats'
+sortOrder: 4
 topLevel: true

@@ -1,45 +1,46 @@
-field: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
+changedFieldIndicator: 2059971512
+field: 7b3b5f9c-101a-4bb0-b7c8-5d0f199cf1e7 # Asset: Infographic
 fieldLayouts:
-  a4dca716-77fc-4fd9-b6ac-bb572a489318:
+  b49bc0ba-f2b5-4c6f-9fac-7d7de291dc75:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 57a475da-bd34-46ee-8693-6055079fb616 # Image(s) or Video(s)
+            fieldUid: ffd93142-6600-426b-8c4f-a5a5f9d318d9 # Asset: Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1a51490f-3a6a-4dbb-b3d3-ce456d5bb9b1
+            uid: fc2d5c53-4e72-4a08-b8e2-f2a9e66fa90f
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
-            fieldUid: 9b6c92eb-d488-4fd4-a3fe-e55aec516915 # Width
+            fieldUid: cfb7f673-e726-4e10-b627-eb563177ea3d # Style: Layout
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c56e0c00-fee7-4ba3-877d-c31b8748d703
+            uid: 86cdc9dc-5158-475d-ad23-b27ee05af9b0
             userCondition: null
             warning: null
-            width: 50
+            width: 100
         name: Content
-        uid: b0c86955-177e-4978-a9c5-837032ebdfc2
+        uid: 5bb58d6a-c0ff-48c9-99ed-a42a9b98115e
         userCondition: null
 fields:
-  9b6c92eb-d488-4fd4-a3fe-e55aec516915: # Width
-    columnSuffix: wdiacjnv
-    contentColumnType: string(3)
+  cfb7f673-e726-4e10-b627-eb563177ea3d: # Style: Layout
+    columnSuffix: enjdrlil
+    contentColumnType: string(9)
     fieldGroup: null
-    handle: width
-    instructions: "By default, if a single image or video is added, the asset will span 50% of the width in larger viewports (i.e. desktop). \r\n\r\nSelect the 100% option to display the image or video the full width of the viewport. (If 2 images or videos are added, both will display at 50% regardless)."
-    name: Width
+    handle: styleLayout
+    instructions: 'Defaults to full-width.'
+    name: 'Style: Layout'
     searchable: true
     settings:
       columnType: null
@@ -48,10 +49,10 @@ fields:
           __assoc__:
             -
               - label
-              - 50%
+              - 'Full Width'
             -
               - value
-              - '50'
+              - fullWidth
             -
               - default
               - '1'
@@ -59,38 +60,36 @@ fields:
           __assoc__:
             -
               - label
-              - 100%
+              - 'Half Width'
             -
               - value
-              - '100'
+              - halfWidth
             -
               - default
               - ''
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Dropdown
-  57a475da-bd34-46ee-8693-6055079fb616: # Image(s) or Video(s)
+    type: craft\fields\RadioButtons
+  ffd93142-6600-426b-8c4f-a5a5f9d318d9: # Asset: Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: asset
-    instructions: 'Select or upload up 1 or 2 image, video or audio assets. Be sure to double-click the thumbnail preview to add Alt Text, Caption and Byline.'
-    name: 'Image(s) or Video(s)'
+    handle: assetImage
+    instructions: 'Select an image. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
+    name: 'Asset: Image'
     searchable: true
     settings:
       allowSelfRelations: false
       allowSubfolders: false
       allowUploads: true
       allowedKinds:
-        - audio
         - image
-        - video
       branchLimit: null
       defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
-      maxRelations: 2
+      maxRelations: null
       minRelations: null
       previewMode: full
       restrictFiles: true
@@ -109,19 +108,15 @@ fields:
           -
             - class
             - craft\elements\conditions\assets\AssetCondition
-      selectionLabel: 'Add an image or video'
+      selectionLabel: 'Add an image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       sources:
         - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-        - 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
       targetSiteId: null
       validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-handle: media
-name: Media
-sortOrder: 3

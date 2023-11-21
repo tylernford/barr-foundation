@@ -1,15 +1,15 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 114e6010-b1c0-4faa-837c-c7bbe1e0daae # Page Builders
-handle: builderHome
-instructions: "Add each block. Drag & drop to rearrange. The recommended order is: \r\n\r\n1. Tabs: Program Finder \r\n2. Card: Grants (Grants Database)\r\n3. Card: Grants (Grantmaking Process) \r\n4. Highlight: Stats\r\n5. Entries: News\r\n6. Entries: Team"
-name: 'Page Builder: Home'
+handle: builderCommon
+instructions: "Add as many or as few Subject blocks as needed. Drag & drop to rearrange. Blocks will appear on the site in the order in which they appear here.\r\n\r\nIf adding a Prefooter block, it will always display below all Subjects."
+name: 'Page Builder: Common'
 searchable: true
 settings:
-  maxBlocks: 6
+  maxBlocks: null
   maxLevels: null
   maxTopBlocks: null
-  minBlocks: 6
+  minBlocks: null
   minLevels: null
   minTopBlocks: null
   propagationKeyFormat: null

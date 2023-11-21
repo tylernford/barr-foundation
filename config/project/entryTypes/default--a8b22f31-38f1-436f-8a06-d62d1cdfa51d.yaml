@@ -66,44 +66,14 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\elements\conditions\SlugConditionRule
-                  operator: '='
-                  uid: aa3cb23b-1a45-4f79-89c1-762c12e7f1b8
-                  value: completed-grantmaking
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 7c6a3d0e-02a5-45bf-9ac7-93dc9d4d0a12 # Page Builder: Completed Grantmaking
+            elementCondition: null
+            fieldUid: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a3662a8b-1f89-4245-b337-2d878e5a420c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\elements\conditions\SlugConditionRule
-                  operator: '='
-                  uid: 1b4b9ba9-1a32-4a17-a571-a7343361b67e
-                  value: process-inquiries
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 186d89de-97b1-4f8f-8d57-067c8383e385 # Page Builder: Grantmaking Process
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7791f167-6bf0-4988-a160-6db2bb2d800c
+            uid: 4974c8e6-5090-4dfb-8142-021cb82d1bbf
             userCondition: null
             warning: null
             width: 100

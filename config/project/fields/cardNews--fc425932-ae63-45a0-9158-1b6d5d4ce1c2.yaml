@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
+handle: cardNews
+instructions: 'Add up to 4 cards from Blog, Newsroom or Media sources. Drag & drop to rearrange.'
+name: 'Card: News / Media'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_cardnews}}'
+  maxBlocks: 4
+  minBlocks: 3
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

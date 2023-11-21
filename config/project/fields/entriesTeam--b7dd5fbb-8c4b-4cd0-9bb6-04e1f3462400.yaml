@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
 handle: entriesTeam
-instructions: 'Select exactly 2 or 3 team entries. Drag & drop to rearrange.'
+instructions: 'Select 4 team entries. Drag & drop to rearrange.'
 name: 'Entries: Team'
 searchable: true
 settings:
@@ -10,8 +10,8 @@ settings:
   branchLimit: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: 3
-  minRelations: 2
+  maxRelations: 4
+  minRelations: null
   selectionCondition:
     __assoc__:
       -
@@ -24,7 +24,7 @@ settings:
         - class
         - craft\elements\conditions\entries\EntryCondition
   selectionLabel: 'Add a card'
-  showSiteMenu: false
+  showSiteMenu: true
   sources:
     - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
   targetSiteId: null
