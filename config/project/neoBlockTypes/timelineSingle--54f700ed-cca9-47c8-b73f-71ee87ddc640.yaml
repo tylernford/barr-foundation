@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  2ac33da2-4160-439b-ac76-0fd2a8f0b8ee:
+  ce26c993-05d6-4eb0-a255-bf3a28d99f07:
     tabs:
       -
         elementCondition: null
@@ -35,6 +35,6 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Timeline: Single'
+name: 'Timeline: Single Event Per Milestone'
 sortOrder: 12
 topLevel: false
