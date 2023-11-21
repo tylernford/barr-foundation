@@ -4,11 +4,23 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  70db6c9b-521e-4ddc-a1cc-5ad7ee15568a:
+  72cfdab7-1a7b-4a13-ba2d-d26b4fbdd635:
     tabs:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5dea6687-d403-40f1-86cf-80ea38088e40
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: 918fd486-3aea-41b5-bdaa-88f4114147e7 # Carousel: Grantees
