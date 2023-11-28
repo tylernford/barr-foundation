@@ -38,7 +38,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: event
-    instructions: 'Select exactly 1 event to assign to this milestone. Be sure the event date matches the year above.'
+    instructions: 'Select exactly 1 event to assign to this milestone. Be sure the event date matches the year above. Once added to the milestone, you can double-click the event to view or edit the event details.'
     name: Event
     searchable: true
     settings:

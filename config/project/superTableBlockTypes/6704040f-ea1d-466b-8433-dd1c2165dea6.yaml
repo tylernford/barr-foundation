@@ -1,4 +1,4 @@
-changedFieldIndicator: 1690642282
+changedFieldIndicator: 1254791350
 field: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
 fieldLayouts:
   8d55e71b-cdd7-4641-befb-d61027c0e790:
@@ -8,7 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 0a924836-f3f5-452c-86dd-92df3cc0ad85 # Text: Label
+            fieldUid: 0a924836-f3f5-452c-86dd-92df3cc0ad85 # Text: Preheading
             instructions: null
             label: null
             required: false
@@ -82,13 +82,13 @@ fieldLayouts:
         uid: 3e4de886-931b-47c0-95c5-3441bf91d7ea
         userCondition: null
 fields:
-  0a924836-f3f5-452c-86dd-92df3cc0ad85: # Text: Label
+  0a924836-f3f5-452c-86dd-92df3cc0ad85: # Text: Preheading
     columnSuffix: nyqykijk
     contentColumnType: text
     fieldGroup: null
-    handle: textLabel
-    instructions: (Optional)
-    name: 'Text: Label'
+    handle: textPreheading
+    instructions: '(Optional) One- to two-word label that lends context to the heading. '
+    name: 'Text: Preheading'
     searchable: true
     settings:
       byteLimit: null
@@ -220,9 +220,9 @@ fields:
     contentColumnType: string(5)
     fieldGroup: null
     handle: styleAlignment
-    instructions: "(Optional) By default, text will display to the left of the image on larger viewports \r\n(i.e. desktop versus mobile browsers) "
+    instructions: '(Optional) By default, text will display to the left of the image on larger screens.'
     name: 'Style: Alignment'
-    searchable: false
+    searchable: true
     settings:
       columnType: null
       options:
@@ -250,13 +250,13 @@ fields:
               - ''
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\RadioButtons
+    type: craft\fields\Dropdown
   bf120ab6-d32a-4470-b0df-a0aa86834445: # Text: Heading
     columnSuffix: gtyozpdk
     contentColumnType: text
     fieldGroup: null
     handle: textHeading
-    instructions: null
+    instructions: 'A brief headline / few words to describe the item.'
     name: 'Text: Heading'
     searchable: true
     settings:
@@ -280,7 +280,7 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: textSupporting
-    instructions: null
+    instructions: 'One to three sentences that state the takeaway or introduce the item.'
     name: 'Text: Supporting'
     searchable: true
     settings:

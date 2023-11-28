@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: ddbc6c4c-07f1-4cd8-84d2-8b3064551e27 # __blank__
+            fieldUid: ddbc6c4c-07f1-4cd8-84d2-8b3064551e27 # Intro Text
             instructions: null
             label: null
             required: false
@@ -21,13 +21,13 @@ fieldLayouts:
         uid: 7e58f033-07e6-4cf7-a0ea-fb401e23ed2c
         userCondition: null
 fields:
-  ddbc6c4c-07f1-4cd8-84d2-8b3064551e27: # __blank__
+  ddbc6c4c-07f1-4cd8-84d2-8b3064551e27: # Intro Text
     columnSuffix: viabfypi
     contentColumnType: text
     fieldGroup: null
     handle: body
-    instructions: null
-    name: __blank__
+    instructions: 'Intro Text should precede the primary content, and displays in larger-sized type.'
+    name: 'Intro Text'
     searchable: true
     settings:
       availableTransforms: ''

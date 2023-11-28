@@ -23,7 +23,7 @@ settings:
       -
         - class
         - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: 'Add a card'
+  selectionLabel: 'Add a person'
   showSiteMenu: true
   sources:
     - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory

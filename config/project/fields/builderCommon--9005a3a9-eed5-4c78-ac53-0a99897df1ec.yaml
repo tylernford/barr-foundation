@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 114e6010-b1c0-4faa-837c-c7bbe1e0daae # Page Builders
 handle: builderCommon
-instructions: "Add as many or as few Subject blocks as needed. Drag & drop to rearrange. Blocks will appear on the site in the order in which they appear here.\r\n\r\nIf adding a Prefooter block, it will always display below all Subjects."
+instructions: "1. Add as many or as few Section Blocks as needed; drag & drop to rearrange. _Hint:_ To more easily rearrange Section Blocks, collapse the Section Block by clicking its cog icon (top right).\r\n2. Within each Section Block, add as many or as few Component Blocks as needed; drag & drop to rearrange. Component Blocks are also collapsible.\r\n\r\n_Section & Component Blocks will appear on the site in the order in which they appear here; however, if adding a Prefooter Block, it will always display below all Sections._\r\n\r\n_Don't forget to SAVE your work!_\r\n\r\n"
 name: 'Page Builder: Common'
 searchable: true
 settings:

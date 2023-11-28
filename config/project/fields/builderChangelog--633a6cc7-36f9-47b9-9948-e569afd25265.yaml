@@ -4,7 +4,7 @@ fieldGroup: 9bdf93bb-bbb6-4791-a90b-ee8f56915270 # Developer
 handle: builderChangelog
 instructions: null
 name: 'Builder: Changelog'
-searchable: true
+searchable: false
 settings:
   maxBlocks: null
   maxLevels: null

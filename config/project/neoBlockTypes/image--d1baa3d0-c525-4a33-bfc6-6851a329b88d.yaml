@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 7d99405a-380b-42c5-b41a-93205a7b8905 # Builder: Tutorials
+fieldLayouts:
+  71065130-102b-4e0e-96d5-5f67b9455ab6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a2ce8a13-9fad-4d3a-986e-f3bdb865efb2 # Asset: Image Demo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5ff65b3-5961-4f6a-af6d-c3093d70e582
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3faa6b66-ba10-4ad1-874e-e20a434bd0f6
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: image
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Image
+sortOrder: 4
+topLevel: false

@@ -1,4 +1,4 @@
-changedFieldIndicator: 214190802
+changedFieldIndicator: 615315133
 field: 2f97f0f3-397f-4a92-a0af-4685f47a52f6 # Divider: Subsection
 fieldLayouts:
   79b45096-d7fd-4c7b-ae11-bc281e267432:
@@ -8,7 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 79e781f4-3675-4c4c-8202-14bbb9ba2f51 # Heading
+            fieldUid: 79e781f4-3675-4c4c-8202-14bbb9ba2f51 # Subsection Name
             instructions: null
             label: null
             required: false
@@ -22,23 +22,27 @@ fieldLayouts:
         uid: e2b77e9a-3e22-49fd-a154-8ed302cec859
         userCondition: null
 fields:
-  79e781f4-3675-4c4c-8202-14bbb9ba2f51: # Heading
+  79e781f4-3675-4c4c-8202-14bbb9ba2f51: # Subsection Name
     columnSuffix: hmwrrsdn
     contentColumnType: text
     fieldGroup: null
-    handle: heading
+    handle: subsectionName
     instructions: null
-    name: Heading
+    name: 'Subsection Name'
     searchable: true
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: c5338cc4-1c12-47a4-bf3b-ecd79f2164e3 # Text: Italic
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
+    type: craft\ckeditor\Field

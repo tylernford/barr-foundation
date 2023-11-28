@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Preheading
             instructions: null
             label: null
             required: false

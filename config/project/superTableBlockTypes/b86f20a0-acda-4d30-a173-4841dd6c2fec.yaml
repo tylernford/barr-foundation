@@ -1,4 +1,4 @@
-changedFieldIndicator: 2059971512
+changedFieldIndicator: 937346813
 field: 7b3b5f9c-101a-4bb0-b7c8-5d0f199cf1e7 # Asset: Infographic
 fieldLayouts:
   b49bc0ba-f2b5-4c6f-9fac-7d7de291dc75:
@@ -20,7 +20,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: cfb7f673-e726-4e10-b627-eb563177ea3d # Style: Layout
+            fieldUid: cfb7f673-e726-4e10-b627-eb563177ea3d # Style: Width
             instructions: null
             label: null
             required: false
@@ -34,13 +34,13 @@ fieldLayouts:
         uid: 5bb58d6a-c0ff-48c9-99ed-a42a9b98115e
         userCondition: null
 fields:
-  cfb7f673-e726-4e10-b627-eb563177ea3d: # Style: Layout
+  cfb7f673-e726-4e10-b627-eb563177ea3d: # Style: Width
     columnSuffix: enjdrlil
     contentColumnType: string(9)
     fieldGroup: null
-    handle: styleLayout
+    handle: styleWidth
     instructions: 'Defaults to full-width.'
-    name: 'Style: Layout'
+    name: 'Style: Width'
     searchable: true
     settings:
       columnType: null
@@ -69,7 +69,7 @@ fields:
               - ''
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\RadioButtons
+    type: craft\fields\Dropdown
   ffd93142-6600-426b-8c4f-a5a5f9d318d9: # Asset: Image
     columnSuffix: null
     contentColumnType: string
@@ -89,7 +89,7 @@ fields:
       defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
-      maxRelations: null
+      maxRelations: 1
       minRelations: null
       previewMode: full
       restrictFiles: true

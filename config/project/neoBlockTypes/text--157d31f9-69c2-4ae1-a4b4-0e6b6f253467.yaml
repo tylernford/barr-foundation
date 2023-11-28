@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 7d99405a-380b-42c5-b41a-93205a7b8905 # Builder: Tutorials
+fieldLayouts:
+  cd74120e-2a2f-4bdc-8448-4285f08a59df:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b68fa7d0-ea0f-4788-841c-bbce45e4344a # Text: Notes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32e42af2-a633-49bb-b07f-d5c3797a8bef
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8aef2b91-688e-43bd-bdcf-b26b82a9eadb
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: text
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Text
+sortOrder: 2
+topLevel: false

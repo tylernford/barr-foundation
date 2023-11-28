@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  78dc9298-bf89-46a9-9e63-b4658e86b078:
+  c7328a26-23ca-4310-bba6-4af016e64dcc:
     tabs:
       -
         elementCondition: null
@@ -48,8 +48,8 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
-            instructions: 'Add supporting text urging visitors to take relevant action; for example, prompt them to check out the Learnings & Evaluation page. Text should be right-aligned.'
-            label: null
+            instructions: 'Add supporting text urging visitors to take relevant action; for example, prompt them to check out the Learnings & Evaluation page. Text should be center-aligned.'
+            label: 'Action: Explore More'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

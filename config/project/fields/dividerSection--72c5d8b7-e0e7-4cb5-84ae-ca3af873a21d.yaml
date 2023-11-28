@@ -2,30 +2,30 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
 handle: dividerSection
-instructions: 'Create a section divider.'
+instructions: 'Create a section divider and bookmark link within the Page Opener.'
 name: 'Divider: Section'
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1099673605
+  changedFieldIndicator: 1687426141
   columns:
     __assoc__:
       -
-        - ed00904c-55f9-4940-bedd-8162c46d1d36 # Heading
+        - ed00904c-55f9-4940-bedd-8162c46d1d36 # Section Name
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 2d85d472-1f81-45ee-9294-8af027894cdd # Action
+        - 2d85d472-1f81-45ee-9294-8af027894cdd # Section Bookmark (Optional)
         -
           __assoc__:
             -
               - width
               - ''
   contentTable: '{{%stc_dividersection}}'
-  fieldLayout: matrix
+  fieldLayout: table
   maxRows: null
   minRows: null
   propagationKeyFormat: null

@@ -134,13 +134,13 @@ fields:
     contentColumnType: boolean
     fieldGroup: null
     handle: flagPrimary
-    instructions: 'Designate this Program Area as a primary tab; primary tabs will display their labels in larger text.'
+    instructions: 'Designate this Program Area as a primary tab. Primary tab labels are displayed in large-sized text; secondary tab labels are displayed in regular-sized text. Defaults to primary.'
     name: 'Flag: Primary'
     searchable: false
     settings:
-      default: false
-      offLabel: null
-      onLabel: null
+      default: true
+      offLabel: Secondary
+      onLabel: Primary
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch

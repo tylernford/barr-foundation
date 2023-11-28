@@ -4,39 +4,15 @@ description: ''
 enabled: true
 field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
 fieldLayouts:
-  581719f7-9421-4e78-9b83-e21ae360a36a:
+  6cb38f90-a760-4fc4-923f-d7f51ac94374:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cd85c5ce-e51e-4003-a6c8-823160a619fe
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cd58cf67-9732-4abd-af6b-5358d9aea08a
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
             fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
-            instructions: null
+            instructions: 'One to three sentences that introduces the People Group.'
             label: null
             required: false
             tip: null
@@ -45,6 +21,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
+            instructions: 'Select a Person Type category to automatically display a feed for this group.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd58cf67-9732-4abd-af6b-5358d9aea08a
+            userCondition: null
+            warning: null
+            width: 50
         name: Group
         uid: ae72400d-ff97-40da-95de-5ffcfc055643
         userCondition: null

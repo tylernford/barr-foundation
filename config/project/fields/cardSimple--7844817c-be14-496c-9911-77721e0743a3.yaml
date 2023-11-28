@@ -7,11 +7,11 @@ name: 'Card: Simple'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 752092651
+  changedFieldIndicator: 155780009
   columns:
     __assoc__:
       -
-        - 0a924836-f3f5-452c-86dd-92df3cc0ad85 # Text: Label
+        - 0a924836-f3f5-452c-86dd-92df3cc0ad85 # Text: Preheading
         -
           __assoc__:
             -
@@ -53,7 +53,7 @@ settings:
               - width
               - ''
   contentTable: '{{%stc_cardsimple}}'
-  fieldLayout: matrix
+  fieldLayout: row
   maxRows: null
   minRows: null
   propagationKeyFormat: null

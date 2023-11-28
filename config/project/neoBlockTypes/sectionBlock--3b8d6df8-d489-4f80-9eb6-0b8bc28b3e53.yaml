@@ -1,0 +1,46 @@
+childBlocks:
+  - groupType
+conditions: null
+description: ''
+enabled: true
+field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
+fieldLayouts:
+  1ea8310a-40ad-4446-9841-ec10143a107e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e9b9d70e-184b-4b64-b1b7-4b3d2f449ed6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a7b158cc-6d63-4c64-ac88-f2fa9deed1b2
+            userCondition: null
+        name: Subject
+        uid: df8b6a15-33ab-441b-b124-e46a906ffbb9
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: sectionBlock
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'People Section'
+sortOrder: 1
+topLevel: true
