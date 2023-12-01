@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
 handle: entriesJobsBoard
-instructions: null
+instructions: 'Add up to 6 Job Board Entries to feature. Drag & drop to rearrange.'
 name: 'Entries: Jobs Board'
 searchable: true
 settings:
@@ -10,7 +10,7 @@ settings:
   branchLimit: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 6
   minRelations: null
   selectionCondition:
     __assoc__:
@@ -23,7 +23,7 @@ settings:
       -
         - class
         - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: 'Add a job'
+  selectionLabel: 'Add a job '
   showSiteMenu: true
   sources:
     - 'section:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board

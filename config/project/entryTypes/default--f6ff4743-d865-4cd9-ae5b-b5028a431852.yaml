@@ -80,6 +80,24 @@ fieldLayouts:
         name: Content
         uid: 3e3bf9d7-78ce-486f-ba8a-f3da34ad841f
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6c92f05e-a7ad-45e3-9a46-58d06f23c378
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2fe7b119-8e31-4be8-b9a3-0163c1f73c07
+            userCondition: null
+            warning: null
+            width: 100
+        name: Test
+        uid: dde21bf8-e004-4e62-8e6d-c26aa2465c95
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

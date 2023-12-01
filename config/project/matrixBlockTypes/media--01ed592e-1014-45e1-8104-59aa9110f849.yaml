@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 57a475da-bd34-46ee-8693-6055079fb616 # Image(s) or Video(s)
+            fieldUid: 57a475da-bd34-46ee-8693-6055079fb616 # Asset: Image(s) or Video(s)
             instructions: null
             label: null
             required: false
@@ -19,7 +19,7 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 9b6c92eb-d488-4fd4-a3fe-e55aec516915 # Width
+            fieldUid: 9b6c92eb-d488-4fd4-a3fe-e55aec516915 # Style: Width
             instructions: null
             label: null
             required: false
@@ -33,13 +33,13 @@ fieldLayouts:
         uid: b0c86955-177e-4978-a9c5-837032ebdfc2
         userCondition: null
 fields:
-  9b6c92eb-d488-4fd4-a3fe-e55aec516915: # Width
+  9b6c92eb-d488-4fd4-a3fe-e55aec516915: # Style: Width
     columnSuffix: wdiacjnv
     contentColumnType: string(3)
     fieldGroup: null
-    handle: width
-    instructions: "By default, if a single image or video is added, the asset will span 50% of the width in larger viewports (i.e. desktop). \r\n\r\nSelect the 100% option to display the image or video the full width of the viewport. (If 2 images or videos are added, both will display at 50% regardless)."
-    name: Width
+    handle: styleWidth
+    instructions: "By default, if a single image or video is added, the asset will span 50% of the screen width (only applicable to larger screens), and caption will display to the right of the asset. \r\n\r\nSelect the 100% option to assign the asset full screen width, and display the caption below the asset. \r\n\r\nIf 2 images or videos are added, both will display at 50% width in larger screens."
+    name: 'Style: Width'
     searchable: true
     settings:
       columnType: null
@@ -69,20 +69,19 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  57a475da-bd34-46ee-8693-6055079fb616: # Image(s) or Video(s)
+  57a475da-bd34-46ee-8693-6055079fb616: # Asset: Image(s) or Video(s)
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: asset
-    instructions: 'Select or upload up 1 or 2 image, video or audio assets. Be sure to double-click the thumbnail preview to add Alt Text, Caption and Byline.'
-    name: 'Image(s) or Video(s)'
+    handle: assetWildcard
+    instructions: 'Select or upload 1 or 2 images and/or videos. Be sure to double-click the thumbnail preview to add Alt Text, Caption and Byline.'
+    name: 'Asset: Image(s) or Video(s)'
     searchable: true
     settings:
       allowSelfRelations: false
       allowSubfolders: false
       allowUploads: true
       allowedKinds:
-        - audio
         - image
         - video
       branchLimit: null

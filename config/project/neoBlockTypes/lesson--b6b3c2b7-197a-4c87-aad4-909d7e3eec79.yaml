@@ -1,0 +1,43 @@
+childBlocks:
+  - text
+  - video
+  - image
+conditions: null
+description: ''
+enabled: true
+field: 7d99405a-380b-42c5-b41a-93205a7b8905 # Builder: Tutorials
+fieldLayouts:
+  27cbc5aa-1887-47ff-99cb-871cd7adfe1f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 50ac893d-c55d-48d8-a3e9-08de620039ab # Text: Version
+            instructions: null
+            label: 'Text: Title'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c8e642c-10fc-4216-b4d4-3894a9f09827
+            userCondition: null
+            warning: null
+            width: 100
+        name: Admin
+        uid: 75f7cced-1daa-4a88-889d-6d4d4c1beadb
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: lesson
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Lesson
+sortOrder: 1
+topLevel: true

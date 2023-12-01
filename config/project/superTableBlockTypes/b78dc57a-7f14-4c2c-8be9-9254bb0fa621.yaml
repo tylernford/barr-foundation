@@ -1,4 +1,4 @@
-changedFieldIndicator: 779542884
+changedFieldIndicator: 459762372
 field: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
 fieldLayouts:
   a0985cb2-1edc-4df9-8a63-a76f6b1a65d1:
@@ -8,7 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: ed00904c-55f9-4940-bedd-8162c46d1d36 # Heading
+            fieldUid: ed00904c-55f9-4940-bedd-8162c46d1d36 # Section Name
             instructions: null
             label: null
             required: false
@@ -20,7 +20,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 2d85d472-1f81-45ee-9294-8af027894cdd # Action
+            fieldUid: 2d85d472-1f81-45ee-9294-8af027894cdd # Section Bookmark (Optional)
             instructions: null
             label: null
             required: false
@@ -34,28 +34,28 @@ fieldLayouts:
         uid: ffac3975-7e02-4d6a-a38c-462c42733be6
         userCondition: null
 fields:
-  2d85d472-1f81-45ee-9294-8af027894cdd: # Action
+  2d85d472-1f81-45ee-9294-8af027894cdd: # Section Bookmark (Optional)
     columnSuffix: uwpvtvxc
     contentColumnType: boolean
     fieldGroup: null
-    handle: actionJump
-    instructions: 'By default, the Page Opener will include a link that will "jump" the visitor to this section. Toggle off the lightswitch to hide the link.'
-    name: Action
+    handle: flagBookmark
+    instructions: 'Toggle to show or hide a bookmark link for this Section within the Page Opener.'
+    name: 'Section Bookmark (Optional)'
     searchable: true
     settings:
       default: true
-      offLabel: null
-      onLabel: null
+      offLabel: Hide
+      onLabel: Show
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Lightswitch
-  ed00904c-55f9-4940-bedd-8162c46d1d36: # Heading
+  ed00904c-55f9-4940-bedd-8162c46d1d36: # Section Name
     columnSuffix: mbjmsdlc
     contentColumnType: text
     fieldGroup: null
-    handle: heading
+    handle: sectionName
     instructions: null
-    name: Heading
+    name: 'Section Name'
     searchable: true
     settings:
       byteLimit: null

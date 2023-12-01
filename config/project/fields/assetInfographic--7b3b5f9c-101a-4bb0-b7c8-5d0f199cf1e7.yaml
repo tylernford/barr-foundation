@@ -2,12 +2,12 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: b6fc45fa-5f55-4100-ab79-5b7379a538ec # Assets
 handle: assetInfographic
-instructions: '(Optional) Select an infographic, toggle the style button to set its width.'
+instructions: '(Optional) Select an infographic, customize the width as needed.'
 name: 'Asset: Infographic'
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1470191380
+  changedFieldIndicator: 695392483
   columns:
     __assoc__:
       -
@@ -18,14 +18,14 @@ settings:
               - width
               - ''
       -
-        - cfb7f673-e726-4e10-b627-eb563177ea3d # Style: Layout
+        - cfb7f673-e726-4e10-b627-eb563177ea3d # Style: Width
         -
           __assoc__:
             -
               - width
               - ''
   contentTable: '{{%stc_assetinfographic}}'
-  fieldLayout: matrix
+  fieldLayout: table
   maxRows: null
   minRows: null
   propagationKeyFormat: null

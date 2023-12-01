@@ -1,0 +1,52 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
+fieldLayouts:
+  dee3ddc5-604c-4dd3-8ca0-4671d3d3efd6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3b3c11f7-3415-430f-aa8d-4ea49d17eaba # Flag: Dynamic
+            instructions: 'Toggle on to dynamically display Job Board Entries; toggle off to cherry-pick which Job Board Entries to display.'
+            label: 'Flag: Dynamic'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 287f7b24-8c84-40be-9144-36c82ec1ec09
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3e11477d-216f-40bc-b1ab-c75a7eba26d0 # Entries: Jobs Board
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 790f84c3-1ef7-4897-8e70-019e4b610ee2
+            userCondition: null
+            warning: null
+            width: 100
+        name: List
+        uid: bd3b3cb0-ac0b-465c-9f4b-871921878627
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: feedJobsBoard
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Feed: Jobs Board'
+sortOrder: 5
+topLevel: false

@@ -1,0 +1,84 @@
+<style>
+.adminTip-heading {
+    font-size: 2.5em;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 0.5em;
+}
+
+.adminTip-subheading {
+    font-size: 1.8em;
+}
+
+.adminTip-label {
+    color: #596673;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.adminTip-box {
+  background: #f3f7fc;
+  margin-top: 0;
+  padding: 1em;
+  border-radius: 10px;
+}
+.adminTip-box--details {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.adminTip-desc {
+    margin-top: 0;
+}
+.adminTip-list {
+    margin-left: 2em;
+    list-style-type: disc;
+}
+.adminTip-editor {
+    > ul {
+        margin-left: 2em;
+        font-size: 1.1em;
+        line-height: 2;
+        list-style-type: disc;
+    }
+}
+
+.adminTip-image {
+    max-width: 1000px;
+}
+</style>
+
+<div>
+
+    {% set tutorialList = element.builderTutorials.all() %}
+    
+    <h1 class="adminTip-heading">{{ element.title }}</h1>
+    <div>
+    {% for lesson in tutorialList %}
+        {% set textNotes  = lesson.textNotes|trim != '' ? lesson.textNotes : null %}
+        {% set videoList  = lesson.assetVideoDemo|length ? lesson.assetVideoDemo.all() : null %}
+        {% set imageList = lesson.assetImageDemo|length ? lesson.assetImageDemo.all() : null %}
+        <h2 class="adminTip-subheading">{{ lesson.textVersion }}</h2>
+        <div class="adminTip-editor">
+            
+            {% if textNotes %}
+            {{ textNotes }}
+            {% endif %}
+
+            {% if videoList %}
+            {% for video in videoList %}
+            {% set videoSrc = video.getUrl %}
+            <video controls width="250">
+                <source src="{{ videoSrc }}" type="video/mp4" />
+            </video>
+            {% endfor %}
+            {% endif %}
+
+            {% if imageList %}
+            {% for img in imageList %}
+            {% set imageSrc = img.getUrl %}
+            <img class="adminTip-image" src="{{ imageSrc }}" width="100%" />
+            {% endfor %}
+            {% endif %}
+
+        </div>
+    {% endfor %}
+    </div>
+</div>

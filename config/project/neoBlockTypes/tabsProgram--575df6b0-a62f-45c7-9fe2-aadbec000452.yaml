@@ -4,14 +4,14 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  ecc6e0e7-9435-4c7f-8a64-da20a46942a2:
+  4c93faf3-2ac4-4742-8442-b17beee9f270:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Preheading
             instructions: 'e.g. Our Program Areas'
             label: null
             required: false
@@ -24,7 +24,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 9c15fd9a-81a5-4c31-bd58-95cc257be3fd # Text: Rich (Basic)
-            instructions: 'Brief, general description of program areas '
+            instructions: 'Brief description of program area.'
             label: 'Text: Supporting'
             required: false
             tip: null

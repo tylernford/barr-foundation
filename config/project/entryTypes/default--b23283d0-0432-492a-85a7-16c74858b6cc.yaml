@@ -44,32 +44,13 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 646a4f5e-7664-49e3-8fde-db18289f4ed6
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b124f800-3236-44b7-a585-617c24b5ffd0
             userCondition: null
-            warning: null
-            width: 100
           -
             elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 25b86289-271d-4fc2-a900-26770edb3c9c
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Label
-            instructions: '(Optional) Very brief label. If this milestone event is added to a multi-event timeline, the label will display above the heading.'
+            fieldUid: 7177fc66-4936-40e7-9fc8-2cc7f5c69739 # Text: Preheading
+            instructions: '(Optional) Very brief label. If this milestone event is added to a multi-event timeline, the label will display above the event title/name.'
             label: null
             required: false
             tip: null
@@ -77,7 +58,19 @@ fieldLayouts:
             uid: 5a302828-e11e-4a52-80be-7c7ff9906dca
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            instructions: '(Optional) If the event title/name requires formatting (italics), enter the formatted version here.'
+            label: 'Text: Event Name'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 25b86289-271d-4fc2-a900-26770edb3c9c
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
@@ -92,8 +85,20 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: '(Optional) Select an image. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 646a4f5e-7664-49e3-8fde-db18289f4ed6
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
-            instructions: 'Select an entry or link to an external site.'
+            instructions: '(Optional) Select an entry or link to an external site.'
             label: null
             required: false
             tip: null
@@ -101,7 +106,7 @@ fieldLayouts:
             uid: 98dfcf20-5f57-4c3c-bfe6-002e69cb7d77
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: b5772510-16ec-45a7-932b-e6d3aff11a84 # Action: Download
@@ -113,7 +118,7 @@ fieldLayouts:
             uid: 7c25f0f5-0daf-4f56-a0ef-c11ff45a44a2
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Content
         uid: 1c1aa30c-61ef-44be-88fa-4f51f04c56e2
         userCondition: null

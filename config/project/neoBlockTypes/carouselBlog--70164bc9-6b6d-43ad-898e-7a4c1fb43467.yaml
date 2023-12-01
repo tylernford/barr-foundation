@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  dedbe445-b0b8-4df0-9873-c6268e0204c4:
+  f9fd4c7f-7c2f-40de-ade6-3a13addc93e3:
     tabs:
       -
         elementCondition: null
@@ -33,7 +33,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Carousel
+        name: Blog
         uid: f0129571-12fc-4c53-a941-0c6dadd712d5
         userCondition: null
 group: null
@@ -48,5 +48,5 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Carousel: Blog'
-sortOrder: 6
+sortOrder: 8
 topLevel: false

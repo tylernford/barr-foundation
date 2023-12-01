@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: flagDynamic
+instructions: 'Toggle on to dynamically display entries; toggle off to cherry-pick which entries to display.'
+name: 'Flag: Dynamic'
+searchable: true
+settings:
+  default: false
+  offLabel: Cherry-Pick
+  onLabel: Auto-Pick
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

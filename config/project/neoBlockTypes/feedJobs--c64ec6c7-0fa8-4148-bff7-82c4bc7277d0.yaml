@@ -1,0 +1,52 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
+fieldLayouts:
+  8ff2d908-0dff-4fdf-bcbd-d258d711316e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3b3c11f7-3415-430f-aa8d-4ea49d17eaba # Flag: Dynamic
+            instructions: 'Toggle on to dynamically display Job Entries; toggle off to cherry-pick which Job Entries to display.'
+            label: 'Flag: Dynamic'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb34546e-8f59-4e03-98c9-ab1e65e3d41b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7b7e6d25-da0c-40b9-b3e6-07f9632c0924 # Entries: Jobs
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d674f13-f640-4798-abc8-ac6a6e156ff5
+            userCondition: null
+            warning: null
+            width: 100
+        name: List
+        uid: 1dc496a8-d2c1-4415-b527-dd55f9457fbd
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: feedJobs
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Feed: Jobs'
+sortOrder: 4
+topLevel: false

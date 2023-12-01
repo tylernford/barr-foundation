@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  968416af-175f-48c7-bb1a-a23e050253b0:
+  d0868d86-f8ae-48ad-b798-467a8b089f0a:
     tabs:
       -
         elementCondition: null
@@ -37,7 +37,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
             instructions: 'Add supporting text to urge visitors to checkout the Newsroom. Text should be center-aligned.'
-            label: null
+            label: 'Action: Explore More'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

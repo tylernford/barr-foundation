@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a41581618d11a76055ea714ad76a3ac",
+    "content-hash": "8b3b9789edd70f7c4fda56b9c6f0c42c",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -5298,6 +5298,56 @@
                 "rss": "https://github.com/spicywebau/craft-neo/commits/3.x.atom"
             },
             "time": "2023-10-27T00:58:09+00:00"
+        },
+        {
+            "name": "springworks/entity-diagrams",
+            "version": "2.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/steverowling/craft-entity-diagrams/zipball/7701c202e924b37e097ea7a9372dd7362f79975e",
+                "reference": "7701c202e924b37e097ea7a9372dd7362f79975e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Entity Diagrams",
+                "handle": "entity-diagrams",
+                "developer": "Steve Rowling",
+                "developerUrl": "https://springworks.co.uk",
+                "documentationUrl": "https://github.com/steverowling/entity-diagrams/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/steverowling/entity-diagrams/master/CHANGELOG.md",
+                "class": "springworks\\entitydiagrams\\EntityDiagrams"
+            },
+            "autoload": {
+                "psr-4": {
+                    "springworks\\entitydiagrams\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Rowling",
+                    "homepage": "https://springworks.co.uk"
+                }
+            ],
+            "description": "Generate entity diagrams that show how the different parts of your Craft site relate to each other",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "entity diagrams"
+            ],
+            "support": {
+                "docs": "https://github.com/steverowling/entity-diagrams/blob/master/README.md",
+                "issues": "https://github.com/steverowling/entity-diagrams/issues"
+            },
+            "time": "2022-09-29T15:11:32+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",

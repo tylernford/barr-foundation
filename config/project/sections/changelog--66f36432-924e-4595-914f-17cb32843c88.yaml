@@ -18,7 +18,7 @@ propagationMethod: all
 siteSettings:
   915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
     enabledByDefault: true
-    hasUrls: true
-    template: changelog/_entry.html
-    uriFormat: changelog
+    hasUrls: false
+    template: null
+    uriFormat: null
 type: single

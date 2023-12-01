@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
+fieldLayouts:
+  b9500bc8-31e3-4b64-b37f-e7c730388d99:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 87a17359-5ffb-471d-8901-d6fffb218987 # Card: Person Type
+            instructions: null
+            label: 'Cards: Bio'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 058082cc-a91c-4417-9ab7-c0bd03534e0e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Cards
+        uid: 6bb0ba34-bea1-406a-9bd0-0675b80d136f
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: feedBio
+icon: null
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Filterable Feed: Bio'
+sortOrder: 7
+topLevel: false

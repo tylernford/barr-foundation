@@ -1,0 +1,85 @@
+fieldLayouts:
+  1a1a7497-80bc-4ab7-b079-c93e224ed2ed:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8abc8e9f-12db-42fc-b662-40d9479c6ec3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 6660bbb8-70cf-498e-bedd-377fac46aca1
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 7d99405a-380b-42c5-b41a-93205a7b8905 # Builder: Tutorials
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc175237-429a-49da-b086-3c6db6df6be9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Admin
+        uid: 1b316d28-b2af-4d95-a530-56abf1eee0c9
+        userCondition:
+          class: craft\elements\conditions\users\UserCondition
+          conditionRules:
+            -
+              class: craft\elements\conditions\users\UsernameConditionRule
+              operator: '='
+              uid: bca37777-5707-469a-a339-e55a9c8e163e
+              value: fbdev
+          elementType: craft\elements\User
+          fieldContext: global
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            template: control-panel/_tutorials.html
+            type: craft\fieldlayoutelements\Template
+            uid: 4a37047c-3cea-4aa6-a8e8-fb19490fb998
+            userCondition: null
+            width: 100
+        name: Instructions
+        uid: 5945fa4e-150a-4385-a6aa-6f47ac46ac02
+        userCondition: null
+handle: tutorials
+hasTitleField: true
+name: Tutorials
+section: 6fb16efc-efc4-4dbb-af30-c21b060c6350 # Tutorials
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

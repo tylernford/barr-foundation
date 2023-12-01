@@ -7,11 +7,11 @@ name: 'Divider: Subsection'
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1395376179
+  changedFieldIndicator: 1970207948
   columns:
     __assoc__:
       -
-        - 79e781f4-3675-4c4c-8202-14bbb9ba2f51 # Heading
+        - 79e781f4-3675-4c4c-8202-14bbb9ba2f51 # Subsection Name
         -
           __assoc__:
             -

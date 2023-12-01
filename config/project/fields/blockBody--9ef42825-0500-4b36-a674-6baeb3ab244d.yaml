@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: c4298a25-8850-4817-a1a1-014ba04d9e07 # Blocks
 handle: blockBody
-instructions: 'Add as few or many blocks. Drag & drop to rearrange.'
+instructions: 'Add as few or many blocks as needed. Drag & drop to rearrange.'
 name: 'Block: Body'
 searchable: false
 settings:

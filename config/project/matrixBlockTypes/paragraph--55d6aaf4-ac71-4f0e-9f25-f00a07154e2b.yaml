@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 403cc98b-bbd0-4d37-8a79-1141c41ba1b4 # __blank__
+            fieldUid: 403cc98b-bbd0-4d37-8a79-1141c41ba1b4 # Longform Text
             instructions: null
             label: null
             required: false
@@ -21,13 +21,13 @@ fieldLayouts:
         uid: f023eb41-10bd-49cb-8087-7a7fa6fcbcef
         userCondition: null
 fields:
-  403cc98b-bbd0-4d37-8a79-1141c41ba1b4: # __blank__
+  403cc98b-bbd0-4d37-8a79-1141c41ba1b4: # Longform Text
     columnSuffix: xxjwfffo
     contentColumnType: text
     fieldGroup: null
     handle: body
-    instructions: null
-    name: __blank__
+    instructions: 'Longform Text displays in default-sized type. Heading, paragraph, bold, italic, list, and link formatting is available.'
+    name: 'Longform Text'
     searchable: true
     settings:
       availableTransforms: ''
@@ -46,5 +46,5 @@ fields:
     translationMethod: none
     type: craft\ckeditor\Field
 handle: paragraph
-name: Paragraph
+name: Longform
 sortOrder: 3

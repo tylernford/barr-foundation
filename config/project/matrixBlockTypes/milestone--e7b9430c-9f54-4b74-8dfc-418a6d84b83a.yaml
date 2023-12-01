@@ -59,7 +59,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: event
-    instructions: 'Assign multiple events to this milestone. Be sure the event date matches the year above.'
+    instructions: 'Assign multiple events to this milestone. Be sure the event date matches the year above. Once added to the milestone, you can double-click the events to view or edit their details.'
     name: Event
     searchable: true
     settings:

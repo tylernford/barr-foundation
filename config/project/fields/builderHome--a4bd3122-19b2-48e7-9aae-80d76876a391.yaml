@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 114e6010-b1c0-4faa-837c-c7bbe1e0daae # Page Builders
 handle: builderHome
-instructions: "Add each block. Drag & drop to rearrange. The recommended order is: \r\n\r\n1. Tabs: Program Finder \r\n2. Card: Grants (Grants Database)\r\n3. Card: Grants (Grantmaking Process) \r\n4. Highlight: Stats\r\n5. Entries: News\r\n6. Entries: Team"
+instructions: "Add each block. Drag & drop to rearrange. _Hint:_ To more easily rearrange blocks, collapse the block by clicking its cog icon (top right).\r\n\r\nThe recommended order is: \r\n\r\n1. Tabs: Program Finder \r\n2. Card: Grants (Grants Database)\r\n3. Card: Grants (Grantmaking Process) \r\n4. Highlight: Stats\r\n5. Entries: News\r\n6. Entries: Team"
 name: 'Page Builder: Home'
 searchable: true
 settings:
