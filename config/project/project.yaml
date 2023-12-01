@@ -1,4 +1,4 @@
-dateModified: 1701212112
+dateModified: 1701446052
 elementSources:
   craft\elements\Asset:
     -
@@ -420,6 +420,7 @@ meta:
     3a4a814b-362f-42e4-9d92-2cf83e4c0e5d: 'Filterable Feed: Bio' # Filterable Feed: Bio
     3b0ee85b-3a90-4147-95da-96c517b5b684: Target # Target
     3b2f52f1-19d0-45f7-b3f6-e1e72a135f1c: Global # Global
+    3b3c11f7-3415-430f-aa8d-4ea49d17eaba: 'Flag: Dynamic' # Flag: Dynamic
     3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53: 'People Section' # People Section
     3b57b347-d307-44e5-874b-c98927dad390: 'Flat Menu' # Flat Menu
     03b97c7f-5861-488a-9875-0738f0246281: Accordion # Accordion
@@ -579,6 +580,7 @@ meta:
     9683f361-9130-419a-ab35-052018c72c88: 'Text: Supporting' # Text: Supporting
     9901ad2a-d15c-4337-8b16-5f395d71a734: 'Asset: Image' # Asset: Image
     10810a4a-e09d-468d-a10e-ef959a37224c: Default # Default
+    012267c4-9d65-467d-be60-57e431d098ef: 'Feed: Jobs Board' # Feed: Jobs Board
     21101f01-7656-4ca3-b484-464876165239: Default # Default
     21576a79-7338-423c-8ac1-2313ba9441d1: 'Text: Rich (+Link)' # Text: Rich (+Link)
     24052d58-898b-4447-805b-2a68d3a204ae: 'Text: Rich (+Headings)' # Text: Rich (+Headings)
@@ -669,6 +671,7 @@ meta:
     c5b61d17-072a-46ba-b6ab-f91256d7ac59: 'Full Name' # Full Name
     c7deb866-6362-47f8-8104-2d8bf7195864: Item # Item
     c48e87fe-1a72-4620-a84a-7f4b88f8fd94: Label # Label
+    c64ec6c7-0fa8-4148-bff7-82c4bc7277d0: 'Feed: Jobs' # Feed: Jobs
     c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Featured Item' # Featured Item
     c80dff18-6eeb-4474-8278-fdfc55a4630c: 'Text: Supporting' # Text: Supporting
     c954d828-974b-402e-92e2-3057b737e6ed: Menu # Menu

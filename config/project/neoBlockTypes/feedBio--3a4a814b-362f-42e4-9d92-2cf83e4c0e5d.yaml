@@ -36,5 +36,5 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Filterable Feed: Bio'
-sortOrder: 5
+sortOrder: 7
 topLevel: false

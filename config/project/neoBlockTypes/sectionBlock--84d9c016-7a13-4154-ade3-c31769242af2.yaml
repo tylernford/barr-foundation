@@ -1,6 +1,8 @@
 childBlocks:
   - featuredItem
   - feedGrantees
+  - feedJobs
+  - feedJobsBoard
   - feedNews
   - feedBio
   - carouselBlog
@@ -18,7 +20,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  8d98e603-f15a-450a-9097-38a93ce138ca:
+  ea2c52e7-b75b-4b68-a564-e52b8d66d2e1:
     tabs:
       -
         elementCondition: null

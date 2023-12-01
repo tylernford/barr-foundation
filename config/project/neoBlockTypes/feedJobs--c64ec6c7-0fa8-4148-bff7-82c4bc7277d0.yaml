@@ -4,41 +4,41 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  77c24a1c-467d-48db-adb3-b9e80cc509f5:
+  8ff2d908-0dff-4fdf-bcbd-d258d711316e:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: null
-            label: null
+            fieldUid: 3b3c11f7-3415-430f-aa8d-4ea49d17eaba # Flag: Dynamic
+            instructions: 'Toggle on to dynamically display Job Entries; toggle off to cherry-pick which Job Entries to display.'
+            label: 'Flag: Dynamic'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d9ce2617-3fe9-420a-83de-e81793d54c62
+            uid: fb34546e-8f59-4e03-98c9-ab1e65e3d41b
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 8231b9f6-69c4-4c30-b883-eaaabbdf19fc # Block: Accordion
+            fieldUid: 7b7e6d25-da0c-40b9-b3e6-07f9632c0924 # Entries: Jobs
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 75b73759-81a2-46d4-87e0-01f15fb70b52
+            uid: 6d674f13-f640-4798-abc8-ac6a6e156ff5
             userCondition: null
             warning: null
             width: 100
-        name: Text
-        uid: 1fc76ea0-336c-40c0-be5a-909cff48e827
+        name: List
+        uid: 1dc496a8-d2c1-4415-b527-dd55f9457fbd
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: textAccordion
+handle: feedJobs
 icon: null
 ignorePermissions: true
 maxBlocks: 0
@@ -47,6 +47,6 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Text: Accordion'
-sortOrder: 16
+name: 'Feed: Jobs'
+sortOrder: 4
 topLevel: false
