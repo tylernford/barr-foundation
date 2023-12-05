@@ -1,4 +1,4 @@
-dateModified: 1701446052
+dateModified: 1701805988
 elementSources:
   craft\elements\Asset:
     -
@@ -683,6 +683,7 @@ meta:
     cb1a13a4-f53a-4aa3-a568-1c10abd30a4e: Action # Action
     cb18e454-7f9b-4477-ab6b-e5c900f0c4e4: 'Text: Middle initial' # Text: Middle initial
     cca24e52-76d4-414b-81b3-ceb3665a9962: Event # Event
+    cd4c8a64-ae1c-451f-9727-fca9cd6c9a9b: 'Content Editors' # Content Editors
     cebe9f65-5c23-462d-a3e9-6d51ecd7eb49: 'Card: Grantmaking' # Card: Grantmaking
     cf026ccf-44b0-44ea-bb7c-a2d919af1521: 'Media: Audio or Video' # Media: Audio or Video
     cfb7f673-e726-4e10-b627-eb563177ea3d: 'Style: Width' # Style: Width
@@ -905,9 +906,3 @@ system:
   retryDuration: null
   schemaVersion: 4.5.3.0
   timeZone: $TZ
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true

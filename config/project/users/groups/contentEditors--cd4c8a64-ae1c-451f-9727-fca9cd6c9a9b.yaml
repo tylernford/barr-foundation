@@ -1,0 +1,286 @@
+description: 'Content editors have access to all relevant entries, assets, along with user and SEO management. Content editors do not have utility and systems permissions.'
+handle: contentEditors
+name: 'Content Editors'
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accessplugin-formie
+  - accessplugin-seomatic
+  - accesssitewhensystemisoff
+  - 'assignusergroup:cd4c8a64-ae1c-451f-9727-fca9cd6c9a9b' # Content Editors
+  - 'createentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'createentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'createentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'createentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'createentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'createentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'createentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'createentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'createentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'createentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'createentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'createentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'createentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'createentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'createentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'createentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'createfolders:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'createfolders:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'createfolders:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'deleteassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'deleteassets:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'deleteassets:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'deleteentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'deleteentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'deleteentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'deleteentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'deleteentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'deleteentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'deleteentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'deleteentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'deleteentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'deleteentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'deleteentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'deleteentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'deleteentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'deleteentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'deleteentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'deleteentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'deletepeerassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'deletepeerassets:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'deletepeerassets:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'deletepeerentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'deletepeerentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'deletepeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'deletepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'deletepeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'deletepeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'deletepeerentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'deletepeerentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'deletepeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'deletepeerentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'deletepeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'deletepeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'deletepeerentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'deletepeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'deletepeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'deletepeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'deletepeerentrydrafts:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
+  - 'deletepeerentrydrafts:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'deletepeerentrydrafts:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
+  - 'deletepeerentrydrafts:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'deletepeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'deletepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'deletepeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'deletepeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'deletepeerentrydrafts:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'deletepeerentrydrafts:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'deletepeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'deletepeerentrydrafts:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'deletepeerentrydrafts:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'deletepeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
+  - 'deletepeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'deletepeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
+  - 'deletepeerentrydrafts:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'deletepeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'deletepeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'deletepeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'editimages:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'editimages:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'editimages:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'editpeerimages:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'editpeerimages:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'editpeerimages:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - editusers
+  - formie-createforms
+  - formie-createsubmissions
+  - formie-deleteforms
+  - formie-editforms
+  - formie-editsubmissions
+  - 'formie-manageform:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-manageformappearance
+  - 'formie-manageformappearance:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-manageformbehavior
+  - 'formie-manageformbehavior:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-manageformintegrations
+  - 'formie-manageformintegrations:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-manageformsettings
+  - 'formie-manageformsettings:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - 'formie-manageformusage:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-managenotifications
+  - 'formie-managenotifications:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-managenotificationsadvanced
+  - 'formie-managenotificationsadvanced:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-managenotificationstemplates
+  - 'formie-managenotificationstemplates:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - 'formie-managesubmission:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - formie-viewforms
+  - formie-viewsentnotifications
+  - formie-viewsubmissions
+  - moderateusers
+  - registerusers
+  - 'replacefiles:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'replacefiles:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'replacefiles:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'replacepeerfiles:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'replacepeerfiles:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'replacepeerfiles:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'saveassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'saveassets:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'saveassets:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'saveentries:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
+  - 'saveentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'saveentries:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
+  - 'saveentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'saveentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'saveentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'saveentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'saveentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'saveentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'saveentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'saveentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'saveentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'saveentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'saveentries:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
+  - 'saveentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'saveentries:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
+  - 'saveentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'saveentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'saveentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'saveentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'savepeerassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'savepeerassets:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'savepeerassets:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'savepeerentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'savepeerentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'savepeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'savepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'savepeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'savepeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'savepeerentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'savepeerentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'savepeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'savepeerentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'savepeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'savepeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'savepeerentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'savepeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'savepeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'savepeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'savepeerentrydrafts:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
+  - 'savepeerentrydrafts:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'savepeerentrydrafts:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
+  - 'savepeerentrydrafts:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'savepeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'savepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'savepeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'savepeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'savepeerentrydrafts:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'savepeerentrydrafts:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'savepeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'savepeerentrydrafts:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'savepeerentrydrafts:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'savepeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
+  - 'savepeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'savepeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
+  - 'savepeerentrydrafts:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'savepeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'savepeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'savepeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'seomatic:content-meta'
+  - 'seomatic:content-meta:facebook'
+  - 'seomatic:content-meta:general'
+  - 'seomatic:content-meta:sitemap'
+  - 'seomatic:content-meta:twitter'
+  - 'seomatic:dashboard'
+  - 'seomatic:global-meta'
+  - 'seomatic:global-meta:ads'
+  - 'seomatic:global-meta:facebook'
+  - 'seomatic:global-meta:general'
+  - 'seomatic:global-meta:humans'
+  - 'seomatic:global-meta:robots'
+  - 'seomatic:global-meta:security'
+  - 'seomatic:global-meta:twitter'
+  - 'seomatic:plugin-settings'
+  - 'seomatic:site-settings'
+  - 'seomatic:site-settings:creator'
+  - 'seomatic:site-settings:identity'
+  - 'seomatic:site-settings:miscellaneous'
+  - 'seomatic:site-settings:sitemap'
+  - 'seomatic:site-settings:social'
+  - 'seomatic:tracking-scripts'
+  - 'seomatic:tracking-scripts:facebookpixel'
+  - 'seomatic:tracking-scripts:fathom'
+  - 'seomatic:tracking-scripts:googleanalytics'
+  - 'seomatic:tracking-scripts:googletagmanager'
+  - 'seomatic:tracking-scripts:gtag'
+  - 'seomatic:tracking-scripts:hubspot'
+  - 'seomatic:tracking-scripts:linkedininsight'
+  - 'seomatic:tracking-scripts:matomo'
+  - 'seomatic:tracking-scripts:pinteresttag'
+  - 'seomatic:tracking-scripts:plausible'
+  - 'viewassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'viewassets:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'viewassets:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'viewentries:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
+  - 'viewentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'viewentries:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
+  - 'viewentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'viewentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'viewentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'viewentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'viewentries:66f36432-924e-4595-914f-17cb32843c88' # Changelog
+  - 'viewentries:6fb16efc-efc4-4dbb-af30-c21b060c6350' # Tutorials
+  - 'viewentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'viewentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'viewentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'viewentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'viewentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'viewentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'viewentries:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
+  - 'viewentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'viewentries:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
+  - 'viewentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'viewentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'viewentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'viewentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'viewpeerassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+  - 'viewpeerassets:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+  - 'viewpeerassets:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
+  - 'viewpeerentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'viewpeerentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'viewpeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'viewpeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'viewpeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'viewpeerentries:6fb16efc-efc4-4dbb-af30-c21b060c6350' # Tutorials
+  - 'viewpeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'viewpeerentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'viewpeerentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'viewpeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'viewpeerentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'viewpeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'viewpeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'viewpeerentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'viewpeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'viewpeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'viewpeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+  - 'viewpeerentrydrafts:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
+  - 'viewpeerentrydrafts:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+  - 'viewpeerentrydrafts:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
+  - 'viewpeerentrydrafts:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+  - 'viewpeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
+  - 'viewpeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'viewpeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+  - 'viewpeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
+  - 'viewpeerentrydrafts:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+  - 'viewpeerentrydrafts:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+  - 'viewpeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+  - 'viewpeerentrydrafts:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+  - 'viewpeerentrydrafts:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'viewpeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
+  - 'viewpeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+  - 'viewpeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
+  - 'viewpeerentrydrafts:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+  - 'viewpeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
+  - 'viewpeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+  - 'viewpeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
