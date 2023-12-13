@@ -1,7 +1,8 @@
 {
   "require": {
     "craftcms/ckeditor": "3.6.0",
-    "craftcms/cms": "4.5.9",
+    "craftcms/cms": "4.5.11.1",
+    "craftcms/feed-me": "^5.3",
     "craftcms/mailgun": "3.0.0",
     "craftcms/redactor": "3.0.4",
     "nystudio107/craft-retour": "^4.1",

@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  3f665d04-a0f5-408a-b618-1807fb3e3b62:
+  253d7e24-8d39-4fe0-82ee-c099b2a5244e:
     tabs:
       -
         elementCondition: null
@@ -26,7 +26,7 @@ fieldLayouts:
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: featuredItem
+handle: cardFeature
 icon: null
 ignorePermissions: true
 maxBlocks: 0
@@ -35,6 +35,6 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Featured Item'
+name: 'Card: Feature'
 sortOrder: 2
 topLevel: false

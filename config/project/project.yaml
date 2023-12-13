@@ -1,4 +1,4 @@
-dateModified: 1702332615
+dateModified: 1702493274
 elementSources:
   craft\elements\Asset:
     -
@@ -619,6 +619,7 @@ meta:
     1842618e-7f9b-45c9-be4c-436bd476201e: 'Action: Entry or URL' # Action: Entry or URL
     2360859f-adea-4f42-9101-99fa6d270c3a: Social # Social
     2652042d-326e-45ff-b0bd-45f95f9e2507: Header # Header
+    6217344e-6a7d-4c0f-9ec2-14e37f417f31: 'Flag: Import' # Flag: Import
     7844817c-be14-496c-9911-77721e0743a3: 'Card: Simple' # Card: Simple
     8847309c-7a66-4668-9706-7698fa3614b4: 'Asset: Image' # Asset: Image
     9750478c-5202-4300-b469-2a61639f0ec4: 'Text: Description' # Text: Description
@@ -628,6 +629,7 @@ meta:
     59639062-b610-4a0d-b1e4-e855ca711cb2: 'Entries: Blog' # Entries: Blog
     76928083-2a29-4679-8fdf-e811209fb268: 'Card: Grants' # Card: Grants
     84062355-43e5-4645-80bd-6ed12c82ebb8: Media # Media
+    90142623-6069-4dfa-8701-8e8eb2de1caf: 'ID: Blog Post' # ID: Blog Post
     a06fd4ab-835d-4487-ab3d-7db24b84ace8: 'Text: Body' # Text: Body
     a1f99b1c-d8b3-4e50-8944-68924e179608: 'Internal Person' # Internal Person
     a2affe46-e28a-4b3c-a0ed-da056019c50c: 'Text: Accordion' # Text: Accordion
@@ -674,7 +676,7 @@ meta:
     c7deb866-6362-47f8-8104-2d8bf7195864: Item # Item
     c48e87fe-1a72-4620-a84a-7f4b88f8fd94: Label # Label
     c64ec6c7-0fa8-4148-bff7-82c4bc7277d0: 'Feed: Jobs' # Feed: Jobs
-    c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Featured Item' # Featured Item
+    c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Card: Feature' # Card: Feature
     c80dff18-6eeb-4474-8278-fdfc55a4630c: 'Text: Supporting' # Text: Supporting
     c954d828-974b-402e-92e2-3057b737e6ed: Menu # Menu
     c984ca15-0cae-4c1d-9b3c-14e9d29347f7: 'Page Builder: All (Do not Delete)' # Page Builder: All (Do not Delete)
@@ -803,6 +805,10 @@ plugins:
       tags: '*'
       userGroups: '*'
       volumes: '*'
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.0.0
   field-manager:
     edition: standard
     enabled: true
@@ -901,6 +907,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
 system:
   edition: pro
   live: true

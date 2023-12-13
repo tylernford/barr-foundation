@@ -1,4 +1,4 @@
-changedFieldIndicator: 1317704468
+changedFieldIndicator: 5274595
 field: db600239-720e-403b-b894-d8ef369fc205 # Highlight: Quote
 fieldLayouts:
   1d222c8d-d130-442c-9b40-935d909e07e5:
@@ -79,7 +79,7 @@ fields:
         - image
       branchLimit: null
       defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: null
+      defaultUploadLocationSubpath: '{owner.section}/Highlights'
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1

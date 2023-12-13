@@ -1,4 +1,4 @@
-changedFieldIndicator: 1820555941
+changedFieldIndicator: 1333130784
 field: 2f4e1404-f866-4cdc-924e-3c5930d9dd76 # Opener: Landing
 fieldLayouts:
   6e82bb6d-b8cb-423a-9d60-b6137d324baf:
@@ -62,7 +62,7 @@ fields:
         - image
       branchLimit: null
       defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: null
+      defaultUploadLocationSubpath: '{owner.section}/Openers'
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1

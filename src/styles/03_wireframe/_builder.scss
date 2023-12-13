@@ -66,7 +66,10 @@
 
 .blockOpener {
     @include block;
-    display: flex;
+    
+    &--homepage {
+        display: flex;
+    }
     
     &-text {
         padding: 2em;
@@ -303,6 +306,15 @@
 
     &-duration {
         display: block;
+    }
+
+}
+
+.blockGeneric {
+    @include block;
+
+    &-heading {
+        @include heading;
     }
 
 }

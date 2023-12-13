@@ -1,4 +1,4 @@
-changedFieldIndicator: 1052752322
+changedFieldIndicator: 199026720
 field: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
 fieldLayouts:
   e728bef5-5ed6-40e3-a010-51076e03c074:
@@ -86,7 +86,7 @@ fields:
         - image
       branchLimit: null
       defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: null
+      defaultUploadLocationSubpath: '{owner.section}/Cards'
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1
