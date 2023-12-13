@@ -1,5 +1,5 @@
 childBlocks:
-  - featuredItem
+  - cardFeature
   - feedGrantees
   - feedJobs
   - feedJobsBoard
@@ -20,7 +20,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  ea2c52e7-b75b-4b68-a564-e52b8d66d2e1:
+  c58b90b9-a9a9-4e74-b8f5-fd73fe93b95a:
     tabs:
       -
         elementCondition: null
