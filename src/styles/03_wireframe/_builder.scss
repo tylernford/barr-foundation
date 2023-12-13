@@ -1,0 +1,308 @@
+/* 03_wireframe/_builder.scss */
+@use "../utils/_utils" as *;
+
+// Grayscale
+// --color-tertiary-grey-200
+// --color-tertiary-grey-150
+// --color-tertiary-grey-100
+// --color-tertiary-grey-50
+// --color-tertiary-grey-25
+
+@mixin block() {
+    margin: 2em;
+    padding: 2em;
+    background: var(--color-tertiary-grey-50);
+    font-size: 1rem;
+}
+
+@mixin preheading() {
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+@mixin heading() {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+@mixin support() {
+    font-size: 1.5em;
+}
+
+@mixin cardImage() {
+    flex-basis: 50%;
+}
+
+@mixin button($color: null) {
+    $bg-color: if($color,$color, var(--color-tertiary-grey-25));
+    $text-color: if($color == 'null', var(--color-tertiary-grey-50),var(--color-tertiary-grey-25));
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 1em;
+    background: $bg-color;
+    color: var(--color-tertiary-grey-25);
+    text-decoration: none;
+}
+
+@mixin explore() {
+    margin-top: 3em;
+    text-align: center;
+
+    &--right {
+        text-align: right;
+    }
+
+    &-support {
+        @include support;
+        margin-bottom: 2em;
+    }
+
+    &-button {
+        @include button(var(--color-program-green-100));
+    }
+}
+
+.blockOpener {
+    @include block;
+    display: flex;
+    
+    &-text {
+        padding: 2em;
+    }
+
+    &-heading {
+        @include heading;
+    }
+
+    &-description {
+
+    }
+    
+}
+
+.blockTabs {
+    $tab: &;
+    @include block;
+    display: flex;
+    position: relative;
+
+    @include breakpoint(lg) {
+        min-height: 750px; 
+    }
+
+    > * {
+        flex: 0 1 50%;
+    }
+
+    &-intro {
+        padding-right: 2em;
+        border-right: 1px solid var(--color-tertiary-grey-200);
+    }
+
+    &-preheading {
+        @include preheading;
+    }
+
+    &-content {
+        padding-left: 2em;
+    }
+
+    &-label {
+
+        &--primary {
+            @include heading;
+        }
+
+        &--secondary {
+            line-height: 2;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-card { 
+        @include visuallyHide;
+
+        @media (hover: hover) {
+
+            #{$tab}-label:hover ~ & {
+                @include visuallyShow;
+                height: 100%;
+                margin: 2em;
+                padding: 2em;
+                width: calc(50% - 4em);
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: var(--color-tertiary-grey-25);
+            }
+        }
+        
+    }
+
+    &-media {
+        aspect-ratio: 1.6;
+        margin-bottom: 2em;
+
+        @include breakpoint(lg) {
+            max-height: 280px;
+        }
+
+        &-img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &-support {
+        @include support;
+        margin-bottom: 2em;
+    }
+
+    &-button {
+        @include button(var(--color-program-green-100));
+    }
+
+}
+
+.blockSimple {
+    $card: &;
+    @include block;
+    display: flex;
+
+    > * {
+        flex: 0 1 50%;
+    }
+
+    &-body {
+        align-content: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+
+        #{$card}--right & {
+            order: 1;
+        }
+    }
+
+    &-heading, &-support {
+        width: 100%;
+    }
+
+    &-heading {
+        @include heading;
+    }
+
+    &-support {
+        @include support;
+    }
+
+    &-button {
+        @include button(var(--color-program-green-100));
+    }
+
+    &-asset {
+        @include cardImage();
+    }
+
+}
+
+.blockStats {
+    @include block;
+    
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-item {
+        flex: 0 1 auto;
+        max-width: 25%;
+
+        > * {
+            display: block;
+        }
+
+    }
+
+    &-heading {
+        @include heading;
+    }
+
+    &-preheading {
+        @include preheading;
+    }
+    
+    &-number {
+        font-size: 2em;
+    }
+
+    &-citation {
+        margin: 3em 0;
+        font-size: 0.8em;
+    }
+
+    &-explore {
+        @include explore;
+    }
+
+}
+
+.blockCards {
+    @include block;
+
+    &-heading {
+        @include heading;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -1em;
+    }
+
+    &-item {
+        flex: 1;
+        margin: 0 1em 2em 1em;
+        background: var(--color-tertiary-grey-25);
+
+        &:first-child {
+            flex-basis: 100%;
+        }
+    
+        &:not(:first-child) {
+            flex: 1;
+        }
+    }
+}
+
+.cardItem {
+    @extend .blockCards-item;
+    padding: 1em;
+
+    &-preheading {
+        @include preheading;
+    }
+
+    &-heading {
+        @include heading;
+    }
+
+    &-button {
+        @include button(var(--color-program-green-100));
+    }
+
+    &-duration {
+        display: block;
+    }
+
+}

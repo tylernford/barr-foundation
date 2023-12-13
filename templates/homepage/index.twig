@@ -14,7 +14,29 @@ Homepage template
 {% import '_macros/02_components/_quote' as quote %}
 {% import '_macros/03_modules/_accordion' as accordionModule %}
 
+{% import '_macros/02_components/_assets' as assets %}
+
 {% block content %}
+
+{% set homepage = craft.entries().section('homepage').one() %}
+
+{# HOMEPAGE OPENER #}
+{% set opener = homepage.openerHomepage %}
+<div class="blockOpener blockOpener--homepage">
+    <div class="blockOpener-text">
+        <h1 class="blockOpener-heading">{{ opener.textHeading }}</h1>
+        <div class="blockOpener-desc">{{ opener.textDescription }}</div>
+    </div>
+
+    <div class="blockOpener-media">
+        <img src="{{ opener.assetImage.one().url }}" alt="" />
+    </div>
+</div>
+
+{# HOMEPAGE BUILDER #}
+{% set builder = homepage.builderHome.all() %}
+
+{% include '_partials/_builder-homepage.twig' with {'builder': builder} %}
 
 
 {% endblock %}
