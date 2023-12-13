@@ -1,0 +1,74 @@
+{% import '_macros/02_components/_assets' as assets %}
+
+{% import '_macros/01_elements/_actions' as actions %}
+{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+{% import '_macros/01_elements/_details' as details %}
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
+{% import '_macros/02_components/_accordion' as accordion %}
+{% import '_macros/02_components/_quote' as quote %}
+{% import '_macros/03_modules/_accordion' as accordionModule %}
+
+{% for i in builder.all() %}
+
+{% switch i.type %}
+    
+    {% case 'sectionBlock' %}
+        {% set sectionName = i.dividerSection.sectionName %}
+        {% set innerBlocks = builder.level(2).all() %}
+        <section>
+            <h1 id="{{ sectionName|slugify }}">{{ sectionName }}</h1>
+
+            {% for b in innerBlocks %}
+
+            {# Simplify component handling #}
+            {% set camel     = b.type %}
+            {% set arr       = camel|dasherize|split('-') %}
+            {% set component = arr[0] %}
+            {% set variant   = arr[1] %}
+
+            {# call component _macro: {{ component.variant }} or {{ component.handle(variant) }} #}
+
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">{{ component|titleize }}: {{ variant|titleize }} [Title Goes Here]</h2>
+            </div>
+
+
+            {# {% switch handle %}
+                {% case 'cardFeature' %}
+                {% case 'feedGrantees' %}
+                {% case 'feedJobs' %}
+                {% case 'feedJobsBoard' %}
+                {% case 'feedNews' %}
+                {% case 'feedBio' %}
+                {% case 'carouselBlog' %}
+
+                {% case 'carouselFellows' %}
+
+                {% case 'carouselGrantees' %}
+
+                {% case 'carouselQuotes' %}
+
+                {% case 'highlightQuote' %}
+
+                {% case 'highlightStats' %}
+
+                {% case 'timelineSingle' %}
+
+                {% case 'timelineMultiple' %}
+
+                {% case 'textAccordion' %}
+
+                {% case 'textBody' %}
+
+            {% endswitch %} #}
+
+            {% endfor %}
+
+        </section>
+    {% case 'prefooterForm' %}
+
+    
+
+{% endswitch %}
+
+{% endfor %}

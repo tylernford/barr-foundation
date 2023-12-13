@@ -1,4 +1,4 @@
-changedFieldIndicator: 1357029554
+changedFieldIndicator: 1222768824
 field: 1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02 # Opener: Homepage
 fieldLayouts:
   b85206fd-0e1c-471b-9e81-75bd78118b32:
@@ -74,7 +74,7 @@ fields:
         - image
       branchLimit: null
       defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: null
+      defaultUploadLocationSubpath: Homepage/Openers
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1

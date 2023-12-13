@@ -6,13 +6,6 @@ Homepage template
 =========================================================== #}
 
 {% extends '_layouts/_base' %}
-{% import '_macros/01_elements/_actions' as actions %}
-{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
-{% import '_macros/01_elements/_details' as details %}
-{% import '_macros/01_elements/_section-title' as sectionTitles %}
-{% import '_macros/02_components/_accordion' as accordion %}
-{% import '_macros/02_components/_quote' as quote %}
-{% import '_macros/03_modules/_accordion' as accordionModule %}
 
 {% import '_macros/02_components/_assets' as assets %}
 
@@ -34,7 +27,7 @@ Homepage template
 </div>
 
 {# HOMEPAGE BUILDER #}
-{% set builder = homepage.builderHome.all() %}
+{% set builder = homepage.builderHome %}
 
 {% include '_partials/_builder-homepage.twig' with {'builder': builder} %}
 

@@ -1,0 +1,48 @@
+{# ===========================================================
+Template: interior/index.twig
+URL: /
+===========================================================
+Interior template
+=========================================================== #}
+
+{% extends '_layouts/_base' %}
+
+{% import '_macros/02_components/_assets' as assets %}
+
+{% block content %}
+
+{# INTERIOR OPENER #}
+{% set opener = entry.openerLanding %}
+<div class="blockOpener blockOpener--interior">
+    <div class="blockOpener-text">
+        <h1 class="blockOpener-heading">{{ opener.textHeading }}</h1>
+        <div class="blockOpener-desc">{{ opener.textDescription }}</div>
+    </div>
+    
+    {# Bookmark Menu #}
+    <div class="">
+
+    </div>
+    
+    {% set openerImage = opener.assetImage|length ? opener.assetImage.one() : null %}
+    {% if openerImage %}
+    <div class="blockOpener-media">
+        <img src="{{ openerImage.url }}" alt="" />
+    </div>
+    {% endif %}
+</div>
+
+{# INTERIOR BUILDER: #}
+{# 1. People is a unique builder 
+   2. Grants Database is builder-less
+   3. Default to common builder for everything else
+#}
+{% set builder = entry.slug == 'people' ? entry.builderPeople : (entry.slug == 'grants-grantees' ? null : entry.builderCommon ) %}
+
+{% if builder %}
+    {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+{% else %}
+    {# Grants DB dynamic render #}
+{% endif %}
+
+{% endblock %}

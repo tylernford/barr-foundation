@@ -7,7 +7,7 @@ name: 'Card: Simple'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 155780009
+  changedFieldIndicator: 1638325457
   columns:
     __assoc__:
       -

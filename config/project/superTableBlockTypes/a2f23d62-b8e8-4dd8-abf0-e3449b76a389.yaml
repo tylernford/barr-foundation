@@ -1,4 +1,4 @@
-changedFieldIndicator: 1918152362
+changedFieldIndicator: 1586905581
 field: 29942c87-1bd3-4690-ae98-ba104b5589a2 # Card: Post
 fieldLayouts:
   fdae9137-bf26-4adb-b3fd-4b6789d14bcd:
@@ -112,7 +112,6 @@ fields:
       showSiteMenu: true
       sources:
         - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-        - 'section:1982f1d0-3929-4ddf-b0e0-76d519d91f39'
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
@@ -276,7 +275,7 @@ fields:
         - image
       branchLimit: null
       defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: null
+      defaultUploadLocationSubpath: '{owner.section}/Cards'
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1

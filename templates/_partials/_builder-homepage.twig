@@ -1,6 +1,14 @@
 {% import '_macros/02_components/_assets' as assets %}
 
-{% for b in builder %}
+{% import '_macros/01_elements/_actions' as actions %}
+{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+{% import '_macros/01_elements/_details' as details %}
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
+{% import '_macros/02_components/_accordion' as accordion %}
+{% import '_macros/02_components/_quote' as quote %}
+{% import '_macros/03_modules/_accordion' as accordionModule %}
+
+{% for b in builder.all() %}
 
 {% switch b.type %}
     

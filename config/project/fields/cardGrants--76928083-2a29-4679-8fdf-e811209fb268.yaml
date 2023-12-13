@@ -7,7 +7,7 @@ name: 'Card: Grants'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1962712966
+  changedFieldIndicator: 582422912
   columns:
     __assoc__:
       -
