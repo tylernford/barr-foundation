@@ -1,4 +1,4 @@
-dateModified: 1701446052
+dateModified: 1702332615
 elementSources:
   craft\elements\Asset:
     -
@@ -499,6 +499,7 @@ meta:
     19bcf750-aecc-4f9c-b4fb-50e6d96af2eb: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
     21dad0a7-2d67-433c-b04f-da4773293880: 'Developer: Release' # Developer: Release
     24c92902-e46c-423d-b80a-15d697d098ec: Heading # Heading
+    26d3b496-a8ba-491c-a3c3-a640399e5875: 'Text: Byline' # Text: Byline
     30a0b344-d9b4-451b-9c8d-4fba8a91a75f: 'Flag: Primary' # Flag: Primary
     30cb9cee-6f83-4c27-996e-4c2f1f12ecf4: Media # Media
     31c034cd-4ae7-4417-80bb-62595637115d: 'Nested Menu' # Nested Menu
@@ -508,6 +509,7 @@ meta:
     48aa8bac-f5e1-487b-a042-3dca5b50c89c: Image # Image
     48de2574-ea84-4b60-b7e2-2e3a4a515fa2: Miscellaneous # Miscellaneous
     50ac893d-c55d-48d8-a3e9-08de620039ab: 'Text: Version' # Text: Version
+    53b9f888-fe43-469a-a9af-a0b2a7146993: 'Text: Caption' # Text: Caption
     54f700ed-cca9-47c8-b73f-71ee87ddc640: 'Timeline: Single Event Per Milestone' # Timeline: Single Event Per Milestone
     55d6aaf4-ac71-4f0e-9f25-f00a07154e2b: Longform # Longform
     57a475da-bd34-46ee-8693-6055079fb616: 'Asset: Image(s) or Video(s)' # Asset: Image(s) or Video(s)
@@ -683,6 +685,7 @@ meta:
     cb1a13a4-f53a-4aa3-a568-1c10abd30a4e: Action # Action
     cb18e454-7f9b-4477-ab6b-e5c900f0c4e4: 'Text: Middle initial' # Text: Middle initial
     cca24e52-76d4-414b-81b3-ceb3665a9962: Event # Event
+    cd4c8a64-ae1c-451f-9727-fca9cd6c9a9b: 'Content Editors' # Content Editors
     cebe9f65-5c23-462d-a3e9-6d51ecd7eb49: 'Card: Grantmaking' # Card: Grantmaking
     cf026ccf-44b0-44ea-bb7c-a2d919af1521: 'Media: Audio or Video' # Media: Audio or Video
     cfb7f673-e726-4e10-b627-eb563177ea3d: 'Style: Width' # Style: Width
@@ -905,9 +908,3 @@ system:
   retryDuration: null
   schemaVersion: 4.5.3.0
   timeZone: $TZ
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true
