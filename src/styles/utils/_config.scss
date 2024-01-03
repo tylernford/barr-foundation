@@ -158,6 +158,7 @@ $breakpoints: (
 	--base-3: 12px;
 	--base-2: 8px;
 	--base: 4px;
+	--neg-base-2: -8px;
 
 
 	--base-50px: 50px;
@@ -166,8 +167,8 @@ $breakpoints: (
 	--base-25px: 25px;
 	--base-15px: 15px;
 	--base-10px: 10px;
-	--neg-base-2: -10px;
-	--neg-base-4: -20px;
+	--neg-base-10px: -10px;
+	--neg-base-20px: -20px;
 
 	--col-8: 66.6666666666%;
 	--col-10: 83.3333333333%;
@@ -181,7 +182,7 @@ $breakpoints: (
 :root {
 	--shadow-action: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
 
-	--radius-action: 2.1875rem; // 35px
+	--radius-action: 2.25rem; // 35px
 	--radius-action-s: 0.125rem; // 2px
 
 	--icon-size: 1.25rem; // 20px

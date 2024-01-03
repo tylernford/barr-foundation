@@ -61,7 +61,7 @@ function expandPanel(panel, panelTrigger, panelBody) {
 
   // Animate panel body opacity and transform
   panelBody.animation = panelBody.animate({
-    opacity: [0, 1], transform: ['translateY(var(--neg-base-4))', 'translateY(0)'],
+    opacity: [0, 1], transform: ['translateY(var(--neg-base-20px))', 'translateY(0)'],
   }, {
     duration: 400, easing: `ease-out`
   });
@@ -85,7 +85,7 @@ function closePanel(panel, panelTrigger, panelBody) {
 
   // Animate panel body opacity and transform
   panelBody.animation = panelBody.animate({
-    opacity: [1, 0], transform: ['translateY(0)', 'translateY(var(--neg-base-4))'],
+    opacity: [1, 0], transform: ['translateY(0)', 'translateY(var(--neg-base-20px))'],
   }, {
     duration: 400, easing: `ease-out`
   });

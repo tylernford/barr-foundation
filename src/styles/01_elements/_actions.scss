@@ -13,14 +13,11 @@
     Button & Link Shared Styles
     ------------------------------------------------------------------------ */
     --color-action-primary: var(--color-primary-teal-150);
-    --color-action-primary-reversed: var(--color-primary-teal-25);
-    --color-action-label: var(--color-tertiary-grey-25);
-    --color-action-label-reversed: var(--color-tertiary-grey-200);
-    --color-action-hover: var(--color-tertiary-grey-200);
-    --transition-action-in: all var(--transition) ease-out;
-    --transition-action-in--intermediate: all var(--transition-intermediate) ease-out;
+    --color-action-secondary: var(--color-tertiary-grey-25);
+    --color-action-primary-hover: var(--color-tertiary-citrus-100);
+    --color-action-secondary-hover: var(--color-primary-navy-100);
+    --transition-action-in: all var(--transition-intermediate) ease-out;
     --transition-action-out: all var(--transition) ease-in;
-    --transition-action-out--intermediate: all var(--transition-intermediate) ease-in;
 
     flex-shrink: 0;
     display: inline-flex;
@@ -58,41 +55,36 @@
         
         // With text
         &:not([data-icon-only=true]) {
-            padding: var(--base-15px) var(--base-30px); // 15px 30px
+            padding: var(--base-4) var(--base-6); // 16px 24px
 
             .action__icon {
-                margin-top: -2px;
+                margin-top: -3px;
             }
         }
 
         // Icon only
         &[data-icon-only=true] {
-            padding: var(--base-15px); // 15px
-            
-            .action__text {
-                @include totallyHide;
-            }
+            padding: var(--base-4); // 16px
         }
 
         // Colors
         &[data-is-reversed="false"] {
             background-color: var(--color-action-primary);
-            color: var(--color-action-label);
+            color: var(--color-action-secondary);
         }
 
         &[data-is-reversed="true"] {
-            background-color: var(--color-action-primary-reversed);
-            color: var(--color-action-label-reversed);
+            background-color: var(--color-action-secondary);
+            color: var(--color-action-primary);
         }
 
         // Hover
         @media (hover: hover){
             &:hover {
                 box-shadow: var(--shadow-action);
-                border-radius: var(--radius-action-s);
-                background-color: var(--color-action-hover);
-                color: var(--color-action-label);
-                transition: var(--transition-action-in--intermediate);
+                background-color: var(--color-action-primary-hover);
+                color: var(--color-action-secondary-hover);
+                transition: var(--transition-action-in);
             }
         }
 
@@ -100,10 +92,9 @@
         &:focus-visible {
             outline: var(--outline-width) solid var(--color-focus);
             outline-offset: var(--outline-offset);
-            border-radius: var(--radius-action-s);
-            background-color: var(--color-action-hover);
-            color: var(--color-action-label);
-            transition: var(--transition-action-in--intermediate);
+            background-color: var(--color-action-primary-hover);
+            color: var(--color-action-secondary-hover);
+            transition: var(--transition-action-in);
         }
     }
 
@@ -112,7 +103,7 @@
     Link
     ------------------------------------------------------------------------ */
     &--link {
-        padding: var(--base-2) 0; // 10px 0
+        padding: var(--base-4) 0; // 16px 0
         position: relative;
         transition: var(--transition-action-out);
 
@@ -120,40 +111,35 @@
             position: relative;
         }
 
-        &::before {
-            content: '';
-            position: absolute;
-            box-shadow: var(--shadow-action);
-            border-radius: var(--radius-action-s);
-            background-color: var(--color-action-hover);
-            opacity: 0;
-            transition: var(--transition-action-out);
-        }
-
         // With text
         &:not([data-icon-only=true]) {
-            &::before {
-                inset: 0 -.5rem; // -8px
-            }
-
             &::after {
                 content: '';
                 inset: auto 0 0 0;
                 height: 1px;
                 position: absolute;
-                background-color: var(--color-action-hover);
                 transition: var(--transition-action-out);
             }
 
             .action__icon {
-                margin-top: -2px;
+                margin-top: -3px;
             }
         }
 
-        // With text
+        // Icon only
         &[data-icon-only=true] {
+            margin-inline-start: var(--neg-base-2);
+            padding: var(--base-2);
+
             &::before {
-                inset: 0 var(--neg-base-2); // 0 -10px
+                content: '';
+                inset: 0;
+                position: absolute;
+                box-shadow: var(--shadow-action);
+                border-radius: var(--radius-action);
+                background-color: var(--color-action-secondary-hover);
+                opacity: 0;
+                transition: var(--transition-action-out);
             }
         }
 
@@ -167,44 +153,44 @@
         }
 
         &[data-is-reversed="true"] {
-            color: var(--color-action-primary-reversed);
+            color: var(--color-action-secondary);
 
             &::after {
-                background-color: var(--color-action-primary-reversed);
+                background-color: var(--color-action-secondary);
             }
         }
 
         @media (hover: hover){
             &:hover {
-                color: var(--color-action-label);
-                transition: var(--transition-action-out--intermediate);
-
-                &::before {
-                    opacity: 1;
-                    transition: var(--transition-action-in--intermediate);
+                color: var(--color-action-secondary-hover);
+                transition: var(--transition-action-in);
+                
+                &::after {
+                    height: 3px;
+                    background-color: var(--color-action-secondary-hover);
+                    transition: var(--transition-action-in);
                 }
 
-                &::after {
-                    background-color: var(--color-action-hover);
-                    transition: var(--transition-action-in);
+                // Without text
+                &[data-icon-only=true] {
+                    color: var(--color-action-secondary);
+                    
+                    &::before {
+                        opacity: 1;
+                    }
                 }
             }
         }
 
         &:focus-visible {
-            color: var(--color-action-label);
+            color: var(--color-action-secondary-hover);
             outline: 0;
-            transition: var(--transition-action-out--intermediate);
-            
-            &::before {
-                opacity: 1;
-                outline: var(--outline-width) solid var(--color-focus);
-                outline-offset: var(--outline-offset);
-                transition: var(--transition-action-in--intermediate);
-            }
+            outline: var(--outline-width) solid var(--color-focus);
+            outline-offset: var(--outline-offset);
+            transition: var(--transition-action-in);
 
             &::after {
-                background-color: var(--color-action-hover);
+                background-color: var(--color-action-secondary-hover);
                 transition: var(--transition-action-in);
             }
         }
