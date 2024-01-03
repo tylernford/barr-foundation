@@ -99,11 +99,11 @@ $breakpoints: (
 	Colors
 ------------------------------------------------------------------------ */
 :root {
-	--color-primary-teal-150: hsla(175, 98%, 17%, 1);
-	--color-primary-teal-100: hsla(173, 100%, 28%, 1);
-	--color-primary-teal-50: hsla(175, 83%, 36%, 1);
-	--color-primary-teal-25: hsla(175, 50%, 80%, 1);
-	--color-primary-teal-20: hsla(176, 49%, 80%, 1);
+	--color-primary-teal-150: hsla(174, 97%, 13%, 1);
+	--color-primary-teal-100: hsla(175, 98%, 17%, 1);
+	--color-primary-teal-50: hsla(173, 100%, 28%, 1);
+	--color-primary-teal-25: hsla(175, 83%, 36%, 1);
+	--color-primary-teal-20: hsla(159, 50%, 70%, 1);
 
 	--color-primary-navy-100: hsla(247, 44%, 23%, 1);
 	--color-primary-navy-50: hsla(247, 34%, 30%, 1);
@@ -112,7 +112,7 @@ $breakpoints: (
 	--color-program-green-100: hsla(153, 100%, 25%, 1);
 	--color-program-green-50: hsla(136, 25%, 46%, 1);
 
-	--color-program-plum-150: hsla(336, 30%, 27%, 1);
+	--color-program-plum-150: hsla(331, 30%, 27%, 1);
 	--color-program-plum-100: hsla(326, 70%, 31%, 1);
 	--color-program-plum-50: hsla(328, 37%, 45%, 1);
 
@@ -120,7 +120,7 @@ $breakpoints: (
 	--color-program-marigold-100: hsla(32, 80%, 52%, 1);
 	--color-program-marigold-50: hsla(31, 94%, 66%, 1);
 
-	--color-tertiary-clouds-150: hsla(222, 53%, 36%, 1);
+	--color-tertiary-clouds-150: hsla(223, 53%, 36%, 1);
 	--color-tertiary-clouds-100: hsla(207, 63%, 45%, 1);
 	--color-tertiary-clouds-50: hsla(210, 53%, 56%, 1);
 
@@ -132,11 +132,12 @@ $breakpoints: (
 	--color-tertiary-citrus-100: hsla(61, 71%, 61%, 1);
 	--color-tertiary-citrus-50: hsla(64, 68%, 71%, 1);
 
-	--color-tertiary-grey-200: hsla(0, 0%, 0%, 1);
+	--color-tertiary-grey-200: hsla(0, 0%, 24%, 1);
 	--color-tertiary-grey-150: hsla(220, 1%, 39%, 1);
 	--color-tertiary-grey-100: hsla(216, 2%, 59%, 1);
 	--color-tertiary-grey-50: hsla(200, 3%, 79%, 1);
 	--color-tertiary-grey-25: hsla(0, 0%, 96%, 1);
+	--color-tertiary-grey-25-65: hsla(0, 0%, 96%, .65);
 
 	--color-focus: var(--color-tertiary-clouds-50);
 }
