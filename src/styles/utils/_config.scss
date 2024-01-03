@@ -202,19 +202,20 @@ $breakpoints: (
 @mixin container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: var(--base-5);
-	padding-left: var(--base-5);
+	padding-inline: var(--base-5);
 	width: 100%;
-	max-width: 81.25rem; // 1300px
+	max-width: 94.5rem; // 1512px
 
-	@media (min-width: 36rem) {
-		padding-right: var(--base-25px);
-		padding-left: var(--base-25px);
+	@media (min-width: 48rem) {
+		padding-inline: var(--base-9);
 	}
 
 	@media (min-width: 64rem) {
-		padding-right: var(--base-50px);
-		padding-left: var(--base-50px);
+		padding-inline: var(--base-12);
+	}
+
+	@media (min-width: 80rem) {
+		padding-inline: var(--base-18);
 	}
 }
 
