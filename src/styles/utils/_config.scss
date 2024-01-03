@@ -146,18 +146,25 @@ $breakpoints: (
 	Space
 ------------------------------------------------------------------------ */
 :root {
-	--base-24: 120px;
-	--base-20: 100px;
-	--base-14: 70px;
-	--base-10: 50px;
-	--base-8: 40px;
-	--base-6: 30px;
-	--base-5: 25px;
-	--base-4: 20px;
-	--base-3: 15px;
-	--base-2: 10px;
-	--base: 5px;
-	
+	--base-24: 96px;
+	--base-18: 72px;
+	--base-14: 56px;
+	--base-12: 48px;
+	--base-9: 36px;
+	--base-6: 24px;
+	--base-5: 20px;
+	--base-4: 16px;
+	--base-3: 12px;
+	--base-2: 8px;
+	--base: 4px;
+
+
+	--base-50px: 50px;
+	--base-40px: 40px;
+	--base-30px: 30px;
+	--base-25px: 25px;
+	--base-15px: 15px;
+	--base-10px: 10px;
 	--neg-base-2: -10px;
 	--neg-base-4: -20px;
 
@@ -193,19 +200,19 @@ $breakpoints: (
 @mixin container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: var(--base-4);
-	padding-left: var(--base-4);
+	padding-right: var(--base-5);
+	padding-left: var(--base-5);
 	width: 100%;
 	max-width: 81.25rem; // 1300px
 
 	@media (min-width: 36rem) {
-		padding-right: var(--base-5);
-		padding-left: var(--base-5);
+		padding-right: var(--base-25px);
+		padding-left: var(--base-25px);
 	}
 
 	@media (min-width: 64rem) {
-		padding-right: var(--base-10);
-		padding-left: var(--base-10);
+		padding-right: var(--base-50px);
+		padding-left: var(--base-50px);
 	}
 }
 

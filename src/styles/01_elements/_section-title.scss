@@ -8,8 +8,8 @@
 
 .section-title {
   @include container;
-  padding-top: var(--base-10);
-  padding-bottom: var(--base-3);
+  padding-top: var(--base-50px);
+  padding-bottom: var(--base-15px);
 
   // Headings
   > * {
@@ -30,7 +30,7 @@
   // Border
   &:not([data-border=false]) {
     > * {
-      padding-top: var(--base-8);
+      padding-top: var(--base-40px);
       border-top: 1px solid var(--color-tertiary-grey-100);
     }
   }

@@ -58,7 +58,7 @@
         
         // With text
         &:not([data-icon-only=true]) {
-            padding: var(--base-3) var(--base-6); // 15px 30px
+            padding: var(--base-15px) var(--base-30px); // 15px 30px
 
             .action__icon {
                 margin-top: -2px;
@@ -67,7 +67,7 @@
 
         // Icon only
         &[data-icon-only=true] {
-            padding: var(--base-3); // 15px
+            padding: var(--base-15px); // 15px
             
             .action__text {
                 @include totallyHide;
