@@ -11,14 +11,14 @@
   --color-quote-secondary: var(--color-tertiary-grey-150);
 
   @include container;
-  margin-top: var(--base-10);
-  margin-bottom: var(--base-10);
+  margin-top: var(--base-50px);
+  margin-bottom: var(--base-50px);
   color: var(--color-quote-secondary);
 
   // Quote
   p {
-    margin-bottom: var(--base-6);
-    padding-top: var(--base-8);
+    margin-bottom: var(--base-30px);
+    padding-top: var(--base-40px);
     max-width: 30em;
     position: relative;
     @include getType('subhead');
@@ -33,12 +33,12 @@
       height: 0;
       position: absolute;
       border-style: solid;
-      border-width: var(--base-5) var(--base-5) 0 0;
+      border-width: var(--base-25px) var(--base-25px) 0 0;
       border-color: var(--color-quote-primary) transparent transparent transparent;
     }
 
     &::after {
-      left: var(--base-6);
+      left: var(--base-30px);
     }
   }
 
@@ -48,7 +48,7 @@
     flex-direction: column;
 
     .details {
-      margin-bottom: var(--base-2);
+      margin-bottom: var(--base-10px);
     }
 
     .attribution__secondary {
@@ -63,7 +63,7 @@
   @include breakpoint(md) {
     p {
       margin-bottom: 2.5rem; // 40px
-      padding-top: var(--base-10);
+      padding-top: var(--base-50px);
       @include getType('h3-messina');
     }
   }

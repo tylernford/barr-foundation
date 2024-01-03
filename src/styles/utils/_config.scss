@@ -99,11 +99,11 @@ $breakpoints: (
 	Colors
 ------------------------------------------------------------------------ */
 :root {
-	--color-primary-teal-150: hsla(175, 98%, 17%, 1);
-	--color-primary-teal-100: hsla(173, 100%, 28%, 1);
-	--color-primary-teal-50: hsla(175, 83%, 36%, 1);
-	--color-primary-teal-25: hsla(175, 50%, 80%, 1);
-	--color-primary-teal-20: hsla(176, 49%, 80%, 1);
+	--color-primary-teal-150: hsla(174, 97%, 13%, 1);
+	--color-primary-teal-100: hsla(175, 98%, 17%, 1);
+	--color-primary-teal-50: hsla(173, 100%, 28%, 1);
+	--color-primary-teal-25: hsla(175, 83%, 36%, 1);
+	--color-primary-teal-20: hsla(159, 50%, 70%, 1);
 
 	--color-primary-navy-100: hsla(247, 44%, 23%, 1);
 	--color-primary-navy-50: hsla(247, 34%, 30%, 1);
@@ -112,7 +112,7 @@ $breakpoints: (
 	--color-program-green-100: hsla(153, 100%, 25%, 1);
 	--color-program-green-50: hsla(136, 25%, 46%, 1);
 
-	--color-program-plum-150: hsla(336, 30%, 27%, 1);
+	--color-program-plum-150: hsla(331, 30%, 27%, 1);
 	--color-program-plum-100: hsla(326, 70%, 31%, 1);
 	--color-program-plum-50: hsla(328, 37%, 45%, 1);
 
@@ -120,7 +120,7 @@ $breakpoints: (
 	--color-program-marigold-100: hsla(32, 80%, 52%, 1);
 	--color-program-marigold-50: hsla(31, 94%, 66%, 1);
 
-	--color-tertiary-clouds-150: hsla(222, 53%, 36%, 1);
+	--color-tertiary-clouds-150: hsla(223, 53%, 36%, 1);
 	--color-tertiary-clouds-100: hsla(207, 63%, 45%, 1);
 	--color-tertiary-clouds-50: hsla(210, 53%, 56%, 1);
 
@@ -132,11 +132,12 @@ $breakpoints: (
 	--color-tertiary-citrus-100: hsla(61, 71%, 61%, 1);
 	--color-tertiary-citrus-50: hsla(64, 68%, 71%, 1);
 
-	--color-tertiary-grey-200: hsla(0, 0%, 0%, 1);
+	--color-tertiary-grey-200: hsla(0, 0%, 24%, 1);
 	--color-tertiary-grey-150: hsla(220, 1%, 39%, 1);
 	--color-tertiary-grey-100: hsla(216, 2%, 59%, 1);
 	--color-tertiary-grey-50: hsla(200, 3%, 79%, 1);
 	--color-tertiary-grey-25: hsla(0, 0%, 96%, 1);
+	--color-tertiary-grey-25-65: hsla(0, 0%, 96%, .65);
 
 	--color-focus: var(--color-tertiary-clouds-50);
 }
@@ -146,20 +147,28 @@ $breakpoints: (
 	Space
 ------------------------------------------------------------------------ */
 :root {
-	--base-24: 120px;
-	--base-20: 100px;
-	--base-14: 70px;
-	--base-10: 50px;
-	--base-8: 40px;
-	--base-6: 30px;
-	--base-5: 25px;
-	--base-4: 20px;
-	--base-3: 15px;
-	--base-2: 10px;
-	--base: 5px;
-	
-	--neg-base-2: -10px;
-	--neg-base-4: -20px;
+	--base-24: 96px;
+	--base-18: 72px;
+	--base-14: 56px;
+	--base-12: 48px;
+	--base-9: 36px;
+	--base-6: 24px;
+	--base-5: 20px;
+	--base-4: 16px;
+	--base-3: 12px;
+	--base-2: 8px;
+	--base: 4px;
+	--neg-base-2: -8px;
+
+
+	--base-50px: 50px;
+	--base-40px: 40px;
+	--base-30px: 30px;
+	--base-25px: 25px;
+	--base-15px: 15px;
+	--base-10px: 10px;
+	--neg-base-10px: -10px;
+	--neg-base-20px: -20px;
 
 	--col-8: 66.6666666666%;
 	--col-10: 83.3333333333%;
@@ -173,7 +182,7 @@ $breakpoints: (
 :root {
 	--shadow-action: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
 
-	--radius-action: 2.1875rem; // 35px
+	--radius-action: 2.25rem; // 35px
 	--radius-action-s: 0.125rem; // 2px
 
 	--icon-size: 1.25rem; // 20px
@@ -193,19 +202,19 @@ $breakpoints: (
 @mixin container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: var(--base-4);
-	padding-left: var(--base-4);
+	padding-right: var(--base-5);
+	padding-left: var(--base-5);
 	width: 100%;
 	max-width: 81.25rem; // 1300px
 
 	@media (min-width: 36rem) {
-		padding-right: var(--base-5);
-		padding-left: var(--base-5);
+		padding-right: var(--base-25px);
+		padding-left: var(--base-25px);
 	}
 
 	@media (min-width: 64rem) {
-		padding-right: var(--base-10);
-		padding-left: var(--base-10);
+		padding-right: var(--base-50px);
+		padding-left: var(--base-50px);
 	}
 }
 

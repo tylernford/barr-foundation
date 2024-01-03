@@ -18,7 +18,7 @@
 
     li {
       &:not(:last-child) {
-        margin-right: var(--base-10);
+        margin-right: var(--base-50px);
         position: relative;
 
         &::before,
