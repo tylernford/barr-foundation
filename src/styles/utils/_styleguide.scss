@@ -20,112 +20,152 @@ $svg-path: '../svgs/';
 ------------------------------------------------------------------------ */
 $text-map: (	
 	// Headlines
-	"h2-axiforma": (
-		font-family: var(--ff-axiforma),
-		font-size: var(--type-60),
-		font-weight: 400,
-		line-height: var(--line-height-extra-extra-tight),
-		letter-spacing: var(--letter-spacing-extra-tight),
+	"h1-messina": (
+		font-family: var(--ff-messina-modern),
+		font-size: var(--type-64),
+		font-weight: 200,
+		letter-spacing: -0.02em,
+		line-height: 1.125,
 	),
-	"h3-axiforma": (
-		font-family: var(--ff-axiforma),
-		font-size: var(--type-38),
-		font-weight: 500,
-		line-height: var(--line-height-extra-tight),
-		letter-spacing: var(--letter-spacing-extra-tight)
+	"h2-messina": (
+		font-family: var(--ff-messina-modern),
+		font-size: var(--type-56),
+		font-weight: 200,
+		letter-spacing: -0.02em,
+		line-height: 1.1428571429,
 	),
-	"h4-axiforma": (
-		font-family: var(--ff-axiforma),
-		font-size: var(--type-28),
-		font-weight: 500,
-		line-height: var(--line-height-tight),
-		letter-spacing: var(--letter-spacing-extra-tight)
-	),
-	"h5-axiforma": (
-		font-family: var(--ff-axiforma),
-		font-size: var(--type-22),
-		font-weight: 500,
-		line-height: var(--line-height-snug),
-		letter-spacing: var(--letter-spacing-extra-tight)
-	),
-
 	"h3-messina": (
 		font-family: var(--ff-messina-modern),
-		font-size: var(--type-38),
+		font-size: var(--type-32),
 		font-weight: 200,
-		line-height: var(--line-height-extra-tight),
-		letter-spacing: var(--letter-spacing-extra-tight)
+		letter-spacing: -0.015em,
+		line-height: 1.25,
 	),
 	"h4-messina": (
 		font-family: var(--ff-messina-modern),
-		font-size: var(--type-28),
-		font-style: italic,
+		font-size: var(--type-24),
 		font-weight: 200,
-		line-height: var(--line-height-tight),
+		letter-spacing: -0.015em,
+		line-height: 1.3333333333,
+	),
+	"h5-messina": (
+		font-family: var(--ff-messina-modern),
+		font-size: var(--type-20),
+		font-weight: 200,
+		letter-spacing: -0.02em,
+		line-height: 1.4,
+	),
+	"h1-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-64),
+		font-weight: 400,
+		letter-spacing: -0.01em,
+		line-height: 1.125,
+	),
+	"h2-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-56),
+		font-weight: 400,
+		letter-spacing: -0.01em,
+		line-height: 1.1428571429,
+	),
+	"h3-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-32),
+		font-weight: 400,
+		letter-spacing: -0.01em,
+		line-height: 1.25,
+	),
+	"h4-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-24),
+		font-weight: 400,
+		letter-spacing: -0.01em,
+		line-height: 1.3333333333,
+	),
+	"h5-axiforma": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-20),
+		font-weight: 500,
+		letter-spacing: -0.01em,
+		line-height: 1.4,
 	),
 
 	// Subhead
 	"subhead": (
 		font-family: var(--ff-messina-modern),
-		font-size: var(--type-26),
+		font-size: var(--type-24),
 		font-weight: 200,
-		letter-spacing: var(--letter-spacing-extra-tight),
-		line-height: var(--line-height-snug),
+		letter-spacing: -0.01em,
+		line-height: 1.3333333333,
 	),
 
 	// Body
 	"body": (
 		font-family: var(--ff-messina-serif),
-		font-size: var(--type-21),
+		font-size: var(--type-20),
 		font-weight: 300,
-		line-height: var(--line-height-base),
-		letter-spacing: var(--letter-spacing-tight)
+		letter-spacing: -0.0075em,
+		line-height: 1.5,
 	),
 
 	// Caption
+	"caption-messina": (
+		font-family: var(--ff-messina-serif),
+		font-size: var(--type-17),
+		font-weight: 400,
+		letter-spacing: -0.005em,
+		line-height: 1.4117647059,
+	),
 	"caption-axiforma": (
 		font-family: var(--ff-axiforma),
 		font-size: var(--type-15),
 		font-weight: 400,
-		letter-spacing: var(--letter-spacing-narrow),
-		line-height: var(--line-height-loose),
-	),
-	"caption-messina": (
-		font-family: var(--ff-messina-serif),
-		font-size: var(--type-18),
-		font-weight: 400,
-		letter-spacing: var(--letter-spacing-tight),
-		line-height: var(--line-height-snug),
+		letter-spacing: 0.0025em,
+		line-height: 1.6,
 	),
 
 	// Detail
+	"detail-messina": (
+		font-family: var(--ff-messina-serif),
+		font-size: var(--type-14),
+		font-weight: 400,
+		letter-spacing: 0,
+		line-height: 1.4285714286,
+	),
 	"detail-axiforma": (
 		font-family: var(--ff-axiforma),
 		font-size: var(--type-14),
 		font-weight: 400,
-		letter-spacing: var(--letter-spacing),
-		line-height: var(--line-height-base),
+		letter-spacing: 0.015em,
+		line-height: 1.4285714286,
 	),
 
 	// Label
 	"label": (
 		font-family: var(--ff-axiforma),
-		font-size: var(--type-12),
+		font-size: var(--type-14),
 		font-weight: 500,
-		letter-spacing: var(--letter-spacing-wide),
-		line-height: var(--line-height-base),
+		letter-spacing: 0.1em,
+		line-height: 1.7142857143,
 		text-transform: uppercase,
 	),
-
-
+	"label-nav": (
+		font-family: var(--ff-axiforma),
+		font-size: var(--type-15),
+		font-weight: 500,
+		letter-spacing: 0.1em,
+		line-height: 1.6,
+		text-transform: uppercase,
+	),
 
 	// Actions
 	"action": (
 		font-family: var(--ff-axiforma),
 		font-size: var(--type-12),
 		font-weight: 500,
-		line-height: var(--line-height-loose),
-		letter-spacing: var(--letter-spacing-extra-wide),
+		line-height: 1.6666666667,
+		letter-spacing: 0.15em,
 		text-decoration: none,
 		text-transform: uppercase
 	),
