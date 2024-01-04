@@ -1,0 +1,43 @@
+{# _macros/02_components/_highlight.twig #}
+
+{% macro default(config) %}
+{% set variant = 'variant' in config|keys ? config.variant : '' %}
+{% set content = 'content' in config|keys ? config.content : null %}
+
+{% switch variant %}
+
+    {% case 'quote' %}
+    {% set highlight = content.highlightQuote.one() %}
+    {% set quote = highlight.quote %}
+    {% set attribution = highlight.attribution %}
+    {% set image = highlight.assetImage.one() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my quote highlight</h2>
+    </div>
+
+    {% case 'stats' %}
+    {% set heading   = content.textHeading %}
+    {% set statList  = content.highlightStats.all() %}
+    {% set infograph = content.assetInfographic.one() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my stats highlight</h2>
+        {% for item in statList %}
+            {% set label = item.textLabel %}
+            {% set stat  = item.textStat %}
+            {% set desc  = item.textDescription %}
+            <div>
+                This is my {{ label }} stat.
+            </div>
+        {% endfor %}
+    </div>
+
+    {% default %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my default highlight</h2>
+    </div>
+
+{% endswitch %}
+{% endmacro %}

@@ -1,0 +1,43 @@
+{# _macros/02_components/_timeline.twig #}
+
+{% macro default(config) %}
+{% set variant = 'variant' in config|keys ? config.variant : '' %}
+{% set content = 'content' in config|keys ? config.content : null %}
+
+{% switch variant %}
+
+    {% case 'single' %}
+    {% set timeline = content.highlightTimelineSingle.all() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my single timeline</h2>
+        {% for milestone in timeline %}
+            {% set year = milestone.year %}
+            {% set event = milestone.event.one() %}
+            This is my event: {{ year }}, {{ event.title }}
+        {% endfor %}
+    </div>
+
+    {% case 'multiple' %}
+    {% set timeline = content.highlightTimelineMultiple.all() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my multiple timeline</h2>
+        {% for milestone in timeline %}
+            {% set year = milestone.year %}
+            {% set eventList = milestone.event.all() %}
+            This is my event: {{ year }}
+            {% for event in eventList %}
+                {{ event.title }}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    {% default %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my default timeline</h2>
+    </div>
+
+{% endswitch %}
+{% endmacro %}
