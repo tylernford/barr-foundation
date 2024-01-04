@@ -18,13 +18,13 @@
             <h1 id="{{ sectionName|slugify }}">{{ sectionName }}</h1>
 
             {% for b in innerBlocks %}
-
-            {# Simplify component handling #}
+            
+            {# Simplify component handling by leveraging naming conventions #}
             {% set camel   = b.type %}
             {% set arr     = camel|dasherize|split('-') %}
             {# Set macro name, e.g. "card" #}
             {% set macro   = arr[0] %}
-            {# Set macro variant name #}
+            {# Set macro variant name, e.g. "feature"  #}
             {% set variant = arr[1] %}
             {# Create config object, as needed #}
             {% set config  = {
