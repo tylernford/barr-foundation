@@ -99,11 +99,11 @@ $breakpoints: (
 	Colors
 ------------------------------------------------------------------------ */
 :root {
-	--color-primary-teal-150: hsla(174, 97%, 13%, 1);
-	--color-primary-teal-100: hsla(175, 98%, 17%, 1);
-	--color-primary-teal-50: hsla(173, 100%, 28%, 1);
-	--color-primary-teal-25: hsla(175, 83%, 36%, 1);
-	--color-primary-teal-20: hsla(159, 50%, 70%, 1);
+	--color-primary-teal-200: hsla(174, 97%, 13%, 1);
+	--color-primary-teal-150: hsla(175, 98%, 17%, 1);
+	--color-primary-teal-100: hsla(173, 100%, 28%, 1);
+	--color-primary-teal-50: hsla(175, 83%, 36%, 1);
+	--color-primary-teal-25: hsla(159, 50%, 70%, 1);
 
 	--color-primary-navy-100: hsla(247, 44%, 23%, 1);
 	--color-primary-navy-50: hsla(247, 34%, 30%, 1);
@@ -138,6 +138,8 @@ $breakpoints: (
 	--color-tertiary-grey-50: hsla(200, 3%, 79%, 1);
 	--color-tertiary-grey-25: hsla(0, 0%, 96%, 1);
 	--color-tertiary-grey-25-65: hsla(0, 0%, 96%, .65);
+
+	--color-tertiary-white: hsla(0, 0%, 100%, 1);
 
 	--color-focus: var(--color-tertiary-clouds-50);
 }
