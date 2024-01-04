@@ -1,0 +1,49 @@
+{# _macros/02_components/_carousel.twig #}
+
+{% macro default(config) %}
+{% set variant = 'variant' in config|keys ? config.variant : '' %}
+{% set content = 'content' in config|keys ? config.content : null %}
+
+{% switch variant %}
+
+    {% case 'blog' %}
+    {% set heading = content.textHeading %}
+    {% set entries = content.carouselBlog.all() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my blog carousel</h2>
+    </div>
+
+    {% case 'fellows' %}
+    {% set heading = content.textHeading %}
+    {% set entries = content.carouselFellows.all() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my fellows carousel</h2>
+    </div>
+
+    {% case 'grantees' %}
+    {% set heading = content.textHeading %}
+    {% set entries = content.carouselGrantees.all() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my grantees carousel</h2>
+    </div>
+
+    {% case 'quotes' %}
+    {% set heading = content.textHeading %}
+    {% set entries = content.carouselQuotes.all() %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my quotes carousel</h2>
+    </div>
+
+    {% default %}
+
+    <div class="blockGeneric">
+        <h2 class="blockGeneric-heading">This is my default carousel</h2>
+    </div>
+
+
+{% endswitch %}
+{% endmacro %}

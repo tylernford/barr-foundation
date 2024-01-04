@@ -1,0 +1,44 @@
+{% macro default(config) %}
+{% set variant = 'variant' in config|keys ? config.variant : '' %}
+{% set content = 'content' in config|keys ? config.content : null %}
+
+{% if content %}
+{% set card     = content.cardSimple %} {# might want to move this inside the feature case #}
+{% set support  = card.textSupporting %}
+{% set label    = card.textPreheading %}
+{% set heading  = card.textHeading %}
+{% set image    = card.assetImage.one() %}
+{% set action   = card.actionLink %}
+{% set external = ( action.type == 'url' ) %}
+
+{% switch variant %}
+
+    {% case 'feature' %} 
+
+        <article class="cardItem cardItem--feature">
+            <span class="cardItem-preheading">{{ label }}</span>
+            <h3 class="cardItem-heading">{{ heading }}</h3>
+            <div class="cardItem-support">{{ support }}</div>
+            <a 
+                class="cardItem-button" 
+                href="{{ card.uri }}" 
+                title="Go to {{ heading }}"
+                {% if external %}
+                target="_blank"
+                {% endif %}>
+                Action 
+            </a>
+        </article>
+
+    {% default %}
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my default card block</h2>
+            {{ content|keys|json_encode }}
+        </div>
+
+{% endswitch %}
+{% endif %}
+{% endmacro %}
+
+
+
