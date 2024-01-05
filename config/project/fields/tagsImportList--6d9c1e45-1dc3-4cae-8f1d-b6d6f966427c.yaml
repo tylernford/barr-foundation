@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 66e0f455-1a4d-4b7b-8bb2-7a247cf9f655 # Imports
+handle: tagsImportList
+instructions: 'Solely used for initial WP blog import'
+name: 'Tags: Import List'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
