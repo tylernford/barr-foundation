@@ -1,0 +1,64 @@
+{# _macros/02_components/_feed.twig #}
+
+{% macro default(config) %}
+{% set variant = 'variant' in config|keys ? config.variant : '' %}
+{% set content = 'content' in config|keys ? config.content : null %}
+
+{% switch variant %}
+
+    {% case 'grantees' %}
+        {% set entries   = content.entriesGrantee.all() %}
+        {% set isFeature = content.flagFeature %}
+        {% set card      = content.cardAction %}
+        {% set action    = card.actionLink %}
+        {% set external  = ( action.type == 'url' ) %}
+        {% set support   = card.textSupporting %}
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my grantees feed</h2>
+        </div>
+
+    {% case 'jobs' %}
+        {% set isDynamic = content.flagDynamic %}
+        {% set entries   = content.entriesJobs.all() %}
+
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my jobs feed</h2>
+        </div>
+
+    {% case 'jobs-board' %}
+        {% set isDynamic = content.flagDynamic %}
+        {% set entries   = content.entriesJobsBoard.all() %}
+
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my jobs board feed</h2>
+        </div>
+
+    {% case 'news' %}
+
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my news feed</h2>
+
+            {% set cardList = content.cardNews.all() %}
+            {% for item in cardList %}
+                {% set type = item.type %} {# entry or media #}
+                {% set card = type == 'entry' ? item.entriesWildcard.one() : item.assetMedia.one() %}
+                <div>
+                    This is my {{ type }} card.
+                </div>
+            {% endfor %}
+
+    {% case 'bio' %}
+
+        {% set personType = content.cardPersonType.one() %}
+
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my {{ personType.title }} bio feed</h2>
+        </div>
+
+    {% default %}
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my default card block</h2>
+        </div>
+
+{% endswitch %}
+{% endmacro %}
