@@ -92,6 +92,11 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 6b4ba15a-4ca3-45eb-8549-a2eba7f8153f
+            userCondition: null
+          -
+            elementCondition: null
             fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
             instructions: null
             label: 'Asset: Feature Image'

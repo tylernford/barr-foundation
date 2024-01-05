@@ -1,6 +1,6 @@
 columnSuffix: null
 contentColumnType: text
-fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+fieldGroup: 66e0f455-1a4d-4b7b-8bb2-7a247cf9f655 # Imports
 handle: idBlogPost
 instructions: 'Post ID from Wordpress import'
 name: 'ID: Blog Post'
