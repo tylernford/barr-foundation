@@ -1,4 +1,4 @@
-dateModified: 1702501614
+dateModified: 1704485318
 elementSources:
   craft\elements\Asset:
     -
@@ -435,6 +435,7 @@ meta:
     4d548d8e-1537-4c78-9207-048346c5eda8: Research # Research
     4d753cb0-1ca4-4b73-aecc-957826dee5de: 'Card: Group' # Card: Group
     4d994633-7c38-4213-bd35-2b0d8966dff5: 'Page Builder: People' # Page Builder: People
+    4e139296-f9eb-4d48-8374-42a79d46413b: 'Tags: Import Primary' # Tags: Import Primary
     4eb30fbf-3647-444f-ba73-29ebb5b12477: 'Card: Team' # Card: Team
     04fbe62b-bcae-44dd-8023-e56efe203cb3: 'Action: URL' # Action: URL
     5a3ec662-f801-451b-97a6-8d2d40b08a5d: 'News + Insights' # News + Insights
@@ -452,6 +453,7 @@ meta:
     5f1ebbf5-e779-432a-bee5-8ee4e399d0e9: 'Card: Action' # Card: Action
     6aba2b9f-3c08-4c50-8b7f-bb848f592b20: 'Asset: Video' # Asset: Video
     6cc3b73a-f6dd-45e3-89fd-4c871ad53903: 'Is secondary?' # Is secondary?
+    6d9c1e45-1dc3-4cae-8f1d-b6d6f966427c: 'Tags: Import List' # Tags: Import List
     6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: Icon # Icon
     6dfb099a-3f70-4263-8930-a2a018c83ada: 'Text: Publication' # Text: Publication
     6e8ba94e-310e-4db0-a093-204c204e876f: Title # Title
@@ -514,8 +516,10 @@ meta:
     55d6aaf4-ac71-4f0e-9f25-f00a07154e2b: Longform # Longform
     57a475da-bd34-46ee-8693-6055079fb616: 'Asset: Image(s) or Video(s)' # Asset: Image(s) or Video(s)
     57f1f03a-6ce0-4203-8800-c42f4ea916fa: Default # Default
+    58ac2322-7471-4ce9-9977-d2a0f017db86: 'Authors: Import All' # Authors: Import All
     65ee2a7e-b332-47b7-88bf-63aa41aaa155: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
     66cef11d-f827-4b38-8867-ece3eefda13c: 'Carousel: Quotes' # Carousel: Quotes
+    66e0f455-1a4d-4b7b-8bb2-7a247cf9f655: Imports # Imports
     66f36432-924e-4595-914f-17cb32843c88: Changelog # Changelog
     69d6dd81-6c23-41bb-a33d-7ac17917886e: Default # Default
     70d8712d-2a67-493a-a1a0-7ed698a9ee5d: 'Date: Published' # Date: Published
@@ -604,6 +608,7 @@ meta:
     86125ca1-5070-4d71-91cf-ef53ea2337cb: Menu # Menu
     88778e50-4f0a-405e-ad81-55383a2ba560: 'Highlight: Stat' # Highlight: Stat
     90045d2b-740a-4664-be15-670b6497ced6: Target # Target
+    97519fc9-2167-4425-b2bb-19f4eaf7c3c7: 'Tags: Import Secondary' # Tags: Import Secondary
     125122fd-5de1-4d94-93a2-ac947d442451: 'Text: Last Name' # Text: Last Name
     190061ed-5acd-49bb-874e-8908f44a8608: 'Media: Audio or Video' # Media: Audio or Video
     363807ca-59e9-44be-88f0-344049c9886d: __blank__ # __blank__
@@ -619,6 +624,7 @@ meta:
     1842618e-7f9b-45c9-be4c-436bd476201e: 'Action: Entry or URL' # Action: Entry or URL
     2360859f-adea-4f42-9101-99fa6d270c3a: Social # Social
     2652042d-326e-45ff-b0bd-45f95f9e2507: Header # Header
+    3060677b-b2ac-4ff3-8d37-8eee1d339e16: 'Authors: Import List' # Authors: Import List
     6217344e-6a7d-4c0f-9ec2-14e37f417f31: 'Flag: Import' # Flag: Import
     7844817c-be14-496c-9911-77721e0743a3: 'Card: Simple' # Card: Simple
     8847309c-7a66-4668-9706-7698fa3614b4: 'Asset: Image' # Asset: Image
@@ -763,48 +769,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.11
-  entity-diagrams:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-    settings:
-      categories: '*'
-      dotOptions:
-        __assoc__:
-          -
-            - rankDir
-            - LR
-          -
-            - splines
-            - splines
-          -
-            - title
-            - 'Site Diagram'
-      globals: '*'
-      options:
-        __assoc__:
-          -
-            - includeFields
-            - '1'
-          -
-            - includeOnlyRelationFields
-            - ''
-          -
-            - expandMatrixBlocks
-            - '1'
-          -
-            - includeAuthor
-            - ''
-          -
-            - includeCustomNodes
-            - ''
-          -
-            - includeCustomLinks
-            - ''
-      sections: '*'
-      tags: '*'
-      userGroups: '*'
-      volumes: '*'
   feed-me:
     edition: standard
     enabled: true
