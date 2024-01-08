@@ -66,7 +66,7 @@ body[data-theme-color="marigold"] {
       background-color: var(--color-white);
 
       .breadcrumb {
-        --color-breadcrumb-primary: var(--color-primary-navy-50);
+        --color-breadcrumb-primary: var(--color-navy-50);
       }
 
       .primary__heading {
@@ -83,7 +83,7 @@ body[data-theme-color="marigold"] {
 
       .primary__desc {
         max-width: 28em;
-        color: var(--color-primary-navy-100);
+        color: var(--color-navy-100);
         @include primaryDescType;
 
         a {
@@ -92,7 +92,7 @@ body[data-theme-color="marigold"] {
 
           @media (hover: hover) {
             &:hover {
-              color: var(--color-primary-navy-50);
+              color: var(--color-navy-50);
               text-decoration-color: transparent;
               transition: var(--transition-link-in);
             }
@@ -118,7 +118,7 @@ body[data-theme-color="marigold"] {
       .primary__nav {
         .nav__title {
           margin-block-end: var(--base-3);
-          color: var(--color-primary-navy-50);
+          color: var(--color-navy-50);
           @include getType('caption-axiforma');
         }
 
