@@ -17,12 +17,12 @@
   }
 
   a {
-    color: var(--color-primary-teal-100);
+    color: var(--color-teal-100);
     transition: color var(--transition) ease-in;
 
     @media (hover: hover) {
       &:hover {
-        color: var(--color-tertiary-grey-200);
+        color: var(--color-grey-200);
         transition: color var(--transition-intermediate) ease-out;
       }
     }

@@ -82,7 +82,7 @@
     // Define additional colors as needed
     $color-primary: if($color-count >= 1,nth($colors,1),null);
     $color-secondary: if($color-count >= 2,nth($colors,2),null);
-    $color-tertiary: if($color-count >= 3,nth($colors,3),null);
+    $color: if($color-count >= 3,nth($colors,3),null);
 
     #{$selector} {
 

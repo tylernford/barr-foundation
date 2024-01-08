@@ -7,8 +7,8 @@
 ------------------------------------------------------------------------ */
 
 .quote {
-  --color-quote-primary: var(--color-primary-teal-100);
-  --color-quote-secondary: var(--color-tertiary-grey-150);
+  --color-quote-primary: var(--color-teal-100);
+  --color-quote-secondary: var(--color-grey-150);
 
   @include container;
   margin-top: var(--base-50px);

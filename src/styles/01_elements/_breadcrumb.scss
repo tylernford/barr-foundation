@@ -7,7 +7,7 @@
 ------------------------------------------------------------------------ */
 
 .breadcrumb {
-  --color-breadcrumb-primary: var(--color-tertiary-grey-25);
+  --color-breadcrumb-primary: var(--color-grey-25);
   --transition-breadcrumb-in--intermediate: all var(--transition-intermediate) ease-out;
 
   @include getType('detail-axiforma');
