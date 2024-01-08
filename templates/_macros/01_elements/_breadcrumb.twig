@@ -11,7 +11,11 @@
     <ol>
       {% for crumb in crumbs %}
         <li{% if loop.index != 3 %} aria-label="{{ loop.index == 1 ? 'Site section' : loop.index == 2 ? 'Subsection' }}"{% endif %}>
-          <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+          {% if crumb.url %}
+            <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+          {% else %}
+            <span>{{ crumb.title }}</span>
+          {% endif %}
         </li>
       {% endfor %}
     </ol>
