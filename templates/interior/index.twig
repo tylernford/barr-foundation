@@ -8,29 +8,15 @@ Interior template
 {% extends '_layouts/_base' %}
 
 {% import '_macros/02_components/_assets' as assets %}
+{% import '_macros/03_modules/_opener' as openers %}
 
 {% block content %}
 
 {# INTERIOR OPENER #}
+{% if entry.section.handle in ['aboutUs', 'grantmaking', 'newsInsights', 'programAreas'] %}
 {% set opener = entry.openerLanding %}
-<div class="blockOpener blockOpener--interior">
-    <div class="blockOpener-text">
-        <h1 class="blockOpener-heading">{{ opener.textHeading }}</h1>
-        <div class="blockOpener-desc">{{ opener.textDescription }}</div>
-    </div>
-    
-    {# Bookmark Menu #}
-    <div class="">
-
-    </div>
-    
-    {% set openerImage = opener.assetImage|length ? opener.assetImage.one() : null %}
-    {% if openerImage %}
-    <div class="blockOpener-media">
-        <img src="{{ openerImage.url }}" alt="" />
-    </div>
-    {% endif %}
-</div>
+{{ openers.opener(opener, entry) }}
+{% endif %}
 
 {# INTERIOR BUILDER: #}
 {# 1. People is a unique builder 

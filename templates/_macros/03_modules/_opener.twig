@@ -1,0 +1,104 @@
+{# =======================================
+  Module: Opener
+==========================================
+  Params:
+    - opener
+    - entry
+======================================= #}
+
+{% macro opener(opener, entry) %}
+    {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+    {% import '_macros/01_elements/_image' as images %}
+    
+    {# Set breadcrumbs #}
+    {% set crumbs = [ { 'title': entry.section, 'url': '' } ] %}
+    {% set entryAncestors = entry.getAncestors %}
+    {% for entryAncestor in entryAncestors %}
+        {% set crumbs = crumbs|merge([
+            { 'title': entryAncestor, 'url': entryAncestor.url }
+        ]) %}
+    {% endfor %}
+    
+    {# Heading, description, and image #}
+    {% set openerHeading = opener.textHeading|length ? opener.textHeading : entry.title %}
+    {% set openerDescription = opener.textDescription %}
+    {% set openerImage = opener.assetImage|length ? opener.assetImage.one() : null %}
+    
+    {# Build nav menu from Common or People builders #}
+    {% set navMenu =
+        entry.builderCommon ? entry.builderCommon :
+        entry.builderPeople ? entry.builderPeople
+    %}
+    {% set navMenu = navMenu|length ? navMenu.level(1) %}
+    
+    {# Don't display nav menu if empty #}
+    {% set showMenu = false %}
+    {% for menuItem in navMenu %}
+        {% set showMenu = menuItem.dividerSection.flagBookmark == true ? true %}
+    {% endfor %}
+    
+    <div class="blockOpener blockOpener--landing">
+        <div class="blockOpener__primary">
+            {# Breadcrumbs #}
+            {% if crumbs|length %}
+                {{ breadcrumbs.breadcrumb(crumbs) }}
+            {% endif %}
+
+            {# Page title #}
+            <h1 class="primary__heading">{{ openerHeading }}</h1>
+            
+            {# Description and menu #}
+            <div class="primary__wrapper">
+                {# Description #}
+                {% if openerDescription %}
+                    <div class="primary__desc">
+                        {{ openerDescription }}
+                    </div>
+                {% endif %}
+
+                {# Menu #}
+                {% if showMenu == true %}
+                    <div class="primary__nav">
+                        <h2 class="nav__title">Jump To</h2>
+                        <nav class="nav__menu" aria-label="Page navigation" role="navigation">
+                            <ol>
+                                {% for menuItem in navMenu %}
+                                    {% set itemTitle = menuItem.dividerSection.sectionName %}
+                                    <li>
+                                        <a href="#{{ itemTitle|slugify }}">
+                                            {{ itemTitle }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </nav>
+                    </div>
+                {% endif %}
+            </div>
+            
+            {# Graphic #}
+            <div class="primary__graphic"></div>
+        </div>
+        
+        {# Image #}
+        {% if openerImage %}
+            <figure class="blockOpener__media">
+                {{ images.image(openerImage, '1600', '4/3', '', false) }}
+
+                {# Image caption #}
+                {% if openerImage.textCaption|length %}
+                    <figcaption class="media__caption">
+                        <span class="caption__background"></span>
+                        <span class="caption__background"></span>
+                        <span class="caption__background"></span>
+                        <span class="caption__caption">
+                            <span>
+                                {{ openerImage.textCaption }}
+                            </span>
+                        </span>
+                    </figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}
+    </div>
+{% endmacro %}

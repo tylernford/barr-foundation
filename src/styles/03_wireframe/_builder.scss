@@ -65,24 +65,22 @@
 }
 
 .blockOpener {
-    @include block;
-    
     &--homepage {
+        @include block;
         display: flex;
-    }
+        
+        .blockOpener-text {
+            padding: 2em;
+        }
     
-    &-text {
-        padding: 2em;
-    }
-
-    &-heading {
-        @include heading;
-    }
-
-    &-description {
-
-    }
+        .blockOpener-heading {
+            @include heading;
+        }
     
+        .blockOpener-description {
+    
+        }
+    }    
 }
 
 .blockTabs {
