@@ -3,9 +3,9 @@
 
 // Colors
 .blockOpener {
-  --theme-color-primary: var(--color-primary-teal-150);
-  --theme-color-secondary: var(--color-primary-teal-100);
-  --theme-color-link: var(--color-primary-teal-150);
+  --theme-color-primary: var(--color-teal-150);
+  --theme-color-secondary: var(--color-teal-100);
+  --theme-color-link: var(--color-teal-150);
 }
 body[data-theme-color="green"] {
   .blockOpener {

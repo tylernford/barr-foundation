@@ -9,12 +9,12 @@
 ------------------------------------------------------------------------ */
 
 .details {
-  --color-details-primary: var(--color-primary-teal-100);
+  --color-details-primary: var(--color-teal-100);
   --color-details-secondary: var(--color-tertiary-grey-150);
   --color-details-tertiary: var(--color-tertiary-grey-25);
 
   &[data-is-reversed="true"] {
-    --color-details-primary: var(--color-primary-teal-25);
+    --color-details-primary: var(--color-teal-25);
     --color-details-secondary: var(--color-tertiary-grey-25);
     --color-details-tertiary: var(--color-tertiary-grey-200);
   }

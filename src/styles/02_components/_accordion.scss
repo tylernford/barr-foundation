@@ -9,11 +9,11 @@
 ------------------------------------------------------------------------ */
 
 .accordion {
-  --color-accordion-primary: var(--color-primary-teal-100);
-  --color-accordion-secondary: var(--color-primary-teal-150);
+  --color-accordion-primary: var(--color-teal-100);
+  --color-accordion-secondary: var(--color-teal-150);
 
   &[data-is-reversed="true"] {
-    --color-accordion-primary: var(--color-primary-teal-25);
+    --color-accordion-primary: var(--color-teal-25);
   }
 
   // Layout
