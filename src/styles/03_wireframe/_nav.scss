@@ -9,14 +9,14 @@
     align-items: center;
     padding: 2em 2em 1em 2em;
     position: relative;
-    background: var(--color-tertiary-grey-100);
+    background: var(--color-grey-100);
 
     &-home {
         &:link,
         &:visited,
         &:active,
         &:hover {
-            color: var(--color-tertiary-grey-200);
+            color: var(--color-grey-200);
         }
 
         text-decoration: none;
@@ -46,7 +46,7 @@
 
             @media (hover: hover) {
                 #{$nav}-mega-tab:hover & {
-                    text-decoration-color: var(--color-tertiary-grey-200);
+                    text-decoration-color: var(--color-grey-200);
                 }
             }
         }
@@ -61,7 +61,7 @@
 
         &-overlay {
             @include visuallyHide;
-            background: var(--color-tertiary-grey-200);
+            background: var(--color-grey-200);
 
             > * {
                 flex: 0 1 50%;
@@ -83,7 +83,7 @@
     }
 
     &-description {
-        color: var(--color-tertiary-grey-25);
+        color: var(--color-grey-25);
     }
 
     &-menu {
@@ -93,7 +93,7 @@
         }
         
         a {
-            color: var(--color-tertiary-grey-25);
+            color: var(--color-grey-25);
         }
     }
 

@@ -97,28 +97,28 @@ $breakpoints: (
 	--color-program-marigold-100: hsla(32, 80%, 52%, 1);
 	--color-program-marigold-50: hsla(31, 94%, 66%, 1);
 
-	--color-tertiary-clouds-150: hsla(223, 53%, 36%, 1);
-	--color-tertiary-clouds-100: hsla(207, 63%, 45%, 1);
-	--color-tertiary-clouds-50: hsla(210, 53%, 56%, 1);
+	--color-clouds-150: hsla(223, 53%, 36%, 1);
+	--color-clouds-100: hsla(207, 63%, 45%, 1);
+	--color-clouds-50: hsla(210, 53%, 56%, 1);
 
-	--color-tertiary-roses-150: hsla(344, 69%, 39%, 1);
-	--color-tertiary-roses-100: hsla(345, 72%, 50%, 1);
-	--color-tertiary-roses-50: hsla(353, 84%, 69%, 1);
+	--color-roses-150: hsla(344, 69%, 39%, 1);
+	--color-roses-100: hsla(345, 72%, 50%, 1);
+	--color-roses-50: hsla(353, 84%, 69%, 1);
 
-	--color-tertiary-citrus-150: hsla(64, 100%, 36%, 1);
-	--color-tertiary-citrus-100: hsla(61, 71%, 61%, 1);
-	--color-tertiary-citrus-50: hsla(64, 68%, 71%, 1);
+	--color-citrus-150: hsla(64, 100%, 36%, 1);
+	--color-citrus-100: hsla(61, 71%, 61%, 1);
+	--color-citrus-50: hsla(64, 68%, 71%, 1);
 
-	--color-tertiary-grey-200: hsla(0, 0%, 24%, 1);
-	--color-tertiary-grey-150: hsla(220, 1%, 39%, 1);
-	--color-tertiary-grey-100: hsla(216, 2%, 59%, 1);
-	--color-tertiary-grey-50: hsla(200, 3%, 79%, 1);
-	--color-tertiary-grey-25: hsla(0, 0%, 96%, 1);
-	--color-tertiary-grey-25-65: hsla(0, 0%, 96%, .65);
+	--color-grey-200: hsla(0, 0%, 24%, 1);
+	--color-grey-150: hsla(220, 1%, 39%, 1);
+	--color-grey-100: hsla(216, 2%, 59%, 1);
+	--color-grey-50: hsla(200, 3%, 79%, 1);
+	--color-grey-25: hsla(0, 0%, 96%, 1);
+	--color-grey-25-65: hsla(0, 0%, 96%, .65);
 
 	--color-white: hsla(0, 0%, 100%, 1);
 
-	--color-focus: var(--color-tertiary-clouds-50);
+	--color-focus: var(--color-clouds-50);
 }
 
 
