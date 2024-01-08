@@ -7,11 +7,21 @@ Main layout for site.
 Includes navigation, main content, and footer.
 =========================================================== #}
 
+{% set themeColor =
+    entry.title == 'Arts & Creativity' ? 'green' :
+    entry.ancestors.one == 'Arts & Creativity' ? 'green' :
+    entry.title == 'Climate' ? 'plum' :
+    entry.ancestors.one == 'Climate' ? 'plum' :
+    entry.title == 'Education' ? 'marigold' :
+    entry.ancestors.one == 'Education' ? 'marigold' :
+    'teal'
+%}
+
 <!DOCTYPE html>
 <html lang="en-US">
     {% include '_partials/_head' %}
 
-    <body class="body">
+    <body class="body" data-theme-color="{{ themeColor }}">
         <a class="skip-link" href="#main">
             Skip to content
         </a>
