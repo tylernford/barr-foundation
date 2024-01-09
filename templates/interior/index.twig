@@ -14,8 +14,10 @@ Interior template
 
 {# INTERIOR OPENER #}
 {% if entry.section.handle in ['aboutUs', 'grantmaking', 'newsInsights', 'programAreas'] %}
-{% set opener = entry.openerLanding %}
-{{ openers.opener(opener, entry) }}
+    {% set opener = entry.openerLanding %}
+    {{ openers.landing(opener, entry) }}
+{% elseif entry.section.handle == 'directory' %}
+    {{ openers.bio(entry) }}
 {% endif %}
 
 {# INTERIOR BUILDER: #}
