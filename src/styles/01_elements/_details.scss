@@ -93,6 +93,41 @@
           color: var(--color-details-tertiary);
           transition: all var(--transition-intermediate) ease-out;
         }
+
+        &[data-program-color="green"] {
+          --program-color: var(--color-program-green-100);
+        }
+        &[data-program-color="plum"] {
+          --program-color: var(--color-program-plum-100);
+        }
+        &[data-program-color="marigold"] {
+          --program-color: var(--color-program-marigold-150);
+        }
+
+        &[data-program-color="green"],
+        &[data-program-color="plum"],
+        &[data-program-color="marigold"] {
+          border: 1px solid var(--program-color);
+          color: var(--program-color);
+
+          &::after {
+            border-color: var(--program-color) transparent transparent transparent;
+          }
+
+          // Hover & Focus
+          @media (hover: hover) {
+            &:hover {
+              background-color: var(--program-color);
+              color: var(--color-details-tertiary);
+            }
+          }
+
+          // Focus
+          &:focus-visible {
+            background-color: var(--program-color);
+            color: var(--color-details-tertiary);
+          }
+        }
       }
     }
   }

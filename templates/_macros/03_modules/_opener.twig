@@ -6,7 +6,7 @@
     - entry
 ======================================= #}
 
-{% macro opener(opener, entry) %}
+{% macro landing(opener, entry) %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_image' as images %}
     
@@ -40,9 +40,7 @@
     <div class="blockOpener blockOpener--landing">
         <div class="blockOpener__primary">
             {# Breadcrumbs #}
-            {% if crumbs|length %}
-                {{ breadcrumbs.breadcrumb(crumbs) }}
-            {% endif %}
+            {{ breadcrumbs.breadcrumb(crumbs) }}
 
             {# Page title #}
             <h1 class="primary__heading">{{ openerHeading }}</h1>
@@ -100,5 +98,96 @@
                 {% endif %}
             </figure>
         {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro bio(entry) %}
+    {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+    
+    {# Set bio #}
+    {% set bio = entry %}
+
+    {# Set breadcrumbs #}
+    {% set crumbs = [ { 'title': 'People', 'url': '' } ] %}
+
+    {# Set name #}
+    {% set name =
+        bio.textMiddle|length ? bio.textFirst ~ ' ' ~ bio.textMiddle ~ ' ' ~ bio.textLast :
+        bio.textFirst ~ ' ' ~ bio.textLast
+    %}
+
+    {# Set pronouns #}
+    {% set pronouns = bio.textPronouns %}
+
+    {# Set job title #}
+    {% set jobTitle = bio.textJob %}
+
+    {# Set program areas #}
+    {% set programs = bio.tagsEntry %}
+    {% set programAreas = [] %}
+    {% for program in programs %}
+        {% set programAreas = programAreas|merge([
+            { 'title': program, 'url': program.url }
+        ]) %}
+    {% endfor %}
+
+    {# Set image #}
+    {% set image = bio.assetImage.one %}
+
+    <div class="blockOpener blockOpener--bio">
+        <div class="blockOpener__primary">
+            <div class="primary__wrapper">
+                {# Breadcrumbs #}
+                {{ breadcrumbs.breadcrumb(crumbs) }}
+
+                {# Page title #}
+                <h1 class="primary__heading">{{ name }}</h1>
+
+                {# Description #}
+                {% if pronouns or jobTitle %}
+                    <p class="primary__desc">
+                        {% if pronouns|length %}
+                            <i>{{ pronouns }}</i>
+                        {% endif %}
+                        {% if jobTitle|length %}
+                            {{ jobTitle }}
+                        {% endif %}
+                    </p>
+                {% endif %}
+
+                {# Tags #}
+                {% if programAreas|length %}
+                    <div class="primary__tags">
+                        {{ details.detail('tags', false, programAreas) }}
+                    </div>
+                {% endif %}
+            </div>
+
+            {# Image #}
+            {% if image %}
+                <figure class="primary__media">
+                    {{ images.image(image, '912', '3/2', '', false) }}
+
+                    {# Image caption #}
+                    {% if image.textCaption|length %}
+                        <figcaption class="media__caption">
+                            <span class="caption__background"></span>
+                            <span class="caption__background"></span>
+                            <span class="caption__background"></span>
+                            <span class="caption__caption">
+                                <span>
+                                    {{ image.textCaption }}
+                                </span>
+                            </span>
+                        </figcaption>
+                    {% endif %}
+                </figure>
+            {% endif %}
+
+            {# Graphic #}
+            <div class="primary__graphic"></div>
+        </div>
     </div>
 {% endmacro %}
