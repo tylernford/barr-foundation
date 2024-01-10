@@ -37,7 +37,7 @@
         {% set showMenu = menuItem.dividerSection.flagBookmark == true ? true %}
     {% endfor %}
     
-    <div class="blockOpener blockOpener--landing">
+    <header class="blockOpener blockOpener--landing">
         <div class="blockOpener__primary">
             {# Breadcrumbs #}
             {{ breadcrumbs.breadcrumb(crumbs) }}
@@ -98,7 +98,7 @@
                 {% endif %}
             </figure>
         {% endif %}
-    </div>
+    </header>
 {% endmacro %}
 
 {% macro bio(entry) %}
@@ -136,7 +136,7 @@
     {# Set image #}
     {% set image = bio.assetImage.one %}
 
-    <div class="blockOpener blockOpener--bio">
+    <header class="blockOpener blockOpener--bio">
         <div class="blockOpener__primary">
             <div class="primary__wrapper">
                 {# Breadcrumbs #}
@@ -175,7 +175,7 @@
             {# Graphic #}
             <div class="primary__graphic"></div>
         </div>
-    </div>
+    </header>
 {% endmacro %}
 
 {% macro post(entry) %}
@@ -215,7 +215,7 @@
     {# Set image #}
     {% set image = post.assetImage.one %}
 
-    <div class="blockOpener blockOpener--post">
+    <header class="blockOpener blockOpener--post">
         {# Primary #}
         <div class="blockOpener__primary">
             {# Breadcrumbs #}
@@ -279,5 +279,5 @@
                 </figure>
             {% endif %}
         </div>
-    </div>
+    </header>
 {% endmacro %}
