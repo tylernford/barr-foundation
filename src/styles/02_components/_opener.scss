@@ -34,7 +34,7 @@ body[data-theme-color="marigold"] {
   @mixin primaryHeadingType {
     @include getType('h3-axiforma');
     
-    @include breakpoint('xl') {
+    @include breakpoint('lg') {
       @include getType('h2-axiforma');
     }
   }
@@ -56,14 +56,14 @@ body[data-theme-color="marigold"] {
     align-content: baseline;
     position: relative;
     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.35);
-    background-color: var(--color-white);
+    background-color: var(--color-grey-25);
 
     .breadcrumb {
       --color-breadcrumb-primary: var(--color-navy-50);
     }
 
     .primary__heading {
-      max-width: 16em;
+      max-width: 18em;
       color: var(--theme-color-secondary);
       @include primaryHeadingType;
     }
@@ -108,7 +108,6 @@ body[data-theme-color="marigold"] {
     }
   }
 
-
   @include breakpoint(lg) {
     position: relative;
 
@@ -121,6 +120,10 @@ body[data-theme-color="marigold"] {
     }
 
     .blockOpener__primary {
+      .primary__heading {
+        max-width: 15em;
+      }
+
       .primary__graphic {
         display: none;
       }
@@ -445,51 +448,6 @@ body[data-theme-color="marigold"] {
             object-fit: cover;
           }
         }
-
-        .media__caption {
-          inset: auto 0 0 0;
-          padding: var(--base-6);
-          position: absolute;
-
-          // Decorative triangle in top left corner
-          &::after {
-            content: '';
-            top: 0;
-            left: 0;
-            width: var(--base-6);
-            height: var(--base-6);
-            position: absolute;
-            background: linear-gradient(to bottom right, var(--theme-color-secondary) 0%, var(--theme-color-secondary) 50%, transparent 50%, transparent 100%);
-          }
-
-          // Background color layers
-          .caption__background {
-            inset: 0;
-            position: absolute;
-
-            &:nth-child(1) {
-              background: #000;
-              mix-blend-mode: color;
-            }
-            &:nth-child(2) {
-              background: var(--theme-color-primary);
-              mix-blend-mode: screen;
-            }
-            &:nth-child(3) {
-              background: var(--theme-color-primary);
-              mix-blend-mode: multiply;
-            }
-          }
-
-          // Caption
-          .caption__caption {
-            max-width: 36em;
-            display: block;
-            position: relative;
-            color: var(--color-grey-25);
-            @include getType('detail-axiforma');
-          }
-        }
       }
 
       .primary__graphic {
@@ -537,6 +495,138 @@ body[data-theme-color="marigold"] {
             }
           }
         }
+      }
+    }
+  }
+
+  &--post {
+    // Variables
+    @mixin primaryHeadingType {
+      @include getType('h3-axiforma');
+    
+      @include breakpoint('lg') {
+        @include getType('h2-axiforma');
+      }
+    }
+
+    padding-block-start: 0;
+
+    // Primary
+    .blockOpener__primary {
+      @media screen and (max-width: 48rem) {
+        padding-block-end: var(--base-9);
+      }
+
+      min-height: auto;
+      flex-direction: column;
+      box-shadow: none;
+      background-color: transparent;
+
+      // Heading
+      .primary__heading {
+        @include primaryHeadingType;
+      }
+
+      // Published Date
+      .primary__published-date {
+        margin-block-start: var(--base-2);
+        color: var(--color-navy-50);
+        @include getType('caption-axiforma');
+      }
+
+      // Tags
+      .primary__tags {
+        margin-block-start: var(--base-3);
+      }
+    }
+
+    // Media
+    .blockOpener__media {
+      margin-inline: var(--neg-base-5);
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.50);
+
+      figure {
+        position: relative;
+      }
+
+      .image {
+        aspect-ratio: 4 / 3;
+        display: block;
+        position: relative;
+        overflow: hidden;
+      
+        img {
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+
+      .media__caption {
+        inset: auto 0 0 0;
+        padding: var(--base-6);
+        position: absolute;
+
+        // Decorative triangle in top left corner
+        &::after {
+          content: '';
+          top: 0;
+          left: 0;
+          width: var(--base-6);
+          height: var(--base-6);
+          position: absolute;
+          background: linear-gradient(to bottom right, var(--theme-color-secondary) 0%, var(--theme-color-secondary) 50%, transparent 50%, transparent 100%);
+        }
+
+        // Background color layers
+        .caption__background {
+          inset: 0;
+          position: absolute;
+
+          &:nth-child(1) {
+            background: #000;
+            mix-blend-mode: color;
+          }
+          &:nth-child(2) {
+            background: var(--theme-color-primary);
+            mix-blend-mode: screen;
+          }
+          &:nth-child(3) {
+            background: var(--theme-color-primary);
+            mix-blend-mode: multiply;
+          }
+        }
+
+        // Caption
+        .caption__caption {
+          max-width: 36em;
+          display: block;
+          position: relative;
+          color: var(--color-grey-25);
+          @include getType('detail-axiforma');
+        }
+      }
+    }
+
+    @include breakpoint(md) {
+      .blockOpener__media {
+        margin-inline: var(--neg-base-9);
+
+        .image {
+          aspect-ratio: 9 / 4;
+        }
+      }
+    }
+    
+    @include breakpoint(lg) {
+      &::before {
+        display: none;
+      }
+
+      .blockOpener__media {
+        margin-inline: 0;
       }
     }
   }
