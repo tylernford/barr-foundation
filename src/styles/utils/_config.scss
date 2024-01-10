@@ -113,6 +113,7 @@ $breakpoints: (
 	--color-grey-150: hsla(220, 1%, 39%, 1);
 	--color-grey-100: hsla(216, 2%, 59%, 1);
 	--color-grey-50: hsla(200, 3%, 79%, 1);
+	--color-grey-35: hsla(0, 0%, 92%,1);
 	--color-grey-25: hsla(0, 0%, 96%, 1);
 	--color-grey-25-65: hsla(0, 0%, 96%, .65);
 
@@ -128,8 +129,10 @@ $breakpoints: (
 :root {
 	--base-24: 96px;
 	--base-18: 72px;
+	--base-15: 60px;
 	--base-14: 56px;
 	--base-12: 48px;
+	--base-11: 44px;
 	--base-9: 36px;
 	--base-7: 28px;
 	--base-6: 24px;

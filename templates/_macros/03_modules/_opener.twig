@@ -281,3 +281,68 @@
         </div>
     </header>
 {% endmacro %}
+
+{% macro home(opener) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set heading = opener.textHeading %}
+    {% set description = opener.textDescription %}
+    {% set action = opener.actionLink %}
+    {% set image = opener.assetImage.one %}
+
+    <header class="blockOpener blockOpener--home">
+        {# Primary #}
+        <div class="blockOpener__primary">
+            {# Wrapper #}
+            <div class="primary__wrapper">
+                {# Heading #}
+                <h1 class="primary__heading">{{ heading }}</h1>
+
+                {# Description #}
+                <div class="primary__desc">{{ description }}</div>
+
+                {# Action #}
+                {% if action.url|length %}
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: '', iconOnly: false,
+                        text: action.text, url: action,
+                        linkType: 'entry', target: ''
+                    } %}
+
+                    <div class="primary__action">
+                        {{ actions.action(actionAttributes) }}
+                    </div>
+                {% endif %}
+            </div>
+
+            {# Media #}
+            <div class="primary__media">
+                {# Image #}
+                {% if image %}
+                    <figure>
+                        {{ images.image(image, '1024', '5/4', '', false) }}
+
+                        {# Image caption #}
+                        {% if image.textCaption|length %}
+                            <figcaption class="media__caption">
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <span class="caption__caption">
+                                    <span>
+                                        {{ image.textCaption }}
+                                    </span>
+                                </span>
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endif %}
+            </div>
+
+            {# Graphic #}
+            <div class="primary__graphic"></div>
+        </div>
+    </header>
+{% endmacro %}
