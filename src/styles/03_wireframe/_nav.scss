@@ -10,6 +10,7 @@
     padding: 2em 2em 1em 2em;
     position: relative;
     background: var(--color-grey-100);
+    z-index: 10;
 
     &-home {
         &:link,
