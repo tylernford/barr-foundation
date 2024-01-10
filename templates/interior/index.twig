@@ -18,6 +18,8 @@ Interior template
     {{ openers.landing(opener, entry) }}
 {% elseif entry.section.handle == 'directory' %}
     {{ openers.bio(entry) }}
+{% elseif entry.section.handle == 'blog' %}
+    {{ openers.post(entry) }}
 {% endif %}
 
 {# INTERIOR BUILDER: #}

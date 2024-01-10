@@ -169,6 +169,99 @@
             {% if image %}
                 <figure class="primary__media">
                     {{ images.image(image, '912', '3/2', '', false) }}
+                </figure>
+            {% endif %}
+
+            {# Graphic #}
+            <div class="primary__graphic"></div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro post(entry) %}
+    {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+    
+    {# Set post #}
+    {% set post = entry %}
+
+    {# Set breadcrumbs #}
+    {% set crumbs = [
+        { 'title': 'News & Insights', 'url': '' },
+        { 'title': 'Blog', 'url': siteUrl ~ '/news-insights/blog' }
+    ] %}
+
+    {# Set published date #}
+    {% set publishedDate = post.dateOnly %}
+
+    {# Set authors #}
+    {% set authors = post.entriesTeam %}
+    {% set postAuthors = [] %}
+    {% for author in authors %}
+        {% set postAuthors = postAuthors|merge([author]) %}
+    {% endfor %}
+    {% set authorDetails = [] %}
+
+    {# Set tags #}
+    {% set tagsList = post.tagsEntry %}
+    {% set tags = [] %}
+    {% for tagsItem in tagsList %}
+        {% set tags = tags|merge([
+            { 'title': tagsItem, 'url': tagsItem.url }
+        ]) %}
+    {% endfor %}
+
+    {# Set image #}
+    {% set image = post.assetImage.one %}
+
+    <div class="blockOpener blockOpener--post">
+        {# Primary #}
+        <div class="blockOpener__primary">
+            {# Breadcrumbs #}
+            {{ breadcrumbs.breadcrumb(crumbs) }}
+
+            {# Page title #}
+            <h1 class="primary__heading">{{ post.title }}</h1>
+
+            {# Published date #}
+            <p class="primary__published-date">
+                Published <time datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("m.d.y") }}</time>
+            </p>
+
+            {# Authors #}
+            {% if postAuthors|length %}                    
+                {% for postAuthor in postAuthors %}
+                    {# Set author image #}
+                    {% set authorImage = postAuthor.assetImage.one %}
+
+                    {# Set name #}
+                    {% set authorName =
+                        postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
+                        postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
+                    %}
+
+                    {% set authorDetails = authorDetails|merge([
+                        { 'img': authorImage, 'name': authorName }
+                    ]) %}
+                {% endfor %}
+                {{ details.detail('byline', false, authorDetails) }}
+            {% endif %}
+
+            {# Tags #}
+            {% if tags|length %}
+                <div class="primary__tags">
+                    {{ details.detail('tags', false, tags) }}
+                </div>
+            {% endif %}
+        </div>
+
+        {# Media #}
+        <div class="blockOpener__media">
+            {# Image #}
+            {% if image %}
+                <figure>
+                    {{ images.image(image, '1600', '9/4', '', false) }}
 
                     {# Image caption #}
                     {% if image.textCaption|length %}
@@ -185,9 +278,6 @@
                     {% endif %}
                 </figure>
             {% endif %}
-
-            {# Graphic #}
-            <div class="primary__graphic"></div>
         </div>
     </div>
 {% endmacro %}
