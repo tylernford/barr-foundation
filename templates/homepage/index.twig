@@ -8,6 +8,7 @@ Homepage template
 {% extends '_layouts/_base' %}
 
 {% import '_macros/02_components/_assets' as assets %}
+{% import '_macros/03_modules/_opener' as openers %}
 
 {% block content %}
 
@@ -15,16 +16,7 @@ Homepage template
 
 {# HOMEPAGE OPENER #}
 {% set opener = homepage.openerHomepage %}
-<div class="blockOpener blockOpener--homepage">
-    <div class="blockOpener-text">
-        <h1 class="blockOpener-heading">{{ opener.textHeading }}</h1>
-        <div class="blockOpener-desc">{{ opener.textDescription }}</div>
-    </div>
-
-    <div class="blockOpener-media">
-        <img src="{{ opener.assetImage.one().url }}" alt="" />
-    </div>
-</div>
+{{ openers.home(opener) }}
 
 {# HOMEPAGE BUILDER #}
 {% set builder = homepage.builderHome %}

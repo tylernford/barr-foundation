@@ -38,6 +38,13 @@ body[data-theme-color="marigold"] {
       @include getType('h2-axiforma');
     }
   }
+  @mixin primaryDescType {
+    @include getType('h5-messina');
+    
+    @include breakpoint('xl') {
+      @include getType('h3-messina');
+    }
+  }
 
   --transition-link-in: all var(--transition-intermediate) ease-out;
   --transition-link-out: all var(--transition) ease-in;
@@ -102,6 +109,51 @@ body[data-theme-color="marigold"] {
     }
   }
 
+  .media__caption {
+    inset: auto 0 0 0;
+    padding: var(--base-6);
+    position: absolute;
+
+    // Decorative triangle in top left corner
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      width: var(--base-6);
+      height: var(--base-6);
+      position: absolute;
+      background: linear-gradient(to bottom right, var(--theme-color-secondary) 0%, var(--theme-color-secondary) 50%, transparent 50%, transparent 100%);
+    }
+
+    // Background color layers
+    .caption__background {
+      inset: 0;
+      position: absolute;
+
+      &:nth-child(1) {
+        background: #000;
+        mix-blend-mode: color;
+      }
+      &:nth-child(2) {
+        background: var(--theme-color-primary);
+        mix-blend-mode: screen;
+      }
+      &:nth-child(3) {
+        background: var(--theme-color-primary);
+        mix-blend-mode: multiply;
+      }
+    }
+
+    // Caption
+    .caption__caption {
+      max-width: 36em;
+      display: block;
+      position: relative;
+      color: var(--color-grey-25);
+      @include getType('detail-axiforma');
+    }
+  }
+
   @include breakpoint(md) {
     .blockOpener__primary {
       padding: var(--base-9);
@@ -139,15 +191,6 @@ body[data-theme-color="marigold"] {
 
 
   &--landing {
-    // Variables
-    @mixin primaryDescType {
-      @include getType('h5-messina');
-      
-      @include breakpoint('xl') {
-        @include getType('h3-messina');
-      }
-    }
-
     // Primary
     .blockOpener__primary {
       .primary__wrapper {
@@ -231,7 +274,7 @@ body[data-theme-color="marigold"] {
         &::before {
           right: 0;
           width: 104px;
-          background: linear-gradient(to top left, var(--color-grey-25) 0%, var(--color-grey-25) 50%, transparent 50%, transparent 100%);
+          background: linear-gradient(to top left, var(--color-grey-35) 0%, var(--color-grey-35) 50%, transparent 50%, transparent 100%);
         }
 
         &::after {
@@ -259,51 +302,6 @@ body[data-theme-color="marigold"] {
           height: 100%;
           position: absolute;
           object-fit: cover;
-        }
-      }
-
-      .media__caption {
-        inset: auto 0 0 0;
-        padding: var(--base-6);
-        position: absolute;
-
-        // Decorative triangle in top left corner
-        &::after {
-          content: '';
-          top: 0;
-          left: 0;
-          width: var(--base-6);
-          height: var(--base-6);
-          position: absolute;
-          background: linear-gradient(to bottom right, var(--theme-color-secondary) 0%, var(--theme-color-secondary) 50%, transparent 50%, transparent 100%);
-        }
-
-        // Background color layers
-        .caption__background {
-          inset: 0;
-          position: absolute;
-
-          &:nth-child(1) {
-            background: #000;
-            mix-blend-mode: color;
-          }
-          &:nth-child(2) {
-            background: var(--theme-color-primary);
-            mix-blend-mode: screen;
-          }
-          &:nth-child(3) {
-            background: var(--theme-color-primary);
-            mix-blend-mode: multiply;
-          }
-        }
-
-        // Caption
-        .caption__caption {
-          max-width: 36em;
-          display: block;
-          position: relative;
-          color: var(--color-grey-25);
-          @include getType('detail-axiforma');
         }
       }
     }
@@ -464,7 +462,7 @@ body[data-theme-color="marigold"] {
           width: 104px;
           height: 100px;
           position: absolute;
-          background: linear-gradient(to top left, var(--color-grey-25) 0%, var(--color-grey-25) 50%, transparent 50%, transparent 100%);
+          background: linear-gradient(to top left, var(--color-grey-35) 0%, var(--color-grey-35) 50%, transparent 50%, transparent 100%);
         }
       }
 
@@ -563,51 +561,6 @@ body[data-theme-color="marigold"] {
           object-fit: cover;
         }
       }
-
-      .media__caption {
-        inset: auto 0 0 0;
-        padding: var(--base-6);
-        position: absolute;
-
-        // Decorative triangle in top left corner
-        &::after {
-          content: '';
-          top: 0;
-          left: 0;
-          width: var(--base-6);
-          height: var(--base-6);
-          position: absolute;
-          background: linear-gradient(to bottom right, var(--theme-color-secondary) 0%, var(--theme-color-secondary) 50%, transparent 50%, transparent 100%);
-        }
-
-        // Background color layers
-        .caption__background {
-          inset: 0;
-          position: absolute;
-
-          &:nth-child(1) {
-            background: #000;
-            mix-blend-mode: color;
-          }
-          &:nth-child(2) {
-            background: var(--theme-color-primary);
-            mix-blend-mode: screen;
-          }
-          &:nth-child(3) {
-            background: var(--theme-color-primary);
-            mix-blend-mode: multiply;
-          }
-        }
-
-        // Caption
-        .caption__caption {
-          max-width: 36em;
-          display: block;
-          position: relative;
-          color: var(--color-grey-25);
-          @include getType('detail-axiforma');
-        }
-      }
     }
 
     @include breakpoint(md) {
@@ -627,6 +580,196 @@ body[data-theme-color="marigold"] {
 
       .blockOpener__media {
         margin-inline: 0;
+      }
+    }
+  }
+
+  &--home {
+    // Variables
+    @mixin primaryHeadingType {
+      @include getType('h3-axiforma');
+      
+      @include breakpoint('md') {
+        @include getType('h2-axiforma');
+      }
+
+      @include breakpoint('lg') {
+        @include getType('h1-axiforma');
+      }
+    }
+    @mixin primaryDescType {
+      @include getType('h5-messina');
+      
+      @include breakpoint('lg') {
+        @include getType('h3-messina');
+      }
+    }
+
+    padding-top: 0;
+
+    // Primary
+    .blockOpener__primary {
+      padding: 0;
+      gap: 0;
+      box-shadow: none;
+
+      // Wrapper
+      .primary__wrapper {
+        padding: var(--base-7) var(--base-6) var(--base-9) var(--base-6);
+        display: flex;
+        flex-direction: column;
+        gap: var(--base-5);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.35);
+      }
+
+      // Heading
+      .primary__heading {
+        @include primaryHeadingType;
+      }
+
+      // Description
+      .primary__desc {
+        @include primaryDescType;
+      }
+
+      // Action
+      .primary__action {
+        margin-top: var(--base-2);
+      }
+
+      // Media
+      .primary__media {
+        figure {
+          position: relative;
+        }
+
+        .image {
+          aspect-ratio: 5 / 4;
+          display: block;
+          position: relative;
+          overflow: hidden;
+        
+          img {
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .primary__graphic {
+        inset: auto auto 0 calc((100vw - 100%) / -2);
+        width: 100vw;
+        height: 160px;
+        position: absolute;
+        background-color: var(--theme-color-primary);
+        z-index: -1;
+
+        &::before,
+        &::after {
+          content: '';
+          top: -100px;
+          height: 100px;
+          position: absolute;
+        }
+
+        &::before {
+          right: 0;
+          width: 100px;
+          background: linear-gradient(to top left, var(--color-grey-35) 0%, var(--color-grey-35) 50%, transparent 50%, transparent 100%);
+        }
+
+        &::after {
+          left: 0;
+          width: 100vw;
+          background: linear-gradient(to top right, var(--theme-color-primary) 0%, var(--theme-color-primary) 50%, transparent 50%, transparent 100%);
+        }
+      }
+    }
+
+    @include breakpoint(md) {
+      .blockOpener__primary {
+        .primary__wrapper {
+          padding: var(--base-11) var(--base-9) var(--base-14) var(--base-9);
+        }
+
+        .primary__heading {
+          max-width: 14em;
+        }
+
+        .primary__graphic {
+          &::before,
+          &::after {
+            top: -262px;
+            height: 262px;
+          }
+
+          &::before {
+            width: calc(100vw - 80px);
+          }
+
+          &::after {
+            width: 100vw;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(lg) {
+      &::before {
+        display: none;
+      }
+
+      .blockOpener__primary {
+        grid-template-columns: 1fr 1fr;
+
+        .primary__wrapper {
+          padding-block: var(--base-15) var(--base-18);
+          gap: var(--base-6);
+        }
+
+        .primary__action {
+          margin-top: auto;
+
+          .action {
+            margin-top: 20px;
+          }
+        }
+
+        .primary__media {
+          position: relative;
+
+          figure {
+            inset: 0;
+            position: absolute;
+          }
+
+          .image {
+            inset: 0;
+            position: absolute;
+            aspect-ratio: auto;
+          }
+        }
+
+        .primary__graphic {
+          display: block;
+
+          &::before,
+          &::after {
+            top: -400px;
+            height: 400px;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(xl) {
+      .blockOpener__primary {
+        .primary__wrapper {
+          padding-inline: var(--base-14);
+        }
       }
     }
   }
