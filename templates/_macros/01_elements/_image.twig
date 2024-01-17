@@ -99,10 +99,9 @@
       {% if height == 'auto' %}
         {% set ratioValue = image.width / width %}
         {% set height     = image.height / ratioValue %}
-        {% set height     = height|round %}
       {% endif %}
 
-      width="{{ width }}" height="{{ height }}"
+      width="{{ width }}" height="{{ height|round }}"
     >
   </picture>
 {% endmacro %}
