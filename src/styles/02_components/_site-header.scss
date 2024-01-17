@@ -1,10 +1,6 @@
 /* _site-header.scss */
 @use "../utils/_utils" as *;
 
-#header {
-  // background-color: var(--color-grey-25);
-}
-
 .siteHeader {
   --color-nav-primary: var(--color-grey-25-65);
   --color-nav-secondary: var(--color-grey-25);
