@@ -1,29 +1,29 @@
-changedFieldIndicator: 489943139
-field: c954d828-974b-402e-92e2-3057b737e6ed # Primary Menu
+changedFieldIndicator: 488211139
+field: 98affe9f-0fef-4624-ae74-d15517033824 # Secondary Menu
 fieldLayouts:
-  336640d8-29bb-441a-a921-80dd18cfa576:
+  1b4b4470-e26c-4d94-8482-c6a3eca30b02:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: f04ce99a-aa20-4ed0-9e83-40f232197b48 # Item
+            fieldUid: 747ce413-c373-42ad-92b4-bff1e0c3ab13 # Item
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e730ee5a-49f1-40e9-9df9-cee694f21df4
+            uid: c4d58f84-3bdf-4bf5-8417-c3b14535c5f9
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 440eaa49-c627-4245-8f32-9f2435fc6b94
+        uid: 0aaf8ce3-6985-4d7e-a56e-a815e6c1ab21
         userCondition: null
 fields:
-  f04ce99a-aa20-4ed0-9e83-40f232197b48: # Item
-    columnSuffix: null
+  747ce413-c373-42ad-92b4-bff1e0c3ab13: # Item
+    columnSuffix: yxdlxwxx
     contentColumnType: string
     fieldGroup: null
     handle: navTarget

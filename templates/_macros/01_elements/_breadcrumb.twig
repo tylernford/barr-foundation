@@ -7,7 +7,7 @@
 ======================================= #}
 
 {% macro breadcrumb(crumbs) %}
-  <nav class="breadcrumb" aria-label="Breadcrumb" role="navigation">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
     <ol>
       {% for crumb in crumbs %}
         <li{% if loop.index != 3 %} aria-label="{{ loop.index == 1 ? 'Site section' : loop.index == 2 ? 'Subsection' }}"{% endif %}>
