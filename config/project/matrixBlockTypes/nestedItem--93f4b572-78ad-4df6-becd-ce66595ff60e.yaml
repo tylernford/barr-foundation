@@ -16,19 +16,19 @@ fieldLayouts:
             uid: e15a4699-8bdd-499a-ae61-9958178a4b29
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
-            fieldUid: d8653b35-a1ac-4282-8083-902f060bcc6e # Target
+            fieldUid: e68aec50-47ab-4ff2-9d37-081054e28c7c # Heading
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: efd26263-07c8-407a-9610-9f0dd2b8287b
+            uid: ba86576f-1f0a-4a79-aade-58447b2a6e55
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
             fieldUid: c0b3adea-77f8-4182-b17d-7209cb415314 # Description
@@ -43,13 +43,25 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: c954d828-974b-402e-92e2-3057b737e6ed # Menu
+            fieldUid: c954d828-974b-402e-92e2-3057b737e6ed # Primary Menu
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27ca75c4-87a7-4c26-81c4-582e6d002d54
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 98affe9f-0fef-4624-ae74-d15517033824 # Secondary Menu
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 27ca75c4-87a7-4c26-81c4-582e6d002d54
+            uid: 3fdbd237-af1f-4929-bcac-1c1349a91b6c
             userCondition: null
             warning: null
             width: 100
@@ -77,6 +89,37 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  98affe9f-0fef-4624-ae74-d15517033824: # Secondary Menu
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: secondaryNavMenu
+    instructions: "Secondary menu items will appear as smaller text within the primary navigation overlay.\r\n\r\nAssign a link to the menu item. Max 5 items."
+    name: 'Secondary Menu'
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1473836107
+      columns:
+        __assoc__:
+          -
+            - 747ce413-c373-42ad-92b4-bff1e0c3ab13 # Item
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_10_secondarynavmenu}}'
+      fieldLayout: table
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: 'Add a menu item'
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\supertable\fields\SuperTableField
   c0b3adea-77f8-4182-b17d-7209cb415314: # Description
     columnSuffix: jtzwezft
     contentColumnType: text
@@ -91,7 +134,7 @@ fields:
       ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
       columnType: text
       defaultTransform: null
-      enableSourceEditingForNonAdmins: true
+      enableSourceEditingForNonAdmins: false
       purifierConfig: null
       purifyHtml: true
       showUnpermittedFiles: false
@@ -101,17 +144,17 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\ckeditor\Field
-  c954d828-974b-402e-92e2-3057b737e6ed: # Menu
+  c954d828-974b-402e-92e2-3057b737e6ed: # Primary Menu
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: navMenu
-    instructions: 'Assign a link to the menu item. (Max 3 primary items; 3-5 secondary items)'
-    name: Menu
+    instructions: 'Assign a link to the menu item. Max 3 items.'
+    name: 'Primary Menu'
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1042808750
+      changedFieldIndicator: 1663132885
       columns:
         __assoc__:
           -
@@ -121,17 +164,10 @@ fields:
                 -
                   - width
                   - ''
-          -
-            - 6cc3b73a-f6dd-45e3-89fd-4c871ad53903 # Is secondary?
-            -
-              __assoc__:
-                -
-                  - width
-                  - 150px
       contentTable: '{{%stc_10_navmenu}}'
       fieldLayout: table
       maxRows: null
-      minRows: null
+      minRows: 1
       propagationKeyFormat: null
       propagationMethod: all
       selectionLabel: 'Add a menu item'
@@ -139,69 +175,26 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: verbb\supertable\fields\SuperTableField
-  d8653b35-a1ac-4282-8083-902f060bcc6e: # Target
-    columnSuffix: null
-    contentColumnType: string
+  e68aec50-47ab-4ff2-9d37-081054e28c7c: # Heading
+    columnSuffix: tvojncau
+    contentColumnType: string(300)
     fieldGroup: null
-    handle: navTarget
-    instructions: null
-    name: Target
+    handle: heading
+    instructions: 'Brief heading that appears above the submenu. (Character Limit: 75)'
+    name: Heading
     searchable: false
     settings:
-      allowCustomText: true
-      allowTarget: true
-      autoNoReferrer: false
-      customTextMaxLength: 0
-      customTextRequired: false
-      defaultLinkName: entry
-      defaultText: ''
-      enableAllLinkTypes: false
-      enableAriaLabel: false
-      enableElementCache: false
-      enableTitle: false
-      typeSettings:
-        asset:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        category:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
-        custom:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        email:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        entry:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: true
-          sources: '*'
-        site:
-          enabled: false
-          sites: '*'
-        tel:
-          allowAliases: false
-          disableValidation: false
-          enabled: false
-        url:
-          allowAliases: false
-          disableValidation: false
-          enabled: true
-        user:
-          allowCrossSiteLink: false
-          allowCustomQuery: false
-          enabled: false
-          sources: '*'
+      byteLimit: null
+      charLimit: 75
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: lenz\linkfield\fields\LinkField
+    type: craft\fields\PlainText
 handle: nestedItem
 name: 'Nested Menu'
 sortOrder: 2

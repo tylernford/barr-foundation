@@ -4,6 +4,7 @@
 
 // Element Imports
 import './components/accordion';
+import './components/navigation';
 
 // Component Imports
 // Uncomment as needed

@@ -83,6 +83,7 @@ $breakpoints: (
 	--color-teal-25: hsla(159, 50%, 70%, 1);
 
 	--color-navy-100: hsla(247, 44%, 23%, 1);
+	--color-navy-100-0: hsla(247, 44%, 23%, 0);
 	--color-navy-50: hsla(247, 34%, 30%, 1);
 
 	--color-program-green-150: hsla(129, 29%, 26%, 1);
@@ -127,6 +128,8 @@ $breakpoints: (
 	Space
 ------------------------------------------------------------------------ */
 :root {
+	--base-28: 112px;
+	--base-27: 108px;
 	--base-24: 96px;
 	--base-18: 72px;
 	--base-15: 60px;
@@ -135,6 +138,7 @@ $breakpoints: (
 	--base-11: 44px;
 	--base-10: 40px;
 	--base-9: 36px;
+	--base-8: 32px;
 	--base-7: 28px;
 	--base-6: 24px;
 	--base-5: 20px;
@@ -154,11 +158,18 @@ $breakpoints: (
 	--base-25px: 25px;
 	--base-15px: 15px;
 	--base-10px: 10px;
-	--neg-base-20px: -20px;
 
 	--col-8: 66.6666666666%;
 	--col-10: 83.3333333333%;
 	--col-12: 100%;
+
+	--site-header-height: 60px;
+}
+
+@media screen and (min-width: 80rem) {
+	:root {
+		--site-header-height: 120px;
+	}
 }
 
 
@@ -176,9 +187,13 @@ $breakpoints: (
 
 	--outline-width: 2px;
 	--outline-offset: 3px;
+	--outline-radius: 2px;
 
 	--transition: 250ms;
 	--transition-intermediate: 330ms;
+
+	--transition-in: all var(--transition-intermediate) ease-out;
+  --transition-out: all var(--transition) ease-in;
 }
 
 

@@ -1,38 +1,124 @@
 {# _nav.twig #}
 
 {% set navPrimary = craft.entries().section('header').one().navPrimary.all() %}
-<nav id="nav" class="navPrimary">
-    <a class="navPrimary-home" href="./">Home</a>
-    <ul class="navPrimary-mega">
-        {% for primary in navPrimary %}
-            {% set primaryLabel  = primary.navLabel %}
-            {% set primaryTarget = primary.navTarget %}
-            <li class="navPrimary-mega-tab">
-     
-                <span class="navPrimary-mega-label">{{ primaryLabel }}</span>
-                    
-                {% set megaMenu = primary.navMenu.all() %}
-                {% set description = primary.description %}
-                <div class="navPrimary-mega-overlay">
-                    <div class="navPrimary-description">
-                        {{ description }}
-                    </div>
-                    <ul class="navPrimary-menu">
-                    {% for item in megaMenu %}
-                    {% set itemLabel = item.navTarget.text %}
-                    {% set itemUrl = item.navTarget.url %}
-                        <li class="navPrimary-menu-item">
-                            <a href="{{ itemUrl }}">
-                                {{ itemLabel }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                    </ul>
-                </div>
 
-            </li>
+<nav id="nav" class="siteHeader">
+    {# Brand #}
+    <a class="siteHeader__brand" href="{{ siteUrl }}">
+        <svg aria-hidden="true">
+            <use xlink:href="{{ alias('@svg') }}logo--horizontal"></use>
+        </svg>
+        <span>Barr Foundation</span>
+    </a>
+
+    {# Hamburger #}
+    <button class="siteHeader__trigger" aria-expanded="false" aria-controls="mobile-menu">
+        <span>Menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    {# Mobile menu #}
+    <ul id="mobile-menu" class="siteHeader__mobile-menu -is-hidden">
+        {% for primary in navPrimary %}
+            {% if primary.type != 'nestedItem' %}
+                {{ _self.menuItem(primary, 'menu__item') }}
+            {% endif %}
+        {% endfor %}
+
+        {% for primary in navPrimary %}
+            {% if primary.type == 'nestedItem' %}
+                {% set primaryLabel  = primary.navLabel %}
+
+                {# Submenu #}
+                <li class="menu__item menu__item--submenu">
+                    {# Submenu trigger #}
+                    <button class="submenu__trigger" aria-expanded="false" aria-controls="submenu-{{ loop.index }}">
+                        {{ primaryLabel }}
+                    </button>
+                    
+                    {# Submenu #}
+                    {{ _self.submenu(loop.index, primary) }}
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
-    <div>Search</div>
 
+    {# Desktop menu #}
+    <ul class="siteHeader__menu">
+        {% for primary in navPrimary %}
+            {% if primary.type != 'nestedItem' %}
+                {{ _self.menuItem(primary, 'menu__item') }}
+            {% endif %}
+        {% endfor %}
+
+        {% for primary in navPrimary %}
+            {% if primary.type == 'nestedItem' %}
+                {% set primaryLabel  = primary.navLabel %}
+
+                {# Submenu #}
+                <li class="menu__item menu__item--submenu" aria-label="{{ primaryLabel }}">                    
+                    {{ _self.submenu('', primary) }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    
+    <div style="display:none">Search</div>
 </nav>
+
+
+
+{# Submenu #}
+{% macro submenu(id, submenu) %}
+    {% set heading = submenu.heading %}
+    {% set description = submenu.description %}
+    {% set primaryNav = submenu.navMenu.all() %}
+    {% set secondaryNav = submenu.secondaryNavMenu.all() %}
+
+    {# Submenu overlay #}
+    <div{% if id|length %} id="submenu-{{ id }}"{% endif %} class="submenu__overlay">
+        <div class="overlay__inner">
+            {# Submeanu heading #}
+            {% if heading|length %}
+                <h3 class="submenu__heading">{{ heading }}</h3>
+            {% endif %}
+
+            {# Submenu description #}
+            {% if description|length %}
+                <div class="submenu__description">
+                    {{ description }}
+                </div>
+            {% endif %}
+
+            {# Submenu menu #}
+            <nav class="submenu__menu">
+                <ul>
+                    {# Primary items #}
+                    {% for item in primaryNav %}
+                        {# Menu item #}
+                        {{ _self.menuItem(item, 'submenu__item submenu__item--primary') }}
+                    {% endfor %}
+
+                    {# Secondary items #}
+                    {% if secondaryNav %}
+                        {% for item in secondaryNav %}    
+                            {# Menu item #}
+                            {{ _self.menuItem(item, 'submenu__item submenu__item--secondary') }}
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% endmacro %}
+
+{# Menu item #}
+{% macro menuItem(item, classes) %}
+    <li class="{{ classes }}">
+        <a href="{{ item.navTarget.url }}">
+            {{ item.navTarget.text }}
+        </a>
+    </li>
+{% endmacro %}
