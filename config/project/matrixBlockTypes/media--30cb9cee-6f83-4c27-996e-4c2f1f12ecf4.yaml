@@ -10,7 +10,7 @@ fieldLayouts:
             fieldUid: 190061ed-5acd-49bb-874e-8908f44a8608 # Media: Audio or Video
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 83ce9431-1106-476b-b738-8528981df48b
@@ -42,7 +42,7 @@ fields:
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1
-      minRelations: null
+      minRelations: 1
       previewMode: full
       restrictFiles: true
       restrictLocation: false

@@ -146,11 +146,12 @@ body[data-theme-color="marigold"] {
 
     // Caption
     .caption__caption {
-      max-width: 36em;
+      max-width: 40em;
       display: block;
       position: relative;
       color: var(--color-grey-25);
       @include getType('detail-axiforma');
+      font-size: 12px;
     }
   }
 
@@ -724,32 +725,103 @@ body[data-theme-color="marigold"] {
 
       .blockOpener__primary {
         grid-template-columns: 1fr 1fr;
+        background-color: transparent;
 
         .primary__wrapper {
+          margin-block: var(--base-18) var(--base-11);
           padding-block: var(--base-15) var(--base-18);
           gap: var(--base-6);
+          align-self: start;
+          background-color: var(--color-grey-25);
+          z-index: 5;
         }
 
         .primary__action {
           margin-top: auto;
 
           .action {
-            margin-top: 20px;
+            margin-top: 60px;
           }
         }
 
         .primary__media {
-          position: relative;
+          margin-inline-start: var(--neg-base-16);
+          // position: relative;
 
           figure {
-            inset: 0;
-            position: absolute;
+            min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: static;
+            // inset: 0;
+            // position: absolute;
+
+            > div {
+              padding-top: 110%;
+              width: 100%;
+              position: relative;
+
+              &::before {
+                content: '';
+                inset: auto 0 0 0;
+                position: absolute;
+                height: var(--base-12);
+                background: linear-gradient(to top left, var(--theme-color-primary) 0%, var(--theme-color-primary) 50%, transparent 50%, transparent 100%);
+                z-index: 1;
+              }
+              
+              &::after {
+                content: '';
+                inset: 0 auto 0 0;
+                position: absolute;
+                width: var(--base-12);
+                background: linear-gradient(to bottom right, var(--color-grey-25) 0%, var(--color-grey-25) 50%, transparent 50%, transparent 100%);
+              }
+            }
           }
 
           .image {
             inset: 0;
             position: absolute;
             aspect-ratio: auto;
+            z-index: 4;
+          }
+
+          .media__caption {
+            padding: var(--base-10) 0 0 0;
+            width: calc(100% - 252px);
+            position: static;
+
+            &::after {
+              display: none;
+            }
+
+            .caption__background {
+              display: none;
+            }
+
+            .caption__caption {
+              max-width: 100%;
+              text-align: right;
+
+              .pattern {
+                inset: auto auto 0 -300px;
+                width: 300px;
+                height: 300px;
+                position: absolute;
+
+                &::after {
+                  content: "";
+                  bottom: 0;
+                  left: 0;
+                  width: 100px;
+                  height: 100px;
+                  position: absolute;
+                  background: linear-gradient(to top right, var(--theme-color-secondary) 0%, var(--theme-color-secondary) 50%, transparent 50%, transparent 100%);
+                }
+              }
+            }
           }
         }
 
