@@ -1,0 +1,19 @@
+columnSuffix: iaepbteh
+contentColumnType: text
+fieldGroup: 99a0a64e-82ac-4b42-92b5-697513e02b7b # Grants
+handle: geoLocation
+instructions: 'Comma-separated list (latitude, longitude), e.g. 42.12007, -89.05246'
+name: 'Geo: Location'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

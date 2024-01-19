@@ -1,23 +1,23 @@
 {
   "require": {
     "craftcms/ckeditor": "3.6.0",
-    "craftcms/cms": "4.5.11.1",
+    "craftcms/cms": "4.6.0",
     "craftcms/feed-me": "^5.3",
     "craftcms/mailgun": "3.0.0",
     "craftcms/redactor": "3.0.4",
     "nystudio107/craft-retour": "^4.1",
-    "nystudio107/craft-seomatic": "4.0.33",
+    "nystudio107/craft-seomatic": "4.0.37",
     "nystudio107/craft-twigpack": "^4.0.0-beta.4",
-    "putyourlightson/craft-sprig": "2.7.2",
+    "putyourlightson/craft-sprig": "2.7.3",
     "sebastianlenz/linkfield": "^2.1",
-    "spacecatninja/imager-x": "4.2.3",
-    "spicyweb/craft-neo": "3.9.8",
+    "spacecatninja/imager-x": "4.2.4",
+    "spicyweb/craft-neo": "4.0.2",
     "springworks/entity-diagrams": "^2.0",
-    "topshelfcraft/wordsmith": "^4.2",
+    "topshelfcraft/wordsmith": "4.4.0",
     "verbb/cp-nav": "4.0.11",
     "verbb/field-manager": "3.0.8",
-    "verbb/formie": "2.0.39",
-    "verbb/hyper": "1.1.16",
+    "verbb/formie": "2.1.1",
+    "verbb/hyper": "1.1.19",
     "verbb/super-table": "3.0.12",
     "vlucas/phpdotenv": "^5.4.0"
   },
@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "modules\\": "modules/"
+      "modules\\feeds\\": "modules/feeds/"
     }
   },
   "config": {

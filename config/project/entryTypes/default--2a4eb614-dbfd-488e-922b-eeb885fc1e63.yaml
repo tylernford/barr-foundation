@@ -12,6 +12,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -32,8 +33,56 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: d38be497-85d5-48f4-af5f-d88b0fbcc0f5 # Record Id
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: af56b905-c371-44ee-bdf8-00400c1db635
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5971d473-bc24-4c7d-86e9-99f40d205dc3 # Record Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f63a2c75-ce0a-4608-848c-4809841f6d70
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 22f973cc-427c-4e70-8bb8-6624479ab025 # Entries: Organization
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 419f7b54-9586-44ea-8e28-8a597bc7ace4
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 1b2cb00a-9926-4731-ba73-26cd45fd7e44 # Geo: Region
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60b8eec0-72eb-43ef-bfd2-4d5848cb890f
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
-            instructions: 'Summary of grant'
+            instructions: 'Purpose of grant'
             label: null
             required: false
             tip: null
@@ -45,12 +94,41 @@ fieldLayouts:
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
+            uid: 23c83207-4906-4efc-a83e-4bdf0679cef5
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 53bc948c-6f81-4b66-8606-0e103eead194 # Flag: BIPOC
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5759b63a-44ff-47bf-bea6-391e68ce6518
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 81c1e4d6-2c77-4963-b5a3-5cce1ea6926d # Flag: Racial Equity Centered
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf1353ff-38ab-4797-9bd7-297e11232c32
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
             uid: 50103696-8794-4dc7-92dd-091e055e24c2
             userCondition: null
           -
             elementCondition: null
             fieldUid: c1f9543f-7b4c-4544-803c-a1a02aa27a1f # Text: Name
-            instructions: null
+            instructions: (Optional)
             label: 'Text: Fiscal Sponsor'
             required: false
             tip: null
@@ -62,7 +140,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 25949bb9-af67-45e6-9adb-fc8c568dba48 # Date: Date Only
-            instructions: null
+            instructions: 'e.g. 10/26/2013'
             label: 'Date: Award Date'
             required: false
             tip: null
@@ -95,6 +173,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: bbaf2db2-c269-4572-a3c6-e1be28b9b425
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 735baf07-fdce-44c2-8433-02997cd29674 # Department: Import
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3867783f-aeaa-4097-ac0e-996582cb64ae
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: 4217f7b3-ec24-454d-87f2-1998f0a0baae # Tags: Program Areas

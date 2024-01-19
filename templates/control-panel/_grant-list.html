@@ -1,0 +1,69 @@
+<style>
+.adminTip-label {
+    color: #596673;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.adminTip-box {
+  background: #f3f7fc;
+  margin: 0 0 2em 0;
+  padding: 1em;
+  border-radius: 10px;
+}
+.adminTip-box--details {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.adminTip-desc {
+    margin-top: 0;
+}
+.adminTip-list {
+    margin-left: 2em;
+    list-style-type: disc;
+}
+</style>
+ 
+    {% set entries = craft.entries().section('grants').entriesOrganization(element).all() %}
+    {% set count   = entries|length %}
+
+    <div class="adminTip-box">
+    {% if count %}
+        {% set tagList = [] %}
+        {% set geoList = [] %}
+        {% for e in entries %}
+            {% set tagList = tagList|merge(e.tagsProgramAreas.all()|column('title')) %}
+            {% set geoList = geoList|merge(e.geoRegion|column('title')) %}
+        {% endfor %}
+        {% if tagList %}
+            <h3>Program Areas / Strategies:</h3>
+            <p>
+            {% for t in tagList %}
+                {{ t }}{% if not loop.last %}&comma;{% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+
+        {% if geoList %}
+            <h3>Geographical Region:</h3>
+            <p>
+            {% for g in geoList %}
+            {{ g }}{% if not loop.last %}&comma;{% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+            <h3>Grants Awarded ({{ count }}):</h3>
+            <ul class="adminTip-list">
+            {% for e in entries %}
+                <li>
+                    {% if currentUser.can('accessCp') %}
+                    <a href="{{ e.getCpEditUrl() }}">{{ e.recordId }}</a>
+                    {% else %}
+                    {{ e.title }}
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+    {% else %}
+        <p>There are no grants associated with this organization.</p>
+    {% endif %}
+    </div>

@@ -1,0 +1,41 @@
+<style>
+.adminTip-label {
+    color: #596673;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.adminTip-box {
+  background: #f3f7fc;
+  margin-top: 0;
+  padding: 1em;
+  border-radius: 10px;
+}
+.adminTip-box--details {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.adminTip-desc {
+    margin-top: 0;
+}
+.adminTip-list {
+    margin-left: 2em;
+    list-style-type: disc;
+}
+</style>
+
+<div class="adminTip-box">
+ 
+    {% set entries = craft.entries().tagsEntry(element).all() %}
+    <p>There are <strong>{{ entries|length }}</strong> posts tagged, <strong>"{{ element.title }}"</strong></p>
+    <ul class="adminTip-list">
+    {% for e in entries %}
+        <li>
+            {% if currentUser.can('accessCp') %}
+            <a href="{{ e.getCpEditUrl() }}">{{ e.title }}</a>
+            {% else %}
+            {{ e.title }}
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+</div>

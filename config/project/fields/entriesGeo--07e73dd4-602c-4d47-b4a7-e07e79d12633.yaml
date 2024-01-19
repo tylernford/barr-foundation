@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
+handle: entriesGeo
+instructions: 'Select one or many geocodes. Drag & drop to rearrange.'
+name: 'Entries: Geo'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+  selectionLabel: 'Add a geocode'
+  showSiteMenu: true
+  sources:
+    - 'section:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

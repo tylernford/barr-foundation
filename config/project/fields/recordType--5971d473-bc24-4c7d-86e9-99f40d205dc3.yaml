@@ -1,0 +1,55 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 99a0a64e-82ac-4b42-92b5-697513e02b7b # Grants
+handle: recordType
+instructions: 'Add an existing record type, or create a new one.'
+name: 'Record Type'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Entry
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\entries\EntryCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\LevelConditionRule
+              -
+                - uid
+                - 62af536a-6275-4cb9-be89-958bd2981b7e
+              -
+                - operator
+                - '='
+              -
+                - value
+                - '2'
+              -
+                - maxValue
+                - ''
+  selectionLabel: 'Add a record type'
+  showSiteMenu: true
+  sources:
+    - 'section:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

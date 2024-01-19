@@ -36,5 +36,4 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Timeline: Multiple Events Per Milestone'
-sortOrder: 15
 topLevel: false
