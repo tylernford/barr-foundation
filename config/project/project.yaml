@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 dateModified: 1705611655
-=======
-dateModified: 1705527964
->>>>>>> develop
 elementSources:
   craft\elements\Asset:
     -
@@ -489,11 +485,8 @@ meta:
     5ef09b80-b3aa-4b57-99dc-4bb324d63fd0: 'Internal Page' # Internal Page
     5f1ebbf5-e779-432a-bee5-8ee4e399d0e9: 'Card: Action' # Card: Action
     6aba2b9f-3c08-4c50-8b7f-bb848f592b20: 'Asset: Video' # Asset: Video
-<<<<<<< HEAD
     6c8d2fba-5672-4d44-aa02-7f576e6ca673: 'Flag: Fiscal Sponsor' # Flag: Fiscal Sponsor
     6cc3b73a-f6dd-45e3-89fd-4c871ad53903: 'Is secondary?' # Is secondary?
-=======
->>>>>>> develop
     6d9c1e45-1dc3-4cae-8f1d-b6d6f966427c: 'Tags: Import List' # Tags: Import List
     6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: Icon # Icon
     6dfb099a-3f70-4263-8930-a2a018c83ada: 'Text: Publication' # Text: Publication
@@ -583,11 +576,8 @@ meta:
     92b819ef-229c-4a42-beff-bc6edc8a0f66: 'Asset: Image' # Asset: Image
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
     94f38795-11e9-4fc4-b4db-eb3ee5c00ff5: Grantmaking # Grantmaking
-<<<<<<< HEAD
     99a0a64e-82ac-4b42-92b5-697513e02b7b: Grants # Grants
-=======
     98affe9f-0fef-4624-ae74-d15517033824: 'Secondary Menu' # Secondary Menu
->>>>>>> develop
     106b6b15-a646-4dff-b250-ffd57c00f21a: Milestone # Milestone
     114e6010-b1c0-4faa-837c-c7bbe1e0daae: 'Page Builders' # Page Builders
     135f1b4e-27cb-4cda-be94-52607d445f75: 'Asset: Image' # Asset: Image
@@ -610,12 +600,9 @@ meta:
     589a1bd0-570d-4dc1-a454-d5034a1b9bba: Default # Default
     600bb22c-f62f-458d-ad51-432956f869ae: 'Program Areas' # Program Areas
     633a6cc7-36f9-47b9-9948-e569afd25265: 'Builder: Changelog' # Builder: Changelog
-<<<<<<< HEAD
     735baf07-fdce-44c2-8433-02997cd29674: 'Department: Import' # Department: Import
     759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
-=======
     747ce413-c373-42ad-92b4-bff1e0c3ab13: Item # Item
->>>>>>> develop
     766d1cbd-4251-4b9d-9378-bf9d345ae492: Openers # Openers
     806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     0814b33a-e40d-4c64-8fa1-aabdfe035850: 'Navigation: Footer' # Navigation: Footer
