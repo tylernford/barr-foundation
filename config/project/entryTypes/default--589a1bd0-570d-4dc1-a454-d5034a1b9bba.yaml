@@ -12,6 +12,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: 'Grantee Name'
             max: null
@@ -56,42 +57,96 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 07e73dd4-602c-4d47-b4a7-e07e79d12633 # Entries: Region
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8651fed6-3b5f-4829-83ba-bd54e493090e
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b81940bf-ee39-4a62-82cf-6a6339da7a92
             userCondition: null
-            warning: null
-            width: 50
           -
             elementCondition: null
-            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: efc7f807-db7f-44ff-9590-060fe9441233
+            template: control-panel/_grant-list.html
+            type: craft\fieldlayoutelements\Template
+            uid: 670cde57-e3a2-4274-a2c3-96f73a9c8ff7
             userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
-            instructions: 'Link to external Grantee website'
-            label: 'Action: URL'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d758e567-539f-4105-8188-cca1f85a4232
-            userCondition: null
-            warning: null
             width: 100
         name: Content
         uid: b88c438e-afd1-48db-a1c5-15c3760d62c5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 205a3949-5e2c-4e26-a4fa-0a6f2fdf0cea # Contact: Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1ccd870d-60f6-429c-8bbe-53288ee6685f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 12829f5d-463d-4f1a-b7e3-856a53ad17af # Contact: Website
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9ad612b0-deb9-43f3-a90f-7c8179029a6b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9cd35cb7-52cf-48dc-b474-f49d9839e2a1 # Contact: Twitter
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60b8b70d-5ea2-4075-b60d-3129d6fc36a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 071f0627-4d57-45f3-be3b-2d686513516e # Contact: Instagram
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5529e33-c47f-4c5f-ba4e-e0a694a1522c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 493bc4b8-cb08-43a2-938d-4c1b76790dd4 # Contact: Facebook
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5f670df-5322-4218-acd8-14a508eb19fa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c5b0dd4c-0674-4747-adf3-2fa7a9bcea40 # Contact: YouTube
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a27bbc52-3c99-4515-b21d-7ed49fc89cb5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: e0fb11d5-e380-4b92-a3a3-79af0134a981
         userCondition: null
 handle: default
 hasTitleField: true
