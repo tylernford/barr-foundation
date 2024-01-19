@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 dateModified: 1705611655
+=======
+dateModified: 1705527964
+>>>>>>> develop
 elementSources:
   craft\elements\Asset:
     -
@@ -485,8 +489,11 @@ meta:
     5ef09b80-b3aa-4b57-99dc-4bb324d63fd0: 'Internal Page' # Internal Page
     5f1ebbf5-e779-432a-bee5-8ee4e399d0e9: 'Card: Action' # Card: Action
     6aba2b9f-3c08-4c50-8b7f-bb848f592b20: 'Asset: Video' # Asset: Video
+<<<<<<< HEAD
     6c8d2fba-5672-4d44-aa02-7f576e6ca673: 'Flag: Fiscal Sponsor' # Flag: Fiscal Sponsor
     6cc3b73a-f6dd-45e3-89fd-4c871ad53903: 'Is secondary?' # Is secondary?
+=======
+>>>>>>> develop
     6d9c1e45-1dc3-4cae-8f1d-b6d6f966427c: 'Tags: Import List' # Tags: Import List
     6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: Icon # Icon
     6dfb099a-3f70-4263-8930-a2a018c83ada: 'Text: Publication' # Text: Publication
@@ -576,7 +583,11 @@ meta:
     92b819ef-229c-4a42-beff-bc6edc8a0f66: 'Asset: Image' # Asset: Image
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
     94f38795-11e9-4fc4-b4db-eb3ee5c00ff5: Grantmaking # Grantmaking
+<<<<<<< HEAD
     99a0a64e-82ac-4b42-92b5-697513e02b7b: Grants # Grants
+=======
+    98affe9f-0fef-4624-ae74-d15517033824: 'Secondary Menu' # Secondary Menu
+>>>>>>> develop
     106b6b15-a646-4dff-b250-ffd57c00f21a: Milestone # Milestone
     114e6010-b1c0-4faa-837c-c7bbe1e0daae: 'Page Builders' # Page Builders
     135f1b4e-27cb-4cda-be94-52607d445f75: 'Asset: Image' # Asset: Image
@@ -599,8 +610,12 @@ meta:
     589a1bd0-570d-4dc1-a454-d5034a1b9bba: Default # Default
     600bb22c-f62f-458d-ad51-432956f869ae: 'Program Areas' # Program Areas
     633a6cc7-36f9-47b9-9948-e569afd25265: 'Builder: Changelog' # Builder: Changelog
+<<<<<<< HEAD
     735baf07-fdce-44c2-8433-02997cd29674: 'Department: Import' # Department: Import
     759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
+=======
+    747ce413-c373-42ad-92b4-bff1e0c3ab13: Item # Item
+>>>>>>> develop
     766d1cbd-4251-4b9d-9378-bf9d345ae492: Openers # Openers
     806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     0814b33a-e40d-4c64-8fa1-aabdfe035850: 'Navigation: Footer' # Navigation: Footer
@@ -741,7 +756,7 @@ meta:
     c64ec6c7-0fa8-4148-bff7-82c4bc7277d0: 'Feed: Jobs' # Feed: Jobs
     c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Card: Feature' # Card: Feature
     c80dff18-6eeb-4474-8278-fdfc55a4630c: 'Text: Supporting' # Text: Supporting
-    c954d828-974b-402e-92e2-3057b737e6ed: Menu # Menu
+    c954d828-974b-402e-92e2-3057b737e6ed: 'Primary Menu' # Primary Menu
     c984ca15-0cae-4c1d-9b3c-14e9d29347f7: 'Page Builder: All (Do not Delete)' # Page Builder: All (Do not Delete)
     c4298a25-8850-4817-a1a1-014ba04d9e07: Blocks # Blocks
     c5338cc4-1c12-47a4-bf3b-ecd79f2164e3: 'Text: Italic' # Text: Italic
@@ -769,7 +784,6 @@ meta:
     d38be497-85d5-48f4-af5f-d88b0fbcc0f5: 'Record Id' # Record Id
     d38d5b2f-c00b-46b1-a1b7-2e88f27d88de: Actions # Actions
     d82a1a8b-d1ee-434f-9583-06eb498d2c9c: 'Style: Button or Text' # Style: Button or Text
-    d8653b35-a1ac-4282-8083-902f060bcc6e: Target # Target
     d1599614-0216-46ee-8a6d-d945d7d0bd1b: 'Action: Entry or URL' # Action: Entry or URL
     da0f3c86-0adc-4639-95b7-f71a2afe7cd0: Email # Email
     da3a7987-a4a2-4942-9663-9bad7a165bf5: 'Text: Body' # Text: Body
@@ -795,6 +809,7 @@ meta:
     e6dda9b3-62b5-4a1b-b563-2939fab68f38: Geocodes # Geocodes
     e7ad36b6-173f-4a91-aab3-c5472e6d0f20: 'Text: Supporting' # Text: Supporting
     e7b9430c-9f54-4b74-8dfc-418a6d84b83a: Milestone # Milestone
+    e68aec50-47ab-4ff2-9d37-081054e28c7c: Heading # Heading
     e80ac831-8e3e-4eb0-b026-b626f4dda22a: 'Text: Term' # Text: Term
     e4496b2d-7e4a-4e86-855a-f5168e2399b5: 'Kitchen Sink' # Kitchen Sink
     e4877e61-528c-470a-bfb5-5548ec0153d5: 'Text: Heading' # Text: Heading

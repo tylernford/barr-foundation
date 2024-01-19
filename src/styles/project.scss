@@ -23,8 +23,8 @@ body {
 	$max: map-get($breakpoints,'xl');
 	min-height: -webkit-fill-available;
 	overflow-x: hidden;
-	background: var(--color-tertiary-grey-25);
-	color: var(--color-tertiary-grey-200);
+	background: var(--color-grey-25);
+	color: var(--color-grey-200);
 	font-family: var(--ff-messina-serif);
 	font-weight: 400;
 	-moz-osx-font-smoothing: grayscale;
@@ -97,7 +97,7 @@ img {
   Accessibility Skip
 ------------------------------------------------------------------------ */
 .skip-link {
-	border: 1px solid var(--color-tertiary-grey-200);
+	border: 1px solid var(--color-grey-200);
 	border-top: none;
 	display: block;
 	left: 50%;
@@ -106,8 +106,8 @@ img {
 	z-index: 100;
 	transform: translateY(-100%);
 	transition: transform 0.3s;
-	background: var(--color-tertiary-grey-25);
-	color: var(--color-tertiary-grey-200);
+	background: var(--color-grey-25);
+	color: var(--color-grey-200);
 	font-family: var(--ff-axiforma);
 	font-weight: 700;
 

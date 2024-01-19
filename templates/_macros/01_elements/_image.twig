@@ -1,0 +1,107 @@
+{# =======================================
+  Macro: Image
+==========================================
+  Params: 
+    - image (required) (block.image.one())
+    - width (required) (240, 320, 480, 640, 912, 1024, 1280, 1600, 2000)
+    - ratio (3/4 etc.)
+    - quality (1-100)
+    - lazyload (false)
+======================================= #}
+
+{% macro image(image, width, ratio, quality, lazyload) %}
+  
+  {# ---  Set Lazyload  --- #}
+  {% if lazyload == false %}
+    {% set lazyload = false %}
+  {% else %}
+    {% set lazyload = true %}
+  {% endif %}
+
+  {# ---  Set Quality  --- #}
+  {% if quality|length %}
+  {% else %}
+    {% set quality = 80 %}
+  {% endif %}
+
+  {# ---  Set Width  --- #}
+  {% if width == 240 %}
+    {% set srcsetWidths = [240] %}
+  {% elseif width == 320 %}
+    {% set srcsetWidths = [320] %}
+  {% elseif width == 480 %}
+    {% set srcsetWidths = [320, 480] %}
+  {% elseif width == 640 %}
+    {% set srcsetWidths = [320, 480, 640] %}
+  {% elseif width == 912 %}
+    {% set srcsetWidths = [480, 640, 776, 912] %}
+  {% elseif width == 1024 %}
+    {% set srcsetWidths = [480, 640, 776, 912, 1024] %}
+  {% elseif width == 1280 %}
+    {% set srcsetWidths = [640, 776, 912, 1024, 1280] %}
+  {% elseif width == 1600 %}
+    {% set srcsetWidths = [776, 912, 1024, 1280, 1600] %}
+  {% elseif width == 2000 %}
+    {% set srcsetWidths = [776, 912, 1024, 1280, 1600, 2000] %}
+  {% endif %}
+
+  {# ---  Set Ratio Value & Padding Top --- #}
+  {# @TODO: Ensure ratio/padding values are whole numbers #}
+  {% set ratioValue = '' %}
+  {% set paddingTop = '' %}
+  {% if ratio|length %}
+    {# ---  Split Ratio  --- #}
+    {% set ratioFirst  = ratio|split('/')[0] %}
+    {% set ratioSecond = ratio|split('/')[1] %}
+
+    {# ---  Set Ratio Value  --- #}
+    {% set ratioValue = ratioFirst / ratioSecond %}
+  {% else %}
+    {% set ratioValue = 'auto' %}
+  {% endif %}
+
+  {# ---  Set Height to Auto  --- #}
+  {% set height = 'auto' %}
+
+  {# ---  Set Sources  --- #}
+  {% set sources = ['webp', image.extension] %}
+
+
+  <picture class="image">
+    {% if 'svg' not in sources %}
+      {% for source in sources %}
+        <source
+          sizes="100vw"
+          srcset="
+            {% for width in srcsetWidths %}
+              {% if ratioValue != 'auto' %}
+                {% set height = width / ratioValue %}
+              {% endif %}
+              {{ image.url({ width: width, height: height, quality: quality, format: source }) }} {{ width }}w{{ loop.last ? '' : ',' }}
+            {% endfor %}
+          "
+          type="image/{{ source }}"
+        >
+      {% endfor %}
+    {% endif %}
+
+    <img
+      {% if ratioValue != 'auto' %}
+        {% set height = width / ratioValue %}
+      {% endif %}
+
+      src="{{ image.url({ width: width, height: height, quality: quality }) }}"
+      alt="{{ image.alt }}"
+      {{ lazyload != 'false' ? 'loading="lazy"' }}
+      style="content-visibility: auto"
+      decoding="async"
+
+      {% if height == 'auto' %}
+        {% set ratioValue = image.width / width %}
+        {% set height     = image.height / ratioValue %}
+      {% endif %}
+
+      width="{{ width }}" height="{{ height|round }}"
+    >
+  </picture>
+{% endmacro %}

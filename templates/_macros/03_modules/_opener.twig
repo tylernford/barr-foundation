@@ -1,0 +1,353 @@
+{# =======================================
+  Module: Opener
+==========================================
+  Params:
+    - opener
+    - entry
+======================================= #}
+
+{% macro landing(opener, entry) %}
+    {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+    {% import '_macros/01_elements/_image' as images %}
+    
+    {# Set breadcrumbs #}
+    {% set crumbs = [ { 'title': entry.section, 'url': '' } ] %}
+    {% set entryAncestors = entry.getAncestors %}
+    {% for entryAncestor in entryAncestors %}
+        {% set crumbs = crumbs|merge([
+            { 'title': entryAncestor, 'url': entryAncestor.url }
+        ]) %}
+    {% endfor %}
+    
+    {# Heading, description, and image #}
+    {% set openerHeading = opener.textHeading|length ? opener.textHeading : entry.title %}
+    {% set openerDescription = opener.textDescription %}
+    {% set openerImage = opener.assetImage|length ? opener.assetImage.one() : null %}
+    
+    {# Build nav menu from Common or People builders #}
+    {% set navMenu =
+        entry.builderCommon ? entry.builderCommon :
+        entry.builderPeople ? entry.builderPeople
+    %}
+    {% set navMenu = navMenu|length ? navMenu.level(1) %}
+    
+    {# Don't display nav menu if empty #}
+    {% set showMenu = false %}
+    {% for menuItem in navMenu %}
+        {% set showMenu = menuItem.dividerSection.flagBookmark == true ? true %}
+    {% endfor %}
+    
+    <header class="blockOpener blockOpener--landing">
+        <div class="blockOpener__primary">
+            {# Breadcrumbs #}
+            {{ breadcrumbs.breadcrumb(crumbs) }}
+
+            {# Page title #}
+            <h1 class="primary__heading">{{ openerHeading }}</h1>
+            
+            {# Description and menu #}
+            <div class="primary__wrapper">
+                {# Description #}
+                {% if openerDescription %}
+                    <div class="primary__desc">
+                        {{ openerDescription }}
+                    </div>
+                {% endif %}
+
+                {# Menu #}
+                {% if showMenu == true %}
+                    <div class="primary__nav">
+                        <h2 class="nav__title">Jump To</h2>
+                        <nav class="nav__menu" aria-label="Page navigation" role="navigation">
+                            <ol>
+                                {% for menuItem in navMenu %}
+                                    {% set itemTitle = menuItem.dividerSection.sectionName %}
+                                    <li>
+                                        <a href="#{{ itemTitle|slugify }}">
+                                            {{ itemTitle }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </nav>
+                    </div>
+                {% endif %}
+            </div>
+            
+            {# Graphic #}
+            <div class="primary__graphic"></div>
+        </div>
+        
+        {# Image #}
+        {% if openerImage %}
+            <figure class="blockOpener__media">
+                {{ images.image(openerImage, '1600', '4/3', '', false) }}
+
+                {# Image caption #}
+                {% if openerImage.textCaption|length %}
+                    <figcaption class="media__caption">
+                        <span class="caption__background"></span>
+                        <span class="caption__background"></span>
+                        <span class="caption__background"></span>
+                        <div class="caption__caption">
+                            {{ openerImage.textCaption }}
+                        </div>
+                    </figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}
+    </header>
+{% endmacro %}
+
+{% macro bio(entry) %}
+    {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+    
+    {# Set bio #}
+    {% set bio = entry %}
+
+    {# Set breadcrumbs #}
+    {% set crumbs = [ { 'title': 'People', 'url': '' } ] %}
+
+    {# Set name #}
+    {% set name =
+        bio.textMiddle|length ? bio.textFirst ~ ' ' ~ bio.textMiddle ~ ' ' ~ bio.textLast :
+        bio.textFirst ~ ' ' ~ bio.textLast
+    %}
+
+    {# Set pronouns #}
+    {% set pronouns = bio.textPronouns %}
+
+    {# Set job title #}
+    {% set jobTitle = bio.textJob %}
+
+    {# Set program areas #}
+    {% set programs = bio.tagsEntry %}
+    {% set programAreas = [] %}
+    {% for program in programs %}
+        {% set programAreas = programAreas|merge([
+            { 'title': program, 'url': program.url }
+        ]) %}
+    {% endfor %}
+
+    {# Set image #}
+    {% set image = bio.assetImage.one %}
+
+    <header class="blockOpener blockOpener--bio">
+        <div class="blockOpener__primary">
+            <div class="primary__wrapper">
+                {# Breadcrumbs #}
+                {{ breadcrumbs.breadcrumb(crumbs) }}
+
+                {# Page title #}
+                <h1 class="primary__heading">{{ name }}</h1>
+
+                {# Description #}
+                {% if pronouns or jobTitle %}
+                    <p class="primary__desc">
+                        {% if pronouns|length %}
+                            <i>{{ pronouns }}</i>
+                        {% endif %}
+                        {% if jobTitle|length %}
+                            {{ jobTitle }}
+                        {% endif %}
+                    </p>
+                {% endif %}
+
+                {# Tags #}
+                {% if programAreas|length %}
+                    <div class="primary__tags">
+                        {{ details.detail('tags', false, programAreas) }}
+                    </div>
+                {% endif %}
+            </div>
+
+            {# Image #}
+            {% if image %}
+                <figure class="primary__media">
+                    {{ images.image(image, '912', '3/2', '', false) }}
+                </figure>
+            {% endif %}
+
+            {# Graphic #}
+            <div class="primary__graphic"></div>
+        </div>
+    </header>
+{% endmacro %}
+
+{% macro post(entry) %}
+    {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+    
+    {# Set post #}
+    {% set post = entry %}
+
+    {# Set breadcrumbs #}
+    {% set crumbs = [
+        { 'title': 'News & Insights', 'url': '' },
+        { 'title': 'Blog', 'url': siteUrl ~ '/news-insights/blog' }
+    ] %}
+
+    {# Set published date #}
+    {% set publishedDate = post.dateOnly %}
+
+    {# Set authors #}
+    {% set authors = post.entriesTeam %}
+    {% set postAuthors = [] %}
+    {% for author in authors %}
+        {% set postAuthors = postAuthors|merge([author]) %}
+    {% endfor %}
+    {% set authorDetails = [] %}
+
+    {# Set tags #}
+    {% set tagsList = post.tagsEntry %}
+    {% set tags = [] %}
+    {% for tagsItem in tagsList %}
+        {% set tags = tags|merge([
+            { 'title': tagsItem, 'url': tagsItem.url }
+        ]) %}
+    {% endfor %}
+
+    {# Set image #}
+    {% set image = post.assetImage.one %}
+
+    <header class="blockOpener blockOpener--post">
+        {# Primary #}
+        <div class="blockOpener__primary">
+            {# Breadcrumbs #}
+            {{ breadcrumbs.breadcrumb(crumbs) }}
+
+            {# Page title #}
+            <h1 class="primary__heading">{{ post.title }}</h1>
+
+            {# Published date #}
+            <p class="primary__published-date">
+                Published <time datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("m.d.y") }}</time>
+            </p>
+
+            {# Authors #}
+            {% if postAuthors|length %}                    
+                {% for postAuthor in postAuthors %}
+                    {# Set author image #}
+                    {% set authorImage = postAuthor.assetImage.one %}
+
+                    {# Set name #}
+                    {% set authorName =
+                        postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
+                        postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
+                    %}
+
+                    {% set authorDetails = authorDetails|merge([
+                        { 'img': authorImage, 'name': authorName }
+                    ]) %}
+                {% endfor %}
+                {{ details.detail('byline', false, authorDetails) }}
+            {% endif %}
+
+            {# Tags #}
+            {% if tags|length %}
+                <div class="primary__tags">
+                    {{ details.detail('tags', false, tags) }}
+                </div>
+            {% endif %}
+        </div>
+
+        {# Media #}
+        <div class="blockOpener__media">
+            {# Image #}
+            {% if image %}
+                <figure>
+                    {{ images.image(image, '1600', '9/4', '', false) }}
+
+                    {# Image caption #}
+                    {% if image.textCaption|length %}
+                        <figcaption class="media__caption">
+                            <span class="caption__background"></span>
+                            <span class="caption__background"></span>
+                            <span class="caption__background"></span>
+                            <div class="caption__caption">
+                                {{ image.textCaption }}
+                            </div>
+                        </figcaption>
+                    {% endif %}
+                </figure>
+            {% endif %}
+        </div>
+    </header>
+{% endmacro %}
+
+{% macro home(opener) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_image' as images %}
+    {% import '_macros/01_elements/_patterns' as patterns %}
+
+    {% set heading = opener.textHeading %}
+    {% set description = opener.textDescription %}
+    {% set action = opener.actionLink %}
+    {% set image = opener.assetImage.one %}
+
+    <header class="blockOpener blockOpener--home">
+        {# Primary #}
+        <div class="blockOpener__primary">
+            {# Wrapper #}
+            <div class="primary__wrapper">
+                {# Heading #}
+                {% if heading|length %}
+                    <h1 class="primary__heading">{{ heading }}</h1>
+                {% endif %}
+
+                {# Description #}
+                {% if description|length %}
+                    <div class="primary__desc">{{ description }}</div>
+                {% endif %}
+
+                {# Action #}
+                {% if action.url|length %}
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: '', iconOnly: false,
+                        text: action.text, url: action,
+                        linkType: 'entry', target: ''
+                    } %}
+
+                    <div class="primary__action">
+                        {{ actions.action(actionAttributes) }}
+                    </div>
+                {% endif %}
+            </div>
+
+            {# Media #}
+            <div class="primary__media">
+                {# Image #}
+                {% if image %}
+                    <figure>
+                        <div>
+                            {{ images.image(image, '1024', '5/4', '', false) }}
+                        </div>
+
+                        {# Image caption #}
+                        {% if image.textCaption|length %}
+                            <figcaption class="media__caption">
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <span class="caption__caption">
+                                    <span class="pattern">
+                                        {{ patterns.pattern() }}
+                                    </span>
+
+                                    {{ image.textCaption }}
+                                </span>
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endif %}
+            </div>
+
+            {# Graphic #}
+            <div class="primary__graphic"></div>
+        </div>
+    </header>
+{% endmacro %}

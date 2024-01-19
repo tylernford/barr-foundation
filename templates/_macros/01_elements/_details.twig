@@ -53,13 +53,41 @@
 
   {# List #}
   {% macro list(variant, isReversed, details) %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set programAreas =  craft.entries().section('programAreas') %}
+    {% set programArea = '' %}
+    {% set areaColor = '' %}
+
     <ul class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       {% for detail in details %}
         <li>
           {% if variant == 'tags' %}
-            <a href="{{ detail.url }}">{{ detail.title }}</a>
+
+            {% for area in programAreas %}
+              {% if detail.title == area.title %}
+                {% set programArea = area %}
+              {% endif %}
+            {% endfor %}
+
+            {% if programArea %}
+              {% set areaColor =
+                programArea == 'Arts & Creativity' ? 'green' :
+                programArea.ancestors.one == 'Arts & Creativity' ? 'green' :
+                programArea.title == 'Climate' ? 'plum' :
+                programArea.ancestors.one == 'Climate' ? 'plum' :
+                programArea.title == 'Education' ? 'marigold' :
+                programArea.ancestors.one == 'Education' ? 'marigold' :
+                'teal'
+              %}
+            {% endif %}
+
+            <a{{ areaColor|length ? ' data-program-color=' ~ areaColor }} href="{{ detail.url }}">{{ detail.title }}</a>
           {% elseif variant == 'byline' %}
-            <span></span> {{ detail.name }}
+            {% if detail.img|length %}
+              {{ images.image(detail.img, '240', '1/1', '', false) }}
+            {% endif %}
+            {{ detail.name }}
           {% endif %}
         </li>
       {% endfor %}

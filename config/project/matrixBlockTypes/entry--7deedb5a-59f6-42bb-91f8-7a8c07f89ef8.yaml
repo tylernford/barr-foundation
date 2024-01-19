@@ -10,7 +10,7 @@ fieldLayouts:
             fieldUid: 890d73b0-e871-4780-aea2-81e638b832a5 # Entry: Blog or Newsroom
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 63cd80d4-6f1b-4e56-97b4-d1af16e3f7a7
@@ -35,7 +35,7 @@ fields:
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1
-      minRelations: null
+      minRelations: 1
       selectionCondition:
         __assoc__:
           -
