@@ -1,4 +1,4 @@
-dateModified: 1705611655
+dateModified: 1705693461
 elementSources:
   craft\elements\Asset:
     -
@@ -224,10 +224,8 @@ elementSources:
       tableAttributes:
         - link
         - section
-        - type
-        - slug
         - 'field:735baf07-fdce-44c2-8433-02997cd29674' # Department: Import
-        - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
+        - 'field:ab12a67b-9af1-4f2c-bc53-cbedda60dbd1' # Budget/Strategy/Portfolio: Import
         - 'field:1b2cb00a-9926-4731-ba73-26cd45fd7e44' # Geo: Region
       type: native
     -
@@ -576,8 +574,8 @@ meta:
     92b819ef-229c-4a42-beff-bc6edc8a0f66: 'Asset: Image' # Asset: Image
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
     94f38795-11e9-4fc4-b4db-eb3ee5c00ff5: Grantmaking # Grantmaking
-    99a0a64e-82ac-4b42-92b5-697513e02b7b: Grants # Grants
     98affe9f-0fef-4624-ae74-d15517033824: 'Secondary Menu' # Secondary Menu
+    99a0a64e-82ac-4b42-92b5-697513e02b7b: Grants # Grants
     106b6b15-a646-4dff-b250-ffd57c00f21a: Milestone # Milestone
     114e6010-b1c0-4faa-837c-c7bbe1e0daae: 'Page Builders' # Page Builders
     135f1b4e-27cb-4cda-be94-52607d445f75: 'Asset: Image' # Asset: Image
@@ -601,8 +599,8 @@ meta:
     600bb22c-f62f-458d-ad51-432956f869ae: 'Program Areas' # Program Areas
     633a6cc7-36f9-47b9-9948-e569afd25265: 'Builder: Changelog' # Builder: Changelog
     735baf07-fdce-44c2-8433-02997cd29674: 'Department: Import' # Department: Import
-    759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
     747ce413-c373-42ad-92b4-bff1e0c3ab13: Item # Item
+    759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
     766d1cbd-4251-4b9d-9378-bf9d345ae492: Openers # Openers
     806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     0814b33a-e40d-4c64-8fa1-aabdfe035850: 'Navigation: Footer' # Navigation: Footer
@@ -704,6 +702,7 @@ meta:
     a14586b6-ea62-4ea9-8618-255f471f2b02: 'Text: Location' # Text: Location
     a9191718-46f6-4d6a-8c04-8218d3361f05: 'Geo: Area' # Geo: Area
     aa3227ec-0bd2-4d61-80db-dd6c6e3a331a: 'Text: Job Title' # Text: Job Title
+    ab12a67b-9af1-4f2c-bc53-cbedda60dbd1: 'Budget/Strategy/Portfolio: Import' # Budget/Strategy/Portfolio: Import
     ace08f06-16e5-477e-b91c-f28e50048f67: Eyebrow # Eyebrow
     ae2b1b26-277c-4619-ab71-b564ec89459b: 'Text: Supporting' # Text: Supporting
     af76ec93-a5f2-4f9b-8b96-eb3fbf19baef: 'Text: Body Options' # Text: Body Options

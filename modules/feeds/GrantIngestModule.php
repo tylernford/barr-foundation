@@ -96,49 +96,45 @@ class GrantIngestModule extends Module
     public function init()
     {
 
-        
-        // Event::on(Process::class, Process::EVENT_STEP_BEFORE_ELEMENT_SAVE, function(FeedProcessEvent $event) {
+        // TODO: incomplete
+        Event::on(Process::class, Process::EVENT_STEP_BEFORE_ELEMENT_SAVE, function(FeedProcessEvent $event) {
 
+            switch($event->feed['name']) {
 
-        //     switch($event->feed['name']) {
+                case 'Grants By Organization':
+                    $element = $event->element;
+                    // Save the budget/strategy/portfolio arr
+                    $deptStr = $element->departmentImport;
 
-        //         case 'Grants By Organization':
-        //             $element = $event->element;
-        //             // Save the budget/strategy/portfolio arr
-        //             $deptStr = $element->departmentImport;
-
-        //             $varType = gettype($deptStr);
+                    $varType = gettype($deptStr);
                     
-        //             $this->debug_to_console("testing " . $varType);
+                    $deptArr    = explode(' | ', $deptStr);
+                    $deptLength = count($deptArr);
+
+                    if ( $deptLength === 1 ) {
+
+                        $programTitle = $deptArr[0];
+                        $programEntry = $this->getEntry($programTitle,1);
+
+                        if ( $programEntry ) {
+                            $element->tagsProgramAreas = $programEntry;
+                        }
+                    }
+
+                    if ( $deptLength === 2 ) {
+                        $strategy = $deptArr[1];
+                        if ( $deptLength === 3 ) {
+                            $portfolio = $deptArr[2];
+                            $element->tagsStrategies = [$strategy,$portfolio];
+                        }
+                        else {
+                            $element->tagsStrategies = $strategy;
+                        }
+                    }
                     
-
-                    // $deptArr    = explode(' | ', $deptStr);
-                    // $deptLength = count($deptArr);
-
-                    // if ( $deptLength === 1 ) {
-
-                    //     $programTitle = $deptArr[0];
-                    //     $programEntry = $this->getEntry($programTitle,1);
-
-                    //     if ( $programEntry ) {
-                    //         $element->tagsProgramAreas = $programEntry;
-                    //     }
-                    // }
-
-                    // if ( $deptLength === 2 ) {
-                    //     $strategy = $deptArr[1];
-                    //     if ( $deptLength === 3 ) {
-                    //         $portfolio = $deptArr[2];
-                    //         $element->tagsStrategies = [$strategy,$portfolio];
-                    //     }
-                    //     else {
-                    //         $element->tagsStrategies = $strategy;
-                    //     }
-                    // }
-                    
-        //             break;
-        //     }
-        // });
+                    break;
+            }
+        });
     }
 
 }
