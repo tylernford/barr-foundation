@@ -1,0 +1,14 @@
+columnSuffix: zwgfcafi
+contentColumnType: boolean
+fieldGroup: 99a0a64e-82ac-4b42-92b5-697513e02b7b # Grants
+handle: flagRacialEquity
+instructions: 'Is this a racial equity centered organization'
+name: 'Flag: Racial Equity Centered'
+searchable: true
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

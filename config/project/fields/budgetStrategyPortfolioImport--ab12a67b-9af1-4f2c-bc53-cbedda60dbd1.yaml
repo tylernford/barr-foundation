@@ -1,0 +1,19 @@
+columnSuffix: lgsixpoy
+contentColumnType: text
+fieldGroup: 99a0a64e-82ac-4b42-92b5-697513e02b7b # Grants
+handle: budgetStrategyPortfolioImport
+instructions: 'Field to parse & clean imported Budget/Strategy/Portfolio field for proper mapping to Strategy entries'
+name: 'Budget/Strategy/Portfolio: Import'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

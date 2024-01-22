@@ -1,16 +1,16 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
-handle: entriesRegion
-instructions: 'Select one or many regions. Drag & drop to rearrange.'
-name: 'Entries: Region'
-searchable: false
+fieldGroup: 99a0a64e-82ac-4b42-92b5-697513e02b7b # Grants
+handle: entriesOrganization
+instructions: null
+name: 'Entries: Organization'
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   selectionCondition:
     __assoc__:
@@ -23,10 +23,10 @@ settings:
       -
         - class
         - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: 'Add a region'
-  showSiteMenu: true
+  selectionLabel: 'Add an organization'
+  showSiteMenu: false
   sources:
-    - 'section:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Regions
+    - 'section:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

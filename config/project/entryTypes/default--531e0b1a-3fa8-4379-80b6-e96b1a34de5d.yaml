@@ -1,0 +1,59 @@
+fieldLayouts:
+  32c2156f-54ec-45a6-8862-594a7e7a475e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7ca95e4f-e30c-48c6-968f-d2e3ed44c8f2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 205a3949-5e2c-4e26-a4fa-0a6f2fdf0cea # Contact: Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90eb9c63-5e4f-4669-9e9f-c8573849f9c6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fbc25313-c0fd-4927-a416-6ef02512a8fe
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: e6c8dc6d-efa9-46b1-83c3-5a7112ef7cf4 # Grant Contacts
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
