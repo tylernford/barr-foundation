@@ -4,6 +4,7 @@
 
 // Element Imports
 import './components/accordion';
+import './components/footerForm';
 import './components/navigation';
 
 // Component Imports

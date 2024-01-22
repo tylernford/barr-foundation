@@ -1,6 +1,134 @@
-{% set env = getenv('CRAFT_ENVIRONMENT') %}
+{# _partials/_footer.twig #}
 
-<footer id="footer">
+{% set env = getenv('CRAFT_ENVIRONMENT') %}
+{% set footerNav = craft.entries().section('footer').one().navFooter.all() %}
+{% set socialLinks = seomatic.site.sameAsLinks %}
+
+<footer id="footer" class="siteFooter">
+  {# Primary #}
+  <div class="siteFooter__primary">
+    {# Brand #}
+    <a class="siteFooter__brand" href="{{ siteUrl }}">
+        <svg aria-hidden="true">
+            <use xlink:href="{{ alias('@svg') }}logo--horizontal--reversed"></use>
+        </svg>
+        <span>Barr Foundation</span>
+    </a>
+
+    {# Actions #}
+    <div class="siteFooter__actions">
+      {# Nav #}
+      {% if footerNav|length %}
+        <nav class="actions__nav">
+          <ul>
+            {% for navItem in footerNav %}
+              {% set action = navItem.navTarget %}
+
+              <li>
+                <a href="{{ action.url }}"{{ action.target == '_blank' ? ' target="_blank"' }}>{{ action.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+
+      {# Social #}
+      {% if socialLinks|length %}
+        <ul class="actions__social">
+          {% for link in socialLinks %}
+            {% if link.handle == 'facebook' or link.handle == 'twitter' or link.handle == 'linkedin' %}
+              {% if link.url|length %}
+                <li>
+                  <a href="{{ link.url }}" target="_blank">
+                    <svg class="brand__horizontal" aria-hidden="true">
+                      <use xlink:href="{{ alias('@svg') }}icon--social-{{ link.handle }}-20"></use>
+                    </svg>
+                    <span class="visually-hidden">{{ link.handle|capitalize }}</span>
+                  </a>
+                </li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    {# Meta #}
+    <div class="siteFooter__meta">
+      {# Contact #}
+      <div class="meta__contact">
+        <p>
+          Two Atlantic Avenue<br>
+          Boston, MA 02110
+        </p>
+        <p>
+          P: <a href="tel:6178543500">617.854.3500</a><br>
+          F: <a href="tel:6178543501">617.854.3501</a>
+        </p>
+      </div>
+
+      {# Copyright & Terms #}
+      <p class="meta__copyright">
+        &copy;{{ now|date("Y") }} Barr Foundation.<br>
+        All rights reserved.<br>
+        <a href="">Terms of use</a>
+      </p>
+    </div>
+  </div>
+
+  {# Secondary #}
+  <div class="siteFooter__secondary">
+    {# Form #}
+    <div class="siteFooter__form">
+      {# Form Trigger #}
+      <button class="form__trigger" aria-expanded="false"  aria-controls="footer-form">
+        Subscribe to our newsletter
+        <svg aria-hidden="true">
+          <use xlink:href="{{ alias('@svg') }}icon--arrow-small-20"></use>
+        </svg>
+      </button>
+
+      {# Form wrapper #}
+      <div id="footer-form" class="form__wrapper">
+        <div class="form__inner">
+          <h2>Get updates from Barr in your inbox.</h2>
+
+          {{ craft.formie.renderForm('contact', {
+            themeConfig: {
+              formWrapper: false,
+              resetClasses: true,
+              
+              form: {
+                attributes: {
+                  class: 'form',
+                },
+              },
+              
+              row: {
+                attributes: {
+                  class: 'field-wrapper',
+                },
+              },
+
+              nestedFieldRows: false,
+              nestedFieldContainer: false,
+
+              fieldContainer: false,
+              fieldInputContainer: false,
+
+              fieldRequired: false,
+
+              fieldError: {
+                attributes: {
+                  class: 'field-error',
+                },
+              },
+            },
+          }) }}
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <div id="viewport" class="viewport{{ env == 'dev' ? ' _is-debug' : '' }}"></div>
