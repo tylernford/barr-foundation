@@ -7,7 +7,7 @@ const subMenuTriggers = document.querySelectorAll(`.submenu__trigger`);
 // ---------------------------------------------------------------------------
 // Reveal navigation on menu trigger click
 function triggerMenu(){
-  if (siteMenuTrigger.getAttribute('aria-expanded') == `true` ) {
+  if (siteMenuTrigger.getAttribute(`aria-expanded`) == `true` ) {
     body.style.removeProperty(`overflow`);
     siteMenuTrigger.setAttribute(`aria-expanded`, `false`);
     siteMenu.classList.toggle(`-is-active`);
