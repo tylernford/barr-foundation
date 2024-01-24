@@ -658,6 +658,12 @@ body[data-theme-color="marigold"] {
             object-fit: cover;
           }
         }
+
+        .media__caption {
+          .pattern {
+            display: none;
+          }
+        }
       }
 
       .primary__graphic {
@@ -746,16 +752,13 @@ body[data-theme-color="marigold"] {
 
         .primary__media {
           margin-inline-start: var(--neg-base-16);
-          // position: relative;
 
           figure {
             min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: static;
-            // inset: 0;
-            // position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: static;
 
             > div {
               padding-top: 110%;
@@ -809,6 +812,7 @@ body[data-theme-color="marigold"] {
                 inset: auto auto 0 -300px;
                 width: 300px;
                 height: 300px;
+                display: block;
                 position: absolute;
 
                 &::after {
