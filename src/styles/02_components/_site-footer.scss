@@ -2,30 +2,16 @@
 @use "../utils/_utils" as *;
 
 .siteFooter {
+  overflow-x: hidden;
   --color-footer-primary: var(--color-grey-25);
   --color-footer-secondary: var(--color-teal-50);
   --color-footer-tertiary: var(--color-citrus-100);
   --color-footer-background: var(--color-navy-100);
 
-  // Layout
-  @include container;
   padding-block: var(--base-16) var(--base-18);
-  display: grid;
-  gap: var(--base-6);
-  position: relative;
   background-color: var(--color-footer-background);
   color: var(--color-footer-primary);
   @include getType('caption-axiforma');
-
-  // Extend background
-  &::before {
-    content: '';
-    inset: 0 auto 0 -50vw;
-    width: 200vw;
-    position: absolute;
-    background-color: var(--color-footer-background);
-    z-index: -1;
-  }
 
   a {
     color: inherit;
@@ -35,6 +21,13 @@
     outline: var(--outline-width) solid var(--color-focus);
     outline-offset: var(--outline-offset);
     transition: var(--transition-in);
+  }
+
+  // Container
+  .siteFooter__container {
+    @include container;
+    display: grid;
+    gap: var(--base-6);    
   }
 
   // Primary
@@ -288,7 +281,9 @@
 
 
   @include breakpoint('sm') {
-    gap: var(--base-10);
+    .siteFooter__container {
+      gap: var(--base-10);
+    }
 
     .siteFooter__actions {
       .actions__nav {
@@ -307,7 +302,9 @@
   }
 
   @include breakpoint('md') {
-    gap: var(--base-16);
+    .siteFooter__container {
+      gap: var(--base-16);
+    }
 
     .siteFooter__form {
       border: none;
@@ -327,8 +324,10 @@
   }
 
   @include breakpoint('lg') {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--base-8);
+    .siteFooter__container {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--base-8);
+    }
 
     .siteFooter__primary {
       padding-block-start: var(--base-2);
@@ -341,6 +340,8 @@
   }
 
   @include breakpoint('xxl') {
-    padding-block-end: var(--base-24);
+    .siteFooter__container {
+      padding-block-end: var(--base-24);
+    }
   }
 }
