@@ -12,6 +12,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -29,14 +30,79 @@ fieldLayouts:
             uid: 48a912fd-9890-43a0-8c20-a0b32e88133c
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d38be497-85d5-48f4-af5f-d88b0fbcc0f5 # Record Id
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a39c1d4d-7e74-4c7e-aaf8-e1dd1eaaf574
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: c1045573-4aae-4c25-af67-d696856c4697
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 9ed3f26f-fbe9-4b33-81ed-22a2fae9ea52 # Geo: Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 429bb46e-0ded-4bc0-af29-263e265a5657
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: a9191718-46f6-4d6a-8c04-8218d3361f05 # Geo: Area
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 732bd3b1-659f-41a5-8543-e4deb59d8b33
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: ddb40615-2bb2-43e2-92c2-01bce41cccf6 # Geo: Name-Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1ca015b-055d-445c-99aa-4374894fe99b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e32751f4-2535-48d4-a6fa-3eab79737ccf # Geo: Parent Hierarchy
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46605c4b-a028-4d77-ba69-7f3a385110b6
+            userCondition: null
+            warning: null
+            width: 50
         name: Content
         uid: 8520eaf9-87b8-4d83-bba4-4592a7ff5c9d
         userCondition: null
 handle: default
 hasTitleField: true
 name: Default
-section: e6dda9b3-62b5-4a1b-b563-2939fab68f38 # Regions
+section: e6dda9b3-62b5-4a1b-b563-2939fab68f38 # Geocodes
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

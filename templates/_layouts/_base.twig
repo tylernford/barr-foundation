@@ -17,6 +17,8 @@ Includes navigation, main content, and footer.
     'teal'
 %}
 
+{% set baseUrl = getenv('PRIMARY_SITE_URL') %}
+
 <!DOCTYPE html>
 <html lang="en-US">
     {% include '_partials/_head' %}

@@ -24,6 +24,10 @@
 @mixin heading() {
     margin-bottom: 1em;
     font-size: 2em;
+
+    &._is-hidden {
+        @include visuallyHide;
+    }
 }
 
 @mixin support() {
@@ -62,6 +66,14 @@
     &-button {
         @include button(var(--color-program-green-100));
     }
+}
+
+@mixin cta() {
+    display: inline-block;
+    color: var(--color-program-green-100);
+    text-transform: uppercase;
+    text-underline-offset: 15.5px;
+    text-decoration-thickness: 1px;
 }
 
 .blockOpener {
@@ -306,6 +318,10 @@
         display: block;
     }
 
+    &-properties {
+
+    }
+
 }
 
 .blockGeneric {
@@ -313,6 +329,110 @@
 
     &-heading {
         @include heading;
+    }
+
+}
+
+.blockFeed {
+    @include block;
+    $feed: &;
+
+    &._is-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: space-between;
+    }
+
+    &-item {
+
+        @include breakpoint(lg) {
+
+            #{$feed}._is-grid & {
+                flex: 0 1 auto;
+            }
+
+            #{$feed}--twin._is-grid & {
+                flex-basis: calc(50% - 1em);
+            }
+
+            #{$feed}--triplet._is-grid & {
+                flex-basis: calc(33% - 1em);
+            }
+
+        }
+
+    }
+
+}
+
+.feedItem {
+    $grid: '._is-grid';
+    $list: '._is-list';
+
+    @extend .blockFeed-item;
+    display: flex;
+    flex-flow: column;
+    padding: 2em;
+    background: #FFF;
+
+    #{$list} & {
+        border-top: 1px solid var(--color-grey-200);
+        margin-bottom: 2em;
+    }   
+
+    &-heading {
+        @include heading;
+    }
+
+    &-support {
+        @include support;
+    }
+
+    &-table {
+        margin: 2em 0;
+
+        #{$list} & {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            gap: 1em;
+        }
+    }
+
+    &-tr {
+        #{$grid} & {
+            display: flex;
+            flex-flow: row wrap;
+            border-top: 1px solid var(--color-grey-200);
+        }
+    }
+
+    &-th,
+    &-td {
+        #{$grid} & {
+            display: inline-flex;
+            padding: 1em 0;
+            width: 50%;
+        }
+    }
+
+    &-th {
+        text-transform: uppercase;
+
+        #{$list} & {
+            margin-bottom: 1em;
+        }
+
+    }
+
+    &-footer {
+        margin-top: auto;
+    }
+
+    &-cta {
+        @include cta();
+        margin-right: 2em;
     }
 
 }

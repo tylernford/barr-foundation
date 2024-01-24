@@ -1,0 +1,14 @@
+columnSuffix: vhxccedf
+contentColumnType: boolean
+fieldGroup: 99a0a64e-82ac-4b42-92b5-697513e02b7b # Grants
+handle: flagBipoc
+instructions: 'Is this a BIPOC-led organization?'
+name: 'Flag: BIPOC'
+searchable: true
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

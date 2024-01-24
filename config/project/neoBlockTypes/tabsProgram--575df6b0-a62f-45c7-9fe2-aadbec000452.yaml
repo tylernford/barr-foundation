@@ -60,5 +60,4 @@ minBlocks: 1
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Tabs: Program Finder'
-sortOrder: 1
 topLevel: true

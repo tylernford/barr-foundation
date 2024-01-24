@@ -36,5 +36,4 @@ minBlocks: 1
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Card: Grantmaking'
-sortOrder: 3
 topLevel: true

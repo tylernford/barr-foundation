@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
-handle: regions
-name: Regions
+handle: grantContacts
+name: 'Grant Contacts'
 previewTargets:
   -
     __assoc__:

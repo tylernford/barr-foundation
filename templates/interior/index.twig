@@ -13,26 +13,36 @@ Interior template
 {% block content %}
 
 {# INTERIOR OPENER #}
-{% if entry.section.handle in ['aboutUs', 'grantmaking', 'newsInsights', 'programAreas'] %}
+{% set landingOpeners = ['aboutUs', 'grantmaking', 'newsInsights', 'programAreas'] %}
+{% if entry.section.handle in landingOpeners %}
     {% set opener = entry.openerLanding %}
     {{ openers.landing(opener, entry) }}
 {% elseif entry.section.handle == 'directory' %}
     {{ openers.bio(entry) }}
 {% elseif entry.section.handle == 'blog' %}
     {{ openers.post(entry) }}
+{% elseif entry.section.handle == 'grantees' %}
+    {{ openers.grantee(entry) }}
 {% endif %}
 
 {# INTERIOR BUILDER: #}
 {# 1. People is a unique builder 
-   2. Grants Database is builder-less
+   2. Grantee Database is builder-less
    3. Default to common builder for everything else
 #}
-{% set builder = entry.slug == 'people' ? entry.builderPeople : (entry.slug == 'grants-grantees' ? null : entry.builderCommon ) %}
+{% set isDatabase = (entry.slug == 'grants-grantees') or (entry.section.handle == 'grantees') %}
+{% set builder    = entry.builderCommon ?? entry.builderPeople ?? null %}
 
 {% if builder %}
     {% include '_partials/_builder-common.twig' with {'builder': builder} %}
-{% else %}
-    {# Grants DB dynamic render #}
+{% elseif isDatabase %}
+    {% if entry.slug == 'grants-grantees' %}
+    {# Grantee DB #}
+    {% include 'interior/_entry-grants-db.twig' with {'entry': entry} %}
+    {% elseif entry.section.handle == 'grantees' %}
+    {# Grantee Entry #}
+    {% include 'interior/_entry-grants-org.twig' with {'entry': entry} %}
+    {% endif %}
 {% endif %}
 
 {% endblock %}

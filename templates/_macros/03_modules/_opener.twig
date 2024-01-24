@@ -34,7 +34,7 @@
     {# Don't display nav menu if empty #}
     {% set showMenu = false %}
     {% for menuItem in navMenu %}
-        {% set showMenu = menuItem.dividerSection.flagBookmark == true ? true %}
+        {% set showMenu = (menuItem.dividerSection and menuItem.dividerSection.flagBookmark == true) %}
     {% endfor %}
     
     <header class="blockOpener blockOpener--landing">
@@ -333,13 +333,13 @@
                                 <span class="caption__background"></span>
                                 <span class="caption__background"></span>
                                 <span class="caption__background"></span>
-                                <span class="caption__caption">
-                                    <span class="pattern">
+                                <div class="caption__caption">
+                                    <div class="pattern">
                                         {{ patterns.pattern() }}
-                                    </span>
+                                    </div>
 
                                     {{ image.textCaption }}
-                                </span>
+                                </div>
                             </figcaption>
                         {% endif %}
                     </figure>
@@ -350,4 +350,30 @@
             <div class="primary__graphic"></div>
         </div>
     </header>
+{% endmacro %}
+
+
+{% macro grantee(entry) %}
+    {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+    {% import '_macros/01_elements/_details' as details %}
+
+    {# Set breadcrumbs #}
+    {% set crumbs = [
+        { 'title': 'Grantmaking', 'url': '' },
+        { 'title': 'Grants & Grantees', 'url': '' }
+    ] %}
+
+    <header class="blockOpener blockOpener--grantee">
+        {# Primary #}
+        <div class="blockOpener__primary">
+            {# Breadcrumbs #}
+            {{ breadcrumbs.breadcrumb(crumbs) }}
+
+            {# Page title #}
+            <h1 class="primary__heading">{{ entry.title }}</h1>
+
+    
+        </div>
+    </header>
+
 {% endmacro %}

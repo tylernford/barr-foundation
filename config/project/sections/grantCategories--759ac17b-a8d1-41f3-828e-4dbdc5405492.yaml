@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: grantCategories
+name: 'Grant Categories'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 2
+  uid: c18cf4bb-ef73-4858-95bb-7db9fcabd5f8
+type: structure

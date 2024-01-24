@@ -1,3 +1,5 @@
+{# _macros/02_components/_card.twig #}
+
 {% macro default(config) %}
 {% set variant = 'variant' in config|keys ? config.variant : '' %}
 {% set content = 'content' in config|keys ? config.content : null %}
@@ -40,5 +42,86 @@
 {% endif %}
 {% endmacro %}
 
+{# grant
+    Called by _entry-grants-org.twig and _entry-grants-org.twig
+    @param $config object
+#}
+{% macro grant(config) %}
+{% set variant = 'variant' in config|keys ? config.variant : '' %}
+{% set content = 'content' in config|keys ? config.content : null %}
 
+{% if content %}
+{% set org   = 'grantee' in content|keys ? content.grantee %} 
+{% set grant = 'grant' in content|keys ? content.grant %} 
 
+{# Organization or Grant Info #}
+{% set heading  = org ? org.title : (grant ? grant.title) %}
+{% set support  = grant ? grant.textDescription %}
+{% set profile  = org ? org.uri %}
+{% set website  = org ? org.contactWebsite %}
+{# Grant Detail Object #}
+{% set detailObj = {
+    'Fiscal Sponsor': grant ? grant.textName,
+    'Award Date': grant ? grant.dateOnly|date("m/d/Y"),
+    'Amount': grant ? grant.textAmount,
+    'Term': grant ? grant.textTerm,
+    'Program(s)': grant ? grant.tagsProgramAreas.all(),
+    'Strategies': grant ? grant.tagsStrategies.all()
+}%}
+
+<article class="feedItem{% if variant %} feedItem--{{ variant }}{% endif %}">
+
+    <h3 class="feedItem-heading{% if not org %} _is-hidden{% endif %}">{{ heading }}</h3>
+    <div class="feedItem-support">{{ support }}</div>
+
+    <div class="feedItem-table">
+        {# TODO: 
+            1. Elegantly handle cases in which there is no detail content;
+               Temporarily rendering "N/A" in these cases.
+        #}
+        {% for label, detail in detailObj %}
+        <div class="feedItem-tr">
+            <h3 class="feedItem-th">{{ label }}</h3>
+            <div class="feedItem-td">
+                {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                N/A
+                {% elseif detail is iterable %}
+                {% for d in detail %}
+                {# Tag link #}
+                <a 
+                    class="feedItem-tag"
+                    href="#" 
+                    title="">{{ d }}</a>
+                {% endfor %}
+                {% else %}
+                {{ detail }}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>  
+
+    <div class="feedItem-footer">
+        {% if profile %}
+        <a 
+            class="feedItem-cta" 
+            href="{{ alias('@baseUrl' ~ '/' ~ profile) }}"
+            title="Go to {{ heading }}">
+            Profile
+        </a>
+        {% endif %}
+
+        {% if website %}
+        <a 
+            class="feedItem-cta" 
+            href="{{ website }}" 
+            title="Go to {{ heading }} website"
+            target="_blank">
+            Website
+        </a>
+        {% endif %}
+    </div>
+</article>
+
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,59 @@
+{# _partials/_entry-grants-db.twig #}
+
+{# =======================================
+  Interior: Grantee Database
+========================================== #}
+
+{% import '_macros/02_components/_card.twig' as cards %}
+
+{# Uncomment as needed
+{% import '_macros/02_components/_assets' as assets %}
+{% import '_macros/01_elements/_actions' as actions %}
+{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+{% import '_macros/01_elements/_details' as details %}
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
+#}
+
+{# Set Grant Year (previous year). 
+    NOTE: 
+    1. This might need to be adjusted depending on biz reqs 
+    2. Can a grantee receive multiple grants per year?
+#}
+{% set awardYear = "now"|date("Y") - 1 %}
+
+{% set layout = layout ?? 'grid' %} {# grid or list #}
+
+{# TODO: enable filtering, grid/list toggle view, keyword search, pagination #}
+{% set granteeList = craft.entries().section('grantees').all() %}
+
+{# NOTE: the following elements will likely need to consolidated into a _sprig template #}
+<section>
+    {# FILTERS GO HERE #}
+    <div class="blockGeneric">
+    </div>
+
+    {# GRANTEE CARDS: List or Grid View #}
+    <div class="blockFeed blockFeed--triplet _is-{{ layout }}">
+    {% if granteeList|length %}
+    {% for grantee in granteeList %}
+        {# Retrieve current award year's grant associated with grantee #}
+        {% set grant = craft.entries({
+            section: "grants",
+            dateOnly: ["and", ">= #{awardYear}"],
+            entriesOrganization: grantee
+        }).one() %}
+
+        {% set config = {
+            'variant': layout == 'grid' ? 'grid' : 'list',
+            'content': {
+                'grantee': grantee,
+                'grant': grant
+            }
+        }%}
+
+        {{ cards.grant(config) }}
+
+    {% endfor %}
+    {% endif %}
+    </div>
+</section>
