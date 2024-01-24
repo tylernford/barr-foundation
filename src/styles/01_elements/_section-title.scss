@@ -8,8 +8,8 @@
 
 .section-title {
   @include container;
-  padding-top: var(--base-50px);
-  padding-bottom: var(--base-15px);
+  padding-block: var(--base-9) var(--base-4);
+  color: var(--color-grey-150);
 
   // Headings
   > * {
@@ -27,11 +27,32 @@
     }
   }
 
-  // Border
+  // Without border
+  &[data-border=false] {
+    padding-block-start: var(--base-7); 
+  }
+
+  // With border
   &:not([data-border=false]) {
     > * {
-      padding-top: var(--base-40px);
-      border-top: 1px solid var(--color-grey-100);
+      padding-top: var(--base-7);
+      border-top: 1px solid var(--color-grey-50);
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding-block: var(--base-14) var(--base-7);
+
+    // Without border
+    &[data-border=false] {
+      padding-block-start: var(--base-12); 
+    }
+
+    // With border
+    &:not([data-border=false]) {
+      > * {
+        padding-top: var(--base-10);
+      }
     }
   }
 }
