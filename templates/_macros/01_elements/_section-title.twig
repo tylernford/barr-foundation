@@ -17,7 +17,7 @@
   {% set variant = attributes.variant %}
   {% set border = attributes.border %}
 
-  <div class="section-title"{{ variant == 'small' ? ' data-variant="small"' }}{{ border == false ? ' data-border="false"' }}>
+  <div id="{{ title|slugify }}" class="section-title"{{ variant == 'small' ? ' data-variant="small"' }}{{ border == false ? ' data-border="false"' }}>
     <{{ level }}>{{ title }}</{{ level }}>
   </div>
 {% endmacro %}
