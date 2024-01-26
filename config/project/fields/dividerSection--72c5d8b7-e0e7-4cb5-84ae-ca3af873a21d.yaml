@@ -7,11 +7,18 @@ name: 'Divider: Section'
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1687426141
+  changedFieldIndicator: 551754006
   columns:
     __assoc__:
       -
         - ed00904c-55f9-4940-bedd-8162c46d1d36 # Section Name
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 7a625472-c524-4977-aa9c-4dddcab5c4b1 # Display Divider
         -
           __assoc__:
             -
@@ -25,7 +32,7 @@ settings:
               - width
               - ''
   contentTable: '{{%stc_dividersection}}'
-  fieldLayout: table
+  fieldLayout: row
   maxRows: null
   minRows: null
   propagationKeyFormat: null
