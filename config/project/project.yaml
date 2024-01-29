@@ -1,4 +1,4 @@
-dateModified: 1706030749
+dateModified: 1706290405
 elementSources:
   craft\elements\Asset:
     -
@@ -490,6 +490,7 @@ meta:
     6e809373-5f71-4565-9be1-b179b89dd23e: 'Highlight: Quote' # Highlight: Quote
     6eab3484-4a8a-459d-b34c-6f48332b75d5: __blank__ # __blank__
     6fb16efc-efc4-4dbb-af30-c21b060c6350: Tutorials # Tutorials
+    7a625472-c524-4977-aa9c-4dddcab5c4b1: 'Display Divider' # Display Divider
     7ab5ee46-bcab-45a8-8db3-a8737add580a: 'Jobs Board' # Jobs Board
     7b3b5f9c-101a-4bb0-b7c8-5d0f199cf1e7: 'Asset: Infographic' # Asset: Infographic
     7b7e6d25-da0c-40b9-b3e6-07f9632c0924: 'Entries: Jobs' # Entries: Jobs

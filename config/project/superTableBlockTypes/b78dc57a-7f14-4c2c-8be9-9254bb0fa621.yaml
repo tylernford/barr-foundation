@@ -1,4 +1,4 @@
-changedFieldIndicator: 459762372
+changedFieldIndicator: 906074918
 field: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
 fieldLayouts:
   a0985cb2-1edc-4df9-8a63-a76f6b1a65d1:
@@ -15,6 +15,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 99bfc001-399c-48e4-9fba-701fc2a70540
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7a625472-c524-4977-aa9c-4dddcab5c4b1 # Display Divider
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22191d81-9121-4da7-8759-f3259595882c
             userCondition: null
             warning: null
             width: 100
@@ -44,6 +56,21 @@ fields:
     searchable: true
     settings:
       default: true
+      offLabel: Hide
+      onLabel: Show
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  7a625472-c524-4977-aa9c-4dddcab5c4b1: # Display Divider
+    columnSuffix: jtrecmot
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: displayDivider
+    instructions: 'Toggle to show or hide the Section Name on the frontend.'
+    name: 'Display Divider'
+    searchable: false
+    settings:
+      default: false
       offLabel: Hide
       onLabel: Show
     translationKeyFormat: null
