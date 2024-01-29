@@ -1,4 +1,4 @@
-dateModified: 1706290405
+dateModified: 1706546765
 elementSources:
   craft\elements\Asset:
     -
@@ -534,6 +534,7 @@ meta:
     21dad0a7-2d67-433c-b04f-da4773293880: 'Developer: Release' # Developer: Release
     22f973cc-427c-4e70-8bb8-6624479ab025: 'Entries: Organization' # Entries: Organization
     24c92902-e46c-423d-b80a-15d697d098ec: Heading # Heading
+    24fee298-5f42-4afd-bacd-dd8179f4046a: 'Section Block' # Section Block
     26d3b496-a8ba-491c-a3c3-a640399e5875: 'Text: Byline' # Text: Byline
     30a0b344-d9b4-451b-9c8d-4fba8a91a75f: 'Flag: Primary' # Flag: Primary
     30cb9cee-6f83-4c27-996e-4c2f1f12ecf4: Media # Media
@@ -547,6 +548,7 @@ meta:
     53bc948c-6f81-4b66-8606-0e103eead194: 'Flag: BIPOC' # Flag: BIPOC
     54f700ed-cca9-47c8-b73f-71ee87ddc640: 'Timeline: Single Event Per Milestone' # Timeline: Single Event Per Milestone
     55d6aaf4-ac71-4f0e-9f25-f00a07154e2b: Longform # Longform
+    56d418f7-f841-4ac5-885d-f7d8f06cac37: 'Featured Strategy and Grantees' # Featured Strategy and Grantees
     57a475da-bd34-46ee-8693-6055079fb616: 'Asset: Image(s) or Video(s)' # Asset: Image(s) or Video(s)
     57f1f03a-6ce0-4203-8800-c42f4ea916fa: Default # Default
     58ac2322-7471-4ce9-9977-d2a0f017db86: 'Authors: Import All' # Authors: Import All
@@ -588,6 +590,7 @@ meta:
     0426fb2a-6010-410d-abe9-2cf75ab3f5f9: Target # Target
     469acf2e-4d4a-4fa1-9fd1-b5342ea60c76: 'Asset: Media' # Asset: Media
     493bc4b8-cb08-43a2-938d-4c1b76790dd4: 'Contact: Facebook' # Contact: Facebook
+    515f8abd-ef70-46c7-bbd7-cc9957f75831: Landing # Landing
     531e0b1a-3fa8-4379-80b6-e96b1a34de5d: Default # Default
     550b4087-0556-49ad-b210-9d66461f75b1: 'Attribution: Entry or Text' # Attribution: Entry or Text
     569e24f0-c7e8-441f-9d14-9ec278514ac0: Milestones # Milestones
@@ -616,6 +619,7 @@ meta:
     2393b91e-3d52-4e68-aebf-3896dd26c9de: Heading # Heading
     2510ca6f-7c5e-4ccd-a8db-079f0fe6244d: 'Kitchen Sink' # Kitchen Sink
     4217f7b3-ec24-454d-87f2-1998f0a0baae: 'Tags: Program Areas' # Tags: Program Areas
+    5056e235-9a78-4846-9c71-7557d782d1f0: 'Section Bookmark Title (Optional)' # Section Bookmark Title (Optional)
     5680cf36-ea78-4033-8638-c664068383d9: 'Card: Grants Database' # Card: Grants Database
     5971d473-bc24-4c7d-86e9-99f40d205dc3: 'Record Type' # Record Type
     6240c976-c45c-49e0-9b18-04c2bd1b9024: __blank__ # __blank__
@@ -695,6 +699,7 @@ meta:
     a92e63fc-87d9-4bcb-b049-925a7d174f92: Default # Default
     a327f0ca-e011-46bd-88a3-19344d2c596d: Social # Social
     a692dc71-cf6f-44c7-bcd4-c1b1c69e7139: 'Asset: Document' # Asset: Document
+    a729cc2f-185f-4632-ae90-950491f54443: 'Page Builder: Program Areas' # Page Builder: Program Areas
     a9282e35-763e-4377-9ac9-557f162f7436: 'Flag: Exclude' # Flag: Exclude
     a14586b6-ea62-4ea9-8618-255f471f2b02: 'Text: Location' # Text: Location
     a9191718-46f6-4d6a-8c04-8218d3361f05: 'Geo: Area' # Geo: Area
@@ -749,6 +754,7 @@ meta:
     cca24e52-76d4-414b-81b3-ceb3665a9962: Event # Event
     cca87b83-62c1-49a6-a027-9699ddf97816: 'Entries: Sponsored Organization' # Entries: Sponsored Organization
     cd4c8a64-ae1c-451f-9727-fca9cd6c9a9b: 'Content Editors' # Content Editors
+    cdc68c5b-6f6b-4f33-b60a-4a1a6037f651: 'Section Bookmark (Optional)' # Section Bookmark (Optional)
     cebe9f65-5c23-462d-a3e9-6d51ecd7eb49: 'Card: Grantmaking' # Card: Grantmaking
     cf026ccf-44b0-44ea-bb7c-a2d919af1521: 'Media: Audio or Video' # Media: Audio or Video
     cfb7f673-e726-4e10-b627-eb563177ea3d: 'Style: Width' # Style: Width
@@ -804,6 +810,7 @@ meta:
     ef35002b-b3dd-4be9-b1a6-9b34dd341c37: 'Highlight: Single Event Timeline' # Highlight: Single Event Timeline
     f04ce99a-aa20-4ed0-9e83-40f232197b48: Item # Item
     f4adca94-3a26-4dd3-a3d4-c816fe8e5580: Grantees # Grantees
+    f4cef7c4-9c10-4b2d-aecc-afe52d207d0d: 'Section Anchor' # Section Anchor
     f6ff4743-d865-4cd9-ae5b-b5028a431852: Default # Default
     f8ab386e-c493-4eb3-9edd-cafee231f1a4: __blank__ # __blank__
     f8db332e-6a63-4211-95bf-942e9a3a40ce: 'About Us' # About Us

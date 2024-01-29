@@ -1,0 +1,46 @@
+childBlocks:
+  - featuredStrategyAndGrantees
+conditions: null
+description: ''
+enabled: true
+field: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
+fieldLayouts:
+  fa0cfa0c-8caf-42b3-9209-7ca6ec784fb0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f4cef7c4-9c10-4b2d-aecc-afe52d207d0d # Section Anchor
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 663df8ad-f9bf-4164-b2da-0aab014b240d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: b7d1c950-6c70-43fc-be75-968f135318c9
+            userCondition: null
+        name: Section
+        uid: 1c1b0371-26d7-4b8b-9a69-b091f2359436
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: sectionBlock
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Section Block'
+topLevel: true

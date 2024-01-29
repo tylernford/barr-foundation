@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
+fieldLayouts:
+  48c0cf71-494c-4d87-8149-bb1c65c25202:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
+            instructions: null
+            label: 'Featured Strategy'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6537a69d-4761-4bfa-a55b-de6fc26e3c91
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Featured Strategy and Grantees'
+        uid: 1774a338-3e31-4353-a063-0a1bf1126670
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: featuredStrategyAndGrantees
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Featured Strategy and Grantees'
+topLevel: false
