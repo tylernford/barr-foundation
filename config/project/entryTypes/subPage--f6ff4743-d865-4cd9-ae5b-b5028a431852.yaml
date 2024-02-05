@@ -81,14 +81,9 @@ fieldLayouts:
         name: Content
         uid: 3e3bf9d7-78ce-486f-ba8a-f3da34ad841f
         userCondition: null
-      -
-        elementCondition: null
-        name: Test
-        uid: dde21bf8-e004-4e62-8e6d-c26aa2465c95
-        userCondition: null
-handle: default
+handle: subPage
 hasTitleField: true
-name: Default
+name: Sub-Page
 section: 600bb22c-f62f-458d-ad51-432956f869ae # Program Areas
 showStatusField: true
 slugTranslationKeyFormat: null

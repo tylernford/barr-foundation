@@ -1,4 +1,4 @@
-changedFieldIndicator: 571181955
+changedFieldIndicator: 1596012994
 field: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
 fieldLayouts:
   8d55e71b-cdd7-4641-befb-d61027c0e790:
@@ -23,7 +23,7 @@ fieldLayouts:
             fieldUid: bf120ab6-d32a-4470-b0df-a0aa86834445 # Text: Heading
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fad8dc75-8c27-46ee-af5d-5e8262ede9aa
@@ -35,7 +35,7 @@ fieldLayouts:
             fieldUid: e7ad36b6-173f-4a91-aab3-c5472e6d0f20 # Text: Supporting
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 04f71928-f3e2-4c38-a410-79dc1eb95f1d
@@ -47,7 +47,7 @@ fieldLayouts:
             fieldUid: 0ac7255b-4b9d-49e0-948d-10bef69479d4 # Action: Entry or URL
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 96713a98-bb5f-4585-ad9a-dd640bc0c948
@@ -192,17 +192,6 @@ fields:
       restrictedDefaultUploadSubpath: null
       restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
       restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image'
       showSiteMenu: true
       showUnpermittedFiles: false
