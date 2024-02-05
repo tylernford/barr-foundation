@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 34d9bf36-cb8a-46ca-b594-f47d408c9548 # Entries
 handle: entriesGrantee
-instructions: 'Select exactly 2 or 3 grantee entries. Drag & drop to rearrange.'
+instructions: 'Select 3 Grantee entries. Drag & drop to rearrange.'
 name: 'Entries: Grantee'
 searchable: true
 settings:
@@ -11,19 +11,8 @@ settings:
   localizeRelations: false
   maintainHierarchy: false
   maxRelations: 3
-  minRelations: 2
-  selectionCondition:
-    __assoc__:
-      -
-        - elementType
-        - craft\elements\Entry
-      -
-        - fieldContext
-        - global
-      -
-        - class
-        - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: 'Add a card'
+  minRelations: 3
+  selectionLabel: 'Select a Grantee'
   showSiteMenu: true
   sources:
     - 'section:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees

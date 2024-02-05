@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: sectionAnchor
+instructions: null
+name: 'Section Anchor'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1381249374
+  contentTable: '{{%stc_sectionanchor}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

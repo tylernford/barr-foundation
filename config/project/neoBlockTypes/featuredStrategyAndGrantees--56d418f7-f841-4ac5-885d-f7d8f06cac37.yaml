@@ -1,0 +1,76 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
+fieldLayouts:
+  b6c31837-d19c-4713-93ab-b9a1f658ca2f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
+            instructions: null
+            label: 'Featured Strategy'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6537a69d-4761-4bfa-a55b-de6fc26e3c91
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b89b9ceb-1d0c-48ec-a0d7-0c392eb011af # Entries: Grantee
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2631da4-0d06-4093-81d7-fab1ada16435
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 1cb4612c-38cd-4b27-809d-fd543e6b94cf # Flag: Feature
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4a4413f-93d7-4398-84bd-a337df5fcc29
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf8c6186-16cc-4d7c-bbb4-2d085a165d33
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Featured Strategy and Grantees'
+        uid: 1774a338-3e31-4353-a063-0a1bf1126670
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: featuredStrategyAndGrantees
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Featured Strategy and Grantees'
+topLevel: false
