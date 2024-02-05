@@ -1,0 +1,34 @@
+{% import '_macros/02_components/_assets' as assets %}
+
+{# Uncomment as needed
+{% import '_macros/01_elements/_actions' as actions %}
+{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
+{% import '_macros/01_elements/_details' as details %}
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
+#}
+
+{% for i in builder.all() %}
+
+{% switch i.type %}
+    
+    {% case 'sectionBlock' %}
+        {% set innerBlocks = builder.level(2).all() %}
+        <section>
+            {# Section blocks #}
+            {% for block in innerBlocks %}
+                {% set config  = {
+                    'content': block,
+                    'variant': 'feature',
+                    'reversed': true
+                } %}
+                {% include "_partials/_modules/_card.twig" with { config: config } only %}
+            {% endfor %}
+
+        </section>
+    {% case 'prefooterForm' %}
+
+    
+
+{% endswitch %}
+
+{% endfor %}

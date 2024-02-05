@@ -196,3 +196,81 @@
         }
     }
 }
+
+body[data-theme-color="green"] {
+    .action {
+        --color-action-primary: var(--color-program-green-100);
+        
+        &[data-is-reversed="true"] {
+            background-color: var(--color-action-secondary);
+            color: var(--color-action-primary);
+
+            // Hover
+            @media (hover: hover){
+                &:hover {
+                    background-color: var(--color-action-primary-hover);
+                    color: var(--color-action-secondary-hover);
+                }
+            }
+
+            // Focus
+            &:focus-visible {
+                background-color: var(--color-action-primary-hover);
+                color: var(--color-action-secondary-hover);
+            }
+        }
+    }
+}
+
+body[data-theme-color="plum"] {
+    .action {
+        --color-action-primary: var(--color-program-plum-100);
+        
+        &[data-is-reversed="true"] {
+            background-color: var(--color-action-secondary);
+            color: var(--color-action-primary);
+
+            // Hover
+            @media (hover: hover){
+                &:hover {
+                    background-color: var(--color-action-primary-hover);
+                    color: var(--color-action-secondary-hover);
+                }
+            }
+
+            // Focus
+            &:focus-visible {
+                background-color: var(--color-action-primary-hover);
+                color: var(--color-action-secondary-hover);
+            }
+        }
+    }
+}
+
+body[data-theme-color="marigold"] {
+    .action {
+        --color-action-primary: var(--color-program-marigold-50);
+        --color-action-secondary: var(--color-navy-100);
+        
+        &[data-is-reversed="true"] {
+            --color-action-primary: var(--color-grey-25);
+
+            background-color: var(--color-action-secondary);
+            color: var(--color-action-primary);
+
+            // Hover
+            @media (hover: hover){
+                &:hover {
+                    background-color: var(--color-action-primary-hover);
+                    color: var(--color-action-secondary-hover);
+                }
+            }
+
+            // Focus
+            &:focus-visible {
+                background-color: var(--color-action-primary-hover);
+                color: var(--color-action-secondary-hover);
+            }
+        }
+    }
+}
