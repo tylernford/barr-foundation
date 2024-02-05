@@ -1,0 +1,344 @@
+/* _accordion.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Card
+  See templates/_macros/02_components/_accordion.twig for markup
+
+  Variants: Featured
+------------------------------------------------------------------------ */
+
+// Theme
+.cardItem.cardItem--feature {
+  --color-card-background: var(--color-grey-25);
+  --color-card-text--primary: var(--color-teal-100);
+  --color-card-text--secondary: var(--color-grey-150);
+
+  &[data-is-reversed=true] {
+    --color-card-background: var(--color-teal-150);
+    --color-card-text--primary: var(--color-teal-25);
+    --color-card-text--secondary: var(--color-grey-25);
+  }
+
+  --card-min-height: 400px;
+  @include breakpoint(lg) {
+    --card-min-height: 480px;
+  }
+}
+
+body[data-theme-color="green"] {
+  .cardItem.cardItem--feature {
+    --color-card-text--primary: var(--color-program-green-100);
+
+    &[data-is-reversed=true] {
+      --color-card-background: var(--color-program-green-150);
+      --color-card-text--primary: var(--color-grey-25);
+    }
+  }
+}
+
+body[data-theme-color="plum"] {
+  .cardItem.cardItem--feature {
+    --color-card-text--primary: var(--color-program-plum-100);
+
+    &[data-is-reversed=true] {
+      --color-card-background: var(--color-program-plum-150);
+      --color-card-text--primary: var(--color-grey-25);
+    }
+  }
+}
+
+body[data-theme-color="marigold"] {
+  .cardItem.cardItem--feature {
+    --color-card-text--primary: var(--color-program-marigold-100);
+
+    &[data-is-reversed=true] {
+      --color-card-background: var(--color-program-marigold-100);
+      --color-card-text--primary: var(--color-navy-100);
+      --color-card-text--secondary: var(--color-grey-200);
+    }
+  }
+}
+
+// Cards
+.cardItem {
+  background-color: var(--color-card-background);
+
+  &.cardItem--feature {
+    padding-block: var(--base-6);
+
+    .cardItem__inner {
+      margin-right: auto;
+      margin-left: auto;
+      padding-inline: var(--base-6);
+      width: 100%;
+      max-width: 94.5rem; // 1512px
+    }
+
+	  @include breakpoint(sm) {
+		  padding-block: var(--base-9);
+
+      .cardItem__inner {
+        padding-inline: var(--base-9);
+      }
+	  }
+
+    @include breakpoint(lg) {
+      .cardItem__inner {
+        padding-inline: var(--base-12);
+      }
+	  }
+
+    @include breakpoint(xl) {
+      .cardItem__inner {
+        padding-inline: var(--base-18);
+      }
+	  }
+
+
+    // General styles
+    color: var(--color-card-text--secondary);
+    
+    .cardItem__heading {
+      max-width: 20em;
+      color: var(--color-card-text--primary);
+    }
+    
+    .cardItem__label {
+      max-width: 28em;
+      @include getType('label');
+    }
+
+    .cardItem__support {
+      p {
+        max-width: 26em;
+      }
+    }
+
+    @include breakpoint(md) {
+      .cardItem__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+
+    // No image
+    &.cardItem--no-image {
+      .cardItem__header {
+        padding: var(--base-7) var(--base-6);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-deep--light);
+        text-align: center;
+      }
+
+      .cardItem__heading {
+        @include getType('h3-axiforma');
+      }
+
+      .cardItem__label {
+        margin-block-end: var(--base-4);
+      }
+
+      .cardItem__body {
+        padding: var(--base-7) var(--base-5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: var(--shadow-shallow--light);
+      }
+
+      .cardItem__support {
+        @include getType('h5-messina');
+        text-align: center;
+      }
+
+      .cardItem__action {
+        margin-block-start: var(--base-4);
+      }
+
+      @include breakpoint(md) {
+        padding-block: 0;
+
+        .cardItem__inner {
+          min-height: var(--card-min-height);
+        }
+
+        .cardItem__header,
+        .cardItem__body {
+          padding: var(--base-12) var(--base-10);
+        }
+
+        .cardItem__action {
+          margin-block-start: var(--base-5);
+        }
+      }
+
+      @include breakpoint(lg) {
+        .cardItem__inner {
+          min-height: 480px;
+        }
+
+        .cardItem__header {
+          padding: var(--base-12);
+        }
+
+        .cardItem__heading {
+          @include getType('h2-axiforma');
+        }
+
+        .cardItem__label {
+          margin-block-end: var(--base-3);
+        }
+
+        .cardItem__body {
+          padding: var(--base-14);
+        }
+      }
+
+      @include breakpoint(xl) {
+        .cardItem__support {
+          @include getType('h3-messina');
+        }
+
+        .cardItem__action {
+          margin-block-start: var(--base-10);
+        }
+      }
+    }
+
+    // With image
+    &.cardItem--with-image {
+      .cardItem__image {
+        .image {
+          aspect-ratio: 3 / 2;
+          display: block;
+          position: relative;
+          overflow: hidden;
+      
+          img {
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .cardItem__header {
+        padding-block: var(--base-4) var(--base-3);
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+
+      .cardItem__heading {
+        @include getType('h5-axiforma');
+      }
+
+      .cardItem__label {
+        margin-block-end: var(--base-2);
+      }
+
+      .cardItem__support {
+        @include getType('caption-messina');
+      }
+
+      .cardItem__action {
+        margin-block-start: var(--base-5);
+      }
+
+      @include breakpoint(sm) {
+        .cardItem__header {
+          padding-block: var(--base-7) var(--base-5);
+        }
+  
+        .cardItem__heading {
+          @include getType('h4-axiforma');
+        }
+  
+        .cardItem__support {
+          @include getType('h5-messina');
+        }
+
+        .cardItem__action {
+          margin-block-start: var(--base-10);
+        }
+      }
+
+      @include breakpoint(md) {
+        padding-block: var(--base-14);
+
+        .cardItem__content {
+          order: 1;
+        }
+
+        .cardItem__image {
+          order: 2;
+        }
+
+        &.cardItem--align-right {
+          .cardItem__image {
+            order: 1;
+          }
+
+          .cardItem__content {
+            order: 2;
+          }
+        }
+
+        .cardItem__image {
+          min-height: var(--card-min-height);
+
+          .image {
+            aspect-ratio: auto;
+            height: 100%;
+          }
+        }
+
+        .cardItem__content {
+          padding: var(--base-12) var(--base-10);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .cardItem__header {
+          padding-block-start: 0;
+        }
+
+        .cardItem__label {
+          margin-inline: auto;
+        }
+      }
+
+      @include breakpoint(lg) {
+        .cardItem__content {
+          padding: var(--base-14);
+        }
+
+        .cardItem__header {
+          padding-block-end: var(--base-4);
+        }
+        .cardItem__heading {
+          @include getType('h2-axiforma');
+        }
+
+        .cardItem__label {
+          margin-block-end: var(--base-4);
+        }
+
+        .cardItem__support {
+          @include getType('subhead');
+        }
+      }
+    }
+  }
+}

@@ -1,46 +1,71 @@
 {# _macros/02_components/_card.twig #}
 
 {% macro default(config) %}
-{% set variant = 'variant' in config|keys ? config.variant : '' %}
-{% set content = 'content' in config|keys ? config.content : null %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_image' as images %}
 
-{% if content %}
-{% set card     = content.cardSimple %} {# might want to move this inside the feature case #}
-{% set support  = card.textSupporting %}
-{% set label    = card.textPreheading %}
-{% set heading  = card.textHeading %}
-{% set image    = card.assetImage.one() %}
-{% set action   = card.actionLink %}
-{% set external = ( action.type == 'url' ) %}
+    {% set variant = 'variant' in config|keys ? config.variant : '' %}
+    {% set content = 'content' in config|keys ? config.content : null %}
+    {% set reversed = 'reversed' in config|keys ? config.reversed : false %}
 
-{% switch variant %}
+    {% if content %}
+        {% set card      = content.cardSimple %}
+        {% set alignment = card.styleAlignment %}
+        {% set image     = card.assetImage.one() %}
+        {% set heading   = card.textHeading %}
+        {% set label     = card.textPreheading %}
+        {% set support   = card.textSupporting %}
+        {% set action    = card.actionLink %}
 
-    {% case 'feature' %} 
+        {% switch variant %}
+            {% case 'feature' %} 
 
-        <article class="cardItem cardItem--feature">
-            <span class="cardItem-preheading">{{ label }}</span>
-            <h3 class="cardItem-heading">{{ heading }}</h3>
-            <div class="cardItem-support">{{ support }}</div>
-            <a 
-                class="cardItem-button" 
-                href="{{ card.uri }}" 
-                title="Go to {{ heading }}"
-                {% if external %}
-                target="_blank"
-                {% endif %}>
-                Action 
-            </a>
-        </article>
+                <article class="cardItem cardItem--feature cardItem--{{ image ? 'with' : 'no' }}-image{{ image and alignment == 'right' ? ' cardItem--align-right' }}"{{ reversed == true ? ' data-is-reversed=true' }}>
+                    <div class="cardItem__inner">
+                        {# Image #}
+                        {% if image %}
+                            <div class="cardItem__image">
+                                {{ images.image(image, '1024', '3/2', '', false) }}
+                            </div>
+                        {% endif %}
 
-    {% default %}
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my default card block</h2>
-            {{ content|keys|json_encode }}
-        </div>
+                        {{ image ? '<div class="cardItem__content">' }}
+                        {# Header #}
+                        <header class="cardItem__header">
+                            <h3 class="cardItem__heading">{{ heading }}</h3>
+                            <span class="cardItem__label">{{ label }}</span>
+                        </header>
 
-{% endswitch %}
-{% endif %}
-{% endmacro %}
+                        {# Body #}
+                        <div class="cardItem__body">
+                            <div class="cardItem__support">{{ support }}</div>
+
+                            {% if action.url|length %}
+                                <div class="cardItem__action">
+                                    {% set actionAttributes = {
+                                        type: 'button', isReversed: reversed,
+                                        icon: '', iconOnly: false,
+                                        text: action.text, url: action,
+                                        linkType: 'entry', target: action.target
+                                    } %}
+
+                                    {{ actions.action(actionAttributes) }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        {{ image ? '</div>' }}
+                    </div>
+                </article>
+
+            {% default %}
+                <div class="blockGeneric">
+                    <h2 class="blockGeneric-heading">This is my default card block</h2>
+                    {{ content|keys|json_encode }}
+                </div>
+
+        {% endswitch %}
+    {% endif %}
+    {% endmacro %}
 
 {# grant
     Called by _entry-grants-org.twig and _entry-grants-org.twig

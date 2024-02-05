@@ -299,27 +299,29 @@
 }
 
 .cardItem {
-    @extend .blockCards-item;
-    padding: 1em;
-
-    &-preheading {
-        @include preheading;
-    }
-
-    &-heading {
-        @include heading;
-    }
-
-    &-button {
-        @include button(var(--color-program-green-100));
-    }
-
-    &-duration {
-        display: block;
-    }
-
-    &-properties {
-
+    &:not(.cardItem--feature) {
+        @extend .blockCards-item;
+        padding: 1em;
+        
+        .cardItem-preheading {
+            @include preheading;
+        }
+        
+        .cardItem-heading {
+            @include heading;
+        }
+        
+        .cardItem-button {
+            @include button(var(--color-program-green-100));
+        }
+        
+        .cardItem-duration {
+            display: block;
+        }
+        
+        .cardItem-properties {
+            
+        }
     }
 
 }
