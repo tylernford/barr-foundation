@@ -1,56 +1,50 @@
 {% import '_macros/01_elements/_section-title' as sectionTitles %}
 {% import '_macros/02_components/_assets' as assets %}
 
-{# Uncomment as needed
-{% import '_macros/01_elements/_actions' as actions %}
-{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
-{% import '_macros/01_elements/_details' as details %}
-{% import '_macros/01_elements/_section-title' as sectionTitles %}
-#}
-
-{% for i in builder.all() %}
-
-{% switch i.type %}
+{% for section in builder.all() %}
+    {% switch section.type %}
     
-    {% case 'sectionBlock' %}
-        {% set sectionName = i.dividerSection.sectionName %}
-        {% set displaySectionTitle = i.dividerSection.displayDivider %}
-        {% set innerBlocks = builder.level(2).all() %}
-        <section>
-            {# Section title #}
-            {% set sectionTitleAttributes = {
-                level: 'h2',
-                title: sectionName,
-                variant: '', border: true
-            } %}
-            {% if displaySectionTitle == true %}
-                {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
-            {% endif %}
+        {% case 'sectionBlock' %}
+            {% set sectionName = section.dividerSection.sectionName %}
+            {% set displaySectionTitle = section.dividerSection.displayDivider %}
+            {% set sectionBlocks = builder.level(2).all() %}
 
-            {# Section blocks #}
-            {% for b in innerBlocks %}
-            
-                {# Simplify component handling by leveraging naming conventions #}
-                {% set camel   = b.type %}
-                {% set arr     = camel|dasherize|split('-') %}
-                {# Set macro name, e.g. "card" #}
-                {% set macro   = arr[0] %}
-                {# Set macro variant name, e.g. "feature"  #}
-                {% set variant = arr[1] %}
-                {# Create config object, as needed #}
-                {% set config  = {
-                    'content': b,
-                    'variant': variant
+            <section id="{{ sectionName|slugify }}">
+                {# Section title #}
+                {% set sectionTitleAttributes = {
+                    level: 'h2',
+                    title: sectionName,
+                    variant: '', border: true
                 } %}
-                {# Call the abstracted _module template, which then calls _macro template:
-                    _card, _carousel, _feed, _highlight, _text, or _timeline
-                #}
-                {% include "_partials/_modules/_#{macro}.twig" with { config: config } only %}
+                {% if displaySectionTitle == true %}
+                    {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+                {% endif %}
 
-            {% endfor %}
+                {# Section blocks #}
+                {% for sectionBlock in sectionBlocks %}
+                
+                    {# Simplify component handling by leveraging naming conventions #}
+                    {% set camel   = sectionBlock.type %}
+                    {% set arr     = camel|dasherize|split('-') %}
+                    {# Set macro name, e.g. "card" #}
+                    {% set macro   = arr[0] %}
+                    {# Set macro variant name, e.g. "feature"  #}
+                    {% set variant = arr[1] %}
+                    {# Create config object, as needed #}
+                    {% set config  = {
+                        'content': sectionBlock,
+                        'variant': variant
+                    } %}
+                    {# Call the abstracted _module template, which then calls _macro template:
+                        _card, _carousel, _feed, _highlight, _text, or _timeline
+                    #}
+                    {% include "_partials/_modules/_#{macro}.twig" with { config: config } only %}
 
-        </section>
-    {% case 'prefooterForm' %}
+                {% endfor %}
+
+            </section>
+
+        {% case 'prefooterForm' %}
 
     
 
