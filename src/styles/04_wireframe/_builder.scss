@@ -1,4 +1,4 @@
-/* 03_wireframe/_builder.scss */
+/* 04_wireframe/_builder.scss */
 @use "../utils/_utils" as *;
 
 // Grayscale
@@ -299,7 +299,7 @@
 }
 
 .cardItem {
-    &:not(.cardItem--feature) {
+    &.cardItem--wireframe {
         @extend .blockCards-item;
         padding: 1em;
         
