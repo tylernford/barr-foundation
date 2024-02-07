@@ -1,4 +1,5 @@
 {% import '_macros/02_components/_assets' as assets %}
+{% import '_macros/03_modules/_featured-card-with-grantees' as featuredCardsWithGrantees %}
 
 {% for section in builder.all() %}
 
@@ -11,35 +12,19 @@
             <section id="{{ sectionTitle }}">
                 {# Section blocks #}
                 {% for block in sectionBlocks %}
-                    {% set config  = {
-                        'content': block,
-                        'variant': 'feature',
-                        'reversed': true
+                    {% set configs  = {
+                        'featuredCardConfig': {
+                            'content': block,
+                            'variant': 'feature',
+                            'reversed': true
+                        },
+                        'grantees': {
+                            'grantees': block.entriesGrantee,
+                            'feature': block.flagFeature,
+                            'action': block.cardAction
+                        }
                     } %}
-                    {% include "_partials/_modules/_card.twig" with { config: config } only %}
-    {# 
-                    {% if block.type == 'featuredStrategyAndGrantees' %}
-                    {% endif %} #}
-                
-                    {# Simplify component handling by leveraging naming conventions #
-                    {% set camel   = b.type %}
-                    {% set arr     = camel|dasherize|split('-') %}
-                    {# Set macro name, e.g. "card" #
-                    {% set macro   = arr[0] %}
-                    {# Set macro variant name, e.g. "feature"  #
-                    {% set variant = arr[1] %}
-                    {# Create config object, as needed #
-                    {% set config  = {
-                        'content': b,
-                        'variant': variant
-                    } %}
-                    {{ macro }}
-                    {# {{ config }} #}
-                    {# Call the abstracted _module template, which then calls _macro template:
-                        _card, _carousel, _feed, _highlight, _text, or _timeline
-                    #
-                    {% include "_partials/_modules/_#{macro}.twig" with { config: config } only %}
-    #}
+                    {% include "_partials/_modules/_featured-card-with-grantees.twig" with { config: configs } only %}
                 {% endfor %}
             </section>
 

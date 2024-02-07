@@ -1,4 +1,4 @@
-changedFieldIndicator: 146103163
+changedFieldIndicator: 664711943
 field: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
 fieldLayouts:
   85299f45-836f-4cf3-9362-d796f410c3fa:
@@ -11,7 +11,7 @@ fieldLayouts:
             fieldUid: c80dff18-6eeb-4474-8278-fdfc55a4630c # Text: Supporting
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ff0461af-dca1-4ede-bda5-0e97e33b07de
@@ -23,22 +23,10 @@ fieldLayouts:
             fieldUid: dc3125b2-6f2a-41d8-9e43-c558e6b27568 # Action: Entry or URL
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a2cf50f4-27bb-4cde-978d-f196004c1b8d
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 8e3c7135-1b3f-4b9c-a098-11afc16dafdb # Style: Alignment
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: de6d91d8-0f4f-4c49-908b-62fb8241b046
             userCondition: null
             warning: null
             width: 100
@@ -46,42 +34,6 @@ fieldLayouts:
         uid: 19465774-d495-4ce6-a260-af7ca86f56dd
         userCondition: null
 fields:
-  8e3c7135-1b3f-4b9c-a098-11afc16dafdb: # Style: Alignment
-    columnSuffix: rwzoajqf
-    contentColumnType: string(6)
-    fieldGroup: null
-    handle: styleAlignment
-    instructions: 'By default, text will be centered.'
-    name: 'Style: Alignment'
-    searchable: false
-    settings:
-      columnType: null
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Center
-            -
-              - value
-              - center
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - Right
-            -
-              - value
-              - right
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   c80dff18-6eeb-4474-8278-fdfc55a4630c: # Text: Supporting
     columnSuffix: mbxpwlpf
     contentColumnType: text

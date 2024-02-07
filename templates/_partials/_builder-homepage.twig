@@ -162,7 +162,7 @@
                     {% set title     = card.title %}
                     {% set label     = isEntry ? (card.section.handle == 'newsroom' ? 'In the News' : 'Barr Updates') : 'Video' %}
                     
-                    <article class="cardItem{% if isFeature %} cardItem--feature{% endif %}">
+                    <article class="cardItem{% if isFeature %} cardItem--feature{% endif %} cardItem--wireframe">
                         <span class="cardItem-preheading">{{ label }}</span>
                         <h3 class="cardItem-heading">{{ title }}</h3>
                         {% if isEntry %}

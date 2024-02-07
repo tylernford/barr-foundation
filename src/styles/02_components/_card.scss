@@ -26,7 +26,14 @@
   }
 }
 
-body[data-theme-color="green"] {
+.cardItem.cardItem--grantee {
+  --color-card-background: var(--color-grey-25);
+  --color-card-text--primary: var(--color-teal-100);
+  --color-card-text--secondary: var(--color-navy-100);
+  --color-card-text--tertiary: var(--color-grey-150);
+}
+
+[data-theme-color="green"] {
   .cardItem.cardItem--feature {
     --color-card-text--primary: var(--color-program-green-100);
 
@@ -35,9 +42,13 @@ body[data-theme-color="green"] {
       --color-card-text--primary: var(--color-grey-25);
     }
   }
+
+  .cardItem.cardItem--grantee {
+    --color-card-text--primary: var(--color-program-green-100);
+  }
 }
 
-body[data-theme-color="plum"] {
+[data-theme-color="plum"] {
   .cardItem.cardItem--feature {
     --color-card-text--primary: var(--color-program-plum-100);
 
@@ -46,9 +57,13 @@ body[data-theme-color="plum"] {
       --color-card-text--primary: var(--color-grey-25);
     }
   }
+
+  .cardItem.cardItem--grantee {
+    --color-card-text--primary: var(--color-program-plum-100);
+  }
 }
 
-body[data-theme-color="marigold"] {
+[data-theme-color="marigold"] {
   .cardItem.cardItem--feature {
     --color-card-text--primary: var(--color-program-marigold-100);
 
@@ -58,12 +73,18 @@ body[data-theme-color="marigold"] {
       --color-card-text--secondary: var(--color-grey-200);
     }
   }
+
+  .cardItem.cardItem--grantee {
+    --color-card-text--primary: var(--color-program-marigold-100);
+  }
 }
+
 
 // Cards
 .cardItem {
   background-color: var(--color-card-background);
 
+  // Feature
   &.cardItem--feature {
     padding-block: var(--base-6);
 
@@ -338,6 +359,132 @@ body[data-theme-color="marigold"] {
         .cardItem__support {
           @include getType('subhead');
         }
+      }
+    }
+  }
+
+
+  // Grantee
+  &.cardItem--grantee {
+    padding: var(--base-6);
+    display: grid;
+    box-shadow: var(--shadow-shallow--light);
+
+    @include breakpoint(sm) {
+      padding: var(--base-9);
+    }
+
+    .cardItem__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cardItem__image {
+      margin-block-end: var(--base-5);
+
+      .image {
+        aspect-ratio: 3 / 2;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    
+        img {
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .cardItem__header {
+      margin-block-end: var(--base-3);
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .cardItem__label {
+      margin-block-end: var(--base-2);
+      color: var(--color-card-text-tertiary);
+      @include getType('label');
+    }
+
+    .cardItem__heading {
+      color: var(--color-card-text--primary);
+      @include getType('h5-axiforma');
+    }
+
+    .cardItem__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cardItem__summary {
+      margin-block-end: var(--base-5);
+      max-width: 30em;
+      color: var(--color-card-text--secondary);
+      @include getType('caption-messina');
+    }
+
+    .cardItem__secondary {
+      margin-top: auto;
+    }
+
+    .cardItem__actions {
+      margin-block: var(--base-4) var(--neg-base-2);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      > * {
+        margin: 0 var(--base-4) var(--base-2) 0;
+      }
+    }
+
+    // Large
+    &[data-variant=large] {
+      .cardItem__heading {
+        @include getType('h4-axiforma');
+      }
+
+      @include breakpoint(md) {
+        .cardItem__heading {
+          @include getType('h3-axiforma');
+        }
+
+        .cardItem__summary {
+          @include getType('body');
+        }
+      }
+    }
+  }
+
+
+  // Action
+  &.cardItem--action {
+    padding: var(--base-12) var(--base-9);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .cardItem__support {
+      max-width: 25em;
+      color: var(--color-nav-100);
+      @include getType('h5-messina');
+    }
+
+    @include breakpoint(md) {
+      padding-inline: var(--base-12);
+      min-height: 248px;
+
+      .cardItem__support {
+        @include getType('h4-messina');
       }
     }
   }

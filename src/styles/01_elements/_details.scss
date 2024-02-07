@@ -18,7 +18,26 @@
     --color-details-secondary: var(--color-grey-25);
     --color-details-tertiary: var(--color-navy-100);
   }
+}
+[data-theme-color="green"] {
+  .details {
+    --color-details-primary: var(--color-program-green-100);
+  }
+}
 
+[data-theme-color="plum"] {
+  .details {
+    --color-details-primary: var(--color-program-plum-100);
+  }
+}
+
+[data-theme-color="marigold"] {
+  .details {
+    --color-details-primary: var(--color-program-marigold-150);
+  }
+}
+
+.details {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

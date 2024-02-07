@@ -65,88 +65,192 @@
 
         {% endswitch %}
     {% endif %}
-    {% endmacro %}
+{% endmacro %}
+
+
+{% macro grantee(config) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set variant = 'variant' in config|keys ? config.variant : '' %}
+    {% set displayImage = variant == 'featured' ? true : false %}
+    {% set variant = variant == 'featured' ? 'large' : variant %}
+
+    {% set card     = config.grantee %}
+    {% set reversed = 'reversed' in config|keys ? config.reversed : false %}
+    {% set image    = card.assetImage ? card.assetImage.one() : null %}
+    {% set name     = card.title %}
+    {% set label    = 'label' in config|keys ? config.label : null %}
+    {% set summary  = card.textDescription ?? card.textDescription %}
+    {% set location = 'Placeholder Location' %}
+    {% set region   = 'Placeholder Region' %}
+    {% set profile  = card.url %}
+    {% set website  = 'https://example.com' %}
+
+    <article class="cardItem cardItem--grantee"{{ variant|length ? ' data-variant=' ~ variant }}{{ reversed == true ? ' data-is-reversed=true' }}>
+        <div class="cardItem__inner">
+            {# Image #}
+            {% if displayImage %}
+                {% if image %}
+                    <div class="cardItem__image">
+                        {{ images.image(image, '912', '3/2', '', false) }}
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            {# Header #}
+            <header class="cardItem__header">
+                <h3 class="cardItem__heading">{{ name }}</h3>
+                {% if label %}
+                    <span class="cardItem__label">{{ label }}</span>
+                {% endif %}
+            </header>
+
+            {# Content #}
+            <div class="cardItem__content">
+                {# Summary #}
+                {% if summary %}
+                    <div class="cardItem__summary">
+                        {{ summary }}
+                    </div>
+                {% endif %}
+
+                <div class="cardItem__secondary">
+                    {# Location/Region #}
+                    {{ details.detail('location', false, location) }}
+
+                    {{ details.detail('region', false, region) }}
+
+                    {# Actions #}
+                    <div class="cardItem__actions">
+                        {% set profileActionAttributes = {
+                            type: 'button', isReversed: reversed,
+                            icon: '', iconOnly: false,
+                            text: 'Profile', url: profile,
+                            linkType: 'entry', target: ''
+                        } %}
+                        {% set websiteActionAttributes = {
+                            type: 'link', isReversed: reversed,
+                            icon: 'link-out', iconOnly: false,
+                            text: 'Website', url: website,
+                            linkType: 'url', target: '_blank'
+                        } %}
+                        
+                        {# Profile #}
+                        {{ actions.action(profileActionAttributes) }}
+
+                        {# Website #}
+                        {{ actions.action(websiteActionAttributes) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+{% endmacro %}
+
+{% macro action(card) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+
+    {% set support = card.textSupporting %}
+    {% set actionAttributes = {
+        type: 'link', isReversed: false,
+        icon: 'arrow', iconOnly: false,
+        text: card.actionLink.text, url: 'website',
+        linkType: 'url', target: '_blank'
+    } %}
+
+    <div class="cardItem cardItem--action">
+        <div class="cardItem__support">
+            {{ support }}
+        </div>
+          
+        <div class="cardItem__action">
+            {{ actions.action(actionAttributes) }}
+        </div>
+    </div>
+{% endmacro %}
 
 {# grant
     Called by _entry-grants-org.twig and _entry-grants-org.twig
     @param $config object
 #}
 {% macro grant(config) %}
-{% set variant = 'variant' in config|keys ? config.variant : '' %}
-{% set content = 'content' in config|keys ? config.content : null %}
+    {% set variant = 'variant' in config|keys ? config.variant : '' %}
+    {% set content = 'content' in config|keys ? config.content : null %}
 
-{% if content %}
-{% set org   = 'grantee' in content|keys ? content.grantee %} 
-{% set grant = 'grant' in content|keys ? content.grant %} 
+    {% if content %}
+        {% set org   = 'grantee' in content|keys ? content.grantee %} 
+        {% set grant = 'grant' in content|keys ? content.grant %} 
 
-{# Organization or Grant Info #}
-{% set heading  = org ? org.title : (grant ? grant.title) %}
-{% set support  = grant ? grant.textDescription %}
-{% set profile  = org ? org.uri %}
-{% set website  = org ? org.contactWebsite %}
-{# Grant Detail Object #}
-{% set detailObj = {
-    'Fiscal Sponsor': grant ? grant.textName,
-    'Award Date': grant ? grant.dateOnly|date("m/d/Y"),
-    'Amount': grant ? grant.textAmount,
-    'Term': grant ? grant.textTerm,
-    'Program(s)': grant ? grant.tagsProgramAreas.all(),
-    'Strategies': grant ? grant.tagsStrategies.all()
-}%}
+        {# Organization or Grant Info #}
+        {% set heading  = org ? org.title : (grant ? grant.title) %}
+        {% set support  = grant ? grant.textDescription %}
+        {% set profile  = org ? org.uri %}
+        {% set website  = org ? org.contactWebsite %}
+        {# Grant Detail Object #}
+        {% set detailObj = {
+            'Fiscal Sponsor': grant ? grant.textName,
+            'Award Date': grant ? grant.dateOnly|date("m/d/Y"),
+            'Amount': grant ? grant.textAmount,
+            'Term': grant ? grant.textTerm,
+            'Program(s)': grant ? grant.tagsProgramAreas.all(),
+            'Strategies': grant ? grant.tagsStrategies.all()
+        }%}
 
-<article class="feedItem{% if variant %} feedItem--{{ variant }}{% endif %}">
+        <article class="feedItem{% if variant %} feedItem--{{ variant }}{% endif %}">
 
-    <h3 class="feedItem-heading{% if not org %} _is-hidden{% endif %}">{{ heading }}</h3>
-    <div class="feedItem-support">{{ support }}</div>
+            <h3 class="feedItem-heading{% if not org %} _is-hidden{% endif %}">{{ heading }}</h3>
+            <div class="feedItem-support">{{ support }}</div>
 
-    <div class="feedItem-table">
-        {# TODO: 
-            1. Elegantly handle cases in which there is no detail content;
-               Temporarily rendering "N/A" in these cases.
-        #}
-        {% for label, detail in detailObj %}
-        <div class="feedItem-tr">
-            <h3 class="feedItem-th">{{ label }}</h3>
-            <div class="feedItem-td">
-                {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
-                N/A
-                {% elseif detail is iterable %}
-                {% for d in detail %}
-                {# Tag link #}
-                <a 
-                    class="feedItem-tag"
-                    href="#" 
-                    title="">{{ d }}</a>
+            <div class="feedItem-table">
+                {# TODO: 
+                    1. Elegantly handle cases in which there is no detail content;
+                    Temporarily rendering "N/A" in these cases.
+                #}
+                {% for label, detail in detailObj %}
+                <div class="feedItem-tr">
+                    <h3 class="feedItem-th">{{ label }}</h3>
+                    <div class="feedItem-td">
+                        {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                        N/A
+                        {% elseif detail is iterable %}
+                        {% for d in detail %}
+                        {# Tag link #}
+                        <a 
+                            class="feedItem-tag"
+                            href="#" 
+                            title="">{{ d }}</a>
+                        {% endfor %}
+                        {% else %}
+                        {{ detail }}
+                        {% endif %}
+                    </div>
+                </div>
                 {% endfor %}
-                {% else %}
-                {{ detail }}
+            </div>  
+
+            <div class="feedItem-footer">
+                {% if profile %}
+                <a 
+                    class="feedItem-cta" 
+                    href="{{ alias('@baseUrl' ~ '/' ~ profile) }}"
+                    title="Go to {{ heading }}">
+                    Profile
+                </a>
+                {% endif %}
+
+                {% if website %}
+                <a 
+                    class="feedItem-cta" 
+                    href="{{ website }}" 
+                    title="Go to {{ heading }} website"
+                    target="_blank">
+                    Website
+                </a>
                 {% endif %}
             </div>
-        </div>
-        {% endfor %}
-    </div>  
+        </article>
 
-    <div class="feedItem-footer">
-        {% if profile %}
-        <a 
-            class="feedItem-cta" 
-            href="{{ alias('@baseUrl' ~ '/' ~ profile) }}"
-            title="Go to {{ heading }}">
-            Profile
-        </a>
-        {% endif %}
-
-        {% if website %}
-        <a 
-            class="feedItem-cta" 
-            href="{{ website }}" 
-            title="Go to {{ heading }} website"
-            target="_blank">
-            Website
-        </a>
-        {% endif %}
-    </div>
-</article>
-
-{% endif %}
+    {% endif %}
 {% endmacro %}

@@ -1,0 +1,13 @@
+{# =======================================
+  Module: Featured Card with Grantees
+==========================================
+  Params:
+    - featuredCard
+    - grantees
+======================================= #}
+
+{% macro featuredCardWithGrantees(config) %}
+  {% include "_partials/_modules/_card.twig" with { config: config.featuredCardConfig } only %}
+
+  {% include "_partials/_modules/_grantees.twig" with { config: config.grantees } only %}
+{% endmacro %}
