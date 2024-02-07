@@ -10,7 +10,7 @@ fieldLayouts:
             fieldUid: ddbc6c4c-07f1-4cd8-84d2-8b3064551e27 # Intro Text
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ed28327e-f515-4539-a07c-7aec0031d5b4
