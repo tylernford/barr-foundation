@@ -86,7 +86,7 @@ fields:
         - video
       branchLimit: null
       defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: '{owner.section}/Body'
+      defaultUploadLocationSubpath: null
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 2
@@ -97,17 +97,6 @@ fields:
       restrictedDefaultUploadSubpath: null
       restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
       restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image or video'
       showSiteMenu: true
       showUnpermittedFiles: false
@@ -123,4 +112,4 @@ fields:
     type: craft\fields\Assets
 handle: media
 name: Media
-sortOrder: 4
+sortOrder: 5

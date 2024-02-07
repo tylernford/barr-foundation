@@ -1,4 +1,4 @@
-dateModified: 1707169274
+dateModified: 1707326449
 elementSources:
   craft\elements\Asset:
     -
@@ -444,6 +444,7 @@ meta:
     2d85d472-1f81-45ee-9294-8af027894cdd: 'Section Bookmark (Optional)' # Section Bookmark (Optional)
     2d95f3a7-b880-44c6-bf42-f60b393f9d09: 'Feed: News' # Feed: News
     2dec7473-aaa1-473a-a853-156a05b52a14: Target # Target
+    2e2725ce-270b-4758-a1ed-0e602dcda53b: 'Action: Entry or URL' # Action: Entry or URL
     2f4e1404-f866-4cdc-924e-3c5930d9dd76: 'Opener: Landing' # Opener: Landing
     2f97f0f3-397f-4a92-a0af-4685f47a52f6: 'Divider: Subsection' # Divider: Subsection
     3a2f39b7-ed74-4fe2-aa22-685cdd11a644: 'Text: First Name' # Text: First Name
@@ -705,6 +706,7 @@ meta:
     a9191718-46f6-4d6a-8c04-8218d3361f05: 'Geo: Area' # Geo: Area
     aa3227ec-0bd2-4d61-80db-dd6c6e3a331a: 'Text: Job Title' # Text: Job Title
     ab12a67b-9af1-4f2c-bc53-cbedda60dbd1: 'Budget/Strategy/Portfolio: Import' # Budget/Strategy/Portfolio: Import
+    ab769ba5-f97c-40d6-9066-c07ddfd56a2f: Action # Action
     ace08f06-16e5-477e-b91c-f28e50048f67: Eyebrow # Eyebrow
     ae2b1b26-277c-4619-ab71-b564ec89459b: 'Text: Supporting' # Text: Supporting
     af76ec93-a5f2-4f9b-8b96-eb3fbf19baef: 'Text: Body Options' # Text: Body Options

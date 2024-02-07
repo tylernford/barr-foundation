@@ -10,7 +10,7 @@ fieldLayouts:
             fieldUid: 403cc98b-bbd0-4d37-8a79-1141c41ba1b4 # Longform Text
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ceff54f0-24ed-4e54-9566-9e89d22d94a7
