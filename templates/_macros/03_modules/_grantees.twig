@@ -1,0 +1,43 @@
+{# =======================================
+  Module: Grantees
+======================================= #}
+
+{% macro granteesGrid(config) %}
+  {% import '_macros/01_elements/_actions' as actions %}
+  {% import '_macros/02_components/_card' as cards %}
+
+  {% set grantees = config.grantees %}
+  {% set feature  = config.feature %}
+  {% set action   = config.action %}
+
+  {% set featuredGrantee = feature == true ? grantees.one %}
+  {% set grantees = feature == true ? grantees.offset(1) : grantees %}
+
+  <div class="blockGrantees"{{ feature == true ? ' data-featured-grantee=true' }}>
+    <div class="blockGrantees__inner">
+      {% if featuredGrantee|length %}
+        <div class="blockGrantees__featured-grantee">
+          {% set granteeCardConfig = {
+            'grantee': featuredGrantee,
+            'variant': 'featured',
+            'label': 'Featured Grantee'
+          } %}
+          {{ cards.grantee(granteeCardConfig) }}
+        </div>
+      {% endif %}
+
+      <div class="blockGrantees__grantees">
+        {% for grantee in grantees %}
+          {% set granteeCardConfig = {
+            'grantee': grantee
+          } %}
+
+          {{ cards.grantee(granteeCardConfig) }}
+        {% endfor %}
+
+        {# Action Card #}
+        {{ cards.action(action) }}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

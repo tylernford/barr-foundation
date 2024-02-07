@@ -1,0 +1,176 @@
+/* _grantees.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Grantees
+  See templates/_macros/03_modules/_grantees.twig for markup
+------------------------------------------------------------------------ */
+
+.blockGrantees {
+  --color-grantees-primary: var(--color-teal-150);
+}
+[data-theme-color="green"] {
+  .blockGrantees {
+    --color-grantees-primary: var(--color-program-green-150);
+  }
+}
+
+[data-theme-color="plum"] {
+  .blockGrantees {
+    --color-grantees-primary: var(--color-program-plum-150);
+  }
+}
+
+[data-theme-color="marigold"] {
+  .blockGrantees {
+    --color-grantees-primary: var(--color-program-marigold-100);
+  }
+}
+
+// Cards
+.blockGrantees {
+  padding-block-end: var(--base-9);
+  background: var(--color-grantees-primary);
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    inset: 268px 0 auto 0;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: var(--color-grey-25);
+    transform: skewY(-9deg);
+    transform-origin: 100%;
+  }
+
+  @include breakpoint(md) {
+    &:after {
+      top: 200px;
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding-block-end: var(--base-18);
+
+    &:after {
+      top: 68px;
+    }
+  }
+
+  .blockGrantees__inner {
+    @include container;
+  }
+
+  // Without featured grantee
+  &:not([data-featured-grantee=true]) {
+    .cardItem {
+      position: relative;
+  
+      &:nth-child(1) {
+        z-index: 4;
+      }
+      &:nth-child(2) {
+        z-index: 3;
+      }
+      &:nth-child(3) {
+        z-index: 2;
+      }
+      &:nth-child(4) {
+        z-index: 1;
+      }
+    }
+
+    @include breakpoint(md) {
+      .blockGrantees__grantees{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cardItem--action {
+        grid-column: span 2;
+      }
+    }
+
+    @include breakpoint(lg) {
+      .blockGrantees__grantees{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cardItem--action {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  // With featured grantee
+  &[data-featured-grantee=true] {
+    .cardItem {
+      position: relative;
+    }
+
+    .blockGrantees__featured-grantee {
+      .cardItem {
+        z-index: 4;
+      }
+    }
+
+    .blockGrantees__grantees {
+      .cardItem:nth-child(1) {
+        z-index: 3;
+      }
+      .cardItem:nth-child(2) {
+        z-index: 2;
+      }
+      .cardItem:nth-child(3) {
+        z-index: 1;
+      }
+    }
+
+    @include breakpoint(md) {
+      .blockGrantees__grantees {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @include breakpoint(md) {
+      .cardItem--action {
+        grid-column: span 2;
+      }
+    }
+
+    @include breakpoint(lg) {
+      .blockGrantees__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .blockGrantees__featured-grantee {
+        .cardItem {
+          min-height: 100%;
+        }
+      }
+
+      .blockGrantees__grantees {
+        grid-template-columns: 1fr;
+      }
+
+      .cardItem--action {
+        grid-column: span 1;
+      }
+    }
+
+    @include breakpoint(xl) {
+      .blockGrantees__grantees{
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cardItem--action {
+        grid-column: span 2;
+      }
+    }
+  }
+}
