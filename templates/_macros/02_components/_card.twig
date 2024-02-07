@@ -65,7 +65,32 @@
 
         {% endswitch %}
     {% endif %}
-    {% endmacro %}
+{% endmacro %}
+
+
+{# Action #}
+{% macro action(card) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+
+    {% set support = card.textSupporting %}
+    {% set actionAttributes = {
+        type: 'link', isReversed: false,
+        icon: 'arrow', iconOnly: false,
+        text: card.actionLink.text, url: 'website',
+        linkType: 'url', target: '_blank'
+    } %}
+
+    <div class="cardItem cardItem--action">
+        <div class="cardItem__support">
+            {{ support }}
+        </div>
+          
+        <div class="cardItem__action">
+            {{ actions.action(actionAttributes) }}
+        </div>
+    </div>
+{% endmacro %}
+
 
 {# grant
     Called by _entry-grants-org.twig and _entry-grants-org.twig

@@ -341,4 +341,31 @@ body[data-theme-color="marigold"] {
       }
     }
   }
+
+  
+  // Action
+  &.cardItem--action {
+    padding: var(--base-12) var(--base-9);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .cardItem__support {
+      max-width: 25em;
+      color: var(--color-nav-100);
+      @include getType('h5-messina');
+    }
+
+    @include breakpoint(md) {
+      padding-inline: var(--base-12);
+      min-height: 248px;
+
+      .cardItem__support {
+        @include getType('h4-messina');
+      }
+    }
+  }
 }
