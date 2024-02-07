@@ -84,6 +84,35 @@
 .cardItem {
   background-color: var(--color-card-background);
 
+  // Action
+  &.cardItem--action {
+    padding: var(--base-12) var(--base-9);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .cardItem__support {
+      margin-block-end: var(--base);
+      max-width: 25em;
+      color: var(--color-nav-100);
+      @include getType('h5-messina');
+    }
+
+    @include breakpoint(md) {
+      padding-inline: var(--base-12);
+      min-height: 248px;
+
+      .cardItem__support {
+        margin-block-end: var(--base-2);
+        @include getType('h4-messina');
+      }
+    }
+  }
+
+
   // Feature
   &.cardItem--feature {
     padding-block: var(--base-6);
@@ -458,33 +487,6 @@
         .cardItem__summary {
           @include getType('body');
         }
-      }
-    }
-  }
-
-
-  // Action
-  &.cardItem--action {
-    padding: var(--base-12) var(--base-9);
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    .cardItem__support {
-      max-width: 25em;
-      color: var(--color-nav-100);
-      @include getType('h5-messina');
-    }
-
-    @include breakpoint(md) {
-      padding-inline: var(--base-12);
-      min-height: 248px;
-
-      .cardItem__support {
-        @include getType('h4-messina');
       }
     }
   }
