@@ -7,7 +7,7 @@ name: 'Card: Action'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1124496049
+  changedFieldIndicator: 661416664
   columns:
     __assoc__:
       -
@@ -19,13 +19,6 @@ settings:
               - ''
       -
         - dc3125b2-6f2a-41d8-9e43-c558e6b27568 # Action: Entry or URL
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 8e3c7135-1b3f-4b9c-a098-11afc16dafdb # Style: Alignment
         -
           __assoc__:
             -

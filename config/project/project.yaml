@@ -1,4 +1,4 @@
-dateModified: 1707326449
+dateModified: 1707338861
 elementSources:
   craft\elements\Asset:
     -
@@ -510,7 +510,6 @@ meta:
     8c222928-a7c2-4d90-96ea-c403c79d070f: 'Asset: Image' # Asset: Image
     8d951e83-8f96-4154-bd0a-e886b788c8c5: 'Grantee Database' # Grantee Database
     8e01f9c0-5b32-400f-af60-ee3cf5e92d49: Documents # Documents
-    8e3c7135-1b3f-4b9c-a098-11afc16dafdb: 'Style: Alignment' # Style: Alignment
     8e567268-98e5-4afb-aac9-293cd9491b52: 'Flat Menu' # Flat Menu
     9a168c09-6501-475f-8cce-22b491c76e1a: 'Action: Pair' # Action: Pair
     9b5d6e14-e157-4607-9bcb-aadca4a1863c: About # About
