@@ -1,4 +1,4 @@
-dateModified: 1707338861
+dateModified: 1707343799
 elementSources:
   craft\elements\Asset:
     -
@@ -427,6 +427,7 @@ meta:
     0c504d15-eff5-4c67-a859-9cef6adcd964: Footer # Footer
     0f725806-1cbe-40c2-91a6-cfc9a70879c2: 'Text: Heading' # Text: Heading
     1a788826-fcfe-45be-b8ec-68bafc7d3790: 'Carousel: Quotes' # Carousel: Quotes
+    1ae99391-4060-478a-b225-fc7156964232: 'Feed: Team' # Feed: Team
     1af4f756-5ef3-465d-8a9a-ba0cf78e19f3: Heading # Heading
     1b2cb00a-9926-4731-ba73-26cd45fd7e44: 'Geo: Region' # Geo: Region
     1bf5f3e0-2b61-48a7-85fb-6a6e1ddae091: Homepage # Homepage
@@ -653,8 +654,10 @@ meta:
     61455e6d-9939-41a1-a0aa-22f559aae37a: 'Changelog Types' # Changelog Types
     70164bc9-6b6d-43ad-898e-7a4c1fb43467: 'Carousel: Blog' # Carousel: Blog
     72205ea8-58a0-4975-873e-134c5d44d949: 'Carousel: Blog Posts' # Carousel: Blog Posts
+    80734fc1-e638-429a-9be7-1ff3810547bf: Title # Title
     81445eab-2d97-4591-92d7-6e4f6db5bbba: Intro # Intro
     83022d12-46dd-48e1-8f5a-bd1fce173430: Panel # Panel
+    84197f18-70b3-477e-8259-3257a2653ee2: Team # Team
     86125ca1-5070-4d71-91cf-ef53ea2337cb: Menu # Menu
     88778e50-4f0a-405e-ad81-55383a2ba560: 'Highlight: Stat' # Highlight: Stat
     90045d2b-740a-4664-be15-670b6497ced6: Target # Target
@@ -762,6 +765,7 @@ meta:
     d07afb10-c7ee-417d-8969-44060e0f3bc6: 'Carousel: Research' # Carousel: Research
     d1baa3d0-c525-4a33-bfc6-6851a329b88d: Image # Image
     d1fb8e0a-7a87-4586-994b-e8ca07e4a9d9: Year # Year
+    d2fe005a-7f77-461b-bb67-a1413fab5aa2: Team # Team
     d3b98f80-1cee-4849-a97b-9db551b73c5d: 'Asset: Image' # Asset: Image
     d5b83bf3-2016-4e0d-99cb-dcf4e82373e3: 'Asset: Video Demo' # Asset: Video Demo
     d5da255e-0a3f-4eb8-817c-97ee72286b6c: 'Carousel: Blog Posts' # Carousel: Blog Posts
