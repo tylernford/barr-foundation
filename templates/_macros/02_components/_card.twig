@@ -91,6 +91,72 @@
 {% endmacro %}
 
 
+{% macro bio(person) %}
+    {# variant: grid/list #}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set image = person.assetImage.one %}
+    {% set name =
+        person.textMiddle|length ? person.textFirst ~ ' ' ~ person.textMiddle ~ ' ' ~ person.textLast :
+        person.textFirst ~ ' ' ~ person.textLast
+    %}
+    {% set pronouns = person.textPronouns %}
+    {% set jobTitle = person.textJob %}
+    {% set linkAttributes = {
+        type: 'link', isReversed: false,
+        icon: 'arrow', iconOnly: false,
+        text: 'Bio', url: person.url,
+        linkType: 'entry', target: ''
+    } %}
+    {% set buttonAttributes = {
+        type: 'button', isReversed: false,
+        icon: 'arrow', iconOnly: false,
+        text: 'Bio', url: person.url,
+        linkType: 'entry', target: ''
+    } %}
+
+    <div class="cardItem cardItem--bio">
+        {# Image #}
+        {% if image %}
+            <div class="cardItem__image">
+                {{ images.image(image, '640', '3/2', '', false) }}
+            </div>
+        {% endif %}
+
+        <div class="cardItem__content">
+            <div class="cardItem__info">
+                {# Name & Pronouns #}
+                <h3 class="cardItem__heading">{{ name }}</h3>
+
+                {% if pronouns or jobTitle %}
+                    <div class="cardItem__details">
+                        {% if pronouns|length %}
+                            <p class="details__pronouns">{{ pronouns }}</p>
+                        {% endif %}
+                        {% if jobTitle|length %}
+                            {{ details.detail('job-title', false, jobTitle) }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+            {# Tags #}
+
+            {# Action #}
+            <div class="cardItem__action">
+                <div class="cardItem__link">
+                    {{ actions.action(linkAttributes) }}
+                </div>
+                <div class="cardItem__button">
+                    {{ actions.action(buttonAttributes) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+
 {% macro grantee(config) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
