@@ -1,0 +1,20 @@
+/* _featured-card-with-grantees.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Featured Card with Grantees
+  See templates/_macros/03_modules/_featured-card-with-grantees.twig for markup
+------------------------------------------------------------------------ */
+
+.featuredCardWithGrantees {
+  > .cardItem {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .blockGrantees {
+    .blockGrantees__inner {
+      @include container-narrow;
+    }
+  }
+}

@@ -7,7 +7,9 @@
 ======================================= #}
 
 {% macro featuredCardWithGrantees(config) %}
-  {% include "_partials/_modules/_card.twig" with { config: config.featuredCardConfig } only %}
+  <div class="featuredCardWithGrantees">
+    {% include "_partials/_modules/_card.twig" with { config: config.featuredCardConfig } only %}
 
-  {% include "_partials/_modules/_grantees.twig" with { config: config.grantees } only %}
+    {% include "_partials/_modules/_grantees.twig" with { config: config.grantees } only %}
+  </div>
 {% endmacro %}
