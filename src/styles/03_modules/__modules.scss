@@ -7,4 +7,6 @@
  3. @forward make everything available when __modules is loaded via @use rule within other stylesheets
 ------------------------------------------------------------------------ */
 
+@forward 'featured-card-with-grantees';
+@forward 'feed';
 @forward 'grantees';

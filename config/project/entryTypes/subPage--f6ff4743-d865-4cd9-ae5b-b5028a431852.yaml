@@ -81,6 +81,24 @@ fieldLayouts:
         name: Content
         uid: 3e3bf9d7-78ce-486f-ba8a-f3da34ad841f
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1ae99391-4060-478a-b225-fc7156964232 # Feed: Team
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 497bc9db-c5c9-4775-b67d-3ac2fd5cdbe9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Pre-Footer
+        uid: 8679aa39-1b20-4359-a20f-5e8eef5e5dca
+        userCondition: null
 handle: subPage
 hasTitleField: true
 name: Sub-Page

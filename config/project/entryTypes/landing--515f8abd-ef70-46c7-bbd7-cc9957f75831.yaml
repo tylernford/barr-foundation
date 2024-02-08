@@ -81,6 +81,24 @@ fieldLayouts:
         name: Content
         uid: 7c76097f-d655-4470-b1ed-8006177a2b1e
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1ae99391-4060-478a-b225-fc7156964232 # Feed: Team
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ac409b9-cb2b-48b0-9c15-04c7c7596e78
+            userCondition: null
+            warning: null
+            width: 100
+        name: Pre-Footer
+        uid: b407ad4d-2e46-4657-9193-5ec795bda352
+        userCondition: null
 handle: landing
 hasTitleField: true
 name: Landing

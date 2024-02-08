@@ -1,0 +1,83 @@
+field: 1ae99391-4060-478a-b225-fc7156964232 # Feed: Team
+fieldLayouts:
+  fe77dd24-9cf9-4a16-9f86-09f2934733e8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 80734fc1-e638-429a-9be7-1ff3810547bf # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f257e690-f37f-4e10-84ea-49134bcf05b7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d2fe005a-7f77-461b-bb67-a1413fab5aa2 # Team
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f8df0f7-6553-463f-8601-4704393f1923
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4d7dcff6-7fa6-4d61-9ddd-c1285e05222c
+        userCondition: null
+fields:
+  80734fc1-e638-429a-9be7-1ff3810547bf: # Title
+    columnSuffix: txrdzkag
+    contentColumnType: text
+    fieldGroup: null
+    handle: teamTitle
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d2fe005a-7f77-461b-bb67-a1413fab5aa2: # Team
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: team
+    instructions: null
+    name: Team
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: 1
+      selectionLabel: 'Select a team member'
+      showSiteMenu: true
+      sources:
+        - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: team
+name: Team
+sortOrder: 1
