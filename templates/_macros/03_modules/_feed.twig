@@ -1,0 +1,36 @@
+{# =======================================
+  Module: Feed
+==========================================
+  Params:
+    - feed
+    - variant
+======================================= #}
+
+{% macro feed(config) %}
+    {% import '_macros/01_elements/_section-title' as sectionTitles %}
+    {% import '_macros/02_components/_card' as cards %}
+
+    {% set title = config.title %}
+    {% set feed = config.feed %}
+    {% set gridVariant = config.gridVariant %}
+    {% set cardVariant = config.cardVariant %}
+
+    <section class="feed">
+        {# Section Title #}
+        {% set sectionTitleAttributes = {
+            level: 'h2',
+            title: title,
+            variant: '', border: true
+        } %}
+        {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+
+        {# Feed #}
+        <div class="feed__grid" data-grid-style="{{ gridVariant }}">
+            {% for feedItem in feed %}
+                {% if cardVariant == 'bio' %}
+                    {{ cards.bio(feedItem) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+{% endmacro %}
