@@ -1,0 +1,84 @@
+/* _body.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Body
+  See templates/_macros/03_modules/_text.twig for markup
+------------------------------------------------------------------------ */
+
+.blockBody {
+  @include container-narrow;
+  color: var(--color-navy-100);
+
+  .blockBody__intro {
+    padding-block: var(--base-6);
+    max-width: 35em;
+    @include getType('body');
+
+    p {
+      &:not(:last-child) {
+        margin-block-end: 1em;
+      }
+    }
+  }
+
+  .blockBody__paragraph {
+    padding-block: var(--base-6);
+    max-width: 37em;
+    @include getType('caption-messina');
+
+    h3 {
+      &:not(:first-child) {
+        margin-block-start: 1.55em;
+      }
+
+      @include getType('h5-axiforma');
+    }
+
+    p,
+    ul,
+    ol {
+      &:not(:last-child) {
+        margin-block-end: 1em;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-inline: 1em;
+    }
+
+    ol {
+      list-style-type: decimal;
+      margin-inline: 1em;
+    }
+  }
+
+  .blockBody__action {
+    padding-block-end: var(--base-6);
+  }
+
+  @include breakpoint(sm) {
+    ul,
+    ol {
+      margin-inline-end: 4em;
+    }
+  }
+
+  @include breakpoint(md) {
+    .blockBody__intro {
+      padding-block: var(--base-9);
+      @include getType('subhead');
+    }
+  
+    .blockBody__paragraph {
+      padding-block: var(--base-9);
+      @include getType('body');
+    }
+
+    .blockBody__action {
+      margin-block-start: var(--neg-base-3);
+      padding-block-end: var(--base-7);
+    }
+  }
+}
