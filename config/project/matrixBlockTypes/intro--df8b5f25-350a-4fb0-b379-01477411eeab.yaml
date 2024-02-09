@@ -47,4 +47,4 @@ fields:
     type: craft\ckeditor\Field
 handle: intro
 name: Intro
-sortOrder: 2
+sortOrder: 1

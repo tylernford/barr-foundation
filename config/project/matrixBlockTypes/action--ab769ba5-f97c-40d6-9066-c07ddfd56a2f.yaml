@@ -86,4 +86,4 @@ fields:
     type: lenz\linkfield\fields\LinkField
 handle: action
 name: Action
-sortOrder: 4
+sortOrder: 3
