@@ -1,5 +1,5 @@
 headingLevels:
-  - 2
+  - 3
 listPlugin: DocumentList
 name: 'Text: Body Options'
 toolbar:
@@ -10,5 +10,3 @@ toolbar:
   - bulletedList
   - numberedList
   - link
-  - '|'
-  - sourceEditing

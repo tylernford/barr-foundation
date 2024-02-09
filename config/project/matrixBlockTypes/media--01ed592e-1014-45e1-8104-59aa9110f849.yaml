@@ -112,4 +112,4 @@ fields:
     type: craft\fields\Assets
 handle: media
 name: Media
-sortOrder: 5
+sortOrder: 4

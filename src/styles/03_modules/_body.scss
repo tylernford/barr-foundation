@@ -1,0 +1,220 @@
+/* _body.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Body
+  See templates/_macros/03_modules/_text.twig for markup
+------------------------------------------------------------------------ */
+
+.blockBody {
+  color: var(--color-navy-100);
+
+  // Intro
+  .blockBody__intro {
+    @include container-narrow;
+    padding-block: var(--base-6);
+    @include getType('body');
+    
+    p {
+      max-width: 35em;
+
+      &:not(:last-child) {
+        margin-block-end: 1em;
+      }
+    }
+  }
+
+  // Paragraph
+  .blockBody__paragraph {
+    @include container-narrow;
+    padding-block: var(--base-6);
+    @include getType('caption-messina');
+    
+    > * {
+      max-width: 37em;
+    }
+
+    h3 {
+      &:not(:first-child) {
+        margin-block-start: 1.55em;
+      }
+
+      @include getType('h5-axiforma');
+    }
+
+    p,
+    ul,
+    ol {
+      &:not(:last-child) {
+        margin-block-end: 1em;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-inline: 1em;
+    }
+
+    ol {
+      list-style-type: decimal;
+      margin-inline: 1em;
+    }
+  }
+
+  // Action
+  .blockBody__action {
+    @include container-narrow;
+    padding-block-end: var(--base-6);
+  }
+
+  // Media
+  .blockBody__media {
+    margin-block: var(--base-9);
+    color: var(--color-grey-150);
+    @include getType('caption-axiforma');
+
+    .image {
+      aspect-ratio: 3 / 2;
+      display: block;
+      position: relative;
+      overflow: hidden;
+  
+      img {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+
+    figcaption {
+      p {
+        margin-block-start: var(--base-3);
+        max-width: 34em;
+      }
+    }
+
+    // 1 Up
+    &[data-1-up=true] {
+      // Half width
+      &:not([data-span=true]) {
+        @include container-narrow;
+      }
+
+      // Full width
+      &[data-span=true] {
+        .image {
+          aspect-ratio: 8 / 5;
+        }
+
+        figcaption {
+          padding-inline: var(--base-5);
+        }
+      }
+    }
+
+    // 2 Up
+    &[data-2-up=true] {
+      @include container-narrow;
+      display: grid;
+      grid-gap: var(--base-9);
+    }
+  }
+
+
+  @include breakpoint(sm) {
+    ul,
+    ol {
+      margin-inline-end: 4em;
+    }
+  }
+
+  @include breakpoint(md) {
+    .blockBody__intro {
+      padding-block: var(--base-9);
+      @include getType('subhead');
+    }
+  
+    .blockBody__paragraph {
+      padding-block: var(--base-9);
+      @include getType('body');
+    }
+
+    .blockBody__action {
+      margin-block-start: var(--neg-base-3);
+      padding-block-end: var(--base-7);
+    }
+
+    .blockBody__media {
+      // 1 Up
+      &[data-1-up=true] {
+        // Half width
+        &:not([data-span=true]) {
+          figure {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+          }
+
+          figcaption {
+            padding-inline-start: var(--base-5);
+
+            p {
+              max-width: 20em;
+
+              &:first-child {
+                margin-block-start: 0;
+              }
+            }
+          }
+        }
+  
+        // Full width
+        &[data-span=true] {
+          @include container-narrow;
+
+          .image {
+            aspect-ratio: 2 / 1;
+          }
+
+          figcaption {
+            padding-inline: 0;
+
+            p {
+              max-width: 40em;
+            }
+          }
+        }
+      }
+  
+      // 2 Up
+      &[data-2-up=true] {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: var(--base-3);
+
+        figcaption {
+          p {
+            max-width: 40em;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xl) {
+    .blockBody__media {
+      // 1 Up
+      &[data-1-up=true] {  
+        // Full width
+        &[data-span=true] {
+          margin-block: var(--base-18);
+
+          .image {
+            aspect-ratio: 5 / 2;
+          }
+        }
+      }
+    }
+  }
+}

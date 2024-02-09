@@ -1,0 +1,96 @@
+{# _macros/03_modules/_text.twig #}
+
+{% macro default(config) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set variant = 'variant' in config|keys ? config.variant : '' %}
+    {% set content = 'content' in config|keys ? config.content : null %}
+
+    {% switch variant %}
+        {% case 'body' %}
+            {% set bodyList = content.blockBody.all() %}
+
+            <div class="blockBody">
+                {% for item in bodyList %}
+                    {% set type = item.type %}
+                    {% switch type %}
+                        {% case 'intro' %}
+                            {% set body = item.body %}
+
+                            <div class="blockBody__intro">
+                                {{ body }}
+                            </div>
+
+                        {% case 'paragraph' %}
+                            {% set body = item.body %}
+
+                            <div class="blockBody__paragraph">
+                                {{ body }}
+                            </div>
+                        
+                        {% case 'media' %}
+                            {% set images = item.assetWildcard.all() %}
+                            {% set width = item.styleWidth %}
+
+                            {% set imageCount = images|length %}
+                            <div class="blockBody__media" data-{{ imageCount }}-up="true"{{ imageCount == 1 and width == '100' ? ' data-span=true' }}>
+                                {% for image in images %}
+                                    {% set caption = image.textCaption %}
+                                    {% set byline  = image.textByline %}
+                                    {% set byline  = byline ? '<p>' ~ byline ~ '</p>' %}
+
+                                    <figure>
+                                        {{ images.image(image, '640', '3/2', '', false) }}
+                                        {% if caption or byline %}
+                                            <figcaption>
+                                                {{ caption }}
+                                                {{ byline ? byline|raw }}
+                                            </figcaption>
+                                        {% endif %}
+                                    </figure>
+                                {% endfor %}
+                            {# {{ width }} #}
+                                {# {{ assetCount }} #}
+                            </div>
+
+                        {% case 'action' %}
+                            {% set action = item.actionLink %}
+                            {% set linkAttributes = {
+                                type: 'link', isReversed: false,
+                                icon: 'arrow', iconOnly: false,
+                                text: action.text, url: action.url,
+                                linkType: action.type, target: action.target
+                            } %}
+                            
+                            <div class="blockBody__action">
+                                {{ actions.action(linkAttributes) }}
+                            </div>
+
+                    {% endswitch %}
+                {% endfor %}
+            </div>
+
+        {% case 'accordion' %}
+            {% set heading  = content.textHeading %}
+            {% set accordion = content.blockAccordion.all() %}
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">This is my accordion text</h2>
+                {% for panel in accordion %}
+                    {% set panelHeading = panel.heading %}
+                    {% set panelBody    = panel.body %}
+                    {% set panelAction  = panel.actionLink %}
+                    <div>
+                        This is my panel, {{ panelHeading }}
+                    </div>
+                {% endfor %}
+            </div>
+
+        {% default %}
+
+        <div class="blockGeneric">
+            <h2 class="blockGeneric-heading">This is my default text</h2>
+        </div>
+
+    {% endswitch %}
+{% endmacro %}

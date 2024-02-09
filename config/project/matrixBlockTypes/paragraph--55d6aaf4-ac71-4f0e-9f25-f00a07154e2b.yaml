@@ -47,4 +47,4 @@ fields:
     type: craft\ckeditor\Field
 handle: paragraph
 name: Longform
-sortOrder: 3
+sortOrder: 2
