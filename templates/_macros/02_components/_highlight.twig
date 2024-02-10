@@ -1,43 +1,75 @@
 {# _macros/02_components/_highlight.twig #}
 
 {% macro default(config) %}
-{% set variant = 'variant' in config|keys ? config.variant : '' %}
-{% set content = 'content' in config|keys ? config.content : null %}
+    {% import '_macros/01_elements/_image' as images %}
 
-{% switch variant %}
+    {% set variant = 'variant' in config|keys ? config.variant : '' %}
+    {% set content = 'content' in config|keys ? config.content : null %}
 
-    {% case 'quote' %}
-    {% set highlight = content.highlightQuote.one() %}
-    {% set quote = highlight.quote %}
-    {% set attribution = highlight.attribution %}
-    {% set image = highlight.assetImage.one() %}
+    {% switch variant %}
 
-    <div class="blockGeneric">
-        <h2 class="blockGeneric-heading">This is my quote highlight</h2>
-    </div>
+        {% case 'quote' %}
+            {% set highlight = content.highlightQuote.one() %}
+            {% set quote = highlight.quote %}
+            {% set attribution = highlight.attribution %}
+            {% set image = highlight.assetImage.one() %}
 
-    {% case 'stats' %}
-    {% set heading   = content.textHeading %}
-    {% set statList  = content.highlightStats.all() %}
-    {% set infograph = content.assetInfographic.one() %}
-
-    <div class="blockGeneric">
-        <h2 class="blockGeneric-heading">This is my stats highlight</h2>
-        {% for item in statList %}
-            {% set label = item.textLabel %}
-            {% set stat  = item.textStat %}
-            {% set desc  = item.textDescription %}
-            <div>
-                This is my {{ label }} stat.
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">This is my quote highlight</h2>
             </div>
-        {% endfor %}
-    </div>
 
-    {% default %}
+        {% case 'stats' %}
+            {% set heading   = content.textPlainHeading %}
+            {% set statList  = content.highlightStats.all() %}
+            {% set attribution = content.textDescription %}
+            {% set infograph = content.assetInfographic.one() %}
+            {% set styleWidth = infograph.styleWidth %}
+            {% set infographImage = infograph.assetImage.one %}
 
-    <div class="blockGeneric">
-        <h2 class="blockGeneric-heading">This is my default highlight</h2>
-    </div>
+            <div class="blockHighlight blockHighlight--stats"{{ infographImage ? ' data-infographic=true' }}>
+                {% if heading %}
+                    <h3 class="blockHighlight__heading">{{ heading }}</h3>
+                {% endif %}
 
-{% endswitch %}
+                <div class="blockHighlight__inner">
+                    {% if infographImage %}
+                        <div class="blockHighlight__infograph">
+                            {{ images.image(infographImage, '1600', '', '', false) }}
+                        </div>
+                    {% endif %}
+
+                    <div class="blockHighlight__stats-and-attribution">
+                        <ul class="blockHighlight__stats">
+                            {% for statItem in statList %}
+                                {% set label = statItem.textLabel %}
+                                {% set stat  = statItem.textStat %}
+                                {% set desc  = statItem.textDescription %}
+                                    
+                                <li class="blockHighlight__stat">
+                                    <div class="stat__header">
+                                        <h4>{{ stat }}</h4>
+                                        {% if label %}
+                                            <h5>{{ label }}</h5>
+                                        {% endif %}
+                                    </div>
+                                    {{ desc }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                        {% if attribution|length %}
+                            <div class="blockHighlight__attribution">
+                                {{ attribution }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        {% default %}
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">This is my default highlight</h2>
+            </div>
+
+    {% endswitch %}
 {% endmacro %}
