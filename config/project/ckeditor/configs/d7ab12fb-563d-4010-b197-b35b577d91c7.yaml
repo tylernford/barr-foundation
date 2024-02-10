@@ -4,5 +4,3 @@ name: 'Text: Bold + Italic'
 toolbar:
   - bold
   - italic
-  - '|'
-  - sourceEditing

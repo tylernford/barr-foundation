@@ -4,20 +4,20 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  5dad42d6-d426-4229-a22f-a179b30fc968:
+  848b19e6-1407-4361-b9eb-d8c9f06917c6:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: null
-            label: null
+            fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
+            instructions: Optional.
+            label: 'Text: Heading'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9e442589-3063-4fa4-a8e6-13ffa953299e
+            uid: c407f80f-b71e-41fa-ac2c-3b94e131a1d3
             userCondition: null
             warning: null
             width: 100
@@ -30,6 +30,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c247f9cb-128c-45c5-987b-f9f1584d62c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: null
+            label: 'Text: Attribution'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4615e7eb-e619-4930-a29a-696d4690c515
             userCondition: null
             warning: null
             width: 100
@@ -52,6 +64,7 @@ group: null
 groupChildBlockTypes: true
 handle: highlightStats
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0

@@ -1,4 +1,4 @@
-changedFieldIndicator: 1949353957
+changedFieldIndicator: 761255097
 field: 9e65ef79-1f80-4724-997d-ea1035b737c7 # Highlight: Stats
 fieldLayouts:
   bb6cdb03-9fec-4edd-b987-c86737cb40de:
@@ -23,7 +23,7 @@ fieldLayouts:
             fieldUid: 39bff6e7-a84b-482c-8a13-facf22132bd9 # Text: Stat
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a6082936-562c-4cf3-8c8c-f126e536e9eb
@@ -35,7 +35,7 @@ fieldLayouts:
             fieldUid: eaf269e1-7746-41ed-9136-dc532a61e2f7 # Text: Description
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f1684c6a-d406-4738-aa5d-7afdad6607a3
@@ -97,7 +97,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
+      ckeConfig: d7ab12fb-563d-4010-b197-b35b577d91c7 # Text: Bold + Italic
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: false

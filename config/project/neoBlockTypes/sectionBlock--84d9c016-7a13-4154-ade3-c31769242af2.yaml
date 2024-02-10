@@ -49,6 +49,7 @@ group: null
 groupChildBlockTypes: true
 handle: sectionBlock
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0

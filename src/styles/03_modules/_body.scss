@@ -154,11 +154,10 @@
           figure {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: var(--base-5);
           }
 
           figcaption {
-            padding-inline-start: var(--base-5);
-
             p {
               max-width: 20em;
 
