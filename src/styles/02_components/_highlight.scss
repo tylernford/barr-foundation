@@ -33,9 +33,10 @@
 
 
 .blockHighlight {
+  @include container-narrow;
+  
   // Stats
   &.blockHighlight--stats {
-    @include container-narrow;
     padding-block: var(--base-7) var(--base-13);
 
     strong,

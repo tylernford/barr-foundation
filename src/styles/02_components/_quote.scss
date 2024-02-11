@@ -7,24 +7,40 @@
 ------------------------------------------------------------------------ */
 
 .quote {
-  --color-quote-primary: var(--color-teal-100);
-  --color-quote-secondary: var(--color-grey-150);
+  --color-quote--primary: var(--color-teal-100);
+  --color-quote--secondary: var(--color-navy-50);
+}
 
-  @include container;
-  margin-top: var(--base-50px);
-  margin-bottom: var(--base-50px);
-  color: var(--color-quote-secondary);
+[data-theme-color="green"] {
+  .quote {
+    --color-quote--primary: var(--color-program-green-100);
+  }
+}
+
+[data-theme-color="plum"] {
+  .quote {
+    --color-quote--primary: var(--color-program-plum-100);
+  }
+}
+
+[data-theme-color="marigold"] {
+  .quote {
+    --color-quote--primary: var(--color-program-marigold-100);
+  }
+}
+
+.quote {
+  @include container-narrow;
+  padding-block: var(--base-9);
+  color: var(--color-quote--secondary);
 
   // Quote
-  p {
-    margin-bottom: var(--base-30px);
-    padding-top: var(--base-40px);
+  .quote__quotation {
+    padding-block-start: var(--base-10);
     max-width: 30em;
     position: relative;
-    @include getType('subhead');
-    font-style: italic;
+    @include getType('h5-messina');
 
-      // 25x25px triangles in upper left corner
     &::before,
     &::after {
       content: '';
@@ -33,37 +49,75 @@
       height: 0;
       position: absolute;
       border-style: solid;
-      border-width: var(--base-25px) var(--base-25px) 0 0;
-      border-color: var(--color-quote-primary) transparent transparent transparent;
+      border-width: var(--base-6) var(--base-6) 0 0;
+      border-color: var(--color-quote--primary) transparent transparent transparent;
     }
 
     &::after {
-      left: var(--base-30px);
+      left: var(--base-7);
+    }
+
+    p + p {
+      margin-block-start: .75em;
+    }
+
+    strong {
+      font-weight: 400;
+    }
+
+    i {
+      font-style: italic;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: inherit;
+      transition: color var(--transition) ease-in,
+                  text-decoration-color var(--transition) ease-in;
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-quote--primary);
+          transition: color var(--transition-intermediate) ease-out,
+                  text-decoration-color var(--transition-intermediate) ease-out;
+        }
+      }
     }
   }
 
   // Attribution
   .quote__attribution {
+    margin-block-start: var(--base-7);
     display: flex;
     flex-direction: column;
 
-    .details {
-      margin-bottom: var(--base-10px);
-    }
-
     .attribution__secondary {
-      @include getType('caption-axiforma');
+      margin-block-start: var(--base-2);
+      @include getType('detail-axiforma');
 
       &:nth-child(3) {
+        margin-block-start: var(--neg-base);
         margin-top: -5px;
       }
     }
   }
 
   @include breakpoint(md) {
-    p {
-      margin-bottom: 2.5rem; // 40px
-      padding-top: var(--base-50px);
+    padding-block: var(--base-12) var(--base-10);
+
+    .quote__quotation {
+      padding-block-start: var(--base-10);
+      @include getType('h4-messina');
+    }
+
+    .quote__attribution {
+      margin-block-start: var(--base-10);
+    }
+  }
+
+  @include breakpoint(lg) {
+    .quote__quotation {
+      padding-block-start: var(--base-9);
       @include getType('h3-messina');
     }
   }

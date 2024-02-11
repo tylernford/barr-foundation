@@ -1,7 +1,9 @@
 {# _macros/02_components/_highlight.twig #}
 
 {% macro default(config) %}
+    {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
+    {% import '_macros/02_components/_quote' as quote %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
@@ -10,13 +12,45 @@
 
         {% case 'quote' %}
             {% set highlight = content.highlightQuote.one() %}
-            {% set quote = highlight.quote %}
-            {% set attribution = highlight.attribution %}
             {% set image = highlight.assetImage.one() %}
+            {% set quote = highlight.quote %}
 
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my quote highlight</h2>
-            </div>
+            {% set attr = highlight.attribution.one() %}
+            {% set attrPerson = [] %}
+            {% set attrTitle = '' %}
+            {% set attrOrg = '' %}
+            {% set attrLink = '' %}
+
+            {% if attr and attr.type == 'internal' %}
+                {% set attribution = attr.item.one() %}
+                {% set attrImage = attribution.assetImage.one %}
+                {% set attrName =
+                    attribution.textMiddle|length ? attribution.textFirst ~ ' ' ~ attribution.textMiddle ~ ' ' ~ attribution.textLast :
+                    attribution.textFirst ~ ' ' ~ attribution.textLast
+                %}
+                {% set attrPerson = attrPerson|merge([
+                    { 'img': attrImage, 'name': attrName }
+                ]) %}
+                {% set attrTitle = attribution.textJob %}
+
+            {% elseif attr and attr.type == 'external' %}
+                {% set attrPerson = attrPerson|merge([
+                    { 'img': '', 'name': attr.fullName }
+                ]) %}
+                {% set attrTitle = attr.jobTitle %}
+                {% set attrOrg = attr.organization %}
+
+            {% endif %}
+            
+            {% set attribution = {
+                'person': attrPerson,
+                'title': attrTitle,
+                'org': attrOrg,
+                'link': attrLink
+                }
+            %}
+
+            {{ quote.quote(quote, attribution) }}
 
         {% case 'stats' %}
             {% set heading   = content.textPlainHeading %}
