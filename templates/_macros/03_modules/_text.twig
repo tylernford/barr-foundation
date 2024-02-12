@@ -3,6 +3,7 @@
 {% macro default(config) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_image' as images %}
+    {% import '_macros/02_components/_accordion' as accordion %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
@@ -72,19 +73,9 @@
             </div>
 
         {% case 'accordion' %}
-            {% set heading  = content.textHeading %}
             {% set accordion = content.blockAccordion.all() %}
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my accordion text</h2>
-                {% for panel in accordion %}
-                    {% set panelHeading = panel.heading %}
-                    {% set panelBody    = panel.body %}
-                    {% set panelAction  = panel.actionLink %}
-                    <div>
-                        This is my panel, {{ panelHeading }}
-                    </div>
-                {% endfor %}
-            </div>
+
+            {{ accordion.accordion(accordion, '') }}
 
         {% default %}
 

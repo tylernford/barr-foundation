@@ -10,7 +10,7 @@ fieldLayouts:
             fieldUid: 24c92902-e46c-423d-b80a-15d697d098ec # Heading
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8ee0667c-30db-4d6a-a555-d4bfd92e9017
@@ -22,7 +22,7 @@ fieldLayouts:
             fieldUid: 3f87cd19-1003-4802-9f60-9fb8d5062700 # Body
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: bc8723d8-b42a-4ae0-87a9-baec254321eb
@@ -94,7 +94,7 @@ fields:
     contentColumnType: string
     fieldGroup: null
     handle: actionLink
-    instructions: null
+    instructions: Optional.
     name: Action
     searchable: false
     settings:
