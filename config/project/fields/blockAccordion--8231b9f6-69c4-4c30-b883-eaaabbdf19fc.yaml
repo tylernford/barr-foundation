@@ -8,7 +8,7 @@ searchable: false
 settings:
   contentTable: '{{%matrixcontent_blockaccordion}}'
   maxBlocks: null
-  minBlocks: null
+  minBlocks: 2
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null

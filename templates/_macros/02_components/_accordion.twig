@@ -12,14 +12,17 @@
 ======================================= #}
 
 {% macro accordion(accordion, variant) %}
+  {% import '_macros/01_elements/_actions' as actions %}
+
   {% set accordionID = 'accordion-' ~ random() %}
 
-  <section class="accordion" role="group" id="{{ accordionID }}"{{ variant != false ? ' data-variant=' ~ variant }}>
+  <div class="accordion" role="group" id="{{ accordionID }}"{{ variant != false ? ' data-variant=' ~ variant }}>
     {# Panels #}
     {% for panel in accordion %}
       {% set panelID = 'panel-' ~ random() %}
-      {% set panelTitle = panel.title %}
+      {% set panelTitle = panel.heading %}
       {% set panelBody = panel.body %}
+      {% set panelAction = panel.actionLink %}
 
       {# Panel #}
       <details {{ loop.index == 1 ? 'class="accordion-panel _is-open" open' : 'class="accordion-panel"' }}>
@@ -31,10 +34,23 @@
         {# Panel Copy #}
         <div class="accordion-panel__body">
           <div class="copy">
-            {{ panelBody|raw }}
+            {{ panelBody }}
           </div>
+          
+          {% if panelAction.url %}
+            {% set linkAttributes = {
+              type: 'link', isReversed: false,
+              icon: 'linkType', iconOnly: false,
+              text: panelAction.text, url: panelAction.url,
+              linkType: panelAction.type, target: panelAction.target
+            } %}
+
+            <div class="body__action">
+              {{ actions.action(linkAttributes) }}
+            </div>
+          {% endif %}
         </div>
       </details>
     {% endfor %}
-  </section>
+  </div>
 {% endmacro %}

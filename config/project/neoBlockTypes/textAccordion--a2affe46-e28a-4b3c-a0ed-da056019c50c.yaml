@@ -4,23 +4,11 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  77c24a1c-467d-48db-adb3-b9e80cc509f5:
+  2d58d123-4e0b-454e-96fd-40471fbc6443:
     tabs:
       -
         elementCondition: null
         elements:
-          -
-            elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d9ce2617-3fe9-420a-83de-e81793d54c62
-            userCondition: null
-            warning: null
-            width: 100
           -
             elementCondition: null
             fieldUid: 8231b9f6-69c4-4c30-b883-eaaabbdf19fc # Block: Accordion
