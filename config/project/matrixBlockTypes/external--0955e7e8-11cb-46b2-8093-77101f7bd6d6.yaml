@@ -10,7 +10,7 @@ fieldLayouts:
             fieldUid: 90ba97a8-3a0e-4559-ab6b-86981c8530b3 # Full Name
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 13af4243-5c9e-4694-afbd-7082172a6534
@@ -28,7 +28,7 @@ fieldLayouts:
             uid: 13279c3e-709f-482b-8470-d8938631aa9b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 5ab6cb61-c125-4e89-a57e-dce918706bb6 # Organization
@@ -40,7 +40,7 @@ fieldLayouts:
             uid: c1d42380-9c3a-474d-b550-745693460a10
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: d9af82af-7ba7-4662-af44-5abb92827d2f # Action: URL
@@ -70,8 +70,8 @@ fields:
       charLimit: null
       code: false
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: 1
+      multiline: true
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -110,8 +110,8 @@ fields:
       charLimit: null
       code: false
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: 1
+      multiline: true
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -130,7 +130,7 @@ fields:
       allowTarget: true
       autoNoReferrer: false
       customTextMaxLength: 0
-      customTextRequired: false
+      customTextRequired: true
       defaultLinkName: url
       defaultText: ''
       enableAllLinkTypes: false

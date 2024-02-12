@@ -11,6 +11,8 @@
 ======================================= #}
 
 {% macro detail(variant, isReversed, details) %}
+  {% import '_macros/01_elements/_image' as images %}
+  
   {# Tags #}
   {% if variant == 'tags' %}
     {{ _self.list(variant, isReversed, details) }}
@@ -26,7 +28,10 @@
       <span class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       {% for detail in details %}
         <span>
-          <span></span> {{ detail.name }}
+          {% if detail.img|length %}
+            {{ images.image(detail.img, '240', '1/1', '', false) }}
+          {% endif %}
+          {{ detail.name }}
         </span>
       {% endfor %}
       </span>

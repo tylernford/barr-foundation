@@ -5,27 +5,57 @@
     - quote (required)
 ======================================= #}
 
-{% macro quote(quote, attribution) %}
+{% macro quote(quote, attribution, image) %}
   {% import '_macros/01_elements/_details' as details %}
+  {% import '_macros/01_elements/_image' as images %}
+  {% import '_macros/01_elements/_patterns' as patterns %}
 
-  <blockquote class="quote">
-    {# Quote #}
-    <p>{{ quote }}</p>
+  <blockquote class="quote"{{ image ? ' data-with-image=true' }}>
+    {% if image %}
+      {# Image #}
+      <figure class="quote__image">
+        {{ images.image(image, '912', '5/4', '', false) }}
 
-    {# Details #}
-    <footer class="quote__attribution">
-      {# Person #}
-      {{ details.detail('byline', false, attribution.person) }}
+        {# Pattern and caption #}
+        <div class="quote__pattern-and-caption">
+          {# Pattern #}
+          <div class="pattern">
+            {{ patterns.pattern() }}
+          </div>
 
-      {# Title #}
-      {% if attribution.title %}
-        <span class="attribution__secondary">{{ attribution.title }}</span>
+          {# Caption #}
+          {% if image.textCaption|length %}
+            <figcaption class="caption">
+              {{ image.textCaption }}
+            </figcaption>
+          {% endif %}
+        </div>
+      </figure>
+    {% endif %}
+
+    <div class="quote__inner">
+      {# Quote #}
+      <div class="quote__quotation">
+        {{ quote }}
+      </div>
+
+      {# Details #}
+      {% if attribution.person|length %}
+        <footer class="quote__attribution">
+          {# Person #}
+          {{ details.detail('byline', false, attribution.person) }}
+
+          {# Title #}
+          {% if attribution.title %}
+            <span class="attribution__secondary">{{ attribution.title }}</span>
+          {% endif %}
+
+          {# Organisation #}
+          {% if attribution.org %}
+            <span class="attribution__secondary">{{ attribution.org }}</span>
+          {% endif %}
+        </footer>
       {% endif %}
-
-      {# Organisation #}
-      {% if attribution.organisation %}
-        <span class="attribution__secondary">{{ attribution.organisation }}</span>
-      {% endif %}
-    </footer>
+    </div>
   </blockquote>
 {% endmacro %}
