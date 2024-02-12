@@ -5,11 +5,34 @@
     - quote (required)
 ======================================= #}
 
-{% macro quote(quote, attribution) %}
+{% macro quote(quote, attribution, image) %}
   {% import '_macros/01_elements/_details' as details %}
   {% import '_macros/01_elements/_image' as images %}
+  {% import '_macros/01_elements/_patterns' as patterns %}
 
-  <blockquote class="quote">
+  <blockquote class="quote"{{ image ? ' data-with-image=true' }}>
+    {% if image %}
+      {# Image #}
+      <figure class="quote__image">
+        {{ images.image(image, '912', '5/4', '', false) }}
+
+        {# Pattern and caption #}
+        <div class="quote__pattern-and-caption">
+          {# Pattern #}
+          <div class="pattern">
+            {{ patterns.pattern() }}
+          </div>
+
+          {# Caption #}
+          {% if image.textCaption|length %}
+            <figcaption class="caption">
+              {{ image.textCaption }}
+            </figcaption>
+          {% endif %}
+        </div>
+      </figure>
+    {% endif %}
+
     <div class="quote__inner">
       {# Quote #}
       <div class="quote__quotation">
