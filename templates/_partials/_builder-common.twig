@@ -1,13 +1,13 @@
 {% import '_macros/01_elements/_section-title' as sectionTitles %}
 {% import '_macros/02_components/_assets' as assets %}
 
-{% for section in builder.all() %}
+{% for section in builder.level(1).all() %}
     {% switch section.type %}
     
         {% case 'sectionBlock' %}
             {% set sectionName = section.dividerSection.sectionName %}
             {% set displaySectionTitle = section.dividerSection.displayDivider %}
-            {% set sectionBlocks = builder.level(2).all() %}
+            {% set sectionBlocks = section.children %}
 
             <section id="{{ sectionName|slugify }}">
                 {# Section title #}
@@ -41,13 +41,9 @@
                     {% include "_partials/_modules/_#{macro}.twig" with { config: config } only %}
 
                 {% endfor %}
-
             </section>
 
         {% case 'prefooterForm' %}
 
-    
-
-{% endswitch %}
-
+    {% endswitch %}
 {% endfor %}

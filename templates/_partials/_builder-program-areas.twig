@@ -1,13 +1,12 @@
 {% import '_macros/02_components/_assets' as assets %}
 {% import '_macros/03_modules/_featured-card-with-grantees' as featuredCardsWithGrantees %}
 
-{% for section in builder.all() %}
-
+{% for section in builder.level(1).all() %}
     {% switch section.type %}
     
         {% case 'sectionBlock' %}
             {% set sectionTitle = section.sectionAnchor.sectionBookmarkTitle|slugify %}
-            {% set sectionBlocks = builder.level(2).all() %}
+            {% set sectionBlocks = section.children.all() %}
 
             <section id="{{ sectionTitle }}">
                 {# Section blocks #}
