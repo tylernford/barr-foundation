@@ -168,31 +168,11 @@
     padding-block: var(--base-6);
 
     .cardItem__inner {
-      margin-right: auto;
-      margin-left: auto;
-      padding-inline: var(--base-6);
-      width: 100%;
-      max-width: 94.5rem; // 1512px
+      @include container-narrow;
     }
 
 	  @include breakpoint(sm) {
 		  padding-block: var(--base-9);
-
-      .cardItem__inner {
-        padding-inline: var(--base-9);
-      }
-	  }
-
-    @include breakpoint(lg) {
-      .cardItem__inner {
-        padding-inline: var(--base-12);
-      }
-	  }
-
-    @include breakpoint(xl) {
-      .cardItem__inner {
-        padding-inline: var(--base-18);
-      }
 	  }
 
 
@@ -212,6 +192,26 @@
     .cardItem__support {
       p {
         max-width: 26em;
+      }
+
+      strong {
+        font-weight: 400;
+      }
+
+      i {
+        font-style: italic;
+      }
+
+      a {
+        color: inherit;
+        transition: color var(--transition) ease-in;
+    
+        @media (hover: hover) {
+          &:hover {
+            color: var(--color-card-text--primary);
+            transition: color var(--transition-intermediate) ease-out;
+          }
+        }
       }
     }
 
