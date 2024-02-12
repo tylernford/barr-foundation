@@ -10,6 +10,10 @@
   > .cardItem {
     position: relative;
     z-index: 1;
+
+    .cardItem__inner {
+      @include container;
+    }
   }
   
   .blockGrantees {
