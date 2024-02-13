@@ -131,7 +131,7 @@ permissions:
   - formie-viewforms
   - formie-viewsentnotifications
   - formie-viewsubmissions
-  - 'neo-createblocks:012267c4-9d65-467d-be60-57e431d098ef' # Feed: Jobs Board
+  - 'neo-createblocks:012267c4-9d65-467d-be60-57e431d098ef'
   - 'neo-createblocks:0394538d-48b7-4ac8-bcd6-5866934254f1' # Card: Grantees
   - 'neo-createblocks:03b97c7f-5861-488a-9875-0738f0246281' # Accordion
   - 'neo-createblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d' # Carousel: Grantees
@@ -168,7 +168,7 @@ permissions:
   - 'neo-createblocks:a71a008e-0906-4398-a1eb-52b3f42a5461' # Card: Team
   - 'neo-createblocks:b563972b-64ed-4a88-b6c2-92284d00d1cb' # Text: Body
   - 'neo-createblocks:b8d4ea4e-74b0-46b4-9a80-39170eb76c27' # Highlight: Stats
-  - 'neo-createblocks:c64ec6c7-0fa8-4148-bff7-82c4bc7277d0' # Feed: Jobs
+  - 'neo-createblocks:c64ec6c7-0fa8-4148-bff7-82c4bc7277d0'
   - 'neo-createblocks:c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf' # Card: Feature
   - 'neo-createblocks:cebe9f65-5c23-462d-a3e9-6d51ecd7eb49' # Card: Grantmaking
   - 'neo-createblocks:da3a7987-a4a2-4942-9663-9bad7a165bf5' # Text: Body
@@ -176,7 +176,7 @@ permissions:
   - 'neo-createblocks:f7459d43-df4c-47f2-b96c-a7f4e09c3d7e' # Highlight: Timeline (Single)
   - 'neo-createblocks:fda066ec-ba55-4d1a-aea5-12402640c646' # Divider: Section
   - 'neo-createblocks:fff7d153-2526-49e3-a5fa-98017a4eeb42' # Highlight: Quote
-  - 'neo-deleteblocks:012267c4-9d65-467d-be60-57e431d098ef' # Feed: Jobs Board
+  - 'neo-deleteblocks:012267c4-9d65-467d-be60-57e431d098ef'
   - 'neo-deleteblocks:0394538d-48b7-4ac8-bcd6-5866934254f1' # Card: Grantees
   - 'neo-deleteblocks:03b97c7f-5861-488a-9875-0738f0246281' # Accordion
   - 'neo-deleteblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d' # Carousel: Grantees
@@ -213,7 +213,7 @@ permissions:
   - 'neo-deleteblocks:a71a008e-0906-4398-a1eb-52b3f42a5461' # Card: Team
   - 'neo-deleteblocks:b563972b-64ed-4a88-b6c2-92284d00d1cb' # Text: Body
   - 'neo-deleteblocks:b8d4ea4e-74b0-46b4-9a80-39170eb76c27' # Highlight: Stats
-  - 'neo-deleteblocks:c64ec6c7-0fa8-4148-bff7-82c4bc7277d0' # Feed: Jobs
+  - 'neo-deleteblocks:c64ec6c7-0fa8-4148-bff7-82c4bc7277d0'
   - 'neo-deleteblocks:c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf' # Card: Feature
   - 'neo-deleteblocks:cebe9f65-5c23-462d-a3e9-6d51ecd7eb49' # Card: Grantmaking
   - 'neo-deleteblocks:da3a7987-a4a2-4942-9663-9bad7a165bf5' # Text: Body
@@ -221,7 +221,7 @@ permissions:
   - 'neo-deleteblocks:f7459d43-df4c-47f2-b96c-a7f4e09c3d7e' # Highlight: Timeline (Single)
   - 'neo-deleteblocks:fda066ec-ba55-4d1a-aea5-12402640c646' # Divider: Section
   - 'neo-deleteblocks:fff7d153-2526-49e3-a5fa-98017a4eeb42' # Highlight: Quote
-  - 'neo-editblocks:012267c4-9d65-467d-be60-57e431d098ef' # Feed: Jobs Board
+  - 'neo-editblocks:012267c4-9d65-467d-be60-57e431d098ef'
   - 'neo-editblocks:0394538d-48b7-4ac8-bcd6-5866934254f1' # Card: Grantees
   - 'neo-editblocks:03b97c7f-5861-488a-9875-0738f0246281' # Accordion
   - 'neo-editblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d' # Carousel: Grantees
@@ -258,7 +258,7 @@ permissions:
   - 'neo-editblocks:a71a008e-0906-4398-a1eb-52b3f42a5461' # Card: Team
   - 'neo-editblocks:b563972b-64ed-4a88-b6c2-92284d00d1cb' # Text: Body
   - 'neo-editblocks:b8d4ea4e-74b0-46b4-9a80-39170eb76c27' # Highlight: Stats
-  - 'neo-editblocks:c64ec6c7-0fa8-4148-bff7-82c4bc7277d0' # Feed: Jobs
+  - 'neo-editblocks:c64ec6c7-0fa8-4148-bff7-82c4bc7277d0'
   - 'neo-editblocks:c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf' # Card: Feature
   - 'neo-editblocks:cebe9f65-5c23-462d-a3e9-6d51ecd7eb49' # Card: Grantmaking
   - 'neo-editblocks:da3a7987-a4a2-4942-9663-9bad7a165bf5' # Text: Body
