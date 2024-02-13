@@ -1,8 +1,6 @@
 - 'blockType:84d9c016-7a13-4154-ade3-c31769242af2' # Section
 - 'blockType:c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf' # Card: Feature
 - 'blockType:734086c2-3e6c-4bd0-ada5-9d448a5abb03' # Feed: Grantees
-- 'blockType:c64ec6c7-0fa8-4148-bff7-82c4bc7277d0' # Feed: Jobs
-- 'blockType:012267c4-9d65-467d-be60-57e431d098ef' # Feed: Jobs Board
 - 'blockType:2d95f3a7-b880-44c6-bf42-f60b393f9d09' # Feed: News
 - 'blockType:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
 - 'blockType:70164bc9-6b6d-43ad-898e-7a4c1fb43467' # Carousel: Blog
@@ -14,5 +12,7 @@
 - 'blockType:54f700ed-cca9-47c8-b73f-71ee87ddc640' # Timeline: Single Event Per Milestone
 - 'blockType:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
 - 'blockType:a2affe46-e28a-4b3c-a0ed-da056019c50c' # Text: Accordion
+- 'blockType:da3a7987-a4a2-4942-9663-9bad7a165bf5' # Text: Body
+- 'blockType:8b05e45e-c521-496f-b601-01f99d01c19c' # Prefooter: Form
 - 'blockType:da3a7987-a4a2-4942-9663-9bad7a165bf5' # Text: Body
 - 'blockType:8b05e45e-c521-496f-b601-01f99d01c19c' # Prefooter: Form

@@ -17,22 +17,6 @@
             <h2 class="blockGeneric-heading">This is my grantees feed</h2>
         </div>
 
-    {% case 'jobs' %}
-        {% set isDynamic = content.flagDynamic %}
-        {% set entries   = content.entriesJobs.all() %}
-
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my jobs feed</h2>
-        </div>
-
-    {% case 'jobs-board' %}
-        {% set isDynamic = content.flagDynamic %}
-        {% set entries   = content.entriesJobsBoard.all() %}
-
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my jobs board feed</h2>
-        </div>
-
     {% case 'news' %}
 
         <div class="blockGeneric">

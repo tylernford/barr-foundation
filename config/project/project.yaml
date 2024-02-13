@@ -1,4 +1,4 @@
-dateModified: 1707756640
+dateModified: 1707845296
 elementSources:
   craft\elements\Asset:
     -
@@ -458,7 +458,6 @@ meta:
     3b585310-81d5-451e-8ed6-030062c40e94: 'Form: Wildcard' # Form: Wildcard
     3d8825d4-9d2f-42dd-9c7c-790dbccfafb9: 'Carousel: Grantees' # Carousel: Grantees
     3da8a9db-c68d-4f61-a9ab-5645cc1f1c07: Menu # Menu
-    3e11477d-216f-40bc-b1ab-c75a7eba26d0: 'Entries: Jobs Board' # Entries: Jobs Board
     03f8a74f-3d28-4a13-b76b-92af6c801a16: 'Text: Supporting' # Text: Supporting
     3f87cd19-1003-4802-9f60-9fb8d5062700: Body # Body
     4af5ef3d-2c87-48a7-9d3b-c568f714e378: Footer # Footer
@@ -494,7 +493,6 @@ meta:
     7a625472-c524-4977-aa9c-4dddcab5c4b1: 'Display Divider' # Display Divider
     7ab5ee46-bcab-45a8-8db3-a8737add580a: 'Jobs Board' # Jobs Board
     7b3b5f9c-101a-4bb0-b7c8-5d0f199cf1e7: 'Asset: Infographic' # Asset: Infographic
-    7b7e6d25-da0c-40b9-b3e6-07f9632c0924: 'Entries: Jobs' # Entries: Jobs
     7c4618eb-5889-426c-a0ac-a88ebbaa4f21: Blog # Blog
     7d7a4006-0ce8-41dc-be3c-acbd528d6077: Grants # Grants
     7d597c49-d3fd-4135-b2df-2710ea3dc872: 'Entry: Program Area' # Entry: Program Area
@@ -635,7 +633,6 @@ meta:
     9683f361-9130-419a-ab35-052018c72c88: 'Text: Supporting' # Text: Supporting
     9901ad2a-d15c-4337-8b16-5f395d71a734: 'Asset: Image' # Asset: Image
     10810a4a-e09d-468d-a10e-ef959a37224c: Default # Default
-    012267c4-9d65-467d-be60-57e431d098ef: 'Feed: Jobs Board' # Feed: Jobs Board
     12829f5d-463d-4f1a-b7e3-856a53ad17af: 'Contact: Website' # Contact: Website
     21101f01-7656-4ca3-b484-464876165239: Default # Default
     21576a79-7338-423c-8ac1-2313ba9441d1: 'Text: Rich (+Link)' # Text: Rich (+Link)
@@ -743,7 +740,6 @@ meta:
     c5b61d17-072a-46ba-b6ab-f91256d7ac59: 'Full Name' # Full Name
     c48e87fe-1a72-4620-a84a-7f4b88f8fd94: Label # Label
     c56d3c2d-9817-48cc-ad2b-e04cc44fb403: 'Text: Plain Heading' # Text: Plain Heading
-    c64ec6c7-0fa8-4148-bff7-82c4bc7277d0: 'Feed: Jobs' # Feed: Jobs
     c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Card: Feature' # Card: Feature
     c80dff18-6eeb-4474-8278-fdfc55a4630c: 'Text: Supporting' # Text: Supporting
     c954d828-974b-402e-92e2-3057b737e6ed: 'Primary Menu' # Primary Menu
