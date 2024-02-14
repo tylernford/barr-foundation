@@ -4,29 +4,29 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  7eaa60e6-2f9a-4ed5-b5a8-1d73899009f2:
+  71422c64-1cfd-4a0b-8a68-3b353914d61a:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News / Media
+            fieldUid: 7a165ac5-a530-403c-b25a-9c48cde57f09 # Card: Media
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 60555605-2bab-4a9e-b717-b956a4b5e717
+            uid: 30d8eb2c-0004-499c-95a0-4b4e832548da
             userCondition: null
             warning: null
             width: 100
-        name: Cards
-        uid: aee9201b-56ea-4ef5-b735-db0e1361aa6c
+        name: Media
+        uid: 7521171c-f11e-4ece-9c0b-69f2d634e703
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: feedNews
+handle: feedMedia
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -36,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Feed: News'
+name: 'Feed: Media'
 topLevel: false
