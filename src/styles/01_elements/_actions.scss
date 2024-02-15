@@ -96,6 +96,78 @@
             color: var(--color-action-secondary-hover);
             transition: var(--transition-action-in);
         }
+
+        &.action--audio {
+            background-color: var(--color-action-primary);
+            color: var(--color-action-secondary);
+
+            .action__play,
+            .action__pause {
+                margin-inline-start: var(--base-2);
+                width: 12px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .action__play {
+                justify-content: center;
+                
+                &::after {
+                    content: '';
+                    width: 10px;
+                    height: 12px;
+                    background-color: var(--color-action-secondary);
+                    clip-path: polygon(100% 50%, 0 0, 0 100%);
+                    transition: var(--transition-action-out);
+                }
+            }
+
+            .action__pause {
+                justify-content: space-around;
+
+                &::before,
+                &::after {
+                    content: '';
+                    width: 2px;
+                    height: 11px;
+                    background-color: var(--color-action-secondary);
+                    transition: var(--transition-action-out);
+                }
+            }
+
+            // Hover
+            @media (hover: hover){
+                &:hover {
+                    background-color: var(--color-action-primary-hover);
+                    color: var(--color-action-secondary-hover);
+                    // transition: var(--transition-action-in);
+
+                    .action__play {
+                        &::after {
+                            background-color: var(--color-action-secondary-hover);
+                            transition: var(--transition-action-in);
+                        }
+                    }
+        
+                    .action__pause {
+                        &::before,
+                        &::after {
+                            background-color: var(--color-action-secondary-hover);
+                            transition: var(--transition-action-in);
+                        }
+                    }
+                }
+            }
+
+            // Focus
+            &:focus-visible {
+                background-color: var(--color-action-primary-hover);
+                color: var(--color-action-secondary-hover);
+                // transition: var(--transition-action-in);
+            }
+        }
     }
 
 
@@ -196,6 +268,45 @@
         }
     }
 }
+
+@mixin showAudioIcon {
+    opacity: 1;
+    width: 12px;
+    transition: background-color var(--transition-intermediate) ease-out,
+                opacity var(--transition-intermediate) ease-out;
+}
+
+@mixin hideAudioIcon {
+    margin-inline-start: 0;
+    opacity: 0;
+    width: 0;
+    transition: background-color var(--transition) ease-in,
+                opacity var(--transition) ease-in;
+}
+
+.action--button.action--audio {
+    .action__play {
+        @include showAudioIcon;
+    }
+
+    .action__pause {
+        @include hideAudioIcon;
+    }
+}
+
+.playing {
+    .action--button.action--audio {
+        .action__play {
+            @include hideAudioIcon;
+        }
+
+        .action__pause {
+            margin-inline: calc(var(--base-2) - 1px) 1px;
+            @include showAudioIcon;
+        }
+    }
+}
+
 
 body[data-theme-color="green"] {
     .action {

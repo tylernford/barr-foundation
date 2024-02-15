@@ -239,6 +239,71 @@
 {% endmacro %}
 
 
+{# Media #}
+{% macro media(card) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {# {% import '_macros/01_elements/_details' as details %} #}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set variant = card.variant %}
+    {% set image = card.image %}
+    {% set title = card.title %}
+    {% set label = card.label %}
+    {% set videoUrl = card.videoUrl ?? card.videoUrl %}
+    {% set action = card.action ?? card.action %}
+    {% set audioSnippet = card.audioSnippet ?? card.audioSnippet %}
+
+    <div class="cardItem cardItem--media">
+        <div class="cardItem__inner">
+            {# Image #}
+            <div class="cardItem__image">
+                {{ images.image(image, '640', '3/2', '', false) }}
+
+                {# Video URL #}
+                {% if videoUrl %}
+                    <a class="cardItem__video-play" href="{{ videoUrl }}" target="_blank">
+                        <span>Watch video</span>
+                    </a>
+                {% endif %}
+            </div>
+
+            {# Header #}
+            <header class="cardItem__header">
+                <h3 class="cardItem__heading">{{ title }}</h3>
+                {% if label %}
+                    <span class="cardItem__label">{{ label }}</span>
+                {% endif %}
+            </header>
+
+            {# Content #}
+            <div class="cardItem__action">
+                {% if audioSnippet %}
+                    {% set audioID = 'audio' ~ random() %}
+
+                    <figure class="audio">
+                        <audio class="audio__src" id="{{ audioID }}" controls>
+                            <source src="{{ siteUrl }}{{ audioSnippet.url }}" type="audio/mp3">
+                        </audio>
+                    </figure>
+                {% endif %}
+
+                {# Action #}
+                {% if action and action.url %}
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: '', iconOnly: false,
+                        text: action.text, url: action.url,
+                        linkType: action.type, target: action.target
+                    } %}
+                            
+                    {{ actions.action(actionAttributes) }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+
+
 {# grant
     Called by _entry-grants-org.twig and _entry-grants-org.twig
     @param $config object
