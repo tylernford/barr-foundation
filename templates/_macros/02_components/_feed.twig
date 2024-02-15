@@ -1,48 +1,68 @@
 {# _macros/02_components/_feed.twig #}
 
 {% macro default(config) %}
-{% set variant = 'variant' in config|keys ? config.variant : '' %}
-{% set content = 'content' in config|keys ? config.content : null %}
+    {% import '_macros/02_components/_card' as cards %}
 
-{% switch variant %}
+    {% set variant = 'variant' in config|keys ? config.variant : '' %}
+    {% set content = 'content' in config|keys ? config.content : null %}
 
-    {% case 'grantees' %}
-        {% set entries   = content.entriesGrantee.all() %}
-        {% set isFeature = content.flagFeature %}
-        {% set card      = content.cardAction %}
-        {% set action    = card.actionLink %}
-        {% set external  = ( action.type == 'url' ) %}
-        {% set support   = card.textSupporting %}
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my grantees feed</h2>
-        </div>
+    {% switch variant %}
+        {% case 'grantees' %}
+            {% set entries   = content.entriesGrantee.all() %}
+            {% set isFeature = content.flagFeature %}
+            {% set card      = content.cardAction %}
+            {% set action    = card.actionLink %}
+            {% set external  = ( action.type == 'url' ) %}
+            {% set support   = card.textSupporting %}
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">This is my grantees feed</h2>
+            </div>
 
-    {% case 'news' %}
+        {% case 'news' %}
 
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my news feed</h2>
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">This is my news feed</h2>
 
-            {% set cardList = content.cardNews.all() %}
-            {% for item in cardList %}
-                {% set type = item.type %} {# entry or media #}
-                {% set card = type == 'entry' ? item.entriesWildcard.one() : item.assetMedia.one() %}
-                <div>
-                    This is my {{ type }} card.
-                </div>
-            {% endfor %}
+                {% set cardList = content.cardNews.all() %}
+                {% for item in cardList %}
+                    {% set type = item.type %} {# entry or media #}
+                    {% set card = type == 'entry' ? item.entriesWildcard.one() : item.assetMedia.one() %}
+                    <div>
+                        This is my {{ type }} card.
+                    </div>
+                {% endfor %}
 
-    {% case 'bio' %}
+        {% case 'bio' %}
 
-        {% set personType = content.cardPersonType.one() %}
+            {% set personType = content.cardPersonType.one() %}
 
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my {{ personType.title }} bio feed</h2>
-        </div>
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">This is my {{ personType.title }} bio feed</h2>
+            </div>
 
-    {% default %}
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my default card block</h2>
-        </div>
+        {% case 'media' %}
+            {% set cards = content.cardMedia %}
 
-{% endswitch %}
+            <div class="cardRow">
+                {% for card in cards %}
+                    {% set cardConfig  = {
+                        'variant': card.type,
+                        'image': card.assetImage.one(),
+                        'label': card.label,
+                        'title': card.cardTitle,
+                        'videoUrl': card.type == 'video' ? card.videoUrl : null,
+                        'action': card.type == 'video' ? card.actionLink : null,
+                        'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
+                    } %}
+
+                    {{ cards.media(cardConfig) }}
+                {% endfor %}
+            </div>
+
+        {% default %}
+            <div class="blockGeneric">
+                <h2 class="blockGeneric-heading">This is my default card block</h2>
+            </div>
+
+    {% endswitch %}
 {% endmacro %}

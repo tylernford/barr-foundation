@@ -18,6 +18,7 @@
         "svg-spritemap-webpack-plugin": "^4.5.0"
     },
     "dependencies": {
-        "a11y-dialog": "^7.5.2"
+        "a11y-dialog": "^7.5.2",
+        "plyr": "^3.7.8"
     }
 }

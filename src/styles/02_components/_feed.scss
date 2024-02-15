@@ -1,0 +1,32 @@
+/* _feed.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Feed
+  See templates/_macros/02_components/_feed.twig for markup
+------------------------------------------------------------------------ */
+
+.cardRow {
+  @include container-narrow;
+  padding-block-start: var(--base-2);
+
+  > * {
+    position: relative;
+  }
+  
+  @for $i from 1 through 21 {
+    > *:nth-child(#{$i}) {
+      z-index: #{21 - $i};
+    }
+  }
+
+  @include breakpoint(sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @include breakpoint(lg) {
+    padding-block-end: var(--base-18);
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

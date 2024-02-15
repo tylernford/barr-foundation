@@ -1,0 +1,37 @@
+{% macro videoPlayer(video, cover, variant) %}
+  {% import '_macros/01_elements/_image' as images %}
+
+  {% set videoProvider = '' %}
+  {% set videoId = '' %}
+        
+  {% if video.media.providerUrl == 'https://vimeo.com/' %}
+    {% set videoProvider = 'vimeo' %}
+    {% set videoId = video.url|replace({'https://vimeo.com/':''}) %}
+  {% elseif video.media.providerUrl == 'https://www.youtube.com/' %}
+    {% set videoProvider = 'youtube' %}
+    {% set videoId = video.url|replace({'https://www.youtube.com/watch?v=':''}) %}
+  {% endif %}
+
+  {% set coverSize = variant == 'card' ? '640' : '1024' %}
+
+  {# Wrapper #}
+  <div class="video-player{{ variant == 'card' ? ' video-player--card' }} | js-video-wrapper">
+    {# Player #}
+    <div class="js-video" data-plyr-provider="{{ videoProvider }}" data-plyr-embed-id="{{ videoId }}"></div>
+
+    {# Cover #}
+    <div class="video-player__cover">
+      {{ images.image(cover, coverSize, '3/2', '', false) }}
+    </div>
+
+    {# Play button #}
+    <button class="video-player__play-button">
+      <span class="play-button__inner">
+        <span>Play video</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-small-20"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+{% endmacro %}

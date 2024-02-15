@@ -1,26 +1,25 @@
 childBlocks:
+  - textBody
+  - textAccordion
+  - highlightQuote
+  - highlightStats
   - cardFeature
+  - feedMedia
   - feedGrantees
-  - feedJobs
-  - feedJobsBoard
   - feedNews
   - feedBio
   - carouselBlog
   - carouselFellows
   - carouselGrantees
   - carouselQuotes
-  - highlightQuote
-  - highlightStats
   - timelineSingle
   - timelineMultiple
-  - textAccordion
-  - textBody
 conditions: null
 description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  c58b90b9-a9a9-4e74-b8f5-fd73fe93b95a:
+  a9b6da5b-10b8-41f4-895b-24b501484a23:
     tabs:
       -
         elementCondition: null
