@@ -2,32 +2,25 @@
 {% import '_macros/03_modules/_featured-card-with-grantees' as featuredCardsWithGrantees %}
 
 {% for section in builder.level(1).all() %}
-    {% switch section.type %}
-    
-        {% case 'sectionBlock' %}
-            {% set sectionTitle = section.sectionAnchor.sectionBookmarkTitle|slugify %}
-            {% set sectionBlocks = section.children.all() %}
+    {% set sectionTitle = section.sectionAnchor.sectionBookmarkTitle|slugify %}
+    {% set sectionBlocks = section.children.all() %}
 
-            <section id="{{ sectionTitle }}">
-                {# Section blocks #}
-                {% for block in sectionBlocks %}
-                    {% set configs  = {
-                        'featuredCardConfig': {
-                            'content': block,
-                            'variant': 'feature',
-                            'reversed': true
-                        },
-                        'grantees': {
-                            'grantees': block.entriesGrantee,
-                            'feature': block.flagFeature,
-                            'action': block.cardAction
-                        }
-                    } %}
-                    {% include "_partials/_modules/_featured-card-with-grantees.twig" with { config: configs } only %}
-                {% endfor %}
-            </section>
-
-        {% case 'prefooterForm' %}
-
-    {% endswitch %}
+    <section id="{{ sectionTitle }}">
+        {# Section blocks #}
+        {% for block in sectionBlocks %}
+            {% set configs  = {
+                'featuredCardConfig': {
+                    'content': block,
+                    'variant': 'feature',
+                    'reversed': true
+                },
+                'grantees': {
+                    'grantees': block.entriesGrantee,
+                    'feature': block.flagFeature,
+                    'action': block.cardAction
+                }
+            } %}
+            {% include "_partials/_modules/_featured-card-with-grantees.twig" with { config: configs } only %}
+        {% endfor %}
+    </section>
 {% endfor %}
