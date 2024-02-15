@@ -2,6 +2,7 @@
 {% import '_macros/02_components/_assets' as assets %}
 
 {% for section in builder.level(1).all() %}
+{% if section.type == 'sectionBlock' %}
     {% set sectionName = section.dividerSection.sectionName %}
     {% set displaySectionTitle = section.dividerSection.displayDivider %}
     {% set sectionBlocks = section.children %}
@@ -39,4 +40,5 @@
 
         {% endfor %}
     </section>
+{% endif %}
 {% endfor %}
