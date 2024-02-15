@@ -7,13 +7,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 57a475da-bd34-46ee-8693-6055079fb616 # Asset: Image(s) or Video(s)
+            fieldUid: 774e3528-0a43-48b1-8c84-e3e8158bc0c2 # Asset: Image(s) or Video(s)
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1a51490f-3a6a-4dbb-b3d3-ce456d5bb9b1
+            uid: ee0d9545-2044-4c23-9b41-1c03d2f3e11f
             userCondition: null
             warning: null
             width: 50
@@ -29,6 +29,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
+          -
+            elementCondition: null
+            fieldUid: 57a475da-bd34-46ee-8693-6055079fb616 # Asset: Image(s) or Video(s)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a51490f-3a6a-4dbb-b3d3-ce456d5bb9b1
+            userCondition: null
+            warning: null
+            width: 25
         name: Content
         uid: b0c86955-177e-4978-a9c5-837032ebdfc2
         userCondition: null
@@ -110,6 +122,37 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  774e3528-0a43-48b1-8c84-e3e8158bc0c2: # Asset: Image(s) or Video(s)
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: assetWildcards
+    instructions: 'Add 1 or 2 images and/or videos.'
+    name: 'Asset: Image(s) or Video(s)'
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 1099909774
+      columns:
+        __assoc__:
+          -
+            - ad21cdac-d8ba-49d3-85ec-248e39058216 # Media Assets
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_45_assetwildcards}}'
+      fieldLayout: table
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\supertable\fields\SuperTableField
 handle: media
 name: Media
 sortOrder: 4

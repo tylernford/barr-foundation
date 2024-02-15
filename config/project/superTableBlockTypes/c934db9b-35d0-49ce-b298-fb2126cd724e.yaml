@@ -1,0 +1,41 @@
+changedFieldIndicator: 211936040
+field: 774e3528-0a43-48b1-8c84-e3e8158bc0c2 # Asset: Image(s) or Video(s)
+fieldLayouts:
+  2c8de2b0-f6ec-4393-b98a-ad8bc30ccecf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ad21cdac-d8ba-49d3-85ec-248e39058216 # Media Assets
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0bcecf8-7729-43b1-a066-807039e29f64
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 566ad1c8-d6ae-428f-8d3e-03a985b63e74
+        userCondition: null
+fields:
+  ad21cdac-d8ba-49d3-85ec-248e39058216: # Media Assets
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: mediaAssets
+    instructions: null
+    name: 'Media Assets'
+    searchable: false
+    settings:
+      contentTable: '{{%matrixcontent_mediaassets}}'
+      maxBlocks: 2
+      minBlocks: 1
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix

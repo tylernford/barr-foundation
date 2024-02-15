@@ -1,0 +1,158 @@
+field: ad21cdac-d8ba-49d3-85ec-248e39058216 # Media Assets
+fieldLayouts:
+  6b1386d9-1e12-4457-8e84-05bd8d1e52aa:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d1f322ee-1b5c-4849-8790-1c1944d77c57 # Video
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e7d6a432-b24e-486b-aa37-20b4a01c5de2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 858957f6-d821-4537-bec3-fb62684c9531 # Video Cover
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 845762cf-d948-4cb6-a301-6fbacc019cd9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bf1977eb-0974-47fb-804c-cc8eb50760d9 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca1e2792-5d6e-4106-bfcb-000aafda1321
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f1e1b4db-27c9-486f-8ecf-0f64ac74b825 # Byline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 96b7f3a9-3cdd-481a-b378-bae833d40dc2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8b3e64f4-d17e-475b-b09e-1df49fd034f3
+        userCondition: null
+fields:
+  858957f6-d821-4537-bec3-fb62684c9531: # Video Cover
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: videoCover
+    instructions: null
+    name: 'Video Cover'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Select an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  bf1977eb-0974-47fb-804c-cc8eb50760d9: # Caption
+    columnSuffix: qdamjhag
+    contentColumnType: text
+    fieldGroup: null
+    handle: videoCaption
+    instructions: null
+    name: Caption
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
+      columnType: text
+      defaultTransform: null
+      enableSourceEditingForNonAdmins: false
+      purifierConfig: null
+      purifyHtml: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      showWordCount: false
+      wordLimit: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+  d1f322ee-1b5c-4849-8790-1c1944d77c57: # Video
+    columnSuffix: ckfddbvr
+    contentColumnType: text
+    fieldGroup: null
+    handle: video
+    instructions: 'Enter the URL to the Video. E.g. _https://vimeo.com/869219144_'
+    name: Video
+    searchable: false
+    settings:
+      url: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: wrav\oembed\fields\OembedField
+  f1e1b4db-27c9-486f-8ecf-0f64ac74b825: # Byline
+    columnSuffix: kqmeujns
+    contentColumnType: text
+    fieldGroup: null
+    handle: videoByline
+    instructions: null
+    name: Byline
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: video
+name: Video
+sortOrder: 2

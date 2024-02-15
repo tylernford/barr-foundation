@@ -226,10 +226,6 @@
 
           figcaption {
             padding-inline: 0;
-
-            p {
-              max-width: 40em;
-            }
           }
         }
       }
@@ -239,12 +235,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: var(--base-3);
-
-        figcaption {
-          p {
-            max-width: 40em;
-          }
-        }
       }
     }
   }
