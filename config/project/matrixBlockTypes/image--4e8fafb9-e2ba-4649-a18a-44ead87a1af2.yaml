@@ -1,0 +1,65 @@
+field: ad21cdac-d8ba-49d3-85ec-248e39058216 # Media Assets
+fieldLayouts:
+  a233b66d-2a84-4698-923b-c23a4f71e11f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: bffbfe7e-eb55-4525-aafd-4b156d04715d # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb8f7249-74ea-48d9-868d-bfa79ec846dc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6fe97720-5445-45d9-9cfe-ff41793a2950
+        userCondition: null
+fields:
+  bffbfe7e-eb55-4525-aafd-4b156d04715d: # Image
+    columnSuffix: wftpysrq
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Be sure to double-click the thumbnail preview to add Alt Text, Caption and Byline.'
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Select an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: image
+name: Image
+sortOrder: 1

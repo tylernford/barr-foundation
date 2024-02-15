@@ -4,6 +4,7 @@
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_image' as images %}
     {% import '_macros/02_components/_accordion' as accordion %}
+    {% import '_macros/02_components/_video-player' as videoPlayers %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
@@ -31,18 +32,37 @@
                             </div>
                         
                         {% case 'media' %}
-                            {% set images = item.assetWildcard.all() %}
+                            {% set mediaAssets = item.assetWildcards.mediaAssets.all() %}
                             {% set width = item.styleWidth %}
 
-                            {% set imageCount = images|length %}
-                            <div class="blockBody__media" data-{{ imageCount }}-up="true"{{ imageCount == 1 and width == '100' ? ' data-span=true' }}>
-                                {% for image in images %}
-                                    {% set caption = image.textCaption %}
-                                    {% set byline  = image.textByline %}
-                                    {% set byline  = byline ? '<p>' ~ byline ~ '</p>' %}
+                            {% set assetCount = mediaAssets|length %}
+                            <div class="blockBody__media" data-{{ assetCount }}-up="true"{{ assetCount == 1 and width == '100' ? ' data-span=true' }}>
+                                {% for mediaAsset in mediaAssets %}
+                                    {% set assetType = mediaAsset.type %}
+                                    {% set caption = '' %}
+                                    {% set byline = '' %}
 
                                     <figure>
-                                        {{ images.image(image, '912', '', '', false) }}
+                                        {% if assetType == 'image' %}
+                                            {% set image = mediaAsset.image.one() %}
+                                            {% set caption = image.textCaption %}
+                                            {% set byline  = image.textByline %}
+                                            {% set byline  = byline ? '<p>' ~ byline ~ '</p>' %}
+
+                                            {{ images.image(image, '912', '', '', false) }}
+                                        {% else %}
+                                            {% set video = mediaAsset %}
+                                            {% set url = video.video %}
+                                            {% set cover = video.videoCover.one %}
+                                            {% set caption = video.videoCaption %}
+                                            {% set byline  = video.videoByline %}
+                                            {% set byline  = byline ? '<p>' ~ byline ~ '</p>' %}
+
+                                            <div class="video__video-container">
+                                                {{ videoPlayers.videoPlayer(url, cover, '')}}
+                                            </div>
+                                        {% endif %}
+
                                         {% if caption or byline %}
                                             <figcaption>
                                                 {{ caption }}
@@ -51,8 +71,6 @@
                                         {% endif %}
                                     </figure>
                                 {% endfor %}
-                            {# {{ width }} #}
-                                {# {{ assetCount }} #}
                             </div>
 
                         {% case 'action' %}

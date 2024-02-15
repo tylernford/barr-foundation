@@ -1,4 +1,4 @@
-dateModified: 1708029307
+dateModified: 1708033046
 elementSources:
   craft\elements\Asset:
     -
@@ -466,6 +466,7 @@ meta:
     4d548d8e-1537-4c78-9207-048346c5eda8: Research # Research
     4d753cb0-1ca4-4b73-aecc-957826dee5de: 'Card: Group' # Card: Group
     4d994633-7c38-4213-bd35-2b0d8966dff5: 'Page Builder: People' # Page Builder: People
+    4e8fafb9-e2ba-4649-a18a-44ead87a1af2: Image # Image
     4e139296-f9eb-4d48-8374-42a79d46413b: 'Tags: Import Primary' # Tags: Import Primary
     4eb30fbf-3647-444f-ba73-29ebb5b12477: 'Card: Team' # Card: Team
     04fbe62b-bcae-44dd-8023-e56efe203cb3: 'Action: URL' # Action: URL
@@ -603,6 +604,7 @@ meta:
     747ce413-c373-42ad-92b4-bff1e0c3ab13: Item # Item
     759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
     766d1cbd-4251-4b9d-9378-bf9d345ae492: Openers # Openers
+    774e3528-0a43-48b1-8c84-e3e8158bc0c2: 'Asset: Image(s) or Video(s)' # Asset: Image(s) or Video(s)
     806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     0814b33a-e40d-4c64-8fa1-aabdfe035850: 'Navigation: Footer' # Navigation: Footer
     863f5463-c410-4c19-9ef5-d257ba1721a6: 'Card: Action' # Card: Action
@@ -673,6 +675,7 @@ meta:
     625571b0-68f3-4147-b8d6-9cc70d2f47a2: 'Text: Quote' # Text: Quote
     734086c2-3e6c-4bd0-ada5-9d448a5abb03: 'Feed: Grantees' # Feed: Grantees
     752595b1-5891-42b2-9b26-2bf61fa1a512: Tutorials # Tutorials
+    858957f6-d821-4537-bec3-fb62684c9531: 'Video Cover' # Video Cover
     959502d0-4843-41a5-b295-1ff5b9f3c643: 'Person Type' # Person Type
     976043fe-a8c0-4179-bdbf-269464d0cbb8: Default # Default
     1445186d-7111-49b1-a767-9cda00fa2fb9: Label # Label
@@ -712,6 +715,7 @@ meta:
     ab12a67b-9af1-4f2c-bc53-cbedda60dbd1: 'Budget/Strategy/Portfolio: Import' # Budget/Strategy/Portfolio: Import
     ab769ba5-f97c-40d6-9066-c07ddfd56a2f: Action # Action
     ace08f06-16e5-477e-b91c-f28e50048f67: Eyebrow # Eyebrow
+    ad21cdac-d8ba-49d3-85ec-248e39058216: 'Media Assets' # Media Assets
     ae2b1b26-277c-4619-ab71-b564ec89459b: 'Text: Supporting' # Text: Supporting
     af76ec93-a5f2-4f9b-8b96-eb3fbf19baef: 'Text: Body Options' # Text: Body Options
     b1d50c66-833c-483e-97be-54b627a13e87: 'Text: Heading' # Text: Heading
@@ -732,6 +736,7 @@ meta:
     b665bd32-c8e5-4f37-931c-27fd44e7b732: Program # Program
     b23283d0-0432-492a-85a7-16c74858b6cc: Default # Default
     b563972b-64ed-4a88-b6c2-92284d00d1cb: 'Text: Body' # Text: Body
+    b3143993-b6d1-4f71-b577-74bf41f94320: Video # Video
     b5772510-16ec-45a7-932b-e6d3aff11a84: 'Action: Download' # Action: Download
     bb2bec9e-b4d9-415f-af34-e16a1b9c2500: Default # Default
     bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91: 'Text: Basic' # Text: Basic
@@ -741,6 +746,8 @@ meta:
     bde1031a-b7c0-498e-94e4-792ff7cf269f: __blank__ # __blank__
     be780dcf-a746-4d47-ab45-5d3ab50366e7: 'Style: Alignment' # Style: Alignment
     bf120ab6-d32a-4470-b0df-a0aa86834445: 'Text: Heading' # Text: Heading
+    bf1977eb-0974-47fb-804c-cc8eb50760d9: Caption # Caption
+    bffbfe7e-eb55-4525-aafd-4b156d04715d: Image # Image
     c0b3adea-77f8-4182-b17d-7209cb415314: Description # Description
     c01be3b6-23aa-499f-9356-12f0eb889676: Video # Video
     c1f9543f-7b4c-4544-803c-a1a02aa27a1f: 'Text: Name' # Text: Name
@@ -770,6 +777,7 @@ meta:
     cfb7f673-e726-4e10-b627-eb563177ea3d: 'Style: Width' # Style: Width
     d07afb10-c7ee-417d-8969-44060e0f3bc6: 'Carousel: Research' # Carousel: Research
     d1baa3d0-c525-4a33-bfc6-6851a329b88d: Image # Image
+    d1f322ee-1b5c-4849-8790-1c1944d77c57: Video # Video
     d1fb8e0a-7a87-4586-994b-e8ca07e4a9d9: Year # Year
     d2fe005a-7f77-461b-bb67-a1413fab5aa2: Team # Team
     d3b98f80-1cee-4849-a97b-9db551b73c5d: 'Asset: Image' # Asset: Image
@@ -821,6 +829,7 @@ meta:
     ee292b33-f1a3-4fd6-9a25-9da4f1ef312a: 'Action: All' # Action: All
     ef35002b-b3dd-4be9-b1a6-9b34dd341c37: 'Highlight: Single Event Timeline' # Highlight: Single Event Timeline
     f04ce99a-aa20-4ed0-9e83-40f232197b48: Item # Item
+    f1e1b4db-27c9-486f-8ecf-0f64ac74b825: Byline # Byline
     f4adca94-3a26-4dd3-a3d4-c816fe8e5580: Grantees # Grantees
     f4cef7c4-9c10-4b2d-aecc-afe52d207d0d: 'Section Anchor' # Section Anchor
     f4fa6758-d622-4625-ac95-0d8da3f09109: Title # Title
