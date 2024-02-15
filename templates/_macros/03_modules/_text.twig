@@ -32,7 +32,7 @@
                             </div>
                         
                         {% case 'media' %}
-                            {% set mediaAssets = item.assetWildcards.mediaAssets.all() %}
+                            {% set mediaAssets = item.assetWildcard.mediaAssets.all() %}
                             {% set width = item.styleWidth %}
 
                             {% set assetCount = mediaAssets|length %}

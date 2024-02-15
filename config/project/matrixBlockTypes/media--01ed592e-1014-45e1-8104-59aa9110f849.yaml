@@ -73,13 +73,13 @@ fields:
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: assetWildcards
+    handle: assetWildcard
     instructions: 'Add 1 or 2 images and/or videos.'
     name: 'Asset: Image(s) or Video(s)'
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1917173180
+      changedFieldIndicator: 1570481066
       columns:
         __assoc__:
           -
@@ -89,7 +89,7 @@ fields:
                 -
                   - width
                   - ''
-      contentTable: '{{%stc_45_assetwildcards}}'
+      contentTable: '{{%stc_45_assetwildcard}}'
       fieldLayout: table
       maxRows: null
       minRows: null
