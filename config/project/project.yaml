@@ -1,4 +1,4 @@
-dateModified: 1708033046
+dateModified: 1708035765
 elementSources:
   craft\elements\Asset:
     -
@@ -551,7 +551,6 @@ meta:
     54f700ed-cca9-47c8-b73f-71ee87ddc640: 'Timeline: Single Event Per Milestone' # Timeline: Single Event Per Milestone
     55d6aaf4-ac71-4f0e-9f25-f00a07154e2b: Longform # Longform
     56d418f7-f841-4ac5-885d-f7d8f06cac37: 'Featured Strategy and Grantees' # Featured Strategy and Grantees
-    57a475da-bd34-46ee-8693-6055079fb616: 'Asset: Image(s) or Video(s)' # Asset: Image(s) or Video(s)
     57f1f03a-6ce0-4203-8800-c42f4ea916fa: Default # Default
     58ac2322-7471-4ce9-9977-d2a0f017db86: 'Authors: Import All' # Authors: Import All
     65ee2a7e-b332-47b7-88bf-63aa41aaa155: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas

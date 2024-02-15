@@ -29,18 +29,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            fieldUid: 57a475da-bd34-46ee-8693-6055079fb616 # Asset: Image(s) or Video(s)
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1a51490f-3a6a-4dbb-b3d3-ce456d5bb9b1
-            userCondition: null
-            warning: null
-            width: 25
         name: Content
         uid: b0c86955-177e-4978-a9c5-837032ebdfc2
         userCondition: null
@@ -81,47 +69,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  57a475da-bd34-46ee-8693-6055079fb616: # Asset: Image(s) or Video(s)
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: assetWildcard
-    instructions: 'Select or upload 1 or 2 images and/or videos. Be sure to double-click the thumbnail preview to add Alt Text, Caption and Byline.'
-    name: 'Asset: Image(s) or Video(s)'
-    searchable: true
-    settings:
-      allowSelfRelations: false
-      allowSubfolders: false
-      allowUploads: true
-      allowedKinds:
-        - image
-        - video
-      branchLimit: null
-      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: 2
-      minRelations: null
-      previewMode: full
-      restrictFiles: true
-      restrictLocation: false
-      restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      restrictedLocationSubpath: null
-      selectionLabel: 'Add an image or video'
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      sources:
-        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-        - 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: large
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
   774e3528-0a43-48b1-8c84-e3e8158bc0c2: # Asset: Image(s) or Video(s)
     columnSuffix: null
     contentColumnType: string
@@ -132,7 +79,7 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 1099909774
+      changedFieldIndicator: 1917173180
       columns:
         __assoc__:
           -
