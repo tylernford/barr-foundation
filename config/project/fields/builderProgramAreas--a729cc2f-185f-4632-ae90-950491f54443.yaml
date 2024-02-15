@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 114e6010-b1c0-4faa-837c-c7bbe1e0daae # Page Builders
 handle: builderProgramAreas
-instructions: "1. Add as many or as few Section Blocks as needed; drag & drop to rearrange. _Hint:_ To more easily rearrange Section Blocks, collapse the Section Block by clicking its cog icon (top right).\r\n2. Within each Section Block, add as many or as few Component Blocks as needed; drag & drop to rearrange. Component Blocks are also collapsible.\r\n\r\n_Section & Component Blocks will appear on the site in the order in which they appear here; however, if adding a Prefooter Block, it will always display below all Sections._\r\n\r\n_Don't forget to SAVE your work!_"
+instructions: "1. Add as many or as few Section Blocks as needed; drag & drop to rearrange. _Hint:_ To more easily rearrange Section Blocks, collapse the Section Block by clicking its cog icon (top right).\r\n2. Within each Section Block, add as many or as few Component Blocks as needed; drag & drop to rearrange. Component Blocks are also collapsible.\r\n\r\n_Section & Component Blocks will appear on the site in the order in which they appear here_\r\n\r\n_Don't forget to SAVE your work!_"
 name: 'Page Builder: Program Areas'
 searchable: true
 settings:
