@@ -19,6 +19,6 @@
     },
     "dependencies": {
         "a11y-dialog": "^7.5.2",
-        "playr": "^1.0.3"
+        "plyr": "^3.7.8"
     }
 }

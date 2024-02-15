@@ -1,5 +1,3 @@
-const { render } = require("sass");
-
 class MediaPlayer {
   constructor(player, options) {
     this.player = player;
@@ -119,8 +117,7 @@ function renderAudioPlayers() {
   for (let audioPlayer of audioPlayers) {
     // Render player
     player = new MediaPlayer(audioPlayer);
-    player.render({
-    });
+    player.render();
   }
 }
 

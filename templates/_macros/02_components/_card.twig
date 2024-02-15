@@ -242,8 +242,8 @@
 {# Media #}
 {% macro media(card) %}
     {% import '_macros/01_elements/_actions' as actions %}
-    {# {% import '_macros/01_elements/_details' as details %} #}
     {% import '_macros/01_elements/_image' as images %}
+    {% import '_macros/02_components/_video-player' as videoPlayers %}
 
     {% set variant = card.variant %}
     {% set image = card.image %}
@@ -256,14 +256,13 @@
     <div class="cardItem cardItem--media">
         <div class="cardItem__inner">
             {# Image #}
-            <div class="cardItem__image">
-                {{ images.image(image, '640', '3/2', '', false) }}
-
-                {# Video URL #}
+            <div class="cardItem__media">
                 {% if videoUrl %}
-                    <a class="cardItem__video-play" href="{{ videoUrl }}" target="_blank">
-                        <span>Watch video</span>
-                    </a>
+                    <div class="video__video-container">
+                        {{ videoPlayers.videoPlayer(videoUrl, image, 'card')}}
+                    </div>
+                {% else %}
+                    {{ images.image(image, '640', '3/2', '', false) }}
                 {% endif %}
             </div>
 

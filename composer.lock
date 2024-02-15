@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b9c2b1809ea57ae503d90e839dfdf62",
+    "content-hash": "cfcb041fc6fe88fbfe64b8662311c960",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3546,11 +3546,11 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.72.1",
+            "version": "2.72.3",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
-                "reference": "2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/0c6fd108360c562f6e4fd1dedb8233b423e91c83",
+                "reference": "0c6fd108360c562f6e4fd1dedb8233b423e91c83",
                 "shasum": ""
             },
             "require": {
@@ -3611,7 +3611,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2023-12-08T23:47:49+00:00"
+            "time": "2024-01-25T10:35:09+00:00"
         },
         {
             "name": "nystudio107/craft-code-editor",
@@ -6584,11 +6584,11 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.28.0",
+            "version": "v1.29.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/42292d99c55abe617799667f454222c54c60e229",
-                "reference": "42292d99c55abe617799667f454222c54c60e229",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
+                "reference": "9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
                 "shasum": ""
             },
             "require": {
@@ -6602,9 +6602,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -6640,7 +6637,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2023-07-28T09:04:16+00:00"
+            "time": "2024-01-29T20:11:03+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -6753,11 +6750,11 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.28.0",
+            "version": "v1.29.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
-                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
+                "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
                 "shasum": ""
             },
             "require": {
@@ -6765,9 +6762,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -6809,7 +6803,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2023-01-26T09:26:14+00:00"
+            "time": "2024-01-29T20:11:03+00:00"
         },
         {
             "name": "symfony/polyfill-php81",
@@ -8381,6 +8375,69 @@
             "time": "2023-07-05T14:23:37+00:00"
         },
         {
+            "name": "wrav/oembed",
+            "version": "3.0.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wrav/oembed/zipball/587837b54446e18cf3827e430e8c7e4ef85ab982",
+                "reference": "587837b54446e18cf3827e430e8c7e4ef85ab982",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0",
+                "embed/embed": "^v4.4",
+                "ext-dom": "*"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "oEmbed",
+                "handle": "oembed",
+                "schemaVersion": "1.0.1",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/wrav/oembed/master/CHANGELOG.md",
+                "components": {
+                    "oembedService": "wrav\\oembed\\services\\OembedService"
+                },
+                "class": "wrav\\oembed\\Oembed"
+            },
+            "autoload": {
+                "psr-4": {
+                    "wrav\\oembed\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "reganlawton",
+                    "homepage": "https://github.com/reganlawton"
+                }
+            ],
+            "description": "A simple plugin to extract media information from websites, like youtube videos, twitter statuses or blog articles.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "facebook",
+                "gdpr",
+                "graphql",
+                "iframe",
+                "instagram",
+                "oembed",
+                "twitter",
+                "vimeo",
+                "youtube"
+            ],
+            "support": {
+                "docs": "https://github.com/wrav/oembed/blob/master/README.md",
+                "issues": "https://github.com/wrav/oembed/issues"
+            },
+            "time": "2023-12-15T04:45:49+00:00"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "2.0.48.1",
             "dist": {
@@ -9041,5 +9098,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

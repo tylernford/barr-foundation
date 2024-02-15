@@ -1,4 +1,4 @@
-dateModified: 1707862448
+dateModified: 1708028539
 elementSources:
   craft\elements\Asset:
     -
@@ -880,6 +880,10 @@ plugins:
     enabled: true
     licenseKey: HOIBFWABBHQUM6AGWJCHRWYS
     schemaVersion: 4.0.0
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
   redactor:
     edition: standard
     enabled: true

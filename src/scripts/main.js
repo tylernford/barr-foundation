@@ -7,6 +7,7 @@ import './components/audio';
 import './components/accordion';
 import './components/footerForm';
 import './components/navigation';
+import './components/video';
 
 // Component Imports
 // Uncomment as needed

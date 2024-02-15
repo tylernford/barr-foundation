@@ -154,19 +154,17 @@ fields:
     type: craft\fields\PlainText
   81295c3f-2d1d-4d12-bbc8-1190f821dc99: # Video URL
     columnSuffix: cfznsnsv
-    contentColumnType: string(255)
+    contentColumnType: text
     fieldGroup: null
     handle: videoUrl
-    instructions: 'URL to the Video.'
+    instructions: 'Enter the URL to the Video. E.g. _https://vimeo.com/869219144_'
     name: 'Video URL'
     searchable: false
     settings:
-      maxLength: 255
-      types:
-        - url
+      url: ''
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\Url
+    type: wrav\oembed\fields\OembedField
   c5aa7bf9-1e81-4fe0-8bcc-e1a6de07ab10: # Asset: Cover Image
     columnSuffix: inozjyzs
     contentColumnType: string

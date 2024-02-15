@@ -573,12 +573,12 @@
       flex-direction: column;
     }
 
-    .cardItem__image {
+    .cardItem__media {
       margin-block-end: var(--base-5);
       position: relative;
 
       .image {
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 16 / 9;
         display: block;
         position: relative;
         overflow: hidden;
