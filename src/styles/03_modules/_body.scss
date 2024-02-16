@@ -151,8 +151,15 @@
 
       // Full width
       &[data-span=true] {
+
         .image {
           aspect-ratio: 8 / 5;
+        }
+
+        .video-player__cover {
+          .image {
+            aspect-ratio: 16 / 9;
+          }
         }
 
         figcaption {
