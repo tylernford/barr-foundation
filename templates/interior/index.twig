@@ -75,4 +75,19 @@ Interior template
 
         {{ feeds.feed(feedConfig) }}
     {% endif %}
+
+    {% if entry.textPlainHeading or entry.textDescription %}
+        <section class="container">
+            <div class="blockGeneric">
+                {% if entry.textPlainHeading %}
+                    <h2 class="blockGeneric-heading">
+                        {{ entry.textPlainHeading }}
+                    </h2>
+                {% endif %}
+                {% if entry.textDescription %}
+                    {{ entry.textDescription }}
+                {% endif %}
+            </div>
+        </section>
+    {% endif %}
 {% endblock %}
