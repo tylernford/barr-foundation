@@ -162,7 +162,7 @@ permissions:
   - 'neo-createblocks:7ff09a87-131e-4e78-b7d0-e6c5bc0063a2' # Carousel: Fellows
   - 'neo-createblocks:84d9c016-7a13-4154-ade3-c31769242af2' # Section
   - 'neo-createblocks:88778e50-4f0a-405e-ad81-55383a2ba560' # Highlight: Stat
-  - 'neo-createblocks:8b05e45e-c521-496f-b601-01f99d01c19c' # Prefooter: Form
+  - 'neo-createblocks:8b05e45e-c521-496f-b601-01f99d01c19c'
   - 'neo-createblocks:9e812e15-e3ff-49e7-b422-5a263a6034ce' # Tabs: Program Finder
   - 'neo-createblocks:a2affe46-e28a-4b3c-a0ed-da056019c50c' # Text: Accordion
   - 'neo-createblocks:a71a008e-0906-4398-a1eb-52b3f42a5461' # Card: Team
@@ -207,7 +207,7 @@ permissions:
   - 'neo-deleteblocks:7ff09a87-131e-4e78-b7d0-e6c5bc0063a2' # Carousel: Fellows
   - 'neo-deleteblocks:84d9c016-7a13-4154-ade3-c31769242af2' # Section
   - 'neo-deleteblocks:88778e50-4f0a-405e-ad81-55383a2ba560' # Highlight: Stat
-  - 'neo-deleteblocks:8b05e45e-c521-496f-b601-01f99d01c19c' # Prefooter: Form
+  - 'neo-deleteblocks:8b05e45e-c521-496f-b601-01f99d01c19c'
   - 'neo-deleteblocks:9e812e15-e3ff-49e7-b422-5a263a6034ce' # Tabs: Program Finder
   - 'neo-deleteblocks:a2affe46-e28a-4b3c-a0ed-da056019c50c' # Text: Accordion
   - 'neo-deleteblocks:a71a008e-0906-4398-a1eb-52b3f42a5461' # Card: Team
@@ -252,7 +252,7 @@ permissions:
   - 'neo-editblocks:7ff09a87-131e-4e78-b7d0-e6c5bc0063a2' # Carousel: Fellows
   - 'neo-editblocks:84d9c016-7a13-4154-ade3-c31769242af2' # Section
   - 'neo-editblocks:88778e50-4f0a-405e-ad81-55383a2ba560' # Highlight: Stat
-  - 'neo-editblocks:8b05e45e-c521-496f-b601-01f99d01c19c' # Prefooter: Form
+  - 'neo-editblocks:8b05e45e-c521-496f-b601-01f99d01c19c'
   - 'neo-editblocks:9e812e15-e3ff-49e7-b422-5a263a6034ce' # Tabs: Program Finder
   - 'neo-editblocks:a2affe46-e28a-4b3c-a0ed-da056019c50c' # Text: Accordion
   - 'neo-editblocks:a71a008e-0906-4398-a1eb-52b3f42a5461' # Card: Team

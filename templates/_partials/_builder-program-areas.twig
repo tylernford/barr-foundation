@@ -2,7 +2,6 @@
 {% import '_macros/03_modules/_featured-card-with-grantees' as featuredCardsWithGrantees %}
 
 {% for section in builder.level(1).all() %}
-{% if section.type == 'sectionBlock' %}
     {% set sectionTitle = section.sectionAnchor.sectionBookmarkTitle|slugify %}
     {% set sectionBlocks = section.children.all() %}
 
@@ -24,5 +23,4 @@
             {% include "_partials/_modules/_featured-card-with-grantees.twig" with { config: configs } only %}
         {% endfor %}
     </section>
-{% endif %}
 {% endfor %}
