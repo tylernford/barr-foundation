@@ -110,6 +110,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: 'Prompt the form with a description.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5750f016-97ed-4c25-9114-1f11058fb714
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 3b585310-81d5-451e-8ed6-030062c40e94 # Form: Wildcard
             instructions: null
             label: null
