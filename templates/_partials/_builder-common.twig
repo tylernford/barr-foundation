@@ -7,7 +7,7 @@
     {% set displaySectionTitle = section.dividerSection.displayDivider %}
     {% set sectionBlocks = section.children %}
 
-    <section id="{{ sectionName|slugify }}">
+    <section class="pageSection" id="{{ sectionName|slugify }}">
         {# Section title #}
         {% set sectionTitleAttributes = {
             level: 'h2',
