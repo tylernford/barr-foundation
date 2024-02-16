@@ -81,6 +81,48 @@ fieldLayouts:
         name: Content
         uid: 7c8dcf67-2bea-4f80-9169-a767ea3708ee
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1ae99391-4060-478a-b225-fc7156964232 # Feed: Team
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95928d35-f090-430a-9376-b24d388b745c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
+            instructions: 'e.g. "Inquiries"'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9d191c30-6ec9-47b6-a5d2-df2a9ce35aca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3b585310-81d5-451e-8ed6-030062c40e94 # Form: Wildcard
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 207f4626-5660-4383-8d7a-e728de29a5c0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Pre-Footer
+        uid: 9e86a062-44b3-458b-bbc2-717bb51e5330
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

@@ -3,3 +3,5 @@ listPlugin: List
 name: 'Text: Italic'
 toolbar:
   - italic
+  - '|'
+  - sourceEditing

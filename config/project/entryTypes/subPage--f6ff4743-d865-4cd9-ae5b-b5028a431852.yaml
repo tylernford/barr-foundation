@@ -96,6 +96,30 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
+            instructions: 'e.g. "Inquiries"'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 005babd6-5275-429b-a4bf-58ab81eaaaef
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3b585310-81d5-451e-8ed6-030062c40e94 # Form: Wildcard
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 809e98d5-6310-45c9-be18-0374a93ee099
+            userCondition: null
+            warning: null
+            width: 100
         name: Pre-Footer
         uid: 8679aa39-1b20-4359-a20f-5e8eef5e5dca
         userCondition: null

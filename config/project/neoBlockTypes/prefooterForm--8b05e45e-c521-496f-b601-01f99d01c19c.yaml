@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  d27d2279-360b-433f-a3d9-c2ce69030712:
+  199a217f-4220-4972-8b06-d221e0c0545c:
     tabs:
       -
         elementCondition: null
@@ -83,4 +83,4 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Prefooter: Form'
-topLevel: false
+topLevel: true
