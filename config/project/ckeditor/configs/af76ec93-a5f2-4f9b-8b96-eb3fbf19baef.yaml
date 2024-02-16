@@ -10,3 +10,5 @@ toolbar:
   - bulletedList
   - numberedList
   - link
+  - '|'
+  - sourceEditing
