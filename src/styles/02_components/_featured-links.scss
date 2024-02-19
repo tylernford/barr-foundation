@@ -1,0 +1,104 @@
+/* _featured-links.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Featured Links
+  See templates/_macros/02_components/_featured-links.twig for markup
+------------------------------------------------------------------------ */
+
+.featuredLinks {
+  --color-links--primary: var(--color-teal-100);
+  --color-links--secondary: var(--color-teal-150);
+
+  &[data-is-reversed="true"] {
+    --color-links--primary: var(--color-teal-25);
+  }
+}
+
+[data-theme-color="green"] {
+  .featuredLinks {
+    --color-links--primary: var(--color-program-green-100);
+    --color-links--secondary: var(--color-program-green-150);
+  }
+}
+
+[data-theme-color="plum"] {
+  .featuredLinks {
+    --color-links--primary: var(--color-program-plum-100);
+    --color-links--secondary: var(--color-program-plum-150);
+  }
+}
+
+[data-theme-color="marigold"] {
+  .featuredLinks {
+    --color-links--primary: var(--color-program-marigold-100);
+    --color-links--secondary: var(--color-program-marigold-150);
+  }
+}
+
+
+.featuredLinks {
+  // Layout
+  @include container-narrow;
+  padding-block: var(--base-6);
+  display: grid;
+  gap: 0 var(--base-5);
+
+  @include breakpoint(md) {
+    padding-block: var(--base-9);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(lg) {
+    gap: 0 var(--base-6);
+  }
+
+  // Trigger
+  .featuredLinks__link-item {
+    .link-item__action {
+      padding: var(--base-4) 0;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      border-top: 1px solid var(--color-grey-50);
+      color: var(--color-links--primary);
+      @include getType('h5-axiforma');
+      text-decoration: none;
+      transition: all var(--transition) ease-in;
+
+      // Hover & Focus
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-links--secondary);
+          transition: all var(--transition-intermediate) ease-out;
+        }
+      }
+
+      // Focus
+      &:focus-visible {
+        outline: var(--outline-width) solid var(--color-focus);
+        outline-offset: var(--outline-offset);
+        color: var(--color-links--secondary);
+        transition: all var(--transition-intermediate) ease-out;
+      }
+
+      // Icon
+      .action__icon {
+        margin-inline-start: var(--base-10);
+        width: var(--icon-size);
+        height: var(--icon-size);
+        flex-shrink: 0;
+        color: var(--color-links--secondary);
+      }
+    }
+
+    // Summary
+    .link-item__summary {
+      margin-block-start: var(--neg-base);
+      padding-block-end: var(--base-6);
+      max-width: 36em;
+      color: var(--color-grey-150);
+      @include getType('detail-axiforma');
+    }
+  }
+}
