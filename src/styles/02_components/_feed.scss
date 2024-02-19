@@ -14,7 +14,7 @@
     position: relative;
   }
   
-  @for $i from 1 through 21 {
+  @for $i from 1 through 50 {
     > *:nth-child(#{$i}) {
       z-index: #{21 - $i};
     }
@@ -27,6 +27,9 @@
   
   @include breakpoint(lg) {
     padding-block-end: var(--base-18);
-    grid-template-columns: 1fr 1fr 1fr;
+
+    &[data-columns="3"] {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }

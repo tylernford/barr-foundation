@@ -43,7 +43,7 @@
         {% case 'media' %}
             {% set cards = content.cardMedia %}
 
-            <div class="cardRow">
+            <div class="cardRow" data-columns="{{ cards|length }}">
                 {% for card in cards %}
                     {% set cardConfig  = {
                         'variant': card.type,
