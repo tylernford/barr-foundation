@@ -1,0 +1,40 @@
+{% set targetComponentType = entry.textPlainHeading %}
+
+{% set allEntries = craft.entries.limit(null) %}
+{% set commonBuilderEntries = [] %}
+
+{# Capture entries that have a commonBuilder field #}
+{% for entry in allEntries %}
+  {% for tab in entry.getFieldLayout().getTabs() %}
+    {% for element in tab.getElements() %}
+      {% if element.uid == '4e91c4d0-0717-417b-8a2d-024166539cdd' %}
+        {% set commonBuilderEntries = commonBuilderEntries|merge([entry]) %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+{% set targetedComponentEntries = [] %}    
+{% for entry in commonBuilderEntries %}
+  {% for section in entry.builderCommon.level(1).all() %}
+    {% set sectionBlocks = section.children %}
+    {% for sectionBlock in sectionBlocks %}
+      {% if sectionBlock.type  == targetComponentType %}
+        {% if entry in targetedComponentEntries %}
+        {% else %}
+          {% set targetedComponentEntries = targetedComponentEntries|merge([entry]) %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
+
+<h1>{{ targetComponentType }}</h1>
+<ul style="padding-top: 50px">
+  {% for entry in targetedComponentEntries %}
+    <li style="margin-bottom: 20px">
+      Entry: {{ entry.title }} / {{ entry.slug }}<br>
+      Section: {{ entry.section }}
+    </li>
+  {% endfor %}
+</ul>
