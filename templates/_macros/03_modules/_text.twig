@@ -4,6 +4,7 @@
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_image' as images %}
     {% import '_macros/02_components/_accordion' as accordion %}
+    {% import '_macros/02_components/_featured-links' as featuredLinks %}
     {% import '_macros/02_components/_video-player' as videoPlayers %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
@@ -95,11 +96,9 @@
 
             {{ accordion.accordion(accordion, '') }}
 
-        {% default %}
-
-        <div class="blockGeneric">
-            <h2 class="blockGeneric-heading">This is my default text</h2>
-        </div>
+        {% case 'featured' %}
+            {% set linkList = content.blockFeaturedLinks.all() %}
+            {{ featuredLinks.featuredLinks(linkList) }}
 
     {% endswitch %}
 {% endmacro %}

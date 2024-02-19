@@ -1,0 +1,33 @@
+{# =======================================
+  Macro: Featured Links
+==========================================
+  Params:
+    - links (required)
+      [
+        { link.featuredLink, link.summary },
+        { link.featuredLink, link.summary }
+      ]
+======================================= #}
+
+{% macro featuredLinks(linkList) %}
+  <ul class="featuredLinks">
+    {% for linkItem in linkList %}
+      {% set link = linkItem.featuredLink %}
+      {% set summary = linkItem.summary %}
+
+      <li class="featuredLinks__link-item">
+        <a class="link-item__action" href="{{ link.url }}"{{ link.target == '_blank' ? ' target=_"blank"' }}>
+          {{ link.text }}
+          {% if link.type == 'url' %}
+            <svg class="action__icon">
+              <use xlink:href="{{ alias('@icon') }}link-out-20"></use>
+            </svg>
+          {% endif %}
+        </a>
+        {% if summary %}
+          <p class="link-item__summary">{{ summary }}</p>
+        {% endif %}
+      </li> 
+    {% endfor %}
+  </ul>
+{% endmacro %}

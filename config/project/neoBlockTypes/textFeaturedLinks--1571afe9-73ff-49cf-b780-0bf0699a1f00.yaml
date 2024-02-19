@@ -4,41 +4,29 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  0308a71c-fa8d-4baa-a033-855a2512cac3:
+  e674482b-a697-41a7-ab01-f5a31bf3724a:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
+            fieldUid: e392dad5-6fbd-4001-a1df-f712269a09d6 # Block: Featured Links
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7fc8f515-6466-4ae3-b725-499c4209663e
+            uid: fb44ab15-becc-4b61-b32d-f2d66fafc97b
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            fieldUid: 66cef11d-f827-4b38-8867-ece3eefda13c # Carousel: Quotes
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d1f7675f-a04e-4656-ab47-95c8425ff01f
-            userCondition: null
-            warning: null
-            width: 100
-        name: Carousel
-        uid: 1bba9d74-75ad-46bb-8bfd-74c612ffe0e6
+        name: Text
+        uid: 7d936e78-bbaa-4aa5-9176-8308669060c9
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: carouselQuotes
+handle: textFeaturedLinks
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -48,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Carousel: Quotes'
+name: 'Text: Featured Links'
 topLevel: false
