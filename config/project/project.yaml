@@ -1,4 +1,4 @@
-dateModified: 1708378551
+dateModified: 1708385174
 elementSources:
   craft\elements\Asset:
     -
@@ -56,8 +56,8 @@ elementSources:
             operator: in
             uid: 170df442-bdd8-4e95-a39b-83cf3399b544
             values:
-              - 2652042d-326e-45ff-b0bd-45f95f9e2507 # Header
               - 4af5ef3d-2c87-48a7-9d3b-c568f714e378 # Footer
+              - 2652042d-326e-45ff-b0bd-45f95f9e2507 # Header
               - e6d0fb6c-83de-4e6b-b2b0-ca04df252285 # Social
         elementType: craft\elements\Entry
         fieldContext: global
@@ -71,6 +71,25 @@ elementSources:
     -
       heading: Pages
       type: heading
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 64d9ec27-4929-44f9-8644-81cd6331704d
+            values:
+              - 3b0590d4-896c-41f5-bdb5-3661bb00340a # Entry Hunt
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:5414badf-4a4c-42c8-905f-29c8bf5ac9b6'
+      label: 'Entry Hunt'
+      tableAttributes: '-'
+      type: custom
     -
       condition:
         class: craft\elements\conditions\entries\EntryCondition
@@ -362,21 +381,6 @@ elementSources:
         - section
         - slug
       type: native
-    -
-      heading: ''
-      type: heading
-    -
-      heading: ''
-      type: heading
-    -
-      heading: ''
-      type: heading
-    -
-      heading: ''
-      type: heading
-    -
-      heading: ''
-      type: heading
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: 'Barr Foundation'
@@ -451,6 +455,7 @@ meta:
     3a2f39b7-ed74-4fe2-aa22-685cdd11a644: 'Text: First Name' # Text: First Name
     3a4a814b-362f-42e4-9d92-2cf83e4c0e5d: 'Filterable Feed: Bio' # Filterable Feed: Bio
     3b0ee85b-3a90-4147-95da-96c517b5b684: Target # Target
+    3b0590d4-896c-41f5-bdb5-3661bb00340a: 'Entry Hunt' # Entry Hunt
     3b2f52f1-19d0-45f7-b3f6-e1e72a135f1c: Global # Global
     3b3c11f7-3415-430f-aa8d-4ea49d17eaba: 'Flag: Dynamic' # Flag: Dynamic
     3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53: 'People Section' # People Section
@@ -832,6 +837,7 @@ meta:
     ee292b33-f1a3-4fd6-9a25-9da4f1ef312a: 'Action: All' # Action: All
     ef35002b-b3dd-4be9-b1a6-9b34dd341c37: 'Highlight: Single Event Timeline' # Highlight: Single Event Timeline
     f04ce99a-aa20-4ed0-9e83-40f232197b48: Item # Item
+    f07f866b-e6db-4264-a715-8d9e684e6488: 'Entry Hunt' # Entry Hunt
     f1e1b4db-27c9-486f-8ecf-0f64ac74b825: Byline # Byline
     f4adca94-3a26-4dd3-a3d4-c816fe8e5580: Grantees # Grantees
     f4cef7c4-9c10-4b2d-aecc-afe52d207d0d: 'Section Anchor' # Section Anchor
