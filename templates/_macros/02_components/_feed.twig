@@ -2,21 +2,19 @@
 
 {% macro default(config) %}
     {% import '_macros/02_components/_card' as cards %}
+    {% import '_macros/03_modules/_grantees' as grantees %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
 
     {% switch variant %}
         {% case 'grantees' %}
-            {% set entries   = content.entriesGrantee.all() %}
-            {% set isFeature = content.flagFeature %}
-            {% set card      = content.cardAction %}
-            {% set action    = card.actionLink %}
-            {% set external  = ( action.type == 'url' ) %}
-            {% set support   = card.textSupporting %}
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my grantees feed</h2>
-            </div>
+            {% set config = {
+                'grantees': config.content.entriesGrantee,
+                'feature': config.content.flagFeature,
+                'action': config.content.cardAction
+            } %}
+            {{ grantees.granteesGrid(config) }}
 
         {% case 'news' %}
 

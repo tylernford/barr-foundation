@@ -29,38 +29,14 @@
 
 // Cards
 .blockGrantees {
-  padding-block-end: var(--base-9);
-  background: var(--color-grantees-primary);
-  position: relative;
-  overflow: hidden;
-
-  &:after {
-    content: '';
-    inset: 268px 0 auto 0;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background: var(--color-grey-25);
-    transform: skewY(-9deg);
-    transform-origin: 100%;
-  }
+  padding-block: var(--base-6);
 
   @include breakpoint(md) {
-    &:after {
-      top: 200px;
-    }
+    padding-block: var(--base-9);
   }
-
-  @include breakpoint(lg) {
-    padding-block-end: var(--base-18);
-
-    &:after {
-      top: 68px;
-    }
-  }
-
+  
   .blockGrantees__inner {
-    @include container;
+    @include container-narrow;
   }
 
   // Without featured grantee
