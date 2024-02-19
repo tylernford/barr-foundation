@@ -1,0 +1,121 @@
+field: e392dad5-6fbd-4001-a1df-f712269a09d6 # Block: Featured Links
+fieldLayouts:
+  5b2e2afe-40bf-43af-8d71-4ab5cd57df50:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a94b7e08-5457-4413-a214-8aff392e141c # Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 948241b9-4fca-456f-8203-09bb3f7d7be6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 80add9af-3296-4617-bce3-a095c1939a6f # Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f35c192e-825a-4141-9247-9493ecfafd8b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 834444d2-2fb7-4583-b7c5-ad517390cb97
+        userCondition: null
+fields:
+  80add9af-3296-4617-bce3-a095c1939a6f: # Summary
+    columnSuffix: abyigard
+    contentColumnType: text
+    fieldGroup: null
+    handle: summary
+    instructions: 'Optional summary text.'
+    name: Summary
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a94b7e08-5457-4413-a214-8aff392e141c: # Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: featuredLink
+    instructions: null
+    name: Link
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: url
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+handle: featuredLink
+name: Link
+sortOrder: 1

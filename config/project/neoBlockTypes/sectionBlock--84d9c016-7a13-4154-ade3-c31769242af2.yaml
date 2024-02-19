@@ -1,6 +1,7 @@
 childBlocks:
   - textBody
   - textAccordion
+  - textFeaturedLinks
   - highlightQuote
   - highlightStats
   - cardFeature
@@ -19,7 +20,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  a9b6da5b-10b8-41f4-895b-24b501484a23:
+  4c08ad61-da57-4ee0-8d22-1d124a9630c5:
     tabs:
       -
         elementCondition: null
