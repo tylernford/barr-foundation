@@ -7,7 +7,7 @@ name: 'Card: Action'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 661416664
+  changedFieldIndicator: 626079112
   columns:
     __assoc__:
       -
@@ -26,12 +26,12 @@ settings:
               - ''
   contentTable: '{{%stc_cardaction}}'
   fieldLayout: row
-  maxRows: null
+  maxRows: 1
   minRows: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: null
-  staticField: true
+  selectionLabel: 'Add a Call-to-Action'
+  staticField: null
 translationKeyFormat: null
 translationMethod: none
 type: verbb\supertable\fields\SuperTableField

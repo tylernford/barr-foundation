@@ -36,7 +36,9 @@
         {% endfor %}
 
         {# Action Card #}
-        {{ cards.action(action) }}
+        {% if action|length %}
+          {{ cards.action(action) }}
+        {% endif %}
       </div>
     </div>
   </div>
