@@ -1,5 +1,6 @@
 childBlocks:
   - feedManual
+  - feedAuto
 conditions: null
 description: ''
 enabled: true

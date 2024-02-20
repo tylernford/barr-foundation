@@ -1,4 +1,4 @@
-dateModified: 1708459345
+dateModified: 1708462314
 elementSources:
   craft\elements\Asset:
     -
@@ -493,12 +493,14 @@ meta:
     6c068a13-02e2-4531-bfe1-f9082911ec87: Label # Label
     6c8d2fba-5672-4d44-aa02-7f576e6ca673: 'Flag: Fiscal Sponsor' # Flag: Fiscal Sponsor
     6cc3b73a-f6dd-45e3-89fd-4c871ad53903: 'Is secondary?' # Is secondary?
+    6d3fde62-2b64-4d28-8cbe-1a6fae4dc702: Source(s) # Source(s)
     6d9c1e45-1dc3-4cae-8f1d-b6d6f966427c: 'Tags: Import List' # Tags: Import List
     6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: Icon # Icon
     6dfb099a-3f70-4263-8930-a2a018c83ada: 'Text: Publication' # Text: Publication
     6e8ba94e-310e-4db0-a093-204c204e876f: Title # Title
     6e809373-5f71-4565-9be1-b179b89dd23e: 'Highlight: Quote' # Highlight: Quote
     6eab3484-4a8a-459d-b34c-6f48332b75d5: __blank__ # __blank__
+    6f1128a8-0881-457f-906b-e128fe0d1394: 'Feed: Auto' # Feed: Auto
     6fb16efc-efc4-4dbb-af30-c21b060c6350: Tutorials # Tutorials
     7a625472-c524-4977-aa9c-4dddcab5c4b1: 'Display Divider' # Display Divider
     7ab5ee46-bcab-45a8-8db3-a8737add580a: 'Jobs Board' # Jobs Board
@@ -569,6 +571,7 @@ meta:
     70dd6f0e-8aa3-4520-b68c-48cbb2f3b70b: 'Nested Menu' # Nested Menu
     071f0627-4d57-45f3-be3b-2d686513516e: 'Contact: Instagram' # Contact: Instagram
     72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d: 'Divider: Section' # Divider: Section
+    74a6604a-6f45-46ec-88f0-bc96513e1be4: Sources # Sources
     74b63598-5caa-49c6-8bb3-b035cc4ca287: Text # Text
     75ac338a-6d5c-4d09-b602-27629776857b: Icon # Icon
     78c65c80-c62f-42e9-806c-128d1bfb7aac: 'Blog Post, News Item, or Grantee' # Blog Post, News Item, or Grantee
@@ -610,6 +613,7 @@ meta:
     589a1bd0-570d-4dc1-a454-d5034a1b9bba: Default # Default
     600bb22c-f62f-458d-ad51-432956f869ae: 'Program Areas' # Program Areas
     633a6cc7-36f9-47b9-9948-e569afd25265: 'Builder: Changelog' # Builder: Changelog
+    690e3ae6-6702-4e43-9fa7-5293eb17523f: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
     735baf07-fdce-44c2-8433-02997cd29674: 'Department: Import' # Department: Import
     747ce413-c373-42ad-92b4-bff1e0c3ab13: Item # Item
     759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
@@ -705,6 +709,7 @@ meta:
     76928083-2a29-4679-8fdf-e811209fb268: 'Card: Grants' # Card: Grants
     84062355-43e5-4645-80bd-6ed12c82ebb8: Media # Media
     90142623-6069-4dfa-8701-8e8eb2de1caf: 'ID: Blog Post' # ID: Blog Post
+    a0fffe58-8d85-4b86-b3f9-296034f93606: 'Feed: Auto' # Feed: Auto
     a06fd4ab-835d-4487-ab3d-7db24b84ace8: 'Text: Body' # Text: Body
     a1f99b1c-d8b3-4e50-8944-68924e179608: 'Internal Person' # Internal Person
     a2affe46-e28a-4b3c-a0ed-da056019c50c: 'Text: Accordion' # Text: Accordion
@@ -760,6 +765,7 @@ meta:
     bf1977eb-0974-47fb-804c-cc8eb50760d9: Caption # Caption
     bffbfe7e-eb55-4525-aafd-4b156d04715d: Image # Image
     c0b3adea-77f8-4182-b17d-7209cb415314: Description # Description
+    c0e1ceb5-9d4c-496a-93ad-3adf77924687: Randomize # Randomize
     c1f9543f-7b4c-4544-803c-a1a02aa27a1f: 'Text: Name' # Text: Name
     c2ff6d2c-f979-4a50-88dd-c960f6aa9e0b: __blank__ # __blank__
     c5b0dd4c-0674-4747-adf3-2fa7a9bcea40: 'Contact: YouTube' # Contact: YouTube
