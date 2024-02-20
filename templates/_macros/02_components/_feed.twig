@@ -39,7 +39,7 @@
             </div>
 
         {% case 'cards' %}
-            {%  set manualCards = content.children.one.cardsFeed %}
+            {% set manualCards = content.children.one.cardsFeedManual %}
 
             <div class="cardRow" data-columns="{{ manualCards|length }}">
                 {% for card in manualCards %}
