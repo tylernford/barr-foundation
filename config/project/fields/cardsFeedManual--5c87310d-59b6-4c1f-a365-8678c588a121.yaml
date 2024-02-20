@@ -1,12 +1,12 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
-handle: cardsFeed
+handle: cardsFeedManual
 instructions: 'Add up to 3 cards from Blog, News, Grantee, Audio, or Video sources. Drag & drop to rearrange.'
-name: Feed
+name: 'Feed: Manual'
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_cardsfeed}}'
+  contentTable: '{{%matrixcontent_cardsfeedmanual}}'
   maxBlocks: 3
   minBlocks: 2
   propagationKeyFormat: null
