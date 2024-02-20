@@ -672,6 +672,44 @@
       }
     }
   }
+
+  &.cardItem--news {
+    padding: var(--base-6);
+    display: grid;
+    box-shadow: var(--shadow-shallow--light);
+
+    @include breakpoint(xl) {
+      padding: var(--base-9);
+    }
+
+    .cardItem__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cardItem__header {
+      margin-block-end: var(--base-3);
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .cardItem__label {
+      margin-block-end: var(--base-2);
+      color: var(--color-card-text--secondary);
+      @include getType('label');
+    }
+
+    .cardItem__heading {
+      color: var(--color-card-text--primary);
+      @include getType('h5-axiforma');
+    }
+
+    @include breakpoint(xl) {
+      .cardItem__heading {
+        @include getType('h4-axiforma');
+      }
+    }
+  }
 }
 
 [data-grid-style="grid"] {
