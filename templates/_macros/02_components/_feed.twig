@@ -38,25 +38,6 @@
                 <h2 class="blockGeneric-heading">This is my {{ personType.title }} bio feed</h2>
             </div>
 
-        {% case 'media' %}
-            {% set cards = content.cardMedia %}
-
-            <div class="cardRow" data-columns="{{ cards|length }}">
-                {% for card in cards %}
-                    {% set cardConfig  = {
-                        'variant': card.type,
-                        'image': card.assetImage.one(),
-                        'label': card.label,
-                        'title': card.cardTitle,
-                        'videoUrl': card.type == 'video' ? card.videoUrl : null,
-                        'action': card.type == 'video' ? card.actionLink : null,
-                        'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
-                    } %}
-
-                    {{ cards.media(cardConfig) }}
-                {% endfor %}
-            </div>
-
         {% case 'cards' %}
             {%  set manualCards = content.children.one.cardsFeed %}
 
