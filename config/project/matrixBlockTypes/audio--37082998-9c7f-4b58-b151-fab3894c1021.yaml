@@ -176,5 +176,5 @@ fields:
     translationMethod: none
     type: craft\fields\PlainText
 handle: audio
-name: 'Card: Audio'
+name: 'Media: Audio'
 sortOrder: 2
