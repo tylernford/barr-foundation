@@ -1,0 +1,19 @@
+columnSuffix: phcskhpp
+contentColumnType: text
+fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
+handle: manualFeed
+instructions: null
+name: 'Manual Feed'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

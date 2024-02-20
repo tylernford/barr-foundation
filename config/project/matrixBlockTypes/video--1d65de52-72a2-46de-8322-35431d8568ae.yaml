@@ -1,0 +1,229 @@
+field: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed
+fieldLayouts:
+  ee3335b7-6bfc-4df0-a547-82d4940d8df5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d95defeb-86a9-41c1-b9c1-2c644240afb7 # Asset: Cover Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3052c3ef-32d6-45ee-af05-317747110e9b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 6c068a13-02e2-4531-bfe1-f9082911ec87 # Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a78dd7b-d28f-43a3-97d2-783efb16786e
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 48805fe6-16d1-443a-ab57-04fb3264ea7f # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 100be3a0-2c36-43f5-9ae2-432628b67e50
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cbb6cbb6-8104-42f3-be47-02a2885687b8 # Video URL
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a98bdbac-5dab-47a4-891c-9b0ce06ad81f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2d68d05d-95ee-4cf8-a1e6-3b302f6ba8cc # Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef143bcc-2afc-4ca7-a128-41e04e772b60
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 021f8a77-df62-471f-9611-95822a0eab9e
+        userCondition: null
+fields:
+  2d68d05d-95ee-4cf8-a1e6-3b302f6ba8cc: # Action
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: actionLink
+    instructions: Optional.
+    name: Action
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  6c068a13-02e2-4531-bfe1-f9082911ec87: # Label
+    columnSuffix: asmenerz
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: Optional.
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  48805fe6-16d1-443a-ab57-04fb3264ea7f: # Title
+    columnSuffix: oajszpue
+    contentColumnType: text
+    fieldGroup: null
+    handle: cardTitle
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cbb6cbb6-8104-42f3-be47-02a2885687b8: # Video URL
+    columnSuffix: tesnohdf
+    contentColumnType: text
+    fieldGroup: null
+    handle: videoUrl
+    instructions: 'Enter the URL to the Video. E.g. _https://vimeo.com/869219144_'
+    name: 'Video URL'
+    searchable: false
+    settings:
+      url: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: wrav\oembed\fields\OembedField
+  d95defeb-86a9-41c1-b9c1-2c644240afb7: # Asset: Cover Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: assetImage
+    instructions: 'Used as Video cover image. Select exactly one image.'
+    name: 'Asset: Cover Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Select a Cover Image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: video
+name: 'Card: Video'
+sortOrder: 3

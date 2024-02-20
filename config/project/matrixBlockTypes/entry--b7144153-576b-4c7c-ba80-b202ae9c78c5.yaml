@@ -1,0 +1,53 @@
+field: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed
+fieldLayouts:
+  d86697ad-effd-4b6b-aa7a-402e79799ba4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 78c65c80-c62f-42e9-806c-128d1bfb7aac # Blog Post, News Item, or Grantee
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f1e87ba-2b28-4248-b2ef-b26118fa9cff
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2bcc298a-f76b-4cbd-8938-e1e20fb88d41
+        userCondition: null
+fields:
+  78c65c80-c62f-42e9-806c-128d1bfb7aac: # Blog Post, News Item, or Grantee
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: blogPostNewsItemOrGrantee
+    instructions: null
+    name: 'Blog Post, News Item, or Grantee'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      selectionLabel: 'Select an Entry'
+      showSiteMenu: true
+      sources:
+        - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+        - 'section:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+        - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: entry
+name: 'Card: Blog Post, News Item, or Grantee'
+sortOrder: 1
