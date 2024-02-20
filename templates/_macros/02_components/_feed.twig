@@ -46,7 +46,26 @@
                     {% if card.type == 'entry' %}
                         {% set card = card.blogPostNewsItemOrGrantee.one %}
 
-                        {{ card.title }}
+                        {% if card.section.handle == 'grantees' %}
+                            {% set grantee = card %}
+                            {% set granteeCardConfig = {
+                                'grantee': grantee
+                            } %}
+
+                            {{ cards.grantee(granteeCardConfig) }}
+                        {% else %}
+                            <article class="cardItem cardItem--news">
+                                <div class="cardItem__inner">
+                                    {# Header #}
+                                    <header class="cardItem__header">
+                                        <h3 class="cardItem__heading">{{ card.title }}</h3>
+                                        {% if card.label %}
+                                            <span class="cardItem__label">{{ card.label }}</span>
+                                        {% endif %}
+                                    </header>
+                                </div>
+                            </article>
+                        {% endif %}
 
                     {# Media #}
                     {% else %}
