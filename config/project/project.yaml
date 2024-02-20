@@ -1,4 +1,4 @@
-dateModified: 1708446195
+dateModified: 1708459345
 elementSources:
   craft\elements\Asset:
     -
@@ -482,7 +482,7 @@ meta:
     5b98dced-0f73-4a40-90aa-bdfd794e1a0f: 'Assets: Media' # Assets: Media
     5bd95319-8b0b-4be7-8a7f-b40373b24105: Label # Label
     5c8b0f09-3d95-490c-8622-bc462f283758: 'Carousel: Quotes' # Carousel: Quotes
-    5c87310d-59b6-4c1f-a365-8678c588a121: Feed # Feed
+    5c87310d-59b6-4c1f-a365-8678c588a121: 'Feed: Manual' # Feed: Manual
     5ca73fd1-fa27-4af4-bc45-c1373761dbb0: 'Text: Transcript' # Text: Transcript
     5d5d980b-1804-4df2-8490-062c126dec93: 'Highlight: Stats' # Highlight: Stats
     5de2e8df-6dad-4364-bf23-2d48496f0f1d: 'Text: Description' # Text: Description

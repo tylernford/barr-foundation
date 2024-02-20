@@ -11,7 +11,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed
+            fieldUid: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed: Manual
             instructions: null
             label: null
             required: false
