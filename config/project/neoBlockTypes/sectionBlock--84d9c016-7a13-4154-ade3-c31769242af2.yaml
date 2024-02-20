@@ -5,6 +5,7 @@ childBlocks:
   - highlightQuote
   - highlightStats
   - cardFeature
+  - feedCards
   - feedMedia
   - feedGrantees
   - feedNews
@@ -20,7 +21,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  4c08ad61-da57-4ee0-8d22-1d124a9630c5:
+  ac41d7ed-86cc-4c8b-a4ab-9f88d2d8682a:
     tabs:
       -
         elementCondition: null

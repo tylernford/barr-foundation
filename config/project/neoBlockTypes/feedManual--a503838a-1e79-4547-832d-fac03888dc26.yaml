@@ -4,29 +4,29 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  1ba62107-84e2-402c-ad89-2d70f0df6637:
+  3e110e7f-8460-4d99-991e-62dc61c07d3a:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
+            fieldUid: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed
             instructions: null
-            label: 'Card: Feature'
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 87f81aaf-6ac1-454a-8b81-67f8f39b2862
+            uid: e6b52e32-c319-4a40-957f-baa75213a601
             userCondition: null
             warning: null
             width: 100
-        name: Card
-        uid: 568cce23-d795-493a-9d42-fd803fa91ac1
+        name: Feed
+        uid: 8f71bdfc-533c-46cb-a1ab-b36b7d38ec02
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardFeature
+handle: feedManual
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -36,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: Feature'
+name: 'Feed: Manual'
 topLevel: false

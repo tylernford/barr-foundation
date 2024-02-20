@@ -57,6 +57,33 @@
                 {% endfor %}
             </div>
 
+        {% case 'cards' %}
+            {%  set manualCards = content.children.one.cardsFeed %}
+
+            <div class="cardRow" data-columns="{{ manualCards|length }}">
+                {% for card in manualCards %}
+                    {% if card.type == 'entry' %}
+                        {% set card = card.blogPostNewsItemOrGrantee.one %}
+
+                        {{ card.title }}
+
+                    {# Media #}
+                    {% else %}
+                        {% set cardConfig  = {
+                            'variant': card.type,
+                            'image': card.assetImage.one(),
+                            'label': card.label,
+                            'title': card.cardTitle,
+                            'videoUrl': card.type == 'video' ? card.videoUrl : null,
+                            'action': card.type == 'video' ? card.actionLink : null,
+                            'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
+                        } %}
+
+                        {{ cards.media(cardConfig) }}
+                    {% endif %}
+                {% endfor %}
+            </div>
+
         {% default %}
             <div class="blockGeneric">
                 <h2 class="blockGeneric-heading">This is my default card block</h2>

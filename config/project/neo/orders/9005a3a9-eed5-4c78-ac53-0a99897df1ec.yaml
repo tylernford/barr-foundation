@@ -5,6 +5,8 @@
 - 'blockType:6e809373-5f71-4565-9be1-b179b89dd23e' # Highlight: Quote
 - 'blockType:b8d4ea4e-74b0-46b4-9a80-39170eb76c27' # Highlight: Stats
 - 'blockType:c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf' # Card: Feature
+- 'blockType:475f568b-a770-42cd-9d7c-161f41124bfb' # Feed
+- 'blockType:a503838a-1e79-4547-832d-fac03888dc26' # Feed: Manual
 - 'blockType:5933c093-c0e1-4718-99b2-cea84945e3ec' # Feed: Media
 - 'blockType:734086c2-3e6c-4bd0-ada5-9d448a5abb03' # Feed: Grantees
 - 'blockType:2d95f3a7-b880-44c6-bf42-f60b393f9d09' # Feed: News
@@ -15,4 +17,4 @@
 - 'blockType:5c8b0f09-3d95-490c-8622-bc462f283758' # Carousel: Quotes
 - 'blockType:54f700ed-cca9-47c8-b73f-71ee87ddc640' # Timeline: Single Event Per Milestone
 - 'blockType:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
-- 'blockType:8b05e45e-c521-496f-b601-01f99d01c19c'
+- 'blockType:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
