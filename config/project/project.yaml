@@ -1,4 +1,4 @@
-dateModified: 1708403505
+dateModified: 1708446195
 elementSources:
   craft\elements\Asset:
     -
@@ -435,7 +435,7 @@ meta:
     1b2cb00a-9926-4731-ba73-26cd45fd7e44: 'Geo: Region' # Geo: Region
     1bf5f3e0-2b61-48a7-85fb-6a6e1ddae091: Homepage # Homepage
     1cb4612c-38cd-4b27-809d-fd543e6b94cf: 'Flag: Feature' # Flag: Feature
-    1d65de52-72a2-46de-8322-35431d8568ae: 'Card: Video' # Card: Video
+    1d65de52-72a2-46de-8322-35431d8568ae: 'Media: Video' # Media: Video
     1dd219bb-2f7d-40a7-8f37-ef31fed81c34: 'Asset: Image' # Asset: Image
     01ed592e-1014-45e1-8104-59aa9110f849: Media # Media
     1f5fcf40-1dac-4aa2-aa30-1e7d5467b651: 'External Person' # External Person
@@ -449,7 +449,6 @@ meta:
     2c464958-58a2-42c3-9fa5-7d0c3130ac13: Media # Media
     2d68d05d-95ee-4cf8-a1e6-3b302f6ba8cc: Action # Action
     2d85d472-1f81-45ee-9294-8af027894cdd: 'Section Bookmark (Optional)' # Section Bookmark (Optional)
-    2d95f3a7-b880-44c6-bf42-f60b393f9d09: 'Feed: News' # Feed: News
     2dec7473-aaa1-473a-a853-156a05b52a14: Target # Target
     2e2725ce-270b-4758-a1ed-0e602dcda53b: 'Action: Entry or URL' # Action: Entry or URL
     2f4e1404-f866-4cdc-924e-3c5930d9dd76: 'Opener: Landing' # Opener: Landing
@@ -699,7 +698,7 @@ meta:
     8847309c-7a66-4668-9706-7698fa3614b4: 'Asset: Image' # Asset: Image
     9750478c-5202-4300-b469-2a61639f0ec4: 'Text: Description' # Text: Description
     25795634-7ff4-4fba-b0d1-affd9a0587c0: 'Divider: Subsection' # Divider: Subsection
-    37082998-9c7f-4b58-b151-fab3894c1021: 'Card: Audio' # Card: Audio
+    37082998-9c7f-4b58-b151-fab3894c1021: 'Media: Audio' # Media: Audio
     39247735-ed77-47ee-a626-e60b8b135046: Event # Event
     48214827-a863-4fd5-a0c8-40ef46f89489: Default # Default
     59639062-b610-4a0d-b1e4-e855ca711cb2: 'Entries: Blog' # Entries: Blog
@@ -749,7 +748,7 @@ meta:
     b563972b-64ed-4a88-b6c2-92284d00d1cb: 'Text: Body' # Text: Body
     b3143993-b6d1-4f71-b577-74bf41f94320: Video # Video
     b5772510-16ec-45a7-932b-e6d3aff11a84: 'Action: Download' # Action: Download
-    b7144153-576b-4c7c-ba80-b202ae9c78c5: 'Card: Blog Post, News Item, or Grantee' # Card: Blog Post, News Item, or Grantee
+    b7144153-576b-4c7c-ba80-b202ae9c78c5: 'Entry: Blog Post, News Item, or Grantee' # Entry: Blog Post, News Item, or Grantee
     bb2bec9e-b4d9-415f-af34-e16a1b9c2500: Default # Default
     bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91: 'Text: Basic' # Text: Basic
     bcf0f106-ae8e-4b7f-a6a2-c0c241588bac: Description # Description

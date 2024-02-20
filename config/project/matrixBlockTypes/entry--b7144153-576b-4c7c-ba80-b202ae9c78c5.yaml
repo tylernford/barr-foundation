@@ -49,5 +49,5 @@ fields:
     translationMethod: site
     type: craft\fields\Entries
 handle: entry
-name: 'Card: Blog Post, News Item, or Grantee'
+name: 'Entry: Blog Post, News Item, or Grantee'
 sortOrder: 1

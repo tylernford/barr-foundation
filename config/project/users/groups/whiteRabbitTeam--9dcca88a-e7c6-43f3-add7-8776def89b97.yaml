@@ -141,7 +141,7 @@ permissions:
   - 'neo-createblocks:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
   - 'neo-createblocks:247e7af2-fafc-4f1d-b463-b67b1c3c5d7a' # Card: Simple
   - 'neo-createblocks:25795634-7ff4-4fba-b0d1-affd9a0587c0' # Divider: Subsection
-  - 'neo-createblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09' # Feed: News
+  - 'neo-createblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09'
   - 'neo-createblocks:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
   - 'neo-createblocks:3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53' # People Section
   - 'neo-createblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9' # Carousel: Grantees
@@ -186,7 +186,7 @@ permissions:
   - 'neo-deleteblocks:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
   - 'neo-deleteblocks:247e7af2-fafc-4f1d-b463-b67b1c3c5d7a' # Card: Simple
   - 'neo-deleteblocks:25795634-7ff4-4fba-b0d1-affd9a0587c0' # Divider: Subsection
-  - 'neo-deleteblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09' # Feed: News
+  - 'neo-deleteblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09'
   - 'neo-deleteblocks:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
   - 'neo-deleteblocks:3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53' # People Section
   - 'neo-deleteblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9' # Carousel: Grantees
@@ -231,7 +231,7 @@ permissions:
   - 'neo-editblocks:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
   - 'neo-editblocks:247e7af2-fafc-4f1d-b463-b67b1c3c5d7a' # Card: Simple
   - 'neo-editblocks:25795634-7ff4-4fba-b0d1-affd9a0587c0' # Divider: Subsection
-  - 'neo-editblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09' # Feed: News
+  - 'neo-editblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09'
   - 'neo-editblocks:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
   - 'neo-editblocks:3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53' # People Section
   - 'neo-editblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9' # Carousel: Grantees

@@ -225,5 +225,5 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
 handle: video
-name: 'Card: Video'
+name: 'Media: Video'
 sortOrder: 3
