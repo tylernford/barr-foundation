@@ -4,29 +4,29 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  bf6d7814-fe3e-451f-91e6-7d7bf949db70:
+  5c8d903f-30d9-4e2d-ba31-ad892de7d80e:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed: Manual
+            fieldUid: 6f1128a8-0881-457f-906b-e128fe0d1394 # Feed: Auto
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e6b52e32-c319-4a40-957f-baa75213a601
+            uid: 72792644-646b-47f6-a36e-76783e1fc438
             userCondition: null
             warning: null
             width: 100
         name: Feed
-        uid: 8f71bdfc-533c-46cb-a1ab-b36b7d38ec02
+        uid: c1ea06fd-da9e-4715-9f54-6768831d5503
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: feedManual
+handle: feedAuto
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -36,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Feed: Manual'
+name: 'Feed: Auto'
 topLevel: false
