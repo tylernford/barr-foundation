@@ -24,7 +24,7 @@
                     <div class="cardItem__inner">
                         {# Image #}
                         {% if image %}
-                            <div class="cardItem__image">
+                            <div class="cardItem__media">
                                 {{ images.image(image, '1024', '3/2', '', false) }}
                             </div>
                         {% endif %}
@@ -120,7 +120,7 @@
     <div class="cardItem cardItem--bio">
         {# Image #}
         {% if image %}
-            <div class="cardItem__image">
+            <div class="cardItem__media">
                 {{ images.image(image, '640', '3/2', '', false) }}
             </div>
         {% endif %}
@@ -182,7 +182,7 @@
             {# Image #}
             {% if displayImage %}
                 {% if image %}
-                    <div class="cardItem__image">
+                    <div class="cardItem__media">
                         {{ images.image(image, '912', '3/2', '', false) }}
                     </div>
                 {% endif %}
