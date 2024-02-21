@@ -475,6 +475,14 @@
       padding: var(--base-9);
     }
 
+    @include breakpoint(sm-md) {
+      padding: var(--base-6);
+    }
+
+    @include breakpoint(lg) {
+      padding: var(--base-9);
+    }
+
     .cardItem__inner {
       display: flex;
       flex-direction: column;
@@ -720,6 +728,7 @@
   }
 }
 
+// Grantee Variant
 [data-grid-style="grid"] {
   .cardItem.cardItem--bio {
     padding: var(--base-6);
@@ -819,6 +828,23 @@
         .details__pronouns {
           @include getType('body');
         }
+      }
+    }
+  }
+}
+
+// Grid size
+.cardRow[data-columns="3"] {
+  .cardItem {
+    &.cardItem--grantee,
+    &.cardItem--media,
+    &.cardItem--post {
+      @include breakpoint(xl) {
+        padding: var(--base-6);
+      }
+
+      @include breakpoint(xxl) {
+        padding: var(--base-9);
       }
     }
   }
