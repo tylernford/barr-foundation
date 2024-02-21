@@ -74,6 +74,8 @@
                 {% endfor %}
             {% endif %}
 
+            {% set actionCard = content.children.one.cardAction %}
+
             <div class="cardRow" data-columns="{{ feedCards|length }}">
                 {% for card in feedCards %}
                     {% if card.type == 'generic' %}
@@ -141,6 +143,11 @@
                     {% endif %}
                 {% endfor %}
             </div>
+
+            {# Action Card #}
+            {% if actionCard|length %}
+                {{ cards.action(actionCard) }}
+            {% endif %}
 
         {% default %}
             <div class="blockGeneric">
