@@ -338,7 +338,7 @@
             {% endif %}
 
             {# Content #}
-            <div class="cardItem__action">
+            <div class="cardItem__actions">
                 {% if audioSnippet %}
                     {% set audioID = 'audio' ~ random() %}
 
@@ -352,7 +352,7 @@
                 {# Action #}
                 {% if action and action.url %}
                     {% set actionAttributes = {
-                        type: 'button', isReversed: false,
+                        type: audioSnippet ? 'link' : 'button', isReversed: false,
                         icon: 'linkType', iconOnly: false,
                         text: action.text, url: action.url,
                         linkType: action.type, target: action.target

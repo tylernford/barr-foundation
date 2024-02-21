@@ -94,7 +94,7 @@
                             'label': card.label,
                             'title': card.cardTitle,
                             'summary': card.summary,
-                            'action': card.type == 'video' ? card.actionLink : null,
+                            'action': card.actionLink,
                             'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
                         } %}
                         {{ cards.media(cardConfig) }}

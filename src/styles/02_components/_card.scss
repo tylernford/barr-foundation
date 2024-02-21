@@ -560,7 +560,7 @@
     }
 
     .cardItem__secondary {
-      margin-top: auto;
+      margin-block-start: auto;
     }
 
     .cardItem__actions {
@@ -652,11 +652,23 @@
       @include getType('caption-messina');
     }
 
-    .cardItem__action {
-      margin-top: auto;
+    .cardItem__actions {
+      margin-block-start: auto;
 
-      a {
-        margin-top: var(--base-6);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      > * {
+        margin-block-start: var(--base-6);
+      }
+
+      .audio {
+        margin-inline-end: var(--base-6);
+      }
+
+      .audio + .action {
+        margin-block-start: var(--base-2);
       }
     }
   }
@@ -705,16 +717,16 @@
 
     // Actions {
     .cardItem__actions {
-      margin-top: auto;
+      margin-block-start: auto;
 
       .cardItem__action {
-        margin-top: var(--base-6);
+        margin-block-start: var(--base-6);
       }
     }
 
     // Tags
     .cardItem__tags {
-      margin-top: var(--base-5);
+      margin-block-start: var(--base-5);
     }
 
     @include breakpoint(xl) {
