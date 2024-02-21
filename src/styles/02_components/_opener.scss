@@ -421,11 +421,7 @@ body[data-theme-color="marigold"] {
 
       // Tags
       .primary__tags {
-        margin-top: var(--base);
-
-        .details {
-          margin-top: 0;
-        }
+        margin-top: var(--base-4);
       }
 
       // Media
@@ -535,7 +531,7 @@ body[data-theme-color="marigold"] {
 
       // Tags
       .primary__tags {
-        margin-block-start: var(--base-3);
+        margin-block-start: var(--base-2);
       }
     }
 
