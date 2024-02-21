@@ -16,7 +16,7 @@ fieldLayouts:
             uid: d7cf6142-058f-47c2-a481-b4f8242d952b
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
             fieldUid: 9b4fc30f-02b9-4305-a6d9-5106b6b0ca10 # Label
@@ -38,6 +38,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e5d2d6c2-8072-4b76-9c81-4caeefd2a26c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: b781cb75-0a89-4222-89eb-380d328015c3 # Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 19be204b-1495-4c91-9bdb-f7c2ecb16aeb
             userCondition: null
             warning: null
             width: 100
@@ -155,6 +167,26 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+  b781cb75-0a89-4222-89eb-380d328015c3: # Summary
+    columnSuffix: msvtkhkq
+    contentColumnType: text
+    fieldGroup: null
+    handle: summary
+    instructions: 'Optional descriptive text.'
+    name: Summary
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 350
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   defaa92e-88b5-46fb-8a0c-4106a2acafcc: # Title
     columnSuffix: xxwsenem
     contentColumnType: text

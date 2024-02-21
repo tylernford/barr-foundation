@@ -647,6 +647,11 @@
       color: var(--color-card-text--secondary);
     }
 
+    .cardItem__summary {
+      margin-block-end: var(--base-5);
+      @include getType('caption-messina');
+    }
+
     .cardItem__action {
       margin-top: auto;
 

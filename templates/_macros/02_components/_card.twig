@@ -302,9 +302,10 @@
 
     {% set variant = card.variant %}
     {% set image = card.image %}
-    {% set title = card.title %}
-    {% set label = card.label %}
     {% set videoUrl = card.videoUrl ?? card.videoUrl %}
+    {% set label = card.label %}
+    {% set title = card.title %}
+    {% set summary = card.summary %}
     {% set action = card.action ?? card.action %}
     {% set audioSnippet = card.audioSnippet ?? card.audioSnippet %}
 
@@ -328,6 +329,13 @@
                     <span class="cardItem__label">{{ label }}</span>
                 {% endif %}
             </header>
+
+            {# Summary #}
+            {% if summary|length %}
+                <div class="cardItem__summary">
+                    {{ summary }}
+                </div>
+            {% endif %}
 
             {# Content #}
             <div class="cardItem__action">

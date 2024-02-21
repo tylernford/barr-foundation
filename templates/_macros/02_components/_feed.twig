@@ -90,9 +90,10 @@
                         {% set cardConfig  = {
                             'variant': card.type,
                             'image': card.assetImage.one(),
+                            'videoUrl': card.type == 'video' ? card.videoUrl : null,
                             'label': card.label,
                             'title': card.cardTitle,
-                            'videoUrl': card.type == 'video' ? card.videoUrl : null,
+                            'summary': card.summary,
                             'action': card.type == 'video' ? card.actionLink : null,
                             'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
                         } %}
