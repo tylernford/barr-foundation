@@ -35,3 +35,9 @@
     }
   }
 }
+
+.cardRow + .cardItem--action {
+  @include breakpoint(lg) {
+    margin-block-start: var(--neg-base-18);
+  }
+}

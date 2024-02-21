@@ -157,6 +157,61 @@
 {% endmacro %}
 
 
+{% macro generic(card) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set image   = card.image %}
+    {% set label   = card.label %}
+    {% set title   = card.title %}
+    {% set summary = card.summary %}
+    {% set action  = card.action %}
+
+    <article class="cardItem cardItem--generic">
+        <div class="cardItem__inner">
+            {# Image #}
+            {% if image %}
+                <div class="cardItem__media">
+                    {{ images.image(image, '912', '3/2', '', false) }}
+                </div>
+            {% endif %}
+
+            {# Header #}
+            <header class="cardItem__header">
+                <h3 class="cardItem__heading">{{ title }}</h3>
+                {% if label|length %}
+                    <span class="cardItem__label">{{ label }}</span>
+                {% endif %}
+            </header>
+
+            {# Content #}
+            <div class="cardItem__content">
+                {# Summary #}
+                {% if summary|length %}
+                    <div class="cardItem__summary">
+                        {{ summary }}
+                    </div>
+                {% endif %}
+
+                {# Action #}
+                {% if action.url|length %}
+                    <div class="cardItem__actions">
+                        {% set actionAttributes = {
+                            type: 'button', isReversed: false,
+                            icon: 'linkType', iconOnly: false,
+                            text: action.text, url: action,
+                            linkType: action.type, target: action.target
+                        } %}
+
+                        {{ actions.action(actionAttributes) }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </article>
+{% endmacro %}
+
+
 {% macro grantee(config) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
@@ -247,13 +302,14 @@
 
     {% set variant = card.variant %}
     {% set image = card.image %}
-    {% set title = card.title %}
-    {% set label = card.label %}
     {% set videoUrl = card.videoUrl ?? card.videoUrl %}
+    {% set label = card.label %}
+    {% set title = card.title %}
+    {% set summary = card.summary %}
     {% set action = card.action ?? card.action %}
     {% set audioSnippet = card.audioSnippet ?? card.audioSnippet %}
 
-    <div class="cardItem cardItem--media">
+    <article class="cardItem cardItem--media">
         <div class="cardItem__inner">
             {# Image #}
             <div class="cardItem__media">
@@ -274,8 +330,15 @@
                 {% endif %}
             </header>
 
+            {# Summary #}
+            {% if summary|length %}
+                <div class="cardItem__summary">
+                    {{ summary }}
+                </div>
+            {% endif %}
+
             {# Content #}
-            <div class="cardItem__action">
+            <div class="cardItem__actions">
                 {% if audioSnippet %}
                     {% set audioID = 'audio' ~ random() %}
 
@@ -289,8 +352,8 @@
                 {# Action #}
                 {% if action and action.url %}
                     {% set actionAttributes = {
-                        type: 'button', isReversed: false,
-                        icon: '', iconOnly: false,
+                        type: audioSnippet ? 'link' : 'button', isReversed: false,
+                        icon: 'linkType', iconOnly: false,
                         text: action.text, url: action.url,
                         linkType: action.type, target: action.target
                     } %}
@@ -299,10 +362,11 @@
                 {% endif %}
             </div>
         </div>
-    </div>
+    </article>
 {% endmacro %}
 
 
+{# News #}
 {% macro news(config) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
@@ -335,7 +399,7 @@
     {# Set action #}
     {% set action = card.actionLink %}
 
-    <article class="cardItem cardItem--post">
+    <article class="cardItem cardItem--generic">
         <div class="cardItem__inner">
             {# Image #}
             {% if image %}
@@ -393,7 +457,7 @@
                                 type: 'button', isReversed: false,
                                 icon: 'linkType', iconOnly: false,
                                 text: action.text, url: action,
-                                linkType: 'entry', target: action.target
+                                linkType: action.type, target: action.target
                             } %}
 
                             {{ actions.action(actionAttributes) }}
@@ -406,6 +470,7 @@
 {% endmacro %}
 
 
+{# Post #}
 {% macro post(config) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
@@ -441,7 +506,7 @@
     {# Set action #}
     {% set action = post.actionLink %}
 
-    <article class="cardItem cardItem--post">
+    <article class="cardItem cardItem--generic">
         <div class="cardItem__inner">
             {# Image #}
             {% if image %}
@@ -506,7 +571,7 @@
                                 type: 'button', isReversed: false,
                                 icon: 'linkType', iconOnly: false,
                                 text: action.text, url: action,
-                                linkType: 'entry', target: action.target
+                                linkType: action.type, target: action.target
                             } %}
 
                             {{ actions.action(actionAttributes) }}
