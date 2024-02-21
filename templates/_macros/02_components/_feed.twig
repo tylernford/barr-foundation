@@ -88,13 +88,25 @@
                         } %}
                         {{ cards.media(cardConfig) }}
                     {% else %}
-                        {% if card.section.handle == 'grantees' %}
+                        {% set cardVariant =
+                            card.section.handle == 'blog' ? 'post' :
+                            card.section.handle == 'newsroom' ? 'news'
+                            : card.section.handle
+                        %}
+
+                        {% if cardVariant == 'grantees' %}
                             {% set grantee = card %}
                             {% set granteeCardConfig = {
                                 'grantee': grantee
                             } %}
 
                             {{ cards.grantee(granteeCardConfig) }}
+                        {% elseif cardVariant == 'post' %}
+                            {% set postCardConfig = {
+                                'post': card
+                            } %}
+
+                            {{ cards.post(postCardConfig) }}
                         {% else %}
                             <article class="cardItem cardItem--news">
                                 <div class="cardItem__inner">
