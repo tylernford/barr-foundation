@@ -498,10 +498,7 @@
         }
       }
     }
-  }
 
-  // Grantee
-  &.cardItem--grantee {
     .cardItem__header {
       margin-block-end: var(--base-3);
       display: flex;
@@ -510,12 +507,36 @@
 
     .cardItem__label {
       margin-block-end: var(--base-2);
-      color: var(--color-card-text--tertiary);
     }
 
     .cardItem__heading {
       color: var(--color-card-text--primary);
       @include getType('h5-axiforma');
+    }
+  }
+
+  &.cardItem--media,
+  &.cardItem--news,
+  &.cardItem--post {
+    .cardItem__action {
+      margin-top: auto;
+
+      a {
+        margin-top: var(--base-6);
+      }
+    }
+
+    @include breakpoint(xl) {
+      .cardItem__heading {
+        @include getType('h4-axiforma');
+      }
+    }
+  }
+
+  // Grantee
+  &.cardItem--grantee {
+    .cardItem__label {
+      color: var(--color-card-text--tertiary);
     }
 
     .cardItem__content {
@@ -615,49 +636,16 @@
         }
       }
     }
-
-    .cardItem__header {
-      margin-block-end: var(--base-3);
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
+    
     .cardItem__label {
-      margin-block-end: var(--base-2);
       color: var(--color-card-text--secondary);
-    }
-
-    .cardItem__heading {
-      color: var(--color-card-text--primary);
-      @include getType('h5-axiforma');
-    }
-
-    .cardItem__action {
-      margin-top: auto;
-
-      a {
-        margin-top: var(--base-7);
-      }
-    }
-
-    @include breakpoint(xl) {
-      .cardItem__heading {
-        @include getType('h4-axiforma');
-      }
     }
   }
 
 
   // Post
   &.cardItem--news {
-    .cardItem__header {
-      margin-block-end: var(--base-3);
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
     .cardItem__label {
-      margin-block-end: var(--base-2);
       color: var(--color-card-text--tertiary);
     }
 
@@ -665,11 +653,6 @@
       color: var(--color-card-text--tertiary);
       @include getType('body');
       font-style: italic;
-    }
-
-    .cardItem__heading {
-      color: var(--color-card-text--primary);
-      @include getType('h5-axiforma');
     }
 
     .cardItem__data-and-authors {
@@ -701,15 +684,6 @@
       margin-top: var(--base-5);
     }
 
-    // Action
-    .cardItem__action {
-      margin-top: auto;
-
-      a {
-        margin-top: var(--base-6);
-      }
-    }
-
     @include breakpoint(xl) {
       .cardItem__header {
         margin-block-end: var(--base-5);
@@ -717,10 +691,6 @@
 
       .cardItem__publication {
         @include getType('h4-messina');
-      }
-
-      .cardItem__heading {
-        @include getType('h4-axiforma');
       }
 
       .cardItem__published-date + .cardItem__authors {
@@ -736,20 +706,8 @@
 
   // Post
   &.cardItem--post {
-    .cardItem__header {
-      margin-block-end: var(--base-3);
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
     .cardItem__label {
-      margin-block-end: var(--base-2);
       color: var(--color-card-text--secondary);
-    }
-
-    .cardItem__heading {
-      color: var(--color-card-text--primary);
-      @include getType('h5-axiforma');
     }
 
     // Published Date
@@ -771,22 +729,9 @@
       margin-top: var(--base-5);
     }
 
-    // Action
-    .cardItem__action {
-      margin-top: auto;
-
-      a {
-        margin-top: var(--base-6);
-      }
-    }
-
     @include breakpoint(xl) {
       .cardItem__header {
         margin-block-end: var(--base-5);
-      }
-
-      .cardItem__heading {
-        @include getType('h4-axiforma');
       }
 
       .cardItem__summary {
