@@ -42,7 +42,7 @@
   --color-card-text--primary: var(--color-teal-100);
   --color-card-text--secondary: var(--color-grey-150);
 }
-.cardItem.cardItem--news {
+.cardItem.cardItem--post {
   --color-card-background: var(--color-grey-25);
   --color-card-text--primary: var(--color-teal-100);
   --color-card-text--secondary: var(--color-navy-100);
@@ -63,7 +63,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--news {
+  .cardItem.cardItem--post {
     --color-card-text--primary: var(--color-program-green-100);
   }
 }
@@ -81,7 +81,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--news {
+  .cardItem.cardItem--post {
     --color-card-text--primary: var(--color-program-plum-100);
   }
 }
@@ -100,7 +100,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--news {
+  .cardItem.cardItem--post {
     --color-card-text--primary: var(--color-program-marigold-100);
   }
 }
@@ -149,7 +149,7 @@
   &.cardItem--bio {
     background-color: var(--color-card-background);
 
-    .cardItem__image {
+    .cardItem__media {
       .image {
         aspect-ratio: 3 / 2;
         display: block;
@@ -332,7 +332,7 @@
 
     // With image
     &.cardItem--with-image {
-      .cardItem__image {
+      .cardItem__media {
         .image {
           aspect-ratio: 3 / 2;
           display: block;
@@ -397,12 +397,12 @@
           order: 1;
         }
 
-        .cardItem__image {
+        .cardItem__media {
           order: 2;
         }
 
         &.cardItem--align-right {
-          .cardItem__image {
+          .cardItem__media {
             order: 1;
           }
 
@@ -411,7 +411,7 @@
           }
         }
 
-        .cardItem__image {
+        .cardItem__media {
           min-height: var(--card-min-height);
 
           .image {
@@ -462,11 +462,14 @@
   }
 
 
-  // Grantee
-  &.cardItem--grantee {
+  // Grantee, Media,
+  // and Post
+  &.cardItem--grantee,
+  &.cardItem--media,
+  &.cardItem--post {
+    box-shadow: var(--shadow-shallow--light);
     padding: var(--base-6);
     display: grid;
-    box-shadow: var(--shadow-shallow--light);
 
     @include breakpoint(sm) {
       padding: var(--base-9);
@@ -477,11 +480,12 @@
       flex-direction: column;
     }
 
-    .cardItem__image {
+    .cardItem__media {
       margin-block-end: var(--base-5);
+      position: relative;
 
       .image {
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 16 / 9;
         display: block;
         position: relative;
         overflow: hidden;
@@ -504,12 +508,33 @@
 
     .cardItem__label {
       margin-block-end: var(--base-2);
-      color: var(--color-card-text--tertiary);
     }
 
     .cardItem__heading {
       color: var(--color-card-text--primary);
       @include getType('h5-axiforma');
+    }
+  }
+
+  // Media, and Post
+  &.cardItem--media,
+  &.cardItem--post {
+    .cardItem__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    @include breakpoint(xl) {
+      .cardItem__heading {
+        @include getType('h4-axiforma');
+      }
+    }
+  }
+
+  // Grantee
+  &.cardItem--grantee {
+    .cardItem__label {
+      color: var(--color-card-text--tertiary);
     }
 
     .cardItem__content {
@@ -541,14 +566,6 @@
       }
     }
 
-    @include breakpoint(sm) {
-      .cardItem__image {
-        .image {
-          aspect-ratio: 5 / 3;
-        }
-      }
-    }
-
     // Large
     &[data-variant=large] {
       .cardItem__heading {
@@ -570,39 +587,6 @@
 
   // Media
   &.cardItem--media {
-    padding: var(--base-6);
-    display: grid;
-    box-shadow: var(--shadow-shallow--light);
-
-    @include breakpoint(xl) {
-      padding: var(--base-9);
-    }
-
-    .cardItem__inner {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cardItem__media {
-      margin-block-end: var(--base-5);
-      position: relative;
-
-      .image {
-        aspect-ratio: 16 / 9;
-        display: block;
-        position: relative;
-        overflow: hidden;
-    
-        img {
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          object-fit: cover;
-        }
-      }
-    }
-
     .cardItem__video-play {
       inset: 0;
       width: 100%;
@@ -650,82 +634,23 @@
         }
       }
     }
-
-    .cardItem__header {
-      margin-block-end: var(--base-3);
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
+    
     .cardItem__label {
-      margin-block-end: var(--base-2);
       color: var(--color-card-text--secondary);
-    }
-
-    .cardItem__heading {
-      color: var(--color-card-text--primary);
-      @include getType('h5-axiforma');
     }
 
     .cardItem__action {
       margin-top: auto;
 
       a {
-        margin-top: var(--base-7);
-      }
-    }
-
-    @include breakpoint(xl) {
-      .cardItem__heading {
-        @include getType('h4-axiforma');
+        margin-top: var(--base-6);
       }
     }
   }
 
-
   // Post
-  &.cardItem--news {
-    padding: var(--base-6);
-    display: grid;
-    box-shadow: var(--shadow-shallow--light);
-
-    @include breakpoint(xl) {
-      padding: var(--base-9);
-    }
-
-    .cardItem__inner {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cardItem__media {
-      margin-block-end: var(--base-5);
-      position: relative;
-
-      .image {
-        aspect-ratio: 16 / 9;
-        display: block;
-        position: relative;
-        overflow: hidden;
-    
-        img {
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          object-fit: cover;
-        }
-      }
-    }
-
-    .cardItem__header {
-      margin-block-end: var(--base-3);
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
+  &.cardItem--post {
     .cardItem__label {
-      margin-block-end: var(--base-2);
       color: var(--color-card-text--tertiary);
     }
 
@@ -735,47 +660,48 @@
       font-style: italic;
     }
 
-    .cardItem__heading {
-      color: var(--color-card-text--primary);
-      @include getType('h5-axiforma');
+    // Published Date
+    .cardItem__published-date {
+      color: var(--color-card-text--tertiary);
     }
 
-    .cardItem__data-and-authors {
-      margin-block-end: var(--base-4);
+    .cardItem__details {
+      margin-block-end: var(--base-6);
     }
 
     // Published Date
     .cardItem__published-date {
       display: block;
-      color: var(--color-card-text--tertiary);
       @include getType('caption-axiforma');
     }
 
     // Authors
     .cardItem__authors {
-      margin-block-end: var(--base-3);
       color: var(--color-card-text--quaternary);
       @include getType('caption-axiforma');
+    }
+    .details {
+      margin-block-start: 0;
     }
 
     // Summary
     .cardItem__summary {
-      margin-block: var(--base-6) var(--base-5);
+      margin-block-end: var(--base-5);
       @include getType('caption-messina');
+    }
+
+    // Actions {
+    .cardItem__actions {
+      margin-top: auto;
+
+      .cardItem__action {
+        margin-top: var(--base-6);
+      }
     }
 
     // Tags
     .cardItem__tags {
       margin-top: var(--base-5);
-    }
-
-    // Action
-    .cardItem__action {
-      margin-top: auto;
-
-      a {
-        margin-top: var(--base-6);
-      }
     }
 
     @include breakpoint(xl) {
@@ -787,111 +713,8 @@
         @include getType('h4-messina');
       }
 
-      .cardItem__heading {
-        @include getType('h4-axiforma');
-      }
-
-      .cardItem__published-date + .cardItem__authors {
-        margin-block-start: var(--base);
-      }
-
       .cardItem__summary {
-        margin-block: var(--base-8);
-      }
-    }
-  }
-
-
-  // Post
-  &.cardItem--post {
-    padding: var(--base-6);
-    display: grid;
-    box-shadow: var(--shadow-shallow--light);
-
-    @include breakpoint(xl) {
-      padding: var(--base-9);
-    }
-
-    .cardItem__inner {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cardItem__media {
-      margin-block-end: var(--base-5);
-      position: relative;
-
-      .image {
-        aspect-ratio: 16 / 9;
-        display: block;
-        position: relative;
-        overflow: hidden;
-    
-        img {
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          object-fit: cover;
-        }
-      }
-    }
-
-    .cardItem__header {
-      margin-block-end: var(--base-3);
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    .cardItem__label {
-      margin-block-end: var(--base-2);
-      color: var(--color-card-text--secondary);
-    }
-
-    .cardItem__heading {
-      color: var(--color-card-text--primary);
-      @include getType('h5-axiforma');
-    }
-
-    // Published Date
-    .cardItem__published-date {
-      margin-block-end: var(--base-3);
-      display: block;
-      color: var(--color-navy-50);
-      @include getType('caption-axiforma');
-    }
-
-    // Summary
-    .cardItem__summary {
-      margin-block: var(--base-6) var(--base-5);
-      @include getType('caption-messina');
-    }
-
-    // Tags
-    .cardItem__tags {
-      margin-top: var(--base-5);
-    }
-
-    // Action
-    .cardItem__action {
-      margin-top: auto;
-
-      a {
-        margin-top: var(--base-6);
-      }
-    }
-
-    @include breakpoint(xl) {
-      .cardItem__header {
-        margin-block-end: var(--base-5);
-      }
-
-      .cardItem__heading {
-        @include getType('h4-axiforma');
-      }
-
-      .cardItem__summary {
-        margin-block: var(--base-8);
+        margin-block-end: var(--base-8);
       }
     }
   }
@@ -903,7 +726,7 @@
     display: grid;
     box-shadow: var(--shadow-shallow--light);
 
-    .cardItem__image {
+    .cardItem__media {
       margin-block-end: var(--base-4);
     }
 
@@ -920,7 +743,7 @@
     @include breakpoint(xl) {
       padding: var(--base-9);
 
-      .cardItem__image {
+      .cardItem__media {
         margin-block-end: var(--base-7);
       }
     }
@@ -933,7 +756,7 @@
     display: flex;
     border-top: 1px solid var(--color-grey-50);
 
-    .cardItem__image {
+    .cardItem__media {
       margin-inline-end: var(--base-4);
       width: var(--base-12);
       flex-shrink: 0;
@@ -966,7 +789,7 @@
     }
 
     @include breakpoint(md) {
-      .cardItem__image {
+      .cardItem__media {
         margin-inline-end: var(--base-5);
         width: 100px;
       }
@@ -987,7 +810,7 @@
     @include breakpoint(lg) {
       padding-inline: 0;
 
-      .cardItem__image {
+      .cardItem__media {
         margin-inline-end: var(--base-7);
         width: 150px;
       }
