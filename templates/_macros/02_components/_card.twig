@@ -157,119 +157,6 @@
 {% endmacro %}
 
 
-{% macro post(config) %}
-    {% import '_macros/01_elements/_actions' as actions %}
-    {% import '_macros/01_elements/_details' as details %}
-    {% import '_macros/01_elements/_image' as images %}
-
-    {% set post  = config.post %}
-    {# {% set image = card.assetImage.one %} #}
-    {% set label = '' %}
-    {% set title = post.title %}
-
-    {# Set published date #}
-    {% set publishedDate = post.dateOnly %}
-
-    {# Set authors #}
-    {% set authors = post.entriesTeam %}
-    {% set postAuthors = [] %}
-    {% for author in authors %}
-        {% set postAuthors = postAuthors|merge([author]) %}
-    {% endfor %}
-    {% set authorDetails = [] %}
-
-    {# Set tags #}
-    {% set tagsList = post.tagsEntry %}
-    {% set tags = [] %}
-    {% for tagsItem in tagsList %}
-        {% set tags = tags|merge([
-            { 'title': tagsItem, 'url': tagsItem.url }
-        ]) %}
-    {% endfor %}
-
-    {# Set summary #}
-    {% set summary = post.textDescription %}
-
-    {# Set action #}
-    {% set action = post.actionLink %}
-
-    {# Set image #}
-    {% set image = post.assetImage.one %}
-
-    <article class="cardItem cardItem--post">
-        <div class="cardItem__inner">
-            {# Image #}
-            {% if image %}
-                <div class="cardItem__media">
-                    {{ images.image(image, '912', '3/2', '', false) }}
-                </div>
-            {% endif %}
-
-            {# Header #}
-            <header class="cardItem__header">
-                <h3 class="cardItem__heading">{{ title }}</h3>
-                {% if label %}
-                    <span class="cardItem__label">{{ label }}</span>
-                {% endif %}
-            </header>
-
-            {# Content #}
-            <div class="cardItem__content">
-                {# Published date #}
-                <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
-
-                {# Authors #}
-                {% if postAuthors|length %}                    
-                    {% for postAuthor in postAuthors %}
-                        {# Set author image #}
-                        {% set authorImage = postAuthor.assetImage.one %}
-
-                        {# Set name #}
-                        {% set authorName =
-                            postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
-                            postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
-                        %}
-
-                        {% set authorDetails = authorDetails|merge([
-                            { 'img': authorImage, 'name': authorName }
-                        ]) %}
-                    {% endfor %}
-                    {{ details.detail('byline', false, authorDetails) }}
-                {% endif %}
-
-                {# Summary #}
-                {% if summary|length %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
-                    </div>
-                {% endif %}
-
-                {# Tags #}
-                {% if tags|length %}
-                    <div class="cardItem__tags">
-                        {{ details.detail('tags', false, tags) }}
-                    </div>
-                {% endif %}
-
-                {# Action #}
-                {% if action.url|length %}
-                    <div class="cardItem__action">
-                        {% set actionAttributes = {
-                            type: 'button', isReversed: false,
-                            icon: 'linkType', iconOnly: false,
-                            text: action.text, url: action,
-                            linkType: 'entry', target: action.target
-                        } %}
-
-                        {{ actions.action(actionAttributes) }}
-                    </div>
-                {% endif %}
-            </div>
-        </div>
-    </article>
-{% endmacro %}
-
-
 {% macro grantee(config) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
@@ -413,6 +300,218 @@
             </div>
         </div>
     </div>
+{% endmacro %}
+
+
+{% macro news(config) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set card  = config.card %}
+    {% set image = card.assetImage.one %}
+    {% set label = '' %}
+    {% set publication = card.textPublication %}
+    {% set title = card.title %}
+
+    {# Set published date #}
+    {% set publishedDate = card.dateOnly %}
+
+    {# Set authors #}
+    {% set authors = card.textName %}
+
+    {# Set tags #}
+    {% set tagsList = card.tagsEntry %}
+    {% set tags = [] %}
+    {% for tagsItem in tagsList %}
+        {% set tags = tags|merge([
+            { 'title': tagsItem, 'url': tagsItem.url }
+        ]) %}
+    {% endfor %}
+
+    {# Set summary #}
+    {% set summary = card.textDescription %}
+
+    {# Set action #}
+    {% set action = card.actionLink %}
+
+    <article class="cardItem cardItem--news">
+        <div class="cardItem__inner">
+            {# Image #}
+            {% if image %}
+                <div class="cardItem__media">
+                    {{ images.image(image, '912', '3/2', '', false) }}
+                </div>
+            {% endif %}
+
+            {# Header #}
+            <header class="cardItem__header">
+                {% if publication|length %}                    
+                    <div>
+                        <h3 class="cardItem__publication">{{ publication }}</h3>
+                        <h4 class="cardItem__heading">{{ title }}</h4>
+                    </div>
+                {% else %}
+                    <h3 class="cardItem__heading">{{ title }}</h3>
+                {% endif %}
+                <span class="cardItem__label">In the News</span>
+            </header>
+
+            {# Content #}
+            <div class="cardItem__content">
+                <div class="cardItem__data-and-authors">
+                    {# Published date #}
+                    <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+
+                    {# Authors #}
+                    {% if authors|length %}                    
+                        <p class="cardItem__authors">{{ authors }}</p>
+                    {% endif %}
+                </div>
+
+                {# Summary #}
+                {% if summary|length %}
+                    <div class="cardItem__summary">
+                        {{ summary }}
+                    </div>
+                {% endif %}
+
+                {# Tags #}
+                {% if tags|length %}
+                    <div class="cardItem__tags">
+                        {{ details.detail('tags', false, tags) }}
+                    </div>
+                {% endif %}
+
+                {# Action #}
+                {% if action.url|length %}
+                    <div class="cardItem__action">
+                        {% set actionAttributes = {
+                            type: 'button', isReversed: false,
+                            icon: 'linkType', iconOnly: false,
+                            text: action.text, url: action,
+                            linkType: 'entry', target: action.target
+                        } %}
+
+                        {{ actions.action(actionAttributes) }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </article>
+{% endmacro %}
+
+
+{% macro post(config) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
+
+    {% set post  = config.post %}
+    {# {% set image = card.assetImage.one %} #}
+    {% set label = '' %}
+    {% set title = post.title %}
+
+    {# Set published date #}
+    {% set publishedDate = post.dateOnly %}
+
+    {# Set authors #}
+    {% set authors = post.entriesTeam %}
+    {% set postAuthors = [] %}
+    {% for author in authors %}
+        {% set postAuthors = postAuthors|merge([author]) %}
+    {% endfor %}
+    {% set authorDetails = [] %}
+
+    {# Set tags #}
+    {% set tagsList = post.tagsEntry %}
+    {% set tags = [] %}
+    {% for tagsItem in tagsList %}
+        {% set tags = tags|merge([
+            { 'title': tagsItem, 'url': tagsItem.url }
+        ]) %}
+    {% endfor %}
+
+    {# Set summary #}
+    {% set summary = post.textDescription %}
+
+    {# Set action #}
+    {% set action = post.actionLink %}
+
+    {# Set image #}
+    {% set image = post.assetImage.one %}
+
+    <article class="cardItem cardItem--post">
+        <div class="cardItem__inner">
+            {# Image #}
+            {% if image %}
+                <div class="cardItem__media">
+                    {{ images.image(image, '912', '3/2', '', false) }}
+                </div>
+            {% endif %}
+
+            {# Header #}
+            <header class="cardItem__header">
+                <h3 class="cardItem__heading">{{ title }}</h3>
+                {% if label %}
+                    <span class="cardItem__label">{{ label }}</span>
+                {% endif %}
+            </header>
+
+            {# Content #}
+            <div class="cardItem__content">
+                {# Published date #}
+                <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+
+                {# Authors #}
+                {% if postAuthors|length %}                    
+                    {% for postAuthor in postAuthors %}
+                        {# Set author image #}
+                        {% set authorImage = postAuthor.assetImage.one %}
+
+                        {# Set name #}
+                        {% set authorName =
+                            postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
+                            postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
+                        %}
+
+                        {% set authorDetails = authorDetails|merge([
+                            { 'img': authorImage, 'name': authorName }
+                        ]) %}
+                    {% endfor %}
+                    {{ details.detail('byline', false, authorDetails) }}
+                {% endif %}
+
+                {# Summary #}
+                {% if summary|length %}
+                    <div class="cardItem__summary">
+                        {{ summary }}
+                    </div>
+                {% endif %}
+
+                {# Tags #}
+                {% if tags|length %}
+                    <div class="cardItem__tags">
+                        {{ details.detail('tags', false, tags) }}
+                    </div>
+                {% endif %}
+
+                {# Action #}
+                {% if action.url|length %}
+                    <div class="cardItem__action">
+                        {% set actionAttributes = {
+                            type: 'button', isReversed: false,
+                            icon: 'linkType', iconOnly: false,
+                            text: action.text, url: action,
+                            linkType: 'entry', target: action.target
+                        } %}
+
+                        {{ actions.action(actionAttributes) }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </article>
 {% endmacro %}
 
 

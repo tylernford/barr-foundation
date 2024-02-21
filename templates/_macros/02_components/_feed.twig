@@ -107,6 +107,13 @@
                             } %}
 
                             {{ cards.post(postCardConfig) }}
+
+                        {% elseif cardVariant == 'news' %}
+                            {% set newsCardConfig = {
+                                'card': card
+                            } %}
+
+                            {{ cards.news(newsCardConfig) }}
                         {% else %}
                             <article class="cardItem cardItem--news">
                                 <div class="cardItem__inner">

@@ -20,14 +20,16 @@
     }
   }
 
-  @include breakpoint(sm) {
+  @include breakpoint(sm-md) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  
+
   @include breakpoint(lg) {
     padding-block-end: var(--base-18);
-
+  }
+  
+  @include breakpoint(xl) {
     &[data-columns="3"] {
       grid-template-columns: 1fr 1fr 1fr;
     }
