@@ -335,7 +335,7 @@
     {# Set action #}
     {% set action = card.actionLink %}
 
-    <article class="cardItem cardItem--news">
+    <article class="cardItem cardItem--post">
         <div class="cardItem__inner">
             {# Image #}
             {% if image %}
@@ -359,7 +359,8 @@
 
             {# Content #}
             <div class="cardItem__content">
-                <div class="cardItem__data-and-authors">
+                {# Details #}
+                <div class="cardItem__details">
                     {# Published date #}
                     <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
 
@@ -376,26 +377,29 @@
                     </div>
                 {% endif %}
 
-                {# Tags #}
-                {% if tags|length %}
-                    <div class="cardItem__tags">
-                        {{ details.detail('tags', false, tags) }}
-                    </div>
-                {% endif %}
+                {# Actions #}
+                <div class="cardItem__actions">
+                    {# Tags #}
+                    {% if tags|length %}
+                        <div class="cardItem__tags">
+                            {{ details.detail('tags', false, tags) }}
+                        </div>
+                    {% endif %}
 
-                {# Action #}
-                {% if action.url|length %}
-                    <div class="cardItem__action">
-                        {% set actionAttributes = {
-                            type: 'button', isReversed: false,
-                            icon: 'linkType', iconOnly: false,
-                            text: action.text, url: action,
-                            linkType: 'entry', target: action.target
-                        } %}
+                    {# Action #}
+                    {% if action.url|length %}
+                        <div class="cardItem__action">
+                            {% set actionAttributes = {
+                                type: 'button', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: action.text, url: action,
+                                linkType: 'entry', target: action.target
+                            } %}
 
-                        {{ actions.action(actionAttributes) }}
-                    </div>
-                {% endif %}
+                            {{ actions.action(actionAttributes) }}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </article>
@@ -408,8 +412,7 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set post  = config.post %}
-    {# {% set image = card.assetImage.one %} #}
-    {% set label = '' %}
+    {% set image = post.assetImage.one %}
     {% set title = post.title %}
 
     {# Set published date #}
@@ -438,9 +441,6 @@
     {# Set action #}
     {% set action = post.actionLink %}
 
-    {# Set image #}
-    {% set image = post.assetImage.one %}
-
     <article class="cardItem cardItem--post">
         <div class="cardItem__inner">
             {# Image #}
@@ -453,34 +453,35 @@
             {# Header #}
             <header class="cardItem__header">
                 <h3 class="cardItem__heading">{{ title }}</h3>
-                {% if label %}
-                    <span class="cardItem__label">{{ label }}</span>
-                {% endif %}
+                <span class="cardItem__label">Blog Post</span>
             </header>
 
             {# Content #}
             <div class="cardItem__content">
-                {# Published date #}
-                <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+                {# Details #}
+                <div class="cardItem__details">
+                    {# Published date #}
+                    <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
 
-                {# Authors #}
-                {% if postAuthors|length %}                    
-                    {% for postAuthor in postAuthors %}
-                        {# Set author image #}
-                        {% set authorImage = postAuthor.assetImage.one %}
+                    {# Authors #}
+                    {% if postAuthors|length %}                    
+                        {% for postAuthor in postAuthors %}
+                            {# Set author image #}
+                            {% set authorImage = postAuthor.assetImage.one %}
 
-                        {# Set name #}
-                        {% set authorName =
-                            postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
-                            postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
-                        %}
+                            {# Set name #}
+                            {% set authorName =
+                                postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
+                                postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
+                            %}
 
-                        {% set authorDetails = authorDetails|merge([
-                            { 'img': authorImage, 'name': authorName }
-                        ]) %}
-                    {% endfor %}
-                    {{ details.detail('byline', false, authorDetails) }}
-                {% endif %}
+                            {% set authorDetails = authorDetails|merge([
+                                { 'img': authorImage, 'name': authorName }
+                            ]) %}
+                        {% endfor %}
+                        {{ details.detail('byline', false, authorDetails) }}
+                    {% endif %}
+                </div>
 
                 {# Summary #}
                 {% if summary|length %}
@@ -489,26 +490,29 @@
                     </div>
                 {% endif %}
 
-                {# Tags #}
-                {% if tags|length %}
-                    <div class="cardItem__tags">
-                        {{ details.detail('tags', false, tags) }}
-                    </div>
-                {% endif %}
+                {# Actions #}
+                <div class="cardItem__actions">
+                    {# Tags #}
+                    {% if tags|length %}
+                        <div class="cardItem__tags">
+                            {{ details.detail('tags', false, tags) }}
+                        </div>
+                    {% endif %}
 
-                {# Action #}
-                {% if action.url|length %}
-                    <div class="cardItem__action">
-                        {% set actionAttributes = {
-                            type: 'button', isReversed: false,
-                            icon: 'linkType', iconOnly: false,
-                            text: action.text, url: action,
-                            linkType: 'entry', target: action.target
-                        } %}
+                    {# Action #}
+                    {% if action.url|length %}
+                        <div class="cardItem__action">
+                            {% set actionAttributes = {
+                                type: 'button', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: action.text, url: action,
+                                linkType: 'entry', target: action.target
+                            } %}
 
-                        {{ actions.action(actionAttributes) }}
-                    </div>
-                {% endif %}
+                            {{ actions.action(actionAttributes) }}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </article>

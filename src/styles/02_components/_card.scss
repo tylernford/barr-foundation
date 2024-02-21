@@ -42,7 +42,7 @@
   --color-card-text--primary: var(--color-teal-100);
   --color-card-text--secondary: var(--color-grey-150);
 }
-.cardItem.cardItem--news {
+.cardItem.cardItem--post {
   --color-card-background: var(--color-grey-25);
   --color-card-text--primary: var(--color-teal-100);
   --color-card-text--secondary: var(--color-navy-100);
@@ -63,7 +63,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--news {
+  .cardItem.cardItem--post {
     --color-card-text--primary: var(--color-program-green-100);
   }
 }
@@ -81,7 +81,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--news {
+  .cardItem.cardItem--post {
     --color-card-text--primary: var(--color-program-plum-100);
   }
 }
@@ -100,7 +100,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--news {
+  .cardItem.cardItem--post {
     --color-card-text--primary: var(--color-program-marigold-100);
   }
 }
@@ -462,9 +462,10 @@
   }
 
 
+  // Grantee, Media,
+  // and Post
   &.cardItem--grantee,
   &.cardItem--media,
-  &.cardItem--news,
   &.cardItem--post {
     box-shadow: var(--shadow-shallow--light);
     padding: var(--base-6);
@@ -515,17 +516,14 @@
     }
   }
 
+  // Media, and Post
   &.cardItem--media,
-  &.cardItem--news,
   &.cardItem--post {
-    .cardItem__action {
-      margin-top: auto;
-
-      a {
-        margin-top: var(--base-6);
-      }
+    .cardItem__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
-
     @include breakpoint(xl) {
       .cardItem__heading {
         @include getType('h4-axiforma');
@@ -640,11 +638,18 @@
     .cardItem__label {
       color: var(--color-card-text--secondary);
     }
+
+    .cardItem__action {
+      margin-top: auto;
+
+      a {
+        margin-top: var(--base-6);
+      }
+    }
   }
 
-
   // Post
-  &.cardItem--news {
+  &.cardItem--post {
     .cardItem__label {
       color: var(--color-card-text--tertiary);
     }
@@ -655,28 +660,43 @@
       font-style: italic;
     }
 
-    .cardItem__data-and-authors {
-      margin-block-end: var(--base-4);
+    // Published Date
+    .cardItem__published-date {
+      color: var(--color-card-text--tertiary);
+    }
+
+    .cardItem__details {
+      margin-block-end: var(--base-6);
     }
 
     // Published Date
     .cardItem__published-date {
       display: block;
-      color: var(--color-card-text--tertiary);
       @include getType('caption-axiforma');
     }
 
     // Authors
     .cardItem__authors {
-      margin-block-end: var(--base-3);
       color: var(--color-card-text--quaternary);
       @include getType('caption-axiforma');
+    }
+    .details {
+      margin-block-start: 0;
     }
 
     // Summary
     .cardItem__summary {
-      margin-block: var(--base-6) var(--base-5);
+      margin-block-end: var(--base-5);
       @include getType('caption-messina');
+    }
+
+    // Actions {
+    .cardItem__actions {
+      margin-top: auto;
+
+      .cardItem__action {
+        margin-top: var(--base-6);
+      }
     }
 
     // Tags
@@ -693,49 +713,8 @@
         @include getType('h4-messina');
       }
 
-      .cardItem__published-date + .cardItem__authors {
-        margin-block-start: var(--base);
-      }
-
       .cardItem__summary {
-        margin-block: var(--base-8);
-      }
-    }
-  }
-
-
-  // Post
-  &.cardItem--post {
-    .cardItem__label {
-      color: var(--color-card-text--secondary);
-    }
-
-    // Published Date
-    .cardItem__published-date {
-      margin-block-end: var(--base-3);
-      display: block;
-      color: var(--color-navy-50);
-      @include getType('caption-axiforma');
-    }
-
-    // Summary
-    .cardItem__summary {
-      margin-block: var(--base-6) var(--base-5);
-      @include getType('caption-messina');
-    }
-
-    // Tags
-    .cardItem__tags {
-      margin-top: var(--base-5);
-    }
-
-    @include breakpoint(xl) {
-      .cardItem__header {
-        margin-block-end: var(--base-5);
-      }
-
-      .cardItem__summary {
-        margin-block: var(--base-8);
+        margin-block-end: var(--base-8);
       }
     }
   }
