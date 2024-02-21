@@ -42,6 +42,13 @@
   --color-card-text--primary: var(--color-teal-100);
   --color-card-text--secondary: var(--color-grey-150);
 }
+.cardItem.cardItem--news {
+  --color-card-background: var(--color-grey-25);
+  --color-card-text--primary: var(--color-teal-100);
+  --color-card-text--secondary: var(--color-navy-100);
+  --color-card-text--tertiary: var(--color-grey-150);
+  --color-card-text--quaternary: var(--color-navy-50);
+}
 
 [data-theme-color="green"] {
   .cardItem.cardItem--feature {
@@ -55,7 +62,8 @@
 
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
-  .cardItem.cardItem--media {
+  .cardItem.cardItem--media,
+  .cardItem.cardItem--news {
     --color-card-text--primary: var(--color-program-green-100);
   }
 }
@@ -72,7 +80,8 @@
 
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
-  .cardItem.cardItem--media {
+  .cardItem.cardItem--media,
+  .cardItem.cardItem--news {
     --color-card-text--primary: var(--color-program-plum-100);
   }
 }
@@ -90,7 +99,8 @@
 
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
-  .cardItem.cardItem--media {
+  .cardItem.cardItem--media,
+  .cardItem.cardItem--news {
     --color-card-text--primary: var(--color-program-marigold-100);
   }
 }
@@ -99,6 +109,12 @@
 // Cards
 .cardItem {
   background-color: var(--color-card-background);
+
+  // Label
+  .cardItem__label {
+    max-width: 28em;
+    @include getType('label');
+  }
 
   // Action
   &.cardItem--action {
@@ -190,11 +206,6 @@
     .cardItem__heading {
       max-width: 20em;
       color: var(--color-card-text--primary);
-    }
-    
-    .cardItem__label {
-      max-width: 28em;
-      @include getType('label');
     }
 
     .cardItem__support {
@@ -494,7 +505,6 @@
     .cardItem__label {
       margin-block-end: var(--base-2);
       color: var(--color-card-text--tertiary);
-      @include getType('label');
     }
 
     .cardItem__heading {
@@ -650,7 +660,6 @@
     .cardItem__label {
       margin-block-end: var(--base-2);
       color: var(--color-card-text--secondary);
-      @include getType('label');
     }
 
     .cardItem__heading {
@@ -674,6 +683,7 @@
   }
 
 
+  // Post
   &.cardItem--news {
     padding: var(--base-6);
     display: grid;
@@ -688,6 +698,26 @@
       flex-direction: column;
     }
 
+    .cardItem__media {
+      margin-block-end: var(--base-5);
+      position: relative;
+
+      .image {
+        aspect-ratio: 16 / 9;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    
+        img {
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+    }
+
     .cardItem__header {
       margin-block-end: var(--base-3);
       display: flex;
@@ -696,8 +726,13 @@
 
     .cardItem__label {
       margin-block-end: var(--base-2);
-      color: var(--color-card-text--secondary);
-      @include getType('label');
+      color: var(--color-card-text--tertiary);
+    }
+
+    .cardItem__publication {
+      color: var(--color-card-text--tertiary);
+      @include getType('body');
+      font-style: italic;
     }
 
     .cardItem__heading {
@@ -705,9 +740,63 @@
       @include getType('h5-axiforma');
     }
 
+    .cardItem__data-and-authors {
+      margin-block-end: var(--base-4);
+    }
+
+    // Published Date
+    .cardItem__published-date {
+      display: block;
+      color: var(--color-card-text--tertiary);
+      @include getType('caption-axiforma');
+    }
+
+    // Authors
+    .cardItem__authors {
+      margin-block-end: var(--base-3);
+      color: var(--color-card-text--quaternary);
+      @include getType('caption-axiforma');
+    }
+
+    // Summary
+    .cardItem__summary {
+      margin-block: var(--base-6) var(--base-5);
+      @include getType('caption-messina');
+    }
+
+    // Tags
+    .cardItem__tags {
+      margin-top: var(--base-5);
+    }
+
+    // Action
+    .cardItem__action {
+      margin-top: auto;
+
+      a {
+        margin-top: var(--base-6);
+      }
+    }
+
     @include breakpoint(xl) {
+      .cardItem__header {
+        margin-block-end: var(--base-5);
+      }
+
+      .cardItem__publication {
+        @include getType('h4-messina');
+      }
+
       .cardItem__heading {
         @include getType('h4-axiforma');
+      }
+
+      .cardItem__published-date + .cardItem__authors {
+        margin-block-start: var(--base);
+      }
+
+      .cardItem__summary {
+        margin-block: var(--base-8);
       }
     }
   }
@@ -757,7 +846,6 @@
     .cardItem__label {
       margin-block-end: var(--base-2);
       color: var(--color-card-text--secondary);
-      @include getType('label');
     }
 
     .cardItem__heading {
