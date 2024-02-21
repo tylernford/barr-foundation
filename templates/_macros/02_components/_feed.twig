@@ -50,8 +50,8 @@
             {% if manualFeed|length %}
                 {# For manually selected card #}
                 {% for item in manualFeed %}
-                    {# If media card #}
-                    {% if item.type == 'audio' or item.type == 'video' %}
+                    {# If generic or media card #}
+                    {% if item.type == 'generic' or item.type == 'audio' or item.type == 'video' %}
                         {% set feedCards = feedCards|merge([item]) %}
                     
                     {# If entry card #}
@@ -76,7 +76,17 @@
 
             <div class="cardRow" data-columns="{{ feedCards|length }}">
                 {% for card in feedCards %}
-                    {% if card.type == 'audio' or card.type == 'video' %}
+                    {% if card.type == 'generic' %}
+                        {% set cardConfig  = {
+                            'variant': card.type,
+                            'image': card.assetImage.one(),
+                            'label': card.label,
+                            'title': card.cardTitle,
+                            'summary': card.summary,
+                            'action': card.actionLink
+                        } %}
+                        {{ cards.generic(cardConfig) }}
+                    {% elseif card.type == 'audio' or card.type == 'video' %}
                         {% set cardConfig  = {
                             'variant': card.type,
                             'image': card.assetImage.one(),

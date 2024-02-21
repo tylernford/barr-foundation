@@ -1,4 +1,4 @@
-dateModified: 1708488228
+dateModified: 1708553029
 elementSources:
   craft\elements\Asset:
     -
@@ -519,6 +519,7 @@ meta:
     7ff09a87-131e-4e78-b7d0-e6c5bc0063a2: 'Carousel: Fellows' # Carousel: Fellows
     8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5: Cards # Cards
     8b6f4e86-b264-4d36-99a2-2bd8c177c514: 'Navigation: Primary' # Navigation: Primary
+    8c044fcc-1594-4cee-92a3-35c34e4eb990: 'Asset: Image' # Asset: Image
     8c222928-a7c2-4d90-96ea-c403c79d070f: 'Asset: Image' # Asset: Image
     8d951e83-8f96-4154-bd0a-e886b788c8c5: 'Grantee Database' # Grantee Database
     8e01f9c0-5b32-400f-af60-ee3cf5e92d49: Documents # Documents
@@ -645,6 +646,7 @@ meta:
     5971d473-bc24-4c7d-86e9-99f40d205dc3: 'Record Type' # Record Type
     6240c976-c45c-49e0-9b18-04c2bd1b9024: __blank__ # __blank__
     6774ebb3-1a46-4eca-8e7d-724ba7cf1e16: 'Asset: Image' # Asset: Image
+    6878d12c-9640-418d-b0a8-b40cb368e41d: Action # Action
     7177fc66-4936-40e7-9fc8-2cc7f5c69739: 'Text: Preheading' # Text: Preheading
     7617be4a-e651-4c54-8aa0-7ec58f5fc81f: Target # Target
     7641cb7f-d1d2-444e-ba5d-e21e2386d119: 'Action: URL' # Action: URL
@@ -712,11 +714,13 @@ meta:
     76928083-2a29-4679-8fdf-e811209fb268: 'Card: Grants' # Card: Grants
     84062355-43e5-4645-80bd-6ed12c82ebb8: Media # Media
     90142623-6069-4dfa-8701-8e8eb2de1caf: 'ID: Blog Post' # ID: Blog Post
+    98687726-9e02-4829-aad2-c4085430d1a1: Label # Label
     a0fffe58-8d85-4b86-b3f9-296034f93606: 'Feed: Auto' # Feed: Auto
     a06fd4ab-835d-4487-ab3d-7db24b84ace8: 'Text: Body' # Text: Body
     a1f99b1c-d8b3-4e50-8944-68924e179608: 'Internal Person' # Internal Person
     a2affe46-e28a-4b3c-a0ed-da056019c50c: 'Text: Accordion' # Text: Accordion
     a2ce8a13-9fad-4d3a-986e-f3bdb865efb2: 'Asset: Image Demo' # Asset: Image Demo
+    a2e492a2-2801-4455-95d2-37ff6cb9561c: Generic # Generic
     a4bd3122-19b2-48e7-9aae-80d76876a391: 'Page Builder: Home' # Page Builder: Home
     a8a2bfe5-9bf3-4e3e-b66a-e64668da43a6: Title # Title
     a8b22f31-38f1-436f-8a06-d62d1cdfa51d: Default # Default
@@ -829,6 +833,7 @@ meta:
     defaa92e-88b5-46fb-8a0c-4106a2acafcc: Title # Title
     df7d06ef-ac9b-48aa-a3b8-def9cd0be3f9: Contact # Contact
     df8b5f25-350a-4fb0-b379-01477411eeab: Intro # Intro
+    e0713066-9e42-4f01-9fc0-0aecb9fe7bd1: Title # Title
     e3c4bce9-7987-4dca-975d-5f03490bc35f: 'Group Type' # Group Type
     e3cd05c5-cf00-462b-a36f-a0089a03c422: 'Text: Description' # Text: Description
     e6c8dc6d-efa9-46b1-83c3-5a7112ef7cf4: 'Grant Contacts' # Grant Contacts
@@ -857,6 +862,7 @@ meta:
     f8ab386e-c493-4eb3-9edd-cafee231f1a4: __blank__ # __blank__
     f8db332e-6a63-4211-95bf-942e9a3a40ce: 'About Us' # About Us
     f8f1ed84-0e9d-4487-906c-0b01afb56973: Default # Default
+    f8feae9d-8a86-4158-a990-b8b80467dd78: Summary # Summary
     f291a098-6829-4193-9d10-5757e239bef3: 'Tags: Strategies' # Tags: Strategies
     f1998fc1-bb1b-41a0-91e1-37bd2431e262: Jobs # Jobs
     f7459d43-df4c-47f2-b96c-a7f4e09c3d7e: 'Highlight: Timeline (Single)' # Highlight: Timeline (Single)

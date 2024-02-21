@@ -42,7 +42,7 @@
   --color-card-text--primary: var(--color-teal-100);
   --color-card-text--secondary: var(--color-grey-150);
 }
-.cardItem.cardItem--post {
+.cardItem.cardItem--generic {
   --color-card-background: var(--color-grey-25);
   --color-card-text--primary: var(--color-teal-100);
   --color-card-text--secondary: var(--color-navy-100);
@@ -63,7 +63,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--post {
+  .cardItem.cardItem--generic {
     --color-card-text--primary: var(--color-program-green-100);
   }
 }
@@ -81,7 +81,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--post {
+  .cardItem.cardItem--generic {
     --color-card-text--primary: var(--color-program-plum-100);
   }
 }
@@ -100,7 +100,7 @@
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--media,
-  .cardItem.cardItem--post {
+  .cardItem.cardItem--generic {
     --color-card-text--primary: var(--color-program-marigold-100);
   }
 }
@@ -463,10 +463,10 @@
 
 
   // Grantee, Media,
-  // and Post
+  // and Generic
   &.cardItem--grantee,
   &.cardItem--media,
-  &.cardItem--post {
+  &.cardItem--generic {
     box-shadow: var(--shadow-shallow--light);
     padding: var(--base-6);
     display: grid;
@@ -524,9 +524,9 @@
     }
   }
 
-  // Media, and Post
+  // Media, and Generic
   &.cardItem--media,
-  &.cardItem--post {
+  &.cardItem--generic {
     .cardItem__content {
       height: 100%;
       display: flex;
@@ -656,8 +656,8 @@
     }
   }
 
-  // Post
-  &.cardItem--post {
+  // Generic
+  &.cardItem--generic {
     .cardItem__label {
       color: var(--color-card-text--tertiary);
     }
@@ -838,7 +838,7 @@
   .cardItem {
     &.cardItem--grantee,
     &.cardItem--media,
-    &.cardItem--post {
+    &.cardItem--generic {
       @include breakpoint(xl) {
         padding: var(--base-6);
       }
