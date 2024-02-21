@@ -39,20 +39,74 @@
             </div>
 
         {% case 'cards' %}
-            {% set manualCards = content.children.one.cardsFeedManual %}
+            {# Set manualFeed #}
+            {% set manualFeed = content.children.one.cardsFeedManual %}
+            {# Set autoFeed #}
+            {% set autoFeed = content.children.one.cardsFeedAuto ? content.children.one.cardsFeedAuto.one.sources %}
+            {# Set empty feedCards array #}
+            {% set feedCards = [] %}
 
-            <div class="cardRow" data-columns="{{ manualCards|length }}">
-                {% for card in manualCards %}
-                    {% if card.type == 'entry' %}
-                        {% set card = card.blogPostNewsItemOrGrantee.one %}
+            {# If manual card selection #}
+            {% if manualFeed|length %}
+                {# For manually selected card #}
+                {% for item in manualFeed %}
+                    {# If media card #}
+                    {% if item.type == 'audio' or item.type == 'video' %}
+                        {% set feedCards = feedCards|merge([item]) %}
+                    
+                    {# If entry card #}
+                    {% else %}
+                        {% set feedCards = feedCards|merge([item.blogPostNewsItemOrGrantee.one]) %}
+                    {% endif %}
+                {% endfor %}
+            
+            {# Auto cards #}
+            {% else %}
+                {% set sources = [] %}
 
-                        {% if card.section.handle == 'grantees' %}
+                {% for source in autoFeed %}
+                    {% set sources = sources|merge([source.value]) %}
+                {% endfor %}
+
+                {% set autoCards = craft.entries().section(sources).limit(3) %}
+                {% for card in autoCards %}
+                    {% set feedCards = feedCards|merge([card]) %}
+                {% endfor %}
+            {% endif %}
+
+            <div class="cardRow" data-columns="{{ feedCards|length }}">
+                {% for card in feedCards %}
+                    {% if card.type == 'audio' or card.type == 'video' %}
+                        {% set cardConfig  = {
+                            'variant': card.type,
+                            'image': card.assetImage.one(),
+                            'label': card.label,
+                            'title': card.cardTitle,
+                            'videoUrl': card.type == 'video' ? card.videoUrl : null,
+                            'action': card.type == 'video' ? card.actionLink : null,
+                            'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
+                        } %}
+                        {{ cards.media(cardConfig) }}
+                    {% else %}
+                        {% set cardVariant =
+                            card.section.handle == 'blog' ? 'post' :
+                            card.section.handle == 'newsroom' ? 'news'
+                            : card.section.handle
+                        %}
+
+                        {% if cardVariant == 'grantees' %}
                             {% set grantee = card %}
                             {% set granteeCardConfig = {
                                 'grantee': grantee
                             } %}
 
                             {{ cards.grantee(granteeCardConfig) }}
+                        {% elseif cardVariant == 'post' %}
+                            {% set postCardConfig = {
+                                'post': card
+                            } %}
+
+                            {{ cards.post(postCardConfig) }}
                         {% else %}
                             <article class="cardItem cardItem--news">
                                 <div class="cardItem__inner">
@@ -66,20 +120,6 @@
                                 </div>
                             </article>
                         {% endif %}
-
-                    {# Media #}
-                    {% else %}
-                        {% set cardConfig  = {
-                            'variant': card.type,
-                            'image': card.assetImage.one(),
-                            'label': card.label,
-                            'title': card.cardTitle,
-                            'videoUrl': card.type == 'video' ? card.videoUrl : null,
-                            'action': card.type == 'video' ? card.actionLink : null,
-                            'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
-                        } %}
-
-                        {{ cards.media(cardConfig) }}
                     {% endif %}
                 {% endfor %}
             </div>

@@ -673,6 +673,7 @@
     }
   }
 
+
   &.cardItem--news {
     padding: var(--base-6);
     display: grid;
@@ -707,6 +708,102 @@
     @include breakpoint(xl) {
       .cardItem__heading {
         @include getType('h4-axiforma');
+      }
+    }
+  }
+
+
+  // Post
+  &.cardItem--post {
+    padding: var(--base-6);
+    display: grid;
+    box-shadow: var(--shadow-shallow--light);
+
+    @include breakpoint(xl) {
+      padding: var(--base-9);
+    }
+
+    .cardItem__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cardItem__media {
+      margin-block-end: var(--base-5);
+      position: relative;
+
+      .image {
+        aspect-ratio: 16 / 9;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    
+        img {
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .cardItem__header {
+      margin-block-end: var(--base-3);
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .cardItem__label {
+      margin-block-end: var(--base-2);
+      color: var(--color-card-text--secondary);
+      @include getType('label');
+    }
+
+    .cardItem__heading {
+      color: var(--color-card-text--primary);
+      @include getType('h5-axiforma');
+    }
+
+    // Published Date
+    .cardItem__published-date {
+      margin-block-end: var(--base-3);
+      display: block;
+      color: var(--color-navy-50);
+      @include getType('caption-axiforma');
+    }
+
+    // Summary
+    .cardItem__summary {
+      margin-block: var(--base-6) var(--base-5);
+      @include getType('caption-messina');
+    }
+
+    // Tags
+    .cardItem__tags {
+      margin-top: var(--base-5);
+    }
+
+    // Action
+    .cardItem__action {
+      margin-top: auto;
+
+      a {
+        margin-top: var(--base-6);
+      }
+    }
+
+    @include breakpoint(xl) {
+      .cardItem__header {
+        margin-block-end: var(--base-5);
+      }
+
+      .cardItem__heading {
+        @include getType('h4-axiforma');
+      }
+
+      .cardItem__summary {
+        margin-block: var(--base-8);
       }
     }
   }
