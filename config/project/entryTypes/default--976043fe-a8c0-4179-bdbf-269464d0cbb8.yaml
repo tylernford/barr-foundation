@@ -77,7 +77,7 @@ fieldLayouts:
                   value: blog
               elementType: craft\elements\Entry
               fieldContext: global
-            fieldUid: d5da255e-0a3f-4eb8-817c-97ee72286b6c # Carousel: Blog Posts
+            fieldUid: d5da255e-0a3f-4eb8-817c-97ee72286b6c
             instructions: null
             label: null
             required: false
