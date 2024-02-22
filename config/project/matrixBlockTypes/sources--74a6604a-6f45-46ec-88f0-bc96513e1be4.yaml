@@ -88,6 +88,17 @@ fields:
             -
               - default
               - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Grants
+            -
+              - value
+              - grants
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Checkboxes

@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 78c65c80-c62f-42e9-806c-128d1bfb7aac # Blog Post, News Item, or Grantee
+            fieldUid: 78c65c80-c62f-42e9-806c-128d1bfb7aac # Blog Post, News Item, Grantee, or Grant
             instructions: null
             label: null
             required: true
@@ -21,13 +21,13 @@ fieldLayouts:
         uid: 2bcc298a-f76b-4cbd-8938-e1e20fb88d41
         userCondition: null
 fields:
-  78c65c80-c62f-42e9-806c-128d1bfb7aac: # Blog Post, News Item, or Grantee
+  78c65c80-c62f-42e9-806c-128d1bfb7aac: # Blog Post, News Item, Grantee, or Grant
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: blogPostNewsItemOrGrantee
+    handle: blogPostNewsItemGranteeOrGrant
     instructions: null
-    name: 'Blog Post, News Item, or Grantee'
+    name: 'Blog Post, News Item, Grantee, or Grant'
     searchable: false
     settings:
       allowSelfRelations: false
@@ -41,6 +41,7 @@ fields:
       sources:
         - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
         - 'section:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+        - 'section:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
         - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
       targetSiteId: null
       validateRelatedElements: false
