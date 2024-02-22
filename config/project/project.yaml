@@ -1,4 +1,4 @@
-dateModified: 1708618690
+dateModified: 1708620033
 elementSources:
   craft\elements\Asset:
     -
@@ -469,7 +469,6 @@ meta:
     3b57b347-d307-44e5-874b-c98927dad390: 'Nav Item' # Nav Item
     03b97c7f-5861-488a-9875-0738f0246281: Accordion # Accordion
     3b585310-81d5-451e-8ed6-030062c40e94: 'Form: Wildcard' # Form: Wildcard
-    3d8825d4-9d2f-42dd-9c7c-790dbccfafb9: 'Carousel: Grantees' # Carousel: Grantees
     3da8a9db-c68d-4f61-a9ab-5645cc1f1c07: Menu # Menu
     03f8a74f-3d28-4a13-b76b-92af6c801a16: 'Text: Supporting' # Text: Supporting
     3f87cd19-1003-4802-9f60-9fb8d5062700: Body # Body
@@ -493,7 +492,6 @@ meta:
     5ca73fd1-fa27-4af4-bc45-c1373761dbb0: 'Text: Transcript' # Text: Transcript
     5d5d980b-1804-4df2-8490-062c126dec93: 'Highlight: Stats' # Highlight: Stats
     5de2e8df-6dad-4364-bf23-2d48496f0f1d: 'Text: Description' # Text: Description
-    05e124a0-b3b6-41ad-a72a-3add0dc8716d: 'Carousel: Grantees' # Carousel: Grantees
     5ef09b80-b3aa-4b57-99dc-4bb324d63fd0: 'Internal Page' # Internal Page
     5f1ebbf5-e779-432a-bee5-8ee4e399d0e9: 'Card: Action' # Card: Action
     6aba2b9f-3c08-4c50-8b7f-bb848f592b20: 'Asset: Video' # Asset: Video
@@ -651,7 +649,6 @@ meta:
     890d73b0-e871-4780-aea2-81e638b832a5: 'Entry: Blog or Newsroom' # Entry: Blog or Newsroom
     914c6a3c-f48a-422f-ba86-dec3f3932b9f: Label # Label
     915b78de-ea87-43f6-bd0e-f9dd749a57b5: 'Barr Foundation' # Barr Foundation
-    918fd486-3aea-41b5-bdaa-88f4114147e7: 'Carousel: Grantees' # Carousel: Grantees
     0955e7e8-11cb-46b2-8093-77101f7bd6d6: 'External Person' # External Person
     962d1b17-ec75-47e8-a297-39b0b971c535: Item # Item
     1033d65e-45fe-47b1-9dea-dbcd29f977db: 'Sponsored Organization Background' # Sponsored Organization Background

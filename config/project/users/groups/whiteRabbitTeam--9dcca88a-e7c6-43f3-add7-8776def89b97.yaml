@@ -134,7 +134,7 @@ permissions:
   - 'neo-createblocks:012267c4-9d65-467d-be60-57e431d098ef'
   - 'neo-createblocks:0394538d-48b7-4ac8-bcd6-5866934254f1' # Card: Grantees
   - 'neo-createblocks:03b97c7f-5861-488a-9875-0738f0246281' # Accordion
-  - 'neo-createblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d' # Carousel: Grantees
+  - 'neo-createblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d'
   - 'neo-createblocks:0b20ecdf-4270-4334-a697-b9ad36c32962' # Card: News
   - 'neo-createblocks:164e396c-5108-4979-b8fd-d4dbd523d790' # Card: Wildcard
   - 'neo-createblocks:1a788826-fcfe-45be-b8ec-68bafc7d3790' # Carousel: Quotes
@@ -144,7 +144,7 @@ permissions:
   - 'neo-createblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09'
   - 'neo-createblocks:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
   - 'neo-createblocks:3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53' # People Section
-  - 'neo-createblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9' # Carousel: Grantees
+  - 'neo-createblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9'
   - 'neo-createblocks:453424c1-d719-473d-859b-b57b862aa56c' # Highlight: Timeline (Multiple)
   - 'neo-createblocks:4c30b3fa-b81d-4931-a585-f3e994684d6c' # Carousel: Fellows
   - 'neo-createblocks:4eb30fbf-3647-444f-ba73-29ebb5b12477' # Card: Team
@@ -179,7 +179,7 @@ permissions:
   - 'neo-deleteblocks:012267c4-9d65-467d-be60-57e431d098ef'
   - 'neo-deleteblocks:0394538d-48b7-4ac8-bcd6-5866934254f1' # Card: Grantees
   - 'neo-deleteblocks:03b97c7f-5861-488a-9875-0738f0246281' # Accordion
-  - 'neo-deleteblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d' # Carousel: Grantees
+  - 'neo-deleteblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d'
   - 'neo-deleteblocks:0b20ecdf-4270-4334-a697-b9ad36c32962' # Card: News
   - 'neo-deleteblocks:164e396c-5108-4979-b8fd-d4dbd523d790' # Card: Wildcard
   - 'neo-deleteblocks:1a788826-fcfe-45be-b8ec-68bafc7d3790' # Carousel: Quotes
@@ -189,7 +189,7 @@ permissions:
   - 'neo-deleteblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09'
   - 'neo-deleteblocks:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
   - 'neo-deleteblocks:3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53' # People Section
-  - 'neo-deleteblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9' # Carousel: Grantees
+  - 'neo-deleteblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9'
   - 'neo-deleteblocks:453424c1-d719-473d-859b-b57b862aa56c' # Highlight: Timeline (Multiple)
   - 'neo-deleteblocks:4c30b3fa-b81d-4931-a585-f3e994684d6c' # Carousel: Fellows
   - 'neo-deleteblocks:4eb30fbf-3647-444f-ba73-29ebb5b12477' # Card: Team
@@ -224,7 +224,7 @@ permissions:
   - 'neo-editblocks:012267c4-9d65-467d-be60-57e431d098ef'
   - 'neo-editblocks:0394538d-48b7-4ac8-bcd6-5866934254f1' # Card: Grantees
   - 'neo-editblocks:03b97c7f-5861-488a-9875-0738f0246281' # Accordion
-  - 'neo-editblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d' # Carousel: Grantees
+  - 'neo-editblocks:05e124a0-b3b6-41ad-a72a-3add0dc8716d'
   - 'neo-editblocks:0b20ecdf-4270-4334-a697-b9ad36c32962' # Card: News
   - 'neo-editblocks:164e396c-5108-4979-b8fd-d4dbd523d790' # Card: Wildcard
   - 'neo-editblocks:1a788826-fcfe-45be-b8ec-68bafc7d3790' # Carousel: Quotes
@@ -234,7 +234,7 @@ permissions:
   - 'neo-editblocks:2d95f3a7-b880-44c6-bf42-f60b393f9d09'
   - 'neo-editblocks:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
   - 'neo-editblocks:3b8d6df8-d489-4f80-9eb6-0b8bc28b3e53' # People Section
-  - 'neo-editblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9' # Carousel: Grantees
+  - 'neo-editblocks:3d8825d4-9d2f-42dd-9c7c-790dbccfafb9'
   - 'neo-editblocks:453424c1-d719-473d-859b-b57b862aa56c' # Highlight: Timeline (Multiple)
   - 'neo-editblocks:4c30b3fa-b81d-4931-a585-f3e994684d6c' # Carousel: Fellows
   - 'neo-editblocks:4eb30fbf-3647-444f-ba73-29ebb5b12477' # Card: Team

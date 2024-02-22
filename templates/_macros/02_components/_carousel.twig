@@ -141,14 +141,6 @@
                 <h2 class="blockGeneric-heading">This is my fellows carousel</h2>
             </div>
 
-        {% case 'grantees' %}
-            {% set heading = content.textHeading %}
-            {% set entries = content.carouselGrantees.all() %}
-
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my grantees carousel</h2>
-            </div>
-
         {% case 'quotes' %}
             {% set heading = content.textHeading %}
             {% set entries = content.carouselQuotes.all() %}
