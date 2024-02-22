@@ -20,6 +20,10 @@
             .carouselRow {
                 padding-block-end: var(--base-18);
             }
+
+            .carouselRow + .cardItem--action {
+                margin-block-start: var(--neg-base-18);
+            }
         }
     </style>
     {% switch variant %}
@@ -62,6 +66,7 @@
                 {% endfor %}
             {% endif %}
 
+            {# Set action card #}
             {% set actionCard = content.children.one.cardAction %}
 
             <div class="carouselRow | container-narrow" style="padding-block-start:var(--base-4)">
@@ -132,6 +137,11 @@
                 {% endfor %}
                 </div>
             </div>
+
+            {# Action Card #}
+            {% if actionCard|length %}
+                {{ cards.action(actionCard) }}
+            {% endif %}
 
         {% case 'fellows' %}
             {% set heading = content.textHeading %}
