@@ -4,29 +4,29 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  c9679949-883d-40a2-b91e-da99d18d8e0a:
+  0e9a725e-d07b-4871-bc7d-8604853edc43:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 87a17359-5ffb-471d-8901-d6fffb218987 # Card: Person Type
+            fieldUid: 5a492adc-7baf-4f6f-a0b1-5a528df2c28a # Carousel: Manual
             instructions: null
-            label: 'Cards: Bio'
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 058082cc-a91c-4417-9ab7-c0bd03534e0e
+            uid: ef4d8384-11fd-4137-b30a-f37b235bf596
             userCondition: null
             warning: null
             width: 100
-        name: Cards
-        uid: 6bb0ba34-bea1-406a-9bd0-0675b80d136f
+        name: Carousel
+        uid: b6fa7a34-26f5-4084-84ed-2fe620f1499d
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: feedBio
+handle: carouselManual
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -36,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Filterable Feed: Bio'
+name: 'Carousel: Manual'
 topLevel: false

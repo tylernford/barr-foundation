@@ -1,92 +1,80 @@
-field: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed: Manual
+field: 5a492adc-7baf-4f6f-a0b1-5a528df2c28a # Carousel: Manual
 fieldLayouts:
-  ee3335b7-6bfc-4df0-a547-82d4940d8df5:
+  9fe9e45b-6901-4e0a-a1fd-22f42e689851:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: d95defeb-86a9-41c1-b9c1-2c644240afb7 # Asset: Cover Image
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3052c3ef-32d6-45ee-af05-317747110e9b
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: cbb6cbb6-8104-42f3-be47-02a2885687b8 # Video URL
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a98bdbac-5dab-47a4-891c-9b0ce06ad81f
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 6c068a13-02e2-4531-bfe1-f9082911ec87 # Label
+            fieldUid: 8cdbaf53-d333-4552-b014-73d52d21206a # Asset: Image
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7a78dd7b-d28f-43a3-97d2-783efb16786e
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 48805fe6-16d1-443a-ab57-04fb3264ea7f # Title
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 100be3a0-2c36-43f5-9ae2-432628b67e50
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: b326726c-ead3-430d-b2b8-9ec83a64c3ab # Summary
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a5be15f8-ca1a-4728-b263-0c88a1f32d34
+            uid: 29c69f53-a709-4ec5-9f46-17f3efc8928a
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 2d68d05d-95ee-4cf8-a1e6-3b302f6ba8cc # Action
+            fieldUid: 313be7b0-e5be-4133-8314-c61d2742702d # Label
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ef143bcc-2afc-4ca7-a128-41e04e772b60
+            uid: ba4d1afa-d9b4-40f7-a52b-ff9eb887ccea
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: e63b1f21-193f-4943-86ed-1bf023bb0c97 # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e021575c-8b54-48aa-8578-e27d0e64ba82
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 09c7181f-8326-4e53-afce-769191917ab0 # Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ac92ca9-dfa1-4b59-8d1f-f3bc69708b85
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7d4b24c4-0dff-4131-8a30-54df612de714 # Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 693cf689-ba0e-4045-9106-04212a704dd4
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 021f8a77-df62-471f-9611-95822a0eab9e
+        uid: 88e1bc13-d939-4408-b82f-d14ac923a33d
         userCondition: null
 fields:
-  2d68d05d-95ee-4cf8-a1e6-3b302f6ba8cc: # Action
+  7d4b24c4-0dff-4131-8a30-54df612de714: # Action
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: actionLink
-    instructions: Optional.
+    instructions: 'Optional. Select an Entry, Asset, or enter an offsite URL.'
     name: Action
     searchable: false
     settings:
@@ -144,48 +132,47 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  6c068a13-02e2-4531-bfe1-f9082911ec87: # Label
-    columnSuffix: asmenerz
-    contentColumnType: text
+  8cdbaf53-d333-4552-b014-73d52d21206a: # Asset: Image
+    columnSuffix: null
+    contentColumnType: string
     fieldGroup: null
-    handle: label
-    instructions: Optional.
-    name: Label
+    handle: assetImage
+    instructions: 'Optional. Be sure to double-click the thumbnail preview to add Alt Text.'
+    name: 'Asset: Image'
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
     translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  48805fe6-16d1-443a-ab57-04fb3264ea7f: # Title
-    columnSuffix: oajszpue
-    contentColumnType: string(800)
-    fieldGroup: null
-    handle: cardTitle
-    instructions: null
-    name: Title
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: 200
-      code: false
-      columnType: null
-      initialRows: 1
-      multiline: true
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  b326726c-ead3-430d-b2b8-9ec83a64c3ab: # Summary
-    columnSuffix: jueazqbf
+    translationMethod: site
+    type: craft\fields\Assets
+  09c7181f-8326-4e53-afce-769191917ab0: # Summary
+    columnSuffix: wpxeunpr
     contentColumnType: text
     fieldGroup: null
     handle: summary
@@ -204,58 +191,46 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  cbb6cbb6-8104-42f3-be47-02a2885687b8: # Video URL
-    columnSuffix: tesnohdf
+  313be7b0-e5be-4133-8314-c61d2742702d: # Label
+    columnSuffix: gvkfqmhp
     contentColumnType: text
     fieldGroup: null
-    handle: videoUrl
-    instructions: 'Enter the URL to the Video. E.g. _https://vimeo.com/869219144_'
-    name: 'Video URL'
+    handle: label
+    instructions: null
+    name: Label
     searchable: false
     settings:
-      url: ''
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
-    type: wrav\oembed\fields\OembedField
-  d95defeb-86a9-41c1-b9c1-2c644240afb7: # Asset: Cover Image
-    columnSuffix: null
-    contentColumnType: string
+    type: craft\fields\PlainText
+  e63b1f21-193f-4943-86ed-1bf023bb0c97: # Title
+    columnSuffix: zxlgewhd
+    contentColumnType: string(800)
     fieldGroup: null
-    handle: assetImage
-    instructions: 'Used as Video cover image. Select exactly one image.'
-    name: 'Asset: Cover Image'
+    handle: cardTitle
+    instructions: null
+    name: Title
     searchable: false
     settings:
-      allowSelfRelations: false
-      allowSubfolders: false
-      allowUploads: true
-      allowedKinds:
-        - image
-      branchLimit: null
-      defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      defaultUploadLocationSubpath: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: 1
-      minRelations: 1
-      previewMode: full
-      restrictFiles: true
-      restrictLocation: false
-      restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      restrictedLocationSubpath: null
-      selectionLabel: 'Select a Cover Image'
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      sources:
-        - 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: large
+      byteLimit: null
+      charLimit: 200
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-handle: video
-name: 'Media: Video'
-sortOrder: 3
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: generic
+name: Generic
+sortOrder: 4
