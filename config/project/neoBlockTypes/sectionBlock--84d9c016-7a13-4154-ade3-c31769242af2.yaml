@@ -10,7 +10,6 @@ childBlocks:
   - feedBio
   - carouselCards
   - carouselFellows
-  - carouselQuotes
   - timelineSingle
   - timelineMultiple
 conditions: null
@@ -18,7 +17,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  9660f57d-6ce5-4def-81fd-471be7ee1d03:
+  82a06af7-74e5-4e8b-b9fb-1bec08349da7:
     tabs:
       -
         elementCondition: null

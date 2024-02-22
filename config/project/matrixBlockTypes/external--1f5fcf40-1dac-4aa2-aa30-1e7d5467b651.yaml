@@ -7,22 +7,10 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 2ae46801-59a1-4cf5-a238-a8ba9317eed9 # Organization
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 26326d0f-302c-43a2-8aa0-f8bce1d9c200
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: c5b61d17-072a-46ba-b6ab-f91256d7ac59 # Full Name
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b5022687-2af5-41b0-b732-4c122de16422
@@ -38,6 +26,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a8e33173-74f3-4773-84d0-50a8d26a728a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2ae46801-59a1-4cf5-a238-a8ba9317eed9 # Organization
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26326d0f-302c-43a2-8aa0-f8bce1d9c200
             userCondition: null
             warning: null
             width: 100
@@ -70,8 +70,8 @@ fields:
       charLimit: null
       code: false
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: 1
+      multiline: true
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -90,7 +90,7 @@ fields:
       allowTarget: true
       autoNoReferrer: false
       customTextMaxLength: 0
-      customTextRequired: false
+      customTextRequired: true
       defaultLinkName: url
       defaultText: ''
       enableAllLinkTypes: false
@@ -153,8 +153,8 @@ fields:
       charLimit: null
       code: false
       columnType: null
-      initialRows: 4
-      multiline: false
+      initialRows: 1
+      multiline: true
       placeholder: null
       uiMode: normal
     translationKeyFormat: null

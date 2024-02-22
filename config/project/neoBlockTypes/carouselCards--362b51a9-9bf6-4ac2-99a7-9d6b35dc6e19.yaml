@@ -1,6 +1,7 @@
 childBlocks:
   - carouselManual
   - carouselAuto
+  - carouselQuotes
 conditions: null
 description: ''
 enabled: true

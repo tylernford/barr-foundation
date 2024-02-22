@@ -1,4 +1,4 @@
-changedFieldIndicator: 709274419
+changedFieldIndicator: 1695390472
 field: 66cef11d-f827-4b38-8867-ece3eefda13c # Carousel: Quotes
 fieldLayouts:
   d0ba3d88-8c61-42f4-9ba8-7c9bfe80d44c:
@@ -11,22 +11,10 @@ fieldLayouts:
             fieldUid: 5a2816d1-111d-44df-933d-9fe33d93acdb # Text: Quote
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 0f01685c-79ee-4b80-b6fa-b9da79a074b9
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 135f1b4e-27cb-4cda-be94-52607d445f75 # Asset: Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f2a7ad8a-08c0-4f6b-a633-bed85533156e
             userCondition: null
             warning: null
             width: 100
@@ -39,6 +27,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4ee031af-1bfa-4cb2-bd10-e15c75c92c84
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 135f1b4e-27cb-4cda-be94-52607d445f75 # Asset: Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2a7ad8a-08c0-4f6b-a633-bed85533156e
             userCondition: null
             warning: null
             width: 100
@@ -56,7 +56,7 @@ fields:
     searchable: false
     settings:
       availableTransforms: ''
-      availableVolumes: '*'
+      availableVolumes: ''
       ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
       columnType: text
       defaultTransform: null
@@ -97,17 +97,6 @@ fields:
       restrictedDefaultUploadSubpath: null
       restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
       restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image'
       showSiteMenu: true
       showUnpermittedFiles: false

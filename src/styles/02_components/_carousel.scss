@@ -14,8 +14,6 @@
   --color-carousel--background: var(--color-grey-25);
   --color-carousel--hover: var(--color-navy-100);
   --color-carousel--hover-background: var(--color-citrus-100);
-
-
 }
 [data-theme-color="green"] {
   .carousel {
@@ -150,10 +148,6 @@
   }
 
   @include breakpoint(sm) {
-    .slide {
-      width: var(--base-100);
-    }
-
     .carousel__controls {
       .controls__pagination {
         span {
@@ -183,6 +177,39 @@
         span {
           width: var(--base-9);
         }
+      }
+    }
+  }
+
+  &[data-variant="cards"] {
+    @include breakpoint(sm) {
+      .slide {
+        width: var(--base-100);
+      }
+    }
+  }
+
+  &[data-variant="quotes"] {
+    .swiper {
+      &::after {
+        content: '';
+        inset: -20px -100vw -20px auto;
+        width: 100vw;
+        position: absolute;
+        background-color: var(--color-carousel--background);
+        z-index: 10;
+      }
+    }
+
+    .quote {
+      padding-block: var(--base-6) 0;
+
+      @include breakpoint(lg) {
+        padding-block: var(--base-8) var(--base-5);
+      }
+
+      @include breakpoint(xl) {
+        padding-block: var(--base-12) var(--base-9);
       }
     }
   }

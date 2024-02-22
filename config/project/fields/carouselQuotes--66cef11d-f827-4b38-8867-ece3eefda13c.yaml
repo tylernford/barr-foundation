@@ -2,23 +2,16 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 526592df-8835-48ec-80a2-b149d57b3e57 # Carousels
 handle: carouselQuotes
-instructions: 'Add at least 4 quotes to carousel. Drag & drop to rearrange.'
+instructions: 'Add at least 3 quotes to carousel. Drag & drop to rearrange.'
 name: 'Carousel: Quotes'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1271931897
+  changedFieldIndicator: 72109549
   columns:
     __assoc__:
       -
         - 5a2816d1-111d-44df-933d-9fe33d93acdb # Text: Quote
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 135f1b4e-27cb-4cda-be94-52607d445f75 # Asset: Image
         -
           __assoc__:
             -
@@ -31,13 +24,20 @@ settings:
             -
               - width
               - ''
+      -
+        - 135f1b4e-27cb-4cda-be94-52607d445f75 # Asset: Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_carouselquotes}}'
   fieldLayout: matrix
   maxRows: null
-  minRows: 4
+  minRows: 3
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: 'Add a quote'
+  selectionLabel: 'Add a Quote'
   staticField: null
 translationKeyFormat: null
 translationMethod: none

@@ -10,7 +10,7 @@ fieldLayouts:
             fieldUid: 6eab3484-4a8a-459d-b34c-6f48332b75d5 # __blank__
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 239298c5-ce74-4738-bc44-267e6089af60
@@ -35,18 +35,7 @@ fields:
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1
-      minRelations: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Entry
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\entries\EntryCondition
+      minRelations: 1
       selectionLabel: 'Add a person'
       showSiteMenu: true
       sources:

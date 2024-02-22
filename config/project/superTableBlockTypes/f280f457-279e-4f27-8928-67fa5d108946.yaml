@@ -1,4 +1,4 @@
-changedFieldIndicator: 1252350551
+changedFieldIndicator: 1941626454
 field: db600239-720e-403b-b894-d8ef369fc205 # Highlight: Quote
 fieldLayouts:
   1d222c8d-d130-442c-9b40-935d909e07e5:
@@ -11,7 +11,7 @@ fieldLayouts:
             fieldUid: 625571b0-68f3-4147-b8d6-9cc70d2f47a2 # Text: Quote
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 47cb18b6-af9a-4c3c-9d8b-241fc9a8b281
@@ -112,7 +112,7 @@ fields:
     searchable: false
     settings:
       availableTransforms: ''
-      availableVolumes: '*'
+      availableVolumes: ''
       ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
       columnType: text
       defaultTransform: null
