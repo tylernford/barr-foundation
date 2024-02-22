@@ -1,4 +1,4 @@
-dateModified: 1708635323
+dateModified: 1708641509
 elementSources:
   craft\elements\Asset:
     -
@@ -822,7 +822,6 @@ meta:
     cebe9f65-5c23-462d-a3e9-6d51ecd7eb49: 'Card: Grantmaking' # Card: Grantmaking
     cf026ccf-44b0-44ea-bb7c-a2d919af1521: 'Media: Audio or Video' # Media: Audio or Video
     cfb7f673-e726-4e10-b627-eb563177ea3d: 'Style: Width' # Style: Width
-    d07afb10-c7ee-417d-8969-44060e0f3bc6: 'Carousel: Research' # Carousel: Research
     d1baa3d0-c525-4a33-bfc6-6851a329b88d: Image # Image
     d1f322ee-1b5c-4849-8790-1c1944d77c57: Video # Video
     d1fb8e0a-7a87-4586-994b-e8ca07e4a9d9: Year # Year
