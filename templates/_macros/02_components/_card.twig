@@ -477,6 +477,7 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set post  = config.post %}
+    {% set url   = post.url %}
     {% set image = post.assetImage.one %}
     {% set title = post.title %}
 
@@ -565,18 +566,16 @@
                     {% endif %}
 
                     {# Action #}
-                    {% if action.url|length %}
-                        <div class="cardItem__action">
-                            {% set actionAttributes = {
-                                type: 'button', isReversed: false,
-                                icon: 'linkType', iconOnly: false,
-                                text: action.text, url: action,
-                                linkType: action.type, target: action.target
-                            } %}
+                    <div class="cardItem__action">
+                        {% set actionAttributes = {
+                            type: 'button', isReversed: false,
+                            icon: 'linkType', iconOnly: false,
+                            text: 'Read More', url: url,
+                            linkType: 'entry', target: ''
+                        } %}
 
-                            {{ actions.action(actionAttributes) }}
-                        </div>
-                    {% endif %}
+                        {{ actions.action(actionAttributes) }}
+                    </div>
                 </div>
             </div>
         </div>
