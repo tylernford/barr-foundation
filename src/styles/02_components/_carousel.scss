@@ -1,0 +1,195 @@
+/* _card.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Carousel
+  See templates/_macros/02_components/_carousel.twig for markup
+------------------------------------------------------------------------ */
+
+// Theme
+.carousel {
+  --color-carousel--primary: var(--color-teal-150);
+  --color-carousel--secondary: var(--color-grey-150);
+  --color-carousel--tertiary: var(--color-grey-50);
+  --color-carousel--background: var(--color-grey-25);
+  --color-carousel--hover: var(--color-navy-100);
+  --color-carousel--hover-background: var(--color-citrus-100);
+
+
+}
+[data-theme-color="green"] {
+  .carousel {
+    --color-carousel--primary: var(--color-program-green-150);
+
+  }
+}
+[data-theme-color="plum"] {
+  .carousel {
+    --color-carousel--primary: var(--color-program-plum-100);
+
+  }
+}
+[data-theme-color="marigold"] {
+  .carousel {
+    --color-carousel--primary: var(--color-program-marigold-100);
+
+  }
+}
+
+// Carousel
+.carousel {
+  padding-block: var(--base-6);
+  @include container-narrow;
+
+  .swiper {
+    overflow: inherit;
+
+    &::before {
+      content: '';
+      inset: -20px auto -20px -100vw;
+      width: 100vw;
+      position: absolute;
+      background-color: var(--color-carousel--background);
+      z-index: 10;
+    }
+  }
+
+  .slide {
+    width: 100%;
+    height: auto;
+
+    .cardItem {
+      box-shadow: none;
+      border: 1px solid var(--color-carousel--tertiary);
+      border-right:0;
+      height: 100%;
+    }
+  }
+
+  .carousel__controls {
+    padding-block-start: var(--base-8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .controls__button {
+      appearance: none;
+      width: var(--base-9);
+      height: var(--base-9);
+      padding: 0;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 1000px;
+      background-color: transparent;
+      color: var(--color-carousel--primary);
+      cursor: pointer;
+      transition: all color var(--transition) ease-in;
+
+      span {
+        @include visuallyHide;
+      }
+
+      svg {
+        width: var(--icon-size);
+        height: var(--icon-size);
+      }
+
+      &.controls__prev {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      // Hover
+      @media (hover: hover) {
+        &:hover {
+          background-color: var(--color-carousel--hover-background);
+          color: var(--color-carousel--hover);
+          box-shadow: var(--shadow-action);
+          transition: all var(--transition-intermediate) ease-out;
+        }
+      }
+
+      // Focus
+      &:focus-visible {
+        outline: var(--outline-width) solid var(--color-focus);
+        outline-offset: var(--outline-offset);
+        transition: var(--transition-action-in);
+        transition: outline var(--transition-intermediate) ease-out;
+      }
+    }
+
+    .controls__pagination {
+      margin-block-start: var(--neg-base);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-inline: var(--base-4);
+
+      span {
+        margin-block-start: var(--base);
+        margin-inline: 2px;
+        width: var(--base-2);
+        height: var(--base-2);
+        border-radius: 1000px;
+        border: 1px solid var(--color-carousel--secondary);
+        background-color: transparent;
+        transition: background-color var(--transition) ease;
+        
+        // Active
+        &.swiper-pagination-bullet-active {
+          background-color: var(--color-carousel--secondary);
+          transition: background-color var(--transition-intermediate) ease-out;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    .slide {
+      width: var(--base-100);
+    }
+
+    .carousel__controls {
+      .controls__pagination {
+        span {
+          margin-inline: var(--base);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    .carousel__controls {
+      .controls__pagination {
+        span {
+          width: var(--base-5);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding-block: var(--base-9);
+  }
+
+  @include breakpoint(xl) {
+    .carousel__controls {
+      .controls__pagination {
+        span {
+          width: var(--base-9);
+        }
+      }
+    }
+  }
+}
+
+.carousel + .cardItem--action {
+  @include breakpoint(lg) {
+    margin-block-start: var(--neg-base-18);
+  }
+}
