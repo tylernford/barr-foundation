@@ -617,6 +617,25 @@
   }
 
 
+  &.cardItem--grant {
+    box-shadow: var(--shadow-shallow--light);
+    padding: var(--base-6);
+    display: grid;
+
+    @include breakpoint(sm) {
+      padding: var(--base-9);
+    }
+
+    @include breakpoint(sm-md) {
+      padding: var(--base-6);
+    }
+
+    @include breakpoint(lg) {
+      padding: var(--base-9);
+    }
+  }
+
+
   // Media
   &.cardItem--media {
     .cardItem__video-play {
@@ -866,18 +885,6 @@
 // Grid size
 .cardRow[data-columns="2"] {
   .cardItem {
-    &.cardItem--grantee,
-    &.cardItem--media,
-    &.cardItem--generic {
-      @include breakpoint(xl) {
-        padding: var(--base-6);
-      }
-
-      @include breakpoint(xxl) {
-        padding: var(--base-9);
-      }
-    }
-
     &.cardItem--media,
     &.cardItem--generic {
       @include breakpoint(xl) {

@@ -1,4 +1,4 @@
-dateModified: 1708557242
+dateModified: 1708564360
 elementSources:
   craft\elements\Asset:
     -
@@ -579,7 +579,7 @@ meta:
     74a6604a-6f45-46ec-88f0-bc96513e1be4: Sources # Sources
     74b63598-5caa-49c6-8bb3-b035cc4ca287: Text # Text
     75ac338a-6d5c-4d09-b602-27629776857b: Icon # Icon
-    78c65c80-c62f-42e9-806c-128d1bfb7aac: 'Blog Post, News Item, or Grantee' # Blog Post, News Item, or Grantee
+    78c65c80-c62f-42e9-806c-128d1bfb7aac: 'Blog Post, News Item, Grantee, or Grant' # Blog Post, News Item, Grantee, or Grant
     79e781f4-3675-4c4c-8202-14bbb9ba2f51: 'Subsection Name' # Subsection Name
     80add9af-3296-4617-bce3-a095c1939a6f: Summary # Summary
     81c1e4d6-2c77-4963-b5a3-5cce1ea6926d: 'Flag: Racial Equity Centered' # Flag: Racial Equity Centered

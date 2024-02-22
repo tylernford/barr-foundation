@@ -56,7 +56,7 @@
                     
                     {# If entry card #}
                     {% else %}
-                        {% set feedCards = feedCards|merge([item.blogPostNewsItemOrGrantee.one]) %}
+                        {% set feedCards = feedCards|merge([item.blogPostNewsItemGranteeOrGrant.one]) %}
                     {% endif %}
                 {% endfor %}
             
@@ -127,15 +127,12 @@
                             } %}
 
                             {{ cards.news(newsCardConfig) }}
-                        {% else %}
-                            <article class="cardItem cardItem--news">
+                        {% elseif cardVariant == 'grants' %}
+                            <article class="cardItem cardItem--grant">
                                 <div class="cardItem__inner">
                                     {# Header #}
                                     <header class="cardItem__header">
-                                        <h3 class="cardItem__heading">{{ card.title }}</h3>
-                                        {% if card.label %}
-                                            <span class="cardItem__label">{{ card.label }}</span>
-                                        {% endif %}
+                                        <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
                                     </header>
                                 </div>
                             </article>
