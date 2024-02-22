@@ -88,17 +88,6 @@ fields:
             -
               - default
               - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Grants
-            -
-              - value
-              - grants
-            -
-              - default
-              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Checkboxes
@@ -133,7 +122,7 @@ fields:
     contentColumnType: boolean
     fieldGroup: null
     handle: randomize
-    instructions: 'Optional. Grantees only. Cards will be randomized rather than displayed chronologically.'
+    instructions: 'Optional. Grants/Grantees only. Cards will be randomized rather than displayed chronologically.'
     name: Randomize
     searchable: false
     settings:
