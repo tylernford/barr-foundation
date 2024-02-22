@@ -35,7 +35,7 @@ fields:
       localizeRelations: false
       maintainHierarchy: false
       maxRelations: 1
-      minRelations: null
+      minRelations: 1
       selectionLabel: 'Add a person'
       showSiteMenu: true
       sources:
