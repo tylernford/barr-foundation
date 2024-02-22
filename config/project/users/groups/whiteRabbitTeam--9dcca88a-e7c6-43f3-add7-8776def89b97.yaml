@@ -156,8 +156,8 @@ permissions:
   - 'neo-createblocks:5d5d980b-1804-4df2-8490-062c126dec93' # Highlight: Stats
   - 'neo-createblocks:5f1ebbf5-e779-432a-bee5-8ee4e399d0e9' # Card: Action
   - 'neo-createblocks:6e809373-5f71-4565-9be1-b179b89dd23e' # Highlight: Quote
-  - 'neo-createblocks:70164bc9-6b6d-43ad-898e-7a4c1fb43467' # Carousel: Blog
-  - 'neo-createblocks:72205ea8-58a0-4975-873e-134c5d44d949' # Carousel: Blog Posts
+  - 'neo-createblocks:70164bc9-6b6d-43ad-898e-7a4c1fb43467'
+  - 'neo-createblocks:72205ea8-58a0-4975-873e-134c5d44d949'
   - 'neo-createblocks:734086c2-3e6c-4bd0-ada5-9d448a5abb03' # Feed: Grantees
   - 'neo-createblocks:7ff09a87-131e-4e78-b7d0-e6c5bc0063a2' # Carousel: Fellows
   - 'neo-createblocks:84d9c016-7a13-4154-ade3-c31769242af2' # Section
@@ -201,8 +201,8 @@ permissions:
   - 'neo-deleteblocks:5d5d980b-1804-4df2-8490-062c126dec93' # Highlight: Stats
   - 'neo-deleteblocks:5f1ebbf5-e779-432a-bee5-8ee4e399d0e9' # Card: Action
   - 'neo-deleteblocks:6e809373-5f71-4565-9be1-b179b89dd23e' # Highlight: Quote
-  - 'neo-deleteblocks:70164bc9-6b6d-43ad-898e-7a4c1fb43467' # Carousel: Blog
-  - 'neo-deleteblocks:72205ea8-58a0-4975-873e-134c5d44d949' # Carousel: Blog Posts
+  - 'neo-deleteblocks:70164bc9-6b6d-43ad-898e-7a4c1fb43467'
+  - 'neo-deleteblocks:72205ea8-58a0-4975-873e-134c5d44d949'
   - 'neo-deleteblocks:734086c2-3e6c-4bd0-ada5-9d448a5abb03' # Feed: Grantees
   - 'neo-deleteblocks:7ff09a87-131e-4e78-b7d0-e6c5bc0063a2' # Carousel: Fellows
   - 'neo-deleteblocks:84d9c016-7a13-4154-ade3-c31769242af2' # Section
@@ -246,8 +246,8 @@ permissions:
   - 'neo-editblocks:5d5d980b-1804-4df2-8490-062c126dec93' # Highlight: Stats
   - 'neo-editblocks:5f1ebbf5-e779-432a-bee5-8ee4e399d0e9' # Card: Action
   - 'neo-editblocks:6e809373-5f71-4565-9be1-b179b89dd23e' # Highlight: Quote
-  - 'neo-editblocks:70164bc9-6b6d-43ad-898e-7a4c1fb43467' # Carousel: Blog
-  - 'neo-editblocks:72205ea8-58a0-4975-873e-134c5d44d949' # Carousel: Blog Posts
+  - 'neo-editblocks:70164bc9-6b6d-43ad-898e-7a4c1fb43467'
+  - 'neo-editblocks:72205ea8-58a0-4975-873e-134c5d44d949'
   - 'neo-editblocks:734086c2-3e6c-4bd0-ada5-9d448a5abb03' # Feed: Grantees
   - 'neo-editblocks:7ff09a87-131e-4e78-b7d0-e6c5bc0063a2' # Carousel: Fellows
   - 'neo-editblocks:84d9c016-7a13-4154-ade3-c31769242af2' # Section

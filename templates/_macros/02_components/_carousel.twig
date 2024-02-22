@@ -133,14 +133,6 @@
                 </div>
             </div>
 
-        {% case 'blog' %}
-            {% set heading = content.textHeading %}
-            {% set entries = content.carouselBlog.all() %}
-
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my blog carousel</h2>
-            </div>
-
         {% case 'fellows' %}
             {% set heading = content.textHeading %}
             {% set entries = content.carouselFellows.all() %}

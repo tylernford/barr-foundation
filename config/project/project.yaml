@@ -1,4 +1,4 @@
-dateModified: 1708571197
+dateModified: 1708618690
 elementSources:
   craft\elements\Asset:
     -
@@ -698,8 +698,6 @@ meta:
     50784f23-4bd7-488c-bcab-69811f2b0fd8: Social # Social
     53047e2b-0d89-45ec-9f87-fe728f47da26: Action # Action
     61455e6d-9939-41a1-a0aa-22f559aae37a: 'Changelog Types' # Changelog Types
-    70164bc9-6b6d-43ad-898e-7a4c1fb43467: 'Carousel: Blog' # Carousel: Blog
-    72205ea8-58a0-4975-873e-134c5d44d949: 'Carousel: Blog Posts' # Carousel: Blog Posts
     80734fc1-e638-429a-9be7-1ff3810547bf: Title # Title
     81445eab-2d97-4591-92d7-6e4f6db5bbba: Intro # Intro
     83022d12-46dd-48e1-8f5a-bd1fce173430: Panel # Panel
@@ -834,7 +832,6 @@ meta:
     d2fe005a-7f77-461b-bb67-a1413fab5aa2: Team # Team
     d3b98f80-1cee-4849-a97b-9db551b73c5d: 'Asset: Image' # Asset: Image
     d5b83bf3-2016-4e0d-99cb-dcf4e82373e3: 'Asset: Video Demo' # Asset: Video Demo
-    d5da255e-0a3f-4eb8-817c-97ee72286b6c: 'Carousel: Blog Posts' # Carousel: Blog Posts
     d6cc819f-95bb-4e8b-9c2d-3d68a7331ca2: Action # Action
     d7ab12fb-563d-4010-b197-b35b577d91c7: 'Text: Bold + Italic' # Text: Bold + Italic
     d7d15dc5-92ab-442e-9ade-c9ea38289695: __blank__ # __blank__

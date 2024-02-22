@@ -9,7 +9,6 @@ childBlocks:
   - feedGrantees
   - feedBio
   - carouselCards
-  - carouselBlog
   - carouselFellows
   - carouselGrantees
   - carouselQuotes
@@ -20,7 +19,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  ed9d8886-1ea4-4cfe-8be0-484867d96020:
+  7c86e2ac-f4be-4aad-ae01-b116bfdbda98:
     tabs:
       -
         elementCondition: null
