@@ -1,87 +1,186 @@
-field: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed: Manual
+field: 5a492adc-7baf-4f6f-a0b1-5a528df2c28a # Carousel: Manual
 fieldLayouts:
-  dfe953a8-cf34-4041-9a2d-a2354bf7cbd4:
+  46d7162a-fa22-4904-9a3e-056a3ad73f43:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 1dd219bb-2f7d-40a7-8f37-ef31fed81c34 # Asset: Image
+            fieldUid: 414ac9d1-bac7-4be8-bd82-d652ae58a395 # Asset: Image
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d7cf6142-058f-47c2-a481-b4f8242d952b
+            uid: a64cb1c5-e0c2-44e1-930d-77b9d7df77d3
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9b4fc30f-02b9-4305-a6d9-5106b6b0ca10 # Label
+            fieldUid: 291ef41a-a8f0-4dec-8bd6-e257d1bd431e # Label
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 310893a9-9d8f-4acb-bcbc-3e9feb37561b
+            uid: 5ad8639b-a295-435a-a0f4-de185c7a600e
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
-            fieldUid: defaa92e-88b5-46fb-8a0c-4106a2acafcc # Title
+            fieldUid: 25c1632d-7030-46c9-b5df-bc85790df664 # Title
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e5d2d6c2-8072-4b76-9c81-4caeefd2a26c
+            uid: 3350d657-efdf-454a-a542-9130b2f0f3d8
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
-            fieldUid: b781cb75-0a89-4222-89eb-380d328015c3 # Summary
+            fieldUid: 9ad647fc-33bc-4104-8004-c717095c49ed # Summary
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 19be204b-1495-4c91-9bdb-f7c2ecb16aeb
+            uid: b8e0cedf-e0e3-4a44-9827-f01c7f3fa62f
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9fc2e323-b0fb-407e-9f61-180be83925da # Audio Snippet
+            fieldUid: 1dec4392-4c5c-4dc8-9e4d-3ef5b7f91715 # Audio Snippet
             instructions: null
             label: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 098a6248-2629-4b61-8eba-daaf8d17cd72
+            uid: 2ff90c20-0baa-4175-a3fa-78330c406959
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 70f8f4e5-9348-45f1-ab46-504aad878946 # Action
+            fieldUid: d6cc819f-95bb-4e8b-9c2d-3d68a7331ca2 # Action
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: bf46b78d-6ae3-43ea-b31e-7aa7dcface7d
+            uid: 718647cf-3de7-46fd-a729-839220f163b3
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 5eb8e770-8382-4886-aeb0-9f8ace843634
+        uid: a983b426-0f1d-48f8-b493-88d8f193f71e
         userCondition: null
 fields:
-  1dd219bb-2f7d-40a7-8f37-ef31fed81c34: # Asset: Image
+  1dec4392-4c5c-4dc8-9e4d-3ef5b7f91715: # Audio Snippet
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: audioSnippet
+    instructions: null
+    name: 'Audio Snippet'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - audio
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      restrictedLocationSubpath: null
+      selectionLabel: 'Select an Audio snippet'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources:
+        - 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  9ad647fc-33bc-4104-8004-c717095c49ed: # Summary
+    columnSuffix: troiznxa
+    contentColumnType: text
+    fieldGroup: null
+    handle: summary
+    instructions: 'Optional descriptive text.'
+    name: Summary
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 350
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  25c1632d-7030-46c9-b5df-bc85790df664: # Title
+    columnSuffix: mbfmjsad
+    contentColumnType: string(800)
+    fieldGroup: null
+    handle: cardTitle
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 200
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  291ef41a-a8f0-4dec-8bd6-e257d1bd431e: # Label
+    columnSuffix: xdpctzze
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: Optional.
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  414ac9d1-bac7-4be8-bd82-d652ae58a395: # Asset: Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -120,66 +219,7 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-  9b4fc30f-02b9-4305-a6d9-5106b6b0ca10: # Label
-    columnSuffix: tjsbbhzq
-    contentColumnType: text
-    fieldGroup: null
-    handle: label
-    instructions: Optional.
-    name: Label
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  9fc2e323-b0fb-407e-9f61-180be83925da: # Audio Snippet
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: audioSnippet
-    instructions: null
-    name: 'Audio Snippet'
-    searchable: false
-    settings:
-      allowSelfRelations: false
-      allowSubfolders: false
-      allowUploads: true
-      allowedKinds:
-        - audio
-      branchLimit: null
-      defaultUploadLocationSource: 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
-      defaultUploadLocationSubpath: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: 1
-      minRelations: 1
-      previewMode: full
-      restrictFiles: true
-      restrictLocation: false
-      restrictedDefaultUploadSubpath: null
-      restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-      restrictedLocationSubpath: null
-      selectionLabel: 'Select an Audio snippet'
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      sources:
-        - 'volume:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: large
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-  70f8f4e5-9348-45f1-ab46-504aad878946: # Action
+  d6cc819f-95bb-4e8b-9c2d-3d68a7331ca2: # Action
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -189,7 +229,7 @@ fields:
     searchable: false
     settings:
       allowCustomText: true
-      allowTarget: true
+      allowTarget: false
       autoNoReferrer: false
       customTextMaxLength: 0
       customTextRequired: false
@@ -242,46 +282,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: lenz\linkfield\fields\LinkField
-  b781cb75-0a89-4222-89eb-380d328015c3: # Summary
-    columnSuffix: msvtkhkq
-    contentColumnType: text
-    fieldGroup: null
-    handle: summary
-    instructions: 'Optional descriptive text.'
-    name: Summary
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: 350
-      code: false
-      columnType: null
-      initialRows: 1
-      multiline: true
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  defaa92e-88b5-46fb-8a0c-4106a2acafcc: # Title
-    columnSuffix: xxwsenem
-    contentColumnType: string(800)
-    fieldGroup: null
-    handle: cardTitle
-    instructions: null
-    name: Title
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: 200
-      code: false
-      columnType: null
-      initialRows: 1
-      multiline: true
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
 handle: audio
 name: 'Media: Audio'
 sortOrder: 2

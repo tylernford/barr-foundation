@@ -1,0 +1,54 @@
+field: 5a492adc-7baf-4f6f-a0b1-5a528df2c28a # Carousel: Manual
+fieldLayouts:
+  780fe0a0-f4f6-4072-84d6-fa7d0de73c96:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 1e6b65f1-8163-4538-888b-aefdcd932c14 # Blog Post, News Item, Grantee, or Grant
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9db87ff2-281a-4094-a51e-d01f79d15be3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6a69abb0-e0f7-47d9-9d71-12a638ac5d6d
+        userCondition: null
+fields:
+  1e6b65f1-8163-4538-888b-aefdcd932c14: # Blog Post, News Item, Grantee, or Grant
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: blogPostNewsItemGranteeOrGrant
+    instructions: null
+    name: 'Blog Post, News Item, Grantee, or Grant'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      selectionLabel: 'Select an Entry'
+      showSiteMenu: true
+      sources:
+        - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+        - 'section:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+        - 'section:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+        - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: entry
+name: 'Entry: Blog Post, News Item, Grantee, or Grant'
+sortOrder: 1

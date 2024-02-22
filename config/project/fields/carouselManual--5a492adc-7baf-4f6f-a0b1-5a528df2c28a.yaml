@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 526592df-8835-48ec-80a2-b149d57b3e57 # Carousels
+handle: carouselManual
+instructions: 'Add up to 12 cards from Blog, News, Grantee, Grants, Audio, or Video sources. Drag & drop to rearrange.'
+name: 'Carousel: Manual'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_carouselmanual}}'
+  maxBlocks: 12
+  minBlocks: 4
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

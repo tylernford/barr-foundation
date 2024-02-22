@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  aad87da3-6738-4bda-a787-adb42c1e8eca:
+  261b5e6a-ab63-43f9-bc30-95316bffa79d:
     tabs:
       -
         elementCondition: null
