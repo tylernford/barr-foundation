@@ -7,7 +7,7 @@ name: 'Card: Action'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 626079112
+  changedFieldIndicator: 1368973680
   columns:
     __assoc__:
       -
