@@ -1,4 +1,4 @@
-changedFieldIndicator: 321949931
+changedFieldIndicator: 867269111
 field: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
 fieldLayouts:
   85299f45-836f-4cf3-9362-d796f410c3fa:
@@ -11,7 +11,7 @@ fieldLayouts:
             fieldUid: c80dff18-6eeb-4474-8278-fdfc55a4630c # Text: Supporting
             instructions: null
             label: null
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ff0461af-dca1-4ede-bda5-0e97e33b07de
