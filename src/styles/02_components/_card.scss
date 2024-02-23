@@ -778,14 +778,21 @@
 }
 
 // Grantee Variant
-[data-grid-style="grid"] {
+:not([data-grid-style="list"]) {
   .cardItem.cardItem--bio {
     padding: var(--base-6);
-    display: grid;
+    display: flex;
+    flex-direction: column;
     box-shadow: var(--shadow-shallow--light);
 
     .cardItem__media {
       margin-block-end: var(--base-4);
+    }
+
+    .cardItem__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .cardItem__details {
@@ -795,7 +802,11 @@
     }
 
     .cardItem__action {
-      margin-block-start: var(--base-9);
+      margin-block-start: auto;
+
+      a {
+        margin-block-start: var(--base-9);
+      }
     }
 
     @include breakpoint(xl) {

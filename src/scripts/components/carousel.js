@@ -10,7 +10,6 @@ carouselWrappers.forEach(wrapper => {
   const prevButton = carousel.querySelector(`.controls__prev`);
   const nextButton = carousel.querySelector(`.controls__next`);
 
-  console.log(carousel);
   const swiper = new Swiper(carousel, {
     modules: [ Pagination, Navigation ],
     loop: true,

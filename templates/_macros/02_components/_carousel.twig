@@ -8,6 +8,8 @@
 
     {% switch variant %}
         {% case 'cards' %}
+            {% set carouselType = content.children.one.type %}
+
             {# Set quotes #}
             {% set quotesFeed = content.children.one.carouselQuotes %}
             {# Set manualFeed #}
@@ -41,7 +43,7 @@
                                         
                                     {# If entry card #}
                                     {% else %}
-                                        {% set feedCards = feedCards|merge([item.blogPostNewsItemGranteeOrGrant.one]) %}
+                                        {% set feedCards = feedCards|merge([item.entry.one]) %}
                                     {% endif %}
                                 {% endfor %}
                                 
@@ -135,7 +137,14 @@
                             : card.section.handle
                         %}
 
-                        {% if cardVariant == 'grantees' %}
+                        {% if cardVariant == 'directory' %}
+                            {% set bio = card %}
+
+                            {# ---  Slide  --- #}
+                            <div class="slide | swiper-slide">
+                                {{ cards.bio(bio) }}
+                            </div>
+                        {% elseif cardVariant == 'grantees' %}
                             {% set grantee = card %}
                             {% set granteeCardConfig = {
                                 'grantee': grantee

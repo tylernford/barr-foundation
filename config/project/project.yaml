@@ -1,4 +1,4 @@
-dateModified: 1708650361
+dateModified: 1708655998
 elementSources:
   craft\elements\Asset:
     -
@@ -442,7 +442,7 @@ meta:
     1d65de52-72a2-46de-8322-35431d8568ae: 'Media: Video' # Media: Video
     1dd219bb-2f7d-40a7-8f37-ef31fed81c34: 'Asset: Image' # Asset: Image
     1dec4392-4c5c-4dc8-9e4d-3ef5b7f91715: 'Audio Snippet' # Audio Snippet
-    1e6b65f1-8163-4538-888b-aefdcd932c14: 'Blog Post, News Item, Grantee, or Grant' # Blog Post, News Item, Grantee, or Grant
+    1e6b65f1-8163-4538-888b-aefdcd932c14: Entry # Entry
     01ed592e-1014-45e1-8104-59aa9110f849: Media # Media
     1f5fcf40-1dac-4aa2-aa30-1e7d5467b651: 'External Person' # External Person
     1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02: 'Opener: Homepage' # Opener: Homepage
@@ -662,7 +662,7 @@ meta:
     2247c8c0-1669-4ccf-8dd8-ee7002a4fd00: 'Timeline: Multiple Events Per Milestone' # Timeline: Multiple Events Per Milestone
     2393b91e-3d52-4e68-aebf-3896dd26c9de: Heading # Heading
     2510ca6f-7c5e-4ccd-a8db-079f0fe6244d: 'Kitchen Sink' # Kitchen Sink
-    3367c4aa-812a-44b9-bbdf-f913c544a3ac: 'Entry: Blog Post, News Item, Grantee, or Grant' # Entry: Blog Post, News Item, Grantee, or Grant
+    3367c4aa-812a-44b9-bbdf-f913c544a3ac: Entry # Entry
     4217f7b3-ec24-454d-87f2-1998f0a0baae: 'Tags: Program Areas' # Tags: Program Areas
     5056e235-9a78-4846-9c71-7557d782d1f0: 'Section Bookmark Title (Optional)' # Section Bookmark Title (Optional)
     5680cf36-ea78-4033-8638-c664068383d9: 'Card: Grants Database' # Card: Grants Database

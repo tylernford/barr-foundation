@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 1e6b65f1-8163-4538-888b-aefdcd932c14 # Blog Post, News Item, Grantee, or Grant
+            fieldUid: 1e6b65f1-8163-4538-888b-aefdcd932c14 # Entry
             instructions: null
             label: null
             required: true
@@ -21,13 +21,13 @@ fieldLayouts:
         uid: 6a69abb0-e0f7-47d9-9d71-12a638ac5d6d
         userCondition: null
 fields:
-  1e6b65f1-8163-4538-888b-aefdcd932c14: # Blog Post, News Item, Grantee, or Grant
+  1e6b65f1-8163-4538-888b-aefdcd932c14: # Entry
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
-    handle: blogPostNewsItemGranteeOrGrant
+    handle: entry
     instructions: null
-    name: 'Blog Post, News Item, Grantee, or Grant'
+    name: Entry
     searchable: false
     settings:
       allowSelfRelations: false
@@ -40,6 +40,7 @@ fields:
       showSiteMenu: true
       sources:
         - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+        - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
         - 'section:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
         - 'section:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
         - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
@@ -50,5 +51,5 @@ fields:
     translationMethod: site
     type: craft\fields\Entries
 handle: entry
-name: 'Entry: Blog Post, News Item, Grantee, or Grant'
+name: Entry
 sortOrder: 1
