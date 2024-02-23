@@ -1,29 +1,35 @@
 {# _macros/02_components/_carousel.twig #}
-
 {% macro default(config) %}
     {% import '_macros/02_components/_card' as cards %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
 
+    {# Set Carousel type #}
     {% set carouselType = content.children.one.type %}
 
-    {# Set quotes #}
-    {% set quotesFeed = content.children.one.carouselQuotes %}
+    {# Set action card #}
+    {% set actionCard = content.children.one.cardAction %}
+
     {# Set manualFeed #}
     {% set manualFeed = content.children.one.carouselManual %}
     {# Set autoFeed #}
     {% set autoFeed = content.children.one.carouselAuto ? content.children.one.carouselAuto.one.sources %}
 
-    {# Set action card #}
-    {% set actionCard = content.children.one.cardAction %}
-
     {# ---  Carousel  --- #}
-    <div class="carousel" data-variant="{{ quotesFeed ? 'quotes' : 'cards' }}">
+    <div class="carousel" data-variant="{{ carouselType == 'carouselQuotes' ? 'quotes' : 'cards' }}">
         <div class="swiper">
             <div class="swiper-wrapper">
-                {% if quotesFeed %}
-                    {{ _self.quotes(quotesFeed)}}
+                {# Quotes #}
+                {% if carouselType == 'carouselQuotes' %}
+                    {% set quotesFeed = content.children.one.carouselQuotes %}
+                    {{ _self.carouselQuotesLogic(quotesFeed) }}
+
+                {# Bios #}
+                {% elseif carouselType == 'carouselBios' %}
+                    {% set carouselBiosConfig = content.children.one.carouselBios.one %}
+                    {{ _self.carouselBiosLogic(carouselBiosConfig) }}
+
                 {% else %}
                     {# Set empty feedCards array #}
                     {% set feedCards = [] %}
@@ -92,6 +98,77 @@
         {{ cards.action(actionCard) }}
     {% endif %}
 
+
+    {# Quotes #}
+    {% macro carouselQuotesLogic(quotesFeed) %}
+        {% import '_macros/02_components/_quote' as quoteComponent %}
+        {% for quote in quotesFeed %}
+            {% set image = quote.assetImage.one() %}
+
+            {% set attr = quote.attribution.one() %}
+            {% set attrPerson = [] %}
+            {% set attrTitle = '' %}
+            {% set attrOrg = '' %}
+            {% set attrLink = '' %}
+
+            {% if attr and attr.type == 'internal' %}
+                {% set attribution = attr.item.one() %}
+                {% set attrImage = attribution.assetImage.one %}
+                {% set attrName =
+                    attribution.textMiddle|length ? attribution.textFirst ~ ' ' ~ attribution.textMiddle ~ ' ' ~ attribution.textLast :
+                    attribution.textFirst ~ ' ' ~ attribution.textLast
+                %}
+                {% set attrPerson = attrPerson|merge([
+                    { 'img': attrImage, 'name': attrName }
+                ]) %}
+                {% set attrTitle = attribution.textJob %}
+
+            {% elseif attr and attr.type == 'external' %}
+                {% set attrPerson = attrPerson|merge([
+                    { 'img': '', 'name': attr.fullName }
+                ]) %}
+                {% set attrTitle = attr.jobTitle %}
+                {% set attrOrg = attr.organization %}
+
+            {% endif %}
+                    
+            {% set attribution = {
+                'person': attrPerson,
+                'title': attrTitle,
+                'org': attrOrg,
+                'link': attrLink
+            } %}
+
+            {% set quote = quote.quote %}
+
+            {# ---  Slide  --- #}
+            <div class="slide | swiper-slide">
+                {{ quoteComponent.quote(quote, attribution, image) }}
+            </div>
+        {% endfor %}
+    {% endmacro %}
+
+    {# Bios #}
+    {% macro carouselBiosLogic(config) %}
+        {% import '_macros/02_components/_card' as cards %}
+        
+        {% set category = config.tagsEntry.one %}
+        {% set limit    = config.numberOfCards %}
+
+        {% set bios = craft.entries()
+            .section('directory')
+            .orderBy('RAND()')
+            .limit(limit)
+            .all()
+        %}
+
+        {% for bio in bios %}
+            {# ---  Slide  --- #}
+            <div class="slide | swiper-slide">
+                {{ cards.bio(bio) }}
+            </div>
+        {% endfor %}
+    {% endmacro %}
 
     {# Cards #}
     {% macro cards(feedCards) %}
@@ -184,55 +261,6 @@
                     </div>
                 {% endif %}
             {% endif %}
-        {% endfor %}
-    {% endmacro %}
-
-    {# Quotes #}
-    {% macro quotes(quotesFeed) %}
-        {% import '_macros/02_components/_quote' as quoteComponent %}
-        {% for quote in quotesFeed %}
-            {% set image = quote.assetImage.one() %}
-
-            {% set attr = quote.attribution.one() %}
-            {% set attrPerson = [] %}
-            {% set attrTitle = '' %}
-            {% set attrOrg = '' %}
-            {% set attrLink = '' %}
-
-            {% if attr and attr.type == 'internal' %}
-                {% set attribution = attr.item.one() %}
-                {% set attrImage = attribution.assetImage.one %}
-                {% set attrName =
-                    attribution.textMiddle|length ? attribution.textFirst ~ ' ' ~ attribution.textMiddle ~ ' ' ~ attribution.textLast :
-                    attribution.textFirst ~ ' ' ~ attribution.textLast
-                %}
-                {% set attrPerson = attrPerson|merge([
-                    { 'img': attrImage, 'name': attrName }
-                ]) %}
-                {% set attrTitle = attribution.textJob %}
-
-            {% elseif attr and attr.type == 'external' %}
-                {% set attrPerson = attrPerson|merge([
-                    { 'img': '', 'name': attr.fullName }
-                ]) %}
-                {% set attrTitle = attr.jobTitle %}
-                {% set attrOrg = attr.organization %}
-
-            {% endif %}
-                    
-            {% set attribution = {
-                'person': attrPerson,
-                'title': attrTitle,
-                'org': attrOrg,
-                'link': attrLink
-            } %}
-
-            {% set quote = quote.quote %}
-
-            {# ---  Slide  --- #}
-            <div class="slide | swiper-slide">
-                {{ quoteComponent.quote(quote, attribution, image) }}
-            </div>
         {% endfor %}
     {% endmacro %}
 {% endmacro %}
