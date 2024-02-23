@@ -33,7 +33,6 @@
 
                 {# Auto #}
                 {% elseif carouselType == 'carouselAuto' %}
-                    <div style="background-color: salmon;padding-block: 24px">AUTO</div>
                     {% set carousel = content.children.one.carouselAuto.one %}
                     {% set autoFeed = carousel.sources %}
                     {% set numberOfCards = carousel.numberOfCards %}
@@ -167,7 +166,7 @@
         {% endfor %}
 
         {% set autoCards = craft.entries().section(sources).limit(limit) %}
-        
+
         {{ _self.cards(autoCards) }}
     {% endmacro %}
 
