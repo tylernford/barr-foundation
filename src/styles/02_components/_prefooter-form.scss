@@ -1,0 +1,54 @@
+/* _prefooter-form.scss */
+@use "../utils/_utils" as *;
+
+.prefooterForm {
+  --color-form--primary: var(--color-teal-100);
+}
+[data-theme-color="green"] {
+  .prefooterForm {
+    --color-form--primary: var(--color-program-green-100);
+  }
+}
+[data-theme-color="plum"] {
+  .prefooterForm {
+    --color-form--primary: var(--color-program-plum-100);
+  }
+}
+[data-theme-color="marigold"] {
+  .prefooterForm {
+    --color-form--primary: var(--color-program-marigold-100);
+  }
+}
+
+.prefooterForm {
+  @include container-narrow;
+  padding-block: var(--base-9);
+
+  h2 {
+    margin-block-end: var(--base-4);
+    color: var(--color-form--primary);
+    @include getType('h3-axiforma');
+  }
+
+  .prefooterForm__description {
+    max-width: 34em;
+    @include getType('caption-messina');
+  }
+
+  @include breakpoint(md) {
+    padding-block-end: var(--base-12);
+  }
+
+  @include breakpoint(lg) {
+    h2 {
+      @include getType('h2-axiforma');
+    }
+    .prefooterForm__description {
+      @include getType('subhead');
+    }
+  }
+
+  @include breakpoint(xl) {
+    padding-block-end: var(--base-18);
+  }
+}

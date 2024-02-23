@@ -77,17 +77,15 @@ Interior template
     {% endif %}
 
     {% if entry.textPlainHeading or entry.textDescription %}
-        <section class="container">
-            <div class="blockGeneric">
-                {% if entry.textPlainHeading %}
-                    <h2 class="blockGeneric-heading">
-                        {{ entry.textPlainHeading }}
-                    </h2>
-                {% endif %}
-                {% if entry.textDescription %}
+        <section class="prefooterForm">
+            {% if entry.textPlainHeading %}
+                <h2>{{ entry.textPlainHeading }}</h2>
+            {% endif %}
+            {% if entry.textDescription %}
+                <div class="prefooterForm__description">
                     {{ entry.textDescription }}
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
         </section>
     {% endif %}
 {% endblock %}
