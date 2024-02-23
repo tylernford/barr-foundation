@@ -11,10 +11,6 @@
     {# Set action card #}
     {% set actionCard = content.children.one.cardAction %}
 
-    {# Set manualFeed #}
-    {% set manualFeed = content.children.one.carouselManual %}
-    {# Set autoFeed #}
-    {% set autoFeed = content.children.one.carouselAuto ? content.children.one.carouselAuto.one.sources %}
 
     {# ---  Carousel  --- #}
     <div class="carousel" data-variant="{{ carouselType == 'carouselQuotes' ? 'quotes' : 'cards' }}">
@@ -30,40 +26,31 @@
                     {% set carouselBiosConfig = content.children.one.carouselBios.one %}
                     {{ _self.carouselBiosLogic(carouselBiosConfig) }}
 
-                {% else %}
+                {# Manual #}
+                {% elseif carouselType == 'carouselManual' %}
+                    {% set manualFeed = content.children.one.carouselManual %}
+                    {{ _self.carouselManualLogic(manualFeed) }}
+
+                {% elseif carouselType == 'carouselAuto' %}
+                    <div style="background-color: salmon;padding-block: 24px">AUTO</div>
+                    {# Set autoFeed #}
+                    {% set autoFeed = content.children.one.carouselAuto.one.sources %}
                     {# Set empty feedCards array #}
                     {% set feedCards = [] %}
 
                     {# Set number of cards #}
-                    {% set numberOfCards = content.children.one.carouselAuto ? content.children.one.carouselAuto.one.numberOfCards %}
+                    {% set numberOfCards = content.children.one.carouselAuto.one.numberOfCards %}
 
-                    {# If manual card selection #}
-                    {% if manualFeed|length %}
-                        {# For manually selected card #}
-                        {% for item in manualFeed %}
-                            {# If generic or media card #}
-                            {% if item.type == 'generic' or item.type == 'audio' or item.type == 'video' %}
-                                {% set feedCards = feedCards|merge([item]) %}
-                                        
-                            {# If entry card #}
-                            {% else %}
-                                {% set feedCards = feedCards|merge([item.entry.one]) %}
-                            {% endif %}
-                        {% endfor %}
-                                
-                    {# Auto cards #}
-                    {% else %}
-                        {% set sources = [] %}
+                    {% set sources = [] %}
 
-                        {% for source in autoFeed %}
-                            {% set sources = sources|merge([source.value]) %}
-                        {% endfor %}
+                    {% for source in autoFeed %}
+                        {% set sources = sources|merge([source.value]) %}
+                    {% endfor %}
 
-                        {% set autoCards = craft.entries().section(sources).limit(numberOfCards) %}
-                        {% for card in autoCards %}
-                            {% set feedCards = feedCards|merge([card]) %}
-                        {% endfor %}
-                    {% endif %}
+                    {% set autoCards = craft.entries().section(sources).limit(numberOfCards) %}
+                    {% for card in autoCards %}
+                        {% set feedCards = feedCards|merge([card]) %}
+                    {% endfor %}
 
                     {{ _self.cards(feedCards) }}
                 {% endif %}
@@ -93,7 +80,7 @@
         </div>
     </div>
 
-    {# Action Card #}
+    {# ---  Action Card  --- #}
     {% if actionCard|length %}
         {{ cards.action(actionCard) }}
     {% endif %}
@@ -168,6 +155,22 @@
                 {{ cards.bio(bio) }}
             </div>
         {% endfor %}
+    {% endmacro %}
+
+    {# Manual #}
+    {% macro carouselManualLogic(manualFeed) %}
+        {# Set empty feedCards array #}
+        {% set feedCards = [] %}
+
+        {% for card in manualFeed %}
+            {% if card.type == 'entry' %}
+                {% set card = card.entry.one %}
+            {% endif %}
+
+            {% set feedCards = feedCards|merge([card]) %}
+        {% endfor %}
+
+        {{ _self.cards(feedCards) }}
     {% endmacro %}
 
     {# Cards #}
