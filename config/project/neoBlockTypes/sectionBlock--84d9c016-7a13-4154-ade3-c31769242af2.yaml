@@ -17,7 +17,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  82a06af7-74e5-4e8b-b9fb-1bec08349da7:
+  b8542d5c-c081-4760-b180-38d9a11c1cbb:
     tabs:
       -
         elementCondition: null

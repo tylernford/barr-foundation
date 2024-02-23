@@ -1,0 +1,152 @@
+field: 47ad2837-7144-46af-ba9e-8b7f7b15a4bd # Carousel: Bios
+fieldLayouts:
+  2a881fae-5fd1-4f08-a4c4-4aee7bccec18:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 83655b68-1a1d-404e-9ce5-33876ff438a2 # Tags: Person Type
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 704cc1c7-777d-4a15-8ec5-3312db002fd2
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 5858abd5-d9a7-4e0d-9afb-546475012ee1 # Number of Cards
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 111fe21e-8fb0-4686-afd3-e25243845fb7
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 6aea155b-ffc4-487e-9fe1-a4e4d8b71861
+        userCondition: null
+fields:
+  5858abd5-d9a7-4e0d-9afb-546475012ee1: # Number of Cards
+    columnSuffix: tpngvoki
+    contentColumnType: string(2)
+    fieldGroup: null
+    handle: numberOfCards
+    instructions: 'Select the max number of cards to display.'
+    name: 'Number of Cards'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - '8'
+            -
+              - value
+              - '8'
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - '12'
+            -
+              - value
+              - '12'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '16'
+            -
+              - value
+              - '16'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - '20'
+            -
+              - value
+              - '20'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  83655b68-1a1d-404e-9ce5-33876ff438a2: # Tags: Person Type
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: tagsEntry
+    instructions: 'Select a Person Type to automatically display.'
+    name: 'Tags: Person Type'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+          -
+            - conditionRules
+            -
+              -
+                __assoc__:
+                  -
+                    - class
+                    - craft\elements\conditions\LevelConditionRule
+                  -
+                    - uid
+                    - 3ff70940-4d8e-41a3-b4f0-b0bc99d74dec
+                  -
+                    - operator
+                    - '='
+                  -
+                    - value
+                    - '2'
+                  -
+                    - maxValue
+                    - ''
+      selectionLabel: 'Select a Type'
+      showSiteMenu: true
+      sources:
+        - 'section:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: carousel
+name: Carousel
+sortOrder: 1

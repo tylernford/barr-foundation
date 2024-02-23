@@ -2,6 +2,7 @@ childBlocks:
   - carouselManual
   - carouselAuto
   - carouselQuotes
+  - carouselBios
 conditions: null
 description: ''
 enabled: true
