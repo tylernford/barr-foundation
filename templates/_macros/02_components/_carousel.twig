@@ -31,28 +31,14 @@
                     {% set manualFeed = content.children.one.carouselManual %}
                     {{ _self.carouselManualLogic(manualFeed) }}
 
+                {# Auto #}
                 {% elseif carouselType == 'carouselAuto' %}
                     <div style="background-color: salmon;padding-block: 24px">AUTO</div>
-                    {# Set autoFeed #}
-                    {% set autoFeed = content.children.one.carouselAuto.one.sources %}
-                    {# Set empty feedCards array #}
-                    {% set feedCards = [] %}
+                    {% set carousel = content.children.one.carouselAuto.one %}
+                    {% set autoFeed = carousel.sources %}
+                    {% set numberOfCards = carousel.numberOfCards %}
 
-                    {# Set number of cards #}
-                    {% set numberOfCards = content.children.one.carouselAuto.one.numberOfCards %}
-
-                    {% set sources = [] %}
-
-                    {% for source in autoFeed %}
-                        {% set sources = sources|merge([source.value]) %}
-                    {% endfor %}
-
-                    {% set autoCards = craft.entries().section(sources).limit(numberOfCards) %}
-                    {% for card in autoCards %}
-                        {% set feedCards = feedCards|merge([card]) %}
-                    {% endfor %}
-
-                    {{ _self.cards(feedCards) }}
+                    {{ _self.carouselAutoLogic(autoFeed, numberOfCards) }}
                 {% endif %}
             </div>
 
@@ -171,6 +157,18 @@
         {% endfor %}
 
         {{ _self.cards(feedCards) }}
+    {% endmacro %}
+
+    {# Auto #}
+    {% macro carouselAutoLogic(autoFeed, limit) %}
+        {% set sources = [] %}
+        {% for source in autoFeed %}
+            {% set sources = sources|merge([source.value]) %}
+        {% endfor %}
+
+        {% set autoCards = craft.entries().section(sources).limit(limit) %}
+        
+        {{ _self.cards(autoCards) }}
     {% endmacro %}
 
     {# Cards #}
