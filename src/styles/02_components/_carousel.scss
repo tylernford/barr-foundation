@@ -201,6 +201,12 @@
       }
     }
 
+    .slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
     .quote {
       padding-block: var(--base-6) 0;
 
