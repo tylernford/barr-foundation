@@ -1,4 +1,4 @@
-dateModified: 1708635323
+dateModified: 1708655998
 elementSources:
   craft\elements\Asset:
     -
@@ -442,7 +442,7 @@ meta:
     1d65de52-72a2-46de-8322-35431d8568ae: 'Media: Video' # Media: Video
     1dd219bb-2f7d-40a7-8f37-ef31fed81c34: 'Asset: Image' # Asset: Image
     1dec4392-4c5c-4dc8-9e4d-3ef5b7f91715: 'Audio Snippet' # Audio Snippet
-    1e6b65f1-8163-4538-888b-aefdcd932c14: 'Blog Post, News Item, Grantee, or Grant' # Blog Post, News Item, Grantee, or Grant
+    1e6b65f1-8163-4538-888b-aefdcd932c14: Entry # Entry
     01ed592e-1014-45e1-8104-59aa9110f849: Media # Media
     1f5fcf40-1dac-4aa2-aa30-1e7d5467b651: 'External Person' # External Person
     1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02: 'Opener: Homepage' # Opener: Homepage
@@ -555,6 +555,7 @@ meta:
     14d1fc6e-b42d-464e-8b7b-46441714b8d8: Image # Image
     17a9de48-5e07-4524-9f6e-8de470709982: Target # Target
     19bcf750-aecc-4f9c-b4fb-50e6d96af2eb: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
+    21b12e0a-7afe-477a-9f64-f2902cd9078a: Carousel # Carousel
     21dad0a7-2d67-433c-b04f-da4773293880: 'Developer: Release' # Developer: Release
     22f973cc-427c-4e70-8bb8-6624479ab025: 'Entries: Organization' # Entries: Organization
     24c92902-e46c-423d-b80a-15d697d098ec: Heading # Heading
@@ -568,6 +569,7 @@ meta:
     34d9bf36-cb8a-46ca-b594-f47d408c9548: Entries # Entries
     39bff6e7-a84b-482c-8a13-facf22132bd9: 'Text: Stat' # Text: Stat
     41c96623-78bd-4217-828e-0305ea7f14fb: 'Video URL' # Video URL
+    47ad2837-7144-46af-ba9e-8b7f7b15a4bd: 'Carousel: Bios' # Carousel: Bios
     48aa8bac-f5e1-487b-a042-3dca5b50c89c: Image # Image
     48de2574-ea84-4b60-b7e2-2e3a4a515fa2: Miscellaneous # Miscellaneous
     49a75aa7-c1c3-48e1-bb3c-88bb9e099393: Action # Action
@@ -660,10 +662,11 @@ meta:
     2247c8c0-1669-4ccf-8dd8-ee7002a4fd00: 'Timeline: Multiple Events Per Milestone' # Timeline: Multiple Events Per Milestone
     2393b91e-3d52-4e68-aebf-3896dd26c9de: Heading # Heading
     2510ca6f-7c5e-4ccd-a8db-079f0fe6244d: 'Kitchen Sink' # Kitchen Sink
-    3367c4aa-812a-44b9-bbdf-f913c544a3ac: 'Entry: Blog Post, News Item, Grantee, or Grant' # Entry: Blog Post, News Item, Grantee, or Grant
+    3367c4aa-812a-44b9-bbdf-f913c544a3ac: Entry # Entry
     4217f7b3-ec24-454d-87f2-1998f0a0baae: 'Tags: Program Areas' # Tags: Program Areas
     5056e235-9a78-4846-9c71-7557d782d1f0: 'Section Bookmark Title (Optional)' # Section Bookmark Title (Optional)
     5680cf36-ea78-4033-8638-c664068383d9: 'Card: Grants Database' # Card: Grants Database
+    5858abd5-d9a7-4e0d-9afb-546475012ee1: 'Number of Cards' # Number of Cards
     5971d473-bc24-4c7d-86e9-99f40d205dc3: 'Record Type' # Record Type
     6240c976-c45c-49e0-9b18-04c2bd1b9024: __blank__ # __blank__
     6774ebb3-1a46-4eca-8e7d-724ba7cf1e16: 'Asset: Image' # Asset: Image
@@ -698,6 +701,7 @@ meta:
     80734fc1-e638-429a-9be7-1ff3810547bf: Title # Title
     81445eab-2d97-4591-92d7-6e4f6db5bbba: Intro # Intro
     83022d12-46dd-48e1-8f5a-bd1fce173430: Panel # Panel
+    83655b68-1a1d-404e-9ce5-33876ff438a2: 'Tags: Person Type' # Tags: Person Type
     84197f18-70b3-477e-8259-3257a2653ee2: Team # Team
     86125ca1-5070-4d71-91cf-ef53ea2337cb: Menu # Menu
     88778e50-4f0a-405e-ad81-55383a2ba560: 'Highlight: Stat' # Highlight: Stat
@@ -822,7 +826,6 @@ meta:
     cebe9f65-5c23-462d-a3e9-6d51ecd7eb49: 'Card: Grantmaking' # Card: Grantmaking
     cf026ccf-44b0-44ea-bb7c-a2d919af1521: 'Media: Audio or Video' # Media: Audio or Video
     cfb7f673-e726-4e10-b627-eb563177ea3d: 'Style: Width' # Style: Width
-    d07afb10-c7ee-417d-8969-44060e0f3bc6: 'Carousel: Research' # Carousel: Research
     d1baa3d0-c525-4a33-bfc6-6851a329b88d: Image # Image
     d1f322ee-1b5c-4849-8790-1c1944d77c57: Video # Video
     d1fb8e0a-7a87-4586-994b-e8ca07e4a9d9: Year # Year
@@ -871,6 +874,7 @@ meta:
     e68aec50-47ab-4ff2-9d37-081054e28c7c: Heading # Heading
     e80ac831-8e3e-4eb0-b026-b626f4dda22a: 'Text: Term' # Text: Term
     e392dad5-6fbd-4001-a1df-f712269a09d6: 'Block: Featured Links' # Block: Featured Links
+    e396a56e-edee-4eb7-bb0b-7eb50192663f: 'Carousel: Bios' # Carousel: Bios
     e4496b2d-7e4a-4e86-855a-f5168e2399b5: 'Kitchen Sink' # Kitchen Sink
     e4877e61-528c-470a-bfb5-5548ec0153d5: 'Text: Heading' # Text: Heading
     e32751f4-2535-48d4-a6fa-3eab79737ccf: 'Geo: Parent Hierarchy' # Geo: Parent Hierarchy
