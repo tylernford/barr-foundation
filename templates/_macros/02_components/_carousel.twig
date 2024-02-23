@@ -6,246 +6,233 @@
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
 
-    {% switch variant %}
-        {% case 'cards' %}
-            {% set carouselType = content.children.one.type %}
+    {% set carouselType = content.children.one.type %}
 
-            {# Set quotes #}
-            {% set quotesFeed = content.children.one.carouselQuotes %}
-            {# Set manualFeed #}
-            {% set manualFeed = content.children.one.carouselManual %}
-            {# Set autoFeed #}
-            {% set autoFeed = content.children.one.carouselAuto ? content.children.one.carouselAuto.one.sources %}
+    {# Set quotes #}
+    {% set quotesFeed = content.children.one.carouselQuotes %}
+    {# Set manualFeed #}
+    {% set manualFeed = content.children.one.carouselManual %}
+    {# Set autoFeed #}
+    {% set autoFeed = content.children.one.carouselAuto ? content.children.one.carouselAuto.one.sources %}
 
-            {# Set action card #}
-            {% set actionCard = content.children.one.cardAction %}
+    {# Set action card #}
+    {% set actionCard = content.children.one.cardAction %}
 
-            {# ---  Carousel  --- #}
-            <div class="carousel" data-variant="{{ quotesFeed ? 'quotes' : 'cards' }}">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        {% if quotesFeed %}
-                            {{ _self.quotes(quotesFeed)}}
-                        {% else %}
-                            {# Set empty feedCards array #}
-                            {% set feedCards = [] %}
+    {# ---  Carousel  --- #}
+    <div class="carousel" data-variant="{{ quotesFeed ? 'quotes' : 'cards' }}">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {% if quotesFeed %}
+                    {{ _self.quotes(quotesFeed)}}
+                {% else %}
+                    {# Set empty feedCards array #}
+                    {% set feedCards = [] %}
 
-                            {# Set number of cards #}
-                            {% set numberOfCards = content.children.one.carouselAuto ? content.children.one.carouselAuto.one.numberOfCards %}
+                    {# Set number of cards #}
+                    {% set numberOfCards = content.children.one.carouselAuto ? content.children.one.carouselAuto.one.numberOfCards %}
 
-                            {# If manual card selection #}
-                            {% if manualFeed|length %}
-                                {# For manually selected card #}
-                                {% for item in manualFeed %}
-                                    {# If generic or media card #}
-                                    {% if item.type == 'generic' or item.type == 'audio' or item.type == 'video' %}
-                                        {% set feedCards = feedCards|merge([item]) %}
+                    {# If manual card selection #}
+                    {% if manualFeed|length %}
+                        {# For manually selected card #}
+                        {% for item in manualFeed %}
+                            {# If generic or media card #}
+                            {% if item.type == 'generic' or item.type == 'audio' or item.type == 'video' %}
+                                {% set feedCards = feedCards|merge([item]) %}
                                         
-                                    {# If entry card #}
-                                    {% else %}
-                                        {% set feedCards = feedCards|merge([item.entry.one]) %}
-                                    {% endif %}
-                                {% endfor %}
-                                
-                            {# Auto cards #}
+                            {# If entry card #}
                             {% else %}
-                                {% set sources = [] %}
-
-                                {% for source in autoFeed %}
-                                    {% set sources = sources|merge([source.value]) %}
-                                {% endfor %}
-
-                                {% set autoCards = craft.entries().section(sources).limit(numberOfCards) %}
-                                {% for card in autoCards %}
-                                    {% set feedCards = feedCards|merge([card]) %}
-                                {% endfor %}
+                                {% set feedCards = feedCards|merge([item.entry.one]) %}
                             {% endif %}
+                        {% endfor %}
+                                
+                    {# Auto cards #}
+                    {% else %}
+                        {% set sources = [] %}
 
-                            {{ _self.cards(feedCards) }}
-                        {% endif %}
-                    </div>
+                        {% for source in autoFeed %}
+                            {% set sources = sources|merge([source.value]) %}
+                        {% endfor %}
 
-                    {# ---  Controls  --- #}
-                    <div class="carousel__controls">
-                        {# Previous #}
-                        <button class="controls__button controls__prev | swiper-button-prev">
-                            <span>Previous slide</span>
-                            <svg>
-                                <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
-                            </svg>
-                        </button>
+                        {% set autoCards = craft.entries().section(sources).limit(numberOfCards) %}
+                        {% for card in autoCards %}
+                            {% set feedCards = feedCards|merge([card]) %}
+                        {% endfor %}
+                    {% endif %}
 
-                        {# Pagination #}
-                        <div class="controls__pagination"></div>
-
-                        {# Next #}
-                        <button class="controls__button controls__next | swiper-button-next">
-                            <span>Next slide</span>
-                            <svg>
-                                <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                    {{ _self.cards(feedCards) }}
+                {% endif %}
             </div>
 
-            {# Action Card #}
-            {% if actionCard|length %}
-                {{ cards.action(actionCard) }}
-            {% endif %}
+            {# ---  Controls  --- #}
+            <div class="carousel__controls">
+                {# Previous #}
+                <button class="controls__button controls__prev | swiper-button-prev">
+                    <span>Previous slide</span>
+                    <svg>
+                        <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+                    </svg>
+                </button>
+
+                {# Pagination #}
+                <div class="controls__pagination"></div>
+
+                {# Next #}
+                <button class="controls__button controls__next | swiper-button-next">
+                    <span>Next slide</span>
+                    <svg>
+                        <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    {# Action Card #}
+    {% if actionCard|length %}
+        {{ cards.action(actionCard) }}
+    {% endif %}
 
 
-
-            {# Cards #}
-            {% macro cards(feedCards) %}
-                {% import '_macros/02_components/_card' as cards %}
+    {# Cards #}
+    {% macro cards(feedCards) %}
+        {% import '_macros/02_components/_card' as cards %}
                 
-                {% for card in feedCards %}
-                    {% if card.type == 'generic' %}
-                        {% set cardConfig  = {
-                            'variant': card.type,
-                            'image': card.assetImage.one(),
-                            'label': card.label,
-                            'title': card.cardTitle,
-                            'summary': card.summary,
-                            'action': card.actionLink
-                        } %}
-                        {# ---  Slide  --- #}
-                        <div class="slide | swiper-slide">
-                            {{ cards.generic(cardConfig) }}
-                        </div>
-                    {% elseif card.type == 'audio' or card.type == 'video' %}
-                        {% set cardConfig  = {
-                            'variant': card.type,
-                            'image': card.assetImage.one(),
-                            'videoUrl': card.type == 'video' ? card.videoUrl : null,
-                            'label': card.label,
-                            'title': card.cardTitle,
-                            'summary': card.summary,
-                            'action': card.actionLink,
-                            'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
-                        } %}
+        {% for card in feedCards %}
+            {% if card.type == 'generic' %}
+                {% set cardConfig  = {
+                    'variant': card.type,
+                    'image': card.assetImage.one(),
+                    'label': card.label,
+                    'title': card.cardTitle,
+                    'summary': card.summary,
+                    'action': card.actionLink
+                } %}
+                {# ---  Slide  --- #}
+                <div class="slide | swiper-slide">
+                    {{ cards.generic(cardConfig) }}
+                </div>
+            {% elseif card.type == 'audio' or card.type == 'video' %}
+                {% set cardConfig  = {
+                    'variant': card.type,
+                    'image': card.assetImage.one(),
+                    'videoUrl': card.type == 'video' ? card.videoUrl : null,
+                    'label': card.label,
+                    'title': card.cardTitle,
+                    'summary': card.summary,
+                    'action': card.actionLink,
+                    'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
+                } %}
                                 
-                        {# ---  Slide  --- #}
-                        <div class="slide | swiper-slide">
-                            {{ cards.media(cardConfig) }}
-                        </div>
-                    {% else %}
-                        {% set cardVariant =
-                            card.section.handle == 'blog' ? 'post' :
-                            card.section.handle == 'newsroom' ? 'news'
-                            : card.section.handle
-                        %}
+                {# ---  Slide  --- #}
+                <div class="slide | swiper-slide">
+                    {{ cards.media(cardConfig) }}
+                </div>
+            {% else %}
+                {% set cardVariant =
+                    card.section.handle == 'blog' ? 'post' :
+                    card.section.handle == 'newsroom' ? 'news'
+                    : card.section.handle
+                %}
 
-                        {% if cardVariant == 'directory' %}
-                            {% set bio = card %}
-
-                            {# ---  Slide  --- #}
-                            <div class="slide | swiper-slide">
-                                {{ cards.bio(bio) }}
-                            </div>
-                        {% elseif cardVariant == 'grantees' %}
-                            {% set grantee = card %}
-                            {% set granteeCardConfig = {
-                                'grantee': grantee
-                            } %}
-
-                            {# ---  Slide  --- #}
-                            <div class="slide | swiper-slide">
-                                {{ cards.grantee(granteeCardConfig) }}
-                            </div>
-                        {% elseif cardVariant == 'post' %}
-                            {% set postCardConfig = {
-                                'post': card
-                            } %}
-
-                            {# ---  Slide  --- #}
-                            <div class="slide | swiper-slide">
-                                {{ cards.post(postCardConfig) }}
-                            </div>
-
-                        {% elseif cardVariant == 'news' %}
-                            {% set newsCardConfig = {
-                                'card': card
-                            } %}
-
-                            {# ---  Slide  --- #}
-                            <div class="slide | swiper-slide">
-                                {{ cards.news(newsCardConfig) }}
-                            </div>
-                        {% elseif cardVariant == 'grants' %}
-                            {# ---  Slide  --- #}
-                            <div class="slide | swiper-slide">
-                                <article class="cardItem cardItem--grant">
-                                    <div class="cardItem__inner">
-                                        {# Header #}
-                                        <header class="cardItem__header">
-                                            <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
-                                        </header>
-                                    </div>
-                                </article>
-                            </div>
-                        {% endif %}
-                    {% endif %}
-                {% endfor %}
-            {% endmacro %}
-
-            {# Quotes #}
-            {% macro quotes(quotesFeed) %}
-                {% import '_macros/02_components/_quote' as quoteComponent %}
-                {% for quote in quotesFeed %}
-                    {% set image = quote.assetImage.one() %}
-
-                    {% set attr = quote.attribution.one() %}
-                    {% set attrPerson = [] %}
-                    {% set attrTitle = '' %}
-                    {% set attrOrg = '' %}
-                    {% set attrLink = '' %}
-
-                    {% if attr and attr.type == 'internal' %}
-                        {% set attribution = attr.item.one() %}
-                        {% set attrImage = attribution.assetImage.one %}
-                        {% set attrName =
-                            attribution.textMiddle|length ? attribution.textFirst ~ ' ' ~ attribution.textMiddle ~ ' ' ~ attribution.textLast :
-                            attribution.textFirst ~ ' ' ~ attribution.textLast
-                        %}
-                        {% set attrPerson = attrPerson|merge([
-                            { 'img': attrImage, 'name': attrName }
-                        ]) %}
-                        {% set attrTitle = attribution.textJob %}
-
-                    {% elseif attr and attr.type == 'external' %}
-                        {% set attrPerson = attrPerson|merge([
-                            { 'img': '', 'name': attr.fullName }
-                        ]) %}
-                        {% set attrTitle = attr.jobTitle %}
-                        {% set attrOrg = attr.organization %}
-
-                    {% endif %}
-                    
-                    {% set attribution = {
-                        'person': attrPerson,
-                        'title': attrTitle,
-                        'org': attrOrg,
-                        'link': attrLink
-                        }
-                    %}
-
-                    {% set quote = quote.quote %}
+                {% if cardVariant == 'directory' %}
+                    {% set bio = card %}
 
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
-                        {{ quoteComponent.quote(quote, attribution, image) }}
+                        {{ cards.bio(bio) }}
                     </div>
-                {% endfor %}
-            {% endmacro %}
+                {% elseif cardVariant == 'grantees' %}
+                    {% set grantee = card %}
+                    {% set granteeCardConfig = {
+                        'grantee': grantee
+                    } %}
 
-        {% case 'fellows' %}
-            {% set heading = content.textHeading %}
-            {% set entries = content.carouselFellows.all() %}
+                    {# ---  Slide  --- #}
+                    <div class="slide | swiper-slide">
+                        {{ cards.grantee(granteeCardConfig) }}
+                    </div>
+                {% elseif cardVariant == 'post' %}
+                    {% set postCardConfig = {
+                        'post': card
+                    } %}
 
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my fellows carousel</h2>
+                    {# ---  Slide  --- #}
+                    <div class="slide | swiper-slide">
+                        {{ cards.post(postCardConfig) }}
+                    </div>
+
+                {% elseif cardVariant == 'news' %}
+                    {% set newsCardConfig = {
+                        'card': card
+                    } %}
+
+                    {# ---  Slide  --- #}
+                    <div class="slide | swiper-slide">
+                        {{ cards.news(newsCardConfig) }}
+                    </div>
+                {% elseif cardVariant == 'grants' %}
+                    {# ---  Slide  --- #}
+                    <div class="slide | swiper-slide">
+                        <article class="cardItem cardItem--grant">
+                            <div class="cardItem__inner">
+                                {# Header #}
+                                <header class="cardItem__header">
+                                    <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
+                                </header>
+                            </div>
+                        </article>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endmacro %}
+
+    {# Quotes #}
+    {% macro quotes(quotesFeed) %}
+        {% import '_macros/02_components/_quote' as quoteComponent %}
+        {% for quote in quotesFeed %}
+            {% set image = quote.assetImage.one() %}
+
+            {% set attr = quote.attribution.one() %}
+            {% set attrPerson = [] %}
+            {% set attrTitle = '' %}
+            {% set attrOrg = '' %}
+            {% set attrLink = '' %}
+
+            {% if attr and attr.type == 'internal' %}
+                {% set attribution = attr.item.one() %}
+                {% set attrImage = attribution.assetImage.one %}
+                {% set attrName =
+                    attribution.textMiddle|length ? attribution.textFirst ~ ' ' ~ attribution.textMiddle ~ ' ' ~ attribution.textLast :
+                    attribution.textFirst ~ ' ' ~ attribution.textLast
+                %}
+                {% set attrPerson = attrPerson|merge([
+                    { 'img': attrImage, 'name': attrName }
+                ]) %}
+                {% set attrTitle = attribution.textJob %}
+
+            {% elseif attr and attr.type == 'external' %}
+                {% set attrPerson = attrPerson|merge([
+                    { 'img': '', 'name': attr.fullName }
+                ]) %}
+                {% set attrTitle = attr.jobTitle %}
+                {% set attrOrg = attr.organization %}
+
+            {% endif %}
+                    
+            {% set attribution = {
+                'person': attrPerson,
+                'title': attrTitle,
+                'org': attrOrg,
+                'link': attrLink
+            } %}
+
+            {% set quote = quote.quote %}
+
+            {# ---  Slide  --- #}
+            <div class="slide | swiper-slide">
+                {{ quoteComponent.quote(quote, attribution, image) }}
             </div>
-    {% endswitch %}
+        {% endfor %}
+    {% endmacro %}
 {% endmacro %}

@@ -1,4 +1,4 @@
-dateModified: 1708655998
+dateModified: 1708657554
 elementSources:
   craft\elements\Asset:
     -
@@ -473,7 +473,6 @@ meta:
     03f8a74f-3d28-4a13-b76b-92af6c801a16: 'Text: Supporting' # Text: Supporting
     3f87cd19-1003-4802-9f60-9fb8d5062700: Body # Body
     4af5ef3d-2c87-48a7-9d3b-c568f714e378: Footer # Footer
-    4c30b3fa-b81d-4931-a585-f3e994684d6c: 'Carousel: Fellows' # Carousel: Fellows
     4d548d8e-1537-4c78-9207-048346c5eda8: Research # Research
     4d753cb0-1ca4-4b73-aecc-957826dee5de: 'Card: Group' # Card: Group
     4d994633-7c38-4213-bd35-2b0d8966dff5: 'Page Builder: People' # Page Builder: People
@@ -520,7 +519,6 @@ meta:
     07e73dd4-602c-4d47-b4a7-e07e79d12633: 'Entries: Geo' # Entries: Geo
     7f5de4d1-5a86-4bbb-afe3-68e415d1c7c0: Title # Title
     7f980c15-b877-4197-8872-51e7c252444b: New # New
-    7ff09a87-131e-4e78-b7d0-e6c5bc0063a2: 'Carousel: Fellows' # Carousel: Fellows
     8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5: Cards # Cards
     8b6f4e86-b264-4d36-99a2-2bd8c177c514: 'Navigation: Primary' # Navigation: Primary
     8c044fcc-1594-4cee-92a3-35c34e4eb990: 'Asset: Image' # Asset: Image
@@ -846,7 +844,6 @@ meta:
     d1599614-0216-46ee-8a6d-d945d7d0bd1b: 'Action: Entry or URL' # Action: Entry or URL
     da0f3c86-0adc-4639-95b7-f71a2afe7cd0: Email # Email
     da3a7987-a4a2-4942-9663-9bad7a165bf5: 'Text: Body' # Text: Body
-    db1ce9a0-51e7-4d43-984d-6a36769a892d: 'Carousel: Fellows' # Carousel: Fellows
     db8c1ab8-72a9-4372-8764-2fa0cec42651: __blank__ # __blank__
     db600239-720e-403b-b894-d8ef369fc205: 'Highlight: Quote' # Highlight: Quote
     dc79a7ca-a5e2-4cb5-9342-2cd42dc98b29: Default # Default
