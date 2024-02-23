@@ -27,11 +27,21 @@
 
   @include breakpoint(lg) {
     padding-block-end: var(--base-18);
+
+    &[data-columns="4"] {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
   
   @include breakpoint(xl) {
     &[data-columns="3"] {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @include breakpoint(xxl) {
+    &[data-columns="4"] {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
 }

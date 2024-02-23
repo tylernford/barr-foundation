@@ -930,3 +930,16 @@
     }
   }
 }
+.cardRow[data-columns="4"] {
+  @include breakpoint(xxl) {
+    .cardItem {
+      &.cardItem--bio {
+        .cardItem__media {
+          .image {
+            aspect-ratio: 10 / 9;
+          }
+        }
+      }
+    }
+  }
+}

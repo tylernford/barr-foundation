@@ -16,26 +16,15 @@
             } %}
             {{ grantees.granteesGrid(config) }}
 
-        {% case 'news' %}
-
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my news feed</h2>
-
-                {% set cardList = content.cardNews.all() %}
-                {% for item in cardList %}
-                    {% set type = item.type %} {# entry or media #}
-                    {% set card = type == 'entry' ? item.entriesWildcard.one() : item.assetMedia.one() %}
-                    <div>
-                        This is my {{ type }} card.
-                    </div>
-                {% endfor %}
-
         {% case 'bio' %}
 
             {% set personType = content.cardPersonType.one() %}
+            {% set cards = craft.entries().section('directory').limit(8) %}
 
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my {{ personType.title }} bio feed</h2>
+            <div class="cardRow" data-columns="4">
+                {% for card in cards %}
+                    {{ cards.bio(card) }}
+                {% endfor %}
             </div>
 
         {% case 'cards' %}
@@ -146,11 +135,6 @@
             {% if actionCard|length %}
                 {{ cards.action(actionCard) }}
             {% endif %}
-
-        {% default %}
-            <div class="blockGeneric">
-                <h2 class="blockGeneric-heading">This is my default card block</h2>
-            </div>
 
     {% endswitch %}
 {% endmacro %}
