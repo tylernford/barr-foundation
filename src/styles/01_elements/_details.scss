@@ -43,6 +43,10 @@
   align-items: flex-start;
   @include getType('detail-axiforma');
 
+  &.details--no-wrap {
+    flex-wrap: nowrap;
+  }
+
   .details__icon {
     margin-right: var(--base-2);
     width: var(--icon-size);

@@ -47,7 +47,7 @@
 
     {% set title = variant|title|replace({'-': ' '}) %}
     
-    <p class="details" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
+    <p class="details details--no-wrap" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       <svg class="details__icon">
         <title>{{ title }}</title>
         <use xlink:href="{{ alias('@icon') }}{{ icon }}-20"></use>

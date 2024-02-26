@@ -98,10 +98,7 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set image = person.assetImage.one %}
-    {% set name =
-        person.textMiddle|length ? person.textFirst ~ ' ' ~ person.textMiddle ~ ' ' ~ person.textLast :
-        person.textFirst ~ ' ' ~ person.textLast
-    %}
+    {% set name = person.title %}
     {% set pronouns = person.textPronouns %}
     {% set jobTitle = person.textJob %}
     {% set linkAttributes = {
@@ -536,10 +533,7 @@
                             {% set authorImage = postAuthor.assetImage.one %}
 
                             {# Set name #}
-                            {% set authorName =
-                                postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
-                                postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
-                            %}
+                            {% set authorName = postAuthor.title %}
 
                             {% set authorDetails = authorDetails|merge([
                                 { 'img': authorImage, 'name': authorName }

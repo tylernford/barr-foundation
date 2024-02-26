@@ -38,42 +38,6 @@ fieldLayouts:
             userCondition: null
           -
             elementCondition: null
-            fieldUid: 3a2f39b7-ed74-4fe2-aa22-685cdd11a644 # Text: First Name
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c878b819-60ad-4552-a483-71e7098a4686
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: cb18e454-7f9b-4477-ab6b-e5c900f0c4e4 # Text: Middle initial
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8ed60e9c-d568-4b26-b873-74ef58b20118
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 125122fd-5de1-4d94-93a2-ac947d442451 # Text: Last Name
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 19fed40c-fae4-416d-9eec-7875b7dc3e1b
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
             fieldUid: b79fbb2a-3495-4126-aec7-ef3eea56e1a1 # Text: Pronouns
             instructions: null
             label: null
