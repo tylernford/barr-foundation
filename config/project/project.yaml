@@ -1,4 +1,4 @@
-dateModified: 1708969723
+dateModified: 1708981810
 elementSources:
   craft\elements\Asset:
     -
@@ -645,6 +645,7 @@ meta:
     774e3528-0a43-48b1-8c84-e3e8158bc0c2: 'Asset: Image(s) or Video(s)' # Asset: Image(s) or Video(s)
     806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     0814b33a-e40d-4c64-8fa1-aabdfe035850: 'Navigation: Footer' # Navigation: Footer
+    860aed13-393e-4e8d-8611-411a1699f13f: 'Page Builder' # Page Builder
     863f5463-c410-4c19-9ef5-d257ba1721a6: 'Card: Action' # Card: Action
     890d73b0-e871-4780-aea2-81e638b832a5: 'Entry: Blog or Newsroom' # Entry: Blog or Newsroom
     914c6a3c-f48a-422f-ba86-dec3f3932b9f: Label # Label
@@ -716,7 +717,7 @@ meta:
     752595b1-5891-42b2-9b26-2bf61fa1a512: Tutorials # Tutorials
     858957f6-d821-4537-bec3-fb62684c9531: 'Video Cover' # Video Cover
     959502d0-4843-41a5-b295-1ff5b9f3c643: 'Person Type' # Person Type
-    976043fe-a8c0-4179-bdbf-269464d0cbb8: Default # Default
+    976043fe-a8c0-4179-bdbf-269464d0cbb8: Index # Index
     1445186d-7111-49b1-a767-9cda00fa2fb9: Label # Label
     1842618e-7f9b-45c9-be4c-436bd476201e: 'Action: Entry or URL' # Action: Entry or URL
     2360859f-adea-4f42-9101-99fa6d270c3a: Social # Social
