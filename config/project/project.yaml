@@ -1,4 +1,4 @@
-dateModified: 1708657554
+dateModified: 1708969723
 elementSources:
   craft\elements\Asset:
     -
@@ -219,10 +219,10 @@ elementSources:
       disabled: false
       key: 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
       tableAttributes:
-        - link
         - section
-        - slug
         - 'field:329ee082-81cc-492f-bc61-0230f4a009b4' # Entries: Person Type
+        - revisionCreator
+        - link
       type: native
     -
       defaultSort:
