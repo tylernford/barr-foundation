@@ -88,7 +88,7 @@ section: 5a3ec662-f801-451b-97a6-8d2d40b08a5d # News + Insights
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 2
+sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
