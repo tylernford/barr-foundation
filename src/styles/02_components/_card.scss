@@ -193,8 +193,20 @@
     }
 
     .cardItem__heading {
-      color: var(--color-card-text--primary);
       @include getType('h5-axiforma');
+
+      a {
+        color: var(--color-card-text--primary);
+        text-decoration-color: transparent;
+        transition: text-decoration-color var(--transition) ease-in;
+        
+        @media (hover: hover) {
+          &:hover {
+            text-decoration-color: inherit;
+            transition: text-decoration-color var(--transition-intermediate) ease-out;
+          }
+        }
+      }
     }
 
     .cardItem__details {

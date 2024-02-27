@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
 fieldLayouts:
-  6cb38f90-a760-4fc4-923f-d7f51ac94374:
+  d2e82ec0-ed2c-4ff8-a659-696345288c95:
     tabs:
       -
         elementCondition: null
@@ -32,7 +32,7 @@ fieldLayouts:
             uid: cd58cf67-9732-4abd-af6b-5358d9aea08a
             userCondition: null
             warning: null
-            width: 50
+            width: 100
         name: Group
         uid: ae72400d-ff97-40da-95de-5ffcfc055643
         userCondition: null
@@ -40,12 +40,13 @@ group: null
 groupChildBlockTypes: true
 handle: groupType
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 1
 minBlocks: 0
 minChildBlocks: 0
-minSiblingBlocks: 0
+minSiblingBlocks: 1
 name: 'Group Type'
 topLevel: false

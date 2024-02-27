@@ -1,39 +1,32 @@
-childBlocks:
-  - groupType
-  - textBody
+childBlocks: null
 conditions: null
 description: ''
 enabled: true
 field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
 fieldLayouts:
-  d888f0bd-8cc5-4984-8f3c-86f77b45da6c:
+  927636d5-e0fe-4603-a6a7-07ff2e682371:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
+            fieldUid: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e9b9d70e-184b-4b64-b1b7-4b3d2f449ed6
+            uid: 6b2c9e2c-6017-4055-96ff-d9b18d9045b1
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: a7b158cc-6d63-4c64-ac88-f2fa9deed1b2
-            userCondition: null
-        name: Subject
-        uid: df8b6a15-33ab-441b-b124-e46a906ffbb9
+        name: Text
+        uid: 0372346a-df71-4351-9772-b35f36a6dd00
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: sectionBlock
+handle: textBody
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -43,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'People Section'
-topLevel: true
+name: 'Text: Body'
+topLevel: false
