@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  c9679949-883d-40a2-b91e-da99d18d8e0a:
+  e2dfe2c8-aa4d-4cbf-938a-bcc1620c8b15:
     tabs:
       -
         elementCondition: null
@@ -20,7 +20,19 @@ fieldLayouts:
             uid: 058082cc-a91c-4417-9ab7-c0bd03534e0e
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32c504f7-628f-4bbf-817f-4761b09bce9d
+            userCondition: null
+            warning: null
+            width: 50
         name: Cards
         uid: 6bb0ba34-bea1-406a-9bd0-0675b80d136f
         userCondition: null
