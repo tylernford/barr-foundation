@@ -25,7 +25,7 @@
       {% set panelAction = panel.actionLink %}
 
       {# Panel #}
-      <details {{ loop.index == 1 ? 'class="accordion-panel _is-open" open' : 'class="accordion-panel"' }}>
+      <details class="accordion-panel">
         {# Panel Trigger #}
         <summary class="accordion-panel__trigger" id="{{ panelID }}">
           {{ panelTitle }}
