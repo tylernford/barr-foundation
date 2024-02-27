@@ -118,10 +118,7 @@
     {% set crumbs = [ { 'title': 'People', 'url': '' } ] %}
 
     {# Set name #}
-    {% set name =
-        bio.textMiddle|length ? bio.textFirst ~ ' ' ~ bio.textMiddle ~ ' ' ~ bio.textLast :
-        bio.textFirst ~ ' ' ~ bio.textLast
-    %}
+    {% set name = bio.title %}
 
     {# Set pronouns #}
     {% set pronouns = bio.textPronouns %}
@@ -241,10 +238,7 @@
                     {% set authorImage = postAuthor.assetImage.one %}
 
                     {# Set name #}
-                    {% set authorName =
-                        postAuthor.textMiddle|length ? postAuthor.textFirst ~ ' ' ~ postAuthor.textMiddle ~ ' ' ~ postAuthor.textLast :
-                        postAuthor.textFirst ~ ' ' ~ postAuthor.textLast
-                    %}
+                    {% set authorName = postAuthor.title %}
 
                     {% set authorDetails = authorDetails|merge([
                         { 'img': authorImage, 'name': authorName }

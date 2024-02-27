@@ -112,11 +112,8 @@
                             {{ cards.post(postCardConfig) }}
 
                         {% elseif cardVariant == 'news' %}
-                            {% set newsCardConfig = {
-                                'card': card
-                            } %}
-
-                            {{ cards.news(newsCardConfig) }}
+                            {{ cards.news(card) }}
+                            
                         {% elseif cardVariant == 'grants' %}
                             <article class="cardItem cardItem--grant">
                                 <div class="cardItem__inner">

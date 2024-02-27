@@ -1,0 +1,146 @@
+{# =======================================
+  Module: Bio
+==========================================
+  Params:
+    - person
+======================================= #}
+
+{% macro bio(person) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/03_modules/_feed' as feeds %}
+
+    {% set name      = person.title %}
+    {% set bio       = person.textBody %}
+    {% set email     = person.contactEmail %}
+    {% set linkedin  = person.contactLinkedIn %}
+    {% set twitter   = person.contactTwitter %}
+    {% set instagram = person.contactInstagram %}
+    {% set facebook  = person.contactFacebook %}
+    {% set website   = person.contactWebsite %}
+    {% set social =
+        linkedin|length ? true :
+        twitter|length ? true :
+        instagram|length ? true :
+        facebook|length ? true :
+        website|length ? true :
+        false
+    %}
+    {% set recentPosts = craft.entries().section('blog').relatedTo(person).limit(3) %}
+
+
+    {# Bio #}
+    <section class="bio">
+        {# Primary #}
+        <div class="bio__primary">
+            {# Heading #}
+            <h2 class="bio__heading">About {{ name }}</h2>
+
+            {# Content #}
+            <div class="bio__content">
+                {{ bio }}
+            </div>
+        </div>
+
+        {# Contact #}
+        {% if email|length or social %}
+            <div class="bio__secondary">
+                {# Email #}
+                {% if email|length %}
+                    <div class="bio__contact-item">
+                        <h3 class="contact-item__heading">Contact</h3>
+
+                        {% set emailAttributes = {
+                            type: 'link', isReversed: false,
+                            icon: 'email', iconOnly: false,
+                            text: 'Email', url: 'mailto:' ~ email,
+                            linkType: 'external', target: '_blank'
+                        } %}
+                        {{ actions.action(emailAttributes) }}
+                    </div>
+                {% endif %}
+
+                {# Social #}
+                {% if social %}
+                    <div class="bio__contact-item">
+                        <h3 class="contact-item__heading">Social</h3>
+
+                        <ul class="contact-item__list">
+                            {% if linkedin|length %}
+                                <li>
+                                    {% set emailAttributes = {
+                                        type: 'link', isReversed: false,
+                                        icon: 'social-linkedin', iconOnly: false,
+                                        text: 'LinkedIn', url: linkedin,
+                                        linkType: 'external', target: '_blank'
+                                    } %}
+                                    {{ actions.action(emailAttributes) }}
+                                </li>
+                            {% endif %}
+
+                            {% if twitter|length %}
+                                 <li>
+                                    {% set emailAttributes = {
+                                        type: 'link', isReversed: false,
+                                        icon: 'social-twitter', iconOnly: false,
+                                        text: 'Twitter', url: twitter,
+                                        linkType: 'external', target: '_blank'
+                                    } %}
+                                    {{ actions.action(emailAttributes) }}
+                                </li>
+                            {% endif %}
+
+                            {% if instagram|length %}
+                                <li>
+                                    {% set emailAttributes = {
+                                        type: 'link', isReversed: false,
+                                        icon: 'social-instagram', iconOnly: false,
+                                        text: 'Instagram', url: instagram,
+                                        linkType: 'external', target: '_blank'
+                                    } %}
+                                    {{ actions.action(emailAttributes) }}
+                                </li>
+                            {% endif %}
+
+                            {% if facebook|length %}
+                                <li>
+                                    {% set emailAttributes = {
+                                        type: 'link', isReversed: false,
+                                        icon: 'social-facebook', iconOnly: false,
+                                        text: 'Facebook', url: facebook,
+                                        linkType: 'external', target: '_blank'
+                                    } %}
+                                    {{ actions.action(emailAttributes) }}
+                                </li>
+                            {% endif %}
+
+                            {% if website|length %}
+                                <li>
+                                    {% set emailAttributes = {
+                                        type: 'link', isReversed: false,
+                                        icon: 'link-out', iconOnly: false,
+                                        text: 'Website', url: website,
+                                        linkType: 'external', target: '_blank'
+                                    } %}
+                                    {{ actions.action(emailAttributes) }}
+                                </li>
+                            {% endif %}
+                        <ul>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </section>
+
+    {# Posts #}
+    {% if recentPosts|length %}
+        {% set title = 'Posts by ' ~ name %}
+        {% set feedConfig = {
+            'title': title,
+            'titleVariant': 'small',
+            'feed': recentPosts,
+            'gridVariant': 'grid',
+            'cardVariant': 'post'
+        } %}
+        {{ feeds.feed(feedConfig) }}
+    {% endif %}
+{% endmacro %}

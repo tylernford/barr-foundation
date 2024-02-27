@@ -11,6 +11,7 @@
     {% import '_macros/02_components/_card' as cards %}
 
     {% set title = config.title %}
+    {% set titleVariant = config.titleVariant %}
     {% set feed = config.feed %}
     {% set gridVariant = config.gridVariant %}
     {% set cardVariant = config.cardVariant %}
@@ -20,7 +21,7 @@
         {% set sectionTitleAttributes = {
             level: 'h2',
             title: title,
-            variant: '', border: true
+            variant: titleVariant, border: true
         } %}
         {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
 
@@ -29,6 +30,8 @@
             {% for feedItem in feed %}
                 {% if cardVariant == 'bio' %}
                     {{ cards.bio(feedItem) }}
+                {% elseif cardVariant == 'post' %}
+                    {{ cards.post(feedItem) }}
                 {% endif %}
             {% endfor %}
         </div>

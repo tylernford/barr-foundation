@@ -1,4 +1,4 @@
-dateModified: 1708981810
+dateModified: 1709000230
 elementSources:
   craft\elements\Asset:
     -
@@ -453,6 +453,7 @@ meta:
     02b15980-0b09-401f-8c50-1d153038e69d: Release # Release
     2c4256df-30bd-463f-aa51-5edff678315e: 'Asset: Image' # Asset: Image
     2c464958-58a2-42c3-9fa5-7d0c3130ac13: Media # Media
+    2ce7a3bf-415b-4528-81af-ded77fc241fc: 'Contact: LinkedIn' # Contact: LinkedIn
     2d68d05d-95ee-4cf8-a1e6-3b302f6ba8cc: Action # Action
     2d85d472-1f81-45ee-9294-8af027894cdd: 'Section Bookmark (Optional)' # Section Bookmark (Optional)
     2dec7473-aaa1-473a-a853-156a05b52a14: Target # Target
@@ -611,7 +612,6 @@ meta:
     114e6010-b1c0-4faa-837c-c7bbe1e0daae: 'Page Builders' # Page Builders
     135f1b4e-27cb-4cda-be94-52607d445f75: 'Asset: Image' # Asset: Image
     157d31f9-69c2-4ae1-a4b4-0e6b6f253467: Text # Text
-    161d2b2c-037a-49db-9f03-d8f065e0d52d: 'Action: Contact' # Action: Contact
     164e396c-5108-4979-b8fd-d4dbd523d790: 'Card: Wildcard' # Card: Wildcard
     0202bad0-be1f-4afa-96db-a840700c3d74: 'Entry: News' # Entry: News
     205a3949-5e2c-4e26-a4fa-0a6f2fdf0cea: 'Contact: Email' # Contact: Email
@@ -720,7 +720,6 @@ meta:
     976043fe-a8c0-4179-bdbf-269464d0cbb8: Index # Index
     1445186d-7111-49b1-a767-9cda00fa2fb9: Label # Label
     1842618e-7f9b-45c9-be4c-436bd476201e: 'Action: Entry or URL' # Action: Entry or URL
-    2360859f-adea-4f42-9101-99fa6d270c3a: Social # Social
     2652042d-326e-45ff-b0bd-45f95f9e2507: Header # Header
     3060677b-b2ac-4ff3-8d37-8eee1d339e16: 'Authors: Import List' # Authors: Import List
     5691662c-4e40-4575-83b4-edd124f56d7d: 'Geo: Location' # Geo: Location
@@ -773,7 +772,6 @@ meta:
     b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400: 'Entries: Team' # Entries: Team
     b8d4ea4e-74b0-46b4-9a80-39170eb76c27: 'Highlight: Stats' # Highlight: Stats
     b50dc00d-971b-4a33-a1f2-de240fbc64c6: 'Entries: Authors' # Entries: Authors
-    b59d6a61-26cb-4853-90ad-287474f711ef: Email # Email
     b68fa7d0-ea0f-4788-841c-bbce45e4344a: 'Text: Notes' # Text: Notes
     b75b1db0-3847-487e-a95f-30047f42b5ad: 'Contact Form' # Contact Form
     b79ce34d-ad66-4028-8d7b-c171c4c8cc40: 'Geo Regions' # Geo Regions

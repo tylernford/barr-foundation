@@ -86,10 +86,7 @@
             {% if attr and attr.type == 'internal' %}
                 {% set attribution = attr.item.one() %}
                 {% set attrImage = attribution.assetImage.one %}
-                {% set attrName =
-                    attribution.textMiddle|length ? attribution.textFirst ~ ' ' ~ attribution.textMiddle ~ ' ' ~ attribution.textLast :
-                    attribution.textFirst ~ ' ' ~ attribution.textLast
-                %}
+                {% set attrName = attribution.title %}
                 {% set attrPerson = attrPerson|merge([
                     { 'img': attrImage, 'name': attrName }
                 ]) %}
@@ -239,14 +236,11 @@
                     </div>
 
                 {% elseif cardVariant == 'news' %}
-                    {% set newsCardConfig = {
-                        'card': card
-                    } %}
-
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
-                        {{ cards.news(newsCardConfig) }}
+                        {{ cards.news(card) }}
                     </div>
+                    
                 {% elseif cardVariant == 'grants' %}
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
