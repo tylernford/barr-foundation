@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
 fieldLayouts:
-  927636d5-e0fe-4603-a6a7-07ff2e682371:
+  8ae2abdb-ccd9-41e3-bd5a-f8ba6de7c951:
     tabs:
       -
         elementCondition: null
@@ -36,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Text: Body'
+name: 'Trustee Intro'
 topLevel: false
