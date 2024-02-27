@@ -1,0 +1,138 @@
+/* _bio.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Bio
+  See templates/_macros/03_modules/_bio.twig for markup
+------------------------------------------------------------------------ */
+
+.bio {
+  --color-bio--primary: var(--color-teal-100);
+  --color-bio--secondary: var(--color-grey-100);
+  --color-bio--tertiary: var(--color-grey-50);
+  --color-bio--background: var(--color-teal-150);
+
+  @include container-narrow;
+  padding-block: var(--base-12);
+
+  @include breakpoint(lg) {
+    padding-block: var(--base-18);  
+  }
+
+  // Bio
+  .bio-and-contact__bio {
+    .bio__heading {
+      margin-block-end: var(--base-3);
+      @include getType('label');
+    }
+  }
+
+  .bio__content {
+    @include getType('caption-messina');
+
+    @include breakpoint(md) {
+      @include getType('body');
+    }
+    
+    > * {
+      max-width: 37em;
+    }
+
+    h3 {
+      &:not(:first-child) {
+        margin-block-start: 1.55em;
+      }
+
+      @include getType('h5-axiforma');
+    }
+
+    p,
+    ul,
+    ol {
+      &:not(:last-child) {
+        margin-block-end: 1em;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-inline: 1em;
+    }
+
+    ol {
+      list-style-type: decimal;
+      margin-inline: 1em;
+    }
+
+    a {
+      color: var(--color-bio--primary);
+      transition: color var(--transition) ease-in;
+      
+      @media (hover: hover) {
+        &:hover {
+          color: inherit;
+          transition: color var(--transition-intermediate) ease-out;
+        }
+      }
+    }
+
+    strong {
+      font-weight: 400;
+    }
+
+    i {
+      font-style: italic;
+    }
+  }
+
+  .bio-and-contact__contact {
+    margin-block-start: var(--base-8);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--base-10);
+
+    .contact__heading {
+      margin-block-end: var(--base-2);
+      color: var(--color-bio--secondary);
+      @include getType('label');
+    }
+
+    .contact__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: var(--base-6);
+      row-gap: var(--base-4);
+    }
+  }
+
+  @include breakpoint(sm) {
+    .bio-and-contact__contact {
+      flex-wrap: nowrap;
+      gap: var(--base-20)
+    }
+  }
+
+  @include breakpoint(md) {
+    .bio-and-contact__contact {
+      margin-block-start: var(--base-16);
+    }
+  }
+
+  @include breakpoint(lg) {
+    .bio__bio-and-contact {
+      display: flex;
+      gap: var(--base-24);
+    }
+
+    .bio-and-contact__contact {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--base-10);
+
+      .contact__list {
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -72,6 +72,10 @@
     @include container-narrow;
     padding-block: var(--base-6);
     @include getType('caption-messina');
+
+    @include breakpoint(md) {
+      @include getType('body');
+    }
     
     > * {
       max-width: 37em;
@@ -193,7 +197,6 @@
   
     .blockBody__paragraph {
       padding-block: var(--base-9);
-      @include getType('body');
     }
 
     .blockBody__action {

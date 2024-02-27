@@ -1,0 +1,135 @@
+{# =======================================
+  Module: Bio
+==========================================
+  Params:
+    - person
+======================================= #}
+
+{% macro bio(person) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+
+    {% set name      = person.title %}
+    {% set bio       = person.textBody %}
+    {% set email     = person.contactEmail %}
+    {% set linkedin  = person.contactLinkedIn %}
+    {% set twitter   = person.contactTwitter %}
+    {% set instagram = person.contactInstagram %}
+    {% set facebook  = person.contactFacebook %}
+    {% set website   = person.contactWebsite %}
+
+    {% set social =
+        linkedin|length ? true :
+        twitter|length ? true :
+        instagram|length ? true :
+        facebook|length ? true :
+        website|length ? true :
+        false
+    %}
+
+
+    <div class="bio">
+        {# Bio & Contact #}
+        <section class="bio__bio-and-contact">
+            {# Bio #}
+            <div class="bio-and-contact__bio">
+                {# Heading #}
+                <h2 class="bio__heading">About {{ name }}</h2>
+
+                {# Content #}
+                <div class="bio__content">
+                    {{ bio }}
+                </div>
+            </div>
+
+            {% if email|length or social %}
+                <div class="bio-and-contact__contact">
+                    {# Email #}
+                    {% if email|length %}
+                        <div class="contact__links">
+                            <h3 class="contact__heading">Contact</h3>
+
+                            {% set emailAttributes = {
+                                type: 'link', isReversed: false,
+                                icon: 'email', iconOnly: false,
+                                text: 'Email', url: 'mailto:' ~ email,
+                                linkType: 'external', target: ''
+                            } %}
+                            {{ actions.action(emailAttributes) }}
+                        </div>
+                    {% endif %}
+
+                    {# Social #}
+                    {% if social %}
+                        <div class="contact__links">
+                            <h3 class="contact__heading">Social</h3>
+
+                            <ul class="contact__list">
+                                {% if linkedin|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-linkedin', iconOnly: false,
+                                            text: 'LinkedIn', url: linkedin,
+                                            linkType: 'external', target: ''
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if twitter|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-twitter', iconOnly: false,
+                                            text: 'Twitter', url: twitter,
+                                            linkType: 'external', target: ''
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if instagram|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-instagram', iconOnly: false,
+                                            text: 'Instagram', url: instagram,
+                                            linkType: 'external', target: ''
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if facebook|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-facebook', iconOnly: false,
+                                            text: 'Facebook', url: facebook,
+                                            linkType: 'external', target: ''
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if website|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'link-out', iconOnly: false,
+                                            text: 'Website', url: website,
+                                            linkType: 'external', target: ''
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+                            <ul>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </section>
+
+        {# Posts #}
+    </div>    
+{% endmacro %}

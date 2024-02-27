@@ -8,6 +8,7 @@ Interior template
 {% extends '_layouts/_base' %}
 
 {% import '_macros/02_components/_assets' as assets %}
+{% import '_macros/03_modules/_bio' as bios %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
 
@@ -36,6 +37,7 @@ Interior template
     4. Default to common builder for everything else
     #}
     {% set isDatabase = (entry.slug == 'grants-grantees') or (entrySection == 'grantees') %}
+    {% set isBio = entrySection == 'directory' %}
     {% set builder =
         entry.builderCommon ??
         entry.builderPeople ??
@@ -58,6 +60,8 @@ Interior template
         {% elseif entrySection == 'grantees' %}
             {% include 'interior/_entry-grants-org.twig' with {'entry': entry} %}
         {% endif %}
+    {% elseif isBio %}
+        {{ bios.bio(entry) }}
     {% endif %}
 
 
