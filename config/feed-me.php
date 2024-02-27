@@ -29,6 +29,10 @@ return [
             // Updates Grantee entries with organization details (e.g. website, social links) 
             '4' => [
                 'name' => 'Grants By Organization Details',
+            ],
+            // Directory
+            '5' => [
+                'name' => 'Directory',
             ]
         ]
     ]
