@@ -58,7 +58,7 @@
 
   // Trigger
   .accordion-panel__trigger {
-    padding: var(--base-5) 0;
+    padding: var(--base-5) var(--base-10) var(--base-5) 0;
     position: relative;
     border-top: 1px solid var(--color-grey-100);
     @include getType('h5-axiforma');
@@ -76,7 +76,7 @@
     &::after {
       order: 2;
       content: '';
-      top: calc(50% - 1px);
+      top: 33px;
       right: 0;
       width: 1.25rem;
       height: 2px;
@@ -163,6 +163,13 @@
   // Variants
   // Large
   &[data-variant=large] {
+    .accordion-panel__trigger {
+      &::before,
+      &::after {
+        top: 27px;
+      }
+    }
+
     @include breakpoint(md) {
       grid-template-columns: 1fr;
 
@@ -184,7 +191,7 @@
     }
 
     .accordion-panel__trigger {
-      padding: var(--base-2) 0;
+      padding: var(--base-2) var(--base-10) var(--base-2) 0;
       @include getType('h3-axiforma');
     }
   }
@@ -192,8 +199,13 @@
   // Small
   &[data-variant=small] {
     .accordion-panel__trigger {
-      padding: var(--base-3) 0;
+      padding: var(--base-3) var(--base-10) var(--base-3) 0;
       @include getType('caption-axiforma');
+
+      &::before,
+      &::after {
+        top: 23px;
+      }
     }
   }
 }
