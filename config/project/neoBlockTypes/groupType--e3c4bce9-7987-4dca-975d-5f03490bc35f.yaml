@@ -4,23 +4,11 @@ description: ''
 enabled: true
 field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
 fieldLayouts:
-  d2e82ec0-ed2c-4ff8-a659-696345288c95:
+  3095f8fa-1537-4036-af00-42e889215860:
     tabs:
       -
         elementCondition: null
         elements:
-          -
-            elementCondition: null
-            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
-            instructions: 'One to three sentences that introduces the People Group.'
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4280df4b-008d-49b9-9323-ace6b934dc5c
-            userCondition: null
-            warning: null
-            width: 100
           -
             elementCondition: null
             fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
