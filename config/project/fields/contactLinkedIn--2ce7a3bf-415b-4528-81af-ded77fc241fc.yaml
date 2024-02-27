@@ -1,9 +1,9 @@
-columnSuffix: null
+columnSuffix: eoatpgpv
 contentColumnType: string(255)
 fieldGroup: d38d5b2f-c00b-46b1-a1b7-2e88f27d88de # Actions
-handle: contactYoutube
+handle: contactLinkedIn
 instructions: null
-name: 'Contact: YouTube'
+name: 'Contact: LinkedIn'
 searchable: true
 settings:
   maxLength: 255
