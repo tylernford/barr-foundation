@@ -1,0 +1,45 @@
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
+{% import '_macros/02_components/_card' as cards %}
+{% import "_macros/03_modules/_text.twig" as text %}
+
+{% for section in builder.level(1).all() %}
+    {% set sectionName = section.dividerSection.sectionName %}
+    {% set displaySectionTitle = section.dividerSection.displayDivider %}
+    {% set sectionBlocks = section.children.all() %}
+
+    <section class="pageSection" id="{{ sectionName|slugify }}">
+        {# Section title #}
+        {% set sectionTitleAttributes = {
+            level: 'h2',
+            title: sectionName,
+            variant: '', border: true
+        } %}
+        {% if displaySectionTitle == true %}
+            {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+        {% endif %}
+
+        {# Section blocks #}
+        {% for block in sectionBlocks %}
+            {# Body #}
+            {% if block.type == 'textBody' %}
+                {% set copyConfig  = {
+                    'content': block,
+                    'variant': 'body'
+                } %}
+                {{ text.default(copyConfig) }}
+
+            {# Feed #}
+            {% else %}
+                {% set feed = craft.entries().section('directory').limit(8) %}
+                
+                <div class="feed">
+                    <div class="feed__grid" data-grid-style="grid">
+                        {% for feedItem in feed %}
+                            {{ cards.bio(feedItem) }}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endfor %}
