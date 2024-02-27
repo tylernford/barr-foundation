@@ -17,18 +17,13 @@ for (let accordion of accordions) {
       // Prevent default browser behaviour
       event.preventDefault();
 
-      // If targeted panel is not open
-      if(!panel.open) {
-        // Get expanded panel, trigger, and body
-        const expandedPanel = accordion.querySelector(`details[open]`);
-        const expandedPanelTrigger = expandedPanel.querySelector(`.accordion-panel__trigger`);
-        const expandedPanelBody = expandedPanel.querySelector(`.accordion-panel__body`);
-        
-        // Close expanded panel
-        closePanel(expandedPanel, expandedPanelTrigger, expandedPanelBody);
 
+      if(!panel.open) {
         // Trigger targeted panel expansion
         triggerPanelExpand(panel, panelTrigger, panelBody);
+      } else {
+        // Trigger targeted panel close
+        closePanel(panel, panelTrigger, panelBody);
       }
     });
   }
