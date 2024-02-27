@@ -48,6 +48,8 @@ Interior template
     {% if builder %}
         {% if entrySection == 'programAreas' and entry.type == 'landing' %}
             {% include '_partials/_builder-program-areas.twig' with {'builder': builder} %}
+        {% elseif entrySection == 'aboutUs' and entry.type == 'directory' %}
+            {% include '_partials/_builder-people.twig' with {'builder': builder} %}
         {% else %}
             {% include '_partials/_builder-common.twig' with {'builder': builder} %}
         {% endif %}

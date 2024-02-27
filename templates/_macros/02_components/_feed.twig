@@ -104,12 +104,9 @@
                             } %}
 
                             {{ cards.grantee(granteeCardConfig) }}
+                            
                         {% elseif cardVariant == 'post' %}
-                            {% set postCardConfig = {
-                                'post': card
-                            } %}
-
-                            {{ cards.post(postCardConfig) }}
+                            {{ cards.post(card) }}
 
                         {% elseif cardVariant == 'news' %}
                             {{ cards.news(card) }}
