@@ -7,6 +7,7 @@
 
 {% macro bio(person) %}
     {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/03_modules/_feed' as feeds %}
 
     {% set name      = person.title %}
     {% set bio       = person.textBody %}
@@ -131,5 +132,17 @@
         </section>
 
         {# Posts #}
+        {% set teamFeed = craft.entries().section('blog').limit(3) %}
+        {% if teamFeed|length %}
+            {% set title = 'Posts by ' ~ name %}
+            {% set feedConfig = {
+                'title': title,
+                'titleVariant': 'small',
+                'feed': teamFeed,
+                'gridVariant': 'grid',
+                'cardVariant': 'post'
+            } %}
+            {{ feeds.feed(feedConfig) }}
+        {% endif %}
     </div>    
 {% endmacro %}

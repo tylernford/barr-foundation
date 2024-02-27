@@ -25,7 +25,7 @@
                         {# Image #}
                         {% if image %}
                             <div class="cardItem__media">
-                                {{ images.image(image, '1024', '3/2', '', false) }}
+                                {{ images.image(image, '1024', '16/9', '', false) }}
                             </div>
                         {% endif %}
 
@@ -118,14 +118,16 @@
         {# Image #}
         {% if image %}
             <div class="cardItem__media">
-                {{ images.image(image, '640', '3/2', '', false) }}
+                {{ images.image(image, '640', '16/9', '', false) }}
             </div>
         {% endif %}
 
         <div class="cardItem__content">
             <div class="cardItem__info">
                 {# Name & Pronouns #}
-                <h3 class="cardItem__heading">{{ name }}</h3>
+                <h3 class="cardItem__heading">
+                    <a href="{{ person.url }}">{{ name }}</a>
+                </h3>
 
                 {% if pronouns or jobTitle %}
                     <div class="cardItem__details">
@@ -169,7 +171,7 @@
             {# Image #}
             {% if image %}
                 <div class="cardItem__media">
-                    {{ images.image(image, '912', '3/2', '', false) }}
+                    {{ images.image(image, '912', '16/9', '', false) }}
                 </div>
             {% endif %}
 
@@ -235,7 +237,7 @@
             {% if displayImage %}
                 {% if image %}
                     <div class="cardItem__media">
-                        {{ images.image(image, '912', '3/2', '', false) }}
+                        {{ images.image(image, '912', '16/9', '', false) }}
                     </div>
                 {% endif %}
             {% endif %}
@@ -315,7 +317,7 @@
                         {{ videoPlayers.videoPlayer(videoUrl, image, 'card')}}
                     </div>
                 {% else %}
-                    {{ images.image(image, '640', '3/2', '', false) }}
+                    {{ images.image(image, '640', '16/9', '', false) }}
                 {% endif %}
             </div>
 
@@ -364,12 +366,11 @@
 
 
 {# News #}
-{% macro news(config) %}
+{% macro news(card) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
 
-    {% set card  = config.card %}
     {% set image = card.assetImage.one %}
     {% set label = '' %}
     {% set publication = card.textPublication %}
@@ -401,7 +402,7 @@
             {# Image #}
             {% if image %}
                 <div class="cardItem__media">
-                    {{ images.image(image, '912', '3/2', '', false) }}
+                    {{ images.image(image, '912', '16/9', '', false) }}
                 </div>
             {% endif %}
 
@@ -468,12 +469,11 @@
 
 
 {# Post #}
-{% macro post(config) %}
+{% macro post(post) %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
 
-    {% set post  = config.post %}
     {% set url   = post.url %}
     {% set image = post.assetImage.one %}
     {% set title = post.title %}
@@ -509,7 +509,7 @@
             {# Image #}
             {% if image %}
                 <div class="cardItem__media">
-                    {{ images.image(image, '912', '3/2', '', false) }}
+                    {{ images.image(image, '912', '16/9', '', false) }}
                 </div>
             {% endif %}
 

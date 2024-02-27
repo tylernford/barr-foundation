@@ -12,14 +12,17 @@
   --color-bio--tertiary: var(--color-grey-50);
   --color-bio--background: var(--color-teal-150);
 
-  @include container-narrow;
   padding-block: var(--base-12);
 
   @include breakpoint(lg) {
-    padding-block: var(--base-18);  
+    padding-block: var(--base-16);  
   }
 
-  // Bio
+  // Bio and Contact
+  .bio__bio-and-contact {
+    @include container-narrow;
+  }
+
   .bio-and-contact__bio {
     .bio__heading {
       margin-block-end: var(--base-3);

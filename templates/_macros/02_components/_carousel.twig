@@ -236,14 +236,11 @@
                     </div>
 
                 {% elseif cardVariant == 'news' %}
-                    {% set newsCardConfig = {
-                        'card': card
-                    } %}
-
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
-                        {{ cards.news(newsCardConfig) }}
+                        {{ cards.news(card) }}
                     </div>
+                    
                 {% elseif cardVariant == 'grants' %}
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
