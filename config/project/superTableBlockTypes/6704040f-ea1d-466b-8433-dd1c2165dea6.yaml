@@ -1,4 +1,4 @@
-changedFieldIndicator: 1596012994
+changedFieldIndicator: 1218626754
 field: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
 fieldLayouts:
   8d55e71b-cdd7-4641-befb-d61027c0e790:
@@ -136,7 +136,7 @@ fields:
         custom:
           allowAliases: false
           disableValidation: false
-          enabled: false
+          enabled: true
         email:
           allowAliases: false
           disableValidation: false
@@ -145,7 +145,18 @@ fields:
           allowCrossSiteLink: false
           allowCustomQuery: false
           enabled: true
-          sources: '*'
+          sources:
+            - singles
+            - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+            - 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
+            - 'section:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
+            - 'section:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
+            - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+            - 'section:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+            - 'section:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+            - 'section:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+            - 'section:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+            - 'section:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
         site:
           enabled: false
           sites: '*'
