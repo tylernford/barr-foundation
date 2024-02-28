@@ -38,6 +38,7 @@ Interior template
     #}
     {% set isDatabase = (entry.slug == 'grants-grantees') or (entrySection == 'grantees') %}
     {% set isBio = entrySection == 'directory' %}
+    {% set isBlog = entrySection == 'blog' %}
     {% set builder =
         entry.builderCommon ??
         entry.builderPeople ??
@@ -64,35 +65,46 @@ Interior template
         {% endif %}
     {% elseif isBio %}
         {{ bios.bio(entry) }}
+    {% elseif isBlog %}
+        {% import "_macros/03_modules/_text.twig" as modules %}
+        {% set config  = {
+                'content': entry,
+                'variant': 'body'
+            } %}
+        <section class="blog-post">
+            {{ modules.default(config) }}
+        </section>
     {% endif %}
 
 
     {# Interior Pre-Footer #}
-    {% set teamFeed = entry.feedTeam ?? entry.feedTeam %}
-    {% if teamFeed|length %}
-        {% set title = teamFeed.one.teamTitle %}
-        {% set feed  = teamFeed.one.team %}
-        {% set feedConfig = {
-            'title': title,
-            'titleVariant': '',
-            'feed': feed,
-            'gridVariant': 'grid',
-            'cardVariant': 'bio'
-        } %}
+    {% if not isBlog %}
+        {% set teamFeed = entry.feedTeam ?? entry.feedTeam %}
+        {% if teamFeed|length %}
+            {% set title = teamFeed.one.teamTitle %}
+            {% set feed  = teamFeed.one.team %}
+            {% set feedConfig = {
+                'title': title,
+                'titleVariant': '',
+                'feed': feed,
+                'gridVariant': 'grid',
+                'cardVariant': 'bio'
+            } %}
 
-        {{ feeds.feed(feedConfig) }}
-    {% endif %}
+            {{ feeds.feed(feedConfig) }}
+        {% endif %}
 
-    {% if entry.textPlainHeading or entry.textDescription %}
-        <section class="prefooterForm">
-            {% if entry.textPlainHeading %}
-                <h2>{{ entry.textPlainHeading }}</h2>
-            {% endif %}
-            {% if entry.textDescription %}
-                <div class="prefooterForm__description">
-                    {{ entry.textDescription }}
-                </div>
-            {% endif %}
-        </section>
+        {% if entry.textPlainHeading or entry.textDescription %}
+            <section class="prefooterForm">
+                {% if entry.textPlainHeading %}
+                    <h2>{{ entry.textPlainHeading }}</h2>
+                {% endif %}
+                {% if entry.textDescription %}
+                    <div class="prefooterForm__description">
+                        {{ entry.textDescription }}
+                    </div>
+                {% endif %}
+            </section>
+        {% endif %}
     {% endif %}
 {% endblock %}
