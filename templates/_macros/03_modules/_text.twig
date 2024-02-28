@@ -92,9 +92,10 @@
             </div>
 
         {% case 'accordion' %}
+            {% set singleColumn = content.toggleFullwidth %}
             {% set accordion = content.blockAccordion.all() %}
 
-            {{ accordion.accordion(accordion, '') }}
+            {{ accordion.accordion(accordion, '', singleColumn) }}
 
         {% case 'featured' %}
             {% set linkList = content.blockFeaturedLinks.all() %}
