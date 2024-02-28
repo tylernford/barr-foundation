@@ -79,38 +79,36 @@
 
     {# Submenu overlay #}
     <div{% if id|length %} id="submenu-{{ id }}"{% endif %} class="submenu__overlay">
-        <div class="overlay__inner">
-            {# Submeanu heading #}
-            {% if heading|length %}
-                <h3 class="submenu__heading">{{ heading }}</h3>
-            {% endif %}
+        {# Submeanu heading #}
+        {% if heading|length %}
+            <h3 class="submenu__heading">{{ heading }}</h3>
+        {% endif %}
 
-            {# Submenu description #}
-            {% if description|length %}
-                <div class="submenu__description">
-                    {{ description }}
-                </div>
-            {% endif %}
+        {# Submenu description #}
+        {% if description|length %}
+            <div class="submenu__description">
+                {{ description }}
+            </div>
+        {% endif %}
 
-            {# Submenu menu #}
-            <nav class="submenu__menu">
-                <ul>
-                    {# Primary items #}
-                    {% for item in primaryNav %}
+        {# Submenu menu #}
+        <nav class="submenu__menu">
+            <ul>
+                {# Primary items #}
+                {% for item in primaryNav %}
+                    {# Menu item #}
+                    {{ _self.menuItem(item, 'submenu__item submenu__item--primary') }}
+                {% endfor %}
+
+                {# Secondary items #}
+                {% if secondaryNav %}
+                    {% for item in secondaryNav %}    
                         {# Menu item #}
-                        {{ _self.menuItem(item, 'submenu__item submenu__item--primary') }}
+                        {{ _self.menuItem(item, 'submenu__item submenu__item--secondary') }}
                     {% endfor %}
-
-                    {# Secondary items #}
-                    {% if secondaryNav %}
-                        {% for item in secondaryNav %}    
-                            {# Menu item #}
-                            {{ _self.menuItem(item, 'submenu__item submenu__item--secondary') }}
-                        {% endfor %}
-                    {% endif %}
-                </ul>
-            </nav>
-        </div>
+                {% endif %}
+            </ul>
+        </nav>
     </div>
 {% endmacro %}
 
