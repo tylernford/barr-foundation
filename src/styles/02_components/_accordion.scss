@@ -48,7 +48,10 @@
 
   @include breakpoint(md) {
     padding-block: var(--base-9);
-    grid-template-columns: 1fr 1fr;
+    
+    &:not([data-columns="1"]) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   // Panel
