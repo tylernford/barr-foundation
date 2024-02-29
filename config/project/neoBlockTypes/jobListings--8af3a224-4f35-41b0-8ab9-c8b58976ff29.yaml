@@ -1,0 +1,19 @@
+childBlocks: null
+conditions: null
+description: 'Any open Job Listings will be displayed on the frontend.'
+enabled: true
+field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
+group: null
+groupChildBlockTypes: true
+handle: jobListings
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Job Listings'
+topLevel: false

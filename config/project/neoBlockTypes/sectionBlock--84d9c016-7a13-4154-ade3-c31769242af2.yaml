@@ -11,12 +11,13 @@ childBlocks:
   - carouselCards
   - timelineSingle
   - timelineMultiple
+  - jobListings
 conditions: null
 description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  1d34df5c-52d8-49bd-82e9-88ea525aa311:
+  7f3f3794-4870-4182-85e8-ed8b655ad293:
     tabs:
       -
         elementCondition: null
