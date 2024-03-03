@@ -1,5 +1,5 @@
 {% import '_macros/02_components/_assets' as assets %}
-
+{% import '_macros/02_components/_card' as cards %}
 {% import '_macros/01_elements/_actions' as actions %}
 {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
 {% import '_macros/01_elements/_details' as details %}
@@ -14,6 +14,15 @@
 {% for block in builder.all() %}
 
     {% switch block.type %}
+        {% case 'cardFeature' %}
+            {% set config  = {
+                'content': block,
+                'variant': 'feature'
+            } %}
+            {{ cards.default(config) }}
+            
+        {% case 'highlightStats' %}
+            {{ stats.stats(block)}}
         
         {% case 'tabsProgram' %}
             <section class="blockTabs">
@@ -106,9 +115,6 @@
                     {{ assets.transformedImage(cardImage,obj) }}
                 {% endif %}
             </section>
-
-        {% case 'highlightStats' %}
-            {{ stats.stats(block)}}
 
         {% case 'cardNews' %}
             <section class="blockCards">
