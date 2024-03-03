@@ -52,6 +52,7 @@ group: null
 groupChildBlockTypes: true
 handle: cardNews
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 1
 maxChildBlocks: 0

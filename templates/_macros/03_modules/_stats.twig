@@ -1,0 +1,40 @@
+{# =======================================
+  Module: Stats
+==========================================
+  Params:
+    - block
+======================================= #}
+
+{% macro stats(block) %}
+    {% import '_macros/01_elements/_angles' as angles %}
+    {% import '_macros/02_components/_card' as cards %}
+    {% import "_macros/02_components/_highlight.twig" as stats %}
+
+    {# Set stats config #}
+    {% set statsConfig  = {
+        'content': block,
+        'variant': 'stats'
+    } %}
+    {# Set action card #}
+    {% set actionCard = block.cardAction %}
+    
+    <section class="stats">
+        <div class="angle">
+            {{ angles.top() }}
+        </div>
+        
+        <div data-is-reversed="true">
+            {# Stats #}
+            {{ stats.default(statsConfig) }}
+            
+            {# Action Card #}
+            {% if actionCard|length %}
+                {{ cards.action(actionCard, true) }}
+            {% endif %}
+        </div>
+        
+        <div class="angle">
+            {{ angles.bottom() }}
+        </div>
+    </section>
+{% endmacro %}

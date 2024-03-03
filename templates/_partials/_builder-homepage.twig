@@ -8,17 +8,20 @@
 {% import '_macros/02_components/_quote' as quote %}
 {% import '_macros/03_modules/_accordion' as accordionModule %}
 
-{% for b in builder.all() %}
+{% import '_macros/03_modules/_stats' as stats %}
 
-    {% switch b.type %}
+
+{% for block in builder.all() %}
+
+    {% switch block.type %}
         
         {% case 'tabsProgram' %}
             <section class="blockTabs">
                 <div class="blockTabs-intro">
-                    <h1 class="blockTabs-preheading">{{ b.textPreheading }}</h1>
-                    <div class="blockTabs-support">{{ b.textRichBasic }}</div>
+                    <h1 class="blockTabs-preheading">{{ block.textPreheading }}</h1>
+                    <div class="blockTabs-support">{{ block.textRichBasic }}</div>
                 </div>
-                {% set programs = b.tabsProgram %}
+                {% set programs = block.tabsProgram %}
                 <div class="blockTabs-content">
                     {% for p in programs %}
                         {% set programEntry = p.entryProgramArea.one() %}
@@ -60,7 +63,7 @@
             </section>
 
         {% case 'cardGrantsDatabase' %}
-            {% set card = b.cardGrants %}
+            {% set card = block.cardGrants %}
             <section class="blockSimple{% if card.styleAlignment == 'right' %} blockSimple--right{% endif %}">
                 
                 <div class="blockSimple-body">
@@ -83,7 +86,7 @@
             </section>
 
         {% case 'cardGrantmaking'%}
-            {% set card = b.cardGrants %}
+            {% set card = block.cardGrants %}
             <section class="blockSimple{% if card.styleAlignment == 'right' %} blockSimple--right{% endif %}">
                 <div class="blockSimple-body">
                     <h2 class="blockSimple-heading">{{ card.textHeading }}</h2>
@@ -105,53 +108,12 @@
             </section>
 
         {% case 'highlightStats' %}
-            <section class="blockStats">
-                <h2 class="blockStats-heading">{{ b.textHeading }}</h1>
-
-                {% set statList = b.highlightStats.all() %}
-                <figure>
-                    <ul class="blockStats-list">
-                    {% for stat in statList %}
-                        {% set label  = stat.textLabel|trim !='' ? stat.textLabel : null %}
-                        {% set number = stat.textStat|trim !='' ? stat.textStat : null %}
-                        {% set detail = stat.textDescription|trim !='' ? stat.textDescription : null %}
-                        <li class="blockStats-item">
-                            {% if label %}
-                            <span class="blockStats-preheading">{{ label }}</span>
-                            {% endif %}
-                            <strong class="blockStats-number">
-                                {{ number }}
-                            </strong>    
-                            <div class="blockStats-detail">
-                                {{ detail }}
-                            </div>
-                        </li>
-                    {% endfor %}
-                    </ul>
-                    {% set citation = b.textRichLink|trim != '' ? b.textRichLink : null %}
-                    {% if citation %}
-                    <figcaption class="blockStats-citation">
-                        {{ citation }}
-                    </figcaption>
-                    {% endif %}
-                </figure>
-
-                {% set action = b.cardAction %}
-                {% set alignment = action.styleAlignment %}
-                <aside class="blockStats-explore{% if alignment == 'right' %} blockStats-explore--right{% endif %}">
-                    <div class="blockStats-explore-support">
-                        {{ action.textSupporting }}
-                    </div>
-                    <a class="blockStats-explore-button" href="{{ action.actionLink }}" title="">
-                        {{ action.actionLink.text }}
-                    </a>
-                </aside>
-            </section>
+            {{ stats.stats(block)}}
 
         {% case 'cardNews' %}
             <section class="blockCards">
-                <h2 class="blockCards-heading">{{ b.textHeading }}</h1> 
-                {% set cardList = b.cardNews.all() %}
+                <h2 class="blockCards-heading">{{ block.textHeading }}</h1> 
+                {% set cardList = block.cardNews.all() %}
                 {% set hasFeature = (cardList|length == 4) %}
                 
                 <div class="blockCards-list">
