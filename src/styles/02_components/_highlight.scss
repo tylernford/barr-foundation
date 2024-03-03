@@ -31,6 +31,14 @@
   }
 }
 
+[data-is-reversed="true"] {
+  .blockHighlight {
+    --color-highlight--primary: var(--color-teal-25);
+    --color-highlight--secondary: var(--color-grey-25-65);
+    --color-highlight--tertiary: var(--color-grey-25);
+  }
+}
+
 
 .blockHighlight {
   @include container-narrow;
@@ -189,10 +197,24 @@
   
       @include breakpoint(xl) {
         .blockHighlight__stats {
-          grid-template-columns: repeat(4, 1fr);
-          gap: var(--base-9);
+          &[data-columns="3"] {
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--base-12);
+          }
+          &[data-columns="4"] {
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--base-9);
+          }
         }
       }
+    }
+  }
+}
+
+[data-is-reversed="true"] {
+  .blockHighlight.blockHighlight--stats {
+    .blockHighlight__attribution {
+      color: var(--color-highlight--secondary);
     }
   }
 }
