@@ -6,7 +6,7 @@ instructions: "Add each block. Drag & drop to rearrange. _Hint:_ To more easily 
 name: 'Page Builder: Home'
 searchable: true
 settings:
-  maxBlocks: 6
+  maxBlocks: null
   maxLevels: null
   maxTopBlocks: null
   minBlocks: 6

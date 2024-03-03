@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  36859aba-e946-4bf7-8599-6990607cf03e:
+  37cead94-772f-41cd-b3cf-4dd4c1953ef3:
     tabs:
       -
         elementCondition: null
@@ -69,7 +69,7 @@ ignorePermissions: true
 maxBlocks: 1
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Highlight: Stats'

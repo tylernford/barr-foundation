@@ -1,4 +1,4 @@
-dateModified: 1709494549
+dateModified: 1709509744
 elementSources:
   craft\elements\Asset:
     -
@@ -535,6 +535,7 @@ meta:
     9b4fc30f-02b9-4305-a6d9-5106b6b0ca10: Label # Label
     9b5d6e14-e157-4607-9bcb-aadca4a1863c: About # About
     9b6c92eb-d488-4fd4-a3fe-e55aec516915: 'Style: Width' # Style: Width
+    9bbc3e1f-5360-4365-9a75-6d521a5160cb: 'Card: Feature' # Card: Feature
     9bdf93bb-bbb6-4791-a90b-ee8f56915270: Developer # Developer
     9c15fd9a-81a5-4c31-bd58-95cc257be3fd: 'Text: Rich (Basic)' # Text: Rich (Basic)
     09c7181f-8326-4e53-afce-769191917ab0: Summary # Summary
