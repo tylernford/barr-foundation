@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  97e4968e-13d1-412e-902f-f4fa28d00db3:
+  3dcd3ca5-1e5e-406b-b0ea-038692007c10:
     tabs:
       -
         elementCondition: null
@@ -30,10 +30,10 @@ handle: cardGrantsDatabase
 icon: null
 iconFilename: ''
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Card: Grants Database'
