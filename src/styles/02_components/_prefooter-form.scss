@@ -35,16 +35,25 @@
     @include getType('caption-messina');
   }
 
+  .action {
+    margin-block-start: var(--base-8);
+  }
+
   @include breakpoint(md) {
     padding-block-end: var(--base-12);
+    
+    .prefooterInquiry__description {
+      @include getType('subhead');
+    }
+
+    .action {
+      margin-block-start: var(--base-10);
+    }
   }
 
   @include breakpoint(lg) {
     h2 {
       @include getType('h2-axiforma');
-    }
-    .prefooterInquiry__description {
-      @include getType('subhead');
     }
   }
 
