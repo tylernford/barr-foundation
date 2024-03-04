@@ -9,7 +9,7 @@ settings:
   maxBlocks: null
   maxLevels: null
   maxTopBlocks: null
-  minBlocks: 6
+  minBlocks: 2
   minLevels: null
   minTopBlocks: null
   propagationKeyFormat: null

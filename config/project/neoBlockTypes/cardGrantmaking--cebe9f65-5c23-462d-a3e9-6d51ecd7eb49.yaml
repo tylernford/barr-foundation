@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  734dfc4a-0482-4c11-b55f-755c9ed65889:
+  b5761b86-c407-4089-8cdd-88f1b6ca45f7:
     tabs:
       -
         elementCondition: null
@@ -30,10 +30,10 @@ handle: cardGrantmaking
 icon: null
 iconFilename: ''
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Card: Grantmaking'
