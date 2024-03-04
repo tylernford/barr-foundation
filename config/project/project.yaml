@@ -1,4 +1,4 @@
-dateModified: 1709510419
+dateModified: 1709510861
 elementSources:
   craft\elements\Asset:
     -
@@ -667,7 +667,6 @@ meta:
     3367c4aa-812a-44b9-bbdf-f913c544a3ac: Entry # Entry
     4217f7b3-ec24-454d-87f2-1998f0a0baae: 'Tags: Program Areas' # Tags: Program Areas
     5056e235-9a78-4846-9c71-7557d782d1f0: 'Section Bookmark Title (Optional)' # Section Bookmark Title (Optional)
-    5680cf36-ea78-4033-8638-c664068383d9: 'Card: Grants Database' # Card: Grants Database
     5858abd5-d9a7-4e0d-9afb-546475012ee1: 'Number of Cards' # Number of Cards
     5971d473-bc24-4c7d-86e9-99f40d205dc3: 'Record Type' # Record Type
     6240c976-c45c-49e0-9b18-04c2bd1b9024: __blank__ # __blank__
@@ -824,7 +823,6 @@ meta:
     cca87b83-62c1-49a6-a027-9699ddf97816: 'Entries: Sponsored Organization' # Entries: Sponsored Organization
     cd4c8a64-ae1c-451f-9727-fca9cd6c9a9b: 'Content Editors' # Content Editors
     cdc68c5b-6f6b-4f33-b60a-4a1a6037f651: 'Section Bookmark (Optional)' # Section Bookmark (Optional)
-    cebe9f65-5c23-462d-a3e9-6d51ecd7eb49: 'Card: Grantmaking' # Card: Grantmaking
     cf026ccf-44b0-44ea-bb7c-a2d919af1521: 'Media: Audio or Video' # Media: Audio or Video
     cfb7f673-e726-4e10-b627-eb563177ea3d: 'Style: Width' # Style: Width
     d1baa3d0-c525-4a33-bfc6-6851a329b88d: Image # Image
