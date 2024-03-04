@@ -1,0 +1,46 @@
+childBlocks:
+  - textBody
+conditions: null
+description: ''
+enabled: true
+field: 133f1f83-cfbf-4f4a-a072-26d6ec33cf9f # Page Builder: Inquiry Form
+fieldLayouts:
+  60555020-de41-4106-8ea0-568096428aba:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 72c5d8b7-e0e7-4cb5-84ae-ca3af873a21d # Divider: Section
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8e4aa500-709c-48b2-bd7e-6b2d696bd7ba
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a7b158cc-6d63-4c64-ac88-f2fa9deed1b2
+            userCondition: null
+        name: Section
+        uid: 110fff97-8b9a-4d4a-b4e3-e9ec653b062e
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: sectionBlock
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: Section
+topLevel: true

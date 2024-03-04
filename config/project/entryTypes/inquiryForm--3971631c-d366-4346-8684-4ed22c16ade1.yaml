@@ -1,5 +1,5 @@
 fieldLayouts:
-  4edd59a5-26f2-4180-8e2b-0870c01f758d:
+  bd7fd996-955e-4594-adce-0e25a13375c6:
     tabs:
       -
         elementCondition: null
@@ -27,14 +27,14 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 50d1a4fa-3b51-496a-804a-4230b8ae22ad
+            uid: aab3bd2c-222f-4535-944b-4cb4620788de
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 7fc964cd-3b3d-4967-ba6c-8a9542e73c15
+            uid: ab1dbd7d-75f1-47bd-b230-bcb92024f9ed
             userCondition: null
           -
             elementCondition: null
@@ -44,105 +44,98 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3265f753-a865-494d-8b6c-8c8457cf29d9
+            uid: 62536b59-a6b9-428b-aaa6-9f5b2f92e7df
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 8f9c8b7f-03dc-4b99-a027-c3399224145d
+            uid: 81a9a74c-ac19-4639-bde0-1dff21eb14bd
             userCondition: null
           -
             elementCondition: null
             template: control-panel/_opener-landing.html
             type: craft\fieldlayoutelements\Template
-            uid: 5e55be8f-4d90-4495-be36-089a988a3295
+            uid: 59991bd2-e029-4ec6-93fc-58b2c46a8b04
             userCondition: null
             width: 100
         name: Opener
-        uid: 0cf03912-b22e-4295-8551-fe1f6d40f7a9
+        uid: 7680ea01-214d-47a3-a96d-4b5a73e7c50f
         userCondition: null
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
+            fieldUid: 133f1f83-cfbf-4f4a-a072-26d6ec33cf9f # Page Builder: Inquiry Form
             instructions: null
             label: 'Page Builder'
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c6f5dc38-eddb-465b-8461-11ca946da263
-            userCondition: null
-            warning: null
-            width: 100
-        name: Content
-        uid: 7c76097f-d655-4470-b1ed-8006177a2b1e
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 1ae99391-4060-478a-b225-fc7156964232 # Feed: Team
-            instructions: null
-            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3ac409b9-cb2b-48b0-9c15-04c7c7596e78
+            uid: bce58e78-062e-4457-a793-34cb8d8cd597
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 11af9927-ac55-456c-a763-0767d3c1e79f
+            userCondition: null
+          -
+            elementCondition: null
+            heading: Form
+            type: craft\fieldlayoutelements\Heading
+            uid: 6d8774b3-2a61-4248-a104-85c244479cce
+            userCondition: null
           -
             elementCondition: null
             fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
-            instructions: 'e.g. "Inquiries"'
+            instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ecc54877-48dc-4b8d-b409-ca470a97c5bd
+            uid: 82ffe931-7364-4fe0-9dcf-91360700391e
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
-            instructions: 'Prompt the form with a description.'
+            instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: bdb9f30d-af3d-4508-b5e7-c56dc1c1bdec
+            uid: 9544434b-48a9-4dab-a87c-21fdf6378907
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: ee292b33-f1a3-4fd6-9a25-9da4f1ef312a # Action: All
-            instructions: 'Select the corresponding Inquiry Form entry.'
+            fieldUid: 3b585310-81d5-451e-8ed6-030062c40e94 # Form: Wildcard
+            instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b44d1b00-c895-47f9-900b-85b030d54234
+            uid: 01feb092-d86e-4573-afd7-67b0207a83c0
             userCondition: null
             warning: null
             width: 100
-        name: Pre-Footer
-        uid: b407ad4d-2e46-4657-9193-5ec795bda352
+        name: Content
+        uid: fe5f2c46-3f16-4e09-84d9-f82d5910993f
         userCondition: null
-handle: landing
+handle: inquiryForm
 hasTitleField: true
-name: Landing
+name: 'Inquiry Form'
 section: 600bb22c-f62f-458d-ad51-432956f869ae # Program Areas
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 2
+sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
