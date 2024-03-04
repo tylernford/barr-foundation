@@ -4,29 +4,29 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  12ce6d2c-22af-43ff-832a-b43303566868:
+  51bf2de6-0dba-449b-a6d2-88fb9772114e:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
+            fieldUid: 5a6a9a3c-05f9-42d5-9b4f-41ffc03f3f4d # Card: Latest News
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 42da9b3f-45f7-42d6-8f05-cabfb1e15044
+            uid: 9f780284-b3d9-43bd-80e0-ebdb26c7903b
             userCondition: null
             warning: null
             width: 100
-        name: Card
-        uid: f3c0ea6b-1307-46f9-8dc2-cde1dd787759
+        name: Cards
+        uid: 07f2ba08-8fb4-4524-bf04-7b353012e7d2
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardFeature
+handle: cardLatestNewsAuto
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -36,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: Feature'
-topLevel: true
+name: 'Card: Latest News (Auto)'
+topLevel: false
