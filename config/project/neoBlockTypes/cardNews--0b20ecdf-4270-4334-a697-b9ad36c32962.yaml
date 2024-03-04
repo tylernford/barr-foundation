@@ -1,10 +1,12 @@
-childBlocks: null
+childBlocks:
+  - cardLatestNewsAuto
+  - cardLatestNewsManual
 conditions: null
 description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  2a325f42-876a-496e-9742-fd960f697f46:
+  1d4356bc-67d8-4fb4-b6ce-af6b029d2a32:
     tabs:
       -
         elementCondition: null
@@ -55,10 +57,10 @@ icon: null
 iconFilename: ''
 ignorePermissions: true
 maxBlocks: 1
-maxChildBlocks: 0
+maxChildBlocks: 1
 maxSiblingBlocks: 0
 minBlocks: 1
-minChildBlocks: 0
+minChildBlocks: 1
 minSiblingBlocks: 0
-name: 'Card: News'
+name: 'Card: Latest News'
 topLevel: true

@@ -1,13 +1,6 @@
 {% import '_macros/02_components/_assets' as assets %}
 {% import '_macros/02_components/_card' as cards %}
-{% import '_macros/01_elements/_actions' as actions %}
-{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
-{% import '_macros/01_elements/_details' as details %}
-{% import '_macros/01_elements/_section-title' as sectionTitles %}
-{% import '_macros/02_components/_accordion' as accordion %}
-{% import '_macros/02_components/_quote' as quote %}
-{% import '_macros/03_modules/_accordion' as accordionModule %}
-
+{% import '_macros/03_modules/_latest-news' as latestNews %}
 {% import '_macros/03_modules/_stats' as stats %}
 
 
@@ -21,6 +14,9 @@
             } %}
             {{ cards.default(config) }}
             
+        {% case 'cardNews' %}
+            {{ latestNews.latestNews(block)}}
+
         {% case 'highlightStats' %}
             {{ stats.stats(block)}}
         
@@ -70,103 +66,5 @@
                     {% endfor %}
                 </div>
             </section>
-
-        {% case 'cardGrantsDatabase' %}
-            {% set card = block.cardGrants %}
-            <section class="blockSimple{% if card.styleAlignment == 'right' %} blockSimple--right{% endif %}">
-                
-                <div class="blockSimple-body">
-                    <h2 class="blockSimple-heading">{{ card.textHeading }}</h2>
-                    <div class="blockSimple-support">
-                        {{ card.textSupporting }}
-                    </div>
-                    <a class="blockSimple-button" href="{{ card.actionLink }}" title="">
-                        {{ card.actionLink.text }}
-                    </a>
-                </div>
-                {% set cardImage = card.assetImage|length ? card.assetImage.one() : null %}
-                {% if cardImage %}
-                    {% set obj = {
-                        'handle': 'mediaImage',
-                        'hook': 'blockSimple' 
-                    }%}
-                    {{ assets.transformedImage(cardImage,obj) }}
-                {% endif %}
-            </section>
-
-        {% case 'cardGrantmaking'%}
-            {% set card = block.cardGrants %}
-            <section class="blockSimple{% if card.styleAlignment == 'right' %} blockSimple--right{% endif %}">
-                <div class="blockSimple-body">
-                    <h2 class="blockSimple-heading">{{ card.textHeading }}</h2>
-                    <div class="blockSimple-support">
-                        {{ card.textSupporting }}
-                    </div>
-                    <a class="blockSimple-button" href="{{ card.actionLink }}" title="">
-                        {{ card.actionLink.text }}
-                    </a>
-                </div>
-                {% set cardImage = card.assetImage|length ? card.assetImage.one() : null %}
-                {% if cardImage %}
-                    {% set obj = {
-                        'handle': 'mediaImage',
-                        'hook': 'blockSimple' 
-                    }%}
-                    {{ assets.transformedImage(cardImage,obj) }}
-                {% endif %}
-            </section>
-
-        {% case 'cardNews' %}
-            <section class="blockCards">
-                <h2 class="blockCards-heading">{{ block.textHeading }}</h1> 
-                {% set cardList = block.cardNews.all() %}
-                {% set hasFeature = (cardList|length == 4) %}
-                
-                <div class="blockCards-list">
-                {% for cardItem in cardList %}
-                    {% set isFeature = (loop.index == 1) %}
-                    {% set isEntry   = (cardItem.type == 'entry') %}
-                    {% set card      = isEntry ? cardItem.entriesWildcard.one() : cardItem.assetMedia.one() %}
-                    {% set title     = card.title %}
-                    {% set label     = isEntry ? (card.section.handle == 'newsroom' ? 'In the News' : 'Barr Updates') : 'Video' %}
-                    
-                    <article class="cardItem{% if isFeature %} cardItem--feature{% endif %} cardItem--wireframe">
-                        <span class="cardItem-preheading">{{ label }}</span>
-                        <h3 class="cardItem-heading">{{ title }}</h3>
-                        {% if isEntry %}
-                        {# News or Blog Entry #}
-                        {% set published = card.dateOnly|date|format('M dd, Y') %}
-                        {% set authors   = card.textName|split(',') %}
-                        {% set support   = card.textSupporting %}
-                        
-                            {% if published %}
-                            <time class="cardItem-date" datetime="{{ published|format('Y-mm-dd') }}">{{ published }}</time>
-                            {% endif %}
-                            {% if authors %}
-                                {% for name in authors %}
-                                {{ name }}
-                                {% endfor %}
-                            {% endif %}
-                            <div class="cardItem-support">{{ support }}</div>
-                            <a class="cardItem-button" href="{{ card.uri }}" title="Go to {{ title }}">
-                                Action
-                                {# if external news article, add external icon #}
-                            </a>
-                        {% else %}
-                        {# Video #}
-                            <span class="cardItem-duration">0:00 {# duration goes here #}</span>
-                            <a class="cardItem-button" href="{{ card.uri }}" title="Go to {{ title }}">
-                                Action
-                                {# add "play" icon #}
-                            </a>
-
-                        {% endif %}
-                    </article>
-                {% endfor %}
-                </div>
-            </section>
-
-        {% case 'cardNews' %}
-
     {% endswitch %}
 {% endfor %}

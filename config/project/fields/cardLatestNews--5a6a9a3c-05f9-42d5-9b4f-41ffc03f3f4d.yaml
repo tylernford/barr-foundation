@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
+handle: cardLatestNews
+instructions: 'Four cards from the selected source(s) (Blog, Newsroom, or both) will be displayed in chronological order.'
+name: 'Card: Latest News'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Blog
+        -
+          - value
+          - blog
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Newsroom
+        -
+          - value
+          - newsroom
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes
