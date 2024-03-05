@@ -1,0 +1,90 @@
+/* _program-area-intro.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Program Area Intro
+  See templates/_partials/_builder-program-areas.twig for markup
+------------------------------------------------------------------------ */
+
+// Theme
+.program-area-intro {
+  --color-program-area-intro--primary: var(--color-grey-25);
+  --color-program-area-intro--background: var(--color-teal-150);
+}
+[data-theme-color="green"] {
+  .program-area-intro {
+    --color-program-area-intro--background: var(--color-program-green-150);
+  }
+}
+[data-theme-color="plum"] {
+  .program-area-intro {
+    --color-program-area-intro--background: var(--color-program-plum-150);
+  }
+}
+[data-theme-color="marigold"] {
+  .program-area-intro {
+    --color-program-area-intro--primary: var(--color-grey-200);
+    --color-program-area-intro--background: var(--color-program-marigold-100);
+  }
+}
+
+// Carousel
+.program-area-intro {
+  padding-block: var(--base-10);
+  @include container-narrow;
+  position: relative;
+  color: var(--color-program-area-intro--primary);
+
+  &::before {
+    content: '';
+    inset: 0 auto 0 -100vw;
+    width: 400vw;
+    position: absolute;
+    background-color: var(--color-program-area-intro--background);
+  }
+
+  .program-area-intro__copy {
+    margin: 0 auto;
+    max-width: 36em;
+    position: relative;
+    @include getType('body');
+
+    p {  
+      &:not(:last-child) {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    a {
+      color: var(--color-teal-100);
+      transition: color var(--transition) ease-in;
+  
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-grey-200);
+          transition: color var(--transition-intermediate) ease-out;
+        }
+      }
+    }
+
+    strong {
+      font-weight: 400;
+    }
+
+    i {
+      font-style: italic;
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding-block-start: var(--base-12);
+  }
+
+  @include breakpoint(lg) {
+    padding-block-start: var(--base-14);
+
+    .program-area-intro__copy {
+      @include getType('subhead');
+    }
+  }
+}

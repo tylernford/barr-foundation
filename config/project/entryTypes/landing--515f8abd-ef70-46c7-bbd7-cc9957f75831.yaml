@@ -68,6 +68,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Rich (+Link)
+            instructions: null
+            label: 'Intro Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06fe44e2-6163-4afa-8390-f04e7aa45a37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
             instructions: null
             label: 'Page Builder'

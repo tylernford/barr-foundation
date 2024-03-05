@@ -1,6 +1,13 @@
 {% import '_macros/02_components/_assets' as assets %}
 {% import '_macros/03_modules/_featured-card-with-grantees' as featuredCardsWithGrantees %}
 
+{# Intro #}
+<section class="program-area-intro">
+    <div class="program-area-intro__copy">
+        {{ entry.textRichLink }}
+    </div>
+</section>
+
 {% for section in builder.level(1).all() %}
     {% set sectionTitle = section.sectionAnchor.sectionBookmarkTitle|slugify %}
     {% set sectionBlocks = section.children.all() %}
