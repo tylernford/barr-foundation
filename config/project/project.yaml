@@ -1,4 +1,4 @@
-dateModified: 1709587075
+dateModified: 1709661754
 elementSources:
   craft\elements\Asset:
     -
@@ -200,16 +200,6 @@ elementSources:
         - slug
       type: native
     -
-      defaultSort:
-        - structure
-        - asc
-      disabled: false
-      key: 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-      tableAttributes:
-        - slug
-        - parent
-      type: native
-    -
       heading: People
       type: heading
     -
@@ -302,6 +292,29 @@ elementSources:
       tableAttributes:
         - link
         - slug
+      type: native
+    -
+      heading: Categories
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+      tableAttributes:
+        - slug
+        - parent
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:c5ff63d6-ea19-4873-a127-52e78a525a16' # Categories: Program Areas
+      tableAttributes:
+        - slug
+        - parent
       type: native
     -
       heading: Feeds
@@ -767,6 +780,7 @@ meta:
     a4bd3122-19b2-48e7-9aae-80d76876a391: 'Page Builder: Home' # Page Builder: Home
     a8a2bfe5-9bf3-4e3e-b66a-e64668da43a6: Title # Title
     a8b22f31-38f1-436f-8a06-d62d1cdfa51d: Default # Default
+    a8f2c5af-bf4c-449c-b905-2bc741b82185: 'Program Area' # Program Area
     a71a008e-0906-4398-a1eb-52b3f42a5461: 'Card: Team' # Card: Team
     a92e63fc-87d9-4bcb-b049-925a7d174f92: Default # Default
     a94b7e08-5457-4413-a214-8aff392e141c: Link # Link
@@ -823,6 +837,7 @@ meta:
     c2ff6d2c-f979-4a50-88dd-c960f6aa9e0b: __blank__ # __blank__
     c5b0dd4c-0674-4747-adf3-2fa7a9bcea40: 'Contact: YouTube' # Contact: YouTube
     c5b61d17-072a-46ba-b6ab-f91256d7ac59: 'Full Name' # Full Name
+    c5ff63d6-ea19-4873-a127-52e78a525a16: 'Categories: Program Areas' # Categories: Program Areas
     c48e87fe-1a72-4620-a84a-7f4b88f8fd94: Label # Label
     c56d3c2d-9817-48cc-ad2b-e04cc44fb403: 'Text: Plain Heading' # Text: Plain Heading
     c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Card: Feature' # Card: Feature

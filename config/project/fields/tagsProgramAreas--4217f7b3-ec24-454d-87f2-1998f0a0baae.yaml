@@ -23,10 +23,30 @@ settings:
       -
         - class
         - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: null
-  showSiteMenu: false
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\LevelConditionRule
+              -
+                - uid
+                - 2c791e3d-9416-4d84-9828-7b10e902063f
+              -
+                - operator
+                - '='
+              -
+                - value
+                - '1'
+              -
+                - maxValue
+                - ''
+  selectionLabel: 'Select a Program Area'
+  showSiteMenu: true
   sources:
-    - 'section:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+    - 'section:c5ff63d6-ea19-4873-a127-52e78a525a16' # Categories: Program Areas
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

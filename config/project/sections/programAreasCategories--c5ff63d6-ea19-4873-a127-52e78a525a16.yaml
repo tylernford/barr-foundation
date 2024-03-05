@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: programAreasCategories
+name: 'Categories: Program Areas'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 3
+  uid: bb1d6f40-6299-4c27-bddc-743c3c07520d
+type: structure
