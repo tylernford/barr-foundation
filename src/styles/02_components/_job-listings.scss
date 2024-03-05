@@ -1,0 +1,179 @@
+/* _job-listings.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Job Listings
+  See templates/_macros/02_components/_job-listings.twig for markup
+------------------------------------------------------------------------ */
+
+.job-listings {
+  --color-job-listings--primary: var(--color-teal-100);
+  --color-job-listings--secondary: var(--color-grey-150);
+  --color-job-listings--tertiary: var(--color-grey-50);
+}
+
+[data-theme-color="green"] {
+  .job-listings {
+    --color-job-listings--primary: var(--color-program-green-100);
+  }
+}
+
+[data-theme-color="plum"] {
+  .job-listings {
+    --color-job-listings--primary: var(--color-program-plum-100);
+  }
+}
+
+[data-theme-color="marigold"] {
+  .job-listings {
+    --color-job-listings--primary: var(--color-program-marigold-100);
+  }
+}
+
+.job-listings {
+  @include container-narrow;
+  padding-block: var(--base-5) var(--base-12);
+
+  .job-listings__listing {
+    padding-block: var(--base-3) var(--base-5);
+    border-top: 1px solid var(--color-job-listings--tertiary);
+    
+    .listing__title {
+      max-width: 25em;
+      color: var(--color-job-listings--primary);
+      @include getType('h5-messina');
+    }
+    
+    .listing__description {
+      max-width: 30em;
+      color: var(--color-job-listings--secondary);
+      @include getType('detail-axiforma');
+    }
+
+    .listing__secondary {
+      margin-block-start: var(--base-5);
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      gap: var(--base-8);
+    }
+
+    .listing__details {
+      padding-top: var(--base);
+      display: grid;
+      gap: var(--base-2);
+
+      .details {
+        max-width: 30em;
+      }
+    }
+
+    .listing__action {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      .action {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    .job-listings__listing {
+      .listing__title {
+        @include getType('h4-messina');
+      }
+      
+      .listing__description {
+        margin-block-start: var(--base);
+        @include getType('caption-axiforma');
+      }
+
+      .listing__action {
+        .action {
+          &:first-child {
+            display: none;
+          }
+          
+          &:last-child {
+            display: inline-flex;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    .job-listings__listing {
+      .listing__secondary {
+        grid-template-columns: 2fr 1fr;
+      }
+      
+      .listing__details {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--base-8);
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    .job-listings__listing {
+      padding-block: var(--base-4);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--base-12);
+
+      .listing__secondary {
+        margin-block-start: 0;
+      }
+
+      .listing__details {
+        grid-template-columns: 1fr;
+        gap: var(--base-2);
+      }
+
+      .listing__action {
+        .action {
+          &:first-child {
+            display: inline-flex;
+          }
+          
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(xl) {
+    .job-listings__listing {
+      grid-template-columns: 2fr 3fr;
+      gap: var(--base-20);
+      align-items: center;
+
+      .listing__secondary {
+        align-items: center;
+      }
+
+      .listing__details {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--base-8);
+      }
+
+      .listing__action {
+        .action {
+          &:first-child {
+            display: none;
+          }
+          
+          &:last-child {
+            display: inline-flex;
+          }
+        }
+      }
+    }
+  }
+}
