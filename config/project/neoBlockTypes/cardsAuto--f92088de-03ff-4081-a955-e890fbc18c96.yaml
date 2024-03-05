@@ -1,39 +1,32 @@
-childBlocks:
-  - featuredStrategyAndGrantees
-  - featuredStrategyAndCards
+childBlocks: null
 conditions: null
 description: ''
 enabled: true
 field: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
 fieldLayouts:
-  bd6c5ff1-8de8-479d-b6f4-62d75365f437:
+  6f52d494-4b6f-4ab6-80b0-bcdb10be04e6:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: f4cef7c4-9c10-4b2d-aecc-afe52d207d0d # Section Anchor
+            fieldUid: 6f1128a8-0881-457f-906b-e128fe0d1394 # Feed: Auto
             instructions: null
-            label: null
-            required: false
+            label: Cards
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 663df8ad-f9bf-4164-b2da-0aab014b240d
+            uid: 475711a7-6d77-4985-a06c-d6a20dfaf293
             userCondition: null
             warning: null
             width: 100
-          -
-            elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: b7d1c950-6c70-43fc-be75-968f135318c9
-            userCondition: null
-        name: Section
-        uid: 1c1b0371-26d7-4b8b-9a69-b091f2359436
+        name: Cards
+        uid: 0cc5f3d7-6bd2-4d0a-a056-6aadf8e37f25
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: sectionBlock
+handle: cardsAuto
 icon: null
 iconFilename: ''
 ignorePermissions: true
@@ -43,5 +36,5 @@ maxSiblingBlocks: 0
 minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Section Block'
-topLevel: true
+name: 'Cards: Auto'
+topLevel: false
