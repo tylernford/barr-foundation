@@ -56,13 +56,14 @@
     }
 
     a {
-      color: var(--color-teal-100);
-      transition: color var(--transition) ease-in;
+      color: inherit;
+      text-decoration-color: inherit;
+      transition: text-decoration-color var(--transition) ease-in;
   
       @media (hover: hover) {
         &:hover {
-          color: var(--color-grey-200);
-          transition: color var(--transition-intermediate) ease-out;
+          text-decoration-color: transparent;
+          transition: text-decoration-color var(--transition-intermediate) ease-out;
         }
       }
     }

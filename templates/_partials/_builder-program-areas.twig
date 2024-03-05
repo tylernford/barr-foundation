@@ -1,5 +1,5 @@
 {% import '_macros/02_components/_assets' as assets %}
-{% import '_macros/03_modules/_featured-card-with-grantees' as featuredCardsWithGrantees %}
+{% import '_macros/03_modules/_featured-card-with-cards' as featuredCardsWithCards %}
 
 {# Intro #}
 <section class="program-area-intro">
@@ -15,19 +15,21 @@
     <section id="{{ sectionTitle }}">
         {# Section blocks #}
         {% for block in sectionBlocks %}
-            {% set configs  = {
-                'featuredCardConfig': {
-                    'content': block,
-                    'variant': 'feature',
-                    'reversed': true
-                },
-                'grantees': {
-                    'grantees': block.entriesGrantee,
-                    'feature': block.flagFeature,
-                    'action': block.cardAction
-                }
-            } %}
-            {% include "_partials/_modules/_featured-card-with-grantees.twig" with { config: configs } only %}
+            {% if block.type == 'featuredStrategyAndCards' %}
+                {% set configs  = {
+                    'featuredCardConfig': {
+                        'content': block,
+                        'variant': 'feature',
+                        'reversed': true
+                    },
+                    'cards': {
+                        'cards': block,
+                        'feature': block.flagFeature,
+                        'action': block.cardAction
+                    }
+                } %}
+                {{ featuredCardsWithCards.default(configs) }}
+            {% endif %}
         {% endfor %}
     </section>
 {% endfor %}

@@ -1,0 +1,151 @@
+/* _cards.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Cards
+  See templates/_macros/03_modules/_cards.twig for markup
+------------------------------------------------------------------------ */
+
+.cards-grid {
+  --color-cards-primary: var(--color-teal-150);
+}
+[data-theme-color="green"] {
+  .cards-grid {
+    --color-cards-primary: var(--color-program-green-150);
+  }
+}
+
+[data-theme-color="plum"] {
+  .cards-grid {
+    --color-cards-primary: var(--color-program-plum-150);
+  }
+}
+
+[data-theme-color="marigold"] {
+  .cards-grid {
+    --color-cards-primary: var(--color-program-marigold-100);
+  }
+}
+
+// Cards
+.cards-grid {
+  padding-block: var(--base-6);
+
+  @include breakpoint(md) {
+    padding-block: var(--base-9);
+  }
+  
+  .cards-grid__inner {
+    @include container-narrow;
+  }
+
+  // Without featured grantee
+  &:not([data-featured-card=true]) {
+    .cardItem {
+      position: relative;
+  
+      &:nth-child(1) {
+        z-index: 4;
+      }
+      &:nth-child(2) {
+        z-index: 3;
+      }
+      &:nth-child(3) {
+        z-index: 2;
+      }
+      &:nth-child(4) {
+        z-index: 1;
+      }
+    }
+
+    @include breakpoint(md) {
+      .cards-grid__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cardItem--action {
+        grid-column: span 2;
+      }
+    }
+
+    @include breakpoint(lg) {
+      .cards-grid__cards {
+        &[data-columns="3"] {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .cardItem--action {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  // With featured card
+  &[data-featured-card=true] {
+    .cardItem {
+      position: relative;
+    }
+
+    .cards-grid__featured-card {
+      .cardItem {
+        z-index: 4;
+      }
+    }
+
+    .cards-grid__cards {
+      .cardItem:nth-child(1) {
+        z-index: 3;
+      }
+      .cardItem:nth-child(2) {
+        z-index: 2;
+      }
+      .cardItem:nth-child(3) {
+        z-index: 1;
+      }
+    }
+
+    @include breakpoint(md) {
+      .cards-grid__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cardItem--action {
+        grid-column: span 2;
+      }
+    }
+
+    @include breakpoint(lg) {
+      .cards-grid__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cards-grid__featured-card {
+        .cardItem {
+          min-height: 100%;
+        }
+      }
+
+      .cards-grid__cards {
+        grid-template-columns: 1fr;
+      }
+
+      .cardItem--action {
+        grid-column: span 1;
+      }
+    }
+
+    @include breakpoint(xl) {
+      .cards-grid__cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cardItem--action {
+        grid-column: span 2;
+      }
+    }
+  }
+}
