@@ -23,10 +23,30 @@ settings:
       -
         - class
         - craft\elements\conditions\entries\EntryCondition
-  selectionLabel: 'Add a strategy'
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\LevelConditionRule
+              -
+                - uid
+                - 502162ed-6cde-4e40-a86b-9a1057105eef
+              -
+                - operator
+                - '!='
+              -
+                - value
+                - '1'
+              -
+                - maxValue
+                - ''
+  selectionLabel: 'Select a Strategy'
   showSiteMenu: true
   sources:
-    - 'section:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+    - 'section:c5ff63d6-ea19-4873-a127-52e78a525a16' # Categories: Program Areas
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null
