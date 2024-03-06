@@ -868,6 +868,27 @@ body[data-theme-color="marigold"] {
       }
     }
 
+    // Media
+    .primary__media {
+      margin-block-start: var(--base-7);
+      position: relative;
+
+      .image {
+        aspect-ratio: 3 / 2;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    
+        img {
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+    }
+
     @include breakpoint(md) {
       .blockOpener__content {
         padding-block-start: var(--base-2);
@@ -875,62 +896,94 @@ body[data-theme-color="marigold"] {
         .primary__desc {
           @include getType('h5-messina');
         }
-
-        .content__meta {
-          display: flex;
-          align-items: flex-end;
-
-          .meta__details {
-            margin-inline-end: var(--base-10);
-          }
-        }
       }
     }
 
     @include breakpoint(lg) {
       .blockOpener__content {
         padding-top: var(--base-6);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: var(--base-12);
-
-        .content__meta {
-          margin-block-start: 0;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-end;
-          position: relative;
-
-          .meta__details {
-            margin-inline-end: var(--base-10);
-          }
-        }
-
-        .primary__desc + .content__meta {
-          &::before {
-            content: '';
-            inset: 0 auto 0 var(--neg-base-6);
-            width: 1px;
-            position: absolute;
-            background-color: var(--color-grey-50);
-          }
-        }
       }
     }
 
     @include breakpoint(xl) {
       .blockOpener__content {
         gap: var(--base-28);
-
+        
         .primary__desc {
           @include getType('subhead');
         }
+      }
+    }
 
-        .primary__desc + .content__meta {
-          &::before {
-            content: '';
-            inset: 0 auto 0 var(--neg-base-14);
+    &:not([data-image="true"]) {
+      @include breakpoint(md) {
+        .blockOpener__content {
+          .content__meta {
+            display: flex;
+            align-items: flex-end;
+  
+            .meta__details {
+              margin-inline-end: var(--base-10);
+            }
           }
+        }
+      }
+
+      @include breakpoint(lg) {
+        .blockOpener__content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+  
+          .content__meta {
+            margin-block-start: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            position: relative;
+  
+            .meta__details {
+              margin-inline-end: 0;
+            }
+          }
+  
+          .primary__desc + .content__meta {
+            &::before {
+              content: '';
+              inset: 0 auto 0 var(--neg-base-6);
+              width: 1px;
+              position: absolute;
+              background-color: var(--color-grey-50);
+            }
+          }
+        }
+      }
+
+      @include breakpoint(xl) {
+        .blockOpener__content {
+          .primary__desc + .content__meta {
+            &::before {
+              content: '';
+              inset: 0 auto 0 var(--neg-base-14);
+            }
+          }
+        }
+      }
+    }
+
+    &[data-image="true"] {
+      @include breakpoint(md) {
+        .blockOpener__primary {
+          grid-template-columns: 1fr 1fr;
+          gap: var(--base-6);
+        }
+  
+        .breadcrumb {
+          grid-column: 1 / -1;
+        }
+
+        .primary__media {
+          margin-block-start: 0;
         }
       }
     }
