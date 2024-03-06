@@ -365,6 +365,7 @@
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
 
     {# Set breadcrumbs #}
     {% set crumbs = [
@@ -374,6 +375,10 @@
 
     {# Set heading #}
     {% set heading = entry.title %}
+
+    {# Set image #}
+    {% set image = entry.assetImage.one %}
+
     {# Set copy #}
     {% set copy = entry.textDescription %}
 
@@ -419,12 +424,13 @@
     {# Set website #}
     {% set website = entry.contactWebsite %}
 
-    <header class="blockOpener blockOpener--grantee">
+    <header class="blockOpener blockOpener--grantee"{{ image ? ' data-image=true' }}>
         {# Primary #}
         <div class="blockOpener__primary">
             {# Breadcrumbs #}
             {{ breadcrumbs.breadcrumb(crumbs) }}
 
+            <div class="primary__wrapper">
             {# Page title #}
             <h1 class="primary__heading">{{ heading }}</h1>
 
@@ -461,6 +467,31 @@
                     {% endif %}
                 </div>
             </div>
+            </div>
+
+            {# Media #}
+            {% if image %}
+                <div class="primary__media">
+                    {# Image #}
+                    <figure>
+                        <div>
+                            {{ images.image(image, '1024', '5/4', '', false) }}
+                        </div>
+
+                        {# Image caption #}
+                        {% if image.textCaption|length %}
+                            {# <figcaption class="media__caption">
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <div class="caption__caption">
+                                    {{ image.textCaption }}
+                                </div>
+                            </figcaption> #}
+                        {% endif %}
+                    </figure>
+                </div>
+            {% endif %}
         </div>
     </header>
 {% endmacro %}
