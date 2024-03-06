@@ -86,51 +86,53 @@ Interior template
         {{ feeds.feed(feedConfig) }}
     {% endif %}
 
-    {% if entry.textPlainHeading or entry.textDescription %}
-        {% if entry.type == 'inquiryForm' %}
-            <section class="prefooterForm">
-                {% if entry.textPlainHeading %}
-                    {# Section Title #}
-                    {% set sectionTitleAttributes = {
-                        level: 'h2',
-                        title: entry.textPlainHeading,
-                        variant: '', border: true
-                    } %}
-                    {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
-                {% endif %}
-                {% if entry.textDescription %}
-                    <div class="prefooterForm__description">
-                        {{ entry.textDescription }}
-                    </div>
+    {% if entrySection == 'programAreas' %}
+        {% if entry.textPlainHeading or entry.textDescription %}
+            {% if entry.type == 'inquiryForm' %}
+                <section class="prefooterForm">
+                    {% if entry.textPlainHeading %}
+                        {# Section Title #}
+                        {% set sectionTitleAttributes = {
+                            level: 'h2',
+                            title: entry.textPlainHeading,
+                            variant: '', border: true
+                        } %}
+                        {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+                    {% endif %}
+                    {% if entry.textDescription %}
+                        <div class="prefooterForm__description">
+                            {{ entry.textDescription }}
+                        </div>
 
-                    <div class="blockGeneric">
-                        <h2 class="blockGeneric-heading">Inquiry form will appear here.</h2>
-                    </div>
-                {% endif %}
-            </section>
-        {% else %}
-            <section class="prefooterInquiry">
-                {% set action = entry.actionAll %}
+                        <div class="blockGeneric">
+                            <h2 class="blockGeneric-heading">Inquiry form will appear here.</h2>
+                        </div>
+                    {% endif %}
+                </section>
+            {% else %}
+                <section class="prefooterInquiry">
+                    {% set action = entry.actionAll %}
 
-                {% if entry.textPlainHeading %}
-                    <h2>{{ entry.textPlainHeading }}</h2>
-                {% endif %}
-                {% if entry.textDescription %}
-                    <div class="prefooterInquiry__description">
-                        {{ entry.textDescription }}
-                    </div>
-                {% endif %}
+                    {% if entry.textPlainHeading %}
+                        <h2>{{ entry.textPlainHeading }}</h2>
+                    {% endif %}
+                    {% if entry.textDescription %}
+                        <div class="prefooterInquiry__description">
+                            {{ entry.textDescription }}
+                        </div>
+                    {% endif %}
 
-                {% if action.url|length %}
-                    {% set actionAttributes = {
-                        type: 'button', isReversed: false,
-                        icon: '', iconOnly: false,
-                        text: action.text, url: action,
-                        linkType: 'entry', target: action.target
-                    } %}
-                    {{ actions.action(actionAttributes) }}
-                {% endif %}
-            </section>
+                    {% if action.url|length %}
+                        {% set actionAttributes = {
+                            type: 'button', isReversed: false,
+                            icon: '', iconOnly: false,
+                            text: action.text, url: action,
+                            linkType: 'entry', target: action.target
+                        } %}
+                        {{ actions.action(actionAttributes) }}
+                    {% endif %}
+                </section>
+            {% endif %}
         {% endif %}
     {% endif %}
 {% endblock %}
