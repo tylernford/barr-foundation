@@ -8,9 +8,10 @@
       - true, false
     - details
       'details', ['detail', 'detail']
+    - icon
 ======================================= #}
 
-{% macro detail(variant, isReversed, details) %}
+{% macro detail(variant, isReversed, details, icon) %}
   {% import '_macros/01_elements/_image' as images %}
   
   {# Tags #}
@@ -39,11 +40,14 @@
 
   {# Location, Region, and Job Title #}
   {% else %}
-    {% set icon =
-      variant == 'location' ? 'home' :
-      variant == 'region' ? 'map-pin' :
-      variant == 'job-title' ? 'person'
-    %}
+    {% if icon %}
+    {% else %}
+      {% set icon =
+        variant == 'location' ? 'home' :
+        variant == 'region' ? 'map-pin' :
+        variant == 'job-title' ? 'person'
+      %}
+    {% endif %}
 
     {% set title = variant|title|replace({'-': ' '}) %}
     

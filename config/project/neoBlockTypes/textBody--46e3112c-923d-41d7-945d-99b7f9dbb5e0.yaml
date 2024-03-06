@@ -2,38 +2,39 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+field: 133f1f83-cfbf-4f4a-a072-26d6ec33cf9f # Page Builder: Inquiry Form
 fieldLayouts:
-  734dfc4a-0482-4c11-b55f-755c9ed65889:
+  3c579639-3912-48df-a2ca-1f47cef6a900:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
-            instructions: 'Add a card about the Grantmaking Process. Text should be aligned to the right.'
+            fieldUid: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fe41ffde-90e8-4d47-9bed-895c68d66051
+            uid: 63553c38-b920-4a61-bc86-6858df253696
             userCondition: null
             warning: null
             width: 100
-        name: Cards
-        uid: dfb71758-bd15-4525-b65f-23c9a24250c8
+        name: Text
+        uid: 0d77c503-d787-491d-89d6-1ae2f83b9fc0
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardGrantmaking
+handle: textBody
 icon: null
+iconFilename: ''
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: Grantmaking'
-topLevel: true
+name: 'Text: Body'
+topLevel: false

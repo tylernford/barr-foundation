@@ -228,47 +228,6 @@
 
 }
 
-.blockStats {
-    @include block;
-    
-    &-list {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &-item {
-        flex: 0 1 auto;
-        max-width: 25%;
-
-        > * {
-            display: block;
-        }
-
-    }
-
-    &-heading {
-        @include heading;
-    }
-
-    &-preheading {
-        @include preheading;
-    }
-    
-    &-number {
-        font-size: 2em;
-    }
-
-    &-citation {
-        margin: 3em 0;
-        font-size: 0.8em;
-    }
-
-    &-explore {
-        @include explore;
-    }
-
-}
-
 .blockCards {
     @include block;
 

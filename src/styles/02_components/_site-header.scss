@@ -467,12 +467,11 @@
 
         // Submenu overlay
         .submenu__overlay {
-          inset: var(--site-header-height) 0 0 0;
+          inset: var(--site-header-height) 0 auto 0;
           @include container;
           padding-block: var(--base-28);
           display: none;
-          grid-template-columns: 1fr 1fr;
-          align-items: baseline;
+          align-items: flex-start;
           position: absolute;
           background-color: var(--color-navy-100);
           color: var(--color-nav-primary);
@@ -486,12 +485,6 @@
             background-color: var(--color-navy-100);
             z-index: -1;
           }
-
-          .overlay__inner {
-            padding-inline-start: var(--base-14);
-            grid-column: 2 / 2;
-            border-left: 1px solid var(--color-nav-primary);
-          }
         }
 
         // Submenu heading
@@ -501,14 +494,17 @@
 
         // Submenu description
         .submenu__description {
-          inset: var(--base-27) auto auto 0;
-          padding-inline: var(--base-14);
-          max-width: 50%;
-          position: absolute;
+          padding-inline-end: var(--base-14);
+          width: 50%;
           @include getType('h3-messina');
         }
 
         // Submenu menu
+        .submenu__menu {
+          padding-inline-start: var(--base-14);
+          border-left: 1px solid var(--color-nav-primary);
+        }
+
         .submenu__item {
           padding-block: var(--base-2);
   
@@ -534,7 +530,7 @@
         @media (hover: hover) {
           &:hover {
             .submenu__overlay {
-              display: grid;
+              display: flex;
               opacity: 1;
               transition: opacity 350ms ease-out;
               // transition-delay: 250ms;

@@ -7,7 +7,7 @@ name: 'Highlight: Stats'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 960406595
+  changedFieldIndicator: 334503018
   columns:
     __assoc__:
       -
@@ -34,7 +34,7 @@ settings:
   contentTable: '{{%stc_highlightstats}}'
   fieldLayout: matrix
   maxRows: 4
-  minRows: 2
+  minRows: 1
   propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: 'Add a stat'

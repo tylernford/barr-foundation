@@ -1,10 +1,12 @@
-childBlocks: null
+childBlocks:
+  - cardLatestNewsAuto
+  - cardLatestNewsManual
 conditions: null
 description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  2a325f42-876a-496e-9742-fd960f697f46:
+  bc59907e-0fc8-4da4-acdc-e812e9d6360c:
     tabs:
       -
         elementCondition: null
@@ -18,18 +20,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 527f9dc4-5d8d-40e8-bde7-4f80c0e9bc06
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: fc425932-ae63-45a0-9158-1b6d5d4ce1c2 # Card: News / Media
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 46fa81f9-a615-41f7-a029-76a8cb34c442
             userCondition: null
             warning: null
             width: 100
@@ -52,12 +42,13 @@ group: null
 groupChildBlockTypes: true
 handle: cardNews
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 1
-maxChildBlocks: 0
+maxChildBlocks: 1
 maxSiblingBlocks: 0
 minBlocks: 1
-minChildBlocks: 0
+minChildBlocks: 1
 minSiblingBlocks: 0
-name: 'Card: News'
+name: 'Card: Latest News'
 topLevel: true

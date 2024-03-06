@@ -68,6 +68,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Rich (+Link)
+            instructions: null
+            label: 'Intro Text'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06fe44e2-6163-4afa-8390-f04e7aa45a37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
             instructions: null
             label: 'Page Builder'
@@ -122,13 +134,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 3b585310-81d5-451e-8ed6-030062c40e94 # Form: Wildcard
-            instructions: null
+            fieldUid: ee292b33-f1a3-4fd6-9a25-9da4f1ef312a # Action: All
+            instructions: 'Select the corresponding Inquiry Form entry.'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 26ea9d2c-c57f-47b8-b598-16069c543d40
+            uid: b44d1b00-c895-47f9-900b-85b030d54234
             userCondition: null
             warning: null
             width: 100

@@ -1,4 +1,4 @@
-changedFieldIndicator: 1596012994
+changedFieldIndicator: 1307890793
 field: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
 fieldLayouts:
   8d55e71b-cdd7-4641-befb-d61027c0e790:
@@ -136,7 +136,7 @@ fields:
         custom:
           allowAliases: false
           disableValidation: false
-          enabled: false
+          enabled: true
         email:
           allowAliases: false
           disableValidation: false

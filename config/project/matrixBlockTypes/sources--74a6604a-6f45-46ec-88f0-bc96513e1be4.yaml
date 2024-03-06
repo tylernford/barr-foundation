@@ -111,7 +111,7 @@ fields:
     name: 'Tags: Categories or Program Areas'
     searchable: false
     settings:
-      allowSelfRelations: false
+      allowSelfRelations: true
       branchLimit: null
       localizeRelations: false
       maintainHierarchy: false

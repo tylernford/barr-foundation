@@ -108,7 +108,19 @@ fieldLayouts:
             uid: 9ad612b0-deb9-43f3-a90f-7c8179029a6b
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 2ce7a3bf-415b-4528-81af-ded77fc241fc # Contact: LinkedIn
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 57a327ef-4252-4e34-8f30-7d2319b8d709
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: 9cd35cb7-52cf-48dc-b474-f49d9839e2a1 # Contact: Twitter
@@ -120,7 +132,7 @@ fieldLayouts:
             uid: 60b8b70d-5ea2-4075-b60d-3129d6fc36a7
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 071f0627-4d57-45f3-be3b-2d686513516e # Contact: Instagram
@@ -132,7 +144,7 @@ fieldLayouts:
             uid: d5529e33-c47f-4c5f-ba4e-e0a694a1522c
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: 493bc4b8-cb08-43a2-938d-4c1b76790dd4 # Contact: Facebook
@@ -144,7 +156,7 @@ fieldLayouts:
             uid: e5f670df-5322-4218-acd8-14a508eb19fa
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: c5b0dd4c-0674-4747-adf3-2fa7a9bcea40 # Contact: YouTube
@@ -156,7 +168,7 @@ fieldLayouts:
             uid: a27bbc52-3c99-4515-b21d-7ed49fc89cb5
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Contact
         uid: e0fb11d5-e380-4b92-a3a3-79af0134a981
         userCondition: null

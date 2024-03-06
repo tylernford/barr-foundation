@@ -1,0 +1,17 @@
+{# =======================================
+  Module: Featured Card with Cards
+==========================================
+  Params:
+    - featuredCard
+    - cards
+======================================= #}
+
+{% macro default(config) %}
+  {% import '_macros/03_modules/_cards' as cards %}
+
+  <div class="featuredCardWithCards">
+    {% include "_partials/_modules/_card.twig" with { config: config.featuredCardConfig } only %}
+
+    {{ cards.cardsGrid(config.cards) }}
+  </div>
+{% endmacro %}

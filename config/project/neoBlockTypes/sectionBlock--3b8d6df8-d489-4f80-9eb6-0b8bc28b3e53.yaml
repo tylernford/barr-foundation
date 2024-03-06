@@ -1,11 +1,12 @@
 childBlocks:
   - groupType
+  - textBody
 conditions: null
 description: ''
 enabled: true
 field: 4d994633-7c38-4213-bd35-2b0d8966dff5 # Page Builder: People
 fieldLayouts:
-  1ea8310a-40ad-4446-9841-ec10143a107e:
+  d888f0bd-8cc5-4984-8f3c-86f77b45da6c:
     tabs:
       -
         elementCondition: null
@@ -34,6 +35,7 @@ group: null
 groupChildBlockTypes: true
 handle: sectionBlock
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 0
 maxChildBlocks: 0

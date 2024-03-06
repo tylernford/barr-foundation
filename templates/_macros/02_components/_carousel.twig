@@ -226,13 +226,9 @@
                         {{ cards.grantee(granteeCardConfig) }}
                     </div>
                 {% elseif cardVariant == 'post' %}
-                    {% set postCardConfig = {
-                        'post': card
-                    } %}
-
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
-                        {{ cards.post(postCardConfig) }}
+                        {{ cards.post(card) }}
                     </div>
 
                 {% elseif cardVariant == 'news' %}

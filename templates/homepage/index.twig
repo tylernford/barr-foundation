@@ -11,17 +11,15 @@ Homepage template
 {% import '_macros/03_modules/_opener' as openers %}
 
 {% block content %}
+  {% set homepage = craft.entries().section('homepage').one() %}
+  {% set opener = homepage.openerHomepage %}
+  {% set builder = homepage.builderHome %}
 
-{% set homepage = craft.entries().section('homepage').one() %}
+  {# HOMEPAGE OPENER #}
+  {{ openers.home(opener) }}
 
-{# HOMEPAGE OPENER #}
-{% set opener = homepage.openerHomepage %}
-{{ openers.home(opener) }}
-
-{# HOMEPAGE BUILDER #}
-{% set builder = homepage.builderHome %}
-
-
-
-
+  {# HOMEPAGE BUILDER #}
+  {% if builder %}
+    {% include '_partials/_builder-homepage.twig' with {'builder': builder} %}
+  {% endif %}
 {% endblock %}

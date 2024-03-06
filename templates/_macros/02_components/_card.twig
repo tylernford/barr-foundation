@@ -68,7 +68,7 @@
 {% endmacro %}
 
 
-{% macro action(card) %}
+{% macro action(card, isReversed) %}
     {% import '_macros/01_elements/_actions' as actions %}
 
     {% set support = card.textSupporting %}
@@ -79,7 +79,7 @@
         linkType: 'url', target: '_blank'
     } %}
 
-    <div class="cardItem cardItem--action">
+    <div class="cardItem cardItem--action"{{ isReversed ? ' data-is-reversed=' ~ isReversed }}>
         <div class="cardItem__support">
             {{ support }}
         </div>

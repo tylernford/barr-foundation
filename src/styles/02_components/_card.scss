@@ -27,7 +27,7 @@
 }
 
 .cardItem.cardItem--action {
-  --color-card-text--primary: var(--color-teal-100);
+  --color-card-text--primary: var(--color-navy-100);
 }
 .cardItem.cardItem--bio {
   --color-card-background: var(--color-grey-25);
@@ -63,7 +63,6 @@
     }
   }
 
-  .cardItem.cardItem--action,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--generic,
   .cardItem.cardItem--grantee,
@@ -82,7 +81,6 @@
     }
   }
   
-  .cardItem.cardItem--action,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--generic,
   .cardItem.cardItem--grantee,
@@ -102,12 +100,27 @@
     }
   }
 
-  .cardItem.cardItem--action,
   .cardItem.cardItem--bio,
   .cardItem.cardItem--generic,
   .cardItem.cardItem--grantee,
   .cardItem.cardItem--media {
     --color-card-text--primary: var(--color-program-marigold-100);
+  }
+}
+
+[data-is-reversed="true"] {
+  .cardItem.cardItem--action {
+    --color-card-text--primary: var(--color-grey-25);
+
+    .action {
+      &:not(:hover) {
+        color: var(--color-grey-25-65);
+        
+        &::after {
+          background-color: var(--color-grey-25-65);
+        }
+      }
+    }
   }
 }
 
@@ -134,8 +147,8 @@
 
     .cardItem__support {
       margin-block-end: var(--base);
-      max-width: 25em;
-      color: var(--color-nav-100);
+      max-width: 28em;
+      color: var(--color-card-text--primary);
       @include getType('h5-messina');
 
       strong {
@@ -193,8 +206,20 @@
     }
 
     .cardItem__heading {
-      color: var(--color-card-text--primary);
       @include getType('h5-axiforma');
+
+      a {
+        color: var(--color-card-text--primary);
+        text-decoration-color: transparent;
+        transition: text-decoration-color var(--transition) ease-in;
+        
+        @media (hover: hover) {
+          &:hover {
+            text-decoration-color: inherit;
+            transition: text-decoration-color var(--transition-intermediate) ease-out;
+          }
+        }
+      }
     }
 
     .cardItem__details {
