@@ -362,6 +362,7 @@
 
 
 {% macro grantee(entry) %}
+    {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
 
@@ -371,6 +372,47 @@
         { 'title': 'Grants & Grantees', 'url': '' }
     ] %}
 
+    {# Set heading #}
+    {% set heading = entry.title %}
+    {# Set copy #}
+    {% set copy = entry.textDescription %}
+
+    {# All grants associated with grantee #}
+    {% set grantList = craft.entries().section('grants').entriesOrganization(entry).all() %}
+
+    {# Set tags #}
+    {% set programTags = {} %}
+    {% set strategyTags = {} %}
+
+    {% for grant in grantList %}
+        {% for programArea in grant.tagsProgramAreas %}
+            {% if programArea.title in programTags %}
+            {% else %}
+                {% set programTags = programTags|merge([programArea]) %}
+            {% endif %}
+        {% endfor %}
+        {% for strategy in grant.tagsStrategies %}
+            {% if strategy.title in programTags %}
+            {% else %}
+                {% set strategyTags = strategyTags|merge([strategy]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {% set programTags = programTags|merge(strategyTags) %}
+
+    {% set detailTags = [] %}
+    {% for programTag in programTags %}
+        {% set tag = { 'title': programTag } %}
+        {% set detailTags = detailTags|merge([tag]) %}
+    {% endfor %}
+
+    {# Set location #}
+    {% set location = entry.textLocation %}
+
+    {# Set website #}
+    {% set website = entry.contactWebsite %}
+
     <header class="blockOpener blockOpener--grantee">
         {# Primary #}
         <div class="blockOpener__primary">
@@ -378,10 +420,41 @@
             {{ breadcrumbs.breadcrumb(crumbs) }}
 
             {# Page title #}
-            <h1 class="primary__heading">{{ entry.title }}</h1>
+            <h1 class="primary__heading">{{ heading }}</h1>
 
-    
+            <div class="blockOpener__content">
+                {% if copy|length %}
+                    <div class="primary__desc">
+                        {{ copy }}
+                    </div>
+                {% endif %}
+
+                <div class="content__meta">
+                    {# Location and tags #}
+                    <div class="meta__details">
+                        {# Location #}
+                        {% if location|length %}
+                            {{ details.detail('location', false, location) }}
+                        {% endif %}
+
+                        {# Tags #}
+                        {% if detailTags|length %}
+                            {{ details.detail('tags', false, detailTags) }}
+                        {% endif %}
+                    </div>
+
+                    {% if website|length %}
+                        {% set actionAttributes = {
+                            type: 'link', isReversed: false,
+                            icon: 'linkType', iconOnly: false,
+                            text: 'Website', url: website,
+                            linkType: 'url', target: ''
+                        } %}
+
+                        {{ actions.action(actionAttributes) }}
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </header>
-
 {% endmacro %}

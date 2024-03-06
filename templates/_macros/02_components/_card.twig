@@ -582,6 +582,9 @@
     @param $config object
 #}
 {% macro grant(config) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_details' as details %}
+
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
 
@@ -590,10 +593,11 @@
         {% set grant = 'grant' in content|keys ? content.grant %} 
 
         {# Organization or Grant Info #}
-        {% set heading  = org ? org.title : (grant ? grant.title) %}
-        {% set support  = grant ? grant.textDescription %}
-        {% set profile  = org ? org.uri %}
-        {% set website  = org ? org.contactWebsite %}
+        {% set title       = org ? org.title : (grant ? grant.title) %}
+        {% set description = grant ? grant.textDescription %}
+        {% set profile     = org ? org.uri %}
+        {% set website     = org ? org.contactWebsite %}
+
         {# Grant Detail Object #}
         {% set detailObj = {
             'Fiscal Sponsor': grant ? grant.textName,
@@ -604,59 +608,64 @@
             'Strategies': grant ? grant.tagsStrategies.all()
         }%}
 
-        <article class="feedItem{% if variant %} feedItem--{{ variant }}{% endif %}">
+        <article class="cardItem cardItem--grant">
+            <div class="cardItem__inner">
+                {# Header #}
+                <header class="cardItem__header">
+                    {% if org %}
+                        <h3 class="cardItem__heading">{{ title }}</h3>
+                    {% endif %}
+                
+                    {# Summary #}
+                    {% if description|length %}
+                        <p class="cardItem__description">
+                            {{ description }}
+                        </p>
+                    {% endif %}
+                </header>
 
-            <h3 class="feedItem-heading{% if not org %} _is-hidden{% endif %}">{{ heading }}</h3>
-            <div class="feedItem-support">{{ support }}</div>
+                {# Content #}
+                <div class="cardItem__table">
+                    {% for label, detail in detailObj %}
+                        <div class="table-item__tr{{ detail is iterable and detail|length ? ' table-item__tr--tags' }}">
+                            <h4 class="table-item__th">{{ label }}</h4>
+                            <div class="table-item__td">
+                                {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                                    N/A
+                                {% elseif detail is iterable %}
+                                    {# Tags #}
+                                    {{ details.detail('tags', false, detail) }}
+                                {% else %}
+                                    {{ detail }}{{ label == 'Term' ? ' mo.' }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
 
-            <div class="feedItem-table">
-                {# TODO: 
-                    1. Elegantly handle cases in which there is no detail content;
-                    Temporarily rendering "N/A" in these cases.
-                #}
-                {% for label, detail in detailObj %}
-                <div class="feedItem-tr">
-                    <h3 class="feedItem-th">{{ label }}</h3>
-                    <div class="feedItem-td">
-                        {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
-                        N/A
-                        {% elseif detail is iterable %}
-                        {% for d in detail %}
-                        {# Tag link #}
-                        <a 
-                            class="feedItem-tag"
-                            href="#" 
-                            title="">{{ d }}</a>
-                        {% endfor %}
-                        {% else %}
-                        {{ detail }}
+                {# Actions #}
+                {% if org %}
+                    <div class="cardItem__actions">
+                        {% set profileAttributes = {
+                            type: 'link', isReversed: false,
+                            icon: '', iconOnly: false,
+                            text: 'Profile', url: siteUrl ~ profile,
+                            linkType: 'entry', target: ''
+                        } %}
+                        {{ actions.action(profileAttributes) }}
+
+                        {% if website|length %}
+                            {% set actionAttributes = {
+                                type: 'link', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: 'Website', url: website,
+                                linkType: 'url', target: '_blank'
+                            } %}
+                            {{ actions.action(actionAttributes) }}
                         {% endif %}
                     </div>
-                </div>
-                {% endfor %}
-            </div>  
-
-            <div class="feedItem-footer">
-                {% if profile %}
-                <a 
-                    class="feedItem-cta" 
-                    href="{{ alias('@baseUrl' ~ '/' ~ profile) }}"
-                    title="Go to {{ heading }}">
-                    Profile
-                </a>
-                {% endif %}
-
-                {% if website %}
-                <a 
-                    class="feedItem-cta" 
-                    href="{{ website }}" 
-                    title="Go to {{ heading }} website"
-                    target="_blank">
-                    Website
-                </a>
                 {% endif %}
             </div>
         </article>
-
     {% endif %}
 {% endmacro %}

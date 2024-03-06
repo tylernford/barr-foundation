@@ -1,0 +1,69 @@
+/* _grants-grid.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Grants Grid
+------------------------------------------------------------------------ */
+
+.grants-grid {
+  .grants-grid__inner {
+    @include container-narrow;
+    padding-block: var(--base-9) var(--base-12);
+    display: grid;
+    
+    @for $i from 1 through 10 {
+      > *:nth-child(#{$i}) {
+        z-index: #{11 - $i};
+      }
+    }
+
+    @include breakpoint(sm-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    &[data-columns="3"] {
+      @include breakpoint(xl) {
+        grid-template-columns: 1fr 1fr 1fr;
+  
+        .cardItem {
+          padding: var(--base-6);
+        }
+      }
+  
+      @include breakpoint(xxl) {
+        .cardItem {
+          padding: var(--base-9);
+        }
+      }
+    }
+  }
+
+  &[data-background="true"] {
+    position: relative;
+
+    .angle {
+      inset: 0 0 auto 0;
+      position: absolute;
+      &::before {
+        content: '';
+        inset: 0 0 auto 0;
+        height: var(--base-40);
+        position: absolute;
+        background-color: var(--color-teal-150);
+      }
+  
+      svg {
+        margin-block-start: var(--base-40);
+        width: 100%;
+        height: auto;
+        display: block;
+        color: var(--color-teal-150);
+        transform: rotateY(180deg);
+      }
+    }
+
+    .grants-grid__inner {
+      position: relative;
+    }
+  }
+}

@@ -4,6 +4,7 @@
   Interior: Grantee Organization
 ========================================== #}
 
+{% import '_macros/01_elements/_angles' as angles %}
 {% import '_macros/02_components/_card.twig' as cards %}
 
 {# Uncomment as needed
@@ -27,40 +28,40 @@
 {% set grantList = craft.entries().section('grants').entriesOrganization(entry).all() %}
 
 {# NOTE: the following elements will likely need to consolidated into a _sprig template #}
-<section>
-    <h2>Subsection Name</h2>
-
-    {# FILTERS GO HERE #}
-    <div class="blockGeneric">
-        Filters
+<section class="grants-grid" data-background="true">
+    <div class="angle">
+        {{ angles.top() }}
     </div>
+    {# FILTERS GO HERE #}
+    {# <div class="blockGeneric">
+        Filters
+    </div> #}
 
     {# GRANT CARDS: List or Grid View #}
-    <div class="blockFeed blockFeed--twin _is-{{ layout }}">
-    {% if grantList|length %}
-    {% for grant in grantList %}
-        {% set config = {
-            'variant': layout == 'grid' ? 'grid' : 'list',
-            'content': {
-                'grant': grant
-            }
-        }%}
-
-        {{ cards.grant(config) }}
-
-    {% endfor %}
-    {% endif %}
+    <div class="grants-grid__inner" data-columns="2">
+        {% if grantList|length %}
+            {% for grant in grantList %}
+                {% set config = {
+                    'variant': layout == 'grid' ? 'grid' : 'list',
+                    'content': {
+                        'grant': grant
+                    }
+                }%}
+                {{ cards.grant(config) }}
+            {% endfor %}
+        {% endif %}
     </div>
 </section>
 
-<section>
+{#<section>
     <h2>Related Content</h2>
-    {# FILTERS GO HERE #}
+    {# FILTERS GO HERE #
     <div class="blockGeneric">
         Filters
     </div>
-    {# RELATED CONTENT CARDS: List or Grid View #}
+    {# RELATED CONTENT CARDS: List or Grid View #
     <div class="blockFeed">
     </div>
 
 </section>  
+#}
