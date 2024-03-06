@@ -1,0 +1,50 @@
+/* _featured-card-with-cards.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Featured Card with Cards
+  See templates/_macros/03_modules/_featured-card-with-cards.twig for markup
+------------------------------------------------------------------------ */
+
+.featuredCardWithCards {
+  > .cardItem {
+    position: relative;
+    z-index: 1;
+
+    .cardItem__inner {
+      @include container;
+    }
+  }
+  
+  .cards-grid {
+    padding-block: 0 var(--base-9);
+    background: var(--color-cards-primary);
+    position: relative;
+    overflow: hidden;
+  
+    &:after {
+      content: '';
+      inset: 268px 0 auto 0;
+      height: 100%;
+      display: block;
+      position: absolute;
+      background: var(--color-grey-25);
+      transform: skewY(-9deg);
+      transform-origin: 100%;
+    }
+
+    @include breakpoint(md) {
+      &:after {
+        top: 200px;
+      }
+    }
+
+    @include breakpoint(lg) {
+      padding-block-end: var(--base-18);
+  
+      &:after {
+        top: 68px;
+      }
+    }
+  }
+}

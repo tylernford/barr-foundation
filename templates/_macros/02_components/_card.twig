@@ -68,7 +68,7 @@
 {% endmacro %}
 
 
-{% macro action(card) %}
+{% macro action(card, isReversed) %}
     {% import '_macros/01_elements/_actions' as actions %}
 
     {% set support = card.textSupporting %}
@@ -79,7 +79,7 @@
         linkType: 'url', target: '_blank'
     } %}
 
-    <div class="cardItem cardItem--action">
+    <div class="cardItem cardItem--action"{{ isReversed ? ' data-is-reversed=' ~ isReversed }}>
         <div class="cardItem__support">
             {{ support }}
         </div>
@@ -217,7 +217,6 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
-    {% set displayImage = variant == 'featured' ? true : false %}
     {% set variant = variant == 'featured' ? 'large' : variant %}
 
     {% set card     = config.grantee %}
@@ -226,20 +225,55 @@
     {% set name     = card.title %}
     {% set label    = 'label' in config|keys ? config.label : null %}
     {% set summary  = card.textDescription ?? card.textDescription %}
-    {% set location = 'Placeholder Location' %}
+    {% set location = card.textLocation %}
     {% set region   = 'Placeholder Region' %}
     {% set profile  = card.url %}
-    {% set website  = 'https://example.com' %}
+    {% set website  = card.contactWebsite %}
+
+    {# All grants associated with grantee #}
+    {% set grantList = craft.entries().section('grants').entriesOrganization(card).all() %}
+
+    {# Set tags #}
+    {% set programTags = {} %}
+    {% set strategyTags = {} %}
+
+    {# Set Program tags #}
+    {% for grant in grantList %}
+        {% for programArea in grant.tagsProgramAreas %}
+            {% if programArea.title in programTags %}
+            {% else %}
+                {% set programTags = programTags|merge([programArea]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Set Strategy tags #}
+    {% for grant in grantList %}
+        {% for strategy in grant.tagsStrategies %}
+            {% if strategy.title in strategyTags %}
+            {% else %}
+                {% set strategyTags = strategyTags|merge([strategy]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Merge Program and Strategy tags #}
+    {% set mergedTags = programTags|merge(strategyTags) %}
+
+    {% set detailTags = [] %}
+    {% for mergedTag in mergedTags %}
+        {% set tag = { 'title': mergedTag } %}
+        {% set detailTags = detailTags|merge([tag]) %}
+    {% endfor %}
+
 
     <article class="cardItem cardItem--grantee"{{ variant|length ? ' data-variant=' ~ variant }}{{ reversed == true ? ' data-is-reversed=true' }}>
         <div class="cardItem__inner">
             {# Image #}
-            {% if displayImage %}
-                {% if image %}
-                    <div class="cardItem__media">
-                        {{ images.image(image, '912', '16/9', '', false) }}
-                    </div>
-                {% endif %}
+            {% if image %}
+                <div class="cardItem__media">
+                    {{ images.image(image, '912', '16/9', '', false) }}
+                </div>
             {% endif %}
 
             {# Header #}
@@ -261,9 +295,15 @@
 
                 <div class="cardItem__secondary">
                     {# Location/Region #}
-                    {{ details.detail('location', false, location) }}
+                    {% if location|length %}
+                        {{ details.detail('location', false, location) }}
+                    {% endif %}
 
-                    {{ details.detail('region', false, region) }}
+                    {# {{ details.detail('region', false, region) }} #}
+                    {# Tags #}
+                    {% if detailTags|length %}
+                        {{ details.detail('tags', false, detailTags) }}
+                    {% endif %}
 
                     {# Actions #}
                     <div class="cardItem__actions">
@@ -284,7 +324,9 @@
                         {{ actions.action(profileActionAttributes) }}
 
                         {# Website #}
-                        {{ actions.action(websiteActionAttributes) }}
+                        {% if website|length %}
+                            {{ actions.action(websiteActionAttributes) }}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -582,6 +624,9 @@
     @param $config object
 #}
 {% macro grant(config) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_details' as details %}
+
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
     {% set content = 'content' in config|keys ? config.content : null %}
 
@@ -590,10 +635,11 @@
         {% set grant = 'grant' in content|keys ? content.grant %} 
 
         {# Organization or Grant Info #}
-        {% set heading  = org ? org.title : (grant ? grant.title) %}
-        {% set support  = grant ? grant.textDescription %}
-        {% set profile  = org ? org.uri %}
-        {% set website  = org ? org.contactWebsite %}
+        {% set title       = org ? org.title : (grant ? grant.title) %}
+        {% set description = grant ? grant.textDescription %}
+        {% set profile     = org ? org.uri %}
+        {% set website     = org ? org.contactWebsite %}
+
         {# Grant Detail Object #}
         {% set detailObj = {
             'Fiscal Sponsor': grant ? grant.textName,
@@ -604,59 +650,64 @@
             'Strategies': grant ? grant.tagsStrategies.all()
         }%}
 
-        <article class="feedItem{% if variant %} feedItem--{{ variant }}{% endif %}">
+        <article class="cardItem cardItem--grant">
+            <div class="cardItem__inner">
+                {# Header #}
+                <header class="cardItem__header">
+                    {% if org %}
+                        <h3 class="cardItem__heading">{{ title }}</h3>
+                    {% endif %}
+                
+                    {# Summary #}
+                    {% if description|length %}
+                        <p class="cardItem__description">
+                            {{ description }}
+                        </p>
+                    {% endif %}
+                </header>
 
-            <h3 class="feedItem-heading{% if not org %} _is-hidden{% endif %}">{{ heading }}</h3>
-            <div class="feedItem-support">{{ support }}</div>
+                {# Content #}
+                <div class="cardItem__table">
+                    {% for label, detail in detailObj %}
+                        <div class="table-item__tr{{ detail is iterable and detail|length ? ' table-item__tr--tags' }}">
+                            <h4 class="table-item__th">{{ label }}</h4>
+                            <div class="table-item__td">
+                                {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                                    N/A
+                                {% elseif detail is iterable %}
+                                    {# Tags #}
+                                    {{ details.detail('tags', false, detail) }}
+                                {% else %}
+                                    {{ detail }}{{ label == 'Term' ? ' mo.' }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
 
-            <div class="feedItem-table">
-                {# TODO: 
-                    1. Elegantly handle cases in which there is no detail content;
-                    Temporarily rendering "N/A" in these cases.
-                #}
-                {% for label, detail in detailObj %}
-                <div class="feedItem-tr">
-                    <h3 class="feedItem-th">{{ label }}</h3>
-                    <div class="feedItem-td">
-                        {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
-                        N/A
-                        {% elseif detail is iterable %}
-                        {% for d in detail %}
-                        {# Tag link #}
-                        <a 
-                            class="feedItem-tag"
-                            href="#" 
-                            title="">{{ d }}</a>
-                        {% endfor %}
-                        {% else %}
-                        {{ detail }}
+                {# Actions #}
+                {% if org %}
+                    <div class="cardItem__actions">
+                        {% set profileAttributes = {
+                            type: 'link', isReversed: false,
+                            icon: '', iconOnly: false,
+                            text: 'Profile', url: siteUrl ~ profile,
+                            linkType: 'entry', target: ''
+                        } %}
+                        {{ actions.action(profileAttributes) }}
+
+                        {% if website|length %}
+                            {% set actionAttributes = {
+                                type: 'link', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: 'Website', url: website,
+                                linkType: 'url', target: '_blank'
+                            } %}
+                            {{ actions.action(actionAttributes) }}
                         {% endif %}
                     </div>
-                </div>
-                {% endfor %}
-            </div>  
-
-            <div class="feedItem-footer">
-                {% if profile %}
-                <a 
-                    class="feedItem-cta" 
-                    href="{{ alias('@baseUrl' ~ '/' ~ profile) }}"
-                    title="Go to {{ heading }}">
-                    Profile
-                </a>
-                {% endif %}
-
-                {% if website %}
-                <a 
-                    class="feedItem-cta" 
-                    href="{{ website }}" 
-                    title="Go to {{ heading }} website"
-                    target="_blank">
-                    Website
-                </a>
                 {% endif %}
             </div>
         </article>
-
     {% endif %}
 {% endmacro %}

@@ -52,9 +52,9 @@
             {% set heading   = content.textPlainHeading %}
             {% set statList  = content.highlightStats.all() %}
             {% set attribution = content.textDescription %}
-            {% set infograph = content.assetInfographic.one() %}
-            {% set styleWidth = infograph.styleWidth %}
-            {% set infographImage = infograph.assetImage.one %}
+            {% set infograph = content.assetInfographic ? content.assetInfographic.one() : null %}
+            {% set styleWidth = infograph != null ? infograph.styleWidth %}
+            {% set infographImage = infograph != null ? infograph.assetImage.one %}
 
             <div class="blockHighlight blockHighlight--stats"{{ infographImage ? ' data-infographic=true' }}>
                 {% if heading %}
@@ -69,7 +69,7 @@
                     {% endif %}
 
                     <div class="blockHighlight__stats-and-attribution">
-                        <ul class="blockHighlight__stats">
+                        <ul class="blockHighlight__stats" data-columns={{ statList|length }}>
                             {% for statItem in statList %}
                                 {% set label = statItem.textLabel %}
                                 {% set stat  = statItem.textStat %}

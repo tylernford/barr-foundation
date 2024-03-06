@@ -1,0 +1,52 @@
+field: d44a4308-4627-45f3-8867-96f5d98fcefa # Card: Latest News (Manual)
+fieldLayouts:
+  5729a3f6-7f7e-4f21-9a63-653b1720bf6f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: bc27fcd0-4c7f-4fa1-bdac-ce9d3d3e42a6 # Blog Post, News Item
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74c68289-0901-4b30-9159-5892d39e5d21
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1eba87ca-15c8-4fc2-985d-b759c587004a
+        userCondition: null
+fields:
+  bc27fcd0-4c7f-4fa1-bdac-ce9d3d3e42a6: # Blog Post, News Item
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: blogPostOrNewsItem
+    instructions: null
+    name: 'Blog Post, News Item'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      selectionLabel: 'Select an Entry'
+      showSiteMenu: true
+      sources:
+        - 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
+        - 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: entry
+name: 'Entry: Blog Post, News Item, or Grantee'
+sortOrder: 1

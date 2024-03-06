@@ -7,6 +7,8 @@ Interior template
 
 {% extends '_layouts/_base' %}
 
+{% import '_macros/01_elements/_actions' as actions %}
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
 {% import '_macros/02_components/_assets' as assets %}
 {% import '_macros/03_modules/_bio' as bios %}
 {% import '_macros/03_modules/_feed' as feeds %}
@@ -43,6 +45,7 @@ Interior template
         entry.builderCommon ??
         entry.builderPeople ??
         entry.builderProgramAreas ??
+        entry.builderInquiryForm ??
         null
     %}
 
@@ -94,17 +97,53 @@ Interior template
             {{ feeds.feed(feedConfig) }}
         {% endif %}
 
+    {% if entrySection == 'programAreas' %}
         {% if entry.textPlainHeading or entry.textDescription %}
-            <section class="prefooterForm">
-                {% if entry.textPlainHeading %}
-                    <h2>{{ entry.textPlainHeading }}</h2>
-                {% endif %}
-                {% if entry.textDescription %}
-                    <div class="prefooterForm__description">
-                        {{ entry.textDescription }}
-                    </div>
-                {% endif %}
-            </section>
+            {% if entry.type == 'inquiryForm' %}
+                <section class="prefooterForm">
+                    {% if entry.textPlainHeading %}
+                        {# Section Title #}
+                        {% set sectionTitleAttributes = {
+                            level: 'h2',
+                            title: entry.textPlainHeading,
+                            variant: '', border: true
+                        } %}
+                        {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+                    {% endif %}
+                    {% if entry.textDescription %}
+                        <div class="prefooterForm__description">
+                            {{ entry.textDescription }}
+                        </div>
+
+                        <div class="blockGeneric">
+                            <h2 class="blockGeneric-heading">Inquiry form will appear here.</h2>
+                        </div>
+                    {% endif %}
+                </section>
+            {% else %}
+                <section class="prefooterInquiry">
+                    {% set action = entry.actionAll %}
+
+                    {% if entry.textPlainHeading %}
+                        <h2>{{ entry.textPlainHeading }}</h2>
+                    {% endif %}
+                    {% if entry.textDescription %}
+                        <div class="prefooterInquiry__description">
+                            {{ entry.textDescription }}
+                        </div>
+                    {% endif %}
+
+                    {% if action.url|length %}
+                        {% set actionAttributes = {
+                            type: 'button', isReversed: false,
+                            icon: '', iconOnly: false,
+                            text: action.text, url: action,
+                            linkType: 'entry', target: action.target
+                        } %}
+                        {{ actions.action(actionAttributes) }}
+                    {% endif %}
+                </section>
+            {% endif %}
         {% endif %}
     {% endif %}
 {% endblock %}

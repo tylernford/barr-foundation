@@ -2,38 +2,39 @@ childBlocks: null
 conditions: null
 description: ''
 enabled: true
-field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
+field: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
 fieldLayouts:
-  37f637db-4d13-4dd2-a9b4-e3c83c869cd2:
+  6e3dbdb5-f9aa-4f1c-b533-e570b5015457:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 76928083-2a29-4679-8fdf-e811209fb268 # Card: Grants
-            instructions: 'Add a card about the Grants Database. Text should be aligned to the left.'
-            label: null
-            required: false
+            fieldUid: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed: Manual
+            instructions: null
+            label: Cards
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fe41ffde-90e8-4d47-9bed-895c68d66051
+            uid: b76093c0-c2a6-4862-ac82-d5fdc46fbba6
             userCondition: null
             warning: null
             width: 100
         name: Cards
-        uid: a1fcb1e8-c139-438a-b307-076af74eff9d
+        uid: f4d900f6-e060-4284-9c42-cd798f74f642
         userCondition: null
 group: null
 groupChildBlockTypes: true
-handle: cardGrantsDatabase
+handle: cardsManual
 icon: null
+iconFilename: ''
 ignorePermissions: true
-maxBlocks: 1
+maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
-name: 'Card: Grants Database'
-topLevel: true
+name: 'Cards: Manual'
+topLevel: false

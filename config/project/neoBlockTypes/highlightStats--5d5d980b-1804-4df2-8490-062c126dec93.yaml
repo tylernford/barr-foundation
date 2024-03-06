@@ -4,20 +4,20 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  c7328a26-23ca-4310-bba6-4af016e64dcc:
+  5d11c85f-22b5-47ad-855f-e29087902d5c:
     tabs:
       -
         elementCondition: null
         elements:
           -
             elementCondition: null
-            fieldUid: 0f725806-1cbe-40c2-91a6-cfc9a70879c2 # Text: Heading
-            instructions: 'e.g. Learning & Evaluation'
-            label: null
+            fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
+            instructions: Optional.
+            label: 'Text: Heading'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e3a81b10-0ce7-4dff-8bfb-9e758409d07d
+            uid: 05ece122-961d-41de-8d6d-88d160161339
             userCondition: null
             warning: null
             width: 100
@@ -35,13 +35,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Rich (+Link)
-            instructions: '(Optional) Cite a source for the statistics'
-            label: 'Text: Caption'
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: null
+            label: 'Text: Attribution'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7497c4ee-1539-4b86-b3aa-1633b9ed7d5a
+            uid: 177d9dbd-f20d-49d8-9ad2-64a11865219e
             userCondition: null
             warning: null
             width: 100
@@ -64,11 +64,12 @@ group: null
 groupChildBlockTypes: true
 handle: highlightStats
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 1
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-minBlocks: 1
+minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Highlight: Stats'

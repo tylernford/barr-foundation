@@ -1,0 +1,83 @@
+{# _macros/02_components/_job-listings.twig #}
+
+{% macro jobListings(config) %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_details' as details %}
+
+    <div class="job-listings">
+        <div class="job-listings__listing">
+            {# Title and description #}
+            <div class="listing__primary">
+                {# Title #}
+                <h3 class="listing__title">Program Associate</h3>
+
+                {# Description #}
+                <p class="listing__description">Arts & Creativity</p>
+            </div>
+
+            {# Secondary #}
+            <div class="listing__secondary">
+                {# Type and location #}
+                <div class="listing__details">
+                    {{ details.detail('job-title', false, 'Full Time') }}
+                    {{ details.detail('location', false, 'Boston, MA', 'globe') }}
+                </div>
+
+                {# Apply #}
+                <div class="listing__action">
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: 'arrow', iconOnly: true,
+                        text: 'Apply', url: 'https://example.com',
+                        linkType: 'url', target: '_blank'
+                    } %}
+                    {{ actions.action(actionAttributes) }}
+
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: 'arrow', iconOnly: false,
+                        text: 'Apply', url: 'https://example.com',
+                        linkType: 'url', target: '_blank'
+                    } %}
+                    {{ actions.action(actionAttributes) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="job-listings__listing">
+            {# Title and description #}
+            <div class="listing__primary">
+                {# Title #}
+                <h3 class="listing__title">Administrative Assistant</h3>
+
+                {# Description #}
+                {# <p class="listing__description">Team Lorem Ipsum</p> #}
+            </div>
+
+            <div class="listing__secondary">
+                <div class="listing__details">
+                    {{ details.detail('job-title', false, 'Full Time') }}
+                    {{ details.detail('location', false, 'Boston, MA', 'globe') }}
+                </div>
+
+                <div class="listing__action">
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: 'arrow', iconOnly: true,
+                        text: 'Apply', url: 'https://boards.greenhouse.io/barrfoundation',
+                        linkType: 'url', target: '_blank'
+                    } %}
+                    {{ actions.action(actionAttributes) }}
+
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: 'arrow', iconOnly: false,
+                        text: 'Apply', url: 'https://boards.greenhouse.io/barrfoundation',
+                        linkType: 'url', target: '_blank'
+                    } %}
+                    {{ actions.action(actionAttributes) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

@@ -33,6 +33,10 @@ return [
             // Directory
             '5' => [
                 'name' => 'Directory',
+            ],
+            // Clean Tags
+            '6' => [
+                'name' => 'Clean Tags',
             ]
         ]
     ]

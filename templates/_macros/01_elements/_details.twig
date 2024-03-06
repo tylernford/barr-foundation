@@ -8,9 +8,10 @@
       - true, false
     - details
       'details', ['detail', 'detail']
+    - icon
 ======================================= #}
 
-{% macro detail(variant, isReversed, details) %}
+{% macro detail(variant, isReversed, details, icon) %}
   {% import '_macros/01_elements/_image' as images %}
   
   {# Tags #}
@@ -39,11 +40,14 @@
 
   {# Location, Region, and Job Title #}
   {% else %}
-    {% set icon =
-      variant == 'location' ? 'home' :
-      variant == 'region' ? 'map-pin' :
-      variant == 'job-title' ? 'person'
-    %}
+    {% if icon %}
+    {% else %}
+      {% set icon =
+        variant == 'location' ? 'home' :
+        variant == 'region' ? 'map-pin' :
+        variant == 'job-title' ? 'person'
+      %}
+    {% endif %}
 
     {% set title = variant|title|replace({'-': ' '}) %}
     
@@ -60,7 +64,7 @@
   {% macro list(variant, isReversed, details) %}
     {% import '_macros/01_elements/_image' as images %}
 
-    {% set programAreas =  craft.entries().section('programAreas') %}
+    {% set programAreas =  craft.entries().section('programAreasCategories') %}
     {% set programArea = '' %}
     {% set areaColor = '' %}
 
@@ -87,7 +91,8 @@
               %}
             {% endif %}
 
-            <a{{ areaColor|length ? ' data-program-color=' ~ areaColor }} href="{{ detail.url }}">{{ detail.title }}</a>
+            {# <a{{ areaColor|length ? ' data-program-color=' ~ areaColor }} href="{{ detail.url }}">{{ detail.title }}</a> #}
+            <span{{ areaColor|length ? ' data-program-color=' ~ areaColor }}>{{ detail.title }}</span>
           {% elseif variant == 'byline' %}
             {% if detail.img|length %}
               {{ images.image(detail.img, '240', '1/1', '', false) }}

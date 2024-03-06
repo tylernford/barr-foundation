@@ -1,0 +1,136 @@
+{# =======================================
+  Module: Cards
+======================================= #}
+
+{% macro cardsGrid(config) %}
+  {% import '_macros/01_elements/_actions' as actions %}
+  {% import '_macros/02_components/_card' as cards %}
+
+  {# {% set grantees = config.grantees %} #}
+  {% set feature  = config.feature %}
+  {% set action   = config.action %}
+
+  {# Set manualFeed #}
+  {% set manualFeed = config.cards.children.one.cardsFeedManual ?  config.cards.children.one.cardsFeedManual %}
+  {# Set autoFeed #}
+  {% set autoFeed = config.cards.children.one.cardsFeedAuto ? config.cards.children.one.cardsFeedAuto %}
+  {# Set empty feedCards array #}
+  {% set feedCards = [] %}
+
+  {# If manual card selection #}
+  {% if manualFeed|length %}
+    {# For manually selected card #}
+    {% for item in manualFeed %}
+      {# If generic or media card #}
+      {% if item.type == 'generic' or item.type == 'audio' or item.type == 'video' %}
+        {% set feedCards = feedCards|merge([item]) %}
+                    
+      {# If entry card #}
+      {% else %}
+        {% set feedCards = feedCards|merge([item.blogPostNewsItemGranteeOrGrant.one]) %}
+      {% endif %}
+    {% endfor %}
+            
+  {# Auto cards #}
+  {% else %}
+    {% set sources = [] %}
+
+    {% for source in autoFeed.one.sources %}
+      {% set sources = sources|merge([source.value]) %}
+    {% endfor %}
+
+    {% set autoCards = craft.entries().section(sources).limit(3) %}
+    {% for card in autoCards %}
+      {% set feedCards = feedCards|merge([card]) %}
+    {% endfor %}
+  {% endif %}
+
+  <div class="cards-grid"{{ feature == true ? ' data-featured-card=true' }}>
+    <div class="cards-grid__inner">
+      {% if feature == true %}
+        <div class="cards-grid__featured-card">
+          {% for card in feedCards %}
+            {% if loop.index == 1 %}
+              {{ _self.card(card) }}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="cards-grid__cards" data-columns="{{ feature == true ? feedCards|length - 1 : feedCards|length }}">
+        {% for card in feedCards %}
+          {% if feature == true %}
+            {% if loop.index != 1 %}
+              {{ _self.card(card) }}
+            {% endif %}
+          {% else %}
+            {{ _self.card(card) }}
+          {% endif %}
+        {% endfor %}
+
+        {# Action Card #}
+        {% if action|length %}
+          {{ cards.action(action) }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% macro card(card) %}
+    {% import '_macros/02_components/_card' as cards %}
+    
+    {% if card.type == 'generic' %}
+      {% set cardConfig  = {
+        'variant': card.type,
+        'image': card.assetImage.one(),
+        'label': card.label,
+        'title': card.cardTitle,
+        'summary': card.summary,
+        'action': card.actionLink
+      } %}
+      {{ cards.generic(cardConfig) }}
+    {% elseif card.type == 'audio' or card.type == 'video' %}
+      {% set cardConfig  = {
+        'variant': card.type,
+        'image': card.assetImage.one(),
+        'videoUrl': card.type == 'video' ? card.videoUrl : null,
+        'label': card.label,
+        'title': card.cardTitle,
+        'summary': card.summary,
+        'action': card.actionLink,
+        'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
+      } %}
+      {{ cards.media(cardConfig) }}
+    {% else %}
+      {% set cardVariant =
+        card.section.handle == 'blog' ? 'post' :
+        card.section.handle == 'newsroom' ? 'news'
+        : card.section.handle
+      %}
+
+      {% if cardVariant == 'grantees' %}
+        {% set grantee = card %}
+        {% set granteeCardConfig = {
+          'grantee': grantee
+        } %}
+        {{ cards.grantee(granteeCardConfig) }}
+                            
+      {% elseif cardVariant == 'post' %}
+        {{ cards.post(card) }}
+
+      {% elseif cardVariant == 'news' %}
+        {{ cards.news(card) }}
+
+      {% elseif cardVariant == 'grants' %}
+        <article class="cardItem cardItem--grant">
+          <div class="cardItem__inner">
+            {# Header #}
+            <header class="cardItem__header">
+              <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
+            </header>
+          </div>
+        </article>
+      {% endif %}
+    {% endif %}
+  {% endmacro %}
+{% endmacro %}

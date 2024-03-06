@@ -1,0 +1,141 @@
+fieldLayouts:
+  bd7fd996-955e-4594-adce-0e25a13375c6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: 'Navigation Label'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: aab3bd2c-222f-4535-944b-4cb4620788de
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: ab1dbd7d-75f1-47bd-b230-bcb92024f9ed
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 2f4e1404-f866-4cdc-924e-3c5930d9dd76 # Opener: Landing
+            instructions: null
+            label: Opener
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62536b59-a6b9-428b-aaa6-9f5b2f92e7df
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 81a9a74c-ac19-4639-bde0-1dff21eb14bd
+            userCondition: null
+          -
+            elementCondition: null
+            template: control-panel/_opener-landing.html
+            type: craft\fieldlayoutelements\Template
+            uid: 59991bd2-e029-4ec6-93fc-58b2c46a8b04
+            userCondition: null
+            width: 100
+        name: Opener
+        uid: 7680ea01-214d-47a3-a96d-4b5a73e7c50f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 133f1f83-cfbf-4f4a-a072-26d6ec33cf9f # Page Builder: Inquiry Form
+            instructions: null
+            label: 'Page Builder'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bce58e78-062e-4457-a793-34cb8d8cd597
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 11af9927-ac55-456c-a763-0767d3c1e79f
+            userCondition: null
+          -
+            elementCondition: null
+            heading: Form
+            type: craft\fieldlayoutelements\Heading
+            uid: 6d8774b3-2a61-4248-a104-85c244479cce
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 82ffe931-7364-4fe0-9dcf-91360700391e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9544434b-48a9-4dab-a87c-21fdf6378907
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3b585310-81d5-451e-8ed6-030062c40e94 # Form: Wildcard
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 01feb092-d86e-4573-afd7-67b0207a83c0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fe5f2c46-3f16-4e09-84d9-f82d5910993f
+        userCondition: null
+handle: inquiryForm
+hasTitleField: true
+name: 'Inquiry Form'
+section: 600bb22c-f62f-458d-ad51-432956f869ae # Program Areas
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 3
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: a4bd3122-19b2-48e7-9aae-80d76876a391 # Page Builder: Home
 fieldLayouts:
-  4c93faf3-2ac4-4742-8442-b17beee9f270:
+  02677611-6350-4693-a139-159bc651331e:
     tabs:
       -
         elementCondition: null
@@ -52,6 +52,7 @@ group: null
 groupChildBlockTypes: true
 handle: tabsProgram
 icon: null
+iconFilename: ''
 ignorePermissions: true
 maxBlocks: 1
 maxChildBlocks: 0

@@ -1,0 +1,46 @@
+/* _latest-news.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Latest News
+  See templates/_macros/03_modules/_bio.twig for markup
+------------------------------------------------------------------------ */
+
+.latest-news {
+  .latest-news__grid {
+    @include container-narrow;
+
+    .latest-news__featured-card {
+      .cardItem {
+        position: relative;
+        z-index: 4;
+      }
+    }
+
+    .latest-news__secondary-cards {
+      display: grid;
+
+      @for $i from 1 through 3 {
+        > *:nth-child(#{$i}) {
+          z-index: #{4 - $i};
+        }
+      }
+    }
+
+    @include breakpoint(md) {
+      .latest-news__secondary-cards {
+        grid-template-columns: repeat(2, 1fr); 
+      }
+    }
+    
+    @include breakpoint(xl) {
+      .latest-news__secondary-cards {
+        grid-template-columns: repeat(3, 1fr); 
+        
+        .cardItem--action {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  }
+}

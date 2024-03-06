@@ -1,26 +1,26 @@
 /* _prefooter-form.scss */
 @use "../utils/_utils" as *;
 
-.prefooterForm {
+.prefooterInquiry {
   --color-form--primary: var(--color-teal-100);
 }
 [data-theme-color="green"] {
-  .prefooterForm {
+  .prefooterInquiry {
     --color-form--primary: var(--color-program-green-100);
   }
 }
 [data-theme-color="plum"] {
-  .prefooterForm {
+  .prefooterInquiry {
     --color-form--primary: var(--color-program-plum-100);
   }
 }
 [data-theme-color="marigold"] {
-  .prefooterForm {
+  .prefooterInquiry {
     --color-form--primary: var(--color-program-marigold-100);
   }
 }
 
-.prefooterForm {
+.prefooterInquiry {
   @include container-narrow;
   padding-block: var(--base-9);
 
@@ -30,19 +30,62 @@
     @include getType('h3-axiforma');
   }
 
-  .prefooterForm__description {
+  .prefooterInquiry__description {
     max-width: 34em;
     @include getType('caption-messina');
   }
 
+  .action {
+    margin-block-start: var(--base-8);
+  }
+
   @include breakpoint(md) {
     padding-block-end: var(--base-12);
+    
+    .prefooterInquiry__description {
+      @include getType('subhead');
+    }
+
+    .action {
+      margin-block-start: var(--base-10);
+    }
   }
 
   @include breakpoint(lg) {
     h2 {
       @include getType('h2-axiforma');
     }
+  }
+
+  @include breakpoint(xl) {
+    padding-block-end: var(--base-18);
+  }
+}
+
+.prefooterForm {
+  .prefooterForm__description {
+    @include container-narrow;
+    padding-block-end: var(--base-9);
+    @include getType('body');
+    
+    p {
+      max-width: 35em;
+
+      &:not(:last-child) {
+        margin-block-end: 1em;
+      }
+
+      strong {
+        font-weight: 400;
+      }
+
+      i {
+        font-style: italic;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
     .prefooterForm__description {
       @include getType('subhead');
     }

@@ -1,0 +1,66 @@
+childBlocks:
+  - cardsManual
+  - cardsAuto
+conditions: null
+description: ''
+enabled: true
+field: a729cc2f-185f-4632-ae90-950491f54443 # Page Builder: Program Areas
+fieldLayouts:
+  6231b571-afb4-476b-b526-3ddafc2370d1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7844817c-be14-496c-9911-77721e0743a3 # Card: Simple
+            instructions: null
+            label: 'Featured Strategy'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 787bb9eb-a4fa-4dea-b1eb-55bc3a2b7e98
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1cb4612c-38cd-4b27-809d-fd543e6b94cf # Flag: Feature
+            instructions: 'Toggle to feature the first card.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41718d1e-f08c-470a-8ec4-eec8d47d1c9d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 863f5463-c410-4c19-9ef5-d257ba1721a6 # Card: Action
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 116a2015-7148-4956-998a-e6e19df9f5da
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Featured Strategy and Cards'
+        uid: 16a77f65-9fa8-48d9-baf5-c068e5bdf74b
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: featuredStrategyAndCards
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 1
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 1
+minSiblingBlocks: 0
+name: 'Featured Strategy and Cards'
+topLevel: false

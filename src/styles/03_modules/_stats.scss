@@ -1,0 +1,27 @@
+/* _bio.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Stats
+  See templates/_macros/03_modules/_bio.twig for markup
+------------------------------------------------------------------------ */
+
+.stats {
+  --color-stats--tertiary: var(--color-grey-25);
+  --color-stats--background: var(--color-teal-150);
+
+  background: var(--color-stats--background);
+  
+  .angle {
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      color: var(--color-stats--tertiary);
+    }
+  }
+
+  .cardItem--action {
+    padding-block-start: 0;
+  }
+}
