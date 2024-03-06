@@ -610,10 +610,14 @@
 
     .cardItem__secondary {
       margin-block-start: auto;
+
+      .details + .details {
+        margin-block-start: var(--base-3);
+      }
     }
 
     .cardItem__actions {
-      margin-block: var(--base-4) var(--neg-base-2);
+      margin-block: var(--base-6) var(--neg-base-2);
       display: flex;
       align-items: center;
       flex-wrap: wrap;
