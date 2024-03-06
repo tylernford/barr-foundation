@@ -384,6 +384,7 @@
     {% set programTags = {} %}
     {% set strategyTags = {} %}
 
+    {# Set Program tags #}
     {% for grant in grantList %}
         {% for programArea in grant.tagsProgramAreas %}
             {% if programArea.title in programTags %}
@@ -391,19 +392,24 @@
                 {% set programTags = programTags|merge([programArea]) %}
             {% endif %}
         {% endfor %}
+    {% endfor %}
+
+    {# Set Strategy tags #}
+    {% for grant in grantList %}
         {% for strategy in grant.tagsStrategies %}
-            {% if strategy.title in programTags %}
+            {% if strategy.title in strategyTags %}
             {% else %}
                 {% set strategyTags = strategyTags|merge([strategy]) %}
             {% endif %}
         {% endfor %}
     {% endfor %}
 
-    {% set programTags = programTags|merge(strategyTags) %}
+    {# Merge Program and Strategy tags #}
+    {% set mergedTags = programTags|merge(strategyTags) %}
 
     {% set detailTags = [] %}
-    {% for programTag in programTags %}
-        {% set tag = { 'title': programTag } %}
+    {% for mergedTag in mergedTags %}
+        {% set tag = { 'title': mergedTag } %}
         {% set detailTags = detailTags|merge([tag]) %}
     {% endfor %}
 

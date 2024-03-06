@@ -217,7 +217,6 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
-    {% set displayImage = variant == 'featured' ? true : false %}
     {% set variant = variant == 'featured' ? 'large' : variant %}
 
     {% set card     = config.grantee %}
@@ -226,20 +225,55 @@
     {% set name     = card.title %}
     {% set label    = 'label' in config|keys ? config.label : null %}
     {% set summary  = card.textDescription ?? card.textDescription %}
-    {% set location = 'Placeholder Location' %}
+    {% set location = card.textLocation %}
     {% set region   = 'Placeholder Region' %}
     {% set profile  = card.url %}
-    {% set website  = 'https://example.com' %}
+    {% set website  = card.contactWebsite %}
+
+    {# All grants associated with grantee #}
+    {% set grantList = craft.entries().section('grants').entriesOrganization(card).all() %}
+
+    {# Set tags #}
+    {% set programTags = {} %}
+    {% set strategyTags = {} %}
+
+    {# Set Program tags #}
+    {% for grant in grantList %}
+        {% for programArea in grant.tagsProgramAreas %}
+            {% if programArea.title in programTags %}
+            {% else %}
+                {% set programTags = programTags|merge([programArea]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Set Strategy tags #}
+    {% for grant in grantList %}
+        {% for strategy in grant.tagsStrategies %}
+            {% if strategy.title in strategyTags %}
+            {% else %}
+                {% set strategyTags = strategyTags|merge([strategy]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Merge Program and Strategy tags #}
+    {% set mergedTags = programTags|merge(strategyTags) %}
+
+    {% set detailTags = [] %}
+    {% for mergedTag in mergedTags %}
+        {% set tag = { 'title': mergedTag } %}
+        {% set detailTags = detailTags|merge([tag]) %}
+    {% endfor %}
+
 
     <article class="cardItem cardItem--grantee"{{ variant|length ? ' data-variant=' ~ variant }}{{ reversed == true ? ' data-is-reversed=true' }}>
         <div class="cardItem__inner">
             {# Image #}
-            {% if displayImage %}
-                {% if image %}
-                    <div class="cardItem__media">
-                        {{ images.image(image, '912', '16/9', '', false) }}
-                    </div>
-                {% endif %}
+            {% if image %}
+                <div class="cardItem__media">
+                    {{ images.image(image, '912', '16/9', '', false) }}
+                </div>
             {% endif %}
 
             {# Header #}
@@ -261,9 +295,15 @@
 
                 <div class="cardItem__secondary">
                     {# Location/Region #}
-                    {{ details.detail('location', false, location) }}
+                    {% if location|length %}
+                        {{ details.detail('location', false, location) }}
+                    {% endif %}
 
-                    {{ details.detail('region', false, region) }}
+                    {# {{ details.detail('region', false, region) }} #}
+                    {# Tags #}
+                    {% if detailTags|length %}
+                        {{ details.detail('tags', false, detailTags) }}
+                    {% endif %}
 
                     {# Actions #}
                     <div class="cardItem__actions">
@@ -284,7 +324,9 @@
                         {{ actions.action(profileActionAttributes) }}
 
                         {# Website #}
-                        {{ actions.action(websiteActionAttributes) }}
+                        {% if website|length %}
+                            {{ actions.action(websiteActionAttributes) }}
+                        {% endif %}
                     </div>
                 </div>
             </div>
