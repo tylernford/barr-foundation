@@ -33,12 +33,12 @@
   color: var(--color-body--primary);
 
   a:not([class]) {
-    color: inherit;
+    color: var(--color-body--secondary);
     transition: color var(--transition) ease-in;
 
     @media (hover: hover) {
       &:hover {
-        color: var(--color-body--secondary);
+        color: var(--color-body--primary);
         transition: color var(--transition-intermediate) ease-out;
       }
     }
@@ -72,6 +72,7 @@
     @include container-narrow;
     padding-block: var(--base-6);
     @include getType('caption-messina');
+    font-weight: 300;
 
     @include breakpoint(md) {
       @include getType('body');
@@ -91,7 +92,8 @@
 
     p,
     ul,
-    ol {
+    ol,
+    blockquote {
       &:not(:last-child) {
         margin-block-end: 1em;
       }
@@ -105,6 +107,16 @@
     ol {
       list-style-type: decimal;
       margin-inline: 1em;
+    }
+
+    h3 + blockquote {
+      margin-block-start: 1em;
+    }
+
+    blockquote {
+      margin-inline-start: var(--base-2);
+      padding: var(--base) 0 var(--base) var(--base-3);
+      border-left: 2px solid var(--color-body--secondary);
     }
 
     strong {
@@ -197,6 +209,12 @@
   
     .blockBody__paragraph {
       padding-block: var(--base-9);
+
+      blockquote {
+        margin-inline-start: var(--base-4);
+        padding-inline-start: var(--base-5);
+        border-left: 3px solid var(--color-body--secondary);
+      }
     }
 
     .blockBody__action {

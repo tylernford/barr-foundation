@@ -1,0 +1,14 @@
+/* _blog-post.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Blog Post
+------------------------------------------------------------------------ */
+
+.blog-post {
+  padding-block: var(--base-9);
+
+  @include breakpoint(md) {
+    padding-block: var(--base-12) var(--base-18);
+  }
+}
