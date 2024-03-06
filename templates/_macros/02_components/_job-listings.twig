@@ -9,18 +9,18 @@
             {# Title and description #}
             <div class="listing__primary">
                 {# Title #}
-                <h3 class="listing__title">Job title lorem ipsum dolor</h3>
+                <h3 class="listing__title">Program Associate</h3>
 
                 {# Description #}
-                <p class="listing__description">Team Lorem Ipsum</p>
+                <p class="listing__description">Arts & Creativity</p>
             </div>
 
             {# Secondary #}
             <div class="listing__secondary">
                 {# Type and location #}
                 <div class="listing__details">
-                    {{ details.detail('job-title', false, 'Part Time/Full Time') }}
-                    {{ details.detail('location', false, 'Location/Remote', 'globe') }}
+                    {{ details.detail('job-title', false, 'Full Time') }}
+                    {{ details.detail('location', false, 'Boston, MA', 'globe') }}
                 </div>
 
                 {# Apply #}
@@ -48,23 +48,23 @@
             {# Title and description #}
             <div class="listing__primary">
                 {# Title #}
-                <h3 class="listing__title">Job title lorem ipsum dolor</h3>
+                <h3 class="listing__title">Administrative Assistant</h3>
 
                 {# Description #}
-                <p class="listing__description">Team Lorem Ipsum</p>
+                {# <p class="listing__description">Team Lorem Ipsum</p> #}
             </div>
 
             <div class="listing__secondary">
                 <div class="listing__details">
-                    {{ details.detail('job-title', false, 'Part Time/Full Time') }}
-                    {{ details.detail('location', false, 'Location/Remote', 'globe') }}
+                    {{ details.detail('job-title', false, 'Full Time') }}
+                    {{ details.detail('location', false, 'Boston, MA', 'globe') }}
                 </div>
 
                 <div class="listing__action">
                     {% set actionAttributes = {
                         type: 'button', isReversed: false,
                         icon: 'arrow', iconOnly: true,
-                        text: 'Apply', url: 'https://example.com',
+                        text: 'Apply', url: 'https://boards.greenhouse.io/barrfoundation',
                         linkType: 'url', target: '_blank'
                     } %}
                     {{ actions.action(actionAttributes) }}
@@ -72,7 +72,7 @@
                     {% set actionAttributes = {
                         type: 'button', isReversed: false,
                         icon: 'arrow', iconOnly: false,
-                        text: 'Apply', url: 'https://example.com',
+                        text: 'Apply', url: 'https://boards.greenhouse.io/barrfoundation',
                         linkType: 'url', target: '_blank'
                     } %}
                     {{ actions.action(actionAttributes) }}
