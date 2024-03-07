@@ -39,11 +39,34 @@
 
   .team-widget__actions {
     @include container;
-    display: flex;
+    display: none;
     justify-content: center;
+    align-items: center;
     position: relative;
-  }
 
+    &:last-child {
+      display: flex;
+    }
+
+    .action {
+      &:first-child {
+        margin-inline-end: var(--base-6);
+      }
+
+      &:last-child {
+        margin-inline-start: var(--base-6);
+      }
+
+      &.action--link {
+        color: var(--color-grey-25-65);
+        background-color: transparent;
+  
+        &::after {
+          background-color: var(--color-grey-25-65);
+        }
+      }
+    }
+  }
   .cardRow {
     padding-block-end: var(--base-9);
 
