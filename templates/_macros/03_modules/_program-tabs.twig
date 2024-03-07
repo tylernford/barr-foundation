@@ -6,53 +6,72 @@
 ======================================= #}
 
 {% macro programTabs(module) %}
-    {% import '_macros/02_components/_assets' as assets %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_angles' as angles %}
+    {% import '_macros/01_elements/_image' as images %}
 
-    <section class="blockTabs">
-        <div class="blockTabs-intro">
-            <h1 class="blockTabs-preheading">{{  module.textPreheading }}</h1>
-            <div class="blockTabs-support">{{  module.textRichBasic }}</div>
+    <section class="blockTabs" data-theme-color="teal">
+        <div class="blockTabs__inner">
+            <div class="blockTabs__intro">
+                <h1 class="blockTabs__preheading">{{  module.textPreheading }}</h1>
+                <div class="blockTabs__support">{{  module.textRichBasic }}</div>
+            </div>
+
+            {% set programs = module.tabsProgram %}
+            <div class="blockTabs__content">
+                {% for p in programs %}
+                    {% set programEntry = p.entryProgramArea.one() %}
+                    {% set programTitle = programEntry.title %}
+                    {% set programLink = programEntry.uri %}
+                    {% set isPrimary = p.flagPrimary %}
+                    {% set programImg = p.assetImage.one() %}
+                    {% set programSupport = p.textSupporting %}
+                    {% set programNews = p.entryNews.one() ?? null %}
+
+                    {% set themeColor =
+                        programEntry.title == 'Arts & Creativity' ? 'green' :
+                        programEntry.ancestors.one == 'Arts & Creativity' ? 'green' :
+                        programEntry.title == 'Climate' ? 'plum' :
+                        programEntry.ancestors.one == 'Climate' ? 'plum' :
+                        programEntry.title == 'Education' ? 'marigold' :
+                        programEntry.ancestors.one == 'Education' ? 'marigold' :
+                        'teal'
+                    %}
+                    
+                    <div class="blockTabs__item {{ isPrimary ? 'blockTabs__item--primary' : 'blockTabs__item--secondary' }}" data-theme-color={{ themeColor }}>
+                        <h2 class="blockTabs__label {{ isPrimary ? 'blockTabs__label--primary' : 'blockTabs__label--secondary' }}">{{ programTitle }}
+                        </h2>
+                                
+                        <div class="blockTabs__card">
+                            {{ images.image(programImg, '912', '2/1', '', false) }}
+
+                            <div class="card__support">{{ programSupport }}</div>
+                            
+                            {% set actionAttributes = {
+                                type: 'button', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: 'Learn More', url: programLink,
+                                linkType: 'entry', target: ''
+                            } %}
+                            {{ actions.action(actionAttributes) }}
+
+                            {% if programNews %}
+                                <div class="card__news">
+                                    <h3 class="news__preheading">Latest in {{ programTitle }}</h3>
+                                    <div>
+                                        <a class="news__heading" href="{{ programNews.url }}">{{ programNews.title }}</a>
+                                        <time class="news__date" datetime="{{ programNews.dateOnly|date|format('Y-mm-dd') }}">{{ programNews.dateOnly|date|format('M dd, Y') }}</time>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
 
-        {% set programs = module.tabsProgram %}
-        <div class="blockTabs-content">
-            {% for p in programs %}
-                {% set programEntry = p.entryProgramArea.one() %}
-                {% set programTitle = programEntry.title %}
-                {% set programLink = programEntry.uri %}
-                {% set isPrimary = p.flagPrimary %}
-                {% set programImg = p.assetImage|length ? p.assetImage.one() ?? null %}
-                {% set programSupport = p.textSupporting %}
-                {% set programNews = p.entryNews.one() ?? null %}
-                
-                <div class="blockTabs-item">
-                    <h2 class="blockTabs-label {{ isPrimary ? 'blockTabs-label--primary' : 'blockTabs-label--secondary' }}">{{ programTitle }}</h2>
-                            
-                    <div class="blockTabs-card">
-                        {% if programImg %}
-                            {% set obj = {
-                                'handle': 'mediaImage',
-                                'hook': 'blockTabs' 
-                            }%}
-                            {{ assets.transformedImage(programImg,obj) }}
-                        {% endif %}
-
-                        <div class="blockTabs-support">{{ programSupport }}</div>
-                        
-                        <a class="blockTabs-button" href="{{ programLink }}" title="">Learn More</a>
-
-                        {% if programNews %}
-                            <div class="blockTabs-news">
-                                <h3 class="blockTabs-preheading">Latest in {{ programTitle }}</h3>
-                                <div>
-                                    <h4 class="blockTabs-news-heading">{{ programNews.title }}</h4>
-                                    <time class="blockTabs-news-date" datetime="{{ programNews.dateOnly|date|format('Y-mm-dd') }}">{{ programNews.dateOnly|date|format('M dd, Y') }}</time>
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-            {% endfor %}
+        <div class="angle">
+            {{ angles.top() }}
         </div>
     </section>
 {% endmacro %}
