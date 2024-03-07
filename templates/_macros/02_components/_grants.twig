@@ -343,7 +343,7 @@ sprig.action('navigate', ({ target }) => {
 {% set pageInfo = sprig.paginate(granteeList, page) %}
     {% set pageEntries = pageInfo.pageResults %}
 
-{# {% for grantee in pageEntries %}
+{% for grantee in pageEntries %}
     <h2>{{ grantee.title }}</h2>
     {% for fieldHandle, fieldValue in grantee %}
         {% if fieldValue is instance of('DateTime') %}
@@ -352,7 +352,7 @@ sprig.action('navigate', ({ target }) => {
             <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
         {% endif %}
     {% endfor %}
-{% endfor %}  #}
+{% endfor %} 
 
 
 
@@ -368,8 +368,10 @@ sprig.action('navigate', ({ target }) => {
                               {% set tagValue = tag %}
                     {% endfor %}
                     <article class="bf grantee-card" style="--var-grantee-color:{% if tagValue == "Special Initiatives" %}#E68922{% elseif tagValue == "Sector Effectiveness" %}#008F7F{% elseif tagValue == "Arts & Creativity" %}#008F7F{% elseif tagValue == "Education" %}#E68922{% elseif tagValue == "Climate" %}#881857{% endif %}">
-                      <h3>{% if grants.entriesOrganization[0] %}
-                      {{ grants.entriesOrganization[0] }}{% endif %}</h3>
+
+                      <h3>{{ grants.title }}</h3>
+                      {# <h3>{% if grants.entriesOrganization[0] %}
+                      {{ grants.entriesOrganization[0] }}{% endif %}</h3> #}
                       <div class="grantee-card__cnt">{{ grants.textDescription }}</div>
                       <div class="grantee-card__table"> 
                         <div class="grantee-card__row"> 
