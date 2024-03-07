@@ -53,7 +53,7 @@ sprig.action('navigate', ({ target }) => {
             <div class="filter__top"> </div>
             <h3>Subsection Name Dolor Sit Amet</h3>
             <div class="filter__inputs"> 
-              <button s-disable class="filter__button modal__open"> <span>Add / Modify Filters  </span><span>(0 applied)</span></button>
+              <button sprig-ignore class="filter__button modal__open"> <span>Add / Modify Filters  </span><span>(0 applied)</span></button>
               <div class="bf accordion">
                 <div class="accordion__item">
                   <div class="accordion__title">
@@ -87,7 +87,7 @@ sprig.action('navigate', ({ target }) => {
                   </div>
                   <div class="field-error">Please fill out this field.  </div>
                 </div>
-                <dialog s-disable class="modal" style="--modal-bg:#262053">
+                <dialog  class="modal" style="--modal-bg:#262053">
                   <div class="modal__header">
                     <h3>Add/Modify Filters</h3>
                     <p> <i>Select all that apply</i></p>
@@ -412,18 +412,34 @@ sprig.action('navigate', ({ target }) => {
                           </ul>
                         </div>
                       </div>
-                      {% set organizationData = grants.entriesOrganization.contactWebsite %}
-                        {# {% set organizationWebsite = organizationData | json_decode %}
-                          {% if organizationWebsite %}
-                            {% set linkValue = organizationWebsite[0]['linkValue'] %}
-                          {% endif %} #}
+                      {% set linkValue = "/#" %}
+                      {% if grants.entriesOrganization.count() > 0 %}
+                        {% set organizationData = grants.entriesOrganization[0].contactWebsite %}
+
+                        {% if "linkValue" in organizationData %}
+
+                              {% set organizationWebsite = organizationData | json_decode %} 
+                                {% if organizationWebsite %}
+                                  {% set linkValue = organizationWebsite[0]['linkValue'] %}
+                                {% endif %} 
+                        {% else %}
+                              {% set linkValue = organizationData %}
+                        {% endif %}
+
                         
+                          {# {% set organizationWebsite = organizationData | json_decode %}  #}
+                          {# {% if organizationWebsite %}
+                            {% set linkValue = organizationWebsite[0]['linkValue'] %}
+                          {% endif %}  #}
+                      {% endif %}
                       
-                      <div class="grantee-card__footer"> <a href="/{{ grants.entriesOrganization.uri }}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
-                      <a target="_blank" href="{{ grants.entriesOrganization.contactWebsite }}" title="Go to {{ grants.entriesOrganization.contactWebsite }}"> <span>website</span><span class="grantee-card__footer-logo"> 
+                      <div class="grantee-card__footer"> <a href="/{% if grants.entriesOrganization.count() > 0 %}{{ grants.entriesOrganization[0].uri }}{% endif %}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
+                      {% if grants.entriesOrganization.count() > 0 %}
+                      <a target="_blank" href="{% if "https://" in linkValue %}{{ linkValue }}{% else %}https://{{ linkValue }}{% endif %}" title="Go to {{ linkValue }}"> <span>website</span><span class="grantee-card__footer-logo"> 
                             <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd" d="M19 1L8.99995 2L12.7928 5.79289L6.29285 12.2929L7.70706 13.7071L14.2071 7.20711L18 11L19 1ZM0 18V8V6H2H7V8H2V18H12V13H14V18V20H12H2H0V18Z"></path>
                             </svg></span></a>
+                      {% endif %}
                         </div>
                     </article>
               {% endfor %}
