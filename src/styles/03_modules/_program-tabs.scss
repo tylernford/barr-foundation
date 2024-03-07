@@ -1,0 +1,330 @@
+/* _program-tabs.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Program Tabs
+  See templates/_macros/03_modules/_program-tabs.twig for markup
+------------------------------------------------------------------------ */
+
+.blockTabs {
+  --color-tabs--primary: var(--color-teal-25);
+  --color-tabs--secondary: var(--color-grey-25);
+  
+  // --color-tabs--tertiary: var(--color-grey-50);
+  --color-tabs--background: var(--color-teal-150);
+  --color-tabs--highlight: var(--color-teal-100);
+  // --color-tabs--hover: var(--color-navy-100);
+  // --color-tabs--hover-background: var(--color-citrus-100);
+
+  &[data-theme-color="green"] {
+    --color-tabs--primary: var(--color-grey-25);
+    --color-tabs--background: var(--color-program-green-150);
+    --color-tabs--highlight: var(--color-program-green-100);
+  }
+  
+  &[data-theme-color="plum"] {
+    --color-tabs--primary: var(--color-grey-25);
+    --color-tabs--background: var(--color-program-plum-100);
+    --color-tabs--highlight: var(--color-program-plum-100);
+  }
+  &[data-theme-color="marigold"] {
+    --color-tabs--primary: var(--color-navy-100);
+    --color-tabs--background: var(--color-program-marigold-100);
+    --color-tabs--highlight: var(--color-program-marigold-100);
+  }
+}
+
+.blockTabs {
+  --transition-tabs--in: all var(--transition-intermediate) ease-out;
+  --transition-tabs--out: all var(--transition) ease-in;
+
+  overflow: hidden;
+
+  .angle {
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      color: var(--color-tabs--background);
+      transform: rotateY(180deg);
+    }
+  }
+
+  .blockTabs__inner {
+    @include container;
+    padding-block-start: var(--base-32);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    position: relative;
+
+    &::before {
+      content: '';
+      inset: 0 auto 0 -100vw;
+      width: 400vw;
+      position: absolute;
+      background: var(--color-tabs--background);
+      z-index: -1;
+    }
+
+    @include breakpoint(lg) {
+      min-height: 850px; 
+    }
+  }
+
+  .blockTabs__intro {
+    padding-inline-end: 56px;
+    height: 408px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-tabs--secondary);
+    text-align: center;
+  }
+
+  .blockTabs__preheading {
+    margin-block-end: var(--base-4);
+    @include getType('label');
+  }
+
+  .blockTabs__support {
+    @include getType('h3-messina');
+  }
+
+  .blockTabs__content {
+    border-left: 1px solid var(--color-tabs--primary);
+  }
+
+  .blockTabs__item--primary + .blockTabs__item--secondary {
+    margin-block-start: var(--base-16);
+  }
+  
+  .blockTabs__label {
+    margin-block-end: var(--base-4);
+    display: inline-block;
+    color: var(--color-tabs--primary);
+    position: relative;
+
+    &::before {
+      content: '';
+      inset: -6px auto -2px -55px;
+      width: var(--base-5);
+      position: absolute;
+      background-color: var(--color-grey-25);
+      opacity: 0;
+      transition: var(--transition-tabs--out);
+    }
+
+    &.blockTabs__label--primary {
+      @include getType('h3-axiforma');
+    
+      &._is-hidden {
+        @include visuallyHide;
+      }
+
+      &::before {
+        content: '';
+        inset: -10px auto -6px -55px;
+      }
+    }
+
+    &.blockTabs__label--secondary {
+      @include getType('h5-axiforma');
+      font-weight: 400;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .blockTabs__card { 
+    // @include visuallyHide;
+    // visibility: hidden;
+    opacity: 0;
+    inset: 118px auto auto calc(var(--base-12) + 2px);
+    padding-block-end: var(--base-12);
+    padding-inline: var(--base-12);
+    width: calc(50% - var(--base-12));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: var(--color-grey-25);
+    text-align: center;
+    transition: opacity var(--transition) ease-in;
+    pointer-events: none;
+
+    .image {
+      margin-block: var(--neg-base-5) var(--base-7);
+      width: 100%;
+      background-color: salmon;
+      aspect-ratio: 2 / 1;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-deep--light);
+  
+      img {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+
+    .card__support {
+      max-width: 20em;
+      color: var(--color-navy-100);
+      @include getType('h3-messina');
+    }
+
+    .action {
+      margin-top: var(--base-4);
+    }
+
+    .card__news {
+      margin-block-start: var(--base-11);
+
+      .news__preheading {
+        margin-block-end: var(--base);
+        color: var(--color-grey-150);
+        @include getType('label');
+      }
+
+      .news__heading {
+        margin-block-end: var(--base-2);
+        display: block;
+        color: var(--color-tabs--highlight);
+        @include getType('h4-axiforma');
+        text-decoration-color: transparent;
+        transition: var(--transition-tabs--out);
+        
+        @media (hover: hover) {
+          &:hover {
+            text-decoration-color: inherit;
+            transition: var(--transition-tabs--in);
+          }
+        }
+      }
+
+      .news__date {
+        color: var(--color-grey-150);
+        @include getType('detail-axiforma');
+      }
+    }
+  }
+
+  .blockTabs__item {
+    padding-inline-start: 56px;
+
+    &:hover {
+      .blockTabs__label {
+        &::before {
+          opacity: 1;
+          transition: var(--transition-tabs--in);
+        }
+      }
+
+      .blockTabs__card {
+        // @include visuallyShow;
+        // visibility: visible;
+        opacity: 1;
+        transition: opacity var(--transition-intermediate) ease-out;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  @include breakpoint(xl) {
+    .blockTabs__card { 
+      inset: 118px auto auto calc(var(--base-18) + 2px);
+      width: calc(50% - var(--base-18));
+    }
+  }
+  @include breakpoint(xxl) {
+    .blockTabs__intro {
+      height: 450px;
+    }
+
+    .blockTabs__support {
+      font-size: 44px;
+    }
+
+    .blockTabs__label {
+      &.blockTabs__label--primary {
+        @include getType('h2-axiforma');
+      }
+      &.blockTabs__label--secondary {
+        @include getType('h4-axiforma');
+      }
+    }
+  }
+
+
+
+  .blockTabs__label {
+    transition: color var(--transition) ease-in;
+  }
+  // .angle {
+  //   svg {
+  //     // color: var(--color-tabs--background);
+  //     transition: color var(--transition) ease-in;
+  //   }
+  // }
+
+  // .blockTabs__inner {
+  //   &::before {
+  //     // background-color: var(--color-tabs--background);
+  //     transition: background-color var(--transition) ease-in;
+  //   }
+  // }
+}
+
+
+.blockOpener[data-theme-color="green"] {
+  .blockOpener__primary {
+    .primary__graphic {
+      background-color: var(--color-program-green-150);
+      // transition: background-color var(--transition) ease-in;
+
+      &::after {
+        background: linear-gradient(to top right, var(--color-program-green-150) 0%, var(--color-program-green-150) 50%, transparent 50%, transparent 100%);
+        // transition: background var(--transition) ease-in;
+      }
+    }
+  }
+}
+
+.blockOpener[data-theme-color="plum"] {
+  .blockOpener__primary {
+    .primary__graphic {
+      background-color: var(--color-program-plum-100);
+      // transition: background-color var(--transition) ease-in;
+
+      &::after {
+        background: linear-gradient(to top right, var(--color-program-plum-100) 0%, var(--color-program-plum-100) 50%, transparent 50%, transparent 100%);
+        // transition: background var(--transition) ease-in;
+      }
+    }
+  }
+}
+
+.blockOpener[data-theme-color="marigold"] {
+  .blockOpener__primary {
+    .primary__graphic {
+      background-color: var(--color-program-marigold-100);
+      // transition: background-color var(--transition) ease-in;
+
+      &::after {
+        background: linear-gradient(to top right, var(--color-program-marigold-100) 0%, var(--color-program-marigold-100) 50%, transparent 50%, transparent 100%);
+        // transition: background var(--transition) ease-in;
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ import './components/accordion';
 import './components/carousel';
 import './components/footerForm';
 import './components/navigation';
+import './components/programTabs';
 import './components/video';
 
 // Component Imports
