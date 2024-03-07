@@ -4,7 +4,7 @@
   Interior: Grantee Database
 ========================================== #}
 
-{% import '_macros/02_components/_card.twig' as cards %}
+{# {% import '_macros/02_components/_card.t wig' as cards %} #}
 
 {# Uncomment as needed
 {% import '_macros/02_components/_assets' as assets %}
@@ -19,25 +19,26 @@
     1. This might need to be adjusted depending on biz reqs 
     2. Can a grantee receive multiple grants per year?
 #}
-{% set awardYear = "now"|date("Y") - 1 %}
+{# {% set awardYear = "now"|date("Y") - 1 %}
 
-{% set layout = layout ?? 'grid' %} {# grid or list #}
+{% set layout = layout ?? 'grid' %} grid or list #}
 
 {# TODO: enable filtering, grid/list toggle view, keyword search, pagination #}
-{% set granteeList = craft.entries().section('grantees').all() %}
+
+{# {% set granteeList = craft.entries().section('grantees').limit(12) %}
+{% paginate granteeList as pageInfo, pageEntries %} #}
 
 {# NOTE: the following elements will likely need to consolidated into a _sprig template #}
-<section>
+{# <section> #}
     {# FILTERS GO HERE #}
-    <div class="blockGeneric">
-    </div>
-
+    {{ sprig('_macros/02_components/_grants') }}
+    {# <div class="blockGeneric"></div> #}
     {# GRANTEE CARDS: List or Grid View #}
-    <div class="blockFeed blockFeed--triplet _is-{{ layout }}">
-    {% if granteeList|length %}
-    {% for grantee in granteeList %}
+    {# <div class="blockFeed blockFeed--triplet _is-{{ layout }}">
+    {% if pageEntries|length %}
+    {% for grantee in pageEntries %} #}
         {# Retrieve current award year's grant associated with grantee #}
-        {% set grant = craft.entries({
+        {# {% set grant = craft.entries({
             section: "grants",
             dateOnly: ["and", ">= #{awardYear}"],
             entriesOrganization: grantee
@@ -54,6 +55,57 @@
         {{ cards.grant(config) }}
 
     {% endfor %}
+    {% set end = pageInfo.totalPages %}
+    <a href="{{ pageInfo.firstUrl }}">First Page</a>
+    {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}">Previous Page</a>{% endif %}
+
+    {% if pageInfo.currentPage > 4 %}
+        {% for page, url in pageInfo.getRangeUrls(1 , 3) %}
+            {% if page == pageInfo.currentPage %}
+                <span class="current">{{ pageInfo.currentPage }}</span>
+            {% else %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% endif %}   
+        {% endfor %}
+    {% else %}
+        {% for page, url in pageInfo.getRangeUrls(1 , 5) %}
+            {% if page == pageInfo.currentPage %}
+                <span class="current">{{ pageInfo.currentPage }}</span>
+            {% else %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% endif %}   
+        {% endfor %}
     {% endif %}
-    </div>
-</section>
+    
+    {% if pageInfo.currentPage > 4 and pageInfo.currentPage < end - 3 %}
+    {% if pageInfo.currentPage != 5 %}<span> . . . </span>{% endif %}
+    <a href="{{ pageInfo.prevUrl }}">{{ pageInfo.currentPage - 1 }}</a>
+    <span class="current">{{ pageInfo.currentPage }}</span>
+    <a href="{{ pageInfo.nextUrl }}">{{ pageInfo.currentPage + 1 }}</a>
+    {% if pageInfo.currentPage != end - 4 %}<span> . . . </span>{% endif %}
+    {% else %}
+    <span> . . . . . . </span>
+    {% endif %}
+    {% if pageInfo.currentPage < end - 3 %}
+        {% for page, url in pageInfo.getRangeUrls(end - 2 , end) %}
+            {% if page == pageInfo.currentPage %}
+                <span class="current">{{ pageInfo.currentPage }}</span>
+            {% else %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% endif %}   
+        {% endfor %}
+    {% else %}
+        {% for page, url in pageInfo.getRangeUrls(end - 5 , end) %}
+            {% if page == pageInfo.currentPage %}
+                <span class="current">{{ pageInfo.currentPage }}</span>
+            {% else %}
+                <a href="{{ url }}">{{ page }}</a>
+            {% endif %}   
+        {% endfor %}
+    {% endif %}
+
+    {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}">Next Page</a>{% endif %}
+    <a href="{{ pageInfo.lastUrl }}">Last Page</a>
+    {% endif %}
+    </div> #}
+{# </section> #}
