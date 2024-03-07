@@ -349,6 +349,7 @@ sprig.action('navigate', ({ target }) => {
 
     {% endfor %}
     {% set end = pageInfo.totalPages %}
+    <div class="pagination-section">
     <a
             sprig
             s-val:page="1"
@@ -439,4 +440,5 @@ sprig.action('navigate', ({ target }) => {
             Last Page
           </a>
     {% endif %}
+  </div>
 </div>
