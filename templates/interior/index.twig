@@ -56,6 +56,11 @@ Interior template
             {% include '_partials/_builder-people.twig' with {'builder': builder} %}
         {% else %}
             {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+            {% if entry.title == "Inquiry Form" %}
+            <div class="container-narrow" style="padding-block-end:var(--base-18)">
+                <img src="{{ siteUrl }}build/images/ac-inquiry-form.png">
+            </div>
+            {% endif %}
         {% endif %}
     {% elseif isDatabase %}
         {# Grantee DB #}
