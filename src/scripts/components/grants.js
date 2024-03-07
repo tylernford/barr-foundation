@@ -46,7 +46,7 @@ var accordionButtons = $(".accordion .accordion__title button");
 function accordionToggle() {
   $(".accordion .accordion__title button").on("click", function (e) {
     $control = $(this);
-
+    console.log("accordian clicked");
     accordionContent = $control.attr("aria-controls");
     checkOthers($control[0]);
 

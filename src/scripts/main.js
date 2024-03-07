@@ -7,7 +7,7 @@ import './components/audio';
 import './components/accordion';
 import './components/carousel';
 import './components/footerForm';
-import './components/grants';
+// import './components/grants';
 import './components/navigation';
 import './components/video';
 
