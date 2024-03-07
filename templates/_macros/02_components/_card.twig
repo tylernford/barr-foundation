@@ -212,6 +212,7 @@
 
 
 {% macro grantee(config) %}
+    {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -232,40 +233,6 @@
 
     {# All grants associated with grantee #}
     {% set grantList = craft.entries().section('grants').entriesOrganization(card).all() %}
-
-    {# Set tags #}
-    {% set programTags = {} %}
-    {% set strategyTags = {} %}
-
-    {# Set Program tags #}
-    {% for grant in grantList %}
-        {% for programArea in grant.tagsProgramAreas %}
-            {% if programArea.title in programTags %}
-            {% else %}
-                {% set programTags = programTags|merge([programArea]) %}
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-
-    {# Set Strategy tags #}
-    {% for grant in grantList %}
-        {% for strategy in grant.tagsStrategies %}
-            {% if strategy.title in strategyTags %}
-            {% else %}
-                {% set strategyTags = strategyTags|merge([strategy]) %}
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-
-    {# Merge Program and Strategy tags #}
-    {% set mergedTags = programTags|merge(strategyTags) %}
-
-    {% set detailTags = [] %}
-    {% for mergedTag in mergedTags %}
-        {% set tag = { 'title': mergedTag } %}
-        {% set detailTags = detailTags|merge([tag]) %}
-    {% endfor %}
-
 
     <article class="cardItem cardItem--grantee"{{ variant|length ? ' data-variant=' ~ variant }}{{ reversed == true ? ' data-is-reversed=true' }}>
         <div class="cardItem__inner">
@@ -299,11 +266,8 @@
                         {{ details.detail('location', false, location) }}
                     {% endif %}
 
-                    {# {{ details.detail('region', false, region) }} #}
                     {# Tags #}
-                    {% if detailTags|length %}
-                        {{ details.detail('tags', false, detailTags) }}
-                    {% endif %}
+                    {{ tagLogic.tags(grantList)}}
 
                     {# Actions #}
                     <div class="cardItem__actions">
@@ -409,6 +373,7 @@
 
 {# News #}
 {% macro news(card) %}
+    {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -425,13 +390,7 @@
     {% set authors = card.textName %}
 
     {# Set tags #}
-    {% set tagsList = card.tagsEntry %}
-    {% set tags = [] %}
-    {% for tagsItem in tagsList %}
-        {% set tags = tags|merge([
-            { 'title': tagsItem, 'url': tagsItem.url }
-        ]) %}
-    {% endfor %}
+    {% set tagsList = [card] %}
 
     {# Set summary #}
     {% set summary = card.textDescription %}
@@ -484,9 +443,9 @@
                 {# Actions #}
                 <div class="cardItem__actions">
                     {# Tags #}
-                    {% if tags|length %}
+                    {% if tagsList|length %}
                         <div class="cardItem__tags">
-                            {{ details.detail('tags', false, tags) }}
+                            {{ tagLogic.tags(tagsList)}}
                         </div>
                     {% endif %}
 
@@ -512,6 +471,7 @@
 
 {# Post #}
 {% macro post(post) %}
+    {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -532,13 +492,7 @@
     {% set authorDetails = [] %}
 
     {# Set tags #}
-    {% set tagsList = post.tagsEntry %}
-    {% set tags = [] %}
-    {% for tagsItem in tagsList %}
-        {% set tags = tags|merge([
-            { 'title': tagsItem, 'url': tagsItem.url }
-        ]) %}
-    {% endfor %}
+    {% set tagsList = [post] %}
 
     {# Set summary #}
     {% set summary = post.textDescription %}
@@ -595,9 +549,9 @@
                 {# Actions #}
                 <div class="cardItem__actions">
                     {# Tags #}
-                    {% if tags|length %}
+                    {% if tagsList|length %}
                         <div class="cardItem__tags">
-                            {{ details.detail('tags', false, tags) }}
+                            {{ tagLogic.tags(tagsList)}}
                         </div>
                     {% endif %}
 

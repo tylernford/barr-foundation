@@ -188,6 +188,7 @@
 {% endmacro %}
 
 {% macro post(entry) %}
+    {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -213,13 +214,7 @@
     {% set authorDetails = [] %}
 
     {# Set tags #}
-    {% set tagsList = post.tagsEntry %}
-    {% set tags = [] %}
-    {% for tagsItem in tagsList %}
-        {% set tags = tags|merge([
-            { 'title': tagsItem, 'url': tagsItem.url }
-        ]) %}
-    {% endfor %}
+    {% set tagsList = [post] %}
 
     {# Set image #}
     {% set image = post.assetImage.one %}
@@ -255,9 +250,9 @@
             {% endif %}
 
             {# Tags #}
-            {% if tags|length %}
+            {% if tagsList|length %}
                 <div class="primary__tags">
-                    {{ details.detail('tags', false, tags) }}
+                    {{ tagLogic.tags(tagsList)}}
                 </div>
             {% endif %}
         </div>
@@ -362,6 +357,7 @@
 
 
 {% macro grantee(entry) %}
+    {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
@@ -384,39 +380,6 @@
 
     {# All grants associated with grantee #}
     {% set grantList = craft.entries().section('grants').entriesOrganization(entry).all() %}
-
-    {# Set tags #}
-    {% set programTags = {} %}
-    {% set strategyTags = {} %}
-
-    {# Set Program tags #}
-    {% for grant in grantList %}
-        {% for programArea in grant.tagsProgramAreas %}
-            {% if programArea.title in programTags %}
-            {% else %}
-                {% set programTags = programTags|merge([programArea]) %}
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-
-    {# Set Strategy tags #}
-    {% for grant in grantList %}
-        {% for strategy in grant.tagsStrategies %}
-            {% if strategy.title in strategyTags %}
-            {% else %}
-                {% set strategyTags = strategyTags|merge([strategy]) %}
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-
-    {# Merge Program and Strategy tags #}
-    {% set mergedTags = programTags|merge(strategyTags) %}
-
-    {% set detailTags = [] %}
-    {% for mergedTag in mergedTags %}
-        {% set tag = { 'title': mergedTag } %}
-        {% set detailTags = detailTags|merge([tag]) %}
-    {% endfor %}
 
     {# Set location #}
     {% set location = entry.textLocation %}
@@ -450,9 +413,7 @@
                         {% endif %}
 
                         {# Tags #}
-                        {% if detailTags|length %}
-                            {{ details.detail('tags', false, detailTags) }}
-                        {% endif %}
+                        {{ tagLogic.tags(grantList)}}
                     </div>
 
                     {% if website|length %}
