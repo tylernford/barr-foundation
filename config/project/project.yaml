@@ -1,4 +1,4 @@
-dateModified: 1709764271
+dateModified: 1709779853
 elementSources:
   craft\elements\Asset:
     -
@@ -172,9 +172,12 @@ elementSources:
       key: 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
       tableAttributes:
         - link
-        - section
         - slug
+        - 'field:b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400' # Entries: Team
+        - 'field:25949bb9-af67-45e6-9adb-fc8c568dba48' # Date: Date Only
         - postDate
+        - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
+        - 'field:f291a098-6829-4193-9d10-5757e239bef3' # Tags: Strategies
       type: native
     -
       defaultSort:
