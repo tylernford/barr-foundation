@@ -1,7 +1,15 @@
 {% import '_macros/01_elements/_actions' as actions %}
 {% import '_macros/02_components/_card' as cards %}
 
-{% set teamMembers = craft.entries.section('directory').orderBy('RAND()').limit(3) %}
+{% set personType = craft.entries().section('personType' ) %}
+{% set memberFilter = '' %}
+{% for personType in personType %}
+  {% if personType == 'Staff' %}
+    {% set memberFilter = personType %}
+  {% endif %}
+{% endfor %}
+
+{% set teamMembers = craft.entries().section('directory').relatedTo(memberFilter).orderBy('RAND()').limit(3) %}
 
 {% if teamMembers %}
   <div class="cardRow" data-columns="3" id="card-test">
