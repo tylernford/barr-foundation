@@ -1,0 +1,45 @@
+{# =======================================
+  Module: Team Widget
+======================================= #}
+
+{% macro widget() %}
+    {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_angles' as angles %}
+    {% import '_macros/01_elements/_section-title' as sectionTitles %}
+    {% import '_macros/02_components/_card' as cards %}
+
+    {% set teamMembers = craft.entries.section('directory').orderBy('RAND()').limit(3) %}
+
+    <section class="team-widget">
+        {% set sectionTitleAttributes = {
+            level: 'h2',
+            title: 'Our Team',
+            variant: '', border: false
+        } %}
+
+        {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+
+        <div class="team-widget__inner">
+            <div class="cardRow" data-columns="3">
+                {% for member in teamMembers %}
+                    {{ cards.bio(member) }}
+                {% endfor %}
+            </div>
+
+            <div class="team-widget__actions">
+                {% set actionAttributes = {
+                    type: 'button', isReversed: true,
+                    icon: 'linkType', iconOnly: false,
+                    text: 'View Staff Directory', url: siteUrl ~ '/about-us/people',
+                    linkType: 'entry', target: ''
+                } %}
+
+                {{ actions.action(actionAttributes) }}
+            </div>
+            
+            <div class="angle">
+                {{ angles.bottom() }}
+            </div>
+        </div>
+    </section>
+{% endmacro %}

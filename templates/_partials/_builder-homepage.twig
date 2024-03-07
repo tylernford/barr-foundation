@@ -3,6 +3,7 @@
 {% import '_macros/03_modules/_latest-news' as latestNews %}
 {% import '_macros/03_modules/_stats' as stats %}
 {% import '_macros/03_modules/_program-tabs' as programTabs %}
+{% import '_macros/03_modules/_team-widget' as teamWidget %}
 
 
 {% for block in builder.all() %}
@@ -23,5 +24,8 @@
         
         {% case 'tabsProgram' %}
             {{ programTabs.programTabs(block) }}
+
+        {% case 'cardTeam' %}
+            {{ teamWidget.widget() }}
     {% endswitch %}
 {% endfor %}
