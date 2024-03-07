@@ -368,7 +368,7 @@ sprig.action('navigate', ({ target }) => {
                               {% set tagValue = tag %}
                     {% endfor %}
                     <article class="bf grantee-card" style="--var-grantee-color:{% if tagValue == "Special Initiatives" %}#E68922{% elseif tagValue == "Sector Effectiveness" %}#008F7F{% elseif tagValue == "Arts & Creativity" %}#008F7F{% elseif tagValue == "Education" %}#E68922{% elseif tagValue == "Climate" %}#881857{% endif %}">
-                      <h3>{{ grants.entriesOrganization[0] }}</h3>
+                      <h3>{{ grants.entriesOrganization }}</h3>
                       <div class="grantee-card__cnt">{{ grants.textDescription }}</div>
                       <div class="grantee-card__table"> 
                         <div class="grantee-card__row"> 
@@ -405,7 +405,7 @@ sprig.action('navigate', ({ target }) => {
                           </ul>
                         </div>
                       </div>
-                      {% set organizationData = grants.entriesOrganization[0].contactWebsite %}
+                      {% set organizationData = grants.entriesOrganization.contactWebsite %}
                         {# {% set organizationWebsite = organizationData | json_decode %}
                           {% if organizationWebsite %}
                             {% set linkValue = organizationWebsite[0]['linkValue'] %}
@@ -413,7 +413,7 @@ sprig.action('navigate', ({ target }) => {
                         
                       
                       <div class="grantee-card__footer"> <a href="/{{ grants.entriesOrganization[0].uri }}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
-                      <a target="_blank" href="{{ grants.entriesOrganization[0].contactWebsite }}" title="Go to {{ grants.entriesOrganization[0].contactWebsite }}"> <span>website</span><span class="grantee-card__footer-logo"> 
+                      <a target="_blank" href="{{ grants.entriesOrganization[0].contactWebsite }}" title="Go to {{ grants.entriesOrganization.contactWebsite }}"> <span>website</span><span class="grantee-card__footer-logo"> 
                             <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd" d="M19 1L8.99995 2L12.7928 5.79289L6.29285 12.2929L7.70706 13.7071L14.2071 7.20711L18 11L19 1ZM0 18V8V6H2H7V8H2V18H12V13H14V18V20H12H2H0V18Z"></path>
                             </svg></span></a>
