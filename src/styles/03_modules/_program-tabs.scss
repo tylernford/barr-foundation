@@ -1,0 +1,97 @@
+/* _program-tabs.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Program Tabs
+  See templates/_macros/03_modules/_program-tabs.twig for markup
+------------------------------------------------------------------------ */
+
+.blockTabs {
+  $tab: &;
+  @include block;
+  display: flex;
+  position: relative;
+
+  @include breakpoint(lg) {
+      min-height: 750px; 
+  }
+
+  > * {
+      flex: 0 1 50%;
+  }
+
+  &-intro {
+      padding-right: 2em;
+      border-right: 1px solid var(--color-grey-200);
+  }
+
+  &-preheading {
+      @include preheading;
+  }
+
+  &-content {
+      padding-left: 2em;
+  }
+
+  &-label {
+
+      &--primary {
+          @include heading;
+      }
+
+      &--secondary {
+          line-height: 2;
+      }
+
+      @media (hover: hover) {
+          &:hover {
+              cursor: pointer;
+          }
+      }
+  }
+
+  &-card { 
+      @include visuallyHide;
+
+      @media (hover: hover) {
+
+          #{$tab}-label:hover ~ & {
+              @include visuallyShow;
+              height: 100%;
+              margin: 2em;
+              padding: 2em;
+              width: calc(50% - 4em);
+              position: absolute;
+              left: 0;
+              top: 0;
+              background: var(--color-grey-25);
+          }
+      }
+      
+  }
+
+  &-media {
+      aspect-ratio: 1.6;
+      margin-bottom: 2em;
+
+      @include breakpoint(lg) {
+          max-height: 280px;
+      }
+
+      &-img {
+          max-width: 100%;
+          object-fit: cover;
+      }
+
+  }
+
+  &-support {
+      @include support;
+      margin-bottom: 2em;
+  }
+
+  &-button {
+      @include button(var(--color-program-green-100));
+  }
+
+}

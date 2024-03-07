@@ -2,6 +2,7 @@
 {% import '_macros/02_components/_card' as cards %}
 {% import '_macros/03_modules/_latest-news' as latestNews %}
 {% import '_macros/03_modules/_stats' as stats %}
+{% import '_macros/03_modules/_program-tabs' as programTabs %}
 
 
 {% for block in builder.all() %}
@@ -21,50 +22,6 @@
             {{ stats.stats(block)}}
         
         {% case 'tabsProgram' %}
-            <section class="blockTabs">
-                <div class="blockTabs-intro">
-                    <h1 class="blockTabs-preheading">{{ block.textPreheading }}</h1>
-                    <div class="blockTabs-support">{{ block.textRichBasic }}</div>
-                </div>
-                {% set programs = block.tabsProgram %}
-                <div class="blockTabs-content">
-                    {% for p in programs %}
-                        {% set programEntry = p.entryProgramArea.one() %}
-                        {% set programTitle = programEntry.title %}
-                        {% set programLink = programEntry.uri %}
-                        {% set isPrimary = p.flagPrimary %}
-                        {% set programImg = p.assetImage|length ? p.assetImage.one() ?? null %}
-                        {% set programSupport = p.textSupporting %}
-                        {% set programNews = p.entryNews.one() ?? null %}
-                        <div class="blockTabs-item">
-                            <h2 class="blockTabs-label {{ isPrimary ? 'blockTabs-label--primary' : 'blockTabs-label--secondary' }}">{{ programTitle }}</h2>
-                            
-                            <div class="blockTabs-card">
-                                {% if programImg %}
-                                {% set obj = {
-                                    'handle': 'mediaImage',
-                                    'hook': 'blockTabs' 
-                                }%}
-                                {{ assets.transformedImage(programImg,obj) }}
-                                {% endif %}
-
-                                <div class="blockTabs-support">{{ programSupport }}</div>
-                                <a class="blockTabs-button" href="{{ programLink }}" title="">Learn More</a>
-
-                                {% if programNews %}
-                                <div class="blockTabs-news">
-                                    <h3 class="blockTabs-preheading">Latest in {{ programTitle }}</h3>
-                                    <div>
-                                        <h4 class="blockTabs-news-heading">{{ programNews.title }}</h4>
-                                        <time class="blockTabs-news-date" datetime="{{ programNews.dateOnly|date|format('Y-mm-dd') }}">{{ programNews.dateOnly|date|format('M dd, Y') }}</time>
-                                    </div>
-                                </div>
-                                {% endif %}
-                            </div>
-
-                        </div>
-                    {% endfor %}
-                </div>
-            </section>
+            {{ programTabs.programTabs(block) }}
     {% endswitch %}
 {% endfor %}
