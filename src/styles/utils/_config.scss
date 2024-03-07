@@ -38,10 +38,10 @@ $breakpoints: (
 @include getFont('Axiforma', 'axiforma', 'axiforma--book', normal, 400);
 @include getFont('Axiforma', 'axiforma', 'axiforma--medium', normal, 500);
 
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light', normal, 200);
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light-italic', italic, 200);
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular', normal, 400);
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular-italic', italic, 400);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--light', normal, 200);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--light-italic', italic, 200);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--regular', normal, 400);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--regular-italic', italic, 400);
 
 @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book', normal, 300);
 @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book-italic', italic, 300);
