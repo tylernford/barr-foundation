@@ -1,4 +1,4 @@
-dateModified: 1710444353
+dateModified: 1710444645
 elementSources:
   craft\elements\Asset:
     -
@@ -251,7 +251,7 @@ elementSources:
       tableAttributes:
         - link
         - section
-        - slug
+        - 'field:d65ee27b-0934-4348-92aa-2a30b9a64e84' # Featured
         - postDate
       type: native
     -

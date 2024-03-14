@@ -42,6 +42,7 @@ Interior template
     {% set isDatabase = (entry.slug == 'grants-grantees') or (entrySection == 'grantees') %}
     {% set isBio = entrySection == 'directory' %}
     {% set isBlogIndex = entrySection == 'newsInsights' and entry.title == 'Blog' ? true %}
+    {% set isProcessAndInquiries = entrySection == 'grantmaking' and entry.title == 'Process & Inquiries' ? true %}
     {% set isBlog = entrySection == 'blog' %}
     {% set builder =
         entry.builderCommon ??
@@ -50,6 +51,10 @@ Interior template
         entry.builderInquiryForm ??
         null
     %}
+
+    {% if isProcessAndInquiries %}
+        {{ featuredPostsCarousel.carousel('grantees') }}
+    {% endif %}
 
     {% if builder %}
         {% if entrySection == 'programAreas' and entry.type == 'landing' %}
@@ -76,7 +81,7 @@ Interior template
     {% elseif isBio %}
         {{ bios.bio(entry) }}
     {% elseif isBlogIndex %}
-        {{ featuredPostsCarousel.carousel() }}
+        {{ featuredPostsCarousel.carousel('blog') }}
 
     {% elseif isBlog %}
         {% import "_macros/03_modules/_text.twig" as modules %}
