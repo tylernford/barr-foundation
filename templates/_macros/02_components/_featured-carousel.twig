@@ -1,17 +1,15 @@
-{# _macros/02_components/_featured_posts_carousel.twig #}
+{# _macros/02_components/_featured_carousel.twig #}
 {% macro carousel(type) %}
     {% import '_macros/02_components/_card' as cards %}
 
-    {% set featuredItems = craft.entries().section(type).featured(true) %}
+    {% set featuredCards = craft.entries().section(type).featured(true) %}
 
-    {% for featuredItem in featuredItems %}
-        {% set card = featuredItem %}
-
+    {% for featuredCard in featuredCards %}
         {% if type == 'blog' %}
-            {{ cards.post(card, 'large') }}
+            {{ cards.post(featuredCard, 'large') }}
         {% elseif type == 'grantees' %}
             {% set granteeCardConfig = {
-                'grantee': featuredItem,
+                'grantee': featuredCard,
                 'variant': 'large',
                 'label': 'Featured Grantee'
             } %}

@@ -10,7 +10,7 @@ Interior template
 {% import '_macros/01_elements/_actions' as actions %}
 {% import '_macros/01_elements/_section-title' as sectionTitles %}
 {% import '_macros/02_components/_assets' as assets %}
-{% import '_macros/02_components/_featured-posts-carousel' as featuredPostsCarousel %}
+{% import '_macros/02_components/_featured-carousel' as featuredCarousel %}
 {% import '_macros/03_modules/_bio' as bios %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
@@ -53,7 +53,7 @@ Interior template
     %}
 
     {% if isProcessAndInquiries %}
-        {{ featuredPostsCarousel.carousel('grantees') }}
+        {{ featuredCarousel.carousel('grantees') }}
     {% endif %}
 
     {% if builder %}
@@ -81,7 +81,7 @@ Interior template
     {% elseif isBio %}
         {{ bios.bio(entry) }}
     {% elseif isBlogIndex %}
-        {{ featuredPostsCarousel.carousel('blog') }}
+        {{ featuredCarousel.carousel('blog') }}
 
     {% elseif isBlog %}
         {% import "_macros/03_modules/_text.twig" as modules %}
