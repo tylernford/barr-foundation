@@ -45,8 +45,8 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: d65ee27b-0934-4348-92aa-2a30b9a64e84 # Featured Post
-            instructions: null
+            fieldUid: d65ee27b-0934-4348-92aa-2a30b9a64e84 # Featured
+            instructions: 'Toggle if this post should appear in the Featured Posts carousel on the Blog index.'
             label: null
             required: false
             tip: null
