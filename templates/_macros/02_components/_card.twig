@@ -470,12 +470,13 @@
 
 
 {# Post #}
-{% macro post(post) %}
+{% macro post(post, variant) %}
     {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
 
+    {% set variant = variant ?? variant %}
     {% set url   = post.url %}
     {% set image = post.assetImage.one %}
     {% set title = post.title %}
@@ -500,7 +501,7 @@
     {# Set action #}
     {% set action = post.actionLink %}
 
-    <article class="cardItem cardItem--generic">
+    <article class="cardItem cardItem--generic"{{ variant == 'large' ? ' data-variant=large'}}>
         <div class="cardItem__inner">
             {# Image #}
             {% if image %}

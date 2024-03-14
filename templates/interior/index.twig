@@ -10,6 +10,7 @@ Interior template
 {% import '_macros/01_elements/_actions' as actions %}
 {% import '_macros/01_elements/_section-title' as sectionTitles %}
 {% import '_macros/02_components/_assets' as assets %}
+{% import '_macros/02_components/_featured-posts-carousel' as featuredPostsCarousel %}
 {% import '_macros/03_modules/_bio' as bios %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
@@ -40,6 +41,7 @@ Interior template
     #}
     {% set isDatabase = (entry.slug == 'grants-grantees') or (entrySection == 'grantees') %}
     {% set isBio = entrySection == 'directory' %}
+    {% set isBlogIndex = entrySection == 'newsInsights' and entry.title == 'Blog' ? true %}
     {% set isBlog = entrySection == 'blog' %}
     {% set builder =
         entry.builderCommon ??
@@ -73,6 +75,9 @@ Interior template
         {% endif %}
     {% elseif isBio %}
         {{ bios.bio(entry) }}
+    {% elseif isBlogIndex %}
+        {{ featuredPostsCarousel.carousel() }}
+
     {% elseif isBlog %}
         {% import "_macros/03_modules/_text.twig" as modules %}
         {% set config  = {

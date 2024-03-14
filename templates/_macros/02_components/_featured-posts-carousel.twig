@@ -1,0 +1,11 @@
+{# _macros/02_components/_featured_posts_carousel.twig #}
+{% macro carousel() %}
+    {% import '_macros/02_components/_card' as cards %}
+
+    {% set featuredPosts = craft.entries().section('blog').featuredPost(true) %}
+
+    {% for featuredPost in featuredPosts %}
+        {% set card = featuredPost %}
+        {{ cards.post(card, 'large') }}
+    {% endfor %}
+{% endmacro %}
