@@ -2,10 +2,10 @@
 {% macro carousel() %}
     {% import '_macros/02_components/_card' as cards %}
 
-    {% set featuredPosts = craft.entries().section('blog').featuredPost(true) %}
+    {% set featuredItems = craft.entries().section('blog').featured(true) %}
 
-    {% for featuredPost in featuredPosts %}
-        {% set card = featuredPost %}
+    {% for featuredItem in featuredItems %}
+        {% set card = featuredItem %}
         {{ cards.post(card, 'large') }}
     {% endfor %}
 {% endmacro %}
