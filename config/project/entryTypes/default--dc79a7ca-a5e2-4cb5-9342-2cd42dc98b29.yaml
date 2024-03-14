@@ -30,7 +30,7 @@ fieldLayouts:
             uid: 7023afbd-85ac-4c95-9c4c-d0eb403603b9
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
             fieldUid: 90142623-6069-4dfa-8701-8e8eb2de1caf # ID: Blog Post
@@ -40,6 +40,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fb37d0ea-bdb6-4612-87bd-7ec08295239c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: d65ee27b-0934-4348-92aa-2a30b9a64e84 # Featured Post
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 981ca7ec-88d2-4c42-bc26-b4cedc9c6bb4
             userCondition: null
             warning: null
             width: 50

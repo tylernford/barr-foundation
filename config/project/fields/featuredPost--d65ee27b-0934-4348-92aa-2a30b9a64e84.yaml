@@ -1,0 +1,14 @@
+columnSuffix: esgmllvu
+contentColumnType: boolean
+fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
+handle: featuredPost
+instructions: 'Toggle is this post should appear in the Featured Posts carousel on the Blog index.'
+name: 'Featured Post'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
