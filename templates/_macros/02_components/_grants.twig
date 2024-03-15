@@ -11,17 +11,183 @@ sprig.action('navigate', ({ target }) => {
 
 </script> #}
 
+{% set programAreas = craft.entries().section("programAreasCategories").level(1).all() %}
+{% set strategies = craft.entries().section("programAreasCategories").level(2).all() %}
+
 {% js %}
     htmx.on('htmx:afterSwap', function(event) {
+        accordionToggle();
+        triggerModal();
+
         
+//Browser and OS defined class on body
+$('body').addClass($.browser.platform)
+$('body').addClass($.browser.name);
+if(($.browser.desktop) == true) {
+    $('body').removeClass('mobile').removeClass('ipad').addClass('desktop');
+}
+if(($.browser.mobile) == true) {
+    $('body').removeClass('desktop').removeClass('ipad').addClass('mobile');
+}
+if(($.browser.ipad) == true) {
+    $('body').removeClass('mobile').removeClass('desktop').addClass('ipad');
+}
+if((navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 0) || navigator.platform === 'iPad') {
+    $('body').removeClass('mobile').removeClass('desktop').addClass('ipad');
+}
+
+// Site related functions
+
+// accordion function start
+var accordionButtons = $(".accordion .accordion__title button");
+
+function accordionToggle() {
+  $(".accordion .accordion__title button").on("click", function (e) {
+    $control = $(this);
+    console.log("accordion clicked");
+    accordionContent = $control.attr("aria-controls");
+    checkOthers($control[0]);
+
+    isAriaExp = $control.attr("aria-expanded");
+    newAriaExp = isAriaExp == "false" ? "true" : "false";
+    $control.attr("aria-expanded", newAriaExp);
+    newAriaExp === 'true' ? $(this).parent().addClass('accordion__title--active') : $(this).parent().removeClass("accordion__title--active")
+
+    isAriaHid = $("#" + accordionContent).attr("aria-hidden");
+    if (isAriaHid == "true") {
+      $("#" + accordionContent).attr("aria-hidden", "false");
+      $("#" + accordionContent).slideDown();
+    } else {
+      $("#" + accordionContent).attr("aria-hidden", "true");
+      $("#" + accordionContent).slideUp();
+    }
+
+    // Prevent the click event from propagating to the document
+    e.stopPropagation();
+  });
+
+function checkOthers(elem) {
+  for (var i = 0; i < accordionButtons.length; i++) {
+    if (accordionButtons[i] != elem) {
+      if ($(accordionButtons[i]).attr("aria-expanded") == "true") {
+        $(accordionButtons[i]).attr("aria-expanded", "false");
+        $(accordionButtons[i]).parent().removeClass('accordion__title--active');
+        content = $(accordionButtons[i]).attr("aria-controls");
+        $("#" + content).attr("aria-hidden", "true");
+        $("#" + content).slideUp();
+      }
+    }
+  }
+}
+
+$(document).on("click", function (e) {
+    if (!$(e.target).closest('.accordion').length) {
+      $(".accordion .accordion__content").slideUp();
+      $(".accordion .accordion__title button").attr("aria-expanded", "false").parent().removeClass("accordion__title--active");
+      $("#" + accordionContent).attr("aria-hidden", "true");
+    }
+  });
+}
+
+// accordion function end
+
+// modal start
+function triggerModal() {
+  if ($(".modal__close").length > 0) {
+    $(".modal__close").click(function (e) {
+      e.preventDefault();
+      $(this).closest("dialog")[0].close();
+      $('body').css('overflow', 'unset');
+    });
+  }
+  if ($(".modal__open").length > 0) {
+    $(".modal__open").on("click", function (e) {
+      e.preventDefault();
+      $(this).parent().find("dialog")[0].showModal();
+      $('body').css('overflow', 'hidden');
+    });
+  }
+  let dialogs = document.querySelectorAll(".modal");
+  dialogs.forEach((dialog) => {
+    dialog.addEventListener("click", (e) => {
+      const dialogDimensions = dialog.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        dialog.close();
+        $('body').css('overflow', 'unset');
+      }
+    });
+  });
+}
+// modal end
+
+
+//call the function 
+
+  //Plotly javascript 
+	TESTER = document.getElementById('tester');
+  {% set allData = craft.entries().section('grants').all() %}
+
+    {% set programAreaArray = [] %}
+    {% set StrategiesArray = [] %}
+    {% for programArea in programAreas %}
+        {% set StrategiesArray = StrategiesArray|merge([programArea.title]) %}
+        {% set programAreaArray = programAreaArray|merge(["Program Area"]) %}
+    {% endfor %}
+    {# Loop through all entries #}
+    {% for entry in allData %}
+        {# Check if the entry has tagsProgramAreas defined and it's not null #}
+        {% if entry.tagsProgramAreas is not null and entry.tagsProgramAreas|length %}
+          {% if entry.tagsStrategies is not null and entry.tagsStrategies|length %}
+            {# Get the first tag from tagsProgramAreas #}
+            {% set firstTag = entry.tagsProgramAreas|first %}
+            {% if firstTag.title is not null %}
+                {% set programAreaArray = programAreaArray|merge([firstTag.title]) %}
+            {% endif %}
+            {# Loop through tagsProgramAreas and add titles to programAreaArray #}
+            {# Get the first tag from tagsProgramAreas #}
+            {% set firstTag = entry.tagsStrategies|first %}
+            {% if firstTag.title is not null %}
+                {% set StrategiesArray = StrategiesArray|merge([firstTag.title]) %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+    var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
+    var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
+    console.log(programAreaArray);
+    console.log(StrategiesArray);
+  data = [{
+      type: "treemap",
+      labels: StrategiesArray,
+      parents: programAreaArray,
+      maxdepth: 2,
+      textinfo: "label+percent entry",
+      outsidetextfont: {"size": 20, "color": "#377eb8"},
+      marker: {"line": {"width": 2},"colors": ["white","#008F7F", "#881857", "#E68922", "red", "blue"]}
+}];
+
+var layout = {
+    margin: { t: 25, l: 0, r: 0, b: 0 },
+    height: 600, // Set the desired height in pixels
+    width: 800,  // Set the desired width in pixels
+    // You can also include other layout properties here if needed
+};
+
+Plotly.newPlot(TESTER, data, layout);
+
+
     });
 {% endjs %}
 
 
 {% set awardYear = "now"|date("Y") - 1 %}
-
 {% set layout = layout ?? 'grid' %} {# grid or list #}
-{% set sortOption = sortOption ?? 'recent' %}
+{% set sortOption = sortOption ?? 'Most Recent First' %}
 
 
 {% set query = query ?? '' %}
@@ -33,18 +199,10 @@ sprig.action('navigate', ({ target }) => {
     
 {# {% paginate granteeList as pageInfo, pageEntries %} #}
 
-{# {% for entry in pageEntries %}
-    <h2>{{ entry.title }}</h2>
-    {% for fieldHandle, fieldValue in entry %}
-        {% if fieldValue is instance of('DateTime') %}
-            <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
-        {% else %}
-            <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
-        {% endif %}
-    {% endfor %}
-{% endfor %} #}
 
 {# Sets to a default value if not defined #}
+
+
 
 <section class="section section--grantee"> 
       <form sprig s-val:page="1" >
@@ -57,18 +215,16 @@ sprig.action('navigate', ({ target }) => {
               <div class="bf accordion">
                 <div class="accordion__item">
                   <div class="accordion__title">
-                    <button type="button" aria-expanded="false" aria-controls="content-1"> <span>Sort by : </span><span class="cnt">Most Recent First</span></button>
+                    <button type="button" aria-expanded="false" aria-controls="content-1"> <span>Sort by : </span><span class="cnt">{{ sortOption }}</span></button>
                   </div><span class="accordion__logo">
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M16 5L10 16L4 5L16 5Z" fill="#F5F5F5" fill-opacity="0.65"/>
                       </svg></span>
                   <div class="accordion__content" aria-hidden="true" id="content-1" style="display:none;">
-                    <p>Dropdown</p>
-                    <p>Dropdown</p>
-                    <p>Dropdown</p>
-                    <p>Dropdown</p>
-                    <p>Dropdown</p>
-                    <p>Dropdown</p>
+                    <p sprig s-trigger="click" s-val:sortOption="Most Recent First">Most Recent First</p>
+                    <p sprig s-trigger="click" s-val:sortOption="Older First">Older First</p>
+                    <p sprig s-trigger="click" s-val:sortOption="Highest Amount">Highest Amount</p>
+                    <p sprig s-trigger="click" s-val:sortOption="Lowest Amount">Lowest Amount</p>
                   </div>
                 </div>
               </div>
@@ -101,170 +257,34 @@ sprig.action('navigate', ({ target }) => {
                     <ul class="accordion" role="list">
                       <li class="accordion__item" role="listitem">
                         <div class="accordion__title">
-                          <button type="button" aria-expanded="false" aria-controls="Category-1">Category 1</button>
+                          <button type="button" aria-expanded="false" aria-controls="Category-1">Program Areas</button>
                         </div>
                         <div class="accordion__content" aria-hidden="true" id="Category-1">
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lorem ipsum1 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lorem ipsum1 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lorem ipsum1 (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lorem ipsm2 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lorem ipsm2 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lorem ipsm2 (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lrem ipsum3 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lrem ipsum3 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lrem ipsum3 (999)</span>
-                              </label>
-                            </div>
-                          </div>
+                          {% for category in programAreas %}
+                              <div class="bf input-wrapper">
+                                <div class="radio-button radio-button--check">
+                                  <label for="{{ category.title }}"> 
+                                    <input class="radio-group" type="checkbox" id="{{ category.title }}"><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
+                                  </label>
+                                </div>
+                              </div>
+                          {% endfor %}
                         </div>
                       </li>
                       <li class="accordion__item" role="listitem">
                         <div class="accordion__title">
-                          <button type="button" aria-expanded="false" aria-controls="Category-2">Category 2</button>
+                          <button type="button" aria-expanded="false" aria-controls="Category-2">Strategies</button>
                         </div>
                         <div class="accordion__content" aria-hidden="true" id="Category-2">
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lem ipsum4 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lem ipsum4 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lem ipsum4 (999)</span>
-                              </label>
+                          {% for category in strategies %}
+                            <div class="bf input-wrapper">
+                              <div class="radio-button radio-button--check">
+                                <label for="{{ category.title }}"> 
+                                  <input class="radio-group" type="checkbox" id="{{ category.title }}"><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
+                                </label>
+                              </div>
                             </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name loremlorem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name loremlorem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name loremlorem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="PropertyProperty name lem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="PropertyProperty name lem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">PropertyProperty name lem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lorem ipsum5 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lorem ipsum5 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lorem ipsum5 (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lorem psumpsum6 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lorem psumpsum6 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lorem psumpsum6 (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lorem ipsum7 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lorem ipsum7 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lorem ipsum7 (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property  lorem ipsum8 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property  lorem ipsum8 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property  lorem ipsum8 (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name name lorem ips9 (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name name lorem ips9 (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name name lorem ips9 (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name1 Property lorem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name1 Property lorem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name1 Property lorem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="accordion__item" role="listitem">
-                        <div class="accordion__title">
-                          <button type="button" aria-expanded="false" aria-controls="Category-3">Category 3</button>
-                        </div>
-                        <div class="accordion__content" aria-hidden="true" id="Category-3">
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name2 lorem lorem  loremipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name2 lorem lorem  loremipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name2 lorem lorem  loremipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name3 lorem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name3 lorem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name3 lorem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name4 lorem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name4 lorem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name4 lorem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name5 lorem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name5 lorem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name5 lorem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name6 lorem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name6 lorem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name6 lorem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property  (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property  (999)"><span class="radio-checkmark"></span><span class="radio-label">Property  (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name7 ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name7 ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name7 ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="name lorem ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="name lorem ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">name lorem ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="bf input-wrapper">
-                            <div class="radio-button radio-button--check">
-                              <label for="Property name lorem8 ipsum (999)"> 
-                                <input class="radio-group" type="checkbox" id="Property name lorem8 ipsum (999)"><span class="radio-checkmark"></span><span class="radio-label">Property name lorem8 ipsum (999)</span>
-                              </label>
-                            </div>
-                          </div>
+                          {% endfor %}
                         </div>
                       </li>
                     </ul>
@@ -281,24 +301,31 @@ sprig.action('navigate', ({ target }) => {
               <div class="bf input-wrapper">
                 <div class="radio-button">
                   <label for="grid"> 
-                    <input sprig s-trigger="change" type="radio" name="layout" value="grid" id="grid" s-val="layout" {% if layout == "grid" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">grid</span>
+                    <input sprig s-trigger="change" type="radio" name="layout" value="grid" id="grid" s-val="layout" {% if layout == "grid" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">Grid</span>
                   </label>
                 </div>
               </div>
               <div class="bf input-wrapper">
                 <div class="radio-button">
                   <label for="list"> 
-                    <input sprig s-trigger="change"  type="radio" name="layout" value="list" id="list" s-val="layout" {% if layout == "list" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">list</span>
+                    <input sprig s-trigger="change"  type="radio" name="layout" value="list" id="list" s-val="layout" {% if layout == "list" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">List</span>
                   </label>
                 </div>
               </div>
               <div class="bf input-wrapper">
                 <div class="radio-button">
+                  <label for="infographic"> 
+                    <input sprig s-trigger="change"  type="radio" name="layout" value="infographic" id="infographic" s-val="layout" {% if layout == "infographic" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">Infographic</span>
+                  </label>
+                </div>
+              </div>
+              {# <div class="bf input-wrapper">
+                <div class="radio-button">
                   <label for="Infographic"> 
                     <input class="radio-group" type="radio" id="Infographic" name="view as"><span class="radio-checkmark"></span><span class="radio-label">Infographic</span>
                   </label>
                 </div>
-              </div>
+              </div> #}
               <div class="bf input-wrapper">
                 <div class="radio-button">
                   <label for="map"> 
@@ -328,16 +355,48 @@ sprig.action('navigate', ({ target }) => {
         <label for="list">List</label>
     </form> #}
 {# </div> #}
-{% if sortOption == 'recent' %}
+
+{# Fetch entries from the "grants" section #}
+{% set granteeListss = craft.entries().section('grants').all() %}
+
+{# Initialize an array to store entries with the "education" tag #}
+{% set educationEntries = [] %}
+
+{# Loop through each entry #}
+{% for entry in granteeListss %}
+    {# Check if the "tagsProgramAreas" field contains "education" #}
+    {% if "Education" in entry.tagsProgramAreas %}
+        {# If it does, add the entry to the educationEntries array #}
+        {% set educationEntries = educationEntries|merge([entry]) %}
+    {% endif %}
+{% endfor %}
+
+{# Output the entries with the "education" tag #}
+{% for educationEntry in educationEntries %}
+    {# {{ educationEntry.title }}<br> #}
+{% endfor %}
+
+
+{% if sortOption == 'Most Recent First' %}
     {% set granteeList = craft.entries().section({
             section: "grants",
-            dateOnly: ["and", ">= #{awardYear}"]
-        }).search(query).orderBy('dateCreated DESC').limit(12) %}
+        }).dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC ").limit(12) %}
+{% elseif sortOption == 'Older First' %}
+    {% set granteeList = craft.entries().section({
+            section: "grants"
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly ASC").limit(12) %}
+{% elseif sortOption == 'Highest Amount' %}
+    {% set granteeList = craft.entries().section({
+            section: "grants",
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("").limit(12) %}
+{% elseif sortOption == 'Lowest Amount' %}
+    {% set granteeList = craft.entries().section({
+            section: "grants",
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("textAmount ASC").limit(12) %}
 {% else %}
     {% set granteeList = craft.entries().section({
-            section: "grants",
-            dateOnly: ["and", ">= #{awardYear}"]
-        }).orderBy('dateCreated DESC').search(query).limit(12) %}
+            section: "grants"
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC").limit(12) %}
 {% endif %}
 
 {% set pageInfo = sprig.paginate(granteeList, page) %}
@@ -354,9 +413,19 @@ sprig.action('navigate', ({ target }) => {
     {% endfor %}
 {% endfor %}  #}
 
-
+{# {% for entry in pageEntries %}
+    <h2>{{ entry.title }}</h2>
+    {% for fieldHandle, fieldValue in entry %}
+        {% if fieldValue is instance of('DateTime') %}
+            <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
+        {% else %}
+            <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
+        {% endif %}
+    {% endfor %}
+{% endfor %} #}
 
 {% set end = pageInfo.totalPages %}
+{% if layout == "grid" or layout == "list" %}
 <section id="grantData" class="section section--grantee section--granteecards"> 
         <div class="container">
           <div class="bf grantee grantee--{{ layout }}"> 
@@ -425,8 +494,6 @@ sprig.action('navigate', ({ target }) => {
                         {% else %}
                               {% set linkValue = organizationData %}
                         {% endif %}
-
-                        
                           {# {% set organizationWebsite = organizationData | json_decode %}  #}
                           {# {% if organizationWebsite %}
                             {% set linkValue = organizationWebsite[0]['linkValue'] %}
@@ -435,7 +502,7 @@ sprig.action('navigate', ({ target }) => {
                       
                       <div class="grantee-card__footer"> <a href="/{% if grants.entriesOrganization.count() > 0 %}{{ grants.entriesOrganization[0].uri }}{% endif %}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
                       {% if grants.entriesOrganization.count() > 0 %}
-                      <a target="_blank" href="{% if "https://" in linkValue %}{{ linkValue }}{% else %}https://{{ linkValue }}{% endif %}" title="Go to {{ linkValue }}"> <span>website</span><span class="grantee-card__footer-logo"> 
+                      <a target="_blank" href="{% if "https://" in linkValue or "http://" in linkValue or  "https//" in linkValue %}{{ linkValue }}{% else %}https://{{ linkValue }}{% endif %}" title="Go to {{ linkValue }}"> <span>website</span><span class="grantee-card__footer-logo"> 
                             <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd" d="M19 1L8.99995 2L12.7928 5.79289L6.29285 12.2929L7.70706 13.7071L14.2071 7.20711L18 11L19 1ZM0 18V8V6H2H7V8H2V18H12V13H14V18V20H12H2H0V18Z"></path>
                             </svg></span></a>
@@ -576,4 +643,9 @@ sprig.action('navigate', ({ target }) => {
                 </div>
             </div>
         </div>
-      </section>
+</section>
+{% elseif layout == "infographic" %}
+  <div id="graph-container">
+    <div id="tester"></div>
+  </div>
+{% endif %}

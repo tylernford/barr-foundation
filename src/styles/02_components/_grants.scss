@@ -76,7 +76,7 @@
 }
 .section.section--granteecards {
   background-color: transparent;
-  background-image: url(/images/interstitial-graphic.png);
+  background-image: url(/uploads/images/interstitial-graphic.png);
   background-position: top;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -513,11 +513,11 @@ dialog.modal {
   --modal-bg: $color-brand;
   top: var(--top, 5rem);
   left: 50%;
-  max-width: var(--max-width, 43.75rem);
+  max-width: 75rem;
   border: 0.0625rem solid #262053;
   transform: translateX(-50%);
   background-color: var(--modal-bg);
-  width: calc(100vw - var(--width, 100px));
+  width: calc(100vw - 100px);
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3490196078);
 }
 dialog.modal .modal__header {
@@ -848,4 +848,10 @@ dialog.modal .accordion .accordion__item .accordion__content {
 }
 .bf.input button svg path {
   fill: #015750;
+}
+
+#graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
