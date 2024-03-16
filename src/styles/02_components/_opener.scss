@@ -153,6 +153,26 @@ body[data-theme-color="marigold"] {
       color: var(--color-grey-25);
       @include getType('detail-axiforma');
       font-size: 12px;
+
+      a {
+        color: inherit;
+        transition: text-decoration-color var(--transition) ease-in;
+        --transition-link-in: text-decoration-color var(--transition-intermediate) ease-out;
+
+        @media (hover: hover) {
+          &:hover {
+            text-decoration-color: transparent;
+            transition: var(--transition-link-in);
+          }
+        }
+        
+        &:focus-visible {
+          outline: 0;
+          outline: var(--outline-width) solid var(--color-focus);
+          outline-offset: var(--outline-offset);
+          transition: var(--transition-link-in);
+        }
+      }
     }
   }
 

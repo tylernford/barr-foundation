@@ -1,4 +1,4 @@
-dateModified: 1709779853
+dateModified: 1710623976
 elementSources:
   craft\elements\Asset:
     -
@@ -643,6 +643,7 @@ meta:
     133f1f83-cfbf-4f4a-a072-26d6ec33cf9f: 'Page Builder: Inquiry Form' # Page Builder: Inquiry Form
     135f1b4e-27cb-4cda-be94-52607d445f75: 'Asset: Image' # Asset: Image
     157d31f9-69c2-4ae1-a4b4-0e6b6f253467: Text # Text
+    159dc8e6-aa01-4c9b-bb40-e8152276a990: 'Text: Link' # Text: Link
     163c23d6-9166-4610-a4fc-efb969562853: 'Audio Snippet' # Audio Snippet
     164e396c-5108-4979-b8fd-d4dbd523d790: 'Card: Wildcard' # Card: Wildcard
     0202bad0-be1f-4afa-96db-a840700c3d74: 'Entry: News' # Entry: News

@@ -148,7 +148,9 @@
 
     figcaption {
       p {
-        margin-block-start: var(--base-3);
+        &:first-child {
+          margin-block-start: var(--base-3);
+        }
         max-width: 34em;
       }
 
