@@ -98,13 +98,14 @@
                 {{ images.image(openerImage, '1600', '4/3', '', false) }}
 
                 {# Image caption #}
-                {% if openerImage.textCaption|length %}
+                {% if openerImage.textCaption|length or openerImage.textByline|length %}
                     <figcaption class="media__caption">
                         <span class="caption__background"></span>
                         <span class="caption__background"></span>
                         <span class="caption__background"></span>
                         <div class="caption__caption">
                             {{ openerImage.textCaption }}
+                            {{ openerImage.textByline }}
                         </div>
                     </figcaption>
                 {% endif %}
@@ -265,13 +266,14 @@
                     {{ images.image(image, '1600', '9/4', '', false) }}
 
                     {# Image caption #}
-                    {% if image.textCaption|length %}
+                    {% if image.textCaption|length or image.textByline|length %}
                         <figcaption class="media__caption">
                             <span class="caption__background"></span>
                             <span class="caption__background"></span>
                             <span class="caption__background"></span>
                             <div class="caption__caption">
                                 {{ image.textCaption }}
+                                {{ image.textByline }}
                             </div>
                         </figcaption>
                     {% endif %}
@@ -331,7 +333,7 @@
                         </div>
 
                         {# Image caption #}
-                        {% if image.textCaption|length %}
+                        {% if image.textCaption|length or image.textByline|length %}
                             <figcaption class="media__caption">
                                 <span class="caption__background"></span>
                                 <span class="caption__background"></span>
@@ -342,6 +344,7 @@
                                     </div>
 
                                     {{ image.textCaption }}
+                                    {{ image.textByline }}
                                 </div>
                             </figcaption>
                         {% endif %}
@@ -440,15 +443,16 @@
                         </div>
 
                         {# Image caption #}
-                        {% if image.textCaption|length %}
-                            {# <figcaption class="media__caption">
+                        {% if image.textCaption|length or image.textByline|length %}
+                            <figcaption class="media__caption">
                                 <span class="caption__background"></span>
                                 <span class="caption__background"></span>
                                 <span class="caption__background"></span>
                                 <div class="caption__caption">
                                     {{ image.textCaption }}
+                                    {{ image.textByline }}
                                 </div>
-                            </figcaption> #}
+                            </figcaption>
                         {% endif %}
                     </figure>
                 </div>

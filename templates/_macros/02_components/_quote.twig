@@ -24,9 +24,10 @@
           </div>
 
           {# Caption #}
-          {% if image.textCaption|length %}
+          {% if image.textCaption|length or image.textByline|length%}
             <figcaption class="caption">
               {{ image.textCaption }}
+              {{ image.textByline }}
             </figcaption>
           {% endif %}
         </div>
