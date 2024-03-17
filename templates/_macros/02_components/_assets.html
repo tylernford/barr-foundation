@@ -64,6 +64,6 @@
         {% if lazy %}
         loading="lazy"
         {% endif %}
-        alt="{{ image.alt ?? image.textCaption ?? null }}"> 
+        alt="{{ image.assetAlt ?? image.textCaption ?? null }}"> 
 </picture>
 {% endmacro %}

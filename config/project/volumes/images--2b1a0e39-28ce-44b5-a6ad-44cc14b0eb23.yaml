@@ -52,29 +52,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
-            elementCondition: null
-            id: null
-            instructions: 'Alternative text is announced by screen readers to users with impaired vision. Alt text is imperative to _SEO_ and _accessibility_. The alt text should briefly describe the image as seen at a glance and assume that the reader cannot see the image.'
-            label: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 784af2c2-23a8-4bfc-9008-a79c82ee0d03
-            userCondition: null
-            warning: null
-            width: 100
-          -
             elementCondition: null
             fieldUid: e49497aa-7d1e-407b-9451-852b6b99eb57 # Asset: Alt
             instructions: null
