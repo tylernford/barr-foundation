@@ -1,0 +1,19 @@
+columnSuffix: klvjuesq
+contentColumnType: text
+fieldGroup: b6fc45fa-5f55-4100-ab79-5b7379a538ec # Assets
+handle: assetId
+instructions: null
+name: 'Asset: ID'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

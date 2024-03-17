@@ -5,6 +5,26 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            elementCondition: null
+            fieldUid: 9e396f17-1a9c-4df2-b743-640fe0cc0294 # Asset: ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 314e9c33-6301-4e6d-b8d2-6b9a2dfadd7b
+            userCondition:
+              class: craft\elements\conditions\users\UserCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\users\AdminConditionRule
+                  uid: 2d541f0d-5440-4bb6-baed-a71be314668e
+                  value: true
+              elementType: craft\elements\User
+              fieldContext: global
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -12,6 +32,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: null
             max: null
