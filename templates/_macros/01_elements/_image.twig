@@ -91,7 +91,7 @@
       {% endif %}
 
       src="{{ image.url({ width: width, height: height, quality: quality }) }}"
-      alt="{{ image.alt }}"
+      alt="{{ image.assetAlt }}"
       {{ lazyload != 'false' ? 'loading="lazy"' }}
       style="content-visibility: auto"
       decoding="async"
