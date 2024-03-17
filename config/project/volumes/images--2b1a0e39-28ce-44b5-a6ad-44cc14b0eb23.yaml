@@ -76,6 +76,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: e49497aa-7d1e-407b-9451-852b6b99eb57 # Asset: Alt
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 328545a1-5ee9-4117-b39e-209aea7e69b1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 53b9f888-fe43-469a-a9af-a0b2a7146993 # Text: Caption
             instructions: null
             label: null

@@ -1,4 +1,4 @@
-dateModified: 1710705255
+dateModified: 1710710374
 elementSources:
   craft\elements\Asset:
     -
@@ -919,6 +919,7 @@ meta:
     e4496b2d-7e4a-4e86-855a-f5168e2399b5: 'Kitchen Sink' # Kitchen Sink
     e4877e61-528c-470a-bfb5-5548ec0153d5: 'Text: Heading' # Text: Heading
     e32751f4-2535-48d4-a6fa-3eab79737ccf: 'Geo: Parent Hierarchy' # Geo: Parent Hierarchy
+    e49497aa-7d1e-407b-9451-852b6b99eb57: 'Asset: Alt' # Asset: Alt
     e80011d9-6840-4ef0-862e-d5b1ef15bc9b: 'Navigation: Social' # Navigation: Social
     eaa5d22c-f0eb-4f12-befb-57e850041769: 'Carousel: Auto' # Carousel: Auto
     eaf269e1-7746-41ed-9136-dc532a61e2f7: 'Text: Description' # Text: Description
