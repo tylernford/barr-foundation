@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: b6fc45fa-5f55-4100-ab79-5b7379a538ec # Assets
-handle: assetImage
+handle: assetOpenerImage
 instructions: 'Select an image. Be sure to double-click the thumbnail preview to add Alt Text, Caption, and if applicable, Byline.'
-name: 'Asset: Image'
+name: 'Asset: Opener Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -24,7 +24,7 @@ settings:
   restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
   restrictedLocationSubpath: null
   selectionLabel: null
-  showSiteMenu: true
+  showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:

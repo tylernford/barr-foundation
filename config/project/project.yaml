@@ -1,8 +1,19 @@
-dateModified: 1710712508
+dateModified: 1710872339
 elementSources:
   craft\elements\Asset:
     -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
       key: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      tableAttributes:
+        - 'field:9e396f17-1a9c-4df2-b743-640fe0cc0294' # Asset: ID
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - link
       type: native
     -
       key: 'volume:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
@@ -21,7 +32,10 @@ elementSources:
         - location
       type: native
     -
-      key: 'folder:337517db-6915-47f4-b80d-3c399c474dbd'
+      heading: ''
+      type: heading
+    -
+      key: 'folder:a51070d2-314d-42c2-9479-f9130566dc1d'
       type: native
   craft\elements\Entry:
     -
@@ -637,6 +651,7 @@ meta:
     92b819ef-229c-4a42-beff-bc6edc8a0f66: 'Asset: Image' # Asset: Image
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
     94f38795-11e9-4fc4-b4db-eb3ee5c00ff5: Grantmaking # Grantmaking
+    98a27781-2b61-4d95-b8e5-b5cca67504a8: 'Asset: Opener Image' # Asset: Opener Image
     98affe9f-0fef-4624-ae74-d15517033824: 'Secondary Menu' # Secondary Menu
     99a0a64e-82ac-4b42-92b5-697513e02b7b: Grants # Grants
     106b6b15-a646-4dff-b250-ffd57c00f21a: Milestone # Milestone
