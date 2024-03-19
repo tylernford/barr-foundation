@@ -1,4 +1,4 @@
-dateModified: 1710808768
+dateModified: 1710872339
 elementSources:
   craft\elements\Asset:
     -
@@ -651,6 +651,7 @@ meta:
     92b819ef-229c-4a42-beff-bc6edc8a0f66: 'Asset: Image' # Asset: Image
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
     94f38795-11e9-4fc4-b4db-eb3ee5c00ff5: Grantmaking # Grantmaking
+    98a27781-2b61-4d95-b8e5-b5cca67504a8: 'Asset: Opener Image' # Asset: Opener Image
     98affe9f-0fef-4624-ae74-d15517033824: 'Secondary Menu' # Secondary Menu
     99a0a64e-82ac-4b42-92b5-697513e02b7b: Grants # Grants
     106b6b15-a646-4dff-b250-ffd57c00f21a: Milestone # Milestone

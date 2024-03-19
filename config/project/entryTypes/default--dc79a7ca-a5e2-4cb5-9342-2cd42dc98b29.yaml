@@ -57,6 +57,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 98a27781-2b61-4d95-b8e5-b5cca67504a8 # Asset: Opener Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb6a1676-3aad-4b28-9c06-1dcecb955fbf
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 25949bb9-af67-45e6-9adb-fc8c568dba48 # Date: Date Only
             instructions: null
             label: 'Date: Published'
