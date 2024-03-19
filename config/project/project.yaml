@@ -1,4 +1,4 @@
-dateModified: 1710872339
+dateModified: 1710885926
 elementSources:
   craft\elements\Asset:
     -
@@ -674,6 +674,7 @@ meta:
     346d78ba-f05e-40ac-9b21-8c466b2f000b: 'Number of Cards' # Number of Cards
     362b51a9-9bf6-4ac2-99a7-9d6b35dc6e19: Carousel # Carousel
     403cc98b-bbd0-4d37-8a79-1141c41ba1b4: 'Longform Text' # Longform Text
+    412d6ed3-17fd-4ea5-989c-3de39c275974: 'Number: Amount' # Number: Amount
     414ac9d1-bac7-4be8-bd82-d652ae58a395: 'Asset: Image' # Asset: Image
     0426fb2a-6010-410d-abe9-2cf75ab3f5f9: Target # Target
     469acf2e-4d4a-4fa1-9fd1-b5342ea60c76: 'Asset: Media' # Asset: Media
