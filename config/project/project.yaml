@@ -1,8 +1,19 @@
-dateModified: 1710712508
+dateModified: 1710808768
 elementSources:
   craft\elements\Asset:
     -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
       key: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      tableAttributes:
+        - 'field:9e396f17-1a9c-4df2-b743-640fe0cc0294' # Asset: ID
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - link
       type: native
     -
       key: 'volume:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
@@ -21,7 +32,10 @@ elementSources:
         - location
       type: native
     -
-      key: 'folder:337517db-6915-47f4-b80d-3c399c474dbd'
+      heading: ''
+      type: heading
+    -
+      key: 'folder:a51070d2-314d-42c2-9479-f9130566dc1d'
       type: native
   craft\elements\Entry:
     -
