@@ -1,0 +1,59 @@
+{# ===========================================================
+Template: interior/about-us.twig
+URL: /
+===========================================================
+About Us Interior template
+=========================================================== #}
+
+{% extends '_layouts/_base' %}
+{% import '_macros/03_modules/_feed' as feeds %}
+{% import '_macros/03_modules/_opener' as openers %}
+
+{% block content %}
+
+    {# INTERIOR OPENER #}
+    {% set entrySection = entry.section.handle %}
+    {% set opener = entry.openerLanding %}
+
+    {{ openers.landing(opener, entry) }}
+
+
+    {# INTERIOR BUILDER: #}
+    {# 1. People is a unique builder
+    2. Program Areas landing is a unique builder
+    3. Grantee Database is builder-less
+    4. Default to common builder for everything else
+    #}
+    {% set builder =
+        entry.builderCommon ??
+        entry.builderPeople ??
+        entry.builderProgramAreas ??
+        entry.builderInquiryForm ??
+        null
+    %}
+
+    {% if builder %}
+        {% if entrySection == 'aboutUs' and entry.type == 'directory' %}
+            {% include '_partials/_builder-people.twig' with {'builder': builder} %}
+        {% else %}
+            {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+        {% endif %}
+    {% endif %}
+
+
+    {# Interior Pre-Footer #}
+    {% set teamFeed = entry.feedTeam ?? entry.feedTeam %}
+    {% if teamFeed|length %}
+      {% set title = teamFeed.one.teamTitle %}
+      {% set feed  = teamFeed.one.team %}
+      {% set feedConfig = {
+        'title': title,
+        'titleVariant': '',
+        'feed': feed,
+        'gridVariant': 'grid',
+        'cardVariant': 'bio'
+      } %}
+
+      {{ feeds.feed(feedConfig) }}
+    {% endif %}
+{% endblock %}

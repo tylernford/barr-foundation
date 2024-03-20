@@ -74,18 +74,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
-            instructions: Deprecated.
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e0b8c55b-3f08-4094-866b-a96c12c3eeaf
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 4217f7b3-ec24-454d-87f2-1998f0a0baae # Tags: Program Areas
             instructions: null
             label: null
@@ -105,6 +93,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e027790b-6973-4f27-a263-ba0681a0e88c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9b8006bb-071b-4d03-9d1f-f7bdbdc27d52 # Tags: Categories
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27810e33-d9c6-4781-a9a1-a1cd19dde2fa
             userCondition: null
             warning: null
             width: 50
