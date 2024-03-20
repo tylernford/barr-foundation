@@ -1,11 +1,12 @@
 columnSuffix: lnnoopoi
-contentColumnType: string
+contentColumnType: string(8)
 fieldGroup: 48de2574-ea84-4b60-b7e2-2e3a4a515fa2 # Miscellaneous
 handle: tagsAvailable
 instructions: 'Select the filtering system(s) this category will be available for on the frontend.'
 name: 'Tags: Available'
 searchable: false
 settings:
+  columnType: null
   options:
     -
       __assoc__:
@@ -29,6 +30,17 @@ settings:
         -
           - default
           - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Internal
+        -
+          - value
+          - internal
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Checkboxes
+type: craft\fields\Dropdown
