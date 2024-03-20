@@ -65,11 +65,12 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set programAreas =  craft.entries().section('programAreasCategories') %}
-    {% set programArea = '' %}
-    {% set areaColor = '' %}
 
     <ul class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       {% for detail in details %}
+        {% set programArea = '' %}
+        {% set areaColor = '' %}
+
         <li>
           {% if variant == 'tags' %}
 
