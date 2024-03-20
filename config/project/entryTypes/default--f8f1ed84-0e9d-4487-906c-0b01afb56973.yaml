@@ -30,7 +30,19 @@ fieldLayouts:
             uid: 86f5aaea-c1d8-47ef-9778-44621fb7a131
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 0e00ff94-ac0c-4383-a7f4-7523a59e99ae # Tags: Available
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: adca95c5-6cdc-4bb8-a9cd-35eccb176c74
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule

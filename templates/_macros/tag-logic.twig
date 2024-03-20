@@ -4,6 +4,7 @@
     {# Set tags #}
     {% set programTags = {} %}
     {% set strategyTags = {} %}
+    {% set categoryTags = {} %}
 
     {# Set Program tags #}
     {% for tag in tagList %}
@@ -25,8 +26,18 @@
         {% endfor %}
     {% endfor %}
 
-    {# Merge Program and Strategy tags #}
+    {# Set Category tags #}
+    {% for tag in tagList %}
+        {% for category in tag.tagsCategories %}
+            {% if category.tagsAvailable != 'internal' and category.title not in categoryTags %}
+                {% set categoryTags = categoryTags|merge([category]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Merge tags #}
     {% set mergedTags = programTags|merge(strategyTags) %}
+    {% set mergedTags = mergedTags|merge(categoryTags) %}
 
     {% set detailTags = [] %}
     {% for mergedTag in mergedTags %}

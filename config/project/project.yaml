@@ -1,4 +1,4 @@
-dateModified: 1710885926
+dateModified: 1710903755
 elementSources:
   craft\elements\Asset:
     -
@@ -185,13 +185,14 @@ elementSources:
       disabled: false
       key: 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
       tableAttributes:
-        - link
-        - slug
         - 'field:b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400' # Entries: Team
         - 'field:25949bb9-af67-45e6-9adb-fc8c568dba48' # Date: Date Only
         - postDate
         - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
         - 'field:f291a098-6829-4193-9d10-5757e239bef3' # Tags: Strategies
+        - 'field:9b8006bb-071b-4d03-9d1f-f7bdbdc27d52' # Tags: Categories
+        - 'field:65ee2a7e-b332-47b7-88bf-63aa41aaa155' # Tags: Categories or Program Areas
+        - link
       type: native
     -
       defaultSort:
@@ -321,7 +322,7 @@ elementSources:
       key: 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
       tableAttributes:
         - slug
-        - parent
+        - 'field:0e00ff94-ac0c-4383-a7f4-7523a59e99ae' # Tags: Available
       type: native
     -
       defaultSort:
@@ -462,6 +463,7 @@ meta:
     0b12ba92-d669-4feb-9241-037faa9b352b: 'Highlight: Multi-Event Timeline' # Highlight: Multi-Event Timeline
     0b20ecdf-4270-4334-a697-b9ad36c32962: 'Card: Latest News' # Card: Latest News
     0c504d15-eff5-4c67-a859-9cef6adcd964: Footer # Footer
+    0e00ff94-ac0c-4383-a7f4-7523a59e99ae: 'Tags: Available' # Tags: Available
     0e1c35ac-38d0-4e66-8b22-bb3d543366d7: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
     0f725806-1cbe-40c2-91a6-cfc9a70879c2: 'Text: Heading' # Text: Heading
     1a788826-fcfe-45be-b8ec-68bafc7d3790: 'Carousel: Quotes' # Carousel: Quotes
@@ -571,6 +573,7 @@ meta:
     9b4fc30f-02b9-4305-a6d9-5106b6b0ca10: Label # Label
     9b5d6e14-e157-4607-9bcb-aadca4a1863c: About # About
     9b6c92eb-d488-4fd4-a3fe-e55aec516915: 'Style: Width' # Style: Width
+    9b8006bb-071b-4d03-9d1f-f7bdbdc27d52: 'Tags: Categories' # Tags: Categories
     9bbc3e1f-5360-4365-9a75-6d521a5160cb: 'Card: Feature' # Card: Feature
     9bdf93bb-bbb6-4791-a90b-ee8f56915270: Developer # Developer
     9c15fd9a-81a5-4c31-bd58-95cc257be3fd: 'Text: Rich (Basic)' # Text: Rich (Basic)
