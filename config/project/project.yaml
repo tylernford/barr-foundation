@@ -1,4 +1,4 @@
-dateModified: 1710903755
+dateModified: 1710953825
 elementSources:
   craft\elements\Asset:
     -
@@ -227,7 +227,7 @@ elementSources:
       disabled: false
       key: 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
       tableAttributes:
-        - section
+        - 'field:484160c1-8352-47bb-a090-e3e81c4b41d3' # ID: Directory
         - 'field:329ee082-81cc-492f-bc61-0230f4a009b4' # Entries: Person Type
         - revisionCreator
         - link
@@ -768,6 +768,7 @@ meta:
     265453d5-2d22-4578-9119-b2b7b0e35bf9: Default # Default
     0394538d-48b7-4ac8-bcd6-5866934254f1: 'Card: Grantees' # Card: Grantees
     453424c1-d719-473d-859b-b57b862aa56c: 'Highlight: Timeline (Multiple)' # Highlight: Timeline (Multiple)
+    484160c1-8352-47bb-a090-e3e81c4b41d3: 'ID: Directory' # ID: Directory
     526592df-8835-48ec-80a2-b149d57b3e57: Carousels # Carousels
     625571b0-68f3-4147-b8d6-9cc70d2f47a2: 'Text: Quote' # Text: Quote
     734086c2-3e6c-4bd0-ada5-9d448a5abb03: 'Feed: Grantees' # Feed: Grantees

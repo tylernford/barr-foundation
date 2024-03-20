@@ -30,7 +30,19 @@ fieldLayouts:
             uid: 027d3f60-3fac-408a-99e1-3a6cfd86c8e3
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 484160c1-8352-47bb-a090-e3e81c4b41d3 # ID: Directory
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b075e36-233c-4996-bcd5-05e4efe2131d
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
