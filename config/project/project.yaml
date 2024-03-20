@@ -1,4 +1,4 @@
-dateModified: 1710954741
+dateModified: 1710964382
 elementSources:
   craft\elements\Asset:
     -
@@ -690,12 +690,14 @@ meta:
     493bc4b8-cb08-43a2-938d-4c1b76790dd4: 'Contact: Facebook' # Contact: Facebook
     514d9158-60cc-42b6-b659-01d01be03c21: Title # Title
     515f8abd-ef70-46c7-bbd7-cc9957f75831: Landing # Landing
+    517b6a6e-0fcd-47d1-bf1a-9915a93d3e0d: Link # Link
     531e0b1a-3fa8-4379-80b6-e96b1a34de5d: Default # Default
     550b4087-0556-49ad-b210-9d66461f75b1: 'Attribution: Entry or Text' # Attribution: Entry or Text
     569e24f0-c7e8-441f-9d14-9ec278514ac0: Milestones # Milestones
     575df6b0-a62f-45c7-9fe2-aadbec000452: 'Tabs: Program Finder' # Tabs: Program Finder
     589a1bd0-570d-4dc1-a454-d5034a1b9bba: Default # Default
     600bb22c-f62f-458d-ad51-432956f869ae: 'Program Areas' # Program Areas
+    627e51e8-b9fd-4b79-b8fa-98cbdfbdb02f: 'Text: Featured Links' # Text: Featured Links
     633a6cc7-36f9-47b9-9948-e569afd25265: 'Builder: Changelog' # Builder: Changelog
     690e3ae6-6702-4e43-9fa7-5293eb17523f: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
     735baf07-fdce-44c2-8433-02997cd29674: 'Department: Import' # Department: Import
@@ -734,6 +736,7 @@ meta:
     7177fc66-4936-40e7-9fc8-2cc7f5c69739: 'Text: Preheading' # Text: Preheading
     7617be4a-e651-4c54-8aa0-7ec58f5fc81f: Target # Target
     7641cb7f-d1d2-444e-ba5d-e21e2386d119: 'Action: URL' # Action: URL
+    8079aafd-5009-4db3-8b75-b5b13de4bfb7: Link # Link
     8231b9f6-69c4-4c30-b883-eaaabbdf19fc: 'Block: Accordion' # Block: Accordion
     8927ac01-af8a-4422-87c4-913f25e2dd3f: 'Flag: Border' # Flag: Border
     9005a3a9-eed5-4c78-ac53-0a99897df1ec: 'Page Builder: Common' # Page Builder: Common
@@ -907,6 +910,7 @@ meta:
     d38be497-85d5-48f4-af5f-d88b0fbcc0f5: 'Record Id' # Record Id
     d38d5b2f-c00b-46b1-a1b7-2e88f27d88de: Actions # Actions
     d44a4308-4627-45f3-8867-96f5d98fcefa: 'Card: Latest News (Manual)' # Card: Latest News (Manual)
+    d59de2e1-216a-4da5-a481-776b806f2b39: Summary # Summary
     d82a1a8b-d1ee-434f-9583-06eb498d2c9c: 'Style: Button or Text' # Style: Button or Text
     d95defeb-86a9-41c1-b9c1-2c644240afb7: 'Asset: Cover Image' # Asset: Cover Image
     d1599614-0216-46ee-8a6d-d945d7d0bd1b: 'Action: Entry or URL' # Action: Entry or URL

@@ -53,6 +53,10 @@
     gap: 0 var(--base-6);
   }
 
+  &[data-inline="true"] {
+    padding-inline: 0;
+  }
+
   // Trigger
   .featuredLinks__link-item {
     .link-item__action {

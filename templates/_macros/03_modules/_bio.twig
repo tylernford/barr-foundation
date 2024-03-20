@@ -7,16 +7,18 @@
 
 {% macro bio(person) %}
     {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/02_components/_featured-links' as featuredLinks %}
     {% import '_macros/03_modules/_feed' as feeds %}
 
-    {% set name      = person.textFirst %}
-    {% set bio       = person.textBody %}
-    {% set email     = person.contactEmail %}
-    {% set linkedin  = person.contactLinkedIn %}
-    {% set twitter   = person.contactTwitter %}
-    {% set instagram = person.contactInstagram %}
-    {% set facebook  = person.contactFacebook %}
-    {% set website   = person.contactWebsite %}
+    {% set name          = person.textFirst %}
+    {% set bio           = person.textBody %}
+    {% set featuredLinks = person.textFeaturedLinks.all() %}
+    {% set email         = person.contactEmail %}
+    {% set linkedin      = person.contactLinkedIn %}
+    {% set twitter       = person.contactTwitter %}
+    {% set instagram     = person.contactInstagram %}
+    {% set facebook      = person.contactFacebook %}
+    {% set website       = person.contactWebsite %}
     {% set social =
         linkedin|length ? true :
         twitter|length ? true :
@@ -39,6 +41,11 @@
             <div class="bio__content">
                 {{ bio }}
             </div>
+
+            {# Featured Links #}
+            {% if featuredLinks|length %}
+                {{ featuredLinks.featuredLinks(featuredLinks, 'inline') }}
+            {% endif %}
         </div>
 
         {# Contact #}

@@ -176,6 +176,18 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: 627e51e8-b9fd-4b79-b8fa-98cbdfbdb02f # Text: Featured Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 921ca9ac-f78b-45ff-a565-e0d546b6a332
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 205a3949-5e2c-4e26-a4fa-0a6f2fdf0cea # Contact: Email
             instructions: null
             label: null
