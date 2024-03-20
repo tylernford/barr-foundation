@@ -9,7 +9,6 @@ Interior template
 
 {% import '_macros/01_elements/_actions' as actions %}
 {% import '_macros/01_elements/_section-title' as sectionTitles %}
-{% import '_macros/02_components/_assets' as assets %}
 {% import '_macros/03_modules/_bio' as bios %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
@@ -17,7 +16,7 @@ Interior template
 {% block content %}
 
     {# INTERIOR OPENER #}
-    {% set landingOpeners = ['aboutUs', 'grantmaking', 'newsInsights', 'programAreas'] %}
+    {% set landingOpeners = ['grantmaking', 'programAreas'] %}
     {% set entrySection = entry.section.handle %}
 
     {% if entrySection in landingOpeners %}

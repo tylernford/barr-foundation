@@ -1,4 +1,4 @@
-dateModified: 1710964382
+dateModified: 1710969976
 elementSources:
   craft\elements\Asset:
     -
@@ -205,6 +205,7 @@ elementSources:
         - section
         - slug
         - postDate
+        - expiryDate
       type: native
     -
       defaultSort:
