@@ -1,4 +1,4 @@
-dateModified: 1710953825
+dateModified: 1710954065
 elementSources:
   craft\elements\Asset:
     -
@@ -231,6 +231,7 @@ elementSources:
         - 'field:329ee082-81cc-492f-bc61-0230f4a009b4' # Entries: Person Type
         - revisionCreator
         - link
+        - 'field:65ee2a7e-b332-47b7-88bf-63aa41aaa155' # Tags: Categories or Program Areas
       type: native
     -
       defaultSort:

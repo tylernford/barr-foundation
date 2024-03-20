@@ -74,13 +74,25 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
-            instructions: Deprecated.
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9ecae88f-f550-4e14-8eb8-3aa61d39ab8a
+            uid: d453d55f-cf91-4609-9902-ae1370bdbc6d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8797d2b7-0618-41a9-9981-6a75d957809a
             userCondition: null
             warning: null
             width: 50
@@ -105,30 +117,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 59261354-c989-4cd3-bc09-b10d7835cba9
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8797d2b7-0618-41a9-9981-6a75d957809a
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d453d55f-cf91-4609-9902-ae1370bdbc6d
             userCondition: null
             warning: null
             width: 50
