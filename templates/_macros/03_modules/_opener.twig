@@ -98,13 +98,14 @@
                 {{ images.image(openerImage, '1600', '4/3', '', false) }}
 
                 {# Image caption #}
-                {% if openerImage.textCaption|length %}
+                {% if openerImage.textCaption|length or openerImage.textByline|length %}
                     <figcaption class="media__caption">
                         <span class="caption__background"></span>
                         <span class="caption__background"></span>
                         <span class="caption__background"></span>
                         <div class="caption__caption">
                             {{ openerImage.textCaption }}
+                            {{ openerImage.textByline }}
                         </div>
                     </figcaption>
                 {% endif %}
@@ -188,6 +189,7 @@
 {% endmacro %}
 
 {% macro post(entry) %}
+    {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -213,16 +215,10 @@
     {% set authorDetails = [] %}
 
     {# Set tags #}
-    {% set tagsList = post.tagsEntry %}
-    {% set tags = [] %}
-    {% for tagsItem in tagsList %}
-        {% set tags = tags|merge([
-            { 'title': tagsItem, 'url': tagsItem.url }
-        ]) %}
-    {% endfor %}
+    {% set tagsList = [post] %}
 
     {# Set image #}
-    {% set image = post.assetImage.one %}
+    {% set image = post.assetOpenerImage.one %}
 
     <header class="blockOpener blockOpener--post">
         {# Primary #}
@@ -255,9 +251,9 @@
             {% endif %}
 
             {# Tags #}
-            {% if tags|length %}
+            {% if tagsList|length %}
                 <div class="primary__tags">
-                    {{ details.detail('tags', false, tags) }}
+                    {{ tagLogic.tags(tagsList)}}
                 </div>
             {% endif %}
         </div>
@@ -270,13 +266,14 @@
                     {{ images.image(image, '1600', '9/4', '', false) }}
 
                     {# Image caption #}
-                    {% if image.textCaption|length %}
+                    {% if image.textCaption|length or image.textByline|length %}
                         <figcaption class="media__caption">
                             <span class="caption__background"></span>
                             <span class="caption__background"></span>
                             <span class="caption__background"></span>
                             <div class="caption__caption">
                                 {{ image.textCaption }}
+                                {{ image.textByline }}
                             </div>
                         </figcaption>
                     {% endif %}
@@ -336,7 +333,7 @@
                         </div>
 
                         {# Image caption #}
-                        {% if image.textCaption|length %}
+                        {% if image.textCaption|length or image.textByline|length %}
                             <figcaption class="media__caption">
                                 <span class="caption__background"></span>
                                 <span class="caption__background"></span>
@@ -347,6 +344,7 @@
                                     </div>
 
                                     {{ image.textCaption }}
+                                    {{ image.textByline }}
                                 </div>
                             </figcaption>
                         {% endif %}
@@ -362,8 +360,11 @@
 
 
 {% macro grantee(entry) %}
+    {% import '_macros/tag-logic' as tagLogic %}
+    {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
+    {% import '_macros/01_elements/_image' as images %}
 
     {# Set breadcrumbs #}
     {% set crumbs = [
@@ -371,17 +372,91 @@
         { 'title': 'Grants & Grantees', 'url': '' }
     ] %}
 
-    <header class="blockOpener blockOpener--grantee">
+    {# Set heading #}
+    {% set heading = entry.title %}
+
+    {# Set image #}
+    {% set image = entry.assetImage.one %}
+
+    {# Set copy #}
+    {% set copy = entry.textDescription %}
+
+    {# All grants associated with grantee #}
+    {% set grantList = craft.entries().section('grants').entriesOrganization(entry).all() %}
+
+    {# Set location #}
+    {% set location = entry.textLocation %}
+
+    {# Set website #}
+    {% set website = entry.contactWebsite %}
+
+    <header class="blockOpener blockOpener--grantee"{{ image ? ' data-image=true' }}>
         {# Primary #}
         <div class="blockOpener__primary">
             {# Breadcrumbs #}
             {{ breadcrumbs.breadcrumb(crumbs) }}
 
+            <div class="primary__wrapper">
             {# Page title #}
-            <h1 class="primary__heading">{{ entry.title }}</h1>
+            <h1 class="primary__heading">{{ heading }}</h1>
 
-    
+            <div class="blockOpener__content">
+                {% if copy|length %}
+                    <div class="primary__desc">
+                        {{ copy }}
+                    </div>
+                {% endif %}
+
+                <div class="content__meta">
+                    {# Location and tags #}
+                    <div class="meta__details">
+                        {# Location #}
+                        {% if location|length %}
+                            {{ details.detail('location', false, location) }}
+                        {% endif %}
+
+                        {# Tags #}
+                        {{ tagLogic.tags(grantList)}}
+                    </div>
+
+                    {% if website|length %}
+                        {% set actionAttributes = {
+                            type: 'link', isReversed: false,
+                            icon: 'linkType', iconOnly: false,
+                            text: 'Website', url: website,
+                            linkType: 'url', target: ''
+                        } %}
+
+                        {{ actions.action(actionAttributes) }}
+                    {% endif %}
+                </div>
+            </div>
+            </div>
+
+            {# Media #}
+            {% if image %}
+                <div class="primary__media">
+                    {# Image #}
+                    <figure>
+                        <div>
+                            {{ images.image(image, '1024', '5/4', '', false) }}
+                        </div>
+
+                        {# Image caption #}
+                        {% if image.textCaption|length or image.textByline|length %}
+                            <figcaption class="media__caption">
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <span class="caption__background"></span>
+                                <div class="caption__caption">
+                                    {{ image.textCaption }}
+                                    {{ image.textByline }}
+                                </div>
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                </div>
+            {% endif %}
         </div>
     </header>
-
 {% endmacro %}

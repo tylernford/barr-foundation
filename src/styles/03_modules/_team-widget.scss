@@ -1,0 +1,100 @@
+/* _team-widget.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Module: Team Widget
+  See templates/_macros/03_modules/_team-widget.twig for markup
+------------------------------------------------------------------------ */
+
+.team-widget {
+  --color-widget--background: var(--color-teal-150);
+  // overflow: hidden;
+
+  .team-widget__inner {
+    padding-block-end: var(--base-16);
+    // background-color: var(--color-widget--background);
+    position: relative;
+
+    &::before {
+      content: '';
+      inset: auto 0 0 0;
+      height: 224px;
+      position: absolute;
+      background-color: var(--color-widget--background);
+    }
+
+    .angle {
+      inset: auto 0 223px 0;
+      position: absolute;
+    
+      svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        color: var(--color-widget--background);
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  .team-widget__actions {
+    @include container;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:last-child {
+      display: flex;
+    }
+
+    .action {
+      &:first-child {
+        margin-inline-end: var(--base-6);
+      }
+
+      &:last-child {
+        margin-inline-start: var(--base-6);
+      }
+
+      &.action--link {
+        color: var(--color-grey-25-65);
+        background-color: transparent;
+  
+        &::after {
+          background-color: var(--color-grey-25-65);
+        }
+      }
+    }
+  }
+  .cardRow {
+    padding-block-end: var(--base-9);
+
+    @include breakpoint(md) {
+      padding-block-end: var(--base-12);  
+    }
+  }
+  // .cardRow {
+  //   position: relative;
+
+  //   &::before {
+  //     content: '';
+  //     inset: auto 0 0 0;
+  //     height: 160px;
+  //     position: absolute;
+  //     background-color: var(--color-widget--background);
+  //   }
+  // }
+  // .angle {
+  //   inset: auto 0 160px 0;
+  //   position: absolute;
+
+  //   svg {
+  //     width: 100%;
+  //     height: auto;
+  //     display: block;
+  //     color: var(--color-widget--background);
+  //     transform: rotateY(180deg);
+  //   }
+  // }
+}

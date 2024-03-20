@@ -38,10 +38,10 @@ $breakpoints: (
 @include getFont('Axiforma', 'axiforma', 'axiforma--book', normal, 400);
 @include getFont('Axiforma', 'axiforma', 'axiforma--medium', normal, 500);
 
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light', normal, 200);
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--light-italic', italic, 200);
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular', normal, 400);
-@include getFont('Messina Modern', 'messina-modern-trial', 'messina-modern-trial--regular-italic', italic, 400);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--light', normal, 200);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--light-italic', italic, 200);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--regular', normal, 400);
+@include getFont('Messina Modern', 'messina-modern', 'messina-modern--regular-italic', italic, 400);
 
 @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book', normal, 300);
 @include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book-italic', italic, 300);
@@ -130,6 +130,7 @@ $breakpoints: (
 ------------------------------------------------------------------------ */
 :root {
 	--base-100: 400px;
+	--base-40: 160px;
 	--base-32: 128px;
 	--base-28: 112px;
 	--base-27: 108px;
@@ -158,11 +159,12 @@ $breakpoints: (
 	--neg-base-2: -8px;
 	--neg-base-3: -12px;
 	--neg-base-5: -20px;
+	--neg-base-6: -24px;
 	--neg-base-9: -36px;
 	--neg-base-10: -40px;
+	--neg-base-14: -56px;
 	--neg-base-16: -64px;
 	--neg-base-18: -72px;
-
 
 	--base-50px: 50px;
 

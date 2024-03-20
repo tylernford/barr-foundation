@@ -1,0 +1,42 @@
+{% import '_macros/01_elements/_actions' as actions %}
+{% import '_macros/02_components/_card' as cards %}
+
+{% set personType = craft.entries().section('personType' ) %}
+{% set memberFilter = '' %}
+{% for personType in personType %}
+  {% if personType == 'Staff' %}
+    {% set memberFilter = personType %}
+  {% endif %}
+{% endfor %}
+
+{% set teamMembers = craft.entries().section('directory').relatedTo(memberFilter).orderBy('RAND()').limit(3) %}
+
+{% if teamMembers %}
+  <div class="cardRow" data-columns="3" id="card-test">
+    {% for member in teamMembers %}
+      {{ cards.bio(member) }}
+    {% endfor %}
+  </div>
+
+  <div class="team-widget__actions" data-theme-color="teal">
+    {% set actionAttributes = {
+      type: 'button', isReversed: true,
+      icon: 'linkType', iconOnly: false,
+      text: 'View Staff Directory', url: siteUrl ~ 'about-us/people',
+      linkType: 'entry', target: ''
+    } %}
+
+    {{ actions.action(actionAttributes) }}
+
+    <button sprig
+      s-target="#card-test" s-swap="outerHTML"
+      id="sprig-button"
+      class="action action--link"  data-is-reversed="true" 
+      {{ sprig.trigger == 'sprig-button' ? 's-swap-oob="true"' }}
+      >
+        <span class="action__text">Refresh Featured Above</span>
+      </button>
+  </div>
+{% else %}
+<button id="sprig-button" s-swap-oob="true" style="display: none;"></button>
+{% endif %}

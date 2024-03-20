@@ -1,0 +1,19 @@
+columnSuffix: aafajxnw
+contentColumnType: text
+fieldGroup: b6fc45fa-5f55-4100-ab79-5b7379a538ec # Assets
+handle: assetAlt
+instructions: 'Alternative text is announced by screen readers to users with impaired vision. Alt text is imperative to _SEO_ and _accessibility_. The alt text should briefly describe the image as seen at a glance and assume that the reader cannot see the image.'
+name: 'Asset: Alt'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

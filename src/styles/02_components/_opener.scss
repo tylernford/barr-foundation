@@ -80,12 +80,13 @@ body[data-theme-color="marigold"] {
       color: var(--color-navy-100);
 
       a {
-        color: inherit;
+        color: var(--theme-color-secondary);
+        transition: all var(--transition) ease-in;
         --transition-link-in: all var(--transition-intermediate) ease-out;
 
         @media (hover: hover) {
           &:hover {
-            color: var(--color-navy-50);
+            color: var(--color-navy-100);
             text-decoration-color: transparent;
             transition: var(--transition-link-in);
           }
@@ -152,6 +153,26 @@ body[data-theme-color="marigold"] {
       color: var(--color-grey-25);
       @include getType('detail-axiforma');
       font-size: 12px;
+
+      a {
+        color: inherit;
+        transition: text-decoration-color var(--transition) ease-in;
+        --transition-link-in: text-decoration-color var(--transition-intermediate) ease-out;
+
+        @media (hover: hover) {
+          &:hover {
+            text-decoration-color: transparent;
+            transition: var(--transition-link-in);
+          }
+        }
+        
+        &:focus-visible {
+          outline: 0;
+          outline: var(--outline-width) solid var(--color-focus);
+          outline-offset: var(--outline-offset);
+          transition: var(--transition-link-in);
+        }
+      }
     }
   }
 
@@ -841,6 +862,148 @@ body[data-theme-color="marigold"] {
       .blockOpener__primary {
         .primary__wrapper {
           padding-inline: var(--base-14);
+        }
+      }
+    }
+  }
+
+  &--grantee {
+    .blockOpener__content {
+      padding-block-start: var(--base);
+
+      .primary__desc {
+        @include getType('caption-messina');
+      }
+
+      .content__meta {
+        margin-block-start: var(--base-10);
+
+        .details[data-variant="tags"] {
+          margin-block-start: var(--base-4);
+        }
+  
+        .action {
+          margin-block-start: var(--base-4);
+        }
+      }
+    }
+
+    // Media
+    .primary__media {
+      margin-block-start: var(--base-7);
+      position: relative;
+
+      .image {
+        aspect-ratio: 3 / 2;
+        display: block;
+        position: relative;
+        overflow: hidden;
+    
+        img {
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+    }
+
+    @include breakpoint(md) {
+      .blockOpener__content {
+        padding-block-start: var(--base-2);
+        
+        .primary__desc {
+          @include getType('h5-messina');
+        }
+      }
+    }
+
+    @include breakpoint(lg) {
+      .blockOpener__content {
+        padding-top: var(--base-6);
+        gap: var(--base-12);
+      }
+    }
+
+    @include breakpoint(xl) {
+      .blockOpener__content {
+        gap: var(--base-28);
+        
+        .primary__desc {
+          @include getType('subhead');
+        }
+      }
+    }
+
+    &:not([data-image="true"]) {
+      @include breakpoint(md) {
+        .blockOpener__content {
+          .content__meta {
+            display: flex;
+            align-items: flex-end;
+  
+            .meta__details {
+              margin-inline-end: var(--base-10);
+            }
+          }
+        }
+      }
+
+      @include breakpoint(lg) {
+        .blockOpener__content {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+  
+          .content__meta {
+            margin-block-start: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            position: relative;
+  
+            .meta__details {
+              margin-inline-end: 0;
+            }
+          }
+  
+          .primary__desc + .content__meta {
+            &::before {
+              content: '';
+              inset: 0 auto 0 var(--neg-base-6);
+              width: 1px;
+              position: absolute;
+              background-color: var(--color-grey-50);
+            }
+          }
+        }
+      }
+
+      @include breakpoint(xl) {
+        .blockOpener__content {
+          .primary__desc + .content__meta {
+            &::before {
+              content: '';
+              inset: 0 auto 0 var(--neg-base-14);
+            }
+          }
+        }
+      }
+    }
+
+    &[data-image="true"] {
+      @include breakpoint(md) {
+        .blockOpener__primary {
+          grid-template-columns: 1fr 1fr;
+          gap: var(--base-6);
+        }
+  
+        .breadcrumb {
+          grid-column: 1 / -1;
+        }
+
+        .primary__media {
+          margin-block-start: 0;
         }
       }
     }

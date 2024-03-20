@@ -1,0 +1,40 @@
+{% macro tags(tagList) %}
+    {% import '_macros/01_elements/_details' as details %}
+    
+    {# Set tags #}
+    {% set programTags = {} %}
+    {% set strategyTags = {} %}
+
+    {# Set Program tags #}
+    {% for tag in tagList %}
+        {% for programArea in tag.tagsProgramAreas %}
+            {% if programArea.title in programTags %}
+            {% else %}
+                {% set programTags = programTags|merge([programArea]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Set Strategy tags #}
+    {% for tag in tagList %}
+        {% for strategy in tag.tagsStrategies %}
+            {% if strategy.title in strategyTags %}
+            {% else %}
+                {% set strategyTags = strategyTags|merge([strategy]) %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {# Merge Program and Strategy tags #}
+    {% set mergedTags = programTags|merge(strategyTags) %}
+
+    {% set detailTags = [] %}
+    {% for mergedTag in mergedTags %}
+        {% set tag = { 'title': mergedTag } %}
+        {% set detailTags = detailTags|merge([tag]) %}
+    {% endfor %}
+
+    {% if detailTags|length %}
+        {{ details.detail('tags', false, detailTags) }}
+    {% endif %}
+{% endmacro %}

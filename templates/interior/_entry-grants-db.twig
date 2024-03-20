@@ -29,6 +29,37 @@
 {% paginate granteeList as pageInfo, pageEntries %} #}
 
 {# NOTE: the following elements will likely need to consolidated into a _sprig template #}
+
+<section class="grants-grid" style="display:none">
+    {# FILTERS GO HERE #}
+    {# <div class="blockGeneric">
+    </div> #}
+
+    {# GRANTEE CARDS: List or Grid View #}
+    <div class="grants-grid__inner _is-{{ layout }}" data-columns="3">
+        {% if granteeList|length %}
+            {% for grantee in granteeList %}
+                {# Retrieve current award year's grant associated with grantee #}
+                {% set grant = craft.entries({
+                    section: "grants",
+                    dateOnly: ["and", ">= #{awardYear}"],
+                    entriesOrganization: grantee
+                }).one() %}
+
+                {% set config = {
+                    'variant': layout == 'grid' ? 'grid' : 'list',
+                    'content': {
+                        'grantee': grantee,
+                        'grant': grant
+                    }
+                }%}
+
+                {{ cards.grant(config) }}
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
 {# <section> #}
     {# FILTERS GO HERE #}
     {{ sprig('_macros/02_components/_grants') }}
@@ -109,3 +140,4 @@
     {% endif %}
     </div> #}
 {# </section> #}
+

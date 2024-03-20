@@ -35,7 +35,7 @@
   {% else %}
     {% set sources = [] %}
 
-    {% for source in autoFeed %}
+    {% for source in autoFeed.one.sources %}
       {% set sources = sources|merge([source.value]) %}
     {% endfor %}
 

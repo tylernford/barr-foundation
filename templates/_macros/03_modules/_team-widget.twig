@@ -1,0 +1,27 @@
+{# =======================================
+  Module: Team Widget
+======================================= #}
+
+{% macro widget() %}
+    {% import '_macros/01_elements/_angles' as angles %}
+    {% import '_macros/01_elements/_section-title' as sectionTitles %}
+
+    <section class="team-widget">
+        {% set sectionTitleAttributes = {
+            level: 'h2',
+            title: 'Our Team',
+            variant: '', border: false
+        } %}
+
+        {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+
+        <div class="team-widget__inner">
+            
+            {{ sprig('sprig/_sprig-team-widget') }}
+            
+            <div class="angle">
+                {{ angles.bottom() }}
+            </div>
+        </div>
+    </section>
+{% endmacro %}

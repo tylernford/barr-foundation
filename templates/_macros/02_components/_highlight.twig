@@ -9,7 +9,6 @@
     {% set content = 'content' in config|keys ? config.content : null %}
 
     {% switch variant %}
-
         {% case 'quote' %}
             {% set highlight = content.highlightQuote.one() %}
             {% set image = highlight.assetImage.one() %}

@@ -610,10 +610,14 @@
 
     .cardItem__secondary {
       margin-block-start: auto;
+
+      .details + .details {
+        margin-block-start: var(--base-3);
+      }
     }
 
     .cardItem__actions {
-      margin-block: var(--base-4) var(--neg-base-2);
+      margin-block: var(--base-6) var(--neg-base-2);
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -643,13 +647,13 @@
 
 
   &.cardItem--grant {
+    --color-card--secondary: var(--color-grey-150);
+    --color-card--tertiary: var(--color-grey-50);
+    --color-card-background: var(--color-grey-25);
+
     box-shadow: var(--shadow-shallow--light);
     padding: var(--base-6);
     display: grid;
-
-    @include breakpoint(sm) {
-      padding: var(--base-9);
-    }
 
     @include breakpoint(sm-md) {
       padding: var(--base-6);
@@ -657,6 +661,85 @@
 
     @include breakpoint(lg) {
       padding: var(--base-9);
+    }
+
+    // Header
+    .cardItem__header {
+      margin-block-end: var(--base-6);
+
+      .cardItem__heading {
+        @include getType('h5-axiforma');
+
+        &._is-hidden {
+          display: none;
+        }
+      }
+
+      .cardItem__description {
+        @include getType('caption-messina');
+        
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      .cardItem__heading + .cardItem__description {
+        margin-block-start: var(--base);
+        @include getType('detail-messina');
+      }
+    }
+
+    // Table
+    .cardItem__table {
+      .table-item__tr {
+        padding-block: var(--base-2);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--base-8);
+        border-top: 1px solid var(--color-card--tertiary);
+
+        &.table-item__tr--tags {
+          padding-block-end: var(--base-4);
+          display: block;
+        }
+      }
+
+      .table-item__th {
+        color: var(--color-card--secondary);
+        @include getType('label');
+      }
+
+      .table-item__td {
+        padding-top: 2px;
+        @include getType('detail-axiforma');
+      }
+    }
+
+    // Actions
+    .cardItem__actions {
+      .action {
+        &:first-child {
+          margin-inline-end: var(--base-4);
+        }
+      }
+    }
+
+    @include breakpoint(md) {
+      .cardItem__header {
+        .cardItem__heading + .cardItem__description {
+          @include getType('caption-messina');
+        }
+      }
+    }
+
+    @include breakpoint(xxl) {
+      .cardItem__table {
+        .table-item__tr {  
+          &.table-item__tr--tags {
+            display: grid;
+          }
+        }
+      }
     }
   }
 

@@ -6,14 +6,18 @@ instructions: null
 name: 'Text: Byline'
 searchable: true
 settings:
-  byteLimit: null
-  charLimit: null
-  code: false
-  columnType: null
-  initialRows: 4
-  multiline: false
-  placeholder: null
-  uiMode: normal
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: 159dc8e6-aa01-4c9b-bb40-e8152276a990 # Text: Link
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\PlainText
+type: craft\ckeditor\Field

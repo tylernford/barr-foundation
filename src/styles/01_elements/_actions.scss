@@ -308,7 +308,7 @@
 }
 
 
-body[data-theme-color="green"] {
+[data-theme-color="green"] {
     .action {
         --color-action-primary: var(--color-program-green-100);
         
@@ -333,7 +333,7 @@ body[data-theme-color="green"] {
     }
 }
 
-body[data-theme-color="plum"] {
+[data-theme-color="plum"] {
     .action {
         --color-action-primary: var(--color-program-plum-100);
         
@@ -358,7 +358,7 @@ body[data-theme-color="plum"] {
     }
 }
 
-body[data-theme-color="marigold"] {
+[data-theme-color="marigold"] {
     .action {
         --color-action-primary: var(--color-program-marigold-50);
         --color-action-secondary: var(--color-navy-100);
