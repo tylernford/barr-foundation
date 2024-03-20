@@ -1,0 +1,651 @@
+
+{% import '_macros/02_components/_card.twig' as cards %}
+{# <script>
+import { createSprig } from '@sprig/core';
+
+const sprig = createSprig();
+
+sprig.action('navigate', ({ target }) => {
+    sprig.load(target.href, { replace: true });
+});
+
+</script> #}
+
+{% set programAreas = craft.entries().section("programAreasCategories").level(1).all() %}
+{% set strategies = craft.entries().section("programAreasCategories").level(2).all() %}
+
+{% js %}
+    htmx.on('htmx:afterSwap', function(event) {
+        accordionToggle();
+        triggerModal();
+
+        
+//Browser and OS defined class on body
+$('body').addClass($.browser.platform)
+$('body').addClass($.browser.name);
+if(($.browser.desktop) == true) {
+    $('body').removeClass('mobile').removeClass('ipad').addClass('desktop');
+}
+if(($.browser.mobile) == true) {
+    $('body').removeClass('desktop').removeClass('ipad').addClass('mobile');
+}
+if(($.browser.ipad) == true) {
+    $('body').removeClass('mobile').removeClass('desktop').addClass('ipad');
+}
+if((navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 0) || navigator.platform === 'iPad') {
+    $('body').removeClass('mobile').removeClass('desktop').addClass('ipad');
+}
+
+// Site related functions
+
+// accordion function start
+var accordionButtons = $(".accordion .accordion__title button");
+
+function accordionToggle() {
+  $(".accordion .accordion__title button").on("click", function (e) {
+    $control = $(this);
+    console.log("accordion clicked");
+    accordionContent = $control.attr("aria-controls");
+    checkOthers($control[0]);
+
+    isAriaExp = $control.attr("aria-expanded");
+    newAriaExp = isAriaExp == "false" ? "true" : "false";
+    $control.attr("aria-expanded", newAriaExp);
+    newAriaExp === 'true' ? $(this).parent().addClass('accordion__title--active') : $(this).parent().removeClass("accordion__title--active")
+
+    isAriaHid = $("#" + accordionContent).attr("aria-hidden");
+    if (isAriaHid == "true") {
+      $("#" + accordionContent).attr("aria-hidden", "false");
+      $("#" + accordionContent).slideDown();
+    } else {
+      $("#" + accordionContent).attr("aria-hidden", "true");
+      $("#" + accordionContent).slideUp();
+    }
+
+    // Prevent the click event from propagating to the document
+    e.stopPropagation();
+  });
+
+function checkOthers(elem) {
+  for (var i = 0; i < accordionButtons.length; i++) {
+    if (accordionButtons[i] != elem) {
+      if ($(accordionButtons[i]).attr("aria-expanded") == "true") {
+        $(accordionButtons[i]).attr("aria-expanded", "false");
+        $(accordionButtons[i]).parent().removeClass('accordion__title--active');
+        content = $(accordionButtons[i]).attr("aria-controls");
+        $("#" + content).attr("aria-hidden", "true");
+        $("#" + content).slideUp();
+      }
+    }
+  }
+}
+
+$(document).on("click", function (e) {
+    if (!$(e.target).closest('.accordion').length) {
+      $(".accordion .accordion__content").slideUp();
+      $(".accordion .accordion__title button").attr("aria-expanded", "false").parent().removeClass("accordion__title--active");
+      $("#" + accordionContent).attr("aria-hidden", "true");
+    }
+  });
+}
+
+// accordion function end
+
+// modal start
+function triggerModal() {
+  if ($(".modal__close").length > 0) {
+    $(".modal__close").click(function (e) {
+      e.preventDefault();
+      $(this).closest("dialog")[0].close();
+      $('body').css('overflow', 'unset');
+    });
+  }
+  if ($(".modal__open").length > 0) {
+    $(".modal__open").on("click", function (e) {
+      e.preventDefault();
+      $(this).parent().find("dialog")[0].showModal();
+      $('body').css('overflow', 'hidden');
+    });
+  }
+  let dialogs = document.querySelectorAll(".modal");
+  dialogs.forEach((dialog) => {
+    dialog.addEventListener("click", (e) => {
+      const dialogDimensions = dialog.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        dialog.close();
+        $('body').css('overflow', 'unset');
+      }
+    });
+  });
+}
+// modal end
+
+
+//call the function 
+
+  //Plotly javascript 
+	TESTER = document.getElementById('tester');
+  {% set allData = craft.entries().section('grants').all() %}
+
+    {% set programAreaArray = [] %}
+    {% set StrategiesArray = [] %}
+    {% for programArea in programAreas %}
+        {% set StrategiesArray = StrategiesArray|merge([programArea.title]) %}
+        {% set programAreaArray = programAreaArray|merge(["Program Area"]) %}
+    {% endfor %}
+    {# Loop through all entries #}
+    {% for entry in allData %}
+        {# Check if the entry has tagsProgramAreas defined and it's not null #}
+        {% if entry.tagsProgramAreas is not null and entry.tagsProgramAreas|length %}
+          {% if entry.tagsStrategies is not null and entry.tagsStrategies|length %}
+            {# Get the first tag from tagsProgramAreas #}
+            {% set firstTag = entry.tagsProgramAreas|first %}
+            {% if firstTag.title is not null %}
+                {% set programAreaArray = programAreaArray|merge([firstTag.title]) %}
+            {% endif %}
+            {# Loop through tagsProgramAreas and add titles to programAreaArray #}
+            {# Get the first tag from tagsProgramAreas #}
+            {% set firstTag = entry.tagsStrategies|first %}
+            {% if firstTag.title is not null %}
+                {% set StrategiesArray = StrategiesArray|merge([firstTag.title]) %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+    var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
+    var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
+    console.log(programAreaArray);
+    console.log(StrategiesArray);
+  data = [{
+      type: "treemap",
+      labels: StrategiesArray,
+      parents: programAreaArray,
+      maxdepth: 2,
+      textinfo: "label+percent entry",
+      outsidetextfont: {"size": 20, "color": "#377eb8"},
+      marker: {"line": {"width": 2},"colors": ["white","#008F7F", "#881857", "#E68922", "red", "blue"]}
+}];
+
+var layout = {
+    margin: { t: 25, l: 0, r: 0, b: 0 },
+    height: 600, // Set the desired height in pixels
+    width: 800,  // Set the desired width in pixels
+    // You can also include other layout properties here if needed
+};
+
+Plotly.newPlot(TESTER, data, layout);
+
+
+    });
+{% endjs %}
+
+
+{% set awardYear = "now"|date("Y") - 1 %}
+{% set layout = layout ?? 'grid' %} {# grid or list #}
+{% set sortOption = sortOption ?? 'Most Recent First' %}
+
+
+{% set query = query ?? '' %}
+{% set granteeList = craft.entries().section('grants').search(query).limit(12) %}
+
+{# Paginates the entry query given the current page #}
+    {% set page = page ?? 1 %}
+    {{ hiddenInput('page', page) }}
+    
+{# {% paginate granteeList as pageInfo, pageEntries %} #}
+
+
+{# Sets to a default value if not defined #}
+
+
+
+<section class="section section--grantee"> 
+      <form sprig s-val:page="1" >
+        <div class="container"> 
+          <div class="bg filter"> 
+            <div class="filter__top"> </div>
+            <h3>Subsection Name Dolor Sit Amet</h3>
+            <div class="filter__inputs"> 
+              <button sprig-ignore class="filter__button modal__open"> <span>Add / Modify Filters  </span><span>(0 applied)</span></button>
+              <div class="bf accordion">
+                <div class="accordion__item">
+                  <div class="accordion__title">
+                    <button type="button" aria-expanded="false" aria-controls="content-1"> <span>Sort by : </span><span class="cnt">{{ sortOption }}</span></button>
+                  </div><span class="accordion__logo">
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 5L10 16L4 5L16 5Z" fill="#F5F5F5" fill-opacity="0.65"/>
+                      </svg></span>
+                  <div class="accordion__content" aria-hidden="true" id="content-1" style="display:none;">
+                    <p sprig s-trigger="click" s-val:sortOption="Most Recent First">Most Recent First</p>
+                    <p sprig s-trigger="click" s-val:sortOption="Older First">Older First</p>
+                    <p sprig s-trigger="click" s-val:sortOption="Highest Amount">Highest Amount</p>
+                    <p sprig s-trigger="click" s-val:sortOption="Lowest Amount">Lowest Amount</p>
+                  </div>
+                </div>
+              </div>
+              {# <form sprig> #}
+                <div class="bf input"> 
+                  <div class="input__wrap">
+                    <input type="text" name="query" id="name" placeholder="" aria-labelledby="" value={{ query }}>
+                    {# <input type="text" name="query" value="{{ query }}"> #}
+                    <label for="name">Search by Keyword(s)</label>
+                    <button aria-label="search button" type="submit">
+                      search button
+                      <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 14C11.7614 14 14 11.7614 14 9C14 6.23858 11.7614 4 9 4C6.23858 4 4 6.23858 4 9C4 11.7614 6.23858 14 9 14ZM14.4779 13.3584C15.4306 12.1626 16 10.6478 16 9C16 5.13401 12.866 2 9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16C10.6478 16 12.1626 15.4306 13.3584 14.4779L16 18H18V16L14.4779 13.3584Z" fill="#015750"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="field-error">Please fill out this field.  </div>
+                </div>
+                <dialog  class="modal" style="--modal-bg:#262053">
+                  <div class="modal__header">
+                    <h3>Add/Modify Filters</h3>
+                    <p> <i>Select all that apply</i></p>
+                    <button class="modal__close"> 
+                      <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.58586 8.00008L0.292969 14.293L1.70718 15.7072L8.00007 9.41429L14.293 15.7072L15.7072 14.293L9.41429 8.00008L15.7072 1.70718L14.293 0.292969L8.00007 6.58587L1.70718 0.292975L0.292969 1.70719L6.58586 8.00008Z" fill="#F5F5F5" fill-opacity="0.65"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="modal__cnt"> 
+                    <ul class="accordion" role="list">
+                      <li class="accordion__item" role="listitem">
+                        <div class="accordion__title">
+                          <button type="button" aria-expanded="false" aria-controls="Category-1">Program Areas</button>
+                        </div>
+                        <div class="accordion__content" aria-hidden="true" id="Category-1">
+                          {% for category in programAreas %}
+                              <div class="bf input-wrapper">
+                                <div class="radio-button radio-button--check">
+                                  <label for="{{ category.title }}"> 
+                                    <input class="radio-group" type="checkbox" id="{{ category.title }}"><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
+                                  </label>
+                                </div>
+                              </div>
+                          {% endfor %}
+                        </div>
+                      </li>
+                      <li class="accordion__item" role="listitem">
+                        <div class="accordion__title">
+                          <button type="button" aria-expanded="false" aria-controls="Category-2">Strategies</button>
+                        </div>
+                        <div class="accordion__content" aria-hidden="true" id="Category-2">
+                          {% for category in strategies %}
+                            <div class="bf input-wrapper">
+                              <div class="radio-button radio-button--check">
+                                <label for="{{ category.title }}"> 
+                                  <input class="radio-group" type="checkbox" id="{{ category.title }}"><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
+                                </label>
+                              </div>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="modal__footer"> 
+                    <button class="l-button"> Apply filters</button>
+                    <button class="l-link"> clear all</button>
+                  </div>
+                </dialog>
+              </div>
+            <div class="filter__bottom"> </div>
+            <h4>view as </h4>
+            <div class="filter__radios"> 
+              <div class="bf input-wrapper">
+                <div class="radio-button">
+                  <label for="grid"> 
+                    <input sprig s-trigger="change" type="radio" name="layout" value="grid" id="grid" s-val="layout" {% if layout == "grid" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">Grid</span>
+                  </label>
+                </div>
+              </div>
+              <div class="bf input-wrapper">
+                <div class="radio-button">
+                  <label for="list"> 
+                    <input sprig s-trigger="change"  type="radio" name="layout" value="list" id="list" s-val="layout" {% if layout == "list" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">List</span>
+                  </label>
+                </div>
+              </div>
+              <div class="bf input-wrapper">
+                <div class="radio-button">
+                  <label for="infographic"> 
+                    <input sprig s-trigger="change"  type="radio" name="layout" value="infographic" id="infographic" s-val="layout" {% if layout == "infographic" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">Infographic</span>
+                  </label>
+                </div>
+              </div>
+              {# <div class="bf input-wrapper">
+                <div class="radio-button">
+                  <label for="Infographic"> 
+                    <input class="radio-group" type="radio" id="Infographic" name="view as"><span class="radio-checkmark"></span><span class="radio-label">Infographic</span>
+                  </label>
+                </div>
+              </div> #}
+              <div class="bf input-wrapper">
+                <div class="radio-button">
+                  <label for="map"> 
+                    <input class="radio-group" type="radio" id="map" name="view as"><span class="radio-checkmark"></span><span class="radio-label">map</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+</section>
+
+
+{# <div class="blockGeneric"> #}
+    {# <form sprig>
+        <input type="text" name="query" value="{{ query }}">
+        <select sprig s-trigger="change" value={{ sortOption }} id="sortDropdown" s-val="sortOption">
+            <option value="recent">Most Recent First</option>
+            <option value="older">Older First</option>
+        </select>
+        <input type="submit" value="Search">
+        <input sprig s-trigger="change" type="radio" name="layout" value="grid" id="grid" s-val="layout" {% if layout == "grid" %}checked="checked"{% endif %}>
+        <label for="grid">Grid</label>
+
+        <input sprig s-trigger="change"  type="radio" name="layout" value="list" id="list" s-val="layout" {% if layout == "list" %}checked="checked"{% endif %}>
+        <label for="list">List</label>
+    </form> #}
+{# </div> #}
+
+{# Fetch entries from the "grants" section #}
+{% set granteeListss = craft.entries().section('grants').all() %}
+
+{# Initialize an array to store entries with the "education" tag #}
+{% set educationEntries = [] %}
+
+{# Loop through each entry #}
+{% for entry in granteeListss %}
+    {# Check if the "tagsProgramAreas" field contains "education" #}
+    {% if "Education" in entry.tagsProgramAreas %}
+        {# If it does, add the entry to the educationEntries array #}
+        {% set educationEntries = educationEntries|merge([entry]) %}
+    {% endif %}
+{% endfor %}
+
+{# Output the entries with the "education" tag #}
+{% for educationEntry in educationEntries %}
+    {# {{ educationEntry.title }}<br> #}
+{% endfor %}
+
+
+{% if sortOption == 'Most Recent First' %}
+    {% set granteeList = craft.entries().section({
+            section: "grants",
+        }).dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC ").limit(12) %}
+{% elseif sortOption == 'Older First' %}
+    {% set granteeList = craft.entries().section({
+            section: "grants"
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly ASC").limit(12) %}
+{% elseif sortOption == 'Highest Amount' %}
+    {% set granteeList = craft.entries().section({
+            section: "grants",
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("").limit(12) %}
+{% elseif sortOption == 'Lowest Amount' %}
+    {% set granteeList = craft.entries().section({
+            section: "grants",
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("textAmount ASC").limit(12) %}
+{% else %}
+    {% set granteeList = craft.entries().section({
+            section: "grants"
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC").limit(12) %}
+{% endif %}
+
+{% set pageInfo = sprig.paginate(granteeList, page) %}
+    {% set pageEntries = pageInfo.pageResults %}
+
+{# {% for grantee in pageEntries %}
+    <h2>{{ grantee.title }}</h2>
+    {% for fieldHandle, fieldValue in grantee %}
+        {% if fieldValue is instance of('DateTime') %}
+            <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
+        {% else %}
+            <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
+        {% endif %}
+    {% endfor %}
+{% endfor %}  #}
+
+{# {% for entry in pageEntries %}
+    <h2>{{ entry.title }}</h2>
+    {% for fieldHandle, fieldValue in entry %}
+        {% if fieldValue is instance of('DateTime') %}
+            <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
+        {% else %}
+            <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
+        {% endif %}
+    {% endfor %}
+{% endfor %} #}
+
+{% set end = pageInfo.totalPages %}
+{% if layout == "grid" or layout == "list" %}
+<section id="grantData" class="section section--grantee section--granteecards"> 
+        <div class="container">
+          <div class="bf grantee grantee--{{ layout }}"> 
+          {% set i = 1 %}
+            {% if pageEntries|length %}
+              {% for grants in pageEntries %}
+                    {% set tagValue = "Special Initiatives" %}
+                    {% for tag in grants.tagsProgramAreas.all() %}
+                              {% set tagValue = tag %}
+                    {% endfor %}
+                    <article class="bf grantee-card" style="--var-grantee-color:{% if tagValue == "Special Initiatives" %}#E68922{% elseif tagValue == "Sector Effectiveness" %}#008F7F{% elseif tagValue == "Arts & Creativity" %}#008F7F{% elseif tagValue == "Education" %}#E68922{% elseif tagValue == "Climate" %}#881857{% endif %}">
+
+                      {# <h3>{{ grants.title }}</h3> #}
+                      {# {{ grants.entriesOrganization }} #}
+                      <h3>{% if grants.entriesOrganization.count() > 0 %}
+                            {{grants.entriesOrganization[0]}}
+                        {% else %}
+                          {{ grants.title }}
+                        {% endif %}</h3>
+                      <div class="grantee-card__cnt">{{ grants.textDescription }}</div>
+                      <div class="grantee-card__table"> 
+                        <div class="grantee-card__row"> 
+                          <h4>Fiscal Sponsor</h4>
+                          <div class="grantee-card__value">{% if grants.textName %}{{ grants.textName }}{% else %}
+                            N/A {% endif %}</div>
+                        </div>
+                        <div class="grantee-card__row"> 
+                          <h4>Award Date</h4>
+                          <div class="grantee-card__value">{{ grants.dateOnly|date("m/d/Y") }}</div>
+                        </div>
+                        <div class="grantee-card__row"> 
+                          <h4>Amount</h4>
+                          <div class="grantee-card__value">{{ grants.textAmount }}</div>
+                        </div>
+                        <div class="grantee-card__row"> 
+                          <h4>Term</h4>
+                          <div class="grantee-card__value">{{ grants.textTerm }}{% if 'mos' not in grants.textTerm or 'month' not in grants.textTerm %} mos{% endif %}</div>
+                        </div>
+                        <div class="grantee-card__row grantee-card__row--rev">
+                          <h4>Program(s)</h4>
+                          <ul class="grantee-card__tag" role="list">
+                            {% for tag in grants.tagsProgramAreas.all() %}
+                              <li role="listitem">{{ tag }}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        <div class="grantee-card__row grantee-card__row--rev">
+                          <h4>Strategies</h4>
+                          <ul class="grantee-card__tag" role="list">
+                            {% for tags in grants.tagsStrategies.all() %}
+                              <li role="listitem">{{ tags }}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </div>
+                      {% set linkValue = "/#" %}
+                      {% if grants.entriesOrganization.count() > 0 %}
+                        {% set organizationData = grants.entriesOrganization[0].contactWebsite %}
+
+                        {% if "linkValue" in organizationData %}
+
+                              {% set organizationWebsite = organizationData | json_decode %} 
+                                {% if organizationWebsite %}
+                                  {% set linkValue = organizationWebsite[0]['linkValue'] %}
+                                {% endif %} 
+                        {% else %}
+                              {% set linkValue = organizationData %}
+                        {% endif %}
+                          {# {% set organizationWebsite = organizationData | json_decode %}  #}
+                          {# {% if organizationWebsite %}
+                            {% set linkValue = organizationWebsite[0]['linkValue'] %}
+                          {% endif %}  #}
+                      {% endif %}
+                      
+                      <div class="grantee-card__footer"> <a href="/{% if grants.entriesOrganization.count() > 0 %}{{ grants.entriesOrganization[0].uri }}{% endif %}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
+                      {% if grants.entriesOrganization.count() > 0 %}
+                      <a target="_blank" href="{% if "https://" in linkValue or "http://" in linkValue or  "https//" in linkValue %}{{ linkValue }}{% else %}https://{{ linkValue }}{% endif %}" title="Go to {{ linkValue }}"> <span>website</span><span class="grantee-card__footer-logo"> 
+                            <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M19 1L8.99995 2L12.7928 5.79289L6.29285 12.2929L7.70706 13.7071L14.2071 7.20711L18 11L19 1ZM0 18V8V6H2H7V8H2V18H12V13H14V18V20H12H2H0V18Z"></path>
+                            </svg></span></a>
+                      {% endif %}
+                        </div>
+                    </article>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="pagination-section">
+              <div class="pagination__btn">
+                <a
+                  sprig
+                  s-val:page="1"
+                  class=""
+                  href="#grantData">
+                  <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_5409_34471)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 24L10.5 18L21.5 12L21.5 17L28.5 17L28.5 19L21.5 19L21.5 24ZM10.5 18L10.5 24L8.5 24L8.5 12L10.5 12L10.5 18Z" fill="#015750"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_5409_34471">
+                  <rect width="20" height="20" fill="white" transform="translate(8.5 8)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                </a>
+                {% if pageInfo.prevUrl %}<a
+                  sprig
+                  s-val:page="{{ page -1 }}"
+                  class="" 
+                  href="#grantData">
+                  <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_5409_34477)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 18L19.5 24L19.5 19L28.5 19L28.5 17L19.5 17L19.5 12L8.5 18Z" fill="#015750"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5409_34477">
+                    <rect width="20" height="20" fill="white" transform="translate(8.5 8)"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                </a>{% endif %}
+              </div>
+              {% if end <= 10 %}
+                {% for page, url in pageInfo.getRangeUrls(1 , end) %}
+                      {% if page == pageInfo.currentPage %}
+                          <span class="current">{{ pageInfo.currentPage }}</span>
+                      {% else %}
+                          <a   sprig
+                        s-val:page="{{ page }}" href="#grantData">{{ page }}</a>
+                      {% endif %}   
+                  {% endfor %}
+
+              {% else %}
+              
+                  {% if pageInfo.currentPage > 4 %}
+                      {% for page, url in pageInfo.getRangeUrls(1 , 3) %}
+                          {% if page == pageInfo.currentPage %}
+                              <span class="current">{{ pageInfo.currentPage }}</span>
+                          {% else %}
+                              <a   sprig
+                            s-val:page="{{ page }}" href="#grantData">{{ page }}</a>
+                          {% endif %}   
+                      {% endfor %}
+                  {% else %}
+                      {% for page, url in pageInfo.getRangeUrls(1 , 5) %}
+                          {% if page == pageInfo.currentPage %}
+                              <span class="current">{{ pageInfo.currentPage }}</span>
+                          {% else %}
+                              <a   sprig
+                            s-val:page="{{ page }}" href="#grantData">{{ page }}</a>
+                          {% endif %}   
+                      {% endfor %}
+                  {% endif %}
+
+                  {% if pageInfo.currentPage > 4 and pageInfo.currentPage < end - 3 %}
+                    {% if pageInfo.currentPage != 5 %}<span> . . . </span>{% endif %}
+                    <a  sprig
+                              s-val:page="{{ pageInfo.currentPage - 1 }}" href="#grantData">{{ pageInfo.currentPage - 1 }}</a>
+                    <span class="current">{{ pageInfo.currentPage }}</span>
+                    <a  sprig
+                              s-val:page="{{ pageInfo.currentPage + 1 }}" href="#grantData">{{ pageInfo.currentPage + 1 }}</a>
+                    {% if pageInfo.currentPage != end - 4 %}<span> . . . </span>{% endif %}
+                    {% else %}
+                    <span> . . . </span>
+                    {% endif %}
+                    {# <span class="current">{{ pageInfo.currentPage }}</span> #}
+                    {% if pageInfo.currentPage < end - 3 %}
+                        {% for page, url in pageInfo.getRangeUrls(end - 2 , end) %}
+                            {% if page == pageInfo.currentPage %}
+                                <span class="current">{{ pageInfo.currentPage }}</span>
+                            {% else %}
+                                <a  sprig
+                              s-val:page="{{ page }}" href="#grantData">{{ page }}</a>
+                            {% endif %}   
+                        {% endfor %}
+                    {% else %}
+                        {% for page, url in pageInfo.getRangeUrls(end - 5 , end) %}
+                            {% if page == pageInfo.currentPage %}
+                                <span class="current">{{ pageInfo.currentPage }}</span>
+                            {% else %}
+                                <a  sprig
+                              s-val:page="{{ page }}" href="#grantData">{{ page }}</a>
+                            {% endif %}   
+                        {% endfor %}
+                    {% endif %}
+                {% endif %}
+                <div class="pagination__btn">
+                  {% if pageInfo.nextUrl %}<a
+                    sprig
+                    s-val:page="{{ page + 1 }}"
+                    class=""
+                    href="#grantData">
+                    <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_5409_34495)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5 18L17.5 12V17H8.5V19H17.5V24L28.5 18Z" fill="#015750"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_5409_34495">
+                      <rect width="20" height="20" fill="white" transform="translate(8.5 8)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </a>{% endif %}
+                  <a
+                    sprig
+                    s-val:page="{{ pageInfo.last }}"
+                    class=""
+                    href="#grantData">
+                    <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_5409_34500)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 12L26.5 18L15.5 24V19H8.5V17H15.5V12ZM26.5 18V12H28.5V24H26.5V18Z" fill="#015750"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_5409_34500">
+                      <rect width="20" height="20" fill="white" transform="translate(8.5 8)"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+            </div>
+        </div>
+</section>
+{% elseif layout == "infographic" %}
+  <div id="graph-container">
+    <div id="tester"></div>
+  </div>
+{% endif %}

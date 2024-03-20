@@ -7,8 +7,10 @@ import './components/audio';
 import './components/accordion';
 import './components/carousel';
 import './components/footerForm';
+import './components/grants';
 import './components/navigation';
 import './components/programTabs';
+import './components/plotly';
 import './components/video';
 
 // Component Imports
