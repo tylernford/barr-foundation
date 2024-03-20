@@ -1,4 +1,4 @@
-dateModified: 1710903755
+dateModified: 1710954741
 elementSources:
   craft\elements\Asset:
     -
@@ -227,7 +227,7 @@ elementSources:
       disabled: false
       key: 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
       tableAttributes:
-        - section
+        - 'field:484160c1-8352-47bb-a090-e3e81c4b41d3' # ID: Directory
         - 'field:329ee082-81cc-492f-bc61-0230f4a009b4' # Entries: Person Type
         - revisionCreator
         - link
@@ -323,6 +323,9 @@ elementSources:
       tableAttributes:
         - slug
         - 'field:0e00ff94-ac0c-4383-a7f4-7523a59e99ae' # Tags: Available
+      type: native
+    -
+      key: 'section:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
       type: native
     -
       defaultSort:
@@ -462,6 +465,7 @@ meta:
     0b05b130-5829-4e77-a3f7-ed99ae219ce7: 'Text: Amount' # Text: Amount
     0b12ba92-d669-4feb-9241-037faa9b352b: 'Highlight: Multi-Event Timeline' # Highlight: Multi-Event Timeline
     0b20ecdf-4270-4334-a697-b9ad36c32962: 'Card: Latest News' # Card: Latest News
+    00bd633b-23be-4c76-97dd-edf6554ce500: Default # Default
     0c504d15-eff5-4c67-a859-9cef6adcd964: Footer # Footer
     0e00ff94-ac0c-4383-a7f4-7523a59e99ae: 'Tags: Available' # Tags: Available
     0e1c35ac-38d0-4e66-8b22-bb3d543366d7: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
@@ -481,6 +485,7 @@ meta:
     1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02: 'Opener: Homepage' # Opener: Homepage
     2a1e413c-907d-4522-94f8-878e06c010a9: Entry # Entry
     2a4eb614-dbfd-488e-922b-eeb885fc1e63: Default # Default
+    2abdf5dd-0d2a-4af1-a1cc-f8027bf84fc5: 'Tags: Directory Teams' # Tags: Directory Teams
     2ae46801-59a1-4cf5-a238-a8ba9317eed9: Organization # Organization
     2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23: Images # Images
     02b15980-0b09-401f-8c50-1d153038e69d: Release # Release
@@ -768,6 +773,7 @@ meta:
     265453d5-2d22-4578-9119-b2b7b0e35bf9: Default # Default
     0394538d-48b7-4ac8-bcd6-5866934254f1: 'Card: Grantees' # Card: Grantees
     453424c1-d719-473d-859b-b57b862aa56c: 'Highlight: Timeline (Multiple)' # Highlight: Timeline (Multiple)
+    484160c1-8352-47bb-a090-e3e81c4b41d3: 'ID: Directory' # ID: Directory
     526592df-8835-48ec-80a2-b149d57b3e57: Carousels # Carousels
     625571b0-68f3-4147-b8d6-9cc70d2f47a2: 'Text: Quote' # Text: Quote
     734086c2-3e6c-4bd0-ada5-9d448a5abb03: 'Feed: Grantees' # Feed: Grantees
@@ -858,6 +864,7 @@ meta:
     bffbfe7e-eb55-4525-aafd-4b156d04715d: Image # Image
     c0b3adea-77f8-4182-b17d-7209cb415314: Description # Description
     c0e1ceb5-9d4c-496a-93ad-3adf77924687: Randomize # Randomize
+    c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07: 'Categories: Directory Teams' # Categories: Directory Teams
     c1f9543f-7b4c-4544-803c-a1a02aa27a1f: 'Text: Name' # Text: Name
     c2ff6d2c-f979-4a50-88dd-c960f6aa9e0b: __blank__ # __blank__
     c5b0dd4c-0674-4747-adf3-2fa7a9bcea40: 'Contact: YouTube' # Contact: YouTube

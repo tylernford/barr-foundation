@@ -9,7 +9,7 @@
     {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/03_modules/_feed' as feeds %}
 
-    {% set name      = person.title %}
+    {% set name      = person.textFirst %}
     {% set bio       = person.textBody %}
     {% set email     = person.contactEmail %}
     {% set linkedin  = person.contactLinkedIn %}

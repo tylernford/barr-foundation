@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: directoryTeamsCategories
+name: 'Categories: Directory Teams'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 9e6c8110-ff95-48c2-b4df-7318760af11d
+type: structure

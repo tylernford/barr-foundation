@@ -30,12 +30,36 @@ fieldLayouts:
             uid: 027d3f60-3fac-408a-99e1-3a6cfd86c8e3
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 484160c1-8352-47bb-a090-e3e81c4b41d3 # ID: Directory
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b075e36-233c-4996-bcd5-05e4efe2131d
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 89018b53-2891-452a-b5b3-64715ddab024
             userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 3a2f39b7-ed74-4fe2-aa22-685cdd11a644 # Text: First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c834e1ec-1a64-49c6-9c26-986e51d33f32
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: b79fbb2a-3495-4126-aec7-ef3eea56e1a1 # Text: Pronouns
@@ -62,13 +86,37 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
-            instructions: Deprecated.
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9ecae88f-f550-4e14-8eb8-3aa61d39ab8a
+            uid: d453d55f-cf91-4609-9902-ae1370bdbc6d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8797d2b7-0618-41a9-9981-6a75d957809a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 2abdf5dd-0d2a-4af1-a1cc-f8027bf84fc5 # Tags: Directory Teams
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5982ff0b-5aec-420c-8ad5-5e9c5f4c4662
             userCondition: null
             warning: null
             width: 50
@@ -93,30 +141,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 59261354-c989-4cd3-bc09-b10d7835cba9
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8797d2b7-0618-41a9-9981-6a75d957809a
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d453d55f-cf91-4609-9902-ae1370bdbc6d
             userCondition: null
             warning: null
             width: 50
