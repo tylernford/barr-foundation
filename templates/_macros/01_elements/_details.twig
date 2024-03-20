@@ -64,7 +64,7 @@
   {% macro list(variant, isReversed, details) %}
     {% import '_macros/01_elements/_image' as images %}
 
-    {% set programAreas =  craft.entries().section('programAreasCategories') %}
+    {% set programAreas = craft.entries().section('programAreasCategories') %}
 
     <ul class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       {% for detail in details %}

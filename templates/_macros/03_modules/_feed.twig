@@ -32,6 +32,8 @@
                     {{ cards.bio(feedItem) }}
                 {% elseif cardVariant == 'post' %}
                     {{ cards.post(feedItem) }}
+                {% elseif cardVariant == 'news' %}
+                    {{ cards.news(feedItem) }}
                 {% endif %}
             {% endfor %}
         </div>
