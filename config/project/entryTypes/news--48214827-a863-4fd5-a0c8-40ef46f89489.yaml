@@ -152,9 +152,9 @@ fieldLayouts:
         name: Content
         uid: 95886ab3-b76a-4da7-98fc-cb01fb61b156
         userCondition: null
-handle: default
+handle: news
 hasTitleField: true
-name: Default
+name: News
 section: bd681dfd-af4d-42fa-9b3d-405bb72ab5d7 # Newsroom
 showStatusField: true
 slugTranslationKeyFormat: null
