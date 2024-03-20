@@ -1,0 +1,121 @@
+field: 627e51e8-b9fd-4b79-b8fa-98cbdfbdb02f # Text: Featured Links
+fieldLayouts:
+  d963affb-a3ed-47d2-b2a6-e7983b1e45dc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d59de2e1-216a-4da5-a481-776b806f2b39 # Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c559d92-6d3f-497d-b2de-4ab36e374b79
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 517b6a6e-0fcd-47d1-bf1a-9915a93d3e0d # Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 712af572-02d5-4d87-a5f6-0725910db439
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2c7d64bd-51d8-4708-a007-75c7a85a1a8b
+        userCondition: null
+fields:
+  517b6a6e-0fcd-47d1-bf1a-9915a93d3e0d: # Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: featuredLink
+    instructions: null
+    name: Link
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: url
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  d59de2e1-216a-4da5-a481-776b806f2b39: # Summary
+    columnSuffix: gyyfckde
+    contentColumnType: text
+    fieldGroup: null
+    handle: summary
+    instructions: 'Optional summary text.'
+    name: Summary
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: featuredLink
+name: Link
+sortOrder: 1

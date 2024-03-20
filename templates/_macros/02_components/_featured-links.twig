@@ -9,8 +9,8 @@
       ]
 ======================================= #}
 
-{% macro featuredLinks(linkList) %}
-  <ul class="featuredLinks">
+{% macro featuredLinks(linkList, variant) %}
+  <ul class="featuredLinks"{{ variant == 'inline' ? ' data-inline=true' }}>
     {% for linkItem in linkList %}
       {% set link = linkItem.featuredLink %}
       {% set summary = linkItem.summary %}
