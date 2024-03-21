@@ -663,6 +663,11 @@
       padding: var(--base-9);
     }
 
+    .cardItem__inner {
+      display: flex;
+      flex-direction: column;
+    }
+    
     // Header
     .cardItem__header {
       margin-block-end: var(--base-6);
@@ -717,6 +722,8 @@
 
     // Actions
     .cardItem__actions {
+      margin-block-start: auto;
+
       .action {
         &:first-child {
           margin-inline-end: var(--base-4);
