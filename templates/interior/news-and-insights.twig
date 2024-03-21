@@ -34,7 +34,7 @@ News & Insights Interior template
     {% if builder %}
         {% include '_partials/_builder-common.twig' with {'builder': builder} %}
     {% elseif entry.title == 'Newsroom' %}
-        {% set newsroomItems = craft.entries().section('newsroom') %}
+        {% set newsroomItems = craft.entries().section('newsroom').type('not research') %}
 
         {% set title = 'Temp Newsroom Grid' %}
         {% set feed  = newsroomItems %}

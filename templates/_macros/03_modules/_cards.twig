@@ -62,7 +62,7 @@
       {% endif %}
     {% endif %}
 
-    {% set autoCards = craft.entries().section(sections).relatedTo(filterParameters).orderBy(orderBy).limit(3) %}
+    {% set autoCards = craft.entries().section(sections).type('not research').relatedTo(filterParameters).orderBy(orderBy).limit(3) %}
 
     {% for card in autoCards %}
       {% set feedCards = feedCards|merge([card]) %}

@@ -377,94 +377,145 @@
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
 
-    {% set image = card.assetImage.one %}
-    {% set label = '' %}
-    {% set publication = card.textPublication %}
-    {% set title = card.title %}
+    {% if card.type != 'research' %}
+        {% set image = card.assetImage.one %}
+        {% set label = '' %}
+        {% set publication = card.textPublication %}
+        {% set title = card.title %}
 
-    {# Set published date #}
-    {% set publishedDate = card.postDate %}
+        {# Set published date #}
+        {% set publishedDate = card.postDate %}
 
-    {# Set authors #}
-    {% set authors = card.textName %}
+        {# Set authors #}
+        {% set authors = card.textName %}
 
-    {# Set tags #}
-    {% set tagsList = [card] %}
+        {# Set tags #}
+        {% set tagsList = [card] %}
 
-    {# Set summary #}
-    {% set summary = card.textDescription %}
+        {# Set summary #}
+        {% set summary = card.textDescription %}
 
-    {# Set action #}
-    {% set action = card.actionLink %}
+        {# Set action #}
+        {% set action = card.actionLink %}
 
-    <article class="cardItem cardItem--generic">
-        <div class="cardItem__inner">
-            {# Image #}
-            {% if image %}
-                <div class="cardItem__media">
-                    {{ images.image(image, '912', '16/9', '', false) }}
-                </div>
-            {% endif %}
-
-            {# Header #}
-            <header class="cardItem__header">
-                {% if publication|length %}                    
-                    <div>
-                        <h3 class="cardItem__publication">{{ publication }}</h3>
-                        <h4 class="cardItem__heading">{{ title }}</h4>
-                    </div>
-                {% else %}
-                    <h3 class="cardItem__heading">{{ title }}</h3>
-                {% endif %}
-                <span class="cardItem__label">In the News</span>
-            </header>
-
-            {# Content #}
-            <div class="cardItem__content">
-                {# Details #}
-                <div class="cardItem__details">
-                    {# Published date #}
-                    <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
-
-                    {# Authors #}
-                    {% if authors|length %}                    
-                        <p class="cardItem__authors">{{ authors }}</p>
-                    {% endif %}
-                </div>
-
-                {# Summary #}
-                {% if summary|length %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
+        <article class="cardItem cardItem--generic">
+            <div class="cardItem__inner">
+                {# Image #}
+                {% if image %}
+                    <div class="cardItem__media">
+                        {{ images.image(image, '912', '16/9', '', false) }}
                     </div>
                 {% endif %}
 
-                {# Actions #}
-                <div class="cardItem__actions">
-                    {# Tags #}
-                    {% if tagsList|length %}
-                        <div class="cardItem__tags">
-                            {{ tagLogic.tags(tagsList)}}
+                {# Header #}
+                <header class="cardItem__header">
+                    {% if publication|length %}                    
+                        <div>
+                            <h3 class="cardItem__publication">{{ publication }}</h3>
+                            <h4 class="cardItem__heading">{{ title }}</h4>
+                        </div>
+                    {% else %}
+                        <h3 class="cardItem__heading">{{ title }}</h3>
+                    {% endif %}
+                    <span class="cardItem__label">In the News</span>
+                </header>
+
+                {# Content #}
+                <div class="cardItem__content">
+                    {# Details #}
+                    <div class="cardItem__details">
+                        {# Published date #}
+                        <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+
+                        {# Authors #}
+                        {% if authors|length %}                    
+                            <p class="cardItem__authors">{{ authors }}</p>
+                        {% endif %}
+                    </div>
+
+                    {# Summary #}
+                    {% if summary|length %}
+                        <div class="cardItem__summary">
+                            {{ summary }}
                         </div>
                     {% endif %}
 
-                    {# Action #}
-                    {% if action.url|length %}
-                        <div class="cardItem__action">
-                            {% set actionAttributes = {
-                                type: 'button', isReversed: false,
-                                icon: 'linkType', iconOnly: false,
-                                text: action.text, url: action,
-                                linkType: action.type, target: action.target
-                            } %}
+                    {# Actions #}
+                    <div class="cardItem__actions">
+                        {# Tags #}
+                        {% if tagsList|length %}
+                            <div class="cardItem__tags">
+                                {{ tagLogic.tags(tagsList)}}
+                            </div>
+                        {% endif %}
 
-                            {{ actions.action(actionAttributes) }}
-                        </div>
-                    {% endif %}
+                        {# Action #}
+                        {% if action.url|length %}
+                            <div class="cardItem__action">
+                                {% set actionAttributes = {
+                                    type: 'button', isReversed: false,
+                                    icon: 'linkType', iconOnly: false,
+                                    text: action.text, url: action,
+                                    linkType: action.type, target: action.target
+                                } %}
+
+                                {{ actions.action(actionAttributes) }}
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
+    {% else %}
+        {% set title = card.title %}
+        {% set image = card.cardPost.assetImage.one %}
+        {% set summary = card.cardPost.textSupporting %}
+        {% set action = card.cardPost.actionLink %}
+
+        <article class="cardItem cardItem--generic">
+            <div class="cardItem__inner">
+                {# Image #}
+                {% if image %}
+                    <div class="cardItem__media">
+                        {{ images.image(image, '912', '16/9', '', false) }}
+                    </div>
+                {% endif %}
+
+                {# Header #}
+                <header class="cardItem__header">
+                    <h3 class="cardItem__heading">{{ title }}</h3>
+                    <span class="cardItem__label">Research</span>
+                </header>
+
+                {# Content #}
+                <div class="cardItem__content">
+                    {# Summary #}
+                    {% if summary|length %}
+                        <div class="cardItem__summary">
+                            {{ summary }}
+                        </div>
+                    {% endif %}
+
+                    {# Actions #}
+                    <div class="cardItem__actions">
+                        {# Action #}
+                        {% if action.url|length %}
+                            <div class="cardItem__action">
+                                {% set actionAttributes = {
+                                    type: 'button', isReversed: false,
+                                    icon: 'linkType', iconOnly: false,
+                                    text: action.text, url: action,
+                                    linkType: action.type, target: action.target
+                                } %}
+
+                                {{ actions.action(actionAttributes) }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </article>
+    {% endif %}
 {% endmacro %}
 
 

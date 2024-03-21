@@ -43,7 +43,7 @@
       {% set sources = sources|merge([source.value]) %}
     {% endfor %}
 
-    {% set autoCards = craft.entries().section(sources).limit(4) %}
+    {% set autoCards = craft.entries().section(sources).type('not research').limit(4) %}
     {% for card in autoCards %}
       {% set feedCards = feedCards|merge([card]) %}
     {% endfor %}
@@ -111,7 +111,8 @@
         {{ cards.post(card) }}
           
       {% elseif cardVariant == 'news' %}
-        {{ cards.news(card) }}
+        {{ card }}
+        {# {{ cards.news(card) }} #}
       {% endif %}
     {% endif %}
   {% endmacro %}

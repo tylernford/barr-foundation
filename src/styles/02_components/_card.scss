@@ -862,6 +862,13 @@
       margin-block-start: 0;
     }
 
+    // Summary
+    .cardItem__summary {
+      strong {
+        font-style: italic;
+      }
+    }
+
     // Actions {
     .cardItem__actions {
       margin-block-start: auto;

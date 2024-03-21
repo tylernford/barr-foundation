@@ -186,7 +186,7 @@
             {% endif %}
         {% endif %}
 
-        {% set autoCards = craft.entries().section(sections).relatedTo(filterParameters).orderBy(orderBy).limit(limit) %}
+        {% set autoCards = craft.entries().section(sections).type('not research').relatedTo(filterParameters).orderBy(orderBy).limit(limit) %}
 
         {{ _self.cards(autoCards) }}
     {% endmacro %}
