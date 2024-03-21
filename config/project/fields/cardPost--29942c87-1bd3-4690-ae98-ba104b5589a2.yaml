@@ -7,23 +7,9 @@ name: 'Card: Post'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1660109278
+  changedFieldIndicator: 374937081
   columns:
     __assoc__:
-      -
-        - 70d8712d-2a67-493a-a1a0-7ed698a9ee5d # Date: Published
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - b50dc00d-971b-4a33-a1f2-de240fbc64c6 # Entries: Authors
-        -
-          __assoc__:
-            -
-              - width
-              - ''
       -
         - d3b98f80-1cee-4849-a97b-9db551b73c5d # Asset: Image
         -

@@ -1,4 +1,4 @@
-dateModified: 1710992220
+dateModified: 1711047717
 elementSources:
   craft\elements\Asset:
     -
@@ -640,7 +640,6 @@ meta:
     66e0f455-1a4d-4b7b-8bb2-7a247cf9f655: Imports # Imports
     66f36432-924e-4595-914f-17cb32843c88: Changelog # Changelog
     69d6dd81-6c23-41bb-a33d-7ac17917886e: Default # Default
-    70d8712d-2a67-493a-a1a0-7ed698a9ee5d: 'Date: Published' # Date: Published
     70dd6f0e-8aa3-4520-b68c-48cbb2f3b70b: 'Nested Menu' # Nested Menu
     70f8f4e5-9348-45f1-ab46-504aad878946: Action # Action
     071f0627-4d57-45f3-be3b-2d686513516e: 'Contact: Instagram' # Contact: Instagram
@@ -842,7 +841,6 @@ meta:
     b7c24e4c-586b-4a34-9bdc-39a13aac1488: Contact # Contact
     b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400: 'Entries: Team' # Entries: Team
     b8d4ea4e-74b0-46b4-9a80-39170eb76c27: 'Highlight: Stats' # Highlight: Stats
-    b50dc00d-971b-4a33-a1f2-de240fbc64c6: 'Entries: Authors' # Entries: Authors
     b68fa7d0-ea0f-4788-841c-bbce45e4344a: 'Text: Notes' # Text: Notes
     b75b1db0-3847-487e-a95f-30047f42b5ad: 'Contact Form' # Contact Form
     b79ce34d-ad66-4028-8d7b-c171c4c8cc40: 'Geo Regions' # Geo Regions
