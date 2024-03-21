@@ -227,7 +227,6 @@
     {% set label    = 'label' in config|keys ? config.label : null %}
     {% set summary  = card.textDescription ?? card.textDescription %}
     {% set location = card.textLocation %}
-    {% set region   = 'Placeholder Region' %}
     {% set profile  = card.url %}
     {% set website  = card.contactWebsite %}
 
@@ -261,7 +260,7 @@
                 {% endif %}
 
                 <div class="cardItem__secondary">
-                    {# Location/Region #}
+                    {# Location #}
                     {% if location|length %}
                         {{ details.detail('location', false, location) }}
                     {% endif %}
@@ -384,7 +383,7 @@
     {% set title = card.title %}
 
     {# Set published date #}
-    {% set publishedDate = card.dateOnly %}
+    {% set publishedDate = card.postDate %}
 
     {# Set authors #}
     {% set authors = card.textName %}
@@ -481,7 +480,7 @@
     {% set title = post.title %}
 
     {# Set published date #}
-    {% set publishedDate = post.dateOnly %}
+    {% set publishedDate = post.postDate %}
 
     {# Set authors #}
     {% set authors = post.entriesTeam %}
@@ -597,7 +596,7 @@
         {# Grant Detail Object #}
         {% set detailObj = {
             'Fiscal Sponsor': grant ? grant.textName,
-            'Award Date': grant ? grant.dateOnly|date("m/d/Y"),
+            'Award Date': grant ? grant.postDate|date("m/d/Y"),
             'Amount': grant ? grant.textAmount,
             'Term': grant ? grant.textTerm,
             'Program(s)': grant ? grant.tagsProgramAreas.all(),

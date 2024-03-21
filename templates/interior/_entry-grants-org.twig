@@ -126,14 +126,14 @@
                             {{ cards.news(card) }}
                             
                         {% elseif cardVariant == 'grants' %}
-                            <article class="cardItem cardItem--grant">
-                                <div class="cardItem__inner">
-                                    {# Header #}
-                                    <header class="cardItem__header">
-                                        <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
-                                    </header>
-                                </div>
-                            </article>
+                            {% set grantCardConfig = {
+                                'variant': 'grid',
+                                'content': {
+                                    'grantee': card.entriesOrganization.one,
+                                    'grant': card
+                                }
+                            }%}
+                            {{ cards.grant(grantCardConfig) }}
                         {% endif %}
                     {% endif %}
                 {% endfor %}

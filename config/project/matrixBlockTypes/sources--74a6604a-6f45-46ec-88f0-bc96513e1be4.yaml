@@ -19,13 +19,25 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 690e3ae6-6702-4e43-9fa7-5293eb17523f # Tags: Categories or Program Areas
+            fieldUid: be795e4c-65da-45f5-9320-13213acf7b06 # Tags: Program Areas
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 186c2be6-474e-43a7-8678-6fc20e49c725
+            uid: 5648afb4-08b6-432a-8e23-b99a34726d8a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 06e5af72-3b9f-4d67-bf09-d74b980bbe71 # Tags: Categories
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8daffb68-d86e-4ca3-b9d1-92411b4109b4
             userCondition: null
             warning: null
             width: 50
@@ -38,6 +50,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 1adff5e6-82ae-4406-8092-9e76df2012cb
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 690e3ae6-6702-4e43-9fa7-5293eb17523f # Tags: Categories or Program Areas
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 186c2be6-474e-43a7-8678-6fc20e49c725
             userCondition: null
             warning: null
             width: 100
@@ -102,12 +126,70 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Checkboxes
+  06e5af72-3b9f-4d67-bf09-d74b980bbe71: # Tags: Categories
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: tagsCategories
+    instructions: 'Optional. Select one or many Categories. Only entries from the selected source(s) that match the chosen tags will be displayed.'
+    name: 'Tags: Categories'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+          -
+            - conditionRules
+            -
+              -
+                __assoc__:
+                  -
+                    - class
+                    - craft\fields\conditions\OptionsFieldConditionRule
+                  -
+                    - uid
+                    - a352fdfa-9b62-4bfe-b81a-6115436739eb
+                  -
+                    - operator
+                    - in
+                  -
+                    - values
+                    -
+                      - blog
+                      - newsroom
+                  -
+                    - fieldUid
+                    - 0e00ff94-ac0c-4383-a7f4-7523a59e99ae # Tags: Available
+      selectionLabel: 'Add a Category'
+      showSiteMenu: true
+      sources:
+        - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
   690e3ae6-6702-4e43-9fa7-5293eb17523f: # Tags: Categories or Program Areas
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: tagsEntry
-    instructions: 'Optional. Select one or many Categories or Program Areas. Only entries from the selected source(s) that match the chosen tags will be displayed.'
+    instructions: DEPRECATED.
     name: 'Tags: Categories or Program Areas'
     searchable: false
     settings:
@@ -122,6 +204,31 @@ fields:
       sources:
         - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
         - 'section:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  be795e4c-65da-45f5-9320-13213acf7b06: # Tags: Program Areas
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: tagsProgramAreas
+    instructions: 'Optional. Select one or many Program Areas. Only entries from the selected source(s) that match the chosen tags will be displayed.'
+    name: 'Tags: Program Areas'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionLabel: 'Add a Program Area'
+      showSiteMenu: true
+      sources:
+        - 'section:c5ff63d6-ea19-4873-a127-52e78a525a16' # Categories: Program Areas
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null

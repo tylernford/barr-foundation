@@ -50,30 +50,6 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 25949bb9-af67-45e6-9adb-fc8c568dba48 # Date: Date Only
-            instructions: 'Article publication date.'
-            label: 'Date: Published'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3928e912-8c8a-4278-86fd-f793b3d2ca4e
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: c1f9543f-7b4c-4544-803c-a1a02aa27a1f # Text: Name
-            instructions: 'Comma-separated list of authors.'
-            label: 'Text: Author(s)'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 16d299a1-73c4-4258-b0e5-5081eee8040d
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 4217f7b3-ec24-454d-87f2-1998f0a0baae # Tags: Program Areas
             instructions: null
             label: null

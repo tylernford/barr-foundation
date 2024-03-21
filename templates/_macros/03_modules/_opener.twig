@@ -115,6 +115,7 @@
 {% endmacro %}
 
 {% macro bio(entry) %}
+    {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -134,14 +135,8 @@
     {# Set job title #}
     {% set jobTitle = bio.textJob %}
 
-    {# Set program areas #}
-    {% set programs = bio.tagsEntry %}
-    {% set programAreas = [] %}
-    {% for program in programs %}
-        {% set programAreas = programAreas|merge([
-            { 'title': program, 'url': program.url }
-        ]) %}
-    {% endfor %}
+    {# Set tags #}
+    {% set tagsList = [bio] %}
 
     {# Set image #}
     {% set image = bio.assetImage.one %}
@@ -168,9 +163,9 @@
                 {% endif %}
 
                 {# Tags #}
-                {% if programAreas|length %}
+                {% if tagsList|length %}
                     <div class="primary__tags">
-                        {{ details.detail('tags', false, programAreas) }}
+                        {{ tagLogic.tags(tagsList)}}
                     </div>
                 {% endif %}
             </div>
@@ -204,7 +199,7 @@
     ] %}
 
     {# Set published date #}
-    {% set publishedDate = post.dateOnly %}
+    {% set publishedDate = post.postDate %}
 
     {# Set authors #}
     {% set authors = post.entriesTeam %}

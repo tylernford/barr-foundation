@@ -39,7 +39,7 @@
                 {# Retrieve current award year's grant associated with grantee #}
                 {% set grant = craft.entries({
                     section: "grants",
-                    dateOnly: ["and", ">= #{awardYear}"],
+                    postDate: ["and", ">= #{awardYear}"],
                     entriesOrganization: grantee
                 }).one() %}
 
