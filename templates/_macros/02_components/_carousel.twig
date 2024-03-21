@@ -155,8 +155,6 @@
 
     {# Auto #}
     {% macro carouselAutoLogic(carousel) %}
-        {% set autoFeed = carousel.sources %}
-
         {% set sources      = carousel.sources %}
         {% set limit        = carousel.numberOfCards %}
         {% set programAreas = carousel.tagsProgramAreas %}
@@ -176,7 +174,7 @@
         {% endfor %}
 
         {# Merge selected Program Areas and Categories #}
-        {% set filterParameters = ['and'] %}
+        {% set filterParameters = programAreas|length or categories|length ? ['and'] : '' %}
         {% set filterParameters = programAreas|length ? filterParameters|merge([programAreas]) : filterParameters %}
         {% set filterParameters = categories|length ? filterParameters|merge([categories]) : filterParameters %}
 

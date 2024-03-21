@@ -12,8 +12,6 @@
 
   {# Set manualFeed #}
   {% set manualFeed = config.cards.children.one.cardsFeedManual ?  config.cards.children.one.cardsFeedManual %}
-  {# Set autoFeed #}
-  {% set autoFeed = config.cards.children.one.cardsFeedAuto ? config.cards.children.one.cardsFeedAuto %}
   {# Set empty feedCards array #}
   {% set feedCards = [] %}
 
@@ -33,13 +31,39 @@
             
   {# Auto cards #}
   {% else %}
-    {% set sources = [] %}
+    {% set autoFeed     = config.cards.children.one.cardsFeedAuto %}
+    {% set sources      = autoFeed.one.sources %}
+    {% set programAreas = autoFeed.one.tagsProgramAreas %}
+    {% set categories   = autoFeed.one.tagsCategories %}
+    {% set randomize    = autoFeed.one.randomize %}
 
-    {% for source in autoFeed.one.sources %}
-      {% set sources = sources|merge([source.value]) %}
+    {# Merge selected sources (Blog, Newsroom, Grants, and/or Grantees) #}
+    {% set sections = [] %}
+    {% for section in sources %}
+      {% set sections = sections|merge([section.value]) %}
     {% endfor %}
 
-    {% set autoCards = craft.entries().section(sources).limit(3) %}
+    {# Merge selected sources (Blog, Newsroom, Grants, and/or Grantees) #}
+    {% set sections = [] %}
+    {% for section in sources %}
+      {% set sections = sections|merge([section.value]) %}
+    {% endfor %}
+
+    {# Merge selected Program Areas and Categories #}
+    {% set filterParameters = programAreas|length or categories|length ? ['and'] : '' %}
+    {% set filterParameters = programAreas|length ? filterParameters|merge([programAreas]) : filterParameters %}
+    {% set filterParameters = categories|length ? filterParameters|merge([categories]) : filterParameters %}
+
+    {# Check if sources are only Grants or Grantees #}
+    {% set orderBy = 'postDate DESC' %}
+    {% if 'blog' not in sources %}
+      {% if 'newsroom' not in sources %}
+        {% set orderBy = randomize == true ? 'RAND()' : orderBy %}
+      {% endif %}
+    {% endif %}
+
+    {% set autoCards = craft.entries().section(sections).relatedTo(filterParameters).orderBy(orderBy).limit(3) %}
+
     {% for card in autoCards %}
       {% set feedCards = feedCards|merge([card]) %}
     {% endfor %}
