@@ -238,16 +238,16 @@
                     </div>
                     
                 {% elseif cardVariant == 'grants' %}
+                    {% set grantCardConfig = {
+                        'variant': 'grid',
+                        'content': {
+                            'grantee': card.entriesOrganization.one,
+                            'grant': card
+                        }
+                    }%}
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
-                        <article class="cardItem cardItem--grant">
-                            <div class="cardItem__inner">
-                                {# Header #}
-                                <header class="cardItem__header">
-                                    <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
-                                </header>
-                            </div>
-                        </article>
+                        {{ cards.grant(grantCardConfig) }}
                     </div>
                 {% endif %}
             {% endif %}

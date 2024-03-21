@@ -227,7 +227,6 @@
     {% set label    = 'label' in config|keys ? config.label : null %}
     {% set summary  = card.textDescription ?? card.textDescription %}
     {% set location = card.textLocation %}
-    {% set region   = 'Placeholder Region' %}
     {% set profile  = card.url %}
     {% set website  = card.contactWebsite %}
 
@@ -261,7 +260,7 @@
                 {% endif %}
 
                 <div class="cardItem__secondary">
-                    {# Location/Region #}
+                    {# Location #}
                     {% if location|length %}
                         {{ details.detail('location', false, location) }}
                     {% endif %}
