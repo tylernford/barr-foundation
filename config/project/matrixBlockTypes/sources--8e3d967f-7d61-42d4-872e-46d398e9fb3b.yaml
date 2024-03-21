@@ -122,6 +122,39 @@ fields:
       maintainHierarchy: false
       maxRelations: null
       minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+          -
+            - conditionRules
+            -
+              -
+                __assoc__:
+                  -
+                    - class
+                    - craft\fields\conditions\OptionsFieldConditionRule
+                  -
+                    - uid
+                    - e9e3d700-41dc-47d1-9650-ff5c24440c2a
+                  -
+                    - operator
+                    - in
+                  -
+                    - values
+                    -
+                      - blog
+                      - newsroom
+                  -
+                    - fieldUid
+                    - 0e00ff94-ac0c-4383-a7f4-7523a59e99ae # Tags: Available
       selectionLabel: 'Add a Category'
       showSiteMenu: true
       sources:

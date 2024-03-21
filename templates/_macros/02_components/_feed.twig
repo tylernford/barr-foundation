@@ -30,8 +30,6 @@
         {% case 'cards' %}
             {# Set manualFeed #}
             {% set manualFeed = content.children.one.cardsFeedManual %}
-            {# Set autoFeed #}
-            {% set autoFeed = content.children.one.cardsFeedAuto ? content.children.one.cardsFeedAuto.one.sources %}
             {# Set empty feedCards array #}
             {% set feedCards = [] %}
 
@@ -51,13 +49,33 @@
             
             {# Auto cards #}
             {% else %}
-                {% set sources = [] %}
+                {# Tags #}
+                {% set sources = content.children.one.cardsFeedAuto.one.sources %}
+                {% set programAreas = content.children.one.cardsFeedAuto.one.tagsProgramAreas %}
+                {% set categories = content.children.one.cardsFeedAuto.one.tagsCategories %}
+                {% set randomize = content.children.one.cardsFeedAuto.one.randomize %}
 
-                {% for source in autoFeed %}
-                    {% set sources = sources|merge([source.value]) %}
+                {# Merge selected sources (Blog, Newsroom, Grants, and/or Grantees) #}
+                {% set sections = [] %}
+                {% for section in sources %}
+                    {% set sections = sections|merge([section.value]) %}
                 {% endfor %}
 
-                {% set autoCards = craft.entries().section(sources).limit(3) %}
+                {# Merge selected Program Areas and Categories #}
+                {% set filterParameters = ['and'] %}
+                {% set filterParameters = programAreas|length ? filterParameters|merge([programAreas]) : filterParameters %}
+                {% set filterParameters = categories|length ? filterParameters|merge([categories]) : filterParameters %}
+
+                {# Check if sources are only Grants or Grantees #}
+                {% set orderBy = 'postDate DESC' %}
+                {% if 'blog' not in sources %}
+                    {% if 'newsroom' not in sources %}
+                        {% set orderBy = randomize == true ? 'RAND()' : orderBy %}
+                    {% endif %}
+                {% endif %}
+
+                {% set autoCards = craft.entries().section(sections).relatedTo(filterParameters).orderBy(orderBy).limit(3) %}
+
                 {% for card in autoCards %}
                     {% set feedCards = feedCards|merge([card]) %}
                 {% endfor %}
@@ -112,12 +130,10 @@
                             {{ cards.news(card) }}
                             
                         {% elseif cardVariant == 'grants' %}
-                            {# {% set granteeCardConfig = {
-                                'grantee': card
-                            } %}#}
                             {% set grantCardConfig = {
                                 'variant': 'grid',
                                 'content': {
+                                    'grantee': card.entriesOrganization.one,
                                     'grant': card
                                 }
                             }%}
