@@ -82,8 +82,8 @@ function checkOthers(elem) {
 
 $(document).on("click", function (e) {
     if (!$(e.target).closest('.accordion').length) {
-      $(".accordion .accordion__content").slideUp();
-      $(".accordion .accordion__title button").attr("aria-expanded", "false").parent().removeClass("accordion__title--active");
+      $(".bf.accordion .accordion__content").slideUp();
+      $(".bf.accordion .accordion__title button").attr("aria-expanded", "false").parent().removeClass("accordion__title--active");
       $("#" + accordionContent).attr("aria-hidden", "true");
     }
   });
@@ -180,6 +180,25 @@ var layout = {
 
 Plotly.newPlot(TESTER, data, layout);
 
+    // Add event listener for click events on the plot
+    TESTER.on('plotly_click', function(data){
+        console.log("Treemap Clicked!!");
+        // Get the clicked point
+        var point = data.points[0];
+        console.log(" depth:", point.currentPath.length);
+
+        // Check if the clicked treemap node is of depth 3
+        if (point.currentPath.length > 13 ) { // Change 3 to the appropriate depth
+            // Log the values of the first and second depth
+            console.log("First depth:", point.parent);
+            console.log("Second depth:", point.label);
+            
+            // Redirect to the desired URL
+            window.location.href = "your_redirect_url_here";
+        }
+    });
+
+
 
     });
 {% endjs %}
@@ -188,7 +207,8 @@ Plotly.newPlot(TESTER, data, layout);
 {% set awardYear = "now"|date("Y") - 1 %}
 {% set layout = layout ?? 'grid' %} {# grid or list #}
 {% set sortOption = sortOption ?? 'Most Recent First' %}
-
+{% set filterOption = filterOption ?? ['Education'] %}
+{# {{ filterOption|json_encode|raw }} #}
 
 {% set query = query ?? '' %}
 {% set granteeList = craft.entries().section('grants').search(query).limit(12) %}
@@ -202,8 +222,10 @@ Plotly.newPlot(TESTER, data, layout);
 
 {# Sets to a default value if not defined #}
 
-
-
+{% for option in filterOption %}
+                  {# {{ option }} #}
+                  {% if not loop.last %}, {% endif %}
+{% endfor %}
 <section class="section section--grantee"> 
       <form sprig s-val:page="1" >
         <div class="container"> 
@@ -243,7 +265,7 @@ Plotly.newPlot(TESTER, data, layout);
                   </div>
                   <div class="field-error">Please fill out this field.  </div>
                 </div>
-                <dialog  class="modal" style="--modal-bg:#262053">
+                <dialog sprig-ignore class="modal" style="--modal-bg:#262053">
                   <div class="modal__header">
                     <h3>Add/Modify Filters</h3>
                     <p> <i>Select all that apply</i></p>
@@ -264,7 +286,7 @@ Plotly.newPlot(TESTER, data, layout);
                               <div class="bf input-wrapper">
                                 <div class="radio-button radio-button--check">
                                   <label for="{{ category.title }}"> 
-                                    <input class="radio-group" type="checkbox" id="{{ category.title }}"><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
+                                    <input class="radio-group programArea-group" type="checkbox" id="{{ category.title }}" value="{{ category.title }}" ><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
                                   </label>
                                 </div>
                               </div>
@@ -280,7 +302,7 @@ Plotly.newPlot(TESTER, data, layout);
                             <div class="bf input-wrapper">
                               <div class="radio-button radio-button--check">
                                 <label for="{{ category.title }}"> 
-                                  <input class="radio-group" type="checkbox" id="{{ category.title }}"><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
+                                  <input class="radio-group strategy-group" type="checkbox" value="{{ category.title }}" id="{{ category.title }}"><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
                                 </label>
                               </div>
                             </div>
@@ -290,8 +312,8 @@ Plotly.newPlot(TESTER, data, layout);
                     </ul>
                   </div>
                   <div class="modal__footer"> 
-                    <button class="l-button"> Apply filters</button>
-                    <button class="l-link"> clear all</button>
+                    <button class="l-button" id="applyFilters"> Apply filters</button>
+                    <button class="l-link" id="clearFilters"> clear all</button>
                   </div>
                 </dialog>
               </div>
@@ -649,3 +671,32 @@ Plotly.newPlot(TESTER, data, layout);
     <div id="tester"></div>
   </div>
 {% endif %}
+
+<script>
+  // Add event listener to Apply filters button
+  document.getElementById('applyFilters').addEventListener('click', function() {
+    // Initialize an empty array to store selected checkboxes
+    var selectedProgramArea = [];
+    var selectedStrategy = [];
+    // Get all checkboxes with class 'checkbox-group'
+    var programAreasFiltered = document.querySelectorAll('.programArea-group');
+    var strategyFiltered = document.querySelectorAll('.strategy-group');
+    // Loop through each checkbox
+    programAreasFiltered.forEach(function(programArea) {
+      // If checkbox is checked, add its value to the selectedFilters array
+      if (programArea.checked) {
+        selectedProgramArea.push(programArea.value);
+      }
+    });
+    strategyFiltered.forEach(function(strategy) {
+      // If checkbox is checked, add its value to the selectedFilters array
+      if (strategy.checked) {
+        selectedStrategy.push(strategy.value);
+      }
+    });
+    // Do whatever you want with the selected filters array here
+    console.log(selectedProgramArea);
+    console.log(selectedStrategy);
+    // You can send this array to a backend, store it in localStorage, etc.
+  });
+</script>

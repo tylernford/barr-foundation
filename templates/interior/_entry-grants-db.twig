@@ -30,17 +30,17 @@
 
 {# NOTE: the following elements will likely need to consolidated into a _sprig template #}
 
-<section class="grants-grid" style="display:none">
+{# <section class="grants-grid" style="display:none"> #}
     {# FILTERS GO HERE #}
     {# <div class="blockGeneric">
     </div> #}
 
     {# GRANTEE CARDS: List or Grid View #}
-    <div class="grants-grid__inner _is-{{ layout }}" data-columns="3">
+    {# <div class="grants-grid__inner _is-{{ layout }}" data-columns="3">
         {% if granteeList|length %}
-            {% for grantee in granteeList %}
+            {% for grantee in granteeList %} #}
                 {# Retrieve current award year's grant associated with grantee #}
-                {% set grant = craft.entries({
+                {# {% set grant = craft.entries({
                     section: "grants",
                     dateOnly: ["and", ">= #{awardYear}"],
                     entriesOrganization: grantee
@@ -58,7 +58,7 @@
             {% endfor %}
         {% endif %}
     </div>
-</section>
+</section> #}
 
 {# <section> #}
     {# FILTERS GO HERE #}
