@@ -1,4 +1,4 @@
-dateModified: 1711047717
+dateModified: 1711053573
 elementSources:
   craft\elements\Asset:
     -
@@ -227,8 +227,8 @@ elementSources:
       disabled: false
       key: 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
       tableAttributes:
-        - 'field:484160c1-8352-47bb-a090-e3e81c4b41d3' # ID: Directory
         - 'field:329ee082-81cc-492f-bc61-0230f4a009b4' # Entries: Person Type
+        - 'field:2abdf5dd-0d2a-4af1-a1cc-f8027bf84fc5' # Tags: Directory Teams
         - revisionCreator
         - link
       type: native
