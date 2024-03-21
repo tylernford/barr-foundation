@@ -1,4 +1,4 @@
-changedFieldIndicator: 1586905581
+changedFieldIndicator: 1295298482
 field: 29942c87-1bd3-4690-ae98-ba104b5589a2 # Card: Post
 fieldLayouts:
   fdae9137-bf26-4adb-b3fd-4b6789d14bcd:
@@ -27,18 +27,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5106491c-8d28-4f38-8778-9231f9b85b57
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 19bcf750-aecc-4f9c-b4fb-50e6d96af2eb # Tags: Categories or Program Areas
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6cf7c560-15d3-49f6-aae5-e2af7f8f219f
             userCondition: null
             warning: null
             width: 100
@@ -82,42 +70,6 @@ fieldLayouts:
         uid: 658799ff-d86b-4aa6-8bdf-877ab5002424
         userCondition: null
 fields:
-  19bcf750-aecc-4f9c-b4fb-50e6d96af2eb: # Tags: Categories or Program Areas
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: tagList
-    instructions: 'Select one or many Categories or Program Areas. Drag & drop to rearrange.'
-    name: 'Tags: Categories or Program Areas'
-    searchable: true
-    settings:
-      allowSelfRelations: false
-      branchLimit: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: null
-      minRelations: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Entry
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\entries\EntryCondition
-      selectionLabel: 'Add a tag'
-      showSiteMenu: true
-      sources:
-        - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Entries
   70d8712d-2a67-493a-a1a0-7ed698a9ee5d: # Date: Published
     columnSuffix: haaqflvx
     contentColumnType: datetime
@@ -238,17 +190,6 @@ fields:
       maintainHierarchy: false
       maxRelations: null
       minRelations: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Entry
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\entries\EntryCondition
       selectionLabel: 'Add an author'
       showSiteMenu: true
       sources:
@@ -286,17 +227,6 @@ fields:
       restrictedDefaultUploadSubpath: null
       restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
       restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image'
       showSiteMenu: true
       showUnpermittedFiles: false

@@ -7,7 +7,7 @@ name: 'Card: Post'
 searchable: true
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 335345372
+  changedFieldIndicator: 1660109278
   columns:
     __assoc__:
       -
@@ -19,13 +19,6 @@ settings:
               - ''
       -
         - b50dc00d-971b-4a33-a1f2-de240fbc64c6 # Entries: Authors
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 19bcf750-aecc-4f9c-b4fb-50e6d96af2eb # Tags: Categories or Program Areas
         -
           __assoc__:
             -

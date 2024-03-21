@@ -1,4 +1,4 @@
-dateModified: 1710971362
+dateModified: 1710988175
 elementSources:
   craft\elements\Asset:
     -
@@ -511,6 +511,7 @@ meta:
     03b97c7f-5861-488a-9875-0738f0246281: Accordion # Accordion
     3b585310-81d5-451e-8ed6-030062c40e94: 'Form: Wildcard' # Form: Wildcard
     3da8a9db-c68d-4f61-a9ab-5645cc1f1c07: Menu # Menu
+    3e9d76d7-a49f-4057-a6ed-c790c1307136: 'Tags: Categories' # Tags: Categories
     03f8a74f-3d28-4a13-b76b-92af6c801a16: 'Text: Supporting' # Text: Supporting
     3f87cd19-1003-4802-9f60-9fb8d5062700: Body # Body
     4af5ef3d-2c87-48a7-9d3b-c568f714e378: Footer # Footer
@@ -518,6 +519,7 @@ meta:
     4d753cb0-1ca4-4b73-aecc-957826dee5de: 'Card: Group' # Card: Group
     4d994633-7c38-4213-bd35-2b0d8966dff5: 'Page Builder: People' # Page Builder: People
     4e8fafb9-e2ba-4649-a18a-44ead87a1af2: Image # Image
+    4e51173f-d019-4fe6-a86d-d87e1841f4d0: 'Tags: Program Areas' # Tags: Program Areas
     4e139296-f9eb-4d48-8374-42a79d46413b: 'Tags: Import Primary' # Tags: Import Primary
     4eb30fbf-3647-444f-ba73-29ebb5b12477: 'Card: Team' # Card: Team
     04fbe62b-bcae-44dd-8023-e56efe203cb3: 'Action: URL' # Action: URL
@@ -544,6 +546,7 @@ meta:
     6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: Icon # Icon
     6df94cb1-5ae8-4f28-902c-2e221075c124: Action # Action
     6dfb099a-3f70-4263-8930-a2a018c83ada: 'Text: Publication' # Text: Publication
+    06e5af72-3b9f-4d67-bf09-d74b980bbe71: 'Tags: Categories' # Tags: Categories
     6e8ba94e-310e-4db0-a093-204c204e876f: Title # Title
     6e809373-5f71-4565-9be1-b179b89dd23e: 'Highlight: Quote' # Highlight: Quote
     6eab3484-4a8a-459d-b34c-6f48332b75d5: __blank__ # __blank__
@@ -602,7 +605,6 @@ meta:
     14d1fc6e-b42d-464e-8b7b-46441714b8d8: Image # Image
     16eaffdc-74b9-4eb1-9116-df58967173dc: 'Featured Strategy and Cards' # Featured Strategy and Cards
     17a9de48-5e07-4524-9f6e-8de470709982: Target # Target
-    19bcf750-aecc-4f9c-b4fb-50e6d96af2eb: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
     21b12e0a-7afe-477a-9f64-f2902cd9078a: Carousel # Carousel
     21dad0a7-2d67-433c-b04f-da4773293880: 'Developer: Release' # Developer: Release
     22f973cc-427c-4e70-8bb8-6624479ab025: 'Entries: Organization' # Entries: Organization
@@ -863,6 +865,7 @@ meta:
     bda6181d-ab1e-4267-8e8d-9ebe9749d6c8: Directory # Directory
     bde1031a-b7c0-498e-94e4-792ff7cf269f: __blank__ # __blank__
     be780dcf-a746-4d47-ab45-5d3ab50366e7: 'Style: Alignment' # Style: Alignment
+    be795e4c-65da-45f5-9320-13213acf7b06: 'Tags: Program Areas' # Tags: Program Areas
     bf120ab6-d32a-4470-b0df-a0aa86834445: 'Text: Heading' # Text: Heading
     bf1977eb-0974-47fb-804c-cc8eb50760d9: Caption # Caption
     bffbfe7e-eb55-4525-aafd-4b156d04715d: Image # Image
