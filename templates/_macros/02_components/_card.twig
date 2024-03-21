@@ -597,7 +597,7 @@
         {# Grant Detail Object #}
         {% set detailObj = {
             'Fiscal Sponsor': grant ? grant.textName,
-            'Award Date': grant ? grant.dateOnly|date("m/d/Y"),
+            'Award Date': grant ? grant.postDate|date("m/d/Y"),
             'Amount': grant ? grant.textAmount,
             'Term': grant ? grant.textTerm,
             'Program(s)': grant ? grant.tagsProgramAreas.all(),
