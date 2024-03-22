@@ -35,6 +35,10 @@
                 {# Filters #}
                 {% if personType == 'Staff' %}
                     {{ sprig('sprig/_sprig-team-grid', { personType: personType.id }) }}
+
+                {% elseif personType == 'Guest Author' %}
+                    {{ sprig('sprig/_sprig-paginated-grid', { personType: personType.id, limit: 8 }) }}
+
                 {% else %}
                     {% set feed = craft.entries().section('directory').relatedTo(personType).orderBy('title') %}
                     

@@ -1065,6 +1065,7 @@
     }
   }
 }
+
 .cardRow[data-columns="4"] {
   @include breakpoint(xxl) {
     .cardItem {
@@ -1072,6 +1073,22 @@
         .cardItem__media {
           .image {
             aspect-ratio: 10 / 9;
+          }
+        }
+      }
+    }
+  }
+}
+
+.feed__grid[data-columns="4"] {
+  &:not([data-grid-style="list"]) {
+    @include breakpoint(xxl) {
+      .cardItem {
+        &.cardItem--bio {
+          .cardItem__media {
+            .image {
+              aspect-ratio: 10 / 9;
+            }
           }
         }
       }

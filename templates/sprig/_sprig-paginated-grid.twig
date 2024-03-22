@@ -1,0 +1,118 @@
+{% import '_macros/02_components/_card' as cards %}
+
+{% set personType = craft.entries.id(personType).one() %}
+{% set page = page ?? 1 %}
+
+{% set filterParameters = personType %}
+
+{# ---  Set View  --- #}
+{% set viewAs = viewAs ?? 'grid' %}
+
+{% do sprig.pushUrl('?' ~ {viewAs:viewAs}|url_encode) %}
+
+{% set feedQuery = craft.entries().section('directory').relatedTo(filterParameters).orderBy('title').limit(limit) %}
+
+{# Paginates the entry query given the current page #}
+{% set pageInfo = sprig.paginate(feedQuery, page) %}
+{% set feed = pageInfo.pageResults %}
+
+<div class="feed_filters" data-variant="simple">
+  {% include '_partials/_filtering/_view-as' %}
+</div>
+
+<div class="feed">
+  <div class="feed__grid" data-grid-style="{{ viewAs }}" data-columns="4">
+    {% for feedItem in feed %}
+      {{ cards.bio(feedItem) }}
+    {% endfor %}
+  </div>
+</div>
+
+{% if feed %}
+  <div class="pagination">
+    <div class="pagination__button-group">
+      {# First #}
+      <button
+        class="pagination__button pagination__button--first"
+        {{ page == 1 ? 'disabled' }}
+        sprig
+        s-val:page="1"
+        s-push-url="?page=1"
+        s-swap="innerHTML show:top"
+      >
+        <span>First</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
+        </svg>
+      </button>
+
+      {# Decrements `page` by 1 and pushes the new value into the URL on click #}
+      <button
+        class="pagination__button pagination__button--previous"
+        {{ page == 1 ? 'disabled' }}
+        sprig
+        s-val:page="{{ page - 1 }}"
+        s-push-url="?page={{ page - 1 }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Previous</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+        </svg>
+      </button>
+    </div>
+
+    <p class="pagination__mobile-indicator">
+      {{ page }} of {{ pageInfo.totalPages }}
+    </p>
+
+    <p class="pagination__numbers">
+      {% for i in 1..pageInfo.totalPages %}
+        {% if i == page %}
+          <span>{{ i }}</span>
+        {% else %}
+          {# Refreshes the component and pushes the new value into the URL #}
+          <a
+            sprig
+            s-val:page="{{ i }}"
+            s-push-url="?page={{ i }}"
+            s-swap="innerHTML show:top"
+          >
+            {{ i }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </p>
+
+    <div class="pagination__button-group">
+      {# Increments `page` by 1 and pushes the new value into the URL on click #}
+      <button
+      class="pagination__button pagination__button--next"
+        {{ page == pageInfo.totalPages ? 'disabled' }}
+        sprig s-val:page="{{ page + 1 }}"
+        s-push-url="?page={{ page + 1 }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Next</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+        </svg>
+      </button>
+
+      {# Last #}
+      <button
+        class="pagination__button pagination__button--last"
+        {{ page == pageInfo.totalPages ? 'disabled' }}
+        sprig
+        s-val:page="{{ pageInfo.totalPages }}"
+        s-push-url="?page={{ pageInfo.totalPages }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Last</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+{% endif %}

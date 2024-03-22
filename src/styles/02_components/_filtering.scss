@@ -278,3 +278,145 @@
     }
   }
 }
+
+
+/* ---------------------------------------------------------------------
+  Pagination
+------------------------------------------------------------------------ */
+.pagination {
+  --color-pagination-primary: var(--color-teal-150);
+  --color-pagination-hover: var(--color-teal-100);
+  --color-pagination-highlight: var(--color-teal-100);
+
+
+  --color-pagination-tertiary: var(--color-grey-150);
+  --color-pagination-quaternary: var(--color-grey-100);
+
+  @include container-narrow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--base-4);
+  color: var(--color-pagination-tertiary);
+  @include getType('caption-axiforma');
+
+
+  // Buttons
+  .pagination__button-group {
+    display: flex;
+  }
+
+  .pagination__button {
+    width: var(--base-9);
+    height: var(--base-9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+
+    span {
+      @include visuallyHide;
+    }
+
+    svg {
+      width: var(--icon-size);
+      height: var(--icon-size);
+      color: var(--color-pagination-primary);
+      transition: var(--transition-out);
+    }
+
+    &--first,
+    &--previous {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+        
+        svg {
+          color: var(--color-pagination-hover);
+          transition: var(--transition-in);
+        }
+      }
+    }
+
+    &[disabled]{
+      svg {
+        color: var(--color-pagination-quaternary);
+      }
+    }
+  }
+
+  
+  // Numbers
+  .pagination__numbers {
+    display: none;
+    gap: var(--base-3);
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: var(--transition-out);
+      
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-pagination-hover);
+          text-decoration-color: inherit;
+          transition: var(--transition-in);
+          cursor: pointer;
+        }
+      }
+    }
+
+    span {
+      color: var(--color-pagination-highlight);
+      text-decoration: underline;
+    }
+  }
+
+  @include breakpoint(lg) {
+    .pagination__mobile-indicator {
+      display: none;
+    }
+
+    .pagination__numbers {
+      display: flex;
+      gap: var(--base-4);
+    }
+  }
+
+  @include breakpoint(xxl) {
+    .pagination__numbers {
+      gap: var(--base-5);
+    }
+  }
+}
+
+[data-theme-color="green"] {
+  .pagination {
+    --color-pagination-primary: var(--color-program-green-100);
+    --color-pagination-hover: var(--color-navy-100);
+    --color-pagination-highlight: var(--color-program-green-100);
+  }
+}
+
+[data-theme-color="plum"] {
+  .pagination {
+    --color-pagination-primary: var(--color-program-plum-100);
+    --color-pagination-hover: var(--color-navy-100);
+    --color-pagination-highlight: var(--color-program-plum-100);
+  }
+}
+
+[data-theme-color="marigold"] {
+  .pagination {
+    --color-pagination-primary: var(--color-program-marigold-50);
+    --color-pagination-hover: var(--color-navy-100);
+    --color-pagination-highlight: var(--color-program-marigold-100);
+  }
+}
