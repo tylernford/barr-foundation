@@ -130,6 +130,7 @@ $breakpoints: (
 ------------------------------------------------------------------------ */
 :root {
 	--base-100: 400px;
+	--base-70: 280px;
 	--base-40: 160px;
 	--base-32: 128px;
 	--base-28: 112px;
@@ -192,6 +193,7 @@ $breakpoints: (
 
 	--radius-action: 2.25rem; // 35px
 	--radius-action-s: 0.125rem; // 2px
+	--radius-input: 0.375rem; // 6px
 	--radius-checkbox: 0.3125rem; // 5px
 
 	--icon-size: 1.25rem; // 20px

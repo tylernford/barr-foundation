@@ -31,15 +31,21 @@
             {# Feed #}
             {% else %}
                 {% set personType = block.entriesPersonType.one %}
-                {% set feed = craft.entries().section('directory').relatedTo(personType).orderBy('title') %}
-                
-                <div class="feed">
-                    <div class="feed__grid" data-grid-style="grid">
-                        {% for feedItem in feed %}
-                            {{ cards.bio(feedItem) }}
-                        {% endfor %}
+
+                {# Filters #}
+                {% if personType == 'Staff' %}
+                    {{ sprig('sprig/_sprig-team-grid', { personType: personType.id }) }}
+                {% else %}
+                    {% set feed = craft.entries().section('directory').relatedTo(personType).orderBy('title') %}
+                    
+                    <div class="feed">
+                        <div class="feed__grid" data-grid-style="grid">
+                            {% for feedItem in feed %}
+                                {{ cards.bio(feedItem) }}
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
+                {% endif %}
             {% endif %}
         {% endfor %}
     </section>

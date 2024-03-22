@@ -1,0 +1,280 @@
+/* _filtering.scss */
+@use "../utils/_utils" as *;
+
+.feed_filters {
+  @include container-narrow;
+  padding-block: var(--base-4) var(--base-12);
+
+  @include breakpoint(xl) {
+    padding-block: var(--base-12) var(--base-16);
+  }
+
+  fieldset {
+    legend {
+      @include getType('label');
+    }
+  }
+
+  &[data-variant="simple"] {
+    display: grid;
+    gap: var(--base-6);
+
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+  Dropdown
+------------------------------------------------------------------------ */
+.dropdown {
+  --color-dropdown-background: var(--color-navy-100);
+  --color-dropdown-primary: var(--color-navy-100);
+  --color-dropdown-secondary: var(--color-grey-25-65);
+  --color-dropdown-tertiary: var(--color-grey-25);
+  --color-dropdown-quaternary: var(--color-grey-150);
+
+
+  // Base Styles
+  margin-block-start: var(--base-2);
+  min-width: var(--base-70);
+  height: var(--base-13);
+  position: relative;
+  cursor: pointer;
+  z-index: 50;
+
+  .dropdown__inner {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: var(--radius-input);
+    background-color: transparent;
+    transition: var(--transition-out);
+    z-index: 10;
+
+    &:before {
+      content: '';
+      inset: 0;
+      position: absolute;
+      border: 1px solid var(--color-dropdown-primary);
+      border-radius: var(--radius-input);
+      transition: var(--transition-out);
+    }
+  }
+
+  .dropdown__item {
+    padding-inline: var(--base-4);
+    pointer-events: none;
+    height: 0;
+    
+    input {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  
+    label {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include getType('detail-axiforma');
+      transition: var(--transition-out);
+
+      svg {
+        margin-left: 0.5rem;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        transition: var(--transition-out);
+      }
+    }
+  }
+
+  .dropdown__items {
+    visibility: hidden;
+    overflow: hidden;
+
+    .dropdown__item {
+      &:not(:first-child) {
+        label {
+          border-top: 1px solid var(--color-dropdown-quaternary);
+        }
+      }
+    }
+  }
+
+  // Inactive hover styles
+  @media (hover: hover){
+    &:hover {
+      &:not(.-is-active) {
+        .dropdown__inner {
+          &:before {
+            border: 3px solid var(--color-dropdown-primary);
+            transition: var(--transition-in);
+          }
+        }
+      }
+    }
+  }
+
+  // Inactive dropdown item styles
+  .dropdown__item {
+    // Selected
+    &.-is-selected {
+      height: var(--base-13);
+
+      label {
+        pointer-events: none;
+      }
+    }
+    
+    // Not selected
+    &:not(.-is-selected) {
+      transform: translateY(calc(-100% * var(--number-of-filters)));
+    }
+  }
+
+
+  // Active styles
+  &.-is-active {
+    cursor: default;
+
+    .dropdown__inner {
+      pointer-events: none;
+      height: calc(((var(--base-13) + (var(--base-10) * var(--number-of-filters))) + var(--base-5)));
+      background-color: var(--color-dropdown-background);
+      color: var(--color-dropdown-secondary);
+      transition: height var(--transition-intermediate);
+    }
+
+    .dropdown__item {
+      pointer-events: auto;
+
+      // Selected
+      &.-is-selected {
+        label {
+          border-bottom: 1px solid var(--color-dropdown-quaternary);
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .dropdown__items {
+      padding: .25rem 0;
+      position: relative;
+      visibility: visible;
+
+      &::after {
+        content: '';
+        top: 0;
+        left: .75rem;
+        right: .75rem;
+        height: 1px;
+        background-color: var(--color-black-35);
+        position: absolute;
+      }
+
+      .dropdown__item {
+        height: var(--base-10);
+        transform: translateY(0);
+        transition: transform var(--transition-intermediate);
+
+        @media (hover: hover){
+          &:hover {
+            color: var(--color-dropdown-tertiary);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+  Radio
+------------------------------------------------------------------------ */
+// Radio
+.radio {
+  --color-radio-primary: var(--color-navy-100);
+
+  display: flex;
+  align-items: center;
+
+  // Input + Label
+  input {
+    margin: 0;
+    width: var(--base-6);
+    height: var(--base-6);
+    position: relative;
+    appearance: none;
+    border: 1px solid var(--color-radio-primary);
+    border-radius: 1000px;
+    background-color: transparent;
+    flex-shrink: 0;
+    transition: var(--transition-out);
+
+    &::before {
+      content: '';
+      inset: 2px;
+      position: absolute;
+      border-radius: 1000px;
+      background-color: transparent;
+      transition: var(--transition-out);
+    }
+
+    // Checked
+    &:checked {
+      border: 2px solid var(--color-radio-primary);
+      transition: var(--transition-in);
+
+      &::before {
+        background-color: var(--color-radio-primary);
+        transition: var(--transition-in);
+      }
+    }
+
+    // Hover
+    @media (hover: hover) {
+      &:hover {
+        border: 2px solid var(--color-radio-primary);
+        transition: var(--transition-in);
+      }
+    }
+  }
+
+  label {
+    padding-inline-start: var(--base-3);
+    flex-shrink: 1;
+    color: var(--color-radio-primary);
+    @include getType('detail-axiforma');
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+  View
+------------------------------------------------------------------------ */
+.view {
+  margin-block-start: 8px;
+  display: flex;
+
+  > * {
+    &:last-child {
+      margin-inline-start: var(--base-6);
+    }
+  }
+}
