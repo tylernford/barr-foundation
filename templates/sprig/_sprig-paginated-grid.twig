@@ -6,9 +6,9 @@
 {% set filterParameters = personType %}
 
 {# ---  Set View  --- #}
-{% set viewAs = viewAs ?? 'grid' %}
+{% set guestAuthorViewAs = guestAuthorViewAs ?? 'grid' %}
 
-{% do sprig.pushUrl('?' ~ {viewAs:viewAs}|url_encode) %}
+{# {% do sprig.pushUrl('?' ~ {guestAuthorViewAs:guestAuthorViewAs}|url_encode) %} #}
 
 {% set feedQuery = craft.entries().section('directory').relatedTo(filterParameters).orderBy('title').limit(limit) %}
 
@@ -16,12 +16,13 @@
 {% set pageInfo = sprig.paginate(feedQuery, page) %}
 {% set feed = pageInfo.pageResults %}
 
+
 <div class="feed_filters" data-variant="simple">
-  {% include '_partials/_filtering/_view-as' %}
+  {% include '_partials/_filtering/_view-as' with { activeView: guestAuthorViewAs, viewHandle: 'guestAuthorViewAs' } %}
 </div>
 
 <div class="feed">
-  <div class="feed__grid" data-grid-style="{{ viewAs }}" data-columns="4">
+  <div class="feed__grid" data-grid-style="{{ guestAuthorViewAs }}" data-columns="4">
     {% for feedItem in feed %}
       {{ cards.bio(feedItem) }}
     {% endfor %}
