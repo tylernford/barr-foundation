@@ -22,9 +22,9 @@
         position: relative;
       }
       
-      @for $i from 1 through 21 {
+      @for $i from 1 through 60 {
         > *:nth-child(#{$i}) {
-          z-index: #{21 - $i};
+          z-index: #{60 - $i};
         }
       }
     }
