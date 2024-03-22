@@ -900,7 +900,7 @@
 }
 
 // Grantee Variant
-:not([data-grid-style="list"]) {
+[data-grid-style="grid"] {
   .cardItem.cardItem--bio {
     padding: var(--base-6);
     display: flex;
@@ -957,6 +957,14 @@
       }
     }
 
+    .cardItem__media + .cardItem__content {
+      margin-inline-start: 0;
+    }
+
+    .cardItem__content {
+      margin-inline-start: var(--base-16);
+    }
+
     .cardItem__details {
       .details__pronouns {
         @include getType('caption-messina');
@@ -986,6 +994,7 @@
       }
 
       .cardItem__content {
+        margin-inline-start: var(--base-30);
         align-items: center;
       }
 
@@ -1004,6 +1013,10 @@
       .cardItem__media {
         margin-inline-end: var(--base-7);
         width: 150px;
+      }
+
+      .cardItem__content {
+        margin-inline-start: 178px;
       }
 
       .cardItem__details {
