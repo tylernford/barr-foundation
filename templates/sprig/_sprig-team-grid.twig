@@ -23,9 +23,9 @@
 {% set filterParameters = filterParameters|merge([personType]) %}
 
 {# ---  Set View  --- #}
-{% set viewAs = viewAs ?? 'grid' %}
+{% set staffViewAs = staffViewAs ?? 'grid' %}
 
-{% do sprig.pushUrl('?' ~ {team:relatedToTeam,viewAs:viewAs}|url_encode) %}
+{# {% do sprig.pushUrl('?' ~ {team:relatedToTeam,staffViewAs:staffViewAs}|url_encode) %} #}
 
 {% set feed = craft.entries().section('directory').relatedTo(filterParameters).orderBy('title') %}
 
@@ -42,11 +42,11 @@
     }
   } %}
 
-  {% include '_partials/_filtering/_view-as' %}
+  {% include '_partials/_filtering/_view-as' with { activeView: staffViewAs, viewHandle: 'staffViewAs' } %}
 </div>
 
 <div class="feed">
-  <div class="feed__grid" data-grid-style="{{ viewAs }}">
+  <div class="feed__grid" data-grid-style="{{ staffViewAs }}">
     {% for feedItem in feed %}
       {{ cards.bio(feedItem) }}
     {% endfor %}

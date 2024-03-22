@@ -10,7 +10,14 @@
 
     {% for view in views %}
       <div class="radio">
-        <input type="radio" id="view--{{ view }}" name="viewAs" value="{{ view }}" sprig{{ viewAs == view ? ' checked' }}>
+        <input
+          id="view--{{ view }}"
+          name="{{ viewHandle }}"
+          type="radio"
+          value="{{ view }}"
+          sprig{{ activeView == view ? ' checked' }}
+          s-swap="innerHTML show:top"
+        >
         <label for="view--{{ view }}">{{ view|capitalize }}</label>
       </div>
     {% endfor %}

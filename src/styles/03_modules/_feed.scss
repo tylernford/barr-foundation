@@ -49,5 +49,13 @@
     &[data-grid-style="list"] {
       grid-template-columns: 1fr;
     }
+
+    &[data-columns="4"] {
+      &:not([data-grid-style="list"]) {
+        @include breakpoint(xxl) {        
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+    }
   }
 }
