@@ -56,7 +56,7 @@
         <title>{{ title }}</title>
         <use xlink:href="{{ alias('@icon') }}{{ icon }}-20"></use>
       </svg>
-      {{ details }}
+      {{ details|raw }}
     </p>
   {% endif %}
 

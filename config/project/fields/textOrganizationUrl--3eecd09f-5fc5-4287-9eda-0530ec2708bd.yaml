@@ -1,0 +1,14 @@
+columnSuffix: andnzdfg
+contentColumnType: string(255)
+fieldGroup: edd90eb1-f0c8-450c-b3f6-e0728b546cc9 # Texts
+handle: textOrganizationUrl
+instructions: null
+name: 'Text: Organization URL'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url
