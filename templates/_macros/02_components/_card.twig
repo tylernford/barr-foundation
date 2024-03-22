@@ -101,6 +101,8 @@
     {% set name = person.title %}
     {% set pronouns = person.textPronouns %}
     {% set jobTitle = person.textJob %}
+    {% set organization = person.textOrganization %}
+
     {% set linkAttributes = {
         type: 'link', isReversed: false,
         icon: 'arrow', iconOnly: false,
@@ -135,6 +137,7 @@
                             <p class="details__pronouns">{{ pronouns }}</p>
                         {% endif %}
                         {% if jobTitle|length %}
+                            {% set jobTitle = jobTitle ~ '<br>' ~ organization %}
                             {{ details.detail('job-title', false, jobTitle) }}
                         {% endif %}
                     </div>

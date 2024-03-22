@@ -86,6 +86,30 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            fieldUid: 4dad4ca0-bad0-464f-8bd0-65023dc18709 # Text: Organization
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f152f36-a230-41ba-9191-b794b8cf033c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 3eecd09f-5fc5-4287-9eda-0530ec2708bd # Text: Organization URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 437f5ff7-3218-460e-a0c2-4038ff9d83ef
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
             instructions: null
             label: null

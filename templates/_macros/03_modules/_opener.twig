@@ -134,6 +134,8 @@
 
     {# Set job title #}
     {% set jobTitle = bio.textJob %}
+    {% set organization = bio.textOrganization %}
+    {% set orgUrl = bio.textOrganizationUrl %}
 
     {# Set tags #}
     {% set tagsList = [bio] %}
@@ -158,6 +160,14 @@
                         {% endif %}
                         {% if jobTitle|length %}
                             {{ jobTitle }}
+                            {% if organization|length %}
+                                <br>
+                                {% if orgUrl|length %}
+                                    <a href="{{ orgUrl }}">{{ organization }}</a>
+                                {% else %}
+                                    {{ organization }}
+                                {% endif %}
+                            {% endif %}
                         {% endif %}
                     </p>
                 {% endif %}
