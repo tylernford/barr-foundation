@@ -74,6 +74,14 @@
     padding: 0 8rem;
   }
 }
+.section.section--infographic {
+  background-color: #015750;
+}
+@media screen and (min-width:1199px) {
+  .section.section--infographic .container {
+    padding: 2rem 6.625rem 0;
+  }
+}
 .section.section--granteecards {
   background-color: transparent;
   background-image: url(/uploads/images/interstitial-graphic.png);
@@ -436,6 +444,119 @@
   .bf.grantee.grantee--list .grantee-card .grantee-card__table .grantee-card__row:nth-child(n+2):nth-child(-n+4) {
     flex-basis: 10rem;
   }
+}
+
+.grantee-infographic {
+  background-color: #F5F5F5;
+  padding: 1.25rem;
+}
+@media screen and (min-width:768px) {
+  .grantee-infographic {
+    padding: 2.25rem;
+  }
+}
+@media screen and (min-width:950px) {
+  .grantee-infographic {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width:1199px) {
+  .grantee-infographic {
+    padding: 3.5rem;
+  }
+}
+@media screen and (min-width:950px) {
+  .grantee-infographic .grantee-infographic__cnt {
+    padding-right: 1.25rem;
+    flex-basis: 26.5%;
+  }
+}
+.grantee-infographic .grantee-infographic__cnt .accordion {
+  display: block;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+@media screen and (min-width:950px) {
+  .grantee-infographic .grantee-infographic__cnt .accordion {
+    margin: 0;
+  }
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item {
+  --accordion-color: #007E46;
+  position: relative;
+  border: none;
+  border-top: 0.125rem solid #e4e4e4;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__content {
+  display: none;
+  padding: 0.5rem;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title {
+  position: relative;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  font-size: 16px;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title button span {
+  font-size: 0.9375em;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--accordion-color);
+  text-align: left;
+  display: inline-block;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title button span.accordion__logo {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: relative;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title button span.accordion__logo::after {
+  content: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  line-height: 0.625rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--accordion-color);
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title button span.accordion__logo svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title button span.accordion__logo svg path {
+  fill: var(--accordion-color);
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title.accordion__title--active button span.accordion__logo svg {
+  display: none;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title.accordion__title--active button span.accordion__logo::after {
+  content: "-";
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item p {
+  font-size: 0.9375em;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #32475d;
+}
+.grantee-infographic .grantee-infographic__view {
+  flex: 1;
+  height: 100%;
+  min-height: 400px;
 }
 
 .bf.input-wrapper {
@@ -848,10 +969,4 @@ dialog.modal .accordion .accordion__item .accordion__content {
 }
 .bf.input button svg path {
   fill: #015750;
-}
-
-#graph-container {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
 }

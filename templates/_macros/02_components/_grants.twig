@@ -13,6 +13,7 @@ sprig.action('navigate', ({ target }) => {
 
 {% set programAreas = craft.entries().section("programAreasCategories").level(1).all() %}
 {% set strategies = craft.entries().section("programAreasCategories").level(2).all() %}
+{% set programAreasCategories = craft.entries().section("programAreasCategories").all() %}
 
 {% js %}
     htmx.on('htmx:afterSwap', function(event) {
@@ -194,7 +195,7 @@ Plotly.newPlot(TESTER, data, layout);
             console.log("Second depth:", point.label);
             
             // Redirect to the desired URL
-            window.location.href = "your_redirect_url_here";
+            window.location.href = "?query=&programAreaOption=" + point.parent + "&strategyOption%5B5%5D=" + point.label + "&layout=grid&page=1";
         }
     });
 
@@ -447,8 +448,25 @@ Plotly.newPlot(TESTER, data, layout);
 {% if sortOption == 'Most Recent First' %}
     
 {# {% set educationEntry = craft.entries.title('Education').one() %} #}
+{% set educationEntry = craft.entries.title('Education').one() %}
+{% set educationEntry1 = craft.entries.title('Adapting Boldly').one() %}
+{% set educationEntry2 = craft.entries.title('Clean Energy').one() %}
 {# {{ dump(educationEntry) }} #}
 {# {% set granteeList = craft.entries()
+    .section('grants')
+    .dateOnly(["and", ">= #{awardYear}"])
+    .entriesOrganization([':notempty:'])
+    .search(query)
+    .orderBy("dateOnly DESC")
+    .limit(12)
+    .relatedTo(["and",
+        { targetElement: educationEntry1, field: 'tagsProgramAreas' },
+        [
+            { targetElement: educationEntry1, field: 'tagsStrategies' },
+            { targetElement: educationEntry2, field: 'tagsStrategies' }
+        ]
+    ]) %} #}
+{# {% set granteeList2 = craft.entries()
     .section({
         section: "grants",
     })
@@ -460,7 +478,9 @@ Plotly.newPlot(TESTER, data, layout);
     .relatedTo({
         targetElement: educationEntry,
         field: 'tagsProgramAreas'
-    }) %} #}
+    }) %}
+    {% set granteeList = granteeList1|merge(granteeList2) %} #}
+    {# {{ optionOfProgramArea|json_encode }} #}
     {% if optionOfProgramArea|json_encode|length > 7 %}
       {% set granteeList = craft.entries()
           .section({
@@ -760,7 +780,79 @@ Plotly.newPlot(TESTER, data, layout);
             </div>
         </div>
 </section>
+{% for item in programAreasCategories %}
+  {% if item.level == 1 %}
+    {% if loop.index != 1 %}</ul>{% endif %}
+    <ul>{{ item }}
+  {% elseif item.level == 2 %}
+    <li>{{ item }}</li>
+  {% endif %}
+{% endfor %}
+</ul>
 {% elseif layout == "infographic" %}
+<section class="section section--infographic section--granteecards"> 
+        <div class="container">
+          <div class="bf grantee-infographic"> 
+            <div class="grantee-infographic__cnt"> 
+              <div class="accordion">
+              {% for areas in programAreas %}
+                <div class="accordion__item" style="--accordion-color:{% if areas == "Special Initiatives" %}#E68922{% elseif areas == "Sector Effectiveness" %}#008F7F{% elseif areas == "Arts & Creativity" %}#008F7F{% elseif areas == "Education" %}#E68922{% elseif areas == "Climate" %}#881857{% endif %}">
+                  <div class="accordion__title">
+                    <button type="button" aria-expanded="false" aria-controls="content-{{ loop.index + 1 }}"><span>{{ areas }}</span><span class="accordion__logo"> 
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H9V9H0V11H9V20H11V11H20V9H11V0Z" fill="#007E46"></path>
+                        </svg></span></button>
+                  </div>
+                  <div class="accordion__content" aria-hidden="true" id="content-{{ loop.index + 1 }}">
+                    <ul>
+                      {% for item in programAreasCategories %}
+                        {% if item.level == 2 and item.parent == areas.title %}
+                            <li>{{ item }}</li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div> 
+              {% endfor %}
+                {# <div class="accordion__item" style="--accordion-color:#BF6914">
+                  <div class="accordion__title">
+                    <button type="button" aria-expanded="false" aria-controls="content-4"><span>Program Area (999)</span><span class="accordion__logo"> 
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H9V9H0V11H9V20H11V11H20V9H11V0Z" fill="#007E46"></path>
+                        </svg></span></button>
+                  </div>
+                  <div class="accordion__content" aria-hidden="true" id="content-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis metus massa,</p>
+                  </div>
+                </div>
+                <div class="accordion__item" style="--accordion-color:#881857">
+                  <div class="accordion__title">
+                    <button type="button" aria-expanded="false" aria-controls="content-5"><span>Program Area (999)</span><span class="accordion__logo"> 
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H9V9H0V11H9V20H11V11H20V9H11V0Z" fill="#007E46"></path>
+                        </svg></span></button>
+                  </div>
+                  <div class="accordion__content" aria-hidden="true" id="content-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis metus massa,</p>
+                  </div>
+                </div>
+                <div class="accordion__item" style="--accordion-color:#008F7F">
+                  <div class="accordion__title">
+                    <button type="button" aria-expanded="false" aria-controls="content-6"><span>Program Area (999)</span><span class="accordion__logo"> 
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H9V9H0V11H9V20H11V11H20V9H11V0Z" fill="#007E46"></path>
+                        </svg></span></button>
+                  </div>
+                  <div class="accordion__content" aria-hidden="true" id="content-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis metus massa,</p>
+                  </div>
+                </div> #}
+              </div>
+            </div>
+            <div id="tester"></div>
+          </div>
+        </div>
+      </section>
   <div id="graph-container">
     <div id="tester"></div>
   </div>
