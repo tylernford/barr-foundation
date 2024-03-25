@@ -44,7 +44,7 @@
   height: var(--base-13);
   position: relative;
   cursor: pointer;
-  z-index: 50;
+  z-index: 61;
 
   .dropdown__inner {
     pointer-events: none;
@@ -357,26 +357,31 @@
   .pagination__numbers {
     display: none;
     gap: var(--base-3);
+  }
 
-    a {
-      text-decoration: underline;
-      text-decoration-color: transparent;
-      transition: var(--transition-out);
-      
-      @media (hover: hover) {
-        &:hover {
-          color: var(--color-pagination-hover);
-          text-decoration-color: inherit;
-          transition: var(--transition-in);
-          cursor: pointer;
-        }
+  .numbers__inactive {
+    color: inherit;
+  }
+
+  .numbers__active {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: var(--transition-out);
+    
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-pagination-hover);
+        text-decoration-color: inherit;
+        transition: var(--transition-in);
+        cursor: pointer;
       }
     }
+  }
 
-    span {
-      color: var(--color-pagination-highlight);
-      text-decoration: underline;
-    }
+  .numbers__current {
+    color: var(--color-pagination-highlight);
+    text-decoration: underline;
   }
 
   @include breakpoint(lg) {
