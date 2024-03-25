@@ -56,13 +56,6 @@
                         {{ image ? '</div>' }}
                     </div>
                 </article>
-
-            {% default %}
-                <div class="blockGeneric">
-                    <h2 class="blockGeneric-heading">This is my default card block</h2>
-                    {{ content|keys|json_encode }}
-                </div>
-
         {% endswitch %}
     {% endif %}
 {% endmacro %}
@@ -178,36 +171,38 @@
                 </div>
             {% endif %}
 
-            {# Header #}
-            <header class="cardItem__header">
-                <h3 class="cardItem__heading">{{ title }}</h3>
-                {% if label|length %}
-                    <span class="cardItem__label">{{ label }}</span>
-                {% endif %}
-            </header>
+            <div class="cardItem__wrapper">
+                {# Header #}
+                <header class="cardItem__header">
+                    <h3 class="cardItem__heading">{{ title }}</h3>
+                    {% if label|length %}
+                        <span class="cardItem__label">{{ label }}</span>
+                    {% endif %}
+                </header>
 
-            {# Content #}
-            <div class="cardItem__content">
-                {# Summary #}
-                {% if summary|length %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
-                    </div>
-                {% endif %}
+                {# Content #}
+                <div class="cardItem__content">
+                    {# Summary #}
+                    {% if summary|length %}
+                        <div class="cardItem__summary">
+                            {{ summary }}
+                        </div>
+                    {% endif %}
 
-                {# Action #}
-                {% if action.url|length %}
-                    <div class="cardItem__actions">
-                        {% set actionAttributes = {
-                            type: 'button', isReversed: false,
-                            icon: 'linkType', iconOnly: false,
-                            text: action.text, url: action,
-                            linkType: action.type, target: action.target
-                        } %}
+                    {# Action #}
+                    {% if action.url|length %}
+                        <div class="cardItem__actions">
+                            {% set actionAttributes = {
+                                type: 'button', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: action.text, url: action,
+                                linkType: action.type, target: action.target
+                            } %}
 
-                        {{ actions.action(actionAttributes) }}
-                    </div>
-                {% endif %}
+                            {{ actions.action(actionAttributes) }}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </article>
@@ -410,61 +405,63 @@
                     </div>
                 {% endif %}
 
-                {# Header #}
-                <header class="cardItem__header">
-                    {% if publication|length %}                    
-                        <div>
-                            <h3 class="cardItem__publication">{{ publication }}</h3>
-                            <h4 class="cardItem__heading">{{ title }}</h4>
-                        </div>
-                    {% else %}
-                        <h3 class="cardItem__heading">{{ title }}</h3>
-                    {% endif %}
-                    <span class="cardItem__label">In the News</span>
-                </header>
-
-                {# Content #}
-                <div class="cardItem__content">
-                    {# Details #}
-                    <div class="cardItem__details">
-                        {# Published date #}
-                        <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
-
-                        {# Authors #}
-                        {% if authors|length %}                    
-                            <p class="cardItem__authors">{{ authors }}</p>
+                <div class="cardItem__wrapper">
+                    {# Header #}
+                    <header class="cardItem__header">
+                        {% if publication|length %}                    
+                            <div>
+                                <h3 class="cardItem__publication">{{ publication }}</h3>
+                                <h4 class="cardItem__heading">{{ title }}</h4>
+                            </div>
+                        {% else %}
+                            <h3 class="cardItem__heading">{{ title }}</h3>
                         {% endif %}
-                    </div>
+                        <span class="cardItem__label">In the News</span>
+                    </header>
 
-                    {# Summary #}
-                    {% if summary|length %}
-                        <div class="cardItem__summary">
-                            {{ summary }}
+                    {# Content #}
+                    <div class="cardItem__content">
+                        {# Details #}
+                        <div class="cardItem__details">
+                            {# Published date #}
+                            <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+
+                            {# Authors #}
+                            {% if authors|length %}                    
+                                <p class="cardItem__authors">{{ authors }}</p>
+                            {% endif %}
                         </div>
-                    {% endif %}
 
-                    {# Actions #}
-                    <div class="cardItem__actions">
-                        {# Tags #}
-                        {% if tagsList|length %}
-                            <div class="cardItem__tags">
-                                {{ tagLogic.tags(tagsList)}}
+                        {# Summary #}
+                        {% if summary|length %}
+                            <div class="cardItem__summary">
+                                {{ summary }}
                             </div>
                         {% endif %}
 
-                        {# Action #}
-                        {% if action.url|length %}
-                            <div class="cardItem__action">
-                                {% set actionAttributes = {
-                                    type: 'button', isReversed: false,
-                                    icon: 'linkType', iconOnly: false,
-                                    text: action.text, url: action,
-                                    linkType: action.type, target: action.target
-                                } %}
+                        {# Actions #}
+                        <div class="cardItem__actions">
+                            {# Tags #}
+                            {% if tagsList|length %}
+                                <div class="cardItem__tags">
+                                    {{ tagLogic.tags(tagsList)}}
+                                </div>
+                            {% endif %}
 
-                                {{ actions.action(actionAttributes) }}
-                            </div>
-                        {% endif %}
+                            {# Action #}
+                            {% if action.url|length %}
+                                <div class="cardItem__action">
+                                    {% set actionAttributes = {
+                                        type: 'button', isReversed: false,
+                                        icon: 'linkType', iconOnly: false,
+                                        text: action.text, url: action,
+                                        linkType: action.type, target: action.target
+                                    } %}
+
+                                    {{ actions.action(actionAttributes) }}
+                                </div>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -484,36 +481,38 @@
                     </div>
                 {% endif %}
 
-                {# Header #}
-                <header class="cardItem__header">
-                    <h3 class="cardItem__heading">{{ title }}</h3>
-                    <span class="cardItem__label">Research</span>
-                </header>
+                <div class="cardItem__wrapper">
+                    {# Header #}
+                    <header class="cardItem__header">
+                        <h3 class="cardItem__heading">{{ title }}</h3>
+                        <span class="cardItem__label">Research</span>
+                    </header>
 
-                {# Content #}
-                <div class="cardItem__content">
-                    {# Summary #}
-                    {% if summary|length %}
-                        <div class="cardItem__summary">
-                            {{ summary }}
-                        </div>
-                    {% endif %}
-
-                    {# Actions #}
-                    <div class="cardItem__actions">
-                        {# Action #}
-                        {% if action.url|length %}
-                            <div class="cardItem__action">
-                                {% set actionAttributes = {
-                                    type: 'button', isReversed: false,
-                                    icon: 'linkType', iconOnly: false,
-                                    text: action.text, url: action,
-                                    linkType: action.type, target: action.target
-                                } %}
-
-                                {{ actions.action(actionAttributes) }}
+                    {# Content #}
+                    <div class="cardItem__content">
+                        {# Summary #}
+                        {% if summary|length %}
+                            <div class="cardItem__summary">
+                                {{ summary }}
                             </div>
                         {% endif %}
+
+                        {# Actions #}
+                        <div class="cardItem__actions">
+                            {# Action #}
+                            {% if action.url|length %}
+                                <div class="cardItem__action">
+                                    {% set actionAttributes = {
+                                        type: 'button', isReversed: false,
+                                        icon: 'linkType', iconOnly: false,
+                                        text: action.text, url: action,
+                                        linkType: action.type, target: action.target
+                                    } %}
+
+                                    {{ actions.action(actionAttributes) }}
+                                </div>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -562,62 +561,64 @@
                 </div>
             {% endif %}
 
-            {# Header #}
-            <header class="cardItem__header">
-                <h3 class="cardItem__heading">{{ title }}</h3>
-                <span class="cardItem__label">Blog Post</span>
-            </header>
+            <div class="cardItem__wrapper">
+                {# Header #}
+                <header class="cardItem__header">
+                    <h3 class="cardItem__heading">{{ title }}</h3>
+                    <span class="cardItem__label">Blog Post</span>
+                </header>
 
-            {# Content #}
-            <div class="cardItem__content">
-                {# Details #}
-                <div class="cardItem__details">
-                    {# Published date #}
-                    <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+                {# Content #}
+                <div class="cardItem__content">
+                    {# Details #}
+                    <div class="cardItem__details">
+                        {# Published date #}
+                        <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
 
-                    {# Authors #}
-                    {% if postAuthors|length %}                    
-                        {% for postAuthor in postAuthors %}
-                            {# Set author image #}
-                            {% set authorImage = postAuthor.assetImage.one %}
+                        {# Authors #}
+                        {% if postAuthors|length %}                    
+                            {% for postAuthor in postAuthors %}
+                                {# Set author image #}
+                                {% set authorImage = postAuthor.assetImage.one %}
 
-                            {# Set name #}
-                            {% set authorName = postAuthor.title %}
+                                {# Set name #}
+                                {% set authorName = postAuthor.title %}
 
-                            {% set authorDetails = authorDetails|merge([
-                                { 'img': authorImage, 'name': authorName }
-                            ]) %}
-                        {% endfor %}
-                        {{ details.detail('byline', false, authorDetails) }}
-                    {% endif %}
-                </div>
-
-                {# Summary #}
-                {% if summary|length %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
+                                {% set authorDetails = authorDetails|merge([
+                                    { 'img': authorImage, 'name': authorName }
+                                ]) %}
+                            {% endfor %}
+                            {{ details.detail('byline', false, authorDetails) }}
+                        {% endif %}
                     </div>
-                {% endif %}
 
-                {# Actions #}
-                <div class="cardItem__actions">
-                    {# Tags #}
-                    {% if tagsList|length %}
-                        <div class="cardItem__tags">
-                            {{ tagLogic.tags(tagsList)}}
+                    {# Summary #}
+                    {% if summary|length %}
+                        <div class="cardItem__summary">
+                            {{ summary }}
                         </div>
                     {% endif %}
 
-                    {# Action #}
-                    <div class="cardItem__action">
-                        {% set actionAttributes = {
-                            type: 'button', isReversed: false,
-                            icon: 'linkType', iconOnly: false,
-                            text: 'Read More', url: url,
-                            linkType: 'entry', target: ''
-                        } %}
+                    {# Actions #}
+                    <div class="cardItem__actions">
+                        {# Tags #}
+                        {% if tagsList|length %}
+                            <div class="cardItem__tags">
+                                {{ tagLogic.tags(tagsList)}}
+                            </div>
+                        {% endif %}
 
-                        {{ actions.action(actionAttributes) }}
+                        {# Action #}
+                        <div class="cardItem__action">
+                            {% set actionAttributes = {
+                                type: 'button', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: 'Read More', url: url,
+                                linkType: 'entry', target: ''
+                            } %}
+
+                            {{ actions.action(actionAttributes) }}
+                        </div>
                     </div>
                 </div>
             </div>

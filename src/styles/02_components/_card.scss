@@ -828,6 +828,12 @@
 
   // Generic
   &.cardItem--generic {
+    .cardItem__wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
     .cardItem__label {
       color: var(--color-card-text--tertiary);
     }
@@ -1023,6 +1029,47 @@
         .details__pronouns {
           @include getType('body');
         }
+      }
+    }
+  }
+
+  .cardItem.cardItem--generic {
+    @include breakpoint(md) {
+      padding: 0;
+
+      .cardItem__inner {
+        flex-direction: row;
+      }
+
+      .cardItem__media {
+        margin-block-end: 0;
+        width: 50%;
+
+        .image {
+          inset: 0;
+          aspect-ratio: auto;
+          position: absolute;
+        }
+      }
+
+      .cardItem__media + .cardItem__wrapper {
+        padding: var(--base-6) 0 var(--base-6) var(--base-6);
+        width: 50%;
+      }
+
+      .cardItem__wrapper {
+        padding: var(--base-6);
+        width: 100%;
+      }
+    }
+
+    @include breakpoint(lg) {
+      .cardItem__media + .cardItem__wrapper {
+        padding: var(--base-9) 0 var(--base-9) var(--base-9);
+      }
+
+      .cardItem__wrapper {
+        padding: var(--base-9);
       }
     }
   }
