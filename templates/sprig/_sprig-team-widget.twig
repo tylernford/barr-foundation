@@ -12,7 +12,7 @@
 {% set teamMembers = craft.entries().section('directory').relatedTo(memberFilter).orderBy('RAND()').limit(3) %}
 
 {% if teamMembers %}
-  <div class="cardRow" data-columns="3" id="card-test">
+  <div class="cardRow" data-columns="3" data-grid-style="grid" id="card-test">
     {% for member in teamMembers %}
       {{ cards.bio(member) }}
     {% endfor %}
