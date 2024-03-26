@@ -1,48 +1,48 @@
 {% set neighbours = 3 %}
 
 
-<div class="pagination">
-  {# First + previous buttons #}
-  <div class="pagination__button-group">
-    {# First #}
-    <button
-      class="pagination__button pagination__button--first"
-      {{ page == 1 ? 'disabled' }}
-      sprig
-      s-val:page="1"
-      s-push-url="?page=1"
-      s-swap="innerHTML show:top"
-    >
-      <span>First</span>
-      <svg>
-        <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
-      </svg>
-    </button>
+{% if pageInfo is defined and pageInfo.totalPages > 1 %}
+  <div class="pagination">
+    {# First + previous buttons #}
+    <div class="pagination__button-group">
+      {# First #}
+      <button
+        class="pagination__button pagination__button--first"
+        {{ page == 1 ? 'disabled' }}
+        sprig
+        s-val:page="1"
+        s-push-url="?page=1"
+        s-swap="innerHTML show:top"
+      >
+        <span>First</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
+        </svg>
+      </button>
 
-    {# Decrements `page` by 1 and pushes the new value into the URL on click #}
-    <button
-      class="pagination__button pagination__button--previous"
-      {{ page == 1 ? 'disabled' }}
-      sprig
-      s-val:page="{{ page - 1 }}"
-      s-push-url="?page={{ page - 1 }}"
-      s-swap="innerHTML show:top"
-    >
-      <span>Previous</span>
-      <svg>
-        <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
-      </svg>
-    </button>
-  </div>
+      {# Decrements `page` by 1 and pushes the new value into the URL on click #}
+      <button
+        class="pagination__button pagination__button--previous"
+        {{ page == 1 ? 'disabled' }}
+        sprig
+        s-val:page="{{ page - 1 }}"
+        s-push-url="?page={{ page - 1 }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Previous</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+        </svg>
+      </button>
+    </div>
 
-  <p class="pagination__mobile-indicator">
-    {{ page }} of {{ pageInfo.totalPages }}
-  </p>
+    <p class="pagination__mobile-indicator">
+      {{ page }} of {{ pageInfo.totalPages }}
+    </p>
 
-  <ol class="pagination__numbers">
-    {% if pageInfo is defined and pageInfo.totalPages > 1 %}
+    <ol class="pagination__numbers">
       {% import _self as self %}
-      
+        
       {# first #}
       {% if pageInfo.currentPage - neighbours > 1  %}
         {{ self.paginationItem(pageInfo.firstUrl, '1') }}
@@ -75,41 +75,41 @@
       {% if pageInfo.currentPage + neighbours < pageInfo.totalPages %}
         {{ self.paginationItem(pageInfo.lastUrl, pageInfo.totalPages) }}
       {% endif %}
-    {% endif %}
-  </ol>
+    </ol>
 
-  {# Last + next buttons #}
-  <div class="pagination__button-group">
-    {# Increments `page` by 1 and pushes the new value into the URL on click #}
-    <button
-      class="pagination__button pagination__button--next"
-      {{ page == pageInfo.totalPages ? 'disabled' }}
-      sprig s-val:page="{{ page + 1 }}"
-      s-push-url="?page={{ page + 1 }}"
-      s-swap="innerHTML show:top"
-    >
-      <span>Next</span>
-      <svg>
-        <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
-      </svg>
-    </button>
+    {# Last + next buttons #}
+    <div class="pagination__button-group">
+      {# Increments `page` by 1 and pushes the new value into the URL on click #}
+      <button
+        class="pagination__button pagination__button--next"
+        {{ page == pageInfo.totalPages ? 'disabled' }}
+        sprig s-val:page="{{ page + 1 }}"
+        s-push-url="?page={{ page + 1 }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Next</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+        </svg>
+      </button>
 
-    {# Last #}
-    <button
-      class="pagination__button pagination__button--last"
-      {{ page == pageInfo.totalPages ? 'disabled' }}
-      sprig
-      s-val:page="{{ pageInfo.totalPages }}"
-      s-push-url="?page={{ pageInfo.totalPages }}"
-      s-swap="innerHTML show:top"
-    >
-      <span>Last</span>
-      <svg>
-        <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
-      </svg>
-    </button>
+      {# Last #}
+      <button
+        class="pagination__button pagination__button--last"
+        {{ page == pageInfo.totalPages ? 'disabled' }}
+        sprig
+        s-val:page="{{ pageInfo.totalPages }}"
+        s-push-url="?page={{ pageInfo.totalPages }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Last</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
+        </svg>
+      </button>
+    </div>
   </div>
-</div>
+{% endif %}
 
 
 {# single numeric link #}
