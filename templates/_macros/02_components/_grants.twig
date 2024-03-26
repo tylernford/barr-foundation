@@ -169,7 +169,7 @@ function triggerModal() {
       maxdepth: 2,
       textinfo: "label+percent entry",
       outsidetextfont: {"size": 20, "color": "#377eb8"},
-      marker: {"line": {"width": 2},"colors": ["white","#008F7F", "#881857", "#E68922", "red", "blue"]}
+      marker: {"line": {"width": 2},"colors": ["white","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F"]}
 }];
 
 var layout = {
@@ -289,8 +289,8 @@ Plotly.newPlot(TESTER, data, layout);
                   <div class="accordion__content" aria-hidden="true" id="content-1" style="display:none;">
                     <p sprig s-trigger="click" s-val:sortOption="Most Recent First">Most Recent First</p>
                     <p sprig s-trigger="click" s-val:sortOption="Older First">Older First</p>
-                    <p sprig s-trigger="click" s-val:sortOption="Highest Amount">Highest Amount</p>
-                    <p sprig s-trigger="click" s-val:sortOption="Lowest Amount">Lowest Amount</p>
+                    {# <p sprig s-trigger="click" s-val:sortOption="Highest Amount">Highest Amount</p> #}
+                    {# <p sprig s-trigger="click" s-val:sortOption="Lowest Amount">Lowest Amount</p> #}
                   </div>
                 </div>
               </div>
@@ -572,7 +572,7 @@ Plotly.newPlot(TESTER, data, layout);
                     {% for tag in grants.tagsProgramAreas.all() %}
                               {% set tagValue = tag %}
                     {% endfor %}
-                    <article class="bf grantee-card" style="--var-grantee-color:{% if tagValue == "Special Initiatives" %}#E68922{% elseif tagValue == "Sector Effectiveness" %}#008F7F{% elseif tagValue == "Arts & Creativity" %}#008F7F{% elseif tagValue == "Education" %}#E68922{% elseif tagValue == "Climate" %}#881857{% endif %}">
+                    <article class="bf grantee-card" style="--var-grantee-color:{% if tagValue == "Special Initiatives" %}#01564F{% elseif tagValue == "Sector Effectiveness" %}#01564F{% elseif tagValue == "Arts & Creativity" %}#2F5535{% elseif tagValue == "Education" %}#E78B23{% elseif tagValue == "Climate" %}#5A3044{% endif %}">
 
                       {# <h3>{{ grants.title }}</h3> #}
                       {# {{ grants.entriesOrganization }} #}
@@ -796,11 +796,11 @@ Plotly.newPlot(TESTER, data, layout);
             <div class="grantee-infographic__cnt"> 
               <div class="accordion">
               {% for areas in programAreas %}
-                <div class="accordion__item" style="--accordion-color:{% if areas == "Special Initiatives" %}#E68922{% elseif areas == "Sector Effectiveness" %}#008F7F{% elseif areas == "Arts & Creativity" %}#008F7F{% elseif areas == "Education" %}#E68922{% elseif areas == "Climate" %}#881857{% endif %}">
+                <div class="accordion__item" style="--accordion-color:{% if areas == "Special Initiatives" %}#01564F{% elseif areas == "Sector Effectiveness" %}#01564F{% elseif areas == "Arts & Creativity" %}#2F5535{% elseif areas == "Education" %}#E78B23{% elseif areas == "Climate" %}#5A3044{% endif %}">
                   <div class="accordion__title">
                     <button type="button" aria-expanded="false" aria-controls="content-{{ loop.index + 1 }}"><span>{{ areas }}</span><span class="accordion__logo"> 
                         <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H9V9H0V11H9V20H11V11H20V9H11V0Z" fill="#007E46"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H9V9H0V11H9V20H11V11H20V9H11V0Z" fill="#2F5535"></path>
                         </svg></span></button>
                   </div>
                   <div class="accordion__content" aria-hidden="true" id="content-{{ loop.index + 1 }}">
