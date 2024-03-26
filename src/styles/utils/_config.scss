@@ -132,8 +132,11 @@ $breakpoints: (
 	--base-100: 400px;
 	--base-70: 280px;
 	--base-40: 160px;
+	--base-34: 136px;
 	--base-32: 128px;
+	--base-31: 124px;
 	--base-30: 120px;
+	--base-29: 116px;
 	--base-28: 112px;
 	--base-27: 108px;
 	--base-24: 96px;
@@ -206,6 +209,7 @@ $breakpoints: (
 
 	--transition: 250ms;
 	--transition-intermediate: 330ms;
+	--transition-slow: 400ms;
 
 	--transition-in: all var(--transition-intermediate) ease-out;
   --transition-out: all var(--transition) ease-in;

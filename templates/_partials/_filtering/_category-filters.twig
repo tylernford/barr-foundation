@@ -1,0 +1,111 @@
+{# =======================================
+  Partial: Category Filters
+======================================= #}
+
+<div class="modal modal--filters" id="modal--filters">
+  <div class="modal__container">
+    <div class="modal__header">
+      <h3>Add/Modify Filters</h3>
+      <h4>Select all that apply</h4>
+      
+      {# ---  Close Modal Trigger  --- #}
+      <button class="modal__close-trigger" onclick="triggerModal(`modal--filters`)">
+        <span>Close Modal</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}close-20"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal__body">
+      <div class="body__inner">
+        <form class="body__filters" id="modal-filters">
+          <div class="filters__fieldsets">
+            {# Program Areas #}
+            <fieldset class="filters__fieldset">
+              <legend>Program Areas</legend>
+              
+              <div class="filters__groups">
+                {% for programAreasFilter in programAreasFilters %}
+                  {% if programAreasFilter.level == 1 %}
+                    {% set childFilters = programAreasFilter.children %}
+
+                    <div class="groups__group">
+                      {{ _self.checkbox(programAreasFilter, programAreas, 'programAreas', false) }}
+
+                      {% for childFilter in childFilters %}
+                        {{ _self.checkbox(childFilter, programAreas, 'programAreas', true) }}
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </fieldset>
+            
+            {# Categories #}
+            <fieldset class="filters__fieldset">
+              <legend>Categories</legend>
+              
+              <div class="groups__group">
+                {% for categoriesFilter in categoriesFilters %}
+                  {% if categoriesFilter.level == 1 %}
+                    {{ _self.checkbox(categoriesFilter, categories, 'categories', false) }}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </fieldset>
+          </div>
+          
+          <div class="category-filters__buttons">
+            {# Apply Filters #}
+            <button class="action action--button" data-is-reversed="true" type="submit" onclick="triggerModal(`modal--filters`)" sprig>
+              <span>
+                Apply Filters
+              </span>
+            </button>
+
+            {# Clear Filters #}
+            <button class="action action--link | form-reset" data-is-reversed="true" type="reset" onclick="clearCheckboxes(`modal-filters`)">
+              <span>Clear All</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{# List #}
+{% macro checkbox(filter, activeFilters, inputName, child) %}
+  {% set id = filter.id %}
+  {% set title = filter.title %}
+  {% set value = title|replace(' ') %}
+      
+  {% set active = value in activeFilters ? true : false %}
+
+  <label class="checkbox"{{ child == true ? ' data-child=true' }} for="checkbox_{{ id }}">
+    <input
+      class="input-checkbox"
+      id="checkbox_{{ id }}"
+      type="checkbox"
+      name="{{ inputName }}[{{ id }}]"
+      value="{{ value }}"
+      {{ active == true ? 'checked' }}
+    >
+    <span>{{ title }}</span>
+  </label>
+{% endmacro %}
+
+  
+
+{% js %}
+function clearCheckboxes(formId){
+  const form = document.getElementById(formId);
+  const checkboxes = form.querySelectorAll(`.input-checkbox`);
+
+  checkboxes.forEach(checkbox => {
+    checkbox.removeAttribute(`checked`);
+  });
+}
+{% endjs %}

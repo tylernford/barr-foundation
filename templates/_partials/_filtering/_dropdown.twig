@@ -6,7 +6,7 @@
 {% set dropdownFilters = dropdownFilters|merge([defaultFilter]) %}
 {% set dropdownFilters = dropdownFilters|merge(defaultFilters) %}
 
-<fieldset>
+<fieldset class="feed-filters__fieldset">
   <legend>{{ dropdownTitle }}</legend>
 
   <div class="dropdown" style="--number-of-filters: {{ dropdownFilters|length - 1 }}">

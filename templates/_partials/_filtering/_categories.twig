@@ -1,0 +1,46 @@
+{# ---  Filter  --- #}
+<fieldset class="feed-filters__fieldset">
+  <legend class="fieldset__legend">Filter By</legend>
+  
+  <button class="modal-trigger" onclick="triggerModal(`modal--filters`)">
+    <span>Add / Modify Filters</span>
+    <svg>
+      <use xlink:href="{{ alias('@icon') }}expand-20"></use>
+    </svg>
+  </button>
+  
+  {% include '_partials/_filtering/_category-filters' %}
+</fieldset>
+
+
+{% js %}
+  const body = document.body;
+
+  {# ---  Trigger Modal  --- #}
+  function triggerModal(modalId){
+    const modal = document.getElementById(modalId);
+
+    {# ---  Set body overflow  --- #}
+    if (modal.classList.contains(`-is-active`)) {
+      body.style.removeProperty(`overflow`);
+    } else {
+      body.style.overflow = `hidden`;
+    }
+
+    {# ---  Toggle active modal  --- #}
+    modal.classList.toggle(`-is-active`);
+
+
+    {# ---  Set modal body height  --- #}
+    function setModalBodyHeight(modal){
+      const modalBodyHeight = modal.querySelector(`.body__inner`).offsetHeight + `px`;
+      modal.style.setProperty('--modal-body-height', modalBodyHeight);
+    }
+
+    setModalBodyHeight(modal);
+
+    window.addEventListener(`resize`, function () {
+      setModalBodyHeight(modal);
+    }, false);
+  };
+{% endjs %}
