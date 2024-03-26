@@ -27,7 +27,6 @@
         website|length ? true :
         false
     %}
-    {% set recentPosts = craft.entries().section('blog').relatedTo(person).limit(3) %}
 
 
     {# Bio #}
@@ -139,15 +138,11 @@
     </section>
 
     {# Posts #}
-    {% if recentPosts|length %}
-        {% set title = 'Posts by ' ~ name %}
-        {% set feedConfig = {
-            'title': title,
-            'titleVariant': 'small',
-            'feed': recentPosts,
-            'gridVariant': 'grid',
-            'cardVariant': 'post'
-        } %}
-        {{ feeds.feed(feedConfig) }}
-    {% endif %}
+    {% set title = 'Posts by ' ~ name %}
+
+    {{ sprig('sprig/_sprig-related-posts-grid', {
+        title: title,
+        section: 'blog',
+        relatedTo: person.id
+    }) }}
 {% endmacro %}
