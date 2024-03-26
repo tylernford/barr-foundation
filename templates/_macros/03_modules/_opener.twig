@@ -52,7 +52,7 @@
             <h1 class="primary__heading">{{ openerHeading }}</h1>
             
             {# Description and menu #}
-            <div class="primary__wrapper">
+            <div class="primary__wrapper"{{ showMenu == true ? ' data-columns=2' }}>
                 {# Description #}
                 {% if openerDescription %}
                     <div class="primary__desc">
