@@ -455,19 +455,15 @@
     padding: 2.25rem;
   }
 }
-@media screen and (min-width:950px) {
+@media screen and (min-width:1199px) {
   .grantee-infographic {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-}
-@media screen and (min-width:1199px) {
-  .grantee-infographic {
     padding: 3.5rem;
   }
 }
-@media screen and (min-width:950px) {
+@media screen and (min-width:1199px) {
   .grantee-infographic .grantee-infographic__cnt {
     padding-right: 1.25rem;
     flex-basis: 26.5%;
@@ -478,7 +474,7 @@
   padding: 0;
   margin: 0 0 2rem;
 }
-@media screen and (min-width:950px) {
+@media screen and (min-width:1199px) {
   .grantee-infographic .grantee-infographic__cnt .accordion {
     margin: 0;
   }
@@ -491,7 +487,41 @@
 }
 .grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__content {
   display: none;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem 0.5rem;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__content p {
+  font-size: 1em;
+  line-height: 1.375;
+  font-weight: 400;
+  color: var(--accordion-color);
+  margin-bottom: 0.25rem;
+  opacity: 0.7;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__content a {
+  font-size: 1em;
+  line-height: 1.375;
+  font-weight: 400;
+  color: var(--accordion-color);
+  margin-bottom: 0.25rem;
+  opacity: 0.7;
+  display: inline-block;
+  text-decoration: none;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__content a:hover {
+  opacity: 1;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__content ul {
+  list-style: none;
+}
+.grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__content ul li {
+  position: relative;
+  font-size: 1em;
+  line-height: 1.375;
+  font-weight: 400;
+  color: var(--accordion-color);
+  margin-bottom: 0.25rem;
+  opacity: 0.9;
+  cursor: pointer;
 }
 .grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title {
   position: relative;
@@ -746,7 +776,7 @@ dialog.modal .accordion {
   dialog.modal .accordion {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 dialog.modal .accordion .accordion__item {
@@ -759,6 +789,11 @@ dialog.modal .accordion .accordion__item {
   dialog.modal .accordion .accordion__item {
     width: calc(33.33% - 0.0625rem);
     border: none;
+  }
+}
+@media screen and (min-width:950px) {
+  dialog.modal .accordion .accordion__item.accordion__item--large {
+    width: calc(66.66% - 0.0625rem);
   }
 }
 dialog.modal .accordion .accordion__item .accordion__title {
@@ -814,7 +849,12 @@ dialog.modal .accordion .accordion__item .accordion__content {
 }
 @media screen and (min-width:950px) {
   dialog.modal .accordion .accordion__item .accordion__content {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-height: 18.75rem;
   }
 }
 
@@ -969,4 +1009,16 @@ dialog.modal .accordion .accordion__item .accordion__content {
 }
 .bf.input button svg path {
   fill: #015750;
+}
+
+
+.section.section--grantee.section--granteecards .grant-error{
+  width: 100%;
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #F5F5F5;
+  font-family: "Axiforma";
+  margin-bottom: 0;
 }
