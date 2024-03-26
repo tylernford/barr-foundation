@@ -101,6 +101,12 @@ function triggerModal() {
       $('body').css('overflow', 'unset');
     });
   }
+  if ($("#applyFilters").length > 0) {
+    $("#applyFilters").click(function (e) {
+      $(this).closest("dialog")[0].close();
+      $('body').css('overflow', 'unset');
+    });
+  }
   if ($(".modal__open").length > 0) {
     $(".modal__open").on("click", function (e) {
       e.preventDefault();
@@ -263,7 +269,6 @@ document.addEventListener('DOMContentLoaded', function() {
 {% set programAreaOption = programAreaOption ?? "" %}
 {% set strategyOption = strategyOption ?? "" %}
 
-
 {% set query = query ?? '' %}
 {% set granteeList = craft.entries().section('grants').search(query).limit(12) %}
 
@@ -283,11 +288,12 @@ document.addEventListener('DOMContentLoaded', function() {
   {% if not loop.last %}, {% endif %}
 {% endfor %} #}
 {% if programAreaOption|length > 1 %}
-    {% set baseEntry =  craft.entries.title(programAreaOption).one() %} 
+    {% set baseEntry =  craft.entries.section("programAreasCategories").title(programAreaOption).one() %} 
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsProgramAreas' }]) %}
 {% endif %}
 {% if strategyOption|length > 1 %}
-    {% set baseEntry =  craft.entries.title(strategyOption).one() %} 
+    {% set baseEntry =  craft.entries.section("programAreasCategories").title(strategyOption).one() %} 
+    {{ baseEntry|json_encode|raw }}
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsStrategies' }]) %}
 {% endif %}
 {# {% for option in programAreaOption %}
@@ -296,7 +302,6 @@ document.addEventListener('DOMContentLoaded', function() {
      {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsProgramAreas' }]) %}
   {% if not loop.last %}, {% endif %}
 {% endfor %} #}
-
 <section class="section section--grantee"> 
       <form sprig s-val:page="1" >
         <div class="container"> 

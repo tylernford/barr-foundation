@@ -91,6 +91,12 @@ function triggerModal() {
       $('body').css('overflow', 'unset');
     });
   }
+  if ($("#applyFilters").length > 0) {
+    $("#applyFilters").click(function (e) {
+      $(this).closest("dialog")[0].close();
+      $('body').css('overflow', 'unset');
+    });
+  }
   if ($(".modal__open").length > 0) {
     $(".modal__open").on("click", function (e) {
       e.preventDefault();

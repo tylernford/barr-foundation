@@ -29,3 +29,11 @@ carouselWrappers.forEach(wrapper => {
   });
   
 });
+
+// Custom button click events
+$('#first-button').on('click', function() {
+  swiper.slideTo(0); // Go to the first slide
+});
+$('#last-button').on('click', function() {
+  swiper.slideTo(swiper.slides.length - 1); // Go to the last slide
+});
