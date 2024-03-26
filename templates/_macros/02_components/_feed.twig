@@ -19,13 +19,16 @@
         {% case 'bio' %}
 
             {% set personType = content.cardPersonType.one() %}
-            {% set cards = craft.entries().section('directory').limit(8) %}
+            {# {{ sprig('sprig/_sprig-team-grid', { personType: personType.id }) }} #}
+            {{ sprig('sprig/_sprig-paginated-grid', { personType: personType.id, limit: 8 }) }}
+            
+            {# {% set cards = craft.entries().section('directory').limit(8) %} #}
 
-            <div class="cardRow" data-columns="4">
+            {# <div class="cardRow" data-columns="4" data-grid-style="grid">
                 {% for card in cards %}
                     {{ cards.bio(card) }}
                 {% endfor %}
-            </div>
+            </div> #}
 
         {% case 'cards' %}
             {# Set manualFeed #}
