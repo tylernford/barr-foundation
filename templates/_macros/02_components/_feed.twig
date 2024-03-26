@@ -17,15 +17,8 @@
             {{ grantees.granteesGrid(config) }}
 
         {% case 'bio' %}
-
             {% set personType = content.cardPersonType.one() %}
-            {% set cards = craft.entries().section('directory').limit(8) %}
-
-            <div class="cardRow" data-columns="4">
-                {% for card in cards %}
-                    {{ cards.bio(card) }}
-                {% endfor %}
-            </div>
+            {{ sprig('sprig/_sprig-paginated-grid', { personType: personType.id, limit: 8 }) }}
 
         {% case 'cards' %}
             {# Set manualFeed #}

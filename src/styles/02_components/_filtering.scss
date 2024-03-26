@@ -899,3 +899,20 @@
     }
   }
 }
+
+
+
+// Related Posts
+.related-posts {
+  padding-block-end: var(--base-12);
+
+  @include breakpoint(md) {
+    padding-block-end: var(--base-16);
+  }
+
+  @include breakpoint(xl) {
+    .feed-filters {
+      padding-block-start: var(--base-4);
+    }
+  }
+}
