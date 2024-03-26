@@ -39,7 +39,7 @@
                     </button>
                     
                     {# Submenu #}
-                    {{ _self.submenu(loop.index, primary) }}
+                    {{ _self.submenu(loop.index, primary, true) }}
                 </li>
             {% endif %}
         {% endfor %}
@@ -71,7 +71,7 @@
 
 
 {# Submenu #}
-{% macro submenu(id, submenu) %}
+{% macro submenu(id, submenu, mobile) %}
     {% set heading = submenu.heading %}
     {% set description = submenu.description %}
     {% set primaryNav = submenu.navMenu.all() %}
@@ -79,6 +79,7 @@
 
     {# Submenu overlay #}
     <div{% if id|length %} id="submenu-{{ id }}"{% endif %} class="submenu__overlay">
+    {{ mobile == true ? '   <div>' }}
         {# Submeanu heading #}
         {% if heading|length %}
             <h3 class="submenu__heading">{{ heading }}</h3>
@@ -109,6 +110,7 @@
                 {% endif %}
             </ul>
         </nav>
+    {{ mobile == true ? '   </div>' }}
     </div>
 {% endmacro %}
 

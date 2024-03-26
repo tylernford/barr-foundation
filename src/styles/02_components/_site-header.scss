@@ -332,6 +332,10 @@
           grid-template-rows: 0fr;
           transition: grid-template-rows var(--transition-intermediate) ease-in;
 
+          > div {
+            overflow: hidden;
+          }
+
           // Active
           &.-is-active {
             padding-block-end: var(--base-6);
