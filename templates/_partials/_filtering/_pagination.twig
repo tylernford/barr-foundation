@@ -115,16 +115,16 @@
 {# single numeric link #}
 {% macro paginationItem(url, number, current) %}
   {% if current == 'is-current' %}
-  <li>
-    <span data-number="{{number}}" class="numbers__current" aria-label="current page" aria-current="page">{{ number }}</span>
-  </li>
+    <li>
+      <span data-number="{{number}}" class="numbers__current" aria-label="Current page" aria-current="page">{{ number }}</span>
+    </li>
   {% else %}
     <li>
       <a
         class="numbers__active"
         href="{{url}}"
         data-number="{{number}}"
-        aria-label="{{ 'go to page'|t ~ ' ' ~ number }}"
+        aria-label="{{ 'Go to page'|t ~ ' ' ~ number }}"
         sprig
         s-val:page="{{ number }}"
         s-push-url="?page={{ number }}"
