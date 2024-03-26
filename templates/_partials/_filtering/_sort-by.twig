@@ -1,0 +1,61 @@
+{# =======================================
+  Macro: Filtering Dropdown
+======================================= #}
+
+{% set dropdownFilters = [] %}
+{% set dropdownFilters = dropdownFilters|merge(defaultFilters) %}
+
+<fieldset>
+  <legend>{{ dropdownTitle }}</legend>
+
+  <div class="dropdown" style="--number-of-filters: {{ dropdownFilters|length - 1 }}">
+    <div class="dropdown__inner">
+      {% set matchingFilter = false %}
+      {% for dropdownFilter in dropdownFilters %}
+        {% set label = dropdownFilter.label %}
+        {% set value = dropdownFilter.value %}
+
+        {% if dropdownFiltersActive == value %}
+          {% set matchingFilter = true %}
+
+          <div class="dropdown__item -is-selected">
+            <input type="radio" id="{{ dropdownFiltersHandle }}-{{ value }}" name="{{ dropdownFiltersHandle }}" value="{{ value }}" checked sprig>
+            <label for="{{ dropdownFiltersHandle }}-{{ value }}">
+              {{ label }}
+              <svg>
+                <use xlink:href="{{ alias('@icon') }}caret-20"></use>
+              </svg>
+            </label>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      <div class="dropdown__items">
+        {% for dropdownFilter in dropdownFilters %}
+          {% set label = dropdownFilter.label %}
+          {% set value = dropdownFilter.value %}
+    
+          {% if dropdownFiltersActive != value %}
+            <div class="dropdown__item">
+              <input type="radio" id="{{ dropdownFiltersHandle }}-{{ value }}" name="{{ dropdownFiltersHandle }}" value="{{ value }}" sprig>
+              <label for="{{ dropdownFiltersHandle }}-{{ value }}">{{ label }}</label>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+
+{% js %}
+  document.addEventListener('click', function(event) {
+    const dropdown = document.querySelector(`.dropdown`);
+      
+    if (event.target == dropdown) {
+      dropdown.classList.add(`-is-active`);
+    } else {
+      dropdown.classList.remove(`-is-active`);
+    }
+  });
+{% endjs %}
