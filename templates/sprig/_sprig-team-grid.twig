@@ -29,7 +29,7 @@
 
 {% set feed = craft.entries().section('directory').relatedTo(filterParameters).orderBy('title') %}
 
-<div class="feed_filters" data-variant="simple">
+<div class="feed-filters" data-variant="simple">
   {% include '_partials/_filtering/_dropdown' with {
     dropdownTitle: 'Filter by Team',
     dropdownFiltersHandle: 'team',

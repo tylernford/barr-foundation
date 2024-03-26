@@ -33,19 +33,11 @@ News & Insights Interior template
 
     {% if builder %}
         {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+    {% elseif entry.title == 'Blog' %}
+        {{ sprig('sprig/_sprig-news-grid', { newsType: 'blog', limit: 12 }) }}
+
     {% elseif entry.title == 'Newsroom' %}
-        {% set newsroomItems = craft.entries().section('newsroom').type('not research') %}
+        {{ sprig('sprig/_sprig-news-grid', { newsType: 'newsroom', limit: 12 }) }}
 
-        {% set title = 'Temp Newsroom Grid' %}
-        {% set feed  = newsroomItems %}
-        {% set feedConfig = {
-            'title': title,
-            'titleVariant': '',
-            'feed': feed,
-            'gridVariant': 'grid',
-            'cardVariant': 'news'
-        } %}
-
-        {{ feeds.feed(feedConfig) }}
     {% endif %}
 {% endblock %}

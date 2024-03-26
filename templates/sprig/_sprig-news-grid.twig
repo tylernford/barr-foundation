@@ -1,0 +1,94 @@
+{% import '_macros/02_components/_card' as cards %}
+
+{% set page = page ?? 1 %}
+
+{# ---  Set filters  --- #}
+{% set programAreasFilters = craft.entries().section('programAreasCategories') %}
+{% set categoriesFilters = craft.entries().section('postCategories').tagsAvailable(newsType) %}
+
+{% set programAreas = programAreas ?? '' %}
+{% set categories = categories ?? '' %}
+
+{% set relatedToProgramAreas = programAreas|join('|') %}
+{% set relatedToCategories = categories|join('|') %}
+
+{% set relatedToProgramAreasIds = [] %}
+{% for programAreasFilter in programAreasFilters %}
+  {% if programAreasFilter|replace(' ') in relatedToProgramAreas %}
+    {% set relatedToProgramAreasIds = relatedToProgramAreasIds|merge([programAreasFilter.id]) %}
+  {% endif %}
+{% endfor %}
+
+{% set relatedToCategoriesIds = [] %}
+{% for categoriesFilter in categoriesFilters %}
+  {% if categoriesFilter|replace(' ') in relatedToCategories %}
+    {% set relatedToCategoriesIds = relatedToCategoriesIds|merge([categoriesFilter.id]) %}
+  {% endif %}
+{% endfor %}
+
+{% set filterParameters = ['and'] %}
+{% set filterParameters = relatedToProgramAreasIds ? filterParameters|merge([relatedToProgramAreasIds]) : filterParameters %}
+{% set filterParameters = relatedToCategoriesIds ? filterParameters|merge([relatedToCategoriesIds]) : filterParameters %}
+{% set filterParameters = filterParameters|length == 1 ? null : filterParameters %}
+
+
+{# ---  Set order by  --- #}
+{% set sort = sort ?? 'desc' %}
+{% set orderBy =
+  sort == 'asc' ? 'postDate ASC' :
+  'postDate DESC'
+%}
+
+{# ---  Sort  --- #}
+{% set sortFilters = [
+  { value: 'desc', label: 'Most Recent First'},
+  { value: 'asc', label: 'Oldest First'},
+] %}
+
+{# ---  Set View  --- #}
+{% set viewAs = viewAs ?? 'grid' %}
+
+{% set feedQuery = craft.entries().section(newsType).type('not research').relatedTo(filterParameters).orderBy(orderBy).limit(limit) %}
+{% set feedQueryFilters = craft.entries().section(newsType).type('not research').relatedTo(filterParameters).orderBy(orderBy) %}
+
+{# Paginates the entry query given the current page #}
+{% set pageInfo = sprig.paginate(feedQuery, page) %}
+{% set feed = pageInfo.pageResults %}
+
+{% do sprig.pushUrl('?' ~ {programAreas:relatedToProgramAreas,categories:relatedToCategories,sort:sort,viewAs:viewAs}|url_encode) %}
+
+<div class="feed-page">
+  {# Filters #}
+  <div class="feed-filters" data-variant="standard">
+    <div class="filters__group">
+      {% include '_partials/_filtering/_categories' %}
+
+      {% include '_partials/_filtering/_sort-by' with {
+        dropdownTitle: 'Sort By',
+        dropdownFiltersHandle: 'sort',
+        defaultFilters: sortFilters,
+        dropdownFiltersActive: sort
+      } %}
+    </div>
+
+    {% include '_partials/_filtering/_view-as' with { activeView: viewAs, viewHandle: 'viewAs' } %}
+  </div>
+
+  {# Feed #}
+  <div class="feed">
+    <div class="feed__grid" data-grid-style="{{ viewAs }}">
+      {% for feedItem in feed %}
+        {% if newsType == 'blog' %}
+          {{ cards.post(feedItem) }}
+        {% else %}
+          {{ cards.news(feedItem) }}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# Pagination #}
+  {% if feed %}
+    {% include '_partials/_filtering/_pagination' %}
+  {% endif %}
+</div>
