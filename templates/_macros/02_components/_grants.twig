@@ -781,7 +781,7 @@ Plotly.newPlot(TESTER, data, layout);
             </div>
         </div>
 </section>
-{% for item in programAreasCategories %}
+{# {% for item in programAreasCategories %}
   {% if item.level == 1 %}
     {% if loop.index != 1 %}</ul>{% endif %}
     <ul>{{ item }}
@@ -789,7 +789,7 @@ Plotly.newPlot(TESTER, data, layout);
     <li>{{ item }}</li>
   {% endif %}
 {% endfor %}
-</ul>
+</ul> #}
 {% elseif layout == "infographic" %}
 <section class="section section--infographic section--granteecards"> 
         <div class="container">
