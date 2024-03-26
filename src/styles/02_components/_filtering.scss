@@ -482,6 +482,7 @@
   border: none;
   background-color: transparent;
   color: var(--color-modal-trigger-primary);
+  @include getType('detail-axiforma');
   cursor: pointer;
   z-index: 61;
 
