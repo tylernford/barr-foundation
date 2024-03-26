@@ -349,7 +349,9 @@ body[data-theme-color="marigold"] {
         gap: var(--base-5);
 
         .primary__wrapper {
-          grid-template-columns: 1fr 1fr;
+          &[data-columns="2"] {
+            grid-template-columns: 1fr 1fr;
+          }
           gap: var(--base-6);
         }
 
