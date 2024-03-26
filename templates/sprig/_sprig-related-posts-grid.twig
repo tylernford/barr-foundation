@@ -21,12 +21,12 @@
 
 {% set feedQuery = craft.entries().section(section).relatedTo(filterParameters).orderBy(orderBy) %}
 {% set limit = feedQuery|length > 12 ? 6 : 3 %}
+{% set showSort = feedQuery|length > 6 ? true : false %}
 {% set feedQuery = feedQuery.limit(limit) %}
 
 {# Paginates the entry query given the current page #}
 {% set pageInfo = sprig.paginate(feedQuery, page) %}
 {% set feed = pageInfo.pageResults %}
-
 
 {% if feed %}
   <section class="related-posts">
@@ -38,14 +38,16 @@
     } %}
     {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
 
-    <div class="feed-filters" data-variant="simple">
-      {% include '_partials/_filtering/_sort-by' with {
-        dropdownTitle: 'Sort By',
-        dropdownFiltersHandle: 'sort',
-        defaultFilters: sortFilters,
-        dropdownFiltersActive: sort
-      } %}
-    </div>
+    {% if showSort == true %}
+      <div class="feed-filters" data-variant="simple">
+        {% include '_partials/_filtering/_sort-by' with {
+          dropdownTitle: 'Sort By',
+          dropdownFiltersHandle: 'sort',
+          defaultFilters: sortFilters,
+          dropdownFiltersActive: sort
+        } %}
+      </div>
+    {% endif %}
 
     <div class="feed">
       <div class="feed__grid" data-grid-style="grid" data-columns="3">
