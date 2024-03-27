@@ -14,6 +14,7 @@ sprig.action('navigate', ({ target }) => {
 {% set programAreas = craft.entries().section("programAreasCategories").level(1).all() %}
 {% set strategies = craft.entries().section("programAreasCategories").level(2).all() %}
 {% set programAreasCategories = craft.entries().section("programAreasCategories").all() %}
+{% set awardYear = "now"|date("Y") - 1 %}
 
 {% js %}
     htmx.on('htmx:afterSwap', function(event) {
@@ -164,7 +165,7 @@ $(document).ready(function() {
 
   //Plotly javascript 
 	TESTER = document.getElementById('tester');
-  {% set allData = craft.entries().section('grants').all() %}
+  {% set allData = craft.entries().section('grants').dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).all() %}
 
     {% set programAreaArray = [] %}
     {% set StrategiesArray = [] %}
@@ -327,7 +328,7 @@ $('#loading').hide(); // Hide it initially
 {% endjs %}
 
 {# Initialse twig variables #}
-{% set awardYear = "now"|date("Y") - 1 %}
+
 {% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
 {% set sortOption = sortOption ?? 'Most Recent First' %}
 {% set programAreaOption = programAreaOption ?? "" %}
