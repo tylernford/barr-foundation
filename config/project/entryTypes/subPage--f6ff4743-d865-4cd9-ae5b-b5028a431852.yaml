@@ -135,6 +135,24 @@ fieldLayouts:
         name: Pre-Footer
         uid: 8679aa39-1b20-4359-a20f-5e8eef5e5dca
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26722c11-6d9b-4ced-9d66-b94d3292bbd5
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 0a69d0d7-b3c8-40d5-bd9e-65dbf2cd5f9b
+        userCondition: null
 handle: subPage
 hasTitleField: true
 name: Sub-Page
