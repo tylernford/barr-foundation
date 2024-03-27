@@ -108,7 +108,7 @@ function triggerModal() {
     });
   }
   if ($("#clearFilters").length > 0) {
-    $("#applyFilters").click(function (e) {
+    $("#clearFilters").click(function (e) {
       $(this).closest("dialog")[0].close();
       $('body').css('overflow', 'unset');
     });
@@ -137,6 +137,12 @@ function triggerModal() {
   });
 }
 // modal end
+
+document.getElementById('clearFilters').addEventListener('click', function() {
+    // Redirect to /grantmaking/grants-grantees
+    console.log("Clear Click")
+    window.location.href = '/grantmaking/grants-grantees';
+});
 
 
 //call the function 
@@ -180,7 +186,7 @@ function triggerModal() {
       parents: programAreaArray,
       maxdepth: 2,
       tiling: {pad: 0},
-      textinfo: "label+percent entry",
+      textinfo: "label+percent parent",
       outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma"},
       insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f"],"family": "Axiforma"  },
       marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F"]}
@@ -208,6 +214,15 @@ Plotly.newPlot(TESTER, data, layout);
             // Log the values of the first and second depth
             console.log("First depth:", point.parent);
             console.log("Second depth:", point.label);
+
+            var loader = document.getElementById("loadingOverlay");
+            if(loader){
+                loader.classList.add("htmx-request");
+                console.log('Class added');
+            } else {
+                console.log('Element with id loadingOverlay not found');
+            }
+                console.log('Element with id loadingOverlay not found');
             
             // Redirect to the desired URL
             window.location.href = "?query=&programAreaOption=" + point.parent + "&strategyOption=" + point.label + "&layout=list&page=1";
@@ -259,14 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get the program area from the parent accordion item
             var programArea = event.target.closest('.accordion__item').querySelector('.accordion__title span').innerText;
 
-            var loader = document.getElementById("loadingOverlay");
-            if(loader){
-                loader.classList.add("htmx-request");
-                console.log('Class added');
-            } else {
-                console.log('Element with id loadingOverlay not found');
-            }
-                console.log('Element with id loadingOverlay not found');
+            
 
             // Redirect the page
             window.location.href = '?query=&programAreaOption=' + encodeURIComponent(programArea) + '&strategyOption=' + encodeURIComponent(strategy) + '&layout=grid&page=1';
@@ -277,16 +285,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Assuming you have a div with id 'loading' for the loading screen
 $('#loading').hide(); // Hide it initially
 
-$(document).ajaxStart(function() {
-    $('#loading').show(); // Show loading div when AJAX starts
-}).ajaxStop(function() {
-    $('#loading').hide(); // Hide loading div when AJAX completes
-});
 
-document.getElementById('clearFilters').addEventListener('click', function() {
-    // Redirect to /grantmaking/grants-grantees
-    window.location.href = '/grantmaking/grants-grantees';
-});
+
+
 
     });
 {% endjs %}
@@ -322,6 +323,7 @@ document.getElementById('clearFilters').addEventListener('click', function() {
 {% endif %}
 {% if strategyOption|length > 1 %}
     {% set baseEntry =  craft.entries.section("programAreasCategories").title(strategyOption).one() %} 
+    {{ baseEntry|json_encode|raw }}
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsStrategies' }]) %}
 {% endif %}
 {# {% for option in programAreaOption %}
@@ -458,13 +460,14 @@ document.getElementById('clearFilters').addEventListener('click', function() {
                   </label>
                 </div>
               </div> #}
-              <div class="bf input-wrapper">
+              
+              {# <div class="bf input-wrapper">
                 <div class="radio-button">
                   <label for="map"> 
                     <input class="radio-group" type="radio" id="map" name="view as"><span class="radio-checkmark"></span><span class="radio-label">map</span>
                   </label>
                 </div>
-              </div>
+              </div> #}
             </div>
           </div>
         </div>
@@ -581,9 +584,31 @@ document.getElementById('clearFilters').addEventListener('click', function() {
             section: "grants",
         }).dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC ").limit(12) %} #}
 {% elseif sortOption == 'Older First' %}
-    {% set granteeList = craft.entries().section({
+    {# {% set granteeList = craft.entries().section({
             section: "grants"
-        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly ASC").limit(12) %}
+        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly ASC").limit(12) %} #}
+        {% if optionOfProgramArea|json_encode|length > 7 %}
+      {% set granteeList = craft.entries()
+          .section({
+              section: "grants",
+          })
+          .dateOnly(["and", ">= #{awardYear}"])
+          .entriesOrganization([':notempty:'])
+          .search(query)
+          .orderBy("dateOnly ASC")
+          .limit(12)
+          .relatedTo(optionOfProgramArea) %}
+    {% else %}
+      {% set granteeList = craft.entries()
+        .section({
+            section: "grants",
+        })
+        .dateOnly(["and", ">= #{awardYear}"])
+        .entriesOrganization([':notempty:'])
+        .search(query)
+        .orderBy("dateOnly ASC")
+        .limit(12) %}
+    {% endif %}
 {% elseif sortOption == 'Highest Amount' %}
     {% set granteeList = craft.entries().section({
             section: "grants",

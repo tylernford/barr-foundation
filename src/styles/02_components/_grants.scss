@@ -86,6 +86,11 @@
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width:990px){
+  #tester{
+    display: none;
+  }
+}
 .section.section--granteecards {
   background-color: transparent;
   background-image: url(/uploads/images/interstitial-graphic.png);
@@ -168,6 +173,7 @@
   border-top: 1px solid #636466;
   margin: 0;
   opacity: 0.65;
+  cursor: pointer;
 }
 
 .bg.filter {
