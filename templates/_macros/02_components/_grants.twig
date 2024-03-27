@@ -138,6 +138,7 @@ function triggerModal() {
 }
 // modal end
 
+//Redirect on clear filter
 document.getElementById('clearFilters').addEventListener('click', function() {
     // Redirect to /grantmaking/grants-grantees
     console.log("Clear Click")
@@ -199,10 +200,12 @@ $(document).ready(function() {
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
     var CountsArray=[1,...{{ counts|json_encode|raw }}];
-    console.log(programAreaArray);
+    //console.log(programAreaArray);
     console.log(StrategiesArray);
     {# console.log({{ sampleData|json_encode|raw }}); #}
-    console.log(CountsArray);
+    //console.log(CountsArray);
+
+    //Plotly graph builder
   data = [{
       type: "treemap",
       labels: StrategiesArray,
@@ -212,8 +215,8 @@ $(document).ready(function() {
       tiling: {pad: 0},
       textinfo: "label+percent entry",
       outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma"},
-      insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f"],"family": "Axiforma"  },
-      marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F"]}
+      insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f","#007E46","#007E46","#007E46","#881857","#881857","#881857","#BF6914","#BF6914","#BF6914","#507f7f","#507f7f","#507f7f","#507f7f","#507f7f"],"family": "Axiforma"  },
+      marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F","#2F5535","#2F5535","#2F5535","#5A3044","#5A3044","#5A3044","#E78B23","#E78B23","#E78B23","#01564F","#01564F","#01564F","#01564F","#01564F"]}
 }];
 
 var layout = {
@@ -232,7 +235,7 @@ var config = {
 };
 
 Plotly.newPlot(TESTER, data, layout, config);
-
+    //Redirection to list page when startegy is clicked
     // Add event listener for click events on the plot
     TESTER.on('plotly_click', function(data){
         console.log("Treemap Clicked!!");
@@ -323,9 +326,9 @@ $('#loading').hide(); // Hide it initially
     });
 {% endjs %}
 
-
+{# Initialse twig variables #}
 {% set awardYear = "now"|date("Y") - 1 %}
-{% set layout = layout ?? 'grid' %} {# grid or list #}
+{% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
 {% set sortOption = sortOption ?? 'Most Recent First' %}
 {% set programAreaOption = programAreaOption ?? "" %}
 {% set strategyOption = strategyOption ?? "" %}
@@ -337,17 +340,10 @@ $('#loading').hide(); // Hide it initially
     {% set page = page ?? 1 %}
     {{ hiddenInput('page', page) }}
     
-{# {% paginate granteeList as pageInfo, pageEntries %} #}
 
-
+{# Filter section code #}
 {# Sets to a default value if not defined #}
 {% set optionOfProgramArea = ["and"] %}
-{# {% for option in strategyOption %}
-  {{ option }}
-      {% set baseEntry =  craft.entries.title(option).one() %} 
-     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsStrategies' }]) %}
-  {% if not loop.last %}, {% endif %}
-{% endfor %} #}
 {% if programAreaOption|length > 1 %}
     {% set baseEntry =  craft.entries.section("programAreasCategories").title(programAreaOption).one() %} 
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsProgramAreas' }]) %}
@@ -357,16 +353,14 @@ $('#loading').hide(); // Hide it initially
     {# {{ baseEntry|json_encode|raw }} #}
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsStrategies' }]) %}
 {% endif %}
-{# {% for option in programAreaOption %}
-  {{ option }}
-      {% set baseEntry =  craft.entries.title(option).one() %} 
-     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsProgramAreas' }]) %}
-  {% if not loop.last %}, {% endif %}
-{% endfor %} #}
+
+{# Loading Screen #}
 <div id="loading" style="display: none">Loading..............</div>
 <div class="loading-overlay" id="loadingOverlay">
-    <div class="loading-spinner"></div>
+    <div class="loading-spinner"></div>{# Can be modified in _grants.scss #}
 </div>
+
+{# Search Sort Filter Section #}
 <section class="section section--grantee"> 
       <form sprig s-val:page="1" data-hx-indicator="#loadingOverlay">
         <div class="container"> 
@@ -505,79 +499,8 @@ $('#loading').hide(); // Hide it initially
       </form>
 </section>
 
-
-{# <div class="blockGeneric"> #}
-    {# <form sprig>
-        <input type="text" name="query" value="{{ query }}">
-        <select sprig s-trigger="change" value={{ sortOption }} id="sortDropdown" s-val="sortOption">
-            <option value="recent">Most Recent First</option>
-            <option value="older">Older First</option>
-        </select>
-        <input type="submit" value="Search">
-        <input sprig s-trigger="change" type="radio" name="layout" value="grid" id="grid" s-val="layout" {% if layout == "grid" %}checked="checked"{% endif %}>
-        <label for="grid">Grid</label>
-
-        <input sprig s-trigger="change"  type="radio" name="layout" value="list" id="list" s-val="layout" {% if layout == "list" %}checked="checked"{% endif %}>
-        <label for="list">List</label>
-    </form> #}
-{# </div> #}
-
-{# Fetch entries from the "grants" section #}
-{% set granteeListss = craft.entries().section('grants').all() %}
-
-{# Initialize an array to store entries with the "education" tag #}
-{% set educationEntries = [] %}
-
-{# Loop through each entry #}
-{% for entry in granteeListss %}
-    {# Check if the "tagsProgramAreas" field contains "education" #}
-    {% if "Education" in entry.tagsProgramAreas %}
-        {# If it does, add the entry to the educationEntries array #}
-        {% set educationEntries = educationEntries|merge([entry]) %}
-    {% endif %}
-{% endfor %}
-
-{# Output the entries with the "education" tag #}
-{% for educationEntry in educationEntries %}
-    {# {{ educationEntry.title }}<br> #}
-{% endfor %}
-
-
+{# Fetch data based on sort option #}
 {% if sortOption == 'Most Recent First' %}
-    
-{# {% set educationEntry = craft.entries.title('Education').one() %} #}
-{% set educationEntry = craft.entries.title('Education').one() %}
-{% set educationEntry1 = craft.entries.title('Adapting Boldly').one() %}
-{% set educationEntry2 = craft.entries.title('Clean Energy').one() %}
-{# {{ dump(educationEntry) }} #}
-{# {% set granteeList = craft.entries()
-    .section('grants')
-    .dateOnly(["and", ">= #{awardYear}"])
-    .entriesOrganization([':notempty:'])
-    .search(query)
-    .orderBy("dateOnly DESC")
-    .limit(12)
-    .relatedTo(["and",
-        { targetElement: educationEntry1, field: 'tagsProgramAreas' },
-        [
-            { targetElement: educationEntry1, field: 'tagsStrategies' },
-            { targetElement: educationEntry2, field: 'tagsStrategies' }
-        ]
-    ]) %} #}
-{# {% set granteeList2 = craft.entries()
-    .section({
-        section: "grants",
-    })
-    .dateOnly(["and", ">= #{awardYear}"])
-    .entriesOrganization([':notempty:'])
-    .search(query)
-    .orderBy("dateOnly DESC")
-    .limit(12)
-    .relatedTo({
-        targetElement: educationEntry,
-        field: 'tagsProgramAreas'
-    }) %}
-    {% set granteeList = granteeList1|merge(granteeList2) %} #}
     {% if optionOfProgramArea|json_encode|length > 7 %}
       {% set granteeList = craft.entries()
           .section({
@@ -600,25 +523,8 @@ $('#loading').hide(); // Hide it initially
         .orderBy("dateOnly DESC")
         .limit(12) %}
     {% endif %}
-    
-    {# {% set granteeList = craft.entries()
-        .section({
-            section: "grants",
-        })
-        .dateOnly(["and", ">= #{awardYear}"])
-        .entriesOrganization([':notempty:'])
-        .search(query)
-        .orderBy("dateOnly DESC")
-        .limit(12)
-        .relatedTo(optionOfProgramArea) %} #}
-    {# {% set granteeList = craft.entries().section({
-            section: "grants",
-        }).dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC ").limit(12) %} #}
 {% elseif sortOption == 'Older First' %}
-    {# {% set granteeList = craft.entries().section({
-            section: "grants"
-        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly ASC").limit(12) %} #}
-        {% if optionOfProgramArea|json_encode|length > 7 %}
+    {% if optionOfProgramArea|json_encode|length > 7 %}
       {% set granteeList = craft.entries()
           .section({
               section: "grants",
@@ -657,30 +563,10 @@ $('#loading').hide(); // Hide it initially
 {% set pageInfo = sprig.paginate(granteeList, page) %}
     {% set pageEntries = pageInfo.pageResults %}
 
-{# {% for grantee in pageEntries %}
-    <h2>{{ grantee.title }}</h2>
-    {% for fieldHandle, fieldValue in grantee %}
-        {% if fieldValue is instance of('DateTime') %}
-            <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
-        {% else %}
-            <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
-        {% endif %}
-    {% endfor %}
-{% endfor %}  #}
-
-{# {% for entry in pageEntries %}
-    <h2>{{ entry.title }}</h2>
-    {% for fieldHandle, fieldValue in entry %}
-        {% if fieldValue is instance of('DateTime') %}
-            <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
-        {% else %}
-            <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
-        {% endif %}
-    {% endfor %}
-{% endfor %} #}
-
 {% set end = pageInfo.totalPages %}
 {% if layout == "grid" or layout == "list" %}
+
+{# Grid and List view Section #}
 <section id="grantData" class="section section--grantee section--granteecards"> 
         <div class="container">
           <div class="bf grantee grantee--{{ layout }}"> 
@@ -901,16 +787,8 @@ $('#loading').hide(); // Hide it initially
             </div>
         </div>
 </section>
-{# {% for item in programAreasCategories %}
-  {% if item.level == 1 %}
-    {% if loop.index != 1 %}</ul>{% endif %}
-    <ul>{{ item }}
-  {% elseif item.level == 2 %}
-    <li>{{ item }}</li>
-  {% endif %}
-{% endfor %}
-</ul> #}
 {% elseif layout == "infographic" %}
+{# Infographic Section #}
   <section class="section section--infographic section--granteecards"> 
         <div class="container">
           <div class="bf grantee-infographic"> 
@@ -941,9 +819,6 @@ $('#loading').hide(); // Hide it initially
           </div>
         </div>
   </section>
-    {# <div id="graph-container">
-      <div id="tester"></div>
-    </div> #}
 {% endif %}
 
 <script>
@@ -969,11 +844,8 @@ $('#loading').hide(); // Hide it initially
       }
     });
     // Do whatever you want with the selected filters array here
-    console.log(selectedProgramArea);
-    console.log(selectedStrategy);
+    //console.log(selectedProgramArea);
+    //console.log(selectedStrategy);
     // You can send this array to a backend, store it in localStorage, etc.
   });
-
-  
 </script>
-{# {% do sprig.pushUrl('?' ~ {page: page, programAreaOption: programAreaOption}|url_encode) %} #}
