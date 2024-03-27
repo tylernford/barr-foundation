@@ -56,9 +56,29 @@
         {% for primary in navPrimary %}
             {% if primary.type == 'nestedItem' %}
                 {% set primaryLabel  = primary.navLabel %}
+                {% set currentSection = entry.section %}
+                {% set active = 'false' %}
+
+                {% if primaryLabel == 'Program Areas' %}
+                    {% if currentSection == 'Program Areas' %}
+                        {% set active = 'true' %}
+                    {% endif %}
+                {% elseif primaryLabel == 'Grantmaking' %}
+                    {% if (currentSection == 'Grantmaking') or (currentSection == 'Grants') %}
+                        {% set active = 'true' %}
+                    {% endif %}
+                {% elseif primaryLabel == 'About Us' %}
+                    {% if (currentSection == 'About Us') or (currentSection == 'Directory') %}
+                        {% set active = 'true' %}
+                    {% endif %}
+                {% elseif primaryLabel == 'News & Insights' %}
+                    {% if (currentSection == 'News & Insights') or (currentSection == 'Blog') %}
+                        {% set active = 'true' %}
+                    {% endif %}
+                {% endif %}
 
                 {# Submenu #}
-                <li class="menu__item menu__item--submenu" aria-label="{{ primaryLabel }}">                    
+                <li class="menu__item menu__item--submenu" data-is-active="{{ active }}" aria-label="{{ primaryLabel }}">                    
                     {{ _self.submenu('', primary) }}
                 </li>
             {% endif %}

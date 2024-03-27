@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 handle: newsInsights
-name: 'News + Insights'
+name: 'News & Insights'
 previewTargets:
   -
     __assoc__:
