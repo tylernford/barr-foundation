@@ -224,7 +224,14 @@ var layout = {
     // You can also include other layout properties here if needed
 };
 
-Plotly.newPlot(TESTER, data, layout);
+var config = {
+    responsive: true,
+    displayModeBar: true,
+    showLink: false,
+    modeBarButtonsToRemove: ['toImage', 'sendDataToCloud'],
+};
+
+Plotly.newPlot(TESTER, data, layout, config);
 
     // Add event listener for click events on the plot
     TESTER.on('plotly_click', function(data){
