@@ -46,6 +46,24 @@ fieldLayouts:
         name: Content
         uid: d871427b-7a39-4c63-bbbc-48dcee65b2a4
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4847fb3-2892-4b6e-8dfb-492b7b8d1b49
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: e5db0a19-91e0-4456-8e73-33446e90aede
+        userCondition: null
 handle: granteeDatabase
 hasTitleField: true
 name: 'Grantee Database'

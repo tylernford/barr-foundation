@@ -135,6 +135,24 @@ fieldLayouts:
         name: Pre-Footer
         uid: 3209e6bf-d36a-4f1e-ae34-8bb2951570f0
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b3d4f8f-1ce1-4ef2-ad36-23aef5fc3ba7
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: c4f61f8f-96c3-43e8-8c5e-538482d0af2c
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

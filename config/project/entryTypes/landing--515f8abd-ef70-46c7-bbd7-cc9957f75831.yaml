@@ -147,6 +147,24 @@ fieldLayouts:
         name: Pre-Footer
         uid: b407ad4d-2e46-4657-9193-5ec795bda352
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45952ef9-1518-4ec9-9b87-f1443a895e8a
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 57945885-7091-41b3-8ce3-5e3fa35c5257
+        userCondition: null
 handle: landing
 hasTitleField: true
 name: Landing

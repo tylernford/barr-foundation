@@ -297,6 +297,24 @@ fieldLayouts:
         name: Description
         uid: d2615e6e-e628-417f-9479-8b2dc28f3ebd
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ce34bfb-d5f2-4f64-9b55-16fba7003565
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 01cc3f66-ccb5-450e-a32f-ec2b75c5d358
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default
