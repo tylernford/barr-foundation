@@ -19,7 +19,8 @@
         <div class="blockGrantees__featured-grantee">
           {% set granteeCardConfig = {
             'variant': 'featured',
-            'label': 'Featured Grantee'
+            'label': 'Featured Grantee',
+            'grantee': featuredGrantee
           } %}
           {{ cards.grantee(granteeCardConfig) }}
         </div>
