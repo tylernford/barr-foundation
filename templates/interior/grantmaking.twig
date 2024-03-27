@@ -33,10 +33,10 @@ Grantmaking nterior template
         
     {# Grantee DB #}
     {% elseif entry.slug == 'grants-grantees' %}
-        {% include 'interior/_entry-grants-db.twig' with {'entry': entry} %}
+        {% include 'interior/grantmaking/grants.twig' with { 'entry': entry } %}
         
     {# Grantee Entry #}
     {% elseif entrySection == 'grantees' %}
-        {% include 'interior/_entry-grants-org.twig' with {'entry': entry} %}
+        {% include 'interior/grantmaking/grantee.twig' with { 'entry': entry } %}
     {% endif %}
 {% endblock %}

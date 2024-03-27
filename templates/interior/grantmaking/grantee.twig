@@ -46,6 +46,9 @@
     </section>
 {% endif %}
 
+
+
+
 {% set relatedCards = entry.cardsFeedManual %}
 
 {# Related Content #}
@@ -70,7 +73,7 @@
         {% endfor %}
     {% endif %}
             
-    <section class="feed">
+    <section class="feed" style="display: none">
         {# Section Title #}
         {% set sectionTitleAttributes = {
             level: 'h2',
