@@ -16,7 +16,7 @@ fieldLayouts:
             uid: fe055eec-e458-47b9-be76-622967f9641c
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
             fieldUid: be795e4c-65da-45f5-9320-13213acf7b06 # Tags: Program Areas

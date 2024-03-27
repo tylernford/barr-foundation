@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 8a0959ff-a4cb-4f7b-b8a7-0494b2d081f5 # Cards
 handle: cardsFeedAuto
-instructions: 'Three cards from the selected source(ss) will be displayed in chronological order.'
+instructions: 'Three cards from the selected source(s) will be displayed in chronological order.'
 name: 'Feed: Auto'
 searchable: false
 settings:
