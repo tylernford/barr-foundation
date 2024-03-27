@@ -447,6 +447,21 @@
           }
         }
       }
+
+      &[data-is-active="true"] {
+        &::before {
+          top: calc(0 - var(--site-header-height));
+          background-color: var(--color-citrus-100);
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            &::before {
+              background-color: var(--color-citrus-50);
+            }
+          }
+        }
+      }
       
       > a,
       &.menu__item--submenu::after {

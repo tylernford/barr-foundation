@@ -1,4 +1,4 @@
-dateModified: 1711128247
+dateModified: 1711498137
 elementSources:
   craft\elements\Asset:
     -
@@ -168,7 +168,7 @@ elementSources:
         - structure
         - asc
       disabled: false
-      key: 'section:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+      key: 'section:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
       tableAttributes:
         - link
         - section
@@ -253,9 +253,8 @@ elementSources:
       tableAttributes:
         - link
         - section
-        - 'field:735baf07-fdce-44c2-8433-02997cd29674' # Department: Import
-        - 'field:ab12a67b-9af1-4f2c-bc53-cbedda60dbd1' # Budget/Strategy/Portfolio: Import
         - 'field:1b2cb00a-9926-4731-ba73-26cd45fd7e44' # Geo: Region
+        - 'field:22f973cc-427c-4e70-8bb8-6624479ab025' # Entries: Organization
       type: native
     -
       defaultSort:
@@ -524,7 +523,7 @@ meta:
     4e139296-f9eb-4d48-8374-42a79d46413b: 'Tags: Import Primary' # Tags: Import Primary
     4eb30fbf-3647-444f-ba73-29ebb5b12477: 'Card: Team' # Card: Team
     04fbe62b-bcae-44dd-8023-e56efe203cb3: 'Action: URL' # Action: URL
-    5a3ec662-f801-451b-97a6-8d2d40b08a5d: 'News + Insights' # News + Insights
+    5a3ec662-f801-451b-97a6-8d2d40b08a5d: 'News & Insights' # News & Insights
     5a6a9a3c-05f9-42d5-9b4f-41ffc03f3f4d: 'Card: Latest News' # Card: Latest News
     5a492adc-7baf-4f6f-a0b1-5a528df2c28a: 'Carousel: Manual' # Carousel: Manual
     5a2816d1-111d-44df-933d-9fe33d93acdb: 'Text: Quote' # Text: Quote
