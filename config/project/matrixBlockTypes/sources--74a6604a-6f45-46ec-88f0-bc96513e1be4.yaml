@@ -53,18 +53,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            fieldUid: 690e3ae6-6702-4e43-9fa7-5293eb17523f # Tags: Categories or Program Areas
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 186c2be6-474e-43a7-8678-6fc20e49c725
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: f7eda5a2-3fc4-448f-9ae1-098dfa14f574
         userCondition: null
@@ -178,32 +166,6 @@ fields:
       showSiteMenu: true
       sources:
         - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Entries
-  690e3ae6-6702-4e43-9fa7-5293eb17523f: # Tags: Categories or Program Areas
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: tagsEntry
-    instructions: DEPRECATED.
-    name: 'Tags: Categories or Program Areas'
-    searchable: false
-    settings:
-      allowSelfRelations: true
-      branchLimit: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: null
-      minRelations: null
-      selectionLabel: 'Add a Category or Program Area'
-      showSiteMenu: true
-      sources:
-        - 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-        - 'section:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
       targetSiteId: null
       validateRelatedElements: false
       viewMode: null
