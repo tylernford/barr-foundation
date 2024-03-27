@@ -97,6 +97,12 @@ function triggerModal() {
       $('body').css('overflow', 'unset');
     });
   }
+  if ($("#clearFilters").length > 0) {
+    $("#clearFilters").click(function (e) {
+      $(this).closest("dialog")[0].close();
+      $('body').css('overflow', 'unset');
+    });
+  }
   if ($(".modal__open").length > 0) {
     $(".modal__open").on("click", function (e) {
       e.preventDefault();
@@ -125,3 +131,37 @@ function triggerModal() {
 
 //call the function 
 
+
+// // Assuming you have a div with id 'loading' for the loading screen
+// $('#loading').hide(); // Hide it initially
+
+// $(document).ajaxStart(function() {
+//     $('#loading').show(); // Show loading div when AJAX starts
+// }).ajaxStop(function() {
+//     $('#loading').hide(); // Hide loading div when AJAX completes
+// });
+
+
+//  // Function to show loading overlay
+//     function showLoadingOverlay() {
+//         document.getElementById('loadingOverlay').style.display = 'flex'; // Show overlay
+//     }
+
+//     // Function to hide loading overlay
+//     function hideLoadingOverlay() {
+//         document.getElementById('loadingOverlay').style.display = 'none'; // Hide overlay
+//     }
+
+//     // Add event listener to detect Sprig AJAX requests
+//     document.addEventListener('sprig:beforeFetch', function () {
+//         showLoadingOverlay(); // Show loading overlay before AJAX request
+//     });
+
+//     document.addEventListener('sprig:afterFetch', function () {
+//         hideLoadingOverlay(); // Hide loading overlay after AJAX request completes
+//     });
+
+document.getElementById('clearFilters').addEventListener('click', function() {
+    // Redirect to /grantmaking/grants-grantees
+    window.location.href = '/grantmaking/grants-grantees';
+});

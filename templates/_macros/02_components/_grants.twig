@@ -107,6 +107,12 @@ function triggerModal() {
       $('body').css('overflow', 'unset');
     });
   }
+  if ($("#clearFilters").length > 0) {
+    $("#applyFilters").click(function (e) {
+      $(this).closest("dialog")[0].close();
+      $('body').css('overflow', 'unset');
+    });
+  }
   if ($(".modal__open").length > 0) {
     $(".modal__open").on("click", function (e) {
       e.preventDefault();
@@ -175,8 +181,8 @@ function triggerModal() {
       maxdepth: 2,
       tiling: {pad: 0},
       textinfo: "label+percent entry",
-      outsidetextfont: {"size": 20, "color": "#377eb8"},
-      insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f"]  },
+      outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma"},
+      insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f"],"family": "Axiforma"  },
       marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F"]}
 }];
 
@@ -253,10 +259,33 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get the program area from the parent accordion item
             var programArea = event.target.closest('.accordion__item').querySelector('.accordion__title span').innerText;
 
+            var loader = document.getElementById("loadingOverlay");
+            if(loader){
+                loader.classList.add("htmx-request");
+                console.log('Class added');
+            } else {
+                console.log('Element with id loadingOverlay not found');
+            }
+                console.log('Element with id loadingOverlay not found');
+
             // Redirect the page
             window.location.href = '?query=&programAreaOption=' + encodeURIComponent(programArea) + '&strategyOption=' + encodeURIComponent(strategy) + '&layout=grid&page=1';
         }
     });
+});
+
+// Assuming you have a div with id 'loading' for the loading screen
+$('#loading').hide(); // Hide it initially
+
+$(document).ajaxStart(function() {
+    $('#loading').show(); // Show loading div when AJAX starts
+}).ajaxStop(function() {
+    $('#loading').hide(); // Hide loading div when AJAX completes
+});
+
+document.getElementById('clearFilters').addEventListener('click', function() {
+    // Redirect to /grantmaking/grants-grantees
+    window.location.href = '/grantmaking/grants-grantees';
 });
 
     });
@@ -293,7 +322,6 @@ document.addEventListener('DOMContentLoaded', function() {
 {% endif %}
 {% if strategyOption|length > 1 %}
     {% set baseEntry =  craft.entries.section("programAreasCategories").title(strategyOption).one() %} 
-    {{ baseEntry|json_encode|raw }}
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsStrategies' }]) %}
 {% endif %}
 {# {% for option in programAreaOption %}
@@ -302,8 +330,12 @@ document.addEventListener('DOMContentLoaded', function() {
      {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsProgramAreas' }]) %}
   {% if not loop.last %}, {% endif %}
 {% endfor %} #}
+<div id="loading" style="display: none">Loading..............</div>
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+</div>
 <section class="section section--grantee"> 
-      <form sprig s-val:page="1" >
+      <form sprig s-val:page="1" data-hx-indicator="#loadingOverlay">
         <div class="container"> 
           <div class="bg filter"> 
             <div class="filter__top"> </div>
