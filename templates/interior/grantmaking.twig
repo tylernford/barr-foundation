@@ -1,22 +1,23 @@
 {# ===========================================================
-Template: interior/news-and-insights.twig
-URL: /
+Template: interior/grantmaking.twig
 ===========================================================
-News & Insights Interior template
+Grantmaking nterior template
 =========================================================== #}
 
 {% extends '_layouts/_base' %}
 
-{% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
 
 {% block content %}
 
     {# INTERIOR OPENER #}
     {% set entrySection = entry.section.handle %}
-    {% set opener = entry.openerLanding %}
-    
-    {{ openers.landing(opener, entry) }}
+    {% if entrySection == 'grantmaking' %}
+        {% set opener = entry.openerLanding %}
+        {{ openers.landing(opener, entry) }}
+    {% elseif entrySection == 'grantees' %}
+        {{ openers.grantee(entry) }}
+    {% endif %}
 
 
     {# INTERIOR BUILDER: #}
@@ -25,20 +26,17 @@ News & Insights Interior template
     3. Grantee Database is builder-less
     4. Default to common builder for everything else
     #}
-
-    {% set builder =
-        entry.builderCommon ??
-        null
-    %}
+    {% set builder = entry.builderCommon ?? null %}
 
     {% if builder %}
         {% include '_partials/_builder-common.twig' with {'builder': builder} %}
-
-    {% elseif entry.title == 'Blog' %}
-        {{ sprig('sprig/_sprig-news-grid', { newsType: 'blog', limit: 12 }) }}
-
-    {% elseif entry.title == 'Newsroom' %}
-        {{ sprig('sprig/_sprig-news-grid', { newsType: 'newsroom', limit: 12 }) }}
-
+        
+    {# Grantee DB #}
+    {% elseif entry.slug == 'grants-grantees' %}
+        {% include 'interior/_entry-grants-db.twig' with {'entry': entry} %}
+        
+    {# Grantee Entry #}
+    {% elseif entrySection == 'grantees' %}
+        {% include 'interior/_entry-grants-org.twig' with {'entry': entry} %}
     {% endif %}
 {% endblock %}
