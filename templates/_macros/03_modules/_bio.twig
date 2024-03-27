@@ -137,10 +137,11 @@
         {% endif %}
     </section>
 
-    {# Posts #}
+
+    {# Related Posts #}
     {% set title = 'Posts by ' ~ name %}
 
-    {{ sprig('sprig/_sprig-related-posts-grid', {
+    {{ sprig('sprig/_sprig-related-content-grid', {
         title: title,
         section: 'blog',
         relatedTo: person.id

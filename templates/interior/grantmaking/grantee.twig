@@ -1,0 +1,71 @@
+{# _partials/_entry-grants-org.twig 
+
+{# =======================================
+  Interior: Grantee Organization
+========================================== #}
+
+{% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
+{% import '_macros/02_components/_card.twig' as cards %}
+{% import '_macros/03_modules/_feed' as feeds %}
+
+{# Set Grant Year (previous year). 
+    NOTE: 
+    1. This might need to be adjusted depending on biz reqs 
+    2. Can a grantee receive multiple grants per year?
+#}
+
+{% set layout = layout ?? 'grid' %}
+
+{# Retrieve all grants associated with grantee #}
+{% set grantList = craft.entries().section('grants').entriesOrganization(entry).all() %}
+
+{# Capture tags from Grantee' grants #}
+{% set granteeTags = [] %}
+{% for grant in grantList %}
+    {% for programArea in grant.tagsProgramAreas %}
+        {% if programArea.title in granteeTags %}
+        {% else %}
+            {% set granteeTags = granteeTags|merge([programArea.id]) %}
+        {% endif %}
+    {% endfor %}
+
+    {% for strategy in grant.tagsStrategies %}
+        {% if strategy.title in granteeTags %}
+        {% else %}
+            {% set granteeTags = granteeTags|merge([strategy.id]) %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+{# Grants #}
+{% if grantList|length %}
+    <section class="grants-grid" data-background="true">
+        <div class="angle">
+            {{ angles.top() }}
+        </div>
+        {# FILTERS GO HERE #}
+        {# <div class="blockGeneric">
+            Filters
+        </div> #}
+
+        <div class="grants-grid__inner" data-columns="2">
+            {% for grant in grantList %}
+                {% set config = {
+                    'variant': layout == 'grid' ? 'grid' : 'list',
+                    'content': {
+                        'grant': grant
+                    }
+                }%}
+                {{ cards.grant(config) }}
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}
+
+{# Related Posts #}
+{{ sprig('sprig/_sprig-related-content-grid', {
+    title: 'Related Content',
+    section: ['blog','newsroom'],
+    relatedTo: granteeTags
+}) }}
