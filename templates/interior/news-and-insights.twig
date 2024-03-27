@@ -15,8 +15,13 @@ News & Insights Interior template
     {# INTERIOR OPENER #}
     {% set entrySection = entry.section.handle %}
     {% set opener = entry.openerLanding %}
-    
-    {{ openers.landing(opener, entry) }}
+
+    {% if entrySection == 'blog' %}
+        {{ openers.post(entry) }}
+    {% else %}
+        {% set opener = entry.openerLanding %}
+        {{ openers.landing(opener, entry) }}
+    {% endif %}
 
 
     {# INTERIOR BUILDER: #}
@@ -25,14 +30,11 @@ News & Insights Interior template
     3. Grantee Database is builder-less
     4. Default to common builder for everything else
     #}
-
-    {% set builder =
-        entry.builderCommon ??
-        null
-    %}
+    {% set isBlog = entrySection == 'blog' %}
+    {% set builder = entry.builderCommon ?? null %}
 
     {% if builder %}
-        {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+        {% include '_partials/_builder-common.twig' with { 'builder': builder } %}
 
     {% elseif entry.title == 'Blog' %}
         {{ sprig('sprig/_sprig-news-grid', { newsType: 'blog', limit: 12 }) }}
@@ -40,5 +42,14 @@ News & Insights Interior template
     {% elseif entry.title == 'Newsroom' %}
         {{ sprig('sprig/_sprig-news-grid', { newsType: 'newsroom', limit: 12 }) }}
 
+    {% elseif isBlog %}
+        {% import "_macros/03_modules/_text.twig" as modules %}
+        {% set config  = {
+                'content': entry,
+                'variant': 'body'
+            } %}
+        <section class="blog-post">
+            {{ modules.default(config) }}
+        </section>
     {% endif %}
 {% endblock %}
