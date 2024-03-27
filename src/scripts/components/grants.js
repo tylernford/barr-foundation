@@ -103,7 +103,7 @@ function triggerModal() {
       $('body').css('overflow', 'unset');
     });
   }
-  if ($(".modal__open").length > 0) {
+  if ($("button.modal__open").length > 0) {
     $(".modal__open").on("click", function (e) {
       e.preventDefault();
       $(this).parent().find("dialog")[0].showModal();
@@ -164,4 +164,14 @@ function triggerModal() {
 document.getElementById('clearFilters').addEventListener('click', function() {
     // Redirect to /grantmaking/grants-grantees
     window.location.href = '/grantmaking/grants-grantees';
+});
+
+$(document).ready(function() {
+    $('.section.section--grantee form').on('keypress', function(event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13') {
+            event.preventDefault(); // Prevent form submission
+            $('.section.section--grantee form button[type="submit"]').click(); // Trigger click event on the submit button
+        }
+    });
 });

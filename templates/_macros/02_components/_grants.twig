@@ -144,6 +144,20 @@ document.getElementById('clearFilters').addEventListener('click', function() {
     window.location.href = '/grantmaking/grants-grantees';
 });
 
+// form submit on Enter
+
+$(document).ready(function() {
+    $('#name').keypress(function(event) {
+        console.log("test");
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13') {
+            // Submit the form when Enter is pressed
+           $('button[type="submit"]').click();
+        }
+    });
+});
+
+
 
 //call the function 
 
@@ -157,6 +171,11 @@ document.getElementById('clearFilters').addEventListener('click', function() {
         {% set StrategiesArray = StrategiesArray|merge([programArea.title]) %}
         {% set programAreaArray = programAreaArray|merge(["Program Area"]) %}
     {% endfor %}
+    {% for strat in strategies %}
+        {% set StrategiesArray = StrategiesArray|merge([strat.title]) %}
+        {% set programAreaArray = programAreaArray|merge([strat.parent.title]) %}
+    {% endfor %}
+    {% set sampleData = [] %}
     {# Loop through all entries #}
     {% for entry in allData %}
         {# Check if the entry has tagsProgramAreas defined and it's not null #}
@@ -165,28 +184,33 @@ document.getElementById('clearFilters').addEventListener('click', function() {
             {# Get the first tag from tagsProgramAreas #}
             {% set firstTag = entry.tagsProgramAreas|first %}
             {% if firstTag.title is not null %}
-                {% set programAreaArray = programAreaArray|merge([firstTag.title]) %}
+                {% set sampleData = sampleData|merge([firstTag.title]) %}
             {% endif %}
             {# Loop through tagsProgramAreas and add titles to programAreaArray #}
             {# Get the first tag from tagsProgramAreas #}
             {% set firstTag = entry.tagsStrategies|first %}
             {% if firstTag.title is not null %}
-                {% set StrategiesArray = StrategiesArray|merge([firstTag.title]) %}
+                {% set sampleData = sampleData|merge([firstTag.title]) %}
             {% endif %}
           {% endif %}
         {% endif %}
     {% endfor %}
+    {% set counts = StrategiesArray|map(value => sampleData|filter(item => item == value)|length) %}
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
+    var CountsArray=[1,...{{ counts|json_encode|raw }}];
     console.log(programAreaArray);
     console.log(StrategiesArray);
+    {# console.log({{ sampleData|json_encode|raw }}); #}
+    console.log(CountsArray);
   data = [{
       type: "treemap",
       labels: StrategiesArray,
       parents: programAreaArray,
+      values: CountsArray,
       maxdepth: 2,
       tiling: {pad: 0},
-      textinfo: "label+percent parent",
+      textinfo: "label+percent entry",
       outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma"},
       insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f"],"family": "Axiforma"  },
       marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F"]}
@@ -225,7 +249,7 @@ Plotly.newPlot(TESTER, data, layout);
                 console.log('Element with id loadingOverlay not found');
             
             // Redirect to the desired URL
-            window.location.href = "?query=&programAreaOption=" + point.parent + "&strategyOption=" + point.label + "&layout=list&page=1";
+            window.location.href = "?query=&programAreaOption=" + encodeURIComponent(point.parent) + "&strategyOption=" + encodeURIComponent(point.label) + "&layout=list&page=1";
         }
     });
 
@@ -322,7 +346,7 @@ $('#loading').hide(); // Hide it initially
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsProgramAreas' }]) %}
 {% endif %}
 {% if strategyOption|length > 1 %}
-    {% set baseEntry =  craft.entries.section("programAreasCategories").title(strategyOption).one() %} 
+    {% set baseEntry =  craft.entries.section("programAreasCategories").level(2).title(strategyOption).one() %} 
     {# {{ baseEntry|json_encode|raw }} #}
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsStrategies' }]) %}
 {% endif %}
@@ -942,5 +966,7 @@ $('#loading').hide(); // Hide it initially
     console.log(selectedStrategy);
     // You can send this array to a backend, store it in localStorage, etc.
   });
+
+  
 </script>
 {# {% do sprig.pushUrl('?' ~ {page: page, programAreaOption: programAreaOption}|url_encode) %} #}
