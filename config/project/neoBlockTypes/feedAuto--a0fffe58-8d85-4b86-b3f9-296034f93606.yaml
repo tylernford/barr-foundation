@@ -4,7 +4,7 @@ description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  978ef9a8-76cf-45bd-9495-deded0fa233c:
+  4a8def55-1f96-4cd6-9e70-eeaa8d9a1983:
     tabs:
       -
         elementCondition: null
@@ -12,7 +12,7 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 6f1128a8-0881-457f-906b-e128fe0d1394 # Feed: Auto
-            instructions: null
+            instructions: Text
             label: null
             required: false
             tip: null
