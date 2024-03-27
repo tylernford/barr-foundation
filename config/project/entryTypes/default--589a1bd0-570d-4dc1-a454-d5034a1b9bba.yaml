@@ -198,6 +198,24 @@ fieldLayouts:
               value: true
           elementType: craft\elements\User
           fieldContext: global
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5ead814e-ac59-4109-942f-12df27623fd5
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 29b600d3-3a9e-4cc2-9d32-3c99eceb9cc5
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

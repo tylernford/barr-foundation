@@ -1,4 +1,4 @@
-dateModified: 1711507624
+dateModified: 1711510804
 elementSources:
   craft\elements\Asset:
     -
@@ -887,6 +887,7 @@ meta:
     c9146e39-188a-4125-acd5-353460088b1f: Label # Label
     c89239e9-9e5b-4f38-b61c-4eb6791244c3: 'Carousel: Auto' # Carousel: Auto
     c949843f-26a2-4fb0-a464-3fcbb1a0f5d1: 'Internal Person' # Internal Person
+    c1630228-743c-4078-9eb7-fff94b5d3825: SEO # SEO
     ca86b174-5e19-4ff8-9f7a-a5185330d56d: Homepage # Homepage
     cb1a13a4-f53a-4aa3-a568-1c10abd30a4e: Action # Action
     cb18e454-7f9b-4477-ab6b-e5c900f0c4e4: 'Text: Middle initial' # Text: Middle initial

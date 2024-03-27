@@ -74,6 +74,24 @@ fieldLayouts:
         name: Content
         uid: 74827926-7261-4680-a6a5-51e484f43c28
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c67b60b7-7189-4327-8659-140d06e5a5e0
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 15b93ac8-f6a9-4c41-a55c-f799709f9c9f
+        userCondition: null
 handle: directory
 hasTitleField: true
 name: Directory
