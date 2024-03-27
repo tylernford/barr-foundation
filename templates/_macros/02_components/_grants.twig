@@ -323,7 +323,7 @@ $('#loading').hide(); // Hide it initially
 {% endif %}
 {% if strategyOption|length > 1 %}
     {% set baseEntry =  craft.entries.section("programAreasCategories").title(strategyOption).one() %} 
-    {{ baseEntry|json_encode|raw }}
+    {# {{ baseEntry|json_encode|raw }} #}
     {% set optionOfProgramArea = optionOfProgramArea|merge([{ 'targetElement': baseEntry, 'field': 'tagsStrategies' }]) %}
 {% endif %}
 {# {% for option in programAreaOption %}
