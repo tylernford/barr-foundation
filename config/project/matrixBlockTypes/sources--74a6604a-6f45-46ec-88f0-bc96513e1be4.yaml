@@ -16,7 +16,19 @@ fieldLayouts:
             uid: fe055eec-e458-47b9-be76-622967f9641c
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: c0e1ceb5-9d4c-496a-93ad-3adf77924687 # Randomize
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1adff5e6-82ae-4406-8092-9e76df2012cb
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: be795e4c-65da-45f5-9320-13213acf7b06 # Tags: Program Areas
@@ -38,18 +50,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 8daffb68-d86e-4ca3-b9d1-92411b4109b4
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: c0e1ceb5-9d4c-496a-93ad-3adf77924687 # Randomize
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1adff5e6-82ae-4406-8092-9e76df2012cb
             userCondition: null
             warning: null
             width: 50
