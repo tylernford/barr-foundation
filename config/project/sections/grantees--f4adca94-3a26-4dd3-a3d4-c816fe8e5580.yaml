@@ -20,5 +20,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: interior/grantmaking.twig
-    uriFormat: 'grantmaking/grants-grantees/{slug}'
+    uriFormat: 'grants-grantees/{slug}'
 type: channel

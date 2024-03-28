@@ -20,5 +20,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: news-insights/_post.html
-    uriFormat: 'news-insights/newsroom/{slug}'
+    uriFormat: 'news/{slug}'
 type: channel
