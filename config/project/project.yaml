@@ -1,4 +1,4 @@
-dateModified: 1711654593
+dateModified: 1711655574
 elementSources:
   craft\elements\Asset:
     -
@@ -459,6 +459,7 @@ fs:
 meta:
   __names__:
     0a0fbbb0-ab8f-4950-afab-87e4e5f44c47: 'Asset: Image' # Asset: Image
+    0a8588be-140d-488f-befc-be18efe0639d: 'News Post' # News Post
     0a924836-f3f5-452c-86dd-92df3cc0ad85: 'Text: Preheading' # Text: Preheading
     0ac7255b-4b9d-49e0-948d-10bef69479d4: 'Action: Entry or URL' # Action: Entry or URL
     0b05b130-5829-4e77-a3f7-ed99ae219ce7: 'Text: Amount' # Text: Amount

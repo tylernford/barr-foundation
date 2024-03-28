@@ -1,5 +1,5 @@
 fieldLayouts:
-  899826b6-5fde-4a04-a712-f3402bf6f040:
+  ce31e0e7-fb2b-4b0a-9492-55634bafd1c8:
     tabs:
       -
         elementCondition: null
@@ -27,7 +27,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 7023afbd-85ac-4c95-9c4c-d0eb403603b9
+            uid: ddc584e9-2193-400e-ac2e-f369d54086e3
             userCondition: null
             warning: null
             width: 100
@@ -39,13 +39,13 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fb37d0ea-bdb6-4612-87bd-7ec08295239c
+            uid: 9eb65dff-4676-40f6-99c0-8bbf7f9a0620
             userCondition:
               class: craft\elements\conditions\users\UserCondition
               conditionRules:
                 -
                   class: craft\elements\conditions\users\AdminConditionRule
-                  uid: 456fdf7a-99a6-468f-87da-5cf456efe973
+                  uid: 137da10b-0f3f-42c5-b605-eca1305ae779
                   value: true
               elementType: craft\elements\User
               fieldContext: global
@@ -54,24 +54,24 @@ fieldLayouts:
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: ce14cd9d-af4f-4035-aae2-cec8bea8cc24
+            uid: 5bae0d7b-a295-4a0f-9efc-28246b885231
             userCondition: null
           -
             elementCondition: null
             template: control-panel/_blog-card.html
             type: craft\fieldlayoutelements\Template
-            uid: ac25ac7d-5ac5-470b-8c4e-d3610c68bf28
+            uid: ec1d4d95-30e4-417d-a526-8ca979b2d2d5
             userCondition: null
             width: 100
           -
             elementCondition: null
             fieldUid: b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400 # Entries: Team
-            instructions: 'Select one or many authors. Drag & drop to rearrange.'
+            instructions: null
             label: 'Entries: Authors'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7aba9632-a5ba-44fd-a28d-4b1300c3a23e
+            uid: 582c8598-eaf9-47cf-9d89-7292fa4f8255
             userCondition: null
             warning: null
             width: 50
@@ -83,7 +83,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a116d9b4-1895-4468-80df-7c2cc92e5319
+            uid: f60d60af-10f1-4ed9-b9e4-09c6bdb6b412
             userCondition: null
             warning: null
             width: 50
@@ -95,7 +95,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e8f0f2e0-b519-4423-b131-5bb35db9cc82
+            uid: 47c1c716-63a5-432d-a110-0e63372439a7
             userCondition: null
             warning: null
             width: 50
@@ -107,14 +107,14 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 649460cf-9c28-41d0-b538-c4b815582cfb
+            uid: 3ab61159-08fc-4ca7-835e-58e5505302dd
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 6b4ba15a-4ca3-45eb-8549-a2eba7f8153f
+            uid: 39272c66-3665-405e-b654-8c0276768c38
             userCondition: null
           -
             elementCondition: null
@@ -124,7 +124,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: eb6a1676-3aad-4b28-9c06-1dcecb955fbf
+            uid: 3dc8d72e-c7d5-4e1c-8943-0d49ca77d963
             userCondition: null
             warning: null
             width: 50
@@ -136,66 +136,48 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fb046838-7219-4d7b-bea6-f9eb08a54dca
+            uid: 4d311cac-8edc-4ebf-ab0c-1cdfd051facb
             userCondition: null
             warning: null
             width: 50
           -
             elementCondition: null
             fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
-            instructions: 'An excerpt of the blog post. This text will display wherever this blog card appears.'
+            instructions: null
             label: 'Text: Excerpt'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 21ccd752-567c-4e41-aca9-c8285704bce9
+            uid: b691ada3-c2db-40ab-b225-b121de96d339
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
-            instructions: '(Optional) Add an external call-to-action'
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2fcc0399-d635-447b-ad51-933c5b00e165
+            uid: f84ba8f4-c627-4760-a053-16c2cc8b6f04
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 3a9ffae7-273d-44ff-b6e5-c4e353309eba
+            uid: 74e574df-9488-4bf9-820b-3d2fdac8b770
             userCondition: null
           -
             elementCondition: null
             template: control-panel/_opener-post.html
             type: craft\fieldlayoutelements\Template
-            uid: ebc69c9d-3ee8-4de2-9d9d-cb358b231056
+            uid: 08277447-0b58-4904-b25b-0b1f4afed170
             userCondition: null
-            width: 100
-        name: Opener
-        uid: 66b9fad8-387f-4366-a51f-fcb4126a27a7
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e5244e49-3f0c-41e8-81ff-f32a3780ff5c
-            userCondition: null
-            warning: null
             width: 100
         name: Content
-        uid: c84d51bb-b1c1-4f31-abbc-fcabc1a9073f
+        uid: 7e248515-04bc-49be-bed0-2b08682ad665
         userCondition: null
       -
         elementCondition: null
@@ -208,21 +190,21 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 80c00893-12c5-4f8c-9e60-f65d242d8df4
+            uid: a3d2aa48-170a-44c1-918e-ae819bb61b3e
             userCondition: null
             warning: null
             width: 100
         name: SEO
-        uid: a17b447f-34c8-458d-8bf7-c15529e88bb0
+        uid: 01a17019-06a1-4594-9e54-0a90fed9b2ca
         userCondition: null
-handle: default
+handle: newsPost
 hasTitleField: true
-name: Default
-section: 7c4618eb-5889-426c-a0ac-a88ebbaa4f21 # Blog
+name: 'News Post'
+section: bd681dfd-af4d-42fa-9b3d-405bb72ab5d7 # Newsroom
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
+sortOrder: 3
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
