@@ -20,5 +20,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: interior/news-and-insights.twig
-    uriFormat: 'news-insights/blog/{slug}'
+    uriFormat: 'blog/{slug}'
 type: channel
