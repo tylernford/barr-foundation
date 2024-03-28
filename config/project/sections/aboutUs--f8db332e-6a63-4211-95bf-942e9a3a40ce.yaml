@@ -20,7 +20,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: interior/about-us.twig
-    uriFormat: 'about-us/{slug}'
+    uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null
   uid: 632484c2-5fe1-4c00-afb9-29da7f5e7597
