@@ -148,13 +148,24 @@ document.getElementById('clearFilters').addEventListener('click', function() {
 
 // form submit on Enter
 
-$(document).ready(function() {
+{# $(document).ready(function() {
     $('#name').keypress(function(event) {
         console.log("test");
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == '13') {
             // Submit the form when Enter is pressed
            $('button[type="submit"]').click();
+        }
+    });
+}); #}
+
+$(document).ready(function() {
+    $('.section.section--grantee form').on('keypress', function(event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13') {
+            event.preventDefault(); // Prevent form submission
+            {# console.log("Enter clicked"); #}
+            $('.section.section--grantee form button[type="submit"]').click(); // Trigger click event on the submit button
         }
     });
 });
@@ -321,9 +332,6 @@ document.addEventListener('DOMContentLoaded', function() {
 $('#loading').hide(); // Hide it initially
 
 
-
-
-
     });
 {% endjs %}
 
@@ -336,11 +344,11 @@ $('#loading').hide(); // Hide it initially
 
 {% set query = query ?? '' %}
 {% set granteeList = craft.entries().section('grants').search(query).limit(12) %}
+{% set granteeListTotal = craft.entries().section('grants').search(query).all() %}
 
 {# Paginates the entry query given the current page #}
     {% set page = page ?? 1 %}
     {{ hiddenInput('page', page) }}
-    
 
 {# Filter section code #}
 {# Sets to a default value if not defined #}
@@ -363,7 +371,7 @@ $('#loading').hide(); // Hide it initially
 
 {# Search Sort Filter Section #}
 <section class="section section--grantee"> 
-      <form sprig s-val:page="1" data-hx-indicator="#loadingOverlay">
+      <form sprig s-val:page="{% if granteeListTotal|length <= page * 12 %}1{% else %}{{ page }}{% endif %}" data-hx-indicator="#loadingOverlay">
         <div class="container"> 
           <div class="bg filter"> 
             <div class="filter__top"> </div>
@@ -374,6 +382,8 @@ $('#loading').hide(); // Hide it initially
                 <div class="accordion__item">
                   <div class="accordion__title">
                     <button type="button" aria-expanded="false" aria-controls="content-1"> <span>Sort by : </span><span class="cnt">{{ sortOption }}</span></button>
+                    <input type="hidden" name="sortOption" value="{{ sortOption }}" />
+                    {# <input type="hidden" name="page" value="{{ page }}" /> #}
                   </div><span class="accordion__logo">
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M16 5L10 16L4 5L16 5Z" fill="#F5F5F5" fill-opacity="0.65"/>

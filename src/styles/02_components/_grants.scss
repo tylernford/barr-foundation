@@ -57,6 +57,24 @@
   opacity: 0.8;
 }
 
+.aspect-box {
+  position: relative;
+  width: 100%;
+}
+.aspect-box img, .aspect-box video, .aspect-box canvas, .aspect-box iframe, .aspect-box svg {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.aspect-box:before {
+  content: "";
+  display: block;
+  padding-top: calc(var(--aspect-ratio) * 100%);
+}
+
 .container {
   max-width: 1512px;
   margin: 0 auto;
@@ -82,21 +100,38 @@
     padding: 2rem 6.625rem 0;
   }
 }
-#tester{
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width:990px){
-  #tester{
-    display: none;
-  }
-}
 .section.section--granteecards {
   background-color: transparent;
-  background-image: url(/uploads/images/interstitial-graphic.png);
+  background-image: url(/images/interstitial-graphic.png);
   background-position: top;
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+.section.section--sitemap {
+  background-color: #015750;
+}
+.section.section--sitemap .container {
+  padding: 3.875rem 1.5rem;
+}
+@media screen and (min-width:744px) {
+  .section.section--sitemap .container {
+    padding: 3.875rem 3.5rem;
+  }
+}
+@media screen and (min-width:1320px) {
+  .section.section--sitemap .container {
+    padding: 4.0625rem 8rem;
+  }
+}
+@media screen and (min-width:744px) {
+  .section.section--featured-carousel .container {
+    padding: 1.625rem 3.5rem;
+  }
+}
+@media screen and (min-width:1320px) {
+  .section.section--featured-carousel .container {
+    padding: 0.375rem 2.625rem;
+  }
 }
 
 .bf.accordion {
@@ -173,7 +208,132 @@
   border-top: 1px solid #636466;
   margin: 0;
   opacity: 0.65;
-  cursor: pointer;
+}
+
+@media screen and (min-width:950px) {
+  .carousel-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.875rem;
+  }
+}
+.carousel-item .carousel-item__cnt {
+  padding: 1.625rem 0;
+}
+@media screen and (min-width:950px) {
+  .carousel-item .carousel-item__cnt {
+    width: 50%;
+    padding: 2.9375rem 3.5rem;
+    box-shadow: 0rem 0.3125rem 1.25rem 0rem rgba(0, 0, 0, 0.349);
+  }
+}
+.carousel-item .carousel-item__cnt h5 {
+  font-family: "Axiforma";
+  font-size: 0.875em;
+  line-height: 1.7142857143;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #636466;
+  letter-spacing: 0.0875rem;
+  margin-bottom: 0.625rem;
+}
+@media screen and (min-width:768px) {
+  .carousel-item .carousel-item__cnt h5 {
+    margin-bottom: 1.125rem;
+  }
+}
+.carousel-item .carousel-item__cnt h3 {
+  font-family: "Axiforma";
+  font-size: 1.625em;
+  line-height: 1.3076923077;
+  font-weight: 400;
+  letter-spacing: -0.02rem;
+  color: #007E46;
+  margin-bottom: 0.875rem;
+}
+@media screen and (min-width:768px) {
+  .carousel-item .carousel-item__cnt h3 {
+    font-size: 2em;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+  }
+}
+.carousel-item .carousel-item__cnt p {
+  font-family: "Axiforma";
+  font-size: 1.125em;
+  line-height: 1.5555555556;
+  font-weight: 400;
+  letter-spacing: -0.009375rem;
+  color: #262053;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media screen and (min-width:768px) {
+  .carousel-item .carousel-item__cnt p {
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.carousel-item .carousel-item__cnt .carousel-item__authors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 1.625rem;
+  margin-bottom: 0.625rem;
+}
+@media screen and (min-width:768px) {
+  .carousel-item .carousel-item__cnt .carousel-item__authors {
+    margin-bottom: 1.375rem;
+  }
+}
+.carousel-item .carousel-item__cnt .carousel-item__author {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.carousel-item .carousel-item__cnt .carousel-item__author figure {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.125rem;
+}
+.carousel-item .carousel-item__cnt .carousel-item__author p {
+  font-family: "Axiforma";
+  font-size: 0.875em;
+  line-height: 1.4285714286;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: -0.013125rem;
+  color: #383266;
+  padding: 0.6875rem 0.75rem;
+  margin: 0;
+}
+.carousel-item .carousel-item__cnt .carousel-item__btns .l-button {
+  min-width: 7.3125rem;
+}
+@media screen and (min-width:950px) {
+  .carousel-item .carousel-item__image {
+    width: 50%;
+  }
+}
+
+.featured-slider.carousel {
+  padding: 0;
+  overflow: hidden;
+}
+.featured-slider.carousel .swiper::before {
+  content: none;
+}
+.featured-slider .carousel__controls {
+  padding: 0.625rem 0 1.25rem;
 }
 
 .bg.filter {
@@ -531,7 +691,6 @@
   color: var(--accordion-color);
   margin-bottom: 0.25rem;
   opacity: 0.9;
-  cursor: pointer;
 }
 .grantee-infographic .grantee-infographic__cnt .accordion .accordion__item .accordion__title {
   position: relative;
@@ -699,7 +858,7 @@ dialog.modal .modal__header p {
   font-size: 1.0625em;
   line-height: 1.4117647059;
   font-weight: 400;
-  font-family: "Axiforma";
+  font-family: "Messina Serif Trial";
   font-style: italic;
   color: #F5F5F5;
 }
@@ -709,7 +868,7 @@ dialog.modal .modal__header p {
     line-height: 1.4285714286;
   }
 }
-dialog.modal h3 {
+dialog.modal .modal__header h3 {
   font-size: 1.5em;
   line-height: 1.3333333333;
   font-weight: 400;
@@ -718,7 +877,7 @@ dialog.modal h3 {
   margin-bottom: 0;
 }
 @media screen and (min-width:950px) {
-  dialog.modal h3 {
+  dialog.modal .modal__header h3 {
     font-size: 2em;
     line-height: 1.25;
   }
@@ -773,6 +932,16 @@ dialog.modal .modal__footer {
     flex-direction: row;
     align-items: center;
   }
+}
+dialog.modal .modal__footer .l-button,
+dialog.modal .modal__footer .l-link {
+  font-family: "Axiforma";
+  font-size: 0.75em;
+  line-height: 1.6666666667;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1125rem;
+  text-transform: uppercase;
 }
 dialog.modal.modal--active {
   display: block;
@@ -1020,6 +1189,7 @@ dialog.modal .accordion .accordion__item .accordion__content {
 .bf.input button svg path {
   fill: #015750;
 }
+
 
 
 .section.section--grantee.section--granteecards .grant-error{
