@@ -1,4 +1,4 @@
-dateModified: 1711650104
+dateModified: 1711654593
 elementSources:
   craft\elements\Asset:
     -
@@ -798,7 +798,7 @@ meta:
     25795634-7ff4-4fba-b0d1-affd9a0587c0: 'Divider: Subsection' # Divider: Subsection
     37082998-9c7f-4b58-b151-fab3894c1021: 'Media: Audio' # Media: Audio
     39247735-ed77-47ee-a626-e60b8b135046: Event # Event
-    48214827-a863-4fd5-a0c8-40ef46f89489: News # News
+    48214827-a863-4fd5-a0c8-40ef46f89489: 'External News' # External News
     59639062-b610-4a0d-b1e4-e855ca711cb2: 'Entries: Blog' # Entries: Blog
     76928083-2a29-4679-8fdf-e811209fb268: 'Card: Grants' # Card: Grants
     84062355-43e5-4645-80bd-6ed12c82ebb8: Media # Media
