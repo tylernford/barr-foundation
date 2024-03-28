@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 3b2f52f1-19d0-45f7-b3f6-e1e72a135f1c # Global
+handle: sitemap
+instructions: 'Sitemap Menu '
+name: Sitemap
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 534904949
+  contentTable: '{{%stc_sitemap}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

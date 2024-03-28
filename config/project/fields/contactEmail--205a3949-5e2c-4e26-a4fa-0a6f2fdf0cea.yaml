@@ -1,19 +1,14 @@
 columnSuffix: null
-contentColumnType: text
+contentColumnType: string(255)
 fieldGroup: d38d5b2f-c00b-46b1-a1b7-2e88f27d88de # Actions
 handle: contactEmail
 instructions: null
 name: 'Contact: Email'
 searchable: true
 settings:
-  byteLimit: null
-  charLimit: null
-  code: false
-  columnType: null
-  initialRows: 4
-  multiline: false
-  placeholder: null
-  uiMode: normal
+  maxLength: 255
+  types:
+    - email
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\PlainText
+type: craft\fields\Url

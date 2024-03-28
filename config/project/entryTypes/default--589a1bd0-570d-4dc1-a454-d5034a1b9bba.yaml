@@ -172,24 +172,6 @@ fieldLayouts:
         name: Contact
         uid: e0fb11d5-e380-4b92-a3a3-79af0134a981
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: 5c87310d-59b6-4c1f-a365-8678c588a121 # Feed: Manual
-            instructions: null
-            label: 'Related Cards'
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4b6f60b0-4427-450f-b5ae-91aa7d797e88
-            userCondition: null
-            warning: null
-            width: 100
-        name: 'Related Content'
-        uid: 807d9603-ac76-4177-a398-6cbe071bb856
-        userCondition: null
 handle: default
 hasTitleField: true
 name: Default

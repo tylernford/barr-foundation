@@ -11,11 +11,11 @@
 - 'blockType:734086c2-3e6c-4bd0-ada5-9d448a5abb03' # Feed: Grantees
 - 'blockType:3a4a814b-362f-42e4-9d92-2cf83e4c0e5d' # Filterable Feed: Bio
 - 'blockType:362b51a9-9bf6-4ac2-99a7-9d6b35dc6e19' # Carousel
-- 'blockType:54f700ed-cca9-47c8-b73f-71ee87ddc640' # Timeline: Single Event Per Milestone
 - 'blockType:0278c4f6-c523-4ec4-886e-c397dc9eb5f1' # Carousel: Manual
-- 'blockType:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
 - 'blockType:c89239e9-9e5b-4f38-b61c-4eb6791244c3' # Carousel: Auto
 - 'blockType:5c8b0f09-3d95-490c-8622-bc462f283758' # Carousel: Quotes
 - 'blockType:e396a56e-edee-4eb7-bb0b-7eb50192663f' # Carousel: Bios
+- 'blockType:54f700ed-cca9-47c8-b73f-71ee87ddc640' # Timeline: Single Event Per Milestone
+- 'blockType:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
 - 'blockType:8af3a224-4f35-41b0-8ab9-c8b58976ff29' # Job Listings
 - 'blockType:2247c8c0-1669-4ccf-8dd8-ee7002a4fd00' # Timeline: Multiple Events Per Milestone
