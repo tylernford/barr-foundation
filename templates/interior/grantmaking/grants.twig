@@ -24,7 +24,7 @@
 {% set layout = layout ?? 'grid' %} {# grid or list #}
 
 {# TODO: enable filtering, grid/list toggle view, keyword search, pagination #}
-{% set granteeList = craft.entries().section('grantees').all() %}
+{% set grantsList = craft.entries().section('grants').all() %}
 
 {# NOTE: the following elements will likely need to consolidated into a _sprig template #}
 <section class="grants-grid">
@@ -33,15 +33,18 @@
     </div> #}
 
     {# GRANTEE CARDS: List or Grid View #}
+    HEY
     <div class="grants-grid__inner _is-{{ layout }}" data-columns="3">
-        {% if granteeList|length %}
-            {% for grantee in granteeList %}
+        {% if grantsList|length %}
+            {% for grant in grantsList %}
                 {# Retrieve current award year's grant associated with grantee #}
-                {% set grant = craft.entries({
+                {# {% set grant = craft.entries({
                     section: "grants",
                     postDate: ["and", ">= #{awardYear}"],
                     entriesOrganization: grantee
-                }).one() %}
+                }).one() %} #}
+
+                {% set grantee = grant.entriesOrganization.one %}
 
                 {% set config = {
                     'variant': layout == 'grid' ? 'grid' : 'list',
