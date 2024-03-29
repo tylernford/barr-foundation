@@ -647,9 +647,20 @@
 
 
   &.cardItem--grant {
+    --color-card--primary: var(--color-teal-100);
     --color-card--secondary: var(--color-grey-150);
     --color-card--tertiary: var(--color-grey-50);
     --color-card-background: var(--color-grey-25);
+
+    &[data-theme-color="green"] {
+      --color-card--primary: var(--color-program-green-100);
+    }
+    &[data-theme-color="plum"] {
+      --color-card--primary: var(--color-program-plum-100);
+    }
+    &[data-theme-color="marigold"] {
+      --color-card--primary: var(--color-program-marigold-100);
+    }
 
     box-shadow: var(--shadow-shallow--light);
     padding: var(--base-6);
@@ -673,6 +684,7 @@
       margin-block-end: var(--base-6);
 
       .cardItem__heading {
+        color: var(--color-card--primary);
         @include getType('h5-axiforma');
 
         &._is-hidden {

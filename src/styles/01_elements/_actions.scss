@@ -362,6 +362,10 @@
     .action {
         --color-action-primary: var(--color-program-marigold-50);
         --color-action-secondary: var(--color-navy-100);
+
+        &.action--link {
+            --color-action-primary: var(--color-program-marigold-150);
+        }
         
         &[data-is-reversed="true"] {
             --color-action-primary: var(--color-grey-25);
