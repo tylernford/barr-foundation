@@ -52,7 +52,11 @@
     <div class="feed">
       <div class="feed__grid" data-grid-style="grid" data-columns="3">
         {% for feedItem in feed %}
-          {{ cards.post(feedItem) }}
+          {% if feedItem.type == 'newsPost' %}
+            {{ cards.news(feedItem) }}
+          {% else %}
+            {{ cards.post(feedItem) }}
+          {% endif %}
         {% endfor %}
       </div>
     </div>
