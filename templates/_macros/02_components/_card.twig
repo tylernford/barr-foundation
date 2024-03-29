@@ -432,7 +432,6 @@
                             <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
 
                             {# Authors #}
-                            {# Authors #}
                             {% if authors|length %}                    
                                 {% for author in authors %}
                                     {# Set author image #}
@@ -686,7 +685,18 @@
             'Strategies': grant ? grant.tagsStrategies.all()
         }%}
 
-        <article class="cardItem cardItem--grant">
+        {# Theme color #}
+        {% set programArea = grant ? grant.tagsProgramAreas.one() %}
+        {% set areaColor = 'teal' %}
+        {% if programArea %}
+            {% set areaColor =
+                programArea.title == 'Arts & Creativity' ? 'green' :
+                programArea.title == 'Climate' ? 'plum' :
+                programArea.title == 'Education' ? 'marigold'
+            %}
+        {% endif %}
+
+        <article class="cardItem cardItem--grant" data-theme-color="{{ areaColor }}">
             <div class="cardItem__inner">
                 {# Header #}
                 <header class="cardItem__header">
@@ -696,28 +706,31 @@
                 
                     {# Summary #}
                     {% if description|length %}
-                        <p class="cardItem__description">
+                        <div class="cardItem__description">
                             {{ description }}
-                        </p>
+                        </div>
                     {% endif %}
                 </header>
 
                 {# Content #}
                 <div class="cardItem__table">
                     {% for label, detail in detailObj %}
-                        <div class="table-item__tr{{ detail is iterable and detail|length ? ' table-item__tr--tags' }}">
-                            <h4 class="table-item__th">{{ label }}</h4>
-                            <div class="table-item__td">
-                                {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
-                                    N/A
-                                {% elseif detail is iterable %}
-                                    {# Tags #}
-                                    {{ details.detail('tags', false, detail) }}
-                                {% else %}
-                                    {{ detail }}{{ label == 'Term' ? ' mo.' }}
-                                {% endif %}
+                        {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                        {% else %}
+                            <div class="table-item__tr{{ detail is iterable and detail|length ? ' table-item__tr--tags' }}">
+                                <h4 class="table-item__th">{{ label }}</h4>
+                                <div class="table-item__td">
+                                    {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                                        N/A
+                                    {% elseif detail is iterable %}
+                                        {# Tags #}
+                                        {{ details.detail('tags', false, detail) }}
+                                    {% else %}
+                                        {{ detail }}{{ label == 'Term' ? ' mo.' }}
+                                    {% endif %}
+                                </div>
                             </div>
-                        </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
 

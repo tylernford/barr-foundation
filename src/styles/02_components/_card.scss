@@ -647,9 +647,20 @@
 
 
   &.cardItem--grant {
+    --color-card--primary: var(--color-teal-100);
     --color-card--secondary: var(--color-grey-150);
     --color-card--tertiary: var(--color-grey-50);
     --color-card-background: var(--color-grey-25);
+
+    &[data-theme-color="green"] {
+      --color-card--primary: var(--color-program-green-100);
+    }
+    &[data-theme-color="plum"] {
+      --color-card--primary: var(--color-program-plum-100);
+    }
+    &[data-theme-color="marigold"] {
+      --color-card--primary: var(--color-program-marigold-100);
+    }
 
     box-shadow: var(--shadow-shallow--light);
     padding: var(--base-6);
@@ -673,6 +684,7 @@
       margin-block-end: var(--base-6);
 
       .cardItem__heading {
+        color: var(--color-card--primary);
         @include getType('h5-axiforma');
 
         &._is-hidden {
@@ -681,7 +693,7 @@
       }
 
       .cardItem__description {
-        @include getType('caption-messina');
+        @include getType('caption-axiforma');
         
         &:first-letter {
           text-transform: uppercase;
@@ -690,7 +702,6 @@
 
       .cardItem__heading + .cardItem__description {
         margin-block-start: var(--base);
-        @include getType('detail-messina');
       }
     }
 
@@ -727,14 +738,6 @@
       .action {
         &:first-child {
           margin-inline-end: var(--base-4);
-        }
-      }
-    }
-
-    @include breakpoint(md) {
-      .cardItem__header {
-        .cardItem__heading + .cardItem__description {
-          @include getType('caption-messina');
         }
       }
     }
@@ -1139,6 +1142,18 @@
           }
         }
       }
+    }
+  }
+}
+
+[data-columns="2"] {
+  .cardItem.cardItem--grant {
+    @include breakpoint(xl) {
+      padding: var(--base-14) var(--base-16) var(--base-10) var(--base-16);
+    }
+
+    @include breakpoint(xxl) {
+      padding: var(--base-20) var(--base-20) var(--base-16) var(--base-20);
     }
   }
 }

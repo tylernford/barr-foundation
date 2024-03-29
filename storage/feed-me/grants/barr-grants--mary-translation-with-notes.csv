@@ -1,0 +1,98 @@
+Strategic Alignment Code Name,Budget Area,Strategy,Portfolio,,"Translation for Website (comma separates tags. First tag is at the Program Area level. Second tag is at the strategy level. Third tag is at a deeper level, which could be named ""cohort"" or simply be listed as a secondary strategy tag.)",Notes
+AC10000 - Arts and Creativity,Arts and Creativity,,,,Arts & Creativity,"Use the ""&"" sign instead of spelling out ""and"""
+AC10001 - Arts and Creativity/Invest in Adaptive and Relevant Organizations,Arts and Creativity,Invest in Adaptive and Relevant Organizations,,,"Arts and Creativity, Adapting Bolding",Slightly different way to reference that arts strategy
+AC10012 - Arts and Creativity/Foster Cross-Sectoral Relationships/Creative Place,Arts and Creativity,Foster Cross-Sectoral Relationships,Creative Placemaking,,"Arts and Creativity, Spanning Sectors",Slightly different way to reference that arts strategy
+AC10024 - Arts and Creativity/Foster Cross-Sectoral Relationships,Arts and Creativity,Foster Cross-Sectoral Relationships,,,"Arts and Creativity, Spanning Sectors",
+AC10025 - Arts and Creativity/Foster Cross-Sectoral Relationships/Intersection o,Arts and Creativity,Foster Cross-Sectoral Relationships,"Intersection of Arts, Science, and Technology",,"Arts and Creativity, Spanning Sectors",
+AC10026 - Arts and Creativity/Activate Public Support,Arts and Creativity,Activate Public Support,,,"Arts & Creativity, Activating Public Support",Slightly different way to reference that arts strategy
+"AC10027 - Arts and Creativity/Activate Public Support/Advocacy, Research and Pol",Arts and Creativity,Activate Public Support,"Advocacy, Research, and Policy",,"Arts & Creativity, Activating Public Support",
+AC10028 - Arts and Creativity/Activate Public Support/Media and Communications,Arts and Creativity,Activate Public Support,Media and Communications,,"Arts & Creativity, Activating Public Support",
+AC10029 - Former Arts amd Creativity Strategies,Former Arts and Creativity Strategies,,,,Arts & Creativity ,"For old/former strategy codes in Salesforce, let's leave them with the generic broad program area tag."
+AC20000 - Arts and Creativity/Outcomes Measurement,Arts and Creativity,Outcomes Measurement,,,Arts and Creativity,
+AC40000 - Arts and Creativity/Organizational Development,Arts and Creativity,Organizational Development,,,Arts and Creativity,
+CC10000 - Climate,Climate,Climate (Top Level),,,Climate,
+CC10001 - Climate/Clean Energy,Climate,Clean Energy,,,"Climate, Clean Energy",
+CC10018 - Climate/Climate Resilience,Climate,Climate Resilience,,,"Climate, Climate Resilience",
+CC10022 - Climate/Clean Energy/Expand Renewable Energy and Energy Efficiency,Climate,Clean Energy,Expand Renewable Energy and Energy Efficiency,,"Climate, Clean Energy",
+CC10023 - Climate/Clean Energy/Support National and Local Networks,Climate,Clean Energy,Support National and Local Networks,,"Climate, Clean Energy",
+CC10024 - Climate/Clean Energy/Other,Climate,Clean Energy,Other,,"Climate, Clean Energy",
+CC10025 - Climate/Mobility,Climate,Mobility,,,"Climate, Mobility",
+CC10026 - Climate/Mobility/Modernize the Region's Transportation System,Climate,Mobility,Modernize the Region's Transportation System,,"Climate, Mobility",
+CC10027 - Climate/Mobility/Develop Low-Carbon Communities,Climate,Mobility,Develop Low-Carbon Communities,,"Climate, Mobility",
+CC10028 - Climate/Mobility/Other,Climate,Mobility,Other,,"Climate, Mobility",
+CC10031 - Former Environment or Climate Strategies,Former Environment or Climate Strategies,,,,Climate,
+CC10032 - Climate/Climate Resilience/Build Awareness of Climate Impacts,Climate,Climate Resilience,Build Awareness of Climate Impacts,,"Climate, Climate Resilience",
+CC10033 - Climate/Climate Resilience/Advance Policy and Implementation,Climate,Climate Resilience,Advance Policy and Implementation,,"Climate, Climate Resilience",
+CC10034 - Climate/Climate Resilience/Integrate Resilience Into the Fabric of Cit,Climate,Climate Resilience,Integrate Resilience Into the Fabric of Cities,,"Climate, Climate Resilience",
+CC10035 - Climate/Mobility/Outcomes Measurement,Climate,Mobility,Outcomes Measurement,,"Climate, Mobility",
+CC10036 - Climate/Mobility/Organizational Development,Climate,Mobility,Organizational Development,,"Climate, Mobility",
+CC10037 - Climate/Clean Energy/Outcomes Measurement,Climate,Clean Energy,Outcomes Measurement,,"Climate, Clean Energy",
+CC10038 - Climate/Clean Energy/Organizational Development,Climate,Clean Energy,Organizational Development,,"Climate, Climate Resilience",
+CC10039 - Climate/Climate Resilience/Outcomes Measurement,Climate,Climate Resilience,Outcomes Measurement,,"Climate, Climate Resilience",
+CC10040 - Climate/Climate Resilience/Organizational Development,Climate,Climate Resilience,Organizational Development,,"Climate, Climate Resilience",
+CC20000 - Climate/Outcomes Measurement,Climate,Outcomes Measurement,,,Climate,
+CC40000 - Climate/Organizational Development,Climate,Organizational Development,,,Climate,
+ED10000 - Education,Education,,,,Education,
+ED10016 - Education/Increase High Quality School Options,Education,Increase High Quality School Options,,,Education,
+ED10017 - Education/Special Initiatives,Education,Special Initiatives,,,Education,
+ED10018 - Education/Transition Grants,Education,Transition Grants,,,Education,
+ED10019 - Education/Transition Grants/Early Education,Education,Transition Grants,Early Education,,"Education, Early Education",It will only be for old grants since that body of work ended in 2016. 
+ED10020 - Former Education Strategies,Former Education Strategies,,,,Education,
+ED10021 - Education/New Models,Education,New Models,,,"Education, Catalyze New Models",Slightly different way to name the strategy
+ED10022 - Education/Invest In Educators,Education,Invest In Educators,,,"Education, Invest in Educators",
+ED10023 - Education/Building Public Will,Education,Building Public Will,,,"Education, Build Public Will",Slightly different way to name the strategy
+ED20000 - Education/Outcomes Measurement,Education,Outcomes Measurement,,,Education,Don't need to include this strategy tag
+ED40000 - Education/Organizational Development,Education,Organizational Development,,,Education,Don't need to include this strategy tag
+M10001 - Memberships and Sponsorships,Memberships and Sponsorships,,,,,"We will exclude ""Memberships and Sponsorships"" grants from the website"
+M10002 - Memberships and Sponsorships/Sponsorships,Memberships and Sponsorships,Sponsorships,,,,
+M10003 - Memberships and Sponsorships/Scholarships,Memberships and Sponsorships,Scholarships,,,,
+M10004 - Memberships and Sponsorships/Memberships,Memberships and Sponsorships,Memberships,,,,
+M10006 - Memberships and Sponsorships/Sponsorships/Arts and Creativity,Memberships and Sponsorships,Sponsorships,Arts and Creativity,,,
+M10007 - Memberships and Sponsorships/Sponsorships/Climate,Memberships and Sponsorships,Sponsorships,Climate,,,
+M10008 - Memberships and Sponsorships/Sponsorships/Education,Memberships and Sponsorships,Sponsorships,Education,,,
+M10009 - Memberships and Sponsorships/Sponsorships/Sector Effectiveness,Memberships and Sponsorships,Sponsorships,Sector Effectiveness,,,
+M10010 - Memberships and Sponsorships/Sponsorships/Special Initiatives,Memberships and Sponsorships,Sponsorships,Special Initiatives,,,
+M10011 - Memberships and Sponsorships/Sponsorships/Communications,Memberships and Sponsorships,Sponsorships,Communications,,,
+M10012 - Memberships and Sponsorships/Sponsorships/Evaluation,Memberships and Sponsorships,Sponsorships,Evaluation,,,
+OTHER - Unallocated Funds,Unallocated Funds,,,,,Exclude
+RW10000 - Racial Wealth Equity - Special Initiatives,Racial Wealth Equity - Special Initiatives,Racial Wealth Equity,,,"Special Initiatives, Racial Wealth Equity Initiative",Racial Wealth Equity turns into Racial Wealth Equity Initiative
+RW10000 - Racial Wealth Equity - Special Initiatives,Racial Wealth Equity - Special Initiatives,Racial Wealth Equity,,,"Special Initiatives, Racial Wealth Equity Initiative",
+RW20000 - Racial Wealth Equity - Special Initiatives/Outcomes Measurement,Racial Wealth Equity - Special Initiatives,Outcomes Measurement,,,"Special Initiatives, Racial Wealth Equity Initiative",
+RW40000 - Racial Wealth Equity - Special Initiatives/Organizational Development,Racial Wealth Equity - Special Initiatives,Organizational Development,,,"Special Initiatives, Racial Wealth Equity Initiative",
+SE10000 - Sector Effectiveness,Sector Effectiveness,,,,Sector Effectiveness,
+SE10004 - Sector Effectiveness/Invest in Leadership/Barr Fellowship,Sector Effectiveness,Invest in Leadership,Barr Fellowship,,"Sector Effectiveness, Leadership, Barr Fellowship","Slightly different way to say ""Leadership"". Should Include Barr Fellowship as a portfolio or secondary strategy tag"
+SE10005 - Sector Effectiveness/Support the Philanthropic and Nonprofit Sector,Sector Effectiveness,Support the Philanthropic and Nonprofit Sector,,,"Sector Effectiveness, Infrastructure","Slightly different way to say ""Support the Philanthropic and Nonprofit sector"""
+SE10009 - Sector Effectiveness/Invest in Leadership,Sector Effectiveness,Invest in Leadership,,,"Sector Effectiveness, Leadership",
+SE10012 - Sector Effectiveness/Invest in Leadership/Leadership Development,Sector Effectiveness,Invest in Leadership,Leadership Development,,"Sector Effectiveness, Leadership",
+SE10013 - Sector Effectiveness/Inform Sound Decision-Making,Sector Effectiveness,Inform Sound Decision-Making,,,"Sector Effectiveness, Decision-Making",Slightly different way of referencing the strategy
+SE10014 - Sector Effectiveness/Inform Sound Decision-Making/Support the Provisio,Sector Effectiveness,Inform Sound Decision-Making,Support the Provision and Use of Credible Information,,"Sector Effectiveness, Decision-Making",don't need this portfolio tag
+SE10015 - Sector Effectiveness/Inform Sound Decision-Making/Stimulate Informed P,Sector Effectiveness,Inform Sound Decision-Making,Stimulate Informed Public Discourse,,"Sector Effectiveness, Decision-Making",don't need this portfolio tag
+SE10016 - Former Sector Effectiveness Strategies,Former Sector Effectiveness Strategies,,,,Sector Effectiveness,
+SE10018 - Sector Effectiveness/Support the Philanthropic and Nonprofit Sector/Ge,Sector Effectiveness,Support the Philanthropic and Nonprofit Sector,General Infrastructure,,"Sector Effectiveness, Infrastructure",
+SE10019 - Sector Effectiveness/Support the Philanthropic and Nonprofit Sector/Ta,Sector Effectiveness,Support the Philanthropic and Nonprofit Sector,Targeted Support,,"Sector Effectiveness, Infrastructure",
+SE10020 - Sector Effectiveness/Learning and Evaluation,Sector Effectiveness,Learning and Evaluation,,,Sector Effectiveness,
+SE10020 - Sector Effectiveness/Support the Philanthropic and Nonprofit Sector/Le,Sector Effectiveness,Support the Philanthropic and Nonprofit Sector,Learning and Evaluation,,"Sector Effectiveness, Infrastructure",
+SE20000 - Sector Effectiveness/Outcomes Measurement,Sector Effectiveness,Outcomes Measurement,,,Sector Effectiveness,
+SE40000 - Sector Effectiveness/Organizational Development,Sector Effectiveness,Organizational Development,,,Sector Effectiveness,
+SI10000 - Special Initiatives,Special Initiatives,Unassigned,,,Special Initiatives,
+SI10001 - Special Initiatives/Founding Trustee-Directed,Special Initiatives,Founding Trustee-Directed,,,Special Initiatives,"don't create a ""founding trustee-directed"" tag. Only tag ""Special Initiatives"" "
+SI10002 - Special Initiatives/Founding Trustee-Directed/Arts and Creativity,Special Initiatives,Founding Trustee-Directed,Arts and Creativity,,Special Initiatives,
+SI10003 - Special Initiatives/Founding Trustee-Directed/Climate,Special Initiatives,Founding Trustee-Directed,Climate,,Special Initiatives,
+SI10004 - Special Initiatives/Founding Trustee-Directed/Education,Special Initiatives,Founding Trustee-Directed,Education,,Special Initiatives,
+SI10005 - Special Initiatives/Founding Trustee-Directed/Global,Special Initiatives,Founding Trustee-Directed,Global,,Special Initiatives,
+SI10006 - Special Initiatives/Founding Trustee-Directed/Health,Special Initiatives,Founding Trustee-Directed,Health,,Special Initiatives,
+SI10007 - Special Initiatives/Founding Trustee-Directed/Civic and Community,Special Initiatives,Founding Trustee-Directed,Civic and Community,,Special Initiatives,
+SI10008 - Special Initiatives/Founding Trustee-Directed/Other,Special Initiatives,Founding Trustee-Directed,Other,,Special Initiatives,
+SI10010 - Former Special Initiatives Strategies,Former Special Initiatives Strategies,,,,Special Initiatives,Tag as Special Initiatives
+SI10011 - Special Initiatives/Healthy Democracy/Protect Civil Rights,Special Initiatives,Healthy Democracy,Protect Civil Rights,,"Special Initiatives, Civil Rights & Healthy Democracy","Tag as ""Special Initiatives"" for the Program Area and ""Civil Rights & Healthy Democracy"" as the strategy"
+SI10012 - Special Initiatives/Healthy Democracy/Strengthen Journalism,Special Initiatives,Healthy Democracy,Strengthen Journalism,,"Special Initiatives, Civil Rights & Healthy Democracy","Tag as ""Special Initiatives"" for the Program Area and ""Civil Rights and Healthy Democracy"" as the strategy"
+SI10013 - Special Initiatives/Healthy Democracy,Special Initiatives,Healthy Democracy,,,"Special Initiatives, Civil Rights & Healthy Democracy","Tag as ""Special Initiatives"" for the Program Area and ""Civil Rights and Healthy Democracy"" as the strategy"
+SI10014 - Special Initiatives/Civic Leadership,Special Initiatives,Civic Leadership,,,"Special Initiatives, Civil Rights & Healthy Democracy","Tag as ""Special Initiatives"" for the Program Area and ""Civil Rights and Healthy Democracy"" as the strategy"
+SI10015 - Special Initiatives/Healthy Democracy/Ensure A Fair Census,Special Initiatives,Healthy Democracy,Ensure A Fair Census,,"Special Initiatives, Civil Rights & Healthy Democracy","Tag as ""Special Initiatives"" for the Program Area and ""Civil Rights and Healthy Democracy"" as the strategy"
+SI10016 - Special Initiatives/COVID-19 Response Fund,Special Initiatives,COVID-19 Response Fund,,,"Special Initiatives, COVID-19 Response","Tag as ""Special Initiatives"" for the Program Area and ""COVID-19 Response"" as the strategy"
+SI20000 - Special Initiatives/Outcomes Measurement,,Outcomes Measurement,,,Special Initiatives,Tag as Special Initiatives
+SI40000 - Special Initiatives/Racial Equity,Special Initiatives,Racial Equity,,,Special Initiatives,Tag as Special Initiatives
+SI50000 - Special Initiatives/Organizational Development,Special Initiatives,Organizational Development,,,Special Initiatives,Tag as Special Initiatives
+WF10000 - Waterfront - Special Initiatives,Waterfront - Special Initiatives,Waterfront,,,"Special Initiatives, Waterfront Initiative","Tag as ""Special Initiatives"" for the Program Area and ""Waterfront Initiative"" for the Strategy"
+WF20000 - Waterfront - Special Initiatives/Outcomes Measurement,Waterfront - Special Initiatives,Outcomes Measurement,,,"Special Initiatives, Waterfront Initiative","Tag as ""Special Initiatives"" for the Program Area and ""Waterfront Initiative"" for the Strategy"
+WF40000 - Waterfront - Special Initiatives/Organizational Development,Waterfront - Special Initiatives,Organizational Development,,,"Special Initiatives, Waterfront Initiative","Tag as ""Special Initiatives"" for the Program Area and ""Waterfront Initiative"" for the Strategy"
