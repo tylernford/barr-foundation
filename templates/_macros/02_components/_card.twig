@@ -385,7 +385,12 @@
         {% set publishedDate = card.postDate %}
 
         {# Set authors #}
-        {% set authors = card.textName %}
+        {% set authors = card.entriesTeam ? card.entriesTeam : null %}
+        {% set postAuthors = [] %}
+        {% for author in authors %}
+            {% set postAuthors = postAuthors|merge([author]) %}
+        {% endfor %}
+        {% set authorDetails = [] %}
 
         {# Set tags #}
         {% set tagsList = [card] %}
@@ -394,7 +399,7 @@
         {% set summary = card.textDescription %}
 
         {# Set action #}
-        {% set action = card.actionLink %}
+        {% set action = card.actionLink ? card.actionLink : card %}
 
         <article class="cardItem cardItem--generic">
             <div class="cardItem__inner">
@@ -427,8 +432,20 @@
                             <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
 
                             {# Authors #}
+                            {# Authors #}
                             {% if authors|length %}                    
-                                <p class="cardItem__authors">{{ authors }}</p>
+                                {% for author in authors %}
+                                    {# Set author image #}
+                                    {% set authorImage = author.assetImage.one %}
+
+                                    {# Set name #}
+                                    {% set authorName = author.title %}
+
+                                    {% set authorDetails = authorDetails|merge([
+                                        { 'img': authorImage, 'name': authorName }
+                                    ]) %}
+                                {% endfor %}
+                                {{ details.detail('byline', false, authorDetails) }}
                             {% endif %}
                         </div>
 
@@ -451,14 +468,25 @@
                             {# Action #}
                             {% if action.url|length %}
                                 <div class="cardItem__action">
-                                    {% set actionAttributes = {
-                                        type: 'button', isReversed: false,
-                                        icon: 'linkType', iconOnly: false,
-                                        text: action.text, url: action,
-                                        linkType: action.type, target: action.target
-                                    } %}
+                                    {% if card.type == 'externalNews' %}
+                                        {% set actionAttributes = {
+                                            type: 'button', isReversed: false,
+                                            icon: 'linkType', iconOnly: false,
+                                            text: action.text, url: action,
+                                            linkType: action.type, target: action.target
+                                        } %}
 
-                                    {{ actions.action(actionAttributes) }}
+                                        {{ actions.action(actionAttributes) }}
+                                    {% elseif card.type == 'newsPost' %}
+                                        {% set actionAttributes = {
+                                            type: 'button', isReversed: false,
+                                            icon: 'linkType', iconOnly: false,
+                                            text: 'Read More', url: action.url,
+                                            linkType: 'entry', target: ''
+                                        } %}
+
+                                        {{ actions.action(actionAttributes) }}
+                                    {% endif %}
                                 </div>
                             {% endif %}
                         </div>

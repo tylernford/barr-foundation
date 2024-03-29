@@ -1,4 +1,4 @@
-dateModified: 1711655574
+dateModified: 1711673951
 elementSources:
   craft\elements\Asset:
     -
@@ -200,10 +200,11 @@ elementSources:
       key: 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
       tableAttributes:
         - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
-        - 'field:9b8006bb-071b-4d03-9d1f-f7bdbdc27d52' # Tags: Categories
         - 'field:f291a098-6829-4193-9d10-5757e239bef3' # Tags: Strategies
+        - 'field:9b8006bb-071b-4d03-9d1f-f7bdbdc27d52' # Tags: Categories
+        - 'field:b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400' # Entries: Team
         - postDate
-        - expiryDate
+        - type
         - link
       type: native
     -
