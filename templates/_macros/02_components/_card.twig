@@ -376,7 +376,10 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% if card.type != 'research' %}
-        {% set image = card.assetImage.one %}
+        {% set image =
+            card.assetImage.one ? card.assetImage.one :
+            card.assetOpenerImage.one ? card.assetOpenerImage.one
+        %}
         {% set label = '' %}
         {% set publication = card.textPublication %}
         {% set title = card.title %}
@@ -406,7 +409,7 @@
                 {# Image #}
                 {% if image %}
                     <div class="cardItem__media">
-                        {{ images.image(image, '912', '16/9', '', false) }}
+                        {{ images.image(image, '1280', '16/9', '', false) }}
                     </div>
                 {% endif %}
 
@@ -556,7 +559,10 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set url   = post.url %}
-    {% set image = post.assetImage.one %}
+    {% set image =
+        post.assetImage.one ? post.assetImage.one :
+        post.assetOpenerImage.one ? post.assetOpenerImage.one
+    %}
     {% set title = post.title %}
 
     {# Set published date #}
@@ -584,7 +590,7 @@
             {# Image #}
             {% if image %}
                 <div class="cardItem__media">
-                    {{ images.image(image, '912', '16/9', '', false) }}
+                    {{ images.image(image, '1280', '16/9', '', false) }}
                 </div>
             {% endif %}
 
