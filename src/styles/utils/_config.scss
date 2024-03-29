@@ -177,10 +177,20 @@ $breakpoints: (
 	--col-10: 83.3333333333%;
 	--col-12: 100%;
 
-	--site-header-height: 60px;
+	--site-header-height: 75px;
 }
 
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 36rem) {
+	:root {
+		--site-header-height: 84px;
+	}
+}
+@media screen and (min-width: 48rem) {
+	:root {
+		--site-header-height: 96px;
+	}
+}
+@media screen and (min-width: 64rem) {
 	:root {
 		--site-header-height: 120px;
 	}
