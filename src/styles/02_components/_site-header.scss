@@ -15,7 +15,6 @@
   .siteHeader__brand {
     width: 181px;
     height: 25px;
-    // flex-shrink: 0;
     position: relative;
 
     svg {
@@ -400,10 +399,24 @@
     }
   }
 
+  @include breakpoint('sm') {
+    .siteHeader__brand {
+      width: 206px;
+      height: 28px;
+    }
+  }
+
   @include breakpoint('md') {
     .siteHeader__brand {
       width: 232px;
       height: 32px;
+    }
+  }
+
+  @include breakpoint('lg') {
+    .siteHeader__brand {
+      width: 292px;
+      height: 40px;
     }
   }
 
