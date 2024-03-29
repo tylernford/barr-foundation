@@ -18,6 +18,8 @@ News & Insights Interior template
 
     {% if entrySection == 'blog' %}
         {{ openers.post(entry) }}
+    {% elseif entrySection == 'newsroom' %}
+        {{ openers.post(entry) }}
     {% else %}
         {% set opener = entry.openerLanding %}
         {{ openers.landing(opener, entry) }}
@@ -31,6 +33,7 @@ News & Insights Interior template
     4. Default to common builder for everything else
     #}
     {% set isBlog = entrySection == 'blog' %}
+    {% set isNews = entrySection == 'newsroom' %}
     {% set builder = entry.builderCommon ?? null %}
 
     {% if builder %}
@@ -43,6 +46,15 @@ News & Insights Interior template
         {{ sprig('sprig/_sprig-news-grid', { newsType: 'newsroom', limit: 12 }) }}
 
     {% elseif isBlog %}
+        {% import "_macros/03_modules/_text.twig" as modules %}
+        {% set config  = {
+                'content': entry,
+                'variant': 'body'
+            } %}
+        <section class="blog-post">
+            {{ modules.default(config) }}
+        </section>
+    {% elseif isNews %}
         {% import "_macros/03_modules/_text.twig" as modules %}
         {% set config  = {
                 'content': entry,

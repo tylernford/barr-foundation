@@ -154,18 +154,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f84ba8f4-c627-4760-a053-16c2cc8b6f04
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 74e574df-9488-4bf9-820b-3d2fdac8b770
             userCondition: null
@@ -176,8 +164,26 @@ fieldLayouts:
             uid: 08277447-0b58-4904-b25b-0b1f4afed170
             userCondition: null
             width: 100
-        name: Content
+        name: Opener
         uid: 7e248515-04bc-49be-bed0-2b08682ad665
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 21d65cb9-8d95-4d9e-a07a-e3cf6e9faed4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d4cd6727-be5d-4c25-8acf-b6e67eec58dd
         userCondition: null
       -
         elementCondition: null
