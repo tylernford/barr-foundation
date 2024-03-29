@@ -1,4 +1,4 @@
-dateModified: 1711673951
+dateModified: 1711738069
 elementSources:
   craft\elements\Asset:
     -
@@ -252,10 +252,12 @@ elementSources:
       disabled: false
       key: 'section:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
       tableAttributes:
-        - link
-        - section
-        - 'field:1b2cb00a-9926-4731-ba73-26cd45fd7e44' # Geo: Region
         - 'field:22f973cc-427c-4e70-8bb8-6624479ab025' # Entries: Organization
+        - 'field:1b2cb00a-9926-4731-ba73-26cd45fd7e44' # Geo: Region
+        - postDate
+        - 'field:25949bb9-af67-45e6-9adb-fc8c568dba48' # Date: Date Only
+        - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
+        - 'field:f291a098-6829-4193-9d10-5757e239bef3' # Tags: Strategies
       type: native
     -
       defaultSort:
