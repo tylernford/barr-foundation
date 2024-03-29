@@ -432,7 +432,6 @@
                             <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
 
                             {# Authors #}
-                            {# Authors #}
                             {% if authors|length %}                    
                                 {% for author in authors %}
                                     {# Set author image #}
@@ -696,9 +695,9 @@
                 
                     {# Summary #}
                     {% if description|length %}
-                        <p class="cardItem__description">
+                        <div class="cardItem__description">
                             {{ description }}
-                        </p>
+                        </div>
                     {% endif %}
                 </header>
 

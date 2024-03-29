@@ -681,7 +681,7 @@
       }
 
       .cardItem__description {
-        @include getType('caption-messina');
+        @include getType('caption-axiforma');
         
         &:first-letter {
           text-transform: uppercase;
@@ -690,7 +690,6 @@
 
       .cardItem__heading + .cardItem__description {
         margin-block-start: var(--base);
-        @include getType('detail-messina');
       }
     }
 
@@ -727,14 +726,6 @@
       .action {
         &:first-child {
           margin-inline-end: var(--base-4);
-        }
-      }
-    }
-
-    @include breakpoint(md) {
-      .cardItem__header {
-        .cardItem__heading + .cardItem__description {
-          @include getType('caption-messina');
         }
       }
     }
@@ -1139,6 +1130,18 @@
           }
         }
       }
+    }
+  }
+}
+
+[data-columns="2"] {
+  .cardItem.cardItem--grant {
+    @include breakpoint(xl) {
+      padding: var(--base-14) var(--base-16) var(--base-10) var(--base-16);
+    }
+
+    @include breakpoint(xxl) {
+      padding: var(--base-20) var(--base-20) var(--base-16) var(--base-20);
     }
   }
 }
