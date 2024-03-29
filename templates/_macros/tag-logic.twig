@@ -1,4 +1,4 @@
-{% macro tags(tagList) %}
+{% macro tags(tagList,excludeCategories) %}
     {% import '_macros/01_elements/_details' as details %}
     
     {# Set tags #}
@@ -27,6 +27,7 @@
     {% endfor %}
 
     {# Set Category tags #}
+    {% if excludeCategories == false %}
     {% for tag in tagList %}
         {% for category in tag.tagsCategories %}
             {% if category.tagsAvailable != 'internal' and category.title not in categoryTags %}
@@ -34,6 +35,7 @@
             {% endif %}
         {% endfor %}
     {% endfor %}
+    {% endif %}
 
     {# Merge tags #}
     {% set mergedTags = programTags|merge(strategyTags) %}

@@ -376,11 +376,12 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% if card.type != 'research' %}
+        {% set type  = card.type == 'externalNews' ? 'external' : 'post' %}
         {% set image =
             card.assetImage.one ? card.assetImage.one :
             card.assetOpenerImage.one ? card.assetOpenerImage.one
         %}
-        {% set label = '' %}
+        {% set label = type == 'external' ? 'In the News' : 'Barr News' %}
         {% set publication = card.textPublication %}
         {% set title = card.title %}
 
@@ -424,7 +425,7 @@
                         {% else %}
                             <h3 class="cardItem__heading">{{ title }}</h3>
                         {% endif %}
-                        <span class="cardItem__label">In the News</span>
+                        <span class="cardItem__label">{{ label }}</span>
                     </header>
 
                     {# Content #}
@@ -470,7 +471,7 @@
                             {# Action #}
                             {% if action.url|length %}
                                 <div class="cardItem__action">
-                                    {% if card.type == 'externalNews' %}
+                                    {% if type == 'external' %}
                                         {% set actionAttributes = {
                                             type: 'button', isReversed: false,
                                             icon: 'linkType', iconOnly: false,
@@ -479,7 +480,7 @@
                                         } %}
 
                                         {{ actions.action(actionAttributes) }}
-                                    {% elseif card.type == 'newsPost' %}
+                                    {% elseif type == 'post' %}
                                         {% set actionAttributes = {
                                             type: 'button', isReversed: false,
                                             icon: 'linkType', iconOnly: false,
