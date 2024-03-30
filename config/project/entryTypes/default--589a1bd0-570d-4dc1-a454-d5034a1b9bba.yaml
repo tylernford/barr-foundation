@@ -189,15 +189,7 @@ fieldLayouts:
             width: 100
         name: 'Related Content'
         uid: 807d9603-ac76-4177-a398-6cbe071bb856
-        userCondition:
-          class: craft\elements\conditions\users\UserCondition
-          conditionRules:
-            -
-              class: craft\elements\conditions\users\AdminConditionRule
-              uid: 6bea9531-e847-4dab-b007-53a7a6bf4605
-              value: true
-          elementType: craft\elements\User
-          fieldContext: global
+        userCondition: null
       -
         elementCondition: null
         elements:
