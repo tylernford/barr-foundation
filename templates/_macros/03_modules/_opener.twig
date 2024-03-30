@@ -368,6 +368,7 @@
 {% macro grantee(entry) %}
     {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_angles' as angles %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -465,4 +466,9 @@
             {% endif %}
         </div>
     </header>
+    <div class="openerAngle">
+        <div class="angle">
+            {{ angles.topLarge() }}
+        </div>
+    </div>
 {% endmacro %}
