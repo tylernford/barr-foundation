@@ -22,12 +22,13 @@
 
             {% if attr and attr.type == 'internal' %}
                 {% set attribution = attr.item.one() %}
-                {% set attrImage = attribution.assetImage.one %}
-                {% set attrName = attribution.title %}
-                {% set attrPerson = attrPerson|merge([
-                    { 'img': attrImage, 'name': attrName }
-                ]) %}
+                {% set attrPerson = attrPerson|merge([{
+                    'url': attribution.url,
+                    'img': attribution.assetImage.one,
+                    'name': attribution.title
+                }]) %}
                 {% set attrTitle = attribution.textJob %}
+                {% set attrOrg = attribution.textOrganization %}
 
             {% elseif attr and attr.type == 'external' %}
                 {% set attrPerson = attrPerson|merge([

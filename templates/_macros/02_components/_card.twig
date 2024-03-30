@@ -437,16 +437,17 @@
 
                             {# Authors #}
                             {% if authors|length %}                    
-                                {% for author in authors %}
-                                    {# Set author image #}
-                                    {% set authorImage = author.assetImage.one %}
+                                {% for postAuthor in postAuthors %}
+                                    {# Set author details #}
+                                    {% set url = postAuthor.url %}
+                                    {% set authorImage = postAuthor.assetImage.one %}
+                                    {% set authorName = postAuthor.title %}
 
-                                    {# Set name #}
-                                    {% set authorName = author.title %}
-
-                                    {% set authorDetails = authorDetails|merge([
-                                        { 'img': authorImage, 'name': authorName }
-                                    ]) %}
+                                    {% set authorDetails = authorDetails|merge([{
+                                        'url': url,
+                                        'img': authorImage,
+                                        'name': authorName
+                                    }]) %}
                                 {% endfor %}
                                 {{ details.detail('byline', false, authorDetails) }}
                             {% endif %}
@@ -612,15 +613,16 @@
                         {# Authors #}
                         {% if postAuthors|length %}                    
                             {% for postAuthor in postAuthors %}
-                                {# Set author image #}
+                                {# Set author details #}
+                                {% set url = postAuthor.url %}
                                 {% set authorImage = postAuthor.assetImage.one %}
-
-                                {# Set name #}
                                 {% set authorName = postAuthor.title %}
 
-                                {% set authorDetails = authorDetails|merge([
-                                    { 'img': authorImage, 'name': authorName }
-                                ]) %}
+                                {% set authorDetails = authorDetails|merge([{
+                                    'url': url,
+                                    'img': authorImage,
+                                    'name': authorName
+                                }]) %}
                             {% endfor %}
                             {{ details.detail('byline', false, authorDetails) }}
                         {% endif %}
