@@ -116,6 +116,7 @@
 
 {% macro bio(entry) %}
     {% import '_macros/tag-logic' as tagLogic %}
+    {% import '_macros/01_elements/_angles' as angles %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -191,7 +192,13 @@
             <div class="primary__graphic"></div>
         </div>
     </header>
+    <div class="openerAngle">
+        <div class="angle">
+            {{ angles.topLarge() }}
+        </div>
+    </div>
 {% endmacro %}
+
 
 {% macro post(entry) %}
     {% import '_macros/tag-logic' as tagLogic %}
@@ -243,15 +250,16 @@
             {# Authors #}
             {% if postAuthors|length %}                    
                 {% for postAuthor in postAuthors %}
-                    {# Set author image #}
+                    {# Set author details #}
+                    {% set url = postAuthor.url %}
                     {% set authorImage = postAuthor.assetImage.one %}
-
-                    {# Set name #}
                     {% set authorName = postAuthor.title %}
 
-                    {% set authorDetails = authorDetails|merge([
-                        { 'img': authorImage, 'name': authorName }
-                    ]) %}
+                    {% set authorDetails = authorDetails|merge([{
+                        'url': url,
+                        'img': authorImage,
+                        'name': authorName
+                    }]) %}
                 {% endfor %}
                 {{ details.detail('byline', false, authorDetails) }}
             {% endif %}
@@ -288,6 +296,7 @@
         </div>
     </header>
 {% endmacro %}
+
 
 {% macro home(opener) %}
     {% import '_macros/01_elements/_actions' as actions %}
@@ -368,6 +377,7 @@
 {% macro grantee(entry) %}
     {% import '_macros/tag-logic' as tagLogic %}
     {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/01_elements/_angles' as angles %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
@@ -465,4 +475,9 @@
             {% endif %}
         </div>
     </header>
+    <div class="openerAngle">
+        <div class="angle">
+            {{ angles.topLarge() }}
+        </div>
+    </div>
 {% endmacro %}

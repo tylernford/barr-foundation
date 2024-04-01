@@ -43,6 +43,35 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d62065d9-e91a-404d-81e4-e601d9ae0058
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Rich (+Link)
+            instructions: null
+            label: 'Text: Intro Large'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c6c30137-3053-451c-856e-741a3e3d743a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6bc3e5f2-3e88-4273-80aa-05eeee93d010 # Text: Intro
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 58370ed2-e593-4036-9c31-bf442cdba756
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: d871427b-7a39-4c63-bbbc-48dcee65b2a4
         userCondition: null

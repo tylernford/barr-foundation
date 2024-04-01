@@ -4,58 +4,79 @@
   Interior: Grantee Database
 ========================================== #}
 
+{% import '_macros/01_elements/_angles' as angles %}
 {% import '_macros/02_components/_card.twig' as cards %}
 
-{# Uncomment as needed
-{% import '_macros/02_components/_assets' as assets %}
-{% import '_macros/01_elements/_actions' as actions %}
-{% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
-{% import '_macros/01_elements/_details' as details %}
-{% import '_macros/01_elements/_section-title' as sectionTitles %}
-#}
+{# {% set awardYear = "now"|date("Y") - 1 %} #}
 
-{# Set Grant Year (previous year). 
-    NOTE: 
-    1. This might need to be adjusted depending on biz reqs 
-    2. Can a grantee receive multiple grants per year?
-#}
-{% set awardYear = "now"|date("Y") - 1 %}
+{% set layout = layout ?? 'grid' %}
 
-{% set layout = layout ?? 'grid' %} {# grid or list #}
+{% set introLarge = entry.textRichLink %}
+{% set intro      = entry.textIntro %}
+{% set grantsList = craft.entries().section('grants').limit(3) %}
 
-{# TODO: enable filtering, grid/list toggle view, keyword search, pagination #}
-{% set grantsList = craft.entries().section('grants').all() %}
-
-{# NOTE: the following elements will likely need to consolidated into a _sprig template #}
-<section class="grants-grid">
-    {# FILTERS GO HERE #}
-    {# <div class="blockGeneric">
+<div class="page-grantmaking">
+    {# <div class="page-background">
+        <div class="angle">
+            {{ angles.topLarge() }}
+        </div>
+        
+        {% if introLarge or intro %}
+            <div class="background">
+                <div class="background__inner"></div>
+            </div>
+        {% endif %}
     </div> #}
 
-    {# GRANTEE CARDS: List or Grid View #}
-    HEY
-    <div class="grants-grid__inner _is-{{ layout }}" data-columns="3">
-        {% if grantsList|length %}
-            {% for grant in grantsList %}
-                {# Retrieve current award year's grant associated with grantee #}
-                {# {% set grant = craft.entries({
-                    section: "grants",
-                    postDate: ["and", ">= #{awardYear}"],
-                    entriesOrganization: grantee
-                }).one() %} #}
+    <{{ introLarge or intro ? 'section' : 'div' }} class="grantmaking-intro">
+        <div class="angle">
+            {{ angles.topLarge() }}
+        </div>
 
-                {% set grantee = grant.entriesOrganization.one %}
+        {% if introLarge or intro %}
+            <div class="grants-intro__copy">
+                {% if introLarge %}
+                    <div class="copy__large">
+                        {{ introLarge }}
+                    </div>
+                {% endif %}
 
-                {% set config = {
-                    'variant': layout == 'grid' ? 'grid' : 'list',
-                    'content': {
-                        'grantee': grantee,
-                        'grant': grant
-                    }
-                }%}
-
-                {{ cards.grant(config) }}
-            {% endfor %}
+                {% if intro %}
+                    <div class="copy__standard">
+                        {{ intro }}
+                    </div>
+                {% endif %}
+            </div>
         {% endif %}
-    </div>
-</section>
+    </{{ introLarge or intro ? 'section' : 'div' }}>
+
+
+    {# NOTE: the following elements will likely need to consolidated into a _sprig template #}
+    <section class="grants-grid">
+        {# GRANTEE CARDS: List or Grid View #}
+        <div class="grants-grid__inner _is-{{ layout }}" data-columns="3">
+            {% if grantsList|length %}
+                {% for grant in grantsList %}
+                    {# Retrieve current award year's grant associated with grantee #}
+                    {# {% set grant = craft.entries({
+                        section: "grants",
+                        postDate: ["and", ">= #{awardYear}"],
+                        entriesOrganization: grantee
+                    }).one() %} #}
+
+                    {% set grantee = grant.entriesOrganization.one %}
+
+                    {% set config = {
+                        'variant': layout == 'grid' ? 'grid' : 'list',
+                        'content': {
+                            'grantee': grantee,
+                            'grant': grant
+                        }
+                    }%}
+
+                    {{ cards.grant(config) }}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+</div>

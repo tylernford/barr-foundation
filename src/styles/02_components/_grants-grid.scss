@@ -37,33 +37,4 @@
       }
     }
   }
-
-  &[data-background="true"] {
-    position: relative;
-
-    .angle {
-      inset: 0 0 auto 0;
-      position: absolute;
-      &::before {
-        content: '';
-        inset: 0 0 auto 0;
-        height: var(--base-40);
-        position: absolute;
-        background-color: var(--color-teal-150);
-      }
-  
-      svg {
-        margin-block-start: var(--base-40);
-        width: 100%;
-        height: auto;
-        display: block;
-        color: var(--color-teal-150);
-        transform: rotateY(180deg);
-      }
-    }
-
-    .grants-grid__inner {
-      position: relative;
-    }
-  }
 }

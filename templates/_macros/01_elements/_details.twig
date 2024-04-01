@@ -26,14 +26,15 @@
     
     {# Single #}
     {% else %}
+      {# <a class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}" href="{{ detail.url }}"> #}
       <span class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       {% for detail in details %}
-        <span>
+        {% if detail.url is defined %}<a href="{{ detail.url }}">{% else %}<span>{% endif %}
           {% if detail.img|length %}
             {{ images.image(detail.img, '240', '1/1', '', false) }}
           {% endif %}
           {{ detail.name }}
-        </span>
+        {% if detail.url is defined %}</a>{% else %}</span>{% endif %}
       {% endfor %}
       </span>
     {% endif %}
@@ -95,10 +96,12 @@
             {# <a{{ areaColor|length ? ' data-program-color=' ~ areaColor }} href="{{ detail.url }}">{{ detail.title }}</a> #}
             <span{{ areaColor|length ? ' data-program-color=' ~ areaColor }}>{{ detail.title }}</span>
           {% elseif variant == 'byline' %}
-            {% if detail.img|length %}
-              {{ images.image(detail.img, '240', '1/1', '', false) }}
-            {% endif %}
-            {{ detail.name }}
+            {% if detail.url %}<a href="{{ detail.url }}">{% endif %}
+              {% if detail.img|length %}
+                {{ images.image(detail.img, '240', '1/1', '', false) }}
+              {% endif %}
+              {{ detail.name }}
+            {% if detail.url %}</a>{% endif %}
           {% endif %}
         </li>
       {% endfor %}
