@@ -7,7 +7,7 @@
 
 .grants-grid {
   .grants-grid__inner {
-    @include container-narrow;
+    @include container-inner;
     padding-block: var(--base-9) var(--base-12);
     display: grid;
     

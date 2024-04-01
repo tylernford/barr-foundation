@@ -8,7 +8,7 @@
 
 .latest-news {
   .latest-news__grid {
-    @include container-narrow;
+    @include container-inner;
 
     .latest-news__featured-card {
       .cardItem {

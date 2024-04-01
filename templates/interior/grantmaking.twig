@@ -6,6 +6,7 @@ Grantmaking nterior template
 
 {% extends '_layouts/_base' %}
 
+{% import '_macros/01_elements/_angles' as angles %}
 {% import '_macros/03_modules/_opener' as openers %}
 
 {% block content %}
@@ -29,12 +30,20 @@ Grantmaking nterior template
     {% set builder = entry.builderCommon ?? null %}
 
     {% if builder %}
-        {% include '_partials/_builder-common.twig' with {'builder': builder} %}
-        
+        <div class="page-wrapper">
+            <div class="angle">
+                {{ angles.topLarge() }}
+            </div>
+                
+            <div class="background"></div>
+
+            {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+        </div>
+
     {# Grantee DB #}
     {% elseif entry.slug == 'grants-grantees' %}
         {% include 'interior/grantmaking/grants.twig' %}
-        
+
     {# Grantee Entry #}
     {% elseif entrySection == 'grantees' %}
         {% include 'interior/grantmaking/grantee.twig' with { 'entry': entry } %}

@@ -11,11 +11,11 @@
   padding-block-end: var(--base-9);
 
   .section-title {
-    @include container-narrow;
+    @include container-inner;
   }
 
   .feed__grid {
-    @include container-narrow;
+    @include container-inner;
     
     > * {
       position: relative;

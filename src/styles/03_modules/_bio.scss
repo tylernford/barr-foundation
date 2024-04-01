@@ -12,7 +12,7 @@
   --color-bio--tertiary: var(--color-grey-50);
   --color-bio--background: var(--color-teal-150);
 
-  @include container-narrow;
+  @include container-inner;
   padding-block: var(--base-12);
 
   @include breakpoint(lg) {

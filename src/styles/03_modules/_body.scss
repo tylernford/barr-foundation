@@ -46,7 +46,7 @@
 
   // Intro
   .blockBody__intro {
-    @include container-narrow;
+    @include container-inner;
     padding-block: var(--base-6);
     @include getType('body');
     
@@ -69,7 +69,7 @@
 
   // Paragraph
   .blockBody__paragraph {
-    @include container-narrow;
+    @include container-inner;
     padding-block: var(--base-6);
     @include getType('caption-messina');
     font-weight: 300;
@@ -130,7 +130,7 @@
 
   // Action
   .blockBody__action {
-    @include container-narrow;
+    @include container-inner;
     padding-block-end: var(--base-6);
   }
 

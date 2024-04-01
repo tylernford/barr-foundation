@@ -9,7 +9,6 @@ Interior template
 
 {% import '_macros/01_elements/_actions' as actions %}
 {% import '_macros/01_elements/_section-title' as sectionTitles %}
-{% import '_macros/03_modules/_bio' as bios %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
 
@@ -21,8 +20,6 @@ Interior template
     {% if entrySection == 'programAreas' %}
         {% set opener = entry.openerLanding %}
         {{ openers.landing(opener, entry) }}
-    {% elseif entrySection == 'directory' %}
-        {{ openers.bio(entry) }}
     {% endif %}
 
 
@@ -31,7 +28,6 @@ Interior template
     2. Program Areas landing is a unique builder
     3. Default to common builder for everything else
     #}
-    {% set isBio = entrySection == 'directory' %}
     {% set builder =
         entry.builderCommon ??
         entry.builderPeople ??
@@ -53,10 +49,6 @@ Interior template
             </div>
             {% endif %}
         {% endif %}
-
-    {% elseif isBio %}
-        {{ bios.bio(entry) }}
-
     {% endif %}
 
 

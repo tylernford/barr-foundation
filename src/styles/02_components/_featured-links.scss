@@ -39,7 +39,7 @@
 
 .featuredLinks {
   // Layout
-  @include container-narrow;
+  @include container-inner;
   padding-block: var(--base-6);
   display: grid;
   gap: 0 var(--base-5);

@@ -41,7 +41,7 @@
 
 
 .blockHighlight {
-  @include container-narrow;
+  @include container-inner;
   
   // Stats
   &.blockHighlight--stats {

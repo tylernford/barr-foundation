@@ -7,7 +7,7 @@
 ------------------------------------------------------------------------ */
 
 .cardRow {
-  @include container-narrow;
+  @include container-inner;
   padding-block-start: var(--base-2);
 
   > * {

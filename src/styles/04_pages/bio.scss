@@ -1,0 +1,57 @@
+@use "../utils/_utils" as *;
+
+.page-wrapper {
+  position: relative;
+  
+  .angle {
+    inset: 0 0 auto 0;
+    position: absolute;
+    z-index: -1;
+
+    &::before {
+      content: '';
+      inset: 0 0 auto 0;
+      height: var(--base-40);
+      position: absolute;
+      background-color: var(--color-teal-150);
+    }
+
+    svg {
+      margin-block-start: var(--base-40);
+      width: 100%;
+      height: auto;
+      display: block;
+      color: var(--color-teal-150);
+    }
+  }
+
+  .background {
+    inset: 0;
+    position: absolute;
+    @include container;
+    z-index: -1;
+
+    &::before {
+      content: '';
+      inset: 0 auto 0 auto;
+      inset: 0;
+      margin: 0 auto;
+      width: calc(100vw - var(--base-10));
+      max-width: 1368px;
+      position: absolute;
+      background-color: var(--color-grey-25);
+  
+      @include breakpoint(md) {
+        width: calc(100vw - var(--base-18));
+      }
+  
+      @include breakpoint(lg) {
+        width: calc(100vw - var(--base-24));
+      }
+  
+      @include breakpoint(xl) {
+        width: calc(100vw - var(--base-36));
+      }
+    }
+  }
+}

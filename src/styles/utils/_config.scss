@@ -132,6 +132,7 @@ $breakpoints: (
 	--base-100: 400px;
 	--base-70: 280px;
 	--base-40: 160px;
+	--base-36: 144px;
 	--base-34: 136px;
 	--base-32: 128px;
 	--base-31: 124px;
@@ -262,6 +263,26 @@ $breakpoints: (
 
 	@media (min-width: 64rem) {
 		padding-inline: var(--base-18);
+	}
+
+	@media (min-width: 80rem) {
+		padding-inline: var(--base-32);
+	}
+}
+
+@mixin container-inner {
+	margin-right: auto;
+	margin-left: auto;
+	padding-inline: var(--base-10);
+	width: 100%;
+	max-width: 94.5rem; // 1512px
+
+	@media (min-width: 48rem) {
+		padding-inline: var(--base-18);
+	}
+
+	@media (min-width: 64rem) {
+		padding-inline: var(--base-24);
 	}
 
 	@media (min-width: 80rem) {

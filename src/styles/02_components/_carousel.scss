@@ -34,7 +34,7 @@
 // Carousel
 .carousel {
   padding-block: var(--base-6);
-  @include container-narrow;
+  @include container-inner;
 
   .swiper {
     overflow: inherit;
