@@ -1,6 +1,25 @@
 @use "../utils/_utils" as *;
 
 .page-wrapper {
+  --color-wrapper--background: var(--color-teal-150);
+}
+body[data-theme-color="green"] {
+  .page-wrapper {
+    --color-wrapper--background: var(--color-program-green-150);
+  }
+}
+body[data-theme-color="plum"] {
+  .page-wrapper {
+    --color-wrapper--background: var(--color-program-plum-150);
+  }
+}
+body[data-theme-color="marigold"] {
+  .page-wrapper {
+    --color-wrapper--background: var(--color-program-marigold-100);
+  }
+}
+
+.page-wrapper {
   position: relative;
   
   .angle {
@@ -13,7 +32,7 @@
       inset: 0 0 auto 0;
       height: var(--base-40);
       position: absolute;
-      background-color: var(--color-teal-150);
+      background-color: var(--color-wrapper--background);
     }
 
     svg {
@@ -21,7 +40,7 @@
       width: 100%;
       height: auto;
       display: block;
-      color: var(--color-teal-150);
+      color: var(--color-wrapper--background);
     }
   }
 
