@@ -32,7 +32,7 @@
 }
 
 .quote {
-  @include container-narrow;
+  @include container-inner;
   padding-block: var(--base-9);
   color: var(--color-quote--secondary);
 

@@ -10,7 +10,7 @@
 }
 
 .feed-filters {
-  @include container-narrow;
+  @include container-inner;
   padding-block: var(--base-4) var(--base-12);
 
   @include breakpoint(xl) {
@@ -326,7 +326,7 @@
   --color-pagination-tertiary: var(--color-grey-150);
   --color-pagination-quaternary: var(--color-grey-100);
 
-  @include container-narrow;
+  @include container-inner;
   display: flex;
   align-items: center;
   justify-content: center;

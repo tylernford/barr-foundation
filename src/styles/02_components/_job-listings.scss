@@ -31,7 +31,7 @@
 }
 
 .job-listings {
-  @include container-narrow;
+  @include container-inner;
   padding-block: var(--base-5) var(--base-12);
 
   .job-listings__listing {
