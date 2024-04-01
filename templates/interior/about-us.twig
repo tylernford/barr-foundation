@@ -6,38 +6,32 @@ About Us Interior template
 =========================================================== #}
 
 {% extends '_layouts/_base' %}
+{% import '_macros/01_elements/_angles' as angles %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
 
+{% set entrySection = entry.section.handle %}
+{% set opener = entry.openerLanding %}
+{% set builder = entry.builderCommon ?? entry.builderPeople %}
+
+
 {% block content %}
 
-    {# INTERIOR OPENER #}
-    {% set entrySection = entry.section.handle %}
-    {% set opener = entry.openerLanding %}
-
+    {# Opener #}
     {{ openers.landing(opener, entry) }}
 
 
-    {# INTERIOR BUILDER: #}
-    {# 1. People is a unique builder
-    2. Program Areas landing is a unique builder
-    3. Grantee Database is builder-less
-    4. Default to common builder for everything else
-    #}
-    {% set builder =
-        entry.builderCommon ??
-        entry.builderPeople ??
-        entry.builderProgramAreas ??
-        entry.builderInquiryForm ??
-        null
-    %}
+    {# Page #}
+    <div class="page-wrapper">
+    <div class="angle">
+        {{ angles.topLarge() }}
+    </div>
 
-    {% if builder %}
-        {% if entrySection == 'aboutUs' and entry.type == 'directory' %}
-            {% include '_partials/_builder-people.twig' with {'builder': builder} %}
-        {% else %}
-            {% include '_partials/_builder-common.twig' with {'builder': builder} %}
-        {% endif %}
+    <div class="background"></div>
+    {% if entrySection == 'aboutUs' and entry.type == 'directory' %}
+        {% include '_partials/_builder-people.twig' with {'builder': builder} %}
+    {% else %}
+        {% include '_partials/_builder-common.twig' with {'builder': builder} %}
     {% endif %}
 
 
