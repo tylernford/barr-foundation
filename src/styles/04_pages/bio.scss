@@ -31,9 +31,27 @@
     @include container;
     z-index: -1;
 
-    .background__inner {
-      height: 100%;
+    &::before {
+      content: '';
+      inset: 0 auto 0 auto;
+      inset: 0;
+      margin: 0 auto;
+      width: calc(100vw - var(--base-10));
+      max-width: 1368px;
+      position: absolute;
       background-color: var(--color-grey-25);
+  
+      @include breakpoint(md) {
+        width: calc(100vw - var(--base-18));
+      }
+  
+      @include breakpoint(lg) {
+        width: calc(100vw - var(--base-24));
+      }
+  
+      @include breakpoint(xl) {
+        width: calc(100vw - var(--base-36));
+      }
     }
   }
 }

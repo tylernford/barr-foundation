@@ -31,15 +31,11 @@ Grantmaking nterior template
 
     {% if builder %}
         <div class="page-wrapper">
-            <div class="page-background">
-                <div class="angle">
-                    {{ angles.topLarge() }}
-                </div>
-                
-                <div class="background">
-                    <div class="background__inner"></div>
-                </div>
+            <div class="angle">
+                {{ angles.topLarge() }}
             </div>
+                
+            <div class="background"></div>
 
             {% include '_partials/_builder-common.twig' with {'builder': builder} %}
         </div>
