@@ -15,7 +15,7 @@
   }
 
   .feed__grid {
-    @include container-narrow;
+    @include container-inner;
     
     > * {
       position: relative;

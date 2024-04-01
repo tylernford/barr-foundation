@@ -269,6 +269,26 @@ $breakpoints: (
 	}
 }
 
+@mixin container-inner {
+	margin-right: auto;
+	margin-left: auto;
+	padding-inline: var(--base-10);
+	width: 100%;
+	max-width: 94.5rem; // 1512px
+
+	@media (min-width: 48rem) {
+		padding-inline: var(--base-18);
+	}
+
+	@media (min-width: 64rem) {
+		padding-inline: var(--base-24);
+	}
+
+	@media (min-width: 80rem) {
+		padding-inline: var(--base-32);
+	}
+}
+
 .container {
 	@include container;
 }

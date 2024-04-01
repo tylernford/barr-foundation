@@ -7,6 +7,7 @@
 ======================================= #}
 
 {% macro landing(opener, entry) %}
+    {% import '_macros/01_elements/_angles' as angles %}
     {% import '_macros/01_elements/_breadcrumb' as breadcrumbs %}
     {% import '_macros/01_elements/_image' as images %}
     
@@ -112,6 +113,14 @@
             </figure>
         {% endif %}
     </header>
+    {# {% if entry.type != 'landing' %}
+        {{ entry.type }}
+        <div class="openerAngle">
+            <div class="angle">
+                {{ angles.topLarge() }}
+            </div>
+        </div>
+    {% endif %} #}
 {% endmacro %}
 
 {% macro bio(entry) %}
@@ -192,11 +201,6 @@
             <div class="primary__graphic"></div>
         </div>
     </header>
-    <div class="openerAngle">
-        <div class="angle">
-            {{ angles.topLarge() }}
-        </div>
-    </div>
 {% endmacro %}
 
 
@@ -475,9 +479,4 @@
             {% endif %}
         </div>
     </header>
-    <div class="openerAngle">
-        <div class="angle">
-            {{ angles.topLarge() }}
-        </div>
-    </div>
 {% endmacro %}
