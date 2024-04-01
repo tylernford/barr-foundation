@@ -17,6 +17,9 @@
 
 {% set layout = layout ?? 'grid' %}
 
+{% set introLarge = entry.textRichLink %}
+{% set intro      = entry.textIntro %}
+
 {# Retrieve all grants associated with grantee #}
 {% set grantList = craft.entries().section('grants').entriesOrganization(entry).all() %}
 
@@ -37,6 +40,31 @@
         {% endif %}
     {% endfor %}
 {% endfor %}
+
+
+{# Intro #}
+<{{ introLarge or intro ? 'section' : 'div' }} class="grantmaking-intro">
+    <div class="angle">
+        {{ angles.topLarge() }}
+    </div>
+    
+    {% if introLarge or intro %}
+        <div class="grants-intro__copy">
+            {% if introLarge %}
+                <div class="copy__large">
+                    {{ introLarge }}
+                </div>
+            {% endif %}
+
+            {% if intro %}
+                <div class="copy__standard">
+                    {{ intro }}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+</{{ introLarge or intro ? 'section' : 'div' }}>
+
 
 {# Grants #}
 {% if grantList|length %}
@@ -62,7 +90,7 @@
 
 
 {# Related Content #}
-{% set relatedCards = entry.cardsFeedManual %}
+{% set relatedCards = entry.cardsFeedRelatedContent %}
 
 {% if relatedCards|length %}
     {# Set manualFeed #}
