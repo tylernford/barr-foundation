@@ -164,7 +164,7 @@
     &[data-1-up=true] {
       // Half width
       &:not([data-span=true]) {
-        @include container-narrow;
+        @include container-inner;
       }
 
       // Full width
@@ -188,7 +188,7 @@
 
     // 2 Up
     &[data-2-up=true] {
-      @include container-narrow;
+      @include container-inner;
       display: grid;
       grid-gap: var(--base-9);
       align-items: flex-start;
@@ -248,7 +248,7 @@
   
         // Full width
         &[data-span=true] {
-          @include container-narrow;
+          @include container-inner;
 
           .image {
             aspect-ratio: 2 / 1;
