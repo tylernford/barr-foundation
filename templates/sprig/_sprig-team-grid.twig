@@ -42,7 +42,11 @@
     }
   } %}
 
-  {% include '_partials/_filtering/_view-as' with { activeView: staffViewAs, viewHandle: 'staffViewAs' } %}
+  {% include '_partials/_filtering/_view-as' with {
+    activeView: staffViewAs,
+    viewHandle: 'staffViewAs',
+    views: ['grid','list']
+  } %}
 </div>
 
 <div class="feed">

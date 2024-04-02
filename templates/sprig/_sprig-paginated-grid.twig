@@ -18,7 +18,11 @@
 
 
 <div class="feed-filters" data-variant="simple">
-  {% include '_partials/_filtering/_view-as' with { activeView: guestAuthorViewAs, viewHandle: 'guestAuthorViewAs' } %}
+  {% include '_partials/_filtering/_view-as' with {
+    activeView: guestAuthorViewAs,
+    viewHandle: 'guestAuthorViewAs',
+    views: ['grid','list']
+  } %}
 </div>
 
 <div class="feed">
