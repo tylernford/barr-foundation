@@ -243,7 +243,8 @@ var config = {
     responsive: true,
     displayModeBar: true,
     showLink: false,
-    modeBarButtonsToRemove: ['toImage', 'sendDataToCloud'],
+    displaylogo: false,
+    modeBarButtonsToRemove: ['toImage', 'sendDataToCloud','pan2d','lasso2d'],
 };
 
 Plotly.newPlot(TESTER, data, layout, config);
@@ -497,13 +498,13 @@ $('#loading').hide(); // Hide it initially
                 </div>
               </div> #}
               
-              {# <div class="bf input-wrapper">
+              <div class="bf input-wrapper">
                 <div class="radio-button">
                   <label for="map"> 
-                    <input class="radio-group" type="radio" id="map" name="view as"><span class="radio-checkmark"></span><span class="radio-label">map</span>
+                    <input class="radio-group" type="radio" id="map" name="view as"><span class="radio-checkmark"></span><span class="radio-label">Grantee Directory</span>
                   </label>
                 </div>
-              </div> #}
+              </div>
             </div>
           </div>
         </div>
