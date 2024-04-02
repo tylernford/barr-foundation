@@ -47,9 +47,12 @@
   &.blockHighlight--stats {
     padding-block: var(--base-7) var(--base-13);
 
-    strong,
-    i {
+    strong {
       font-weight: 500;
+    }
+
+    i {
+      font-style: italic;
     }
 
     .blockHighlight__heading {

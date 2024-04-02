@@ -154,9 +154,12 @@
         max-width: 34em;
       }
 
-      strong,
-      i {
+      strong {
         font-weight: 500;
+      }
+  
+      i {
+        font-style: italic;
       }
     }
 
