@@ -183,6 +183,13 @@
       @include getType('caption-messina');
     }
 
+    // Submenu heading
+    .submenu__menu {
+      .submenu__heading {
+        display: none;
+      }
+    }
+    
     // Submenu item
     .submenu__item {
       padding-block: var(--base-3);
@@ -532,6 +539,7 @@
           padding-inline-end: var(--base-14);
           width: 50%;
           @include getType('h3-messina');
+          line-height: 1.4;
         }
 
         // Submenu menu
