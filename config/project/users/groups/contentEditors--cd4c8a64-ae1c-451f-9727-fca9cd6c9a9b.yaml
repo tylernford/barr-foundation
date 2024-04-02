@@ -92,28 +92,12 @@ permissions:
   - 'editpeerimages:84062355-43e5-4645-80bd-6ed12c82ebb8' # Media
   - 'editpeerimages:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
   - editusers
-  - formie-createforms
   - formie-createsubmissions
-  - formie-deleteforms
-  - formie-editforms
   - formie-editsubmissions
-  - 'formie-manageform:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - formie-manageformappearance
-  - 'formie-manageformappearance:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - 'formie-manageform:87056fec-6119-4bec-8ad6-27324cde0269'
   - formie-manageformbehavior
-  - 'formie-manageformbehavior:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - formie-manageformintegrations
-  - 'formie-manageformintegrations:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - formie-manageformsettings
-  - 'formie-manageformsettings:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - 'formie-manageformusage:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - formie-managenotifications
-  - 'formie-managenotifications:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - formie-managenotificationsadvanced
-  - 'formie-managenotificationsadvanced:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - formie-managenotificationstemplates
-  - 'formie-managenotificationstemplates:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
-  - 'formie-managesubmission:c54fad1d-0a80-4b44-928d-0a751b0c9aa0'
+  - 'formie-manageformbehavior:87056fec-6119-4bec-8ad6-27324cde0269'
+  - 'formie-managesubmission:87056fec-6119-4bec-8ad6-27324cde0269'
   - formie-viewforms
   - formie-viewsentnotifications
   - formie-viewsubmissions
