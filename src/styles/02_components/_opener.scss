@@ -689,6 +689,12 @@ body[data-theme-color="marigold"] {
           .pattern {
             display: none;
           }
+
+          &[data-caption="false"] {
+            .caption__background {
+              display: none;
+            }
+          }
         }
       }
 
@@ -806,6 +812,14 @@ body[data-theme-color="marigold"] {
                 position: absolute;
                 width: var(--base-12);
                 background: linear-gradient(to bottom right, var(--color-grey-25) 0%, var(--color-grey-25) 50%, transparent 50%, transparent 100%);
+              }
+            }
+
+            .media__caption {
+              &[data-caption="false"] {
+                &::before {
+                  display: none;
+                }
               }
             }
           }
