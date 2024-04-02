@@ -39,48 +39,61 @@
 
     h3 {
       &:not(:first-child) {
-        margin-block-start: 1.55em;
+        margin-block-start: 2em;
       }
 
       @include getType('h5-axiforma');
     }
 
+    h3 + ul,
+    h3 + ol {
+      margin-top: .5em;
+    }
+
     p,
     ul,
-    ol {
+    ol,
+    blockquote {
+      strong {
+        font-weight: 600;
+      }
+  
+      i {
+        font-style: italic;
+      }
+
       &:not(:last-child) {
-        margin-block-end: 1em;
+        margin-block-end: 1.33em;
+      }
+    }
+
+    ul,
+    ol {
+      margin-inline: 1em;
+
+      li {
+        &:not(:last-child) {
+          margin-block-end: .5em;
+        }
       }
     }
 
     ul {
       list-style-type: disc;
-      margin-inline: 1em;
     }
 
     ol {
       list-style-type: decimal;
-      margin-inline: 1em;
     }
 
-    a {
-      color: var(--color-bio--primary);
-      transition: color var(--transition) ease-in;
-      
-      @media (hover: hover) {
-        &:hover {
-          color: inherit;
-          transition: color var(--transition-intermediate) ease-out;
-        }
-      }
+    h3 + blockquote {
+      margin-block-start: 1em;
     }
 
-    strong {
-      font-weight: 600;
-    }
-
-    i {
-      font-style: italic;
+    blockquote {
+      margin-inline-start: var(--base-2);
+      padding: var(--base) 0 var(--base) var(--base-3);
+      border-left: 2px solid var(--color-body--secondary);
     }
   }
 
