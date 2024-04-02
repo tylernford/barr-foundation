@@ -152,7 +152,7 @@
       @include getType('h5-messina');
 
       strong {
-        font-weight: 400;
+        font-weight: 600;
       }
 
       i {
@@ -266,7 +266,7 @@
       }
 
       strong {
-        font-weight: 400;
+        font-weight: 600;
       }
 
       i {
@@ -875,6 +875,9 @@
     // Summary
     .cardItem__summary {
       strong {
+        font-weight: 600;
+      }
+      i {
         font-style: italic;
       }
     }
