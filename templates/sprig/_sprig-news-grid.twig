@@ -1,3 +1,4 @@
+{% import '_macros/01_elements/_angles' as angles %}
 {% import '_macros/02_components/_card' as cards %}
 
 {% set page = page ?? 1 %}
@@ -46,7 +47,7 @@
 ] %}
 
 {# ---  Set View  --- #}
-{% set viewAs = viewAs ?? 'grid' %}
+{% set viewAs = viewAs ?? 'list' %}
 
 {% set feedQuery = craft.entries().section(newsType).type('not research').relatedTo(filterParameters).orderBy(orderBy).limit(limit) %}
 {% set feedQueryFilters = craft.entries().section(newsType).type('not research').relatedTo(filterParameters).orderBy(orderBy) %}
@@ -59,7 +60,7 @@
 
 <div class="feed-page">
   {# Filters #}
-  <div class="feed-filters" data-variant="standard">
+  <div class="feed-filters" data-variant="standard" data-is-reversed="true">
     <div class="filters__group">
       {% include '_partials/_filtering/_categories' %}
 
@@ -71,7 +72,18 @@
       } %}
     </div>
 
-    {% include '_partials/_filtering/_view-as' with { activeView: viewAs, viewHandle: 'viewAs' } %}
+    {% include '_partials/_filtering/_view-as' with {
+      activeView: viewAs,
+      viewHandle: 'viewAs',
+      reverseOrder: true
+    } %}
+  </div>
+
+  {# Page background #}
+  <div class="page-wrapper">
+    <div class="angle">
+      {{ angles.topLarge() }}
+    </div>
   </div>
 
   {# Feed #}

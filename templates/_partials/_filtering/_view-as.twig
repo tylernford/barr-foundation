@@ -7,7 +7,7 @@
     <legend class="fieldset__legend">View As</legend>
 
     <div class="view">
-      {% set views = ['grid','list'] %}
+      {% set views = reverseOrder == true ? ['list','grid'] : ['grid','list']%}
 
       {% for view in views %}
         <div class="radio">

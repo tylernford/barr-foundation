@@ -2,23 +2,46 @@
 @use "../utils/_utils" as *;
 
 .feed-page {
-  padding-block: var(--base-10) var(--base-12);
+  padding-block-end : var(--base-12);
 
   @include breakpoint(md) {
-    padding-block: var(--base-12) var(--base-16);
+    padding-block-end: var(--base-16);
   }
 }
 
 .feed-filters {
+  --color-feed-filters--primary: var(--color-navy-100);
+  &[data-is-reversed="true"] {
+    --color-feed-filters--primary: var(--color-grey-25);
+  }
+
+  padding-block: var(--base-14) var(--base-12);
   @include container-inner;
-  padding-block: var(--base-4) var(--base-12);
+  position: relative;
+
+  &::before {
+    content: '';
+    inset: 0 0 0 -50vw;
+    width: 200vw;
+    position: absolute;
+    background-color: var(--color-teal-150);
+  }
+
+  > * {
+    position: relative;
+  }
+
+  @include breakpoint(md) {
+    padding-block: var(--base-16) var(--base-12);
+  }
 
   @include breakpoint(xl) {
-    padding-block: var(--base-12) var(--base-16);
+    padding-block: var(--base-16);
   }
 
   .feed-filters__fieldset {
     .fieldset__legend {
+      color: var(--color-feed-filters--primary);
       @include getType('label');
     }
   }
@@ -65,13 +88,22 @@
   Dropdown
 ------------------------------------------------------------------------ */
 .dropdown {
-  --color-dropdown-background: var(--color-navy-100);
-  --color-dropdown-primary: var(--color-navy-100);
-  --color-dropdown-secondary: var(--color-grey-25-65);
-  --color-dropdown-tertiary: var(--color-grey-25);
-  --color-dropdown-quaternary: var(--color-grey-150);
+  --color-dropdown--background: var(--color-navy-100);
+  --color-dropdown--primary: var(--color-navy-100);
+  --color-dropdown--accent: var(--color-grey-150);
+  --color-dropdown--label: var(--color-navy-100);
+  --color-dropdown--active-label: var(--color-grey-25-65);
+}
 
-
+[data-is-reversed="true"] {
+  .dropdown {
+    --color-dropdown--background: var(--color-grey-25);
+    --color-dropdown--primary: var(--color-grey-25-65);
+    --color-dropdown--label: var(--color-grey-25-65);
+    --color-dropdown--active-label: var(--color-navy-100);
+  }
+}
+.dropdown {
   // Base Styles
   margin-block-start: var(--base-2);
   min-width: var(--base-70);
@@ -94,7 +126,7 @@
       content: '';
       inset: 0;
       position: absolute;
-      border: 1px solid var(--color-dropdown-primary);
+      border: 1px solid var(--color-dropdown--primary);
       border-radius: var(--radius-input);
       transition: var(--transition-out);
     }
@@ -122,6 +154,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      color: var(--color-dropdown--label);
       @include getType('detail-axiforma');
       transition: var(--transition-out);
 
@@ -141,7 +174,7 @@
     .dropdown__item {
       &:not(:first-child) {
         label {
-          border-top: 1px solid var(--color-dropdown-quaternary);
+          border-top: 1px solid var(--color-dropdown--accent);
         }
       }
     }
@@ -153,7 +186,7 @@
       &:not(.-is-active) {
         .dropdown__inner {
           &:before {
-            border: 3px solid var(--color-dropdown-primary);
+            border: 3px solid var(--color-dropdown--primary);
             transition: var(--transition-in);
           }
         }
@@ -186,18 +219,21 @@
     .dropdown__inner {
       pointer-events: none;
       height: calc(((var(--base-13) + (var(--base-10) * var(--number-of-filters))) + var(--base-5)));
-      background-color: var(--color-dropdown-background);
-      color: var(--color-dropdown-secondary);
+      background-color: var(--color-dropdown--background);
       transition: height var(--transition-intermediate);
     }
 
     .dropdown__item {
       pointer-events: auto;
 
+      label {
+        color: var(--color-dropdown--active-label);
+      }
+
       // Selected
       &.-is-selected {
         label {
-          border-bottom: 1px solid var(--color-dropdown-quaternary);
+          border-bottom: 1px solid var(--color-dropdown--accent);
 
           svg {
             transform: rotate(180deg);
@@ -226,10 +262,18 @@
         transform: translateY(0);
         transition: transform var(--transition-intermediate);
 
+        label {
+          text-decoration: underline;
+          text-decoration-color: transparent;
+          transition: var(--transition-out);
+        }
+
         @media (hover: hover){
           &:hover {
-            color: var(--color-dropdown-tertiary);
-            text-decoration: underline;
+            label {
+              text-decoration-color: inherit;
+              transition: var(--transition-in);
+            }
           }
         }
       }
@@ -243,8 +287,15 @@
 ------------------------------------------------------------------------ */
 // Radio
 .radio {
-  --color-radio-primary: var(--color-navy-100);
+  --color-radio--primary: var(--color-navy-100);
+}
+[data-is-reversed="true"] {
+  .radio {
+    --color-radio--primary: var(--color-grey-25-65);
+  }
+}
 
+.radio {
   display: flex;
   align-items: center;
 
@@ -255,7 +306,7 @@
     height: var(--base-6);
     position: relative;
     appearance: none;
-    border: 1px solid var(--color-radio-primary);
+    border: 1px solid var(--color-radio--primary);
     border-radius: 1000px;
     background-color: transparent;
     flex-shrink: 0;
@@ -272,11 +323,11 @@
 
     // Checked
     &:checked {
-      border: 2px solid var(--color-radio-primary);
+      border: 2px solid var(--color-radio--primary);
       transition: var(--transition-in);
 
       &::before {
-        background-color: var(--color-radio-primary);
+        background-color: var(--color-radio--primary);
         transition: var(--transition-in);
       }
     }
@@ -284,7 +335,7 @@
     // Hover
     @media (hover: hover) {
       &:hover {
-        border: 2px solid var(--color-radio-primary);
+        border: 2px solid var(--color-radio--primary);
         transition: var(--transition-in);
       }
     }
@@ -293,7 +344,7 @@
   label {
     padding-inline-start: var(--base-3);
     flex-shrink: 1;
-    color: var(--color-radio-primary);
+    color: var(--color-radio--primary);
     @include getType('detail-axiforma');
   }
 }
@@ -321,8 +372,6 @@
   --color-pagination-primary: var(--color-teal-150);
   --color-pagination-hover: var(--color-teal-100);
   --color-pagination-highlight: var(--color-teal-100);
-
-
   --color-pagination-tertiary: var(--color-grey-150);
   --color-pagination-quaternary: var(--color-grey-100);
 
@@ -379,7 +428,9 @@
       }
     }
 
-    &[disabled]{
+    &[disabled] {
+      cursor: default;
+      
       svg {
         color: var(--color-pagination-quaternary);
       }
@@ -465,9 +516,15 @@
   Modal Trigger
 ------------------------------------------------------------------------ */
 .modal-trigger {
-  --color-modal-trigger-primary: var(--color-navy-100);
+  --color-modal-trigger--primary: var(--color-navy-100);
+}
+[data-is-reversed="true"] {
+  .modal-trigger {
+    --color-modal-trigger--primary: var(--color-grey-25-65);
+  }
+}
 
-
+.modal-trigger {
   // Base Styles
   margin-block-start: var(--base-2);
   padding-inline: var(--base-4);
@@ -481,7 +538,7 @@
   appearance: none;
   border: none;
   background-color: transparent;
-  color: var(--color-modal-trigger-primary);
+  color: var(--color-modal-trigger--primary);
   @include getType('detail-axiforma');
   cursor: pointer;
   z-index: 61;
@@ -490,7 +547,7 @@
     content: '';
     inset: 0;
     position: absolute;
-    border: 1px solid var(--color-modal-trigger-primary);
+    border: 1px solid var(--color-modal-trigger--primary);
     border-radius: var(--radius-input);
     transition: var(--transition-out);
   }
@@ -507,7 +564,7 @@
   @media (hover: hover){
     &:hover {
       &:before {
-        border: 3px solid var(--color-modal-trigger-primary);
+        border: 3px solid var(--color-modal-trigger--primary);
         transition: var(--transition-in);
       }
     }
