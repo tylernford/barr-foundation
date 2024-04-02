@@ -352,21 +352,25 @@
                         </div>
 
                         {# Image caption #}
-                        {% if image.textCaption|length or image.textByline|length %}
-                            <figcaption class="media__caption">
-                                <span class="caption__background"></span>
-                                <span class="caption__background"></span>
-                                <span class="caption__background"></span>
-                                <div class="caption__caption">
-                                    <div class="pattern">
-                                        {{ patterns.pattern() }}
-                                    </div>
-
+                        {% set caption = image.textCaption|length or image.textByline|length ? 'true' : false %}
+                        {% set element =
+                            image.textCaption|length or image.textByline|length ? 'figcaption' :
+                            'div'
+                        %}
+                        <{{ element }} class="media__caption"{{ caption == false ? ' data-caption=false' }}>
+                            <span class="caption__background"></span>
+                            <span class="caption__background"></span>
+                            <span class="caption__background"></span>
+                            <div class="caption__caption">
+                                <div class="pattern">
+                                    {{ patterns.pattern() }}
+                                </div>
+                                {% if caption %}
                                     {{ image.textCaption }}
                                     {{ image.textByline }}
-                                </div>
-                            </figcaption>
-                        {% endif %}
+                                {% endif %}
+                            </div>
+                        </{{ element }}>
                     </figure>
                 {% endif %}
             </div>
