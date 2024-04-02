@@ -42,6 +42,15 @@ body[data-theme-color="marigold"] {
       display: block;
       color: var(--color-wrapper--background);
     }
+
+    &[data-no-angle="true"] {
+      inset: 0;
+      background-color: var(--color-wrapper--background);
+
+      svg {
+        display: none;
+      }
+    }
   }
 
   .background {

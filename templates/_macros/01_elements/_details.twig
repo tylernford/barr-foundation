@@ -33,7 +33,7 @@
           {% if detail.img|length %}
             {{ images.image(detail.img, '240', '1/1', '', false) }}
           {% endif %}
-          {{ detail.name }}
+          <span>{{ detail.name }}</span>
         {% if detail.url is defined %}</a>{% else %}</span>{% endif %}
       {% endfor %}
       </span>
@@ -100,7 +100,7 @@
               {% if detail.img|length %}
                 {{ images.image(detail.img, '240', '1/1', '', false) }}
               {% endif %}
-              {{ detail.name }}
+              <span>{{ detail.name }}</span>
             {% if detail.url %}</a>{% endif %}
           {% endif %}
         </li>

@@ -168,9 +168,15 @@
     }
 
     a {
+      display: inline-flex;
+      align-items: flex-start;
       color: var(--color-details-secondary);
       text-decoration-color: transparent;
       transition: var(--transition-out);
+
+      span {
+        margin-block-start: 6px;
+      }
 
       @media (hover: hover) {
         &:hover {
