@@ -14,6 +14,10 @@
     .cardItem__inner {
       @include container;
     }
+
+    &.cardItem--feature {
+      background-color: var(--color-card-background);
+    }
   }
   
   .cards-grid {
