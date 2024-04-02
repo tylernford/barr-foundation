@@ -43,10 +43,10 @@ $breakpoints: (
 @include getFont('Messina Modern', 'messina-modern', 'messina-modern--regular', normal, 400);
 @include getFont('Messina Modern', 'messina-modern', 'messina-modern--regular-italic', italic, 400);
 
-@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book', normal, 300);
-@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--book-italic', italic, 300);
-@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular', normal, 400);
-@include getFont('Messina Serif', 'messina-serif-trial', 'messina-serif-trial--regular-italic', italic, 400);
+@include getFont('Messina Serif', 'messina-serif', 'messina-serif--book', normal, 300);
+@include getFont('Messina Serif', 'messina-serif', 'messina-serif--book-italic', italic, 300);
+@include getFont('Messina Serif', 'messina-serif', 'messina-serif--regular', normal, 400);
+@include getFont('Messina Serif', 'messina-serif', 'messina-serif--regular-italic', italic, 400);
 
 
 /* ---------------------------------------------------------------------
