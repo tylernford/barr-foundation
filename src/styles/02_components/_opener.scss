@@ -309,8 +309,15 @@ body[data-theme-color="marigold"] {
 
     // Media
     .blockOpener__media {
-      margin-inline: var(--neg-base-5);
       position: relative;
+
+      &::before {
+        content: '';
+        inset: 0 0 0 -50%;
+        width: 200vw;
+        position: absolute;
+        background-color: var(--theme-color-primary);
+      }
 
       .image {
         aspect-ratio: 4 / 3;
