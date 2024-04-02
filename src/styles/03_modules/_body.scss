@@ -50,6 +50,16 @@
     padding-block: var(--base-6);
     @include getType('body');
     
+    h3 {
+      margin-block-end: .25em;
+
+      &:not(:first-child) {
+        margin-block-start: 2em;
+      }
+      
+      @include getType('h5-axiforma');
+    }
+
     p {
       max-width: 35em;
 
