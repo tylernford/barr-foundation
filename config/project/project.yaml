@@ -1,4 +1,4 @@
-dateModified: 1712090768
+dateModified: 1712094736
 elementSources:
   craft\elements\Asset:
     -
@@ -878,6 +878,7 @@ meta:
     bcf0f106-ae8e-4b7f-a6a2-c0c241588bac: Description # Description
     bd681dfd-af4d-42fa-9b3d-405bb72ab5d7: Newsroom # Newsroom
     bda6181d-ab1e-4267-8e8d-9ebe9749d6c8: Directory # Directory
+    bda46391-1729-4498-a371-3870073db448: 'Text: Minimal Body' # Text: Minimal Body
     bde1031a-b7c0-498e-94e4-792ff7cf269f: __blank__ # __blank__
     be780dcf-a746-4d47-ab45-5d3ab50366e7: 'Style: Alignment' # Style: Alignment
     be795e4c-65da-45f5-9320-13213acf7b06: 'Tags: Program Areas' # Tags: Program Areas
