@@ -4,8 +4,29 @@
 .feed-page {
   padding-block-end : var(--base-12);
 
+  .feed {
+    .feed__grid[data-grid-style="list"] {
+      display: grid;
+      gap: var(--base-6);  
+    }
+  }
+
   @include breakpoint(md) {
     padding-block-end: var(--base-16);
+
+    .feed {
+      .feed__grid[data-grid-style="list"] {
+        gap: var(--base-9);  
+      }
+    }
+  }
+
+  @include breakpoint(xl) {
+    .feed {
+      .feed__grid[data-grid-style="list"] {
+        gap: var(--base-12);  
+      }
+    }
   }
 }
 
