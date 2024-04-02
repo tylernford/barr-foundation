@@ -41,7 +41,10 @@
     p {
       max-width: 30em;
 
-      strong,
+      strong {
+        font-weight: 600;
+      }
+      
       i {
         font-style: italic;
       }
