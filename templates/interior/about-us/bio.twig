@@ -46,7 +46,7 @@ Interior template
 
     {# Bio #}
     {% if bio|length or email|length or social %}
-        <section class="bio">
+        <section class="bio"{{ bio|length ? ' data-columns=2'}}>
             {# Primary #}
             {% if bio|length %}
                 <div class="bio__primary">
