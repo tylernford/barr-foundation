@@ -101,7 +101,7 @@
     <div{% if id|length %} id="submenu-{{ id }}"{% endif %} class="submenu__overlay">
     {{ mobile == true ? '   <div>' }}
         {# Submeanu heading #}
-        {% if heading|length %}
+        {% if mobile == true and heading|length %}
             <h3 class="submenu__heading">{{ heading }}</h3>
         {% endif %}
 
@@ -114,6 +114,9 @@
 
         {# Submenu menu #}
         <nav class="submenu__menu">
+            {% if heading|length %}
+                <h3 class="submenu__heading">{{ heading }}</h3>
+            {% endif %}
             <ul>
                 {# Primary items #}
                 {% for item in primaryNav %}

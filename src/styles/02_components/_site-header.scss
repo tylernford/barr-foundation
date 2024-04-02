@@ -552,20 +552,22 @@
 
         // Animation
         .submenu__overlay {
+          min-height: var(--base-156);
           opacity: 0;
-          // transform: translate(1.5rem, -.5rem);
-          // transition: opacity 350ms ease-in,
-                      // transform 350ms ease-in;
-          transition: opacity 350ms ease-in;
+          box-shadow: var(--shadow-deep--light);
         }
 
         @media (hover: hover) {
           &:hover {
             .submenu__overlay {
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+
               display: flex;
-              opacity: 1;
-              transition: opacity 350ms ease-out;
-              // transition-delay: 250ms;
+              animation: fadeIn 350ms ease-out;
+              animation-fill-mode: forwards;
             }
           }
         }
