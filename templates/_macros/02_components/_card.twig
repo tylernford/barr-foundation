@@ -439,12 +439,12 @@
                             {% if authors|length %}                    
                                 {% for postAuthor in postAuthors %}
                                     {# Set author details #}
-                                    {% set url = postAuthor.url %}
+                                    {% set authorUrl = postAuthor.url %}
                                     {% set authorImage = postAuthor.assetImage.one %}
                                     {% set authorName = postAuthor.title %}
 
                                     {% set authorDetails = authorDetails|merge([{
-                                        'url': url,
+                                        'url': authorUrl,
                                         'img': authorImage,
                                         'name': authorName
                                     }]) %}
@@ -614,12 +614,12 @@
                         {% if postAuthors|length %}                    
                             {% for postAuthor in postAuthors %}
                                 {# Set author details #}
-                                {% set url = postAuthor.url %}
+                                {% set authorUrl   = postAuthor.url %}
                                 {% set authorImage = postAuthor.assetImage.one %}
-                                {% set authorName = postAuthor.title %}
+                                {% set authorName  = postAuthor.title %}
 
                                 {% set authorDetails = authorDetails|merge([{
-                                    'url': url,
+                                    'url': authorUrl,
                                     'img': authorImage,
                                     'name': authorName
                                 }]) %}
