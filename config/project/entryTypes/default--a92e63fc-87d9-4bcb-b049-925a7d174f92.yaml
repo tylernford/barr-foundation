@@ -63,36 +63,12 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
-            instructions: Deprecated.
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9ecae88f-f550-4e14-8eb8-3aa61d39ab8a
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 4217f7b3-ec24-454d-87f2-1998f0a0baae # Tags: Program Areas
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f160c839-4f02-4463-99c2-71cb0297b0c1
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: f291a098-6829-4193-9d10-5757e239bef3 # Tags: Strategies
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 59261354-c989-4cd3-bc09-b10d7835cba9
             userCondition: null
             warning: null
             width: 50

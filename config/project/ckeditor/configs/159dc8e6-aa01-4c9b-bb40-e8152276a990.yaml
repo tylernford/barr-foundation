@@ -1,5 +1,0 @@
-headingLevels: false
-listPlugin: List
-name: 'Text: Link'
-toolbar:
-  - link

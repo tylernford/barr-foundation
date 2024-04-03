@@ -12,7 +12,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            inputType: null
             instructions: null
             label: null
             max: null
@@ -57,18 +56,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 98a27781-2b61-4d95-b8e5-b5cca67504a8 # Asset: Opener Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: eb6a1676-3aad-4b28-9c06-1dcecb955fbf
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
             fieldUid: 25949bb9-af67-45e6-9adb-fc8c568dba48 # Date: Date Only
             instructions: null
             label: 'Date: Published'
@@ -94,36 +81,12 @@ fieldLayouts:
           -
             elementCondition: null
             fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
-            instructions: Deprecated.
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ad7b3ab4-49ec-455e-a371-7d123917e892
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 4217f7b3-ec24-454d-87f2-1998f0a0baae # Tags: Program Areas
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a116d9b4-1895-4468-80df-7c2cc92e5319
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: f291a098-6829-4193-9d10-5757e239bef3 # Tags: Strategies
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e8f0f2e0-b519-4423-b131-5bb35db9cc82
             userCondition: null
             warning: null
             width: 50

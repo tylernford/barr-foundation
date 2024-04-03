@@ -12,7 +12,7 @@ settings:
   allowedKinds: null
   branchLimit: null
   defaultUploadLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
-  defaultUploadLocationSubpath: null
+  defaultUploadLocationSubpath: '{section.handle|title}/{slug}'
   localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
@@ -23,6 +23,17 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
   restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
   selectionLabel: null
   showSiteMenu: true
   showUnpermittedFiles: false
