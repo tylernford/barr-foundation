@@ -1,10 +1,10 @@
-columnSuffix: null
+columnSuffix: klvjuesq
 contentColumnType: text
-fieldGroup: d38d5b2f-c00b-46b1-a1b7-2e88f27d88de # Actions
-handle: contactEmail
+fieldGroup: b6fc45fa-5f55-4100-ab79-5b7379a538ec # Assets
+handle: assetId
 instructions: null
-name: 'Contact: Email'
-searchable: true
+name: 'Asset: ID'
+searchable: false
 settings:
   byteLimit: null
   charLimit: null
