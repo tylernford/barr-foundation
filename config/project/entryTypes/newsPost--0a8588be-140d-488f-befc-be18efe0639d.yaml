@@ -172,6 +172,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: a06fd4ab-835d-4487-ab3d-7db24b84ace8 # Text: Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ba86f98-b9cc-4cd6-941b-da94280470b8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
             instructions: null
             label: null
