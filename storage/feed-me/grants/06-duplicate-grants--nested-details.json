@@ -1,0 +1,3378 @@
+[
+    {
+        "Request Number": "5334",
+        "Docket Record Name": "5334 - Oxfam-America, Inc.",
+        "Organization Name": "Oxfam-America, Inc.",
+        "Grant Amount": "$350,000.00",
+        "grant_amount_number": "350,000.00",
+        "Amount (Fund-Coding)": "175,000.00",
+        "program_areas": "Former Global Program",
+        "strategies": "",
+        "Grant Purpose": "Artibonite Valley SRI Expansion Project",
+        "Award Date": "6/4/2014",
+        "grant_details": [
+            {
+                "Request Number": "5334--1",
+                "Amount (Fund-Coding)": "175,000.00",
+                "program_areas": "Former Global Program",
+                "strategies": ""
+            },
+            {
+                "Request Number": "5334--2",
+                "Amount (Fund-Coding)": "175,000.00",
+                "program_areas": "Former Global Program",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "5478",
+        "Docket Record Name": "5478 - Bessie Tartt Wilson Initiative for Children, Inc.",
+        "Organization Name": "Bessie Tartt Wilson Initiative for Children, Inc.",
+        "Grant Amount": "$250,000.00",
+        "grant_amount_number": "250,000.00",
+        "Amount (Fund-Coding)": "125,000.00",
+        "program_areas": "Education",
+        "strategies": "",
+        "Grant Purpose": "Strengthening Early Education and Care in Massachusetts",
+        "Award Date": "9/17/2014",
+        "grant_details": [
+            {
+                "Request Number": "5478--1",
+                "Amount (Fund-Coding)": "125,000.00",
+                "program_areas": "Education",
+                "strategies": ""
+            },
+            {
+                "Request Number": "5478--2",
+                "Amount (Fund-Coding)": "125,000.00",
+                "program_areas": "Education",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "5553",
+        "Docket Record Name": "5553 - Pathfinder International",
+        "Organization Name": "Pathfinder International",
+        "Grant Amount": "$800,000.00",
+        "grant_amount_number": "800,000.00",
+        "Amount (Fund-Coding)": "400,000.00",
+        "program_areas": "Former Global Program",
+        "strategies": "",
+        "Grant Purpose": "Population, Health, and the Environment Program in East Africa",
+        "Award Date": "9/17/2014",
+        "grant_details": [
+            {
+                "Request Number": "5553--1",
+                "Amount (Fund-Coding)": "400,000.00",
+                "program_areas": "Former Global Program",
+                "strategies": ""
+            },
+            {
+                "Request Number": "5553--2",
+                "Amount (Fund-Coding)": "400,000.00",
+                "program_areas": "Former Global Program",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "5747",
+        "Docket Record Name": "5747 - Innovation Network for Communities",
+        "Organization Name": "Innovation Network for Communities",
+        "Grant Amount": "$1,160,000.00",
+        "grant_amount_number": "1,160,000.00",
+        "Amount (Fund-Coding)": "580,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "Boston Green Ribbon Commission",
+        "Award Date": "3/2/2015",
+        "grant_details": [
+            {
+                "Request Number": "5747--1",
+                "Amount (Fund-Coding)": "580,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "5747--2",
+                "Amount (Fund-Coding)": "580,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "5755",
+        "Docket Record Name": "5755 - Smart Growth America",
+        "Organization Name": "Smart Growth America",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "190,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "its LOCUS program",
+        "Award Date": "3/2/2015",
+        "grant_details": [
+            {
+                "Request Number": "5755--1",
+                "Amount (Fund-Coding)": "190,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "5755--2",
+                "Amount (Fund-Coding)": "310,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "6027",
+        "Docket Record Name": "6027 - United Way of Massachusetts Bay and Merrimack Valley",
+        "Organization Name": "United Way of Massachusetts Bay and Merrimack Valley",
+        "Grant Amount": "$200,000.00",
+        "grant_amount_number": "200,000.00",
+        "Amount (Fund-Coding)": "100,000.00",
+        "program_areas": "Education",
+        "strategies": "",
+        "Grant Purpose": "To provide operating support as Thrive in 5 pursues its current school-readiness agenda and simultaneously determines its path going forward.",
+        "Award Date": "9/16/2015",
+        "grant_details": [
+            {
+                "Request Number": "6027--1",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Education",
+                "strategies": ""
+            },
+            {
+                "Request Number": "6027--2",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Education",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "6115",
+        "Docket Record Name": "6115 - Stand for Children Leadership Center",
+        "Organization Name": "Stand for Children Leadership Center",
+        "Grant Amount": "$400,000.00",
+        "grant_amount_number": "400,000.00",
+        "Amount (Fund-Coding)": "200,000.00",
+        "program_areas": "Education",
+        "strategies": "",
+        "Grant Purpose": "To provide core operating support for Stand for Children Massachusetts and its family engagement and organizing so that children have increased access to high-quality early and K-12 education",
+        "Award Date": "12/2/2015",
+        "grant_details": [
+            {
+                "Request Number": "6115--1",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Education",
+                "strategies": ""
+            },
+            {
+                "Request Number": "6115--2",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Education",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "6269",
+        "Docket Record Name": "6269 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$4,250,000.00",
+        "grant_amount_number": "4,250,000.00",
+        "Amount (Fund-Coding)": "3,187,500.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "to support mobility, clean energy, and climate resiliency planning within MAPC's region",
+        "Award Date": "3/2/2016",
+        "grant_details": [
+            {
+                "Request Number": "6269--1",
+                "Amount (Fund-Coding)": "3,187,500.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "6269--2",
+                "Amount (Fund-Coding)": "1,062,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "6656",
+        "Docket Record Name": "6656 - Innovation Network for Communities",
+        "Organization Name": "Innovation Network for Communities",
+        "Grant Amount": "$75,000.00",
+        "grant_amount_number": "75,000.00",
+        "Amount (Fund-Coding)": "37,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To provide supplemental support for the European climate innovations study trip focused on carbon neutrality and long-term climate resilience",
+        "Award Date": "8/2/2016",
+        "grant_details": [
+            {
+                "Request Number": "6656--1",
+                "Amount (Fund-Coding)": "37,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "6656--2",
+                "Amount (Fund-Coding)": "37,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "6662",
+        "Docket Record Name": "6662 - City of Boston",
+        "Organization Name": "City of Boston",
+        "Grant Amount": "$835,000.00",
+        "grant_amount_number": "835,000.00",
+        "Amount (Fund-Coding)": "417,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support community-level resilience projects as part of Climate Ready Boston Phase II",
+        "Award Date": "12/7/2016",
+        "grant_details": [
+            {
+                "Request Number": "6662--1",
+                "Amount (Fund-Coding)": "417,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "6662--2",
+                "Amount (Fund-Coding)": "417,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "6677",
+        "Docket Record Name": "6677 - Conservation Law Foundation, Inc.",
+        "Organization Name": "Conservation Law Foundation, Inc.",
+        "Grant Amount": "$1,200,000.00",
+        "grant_amount_number": "1,200,000.00",
+        "Amount (Fund-Coding)": "600,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "to support regional climate policy and practice",
+        "Award Date": "12/7/2016",
+        "grant_details": [
+            {
+                "Request Number": "6677--1",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "6677--2",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "6700",
+        "Docket Record Name": "6700 - Greater Boston Chamber of Commerce",
+        "Organization Name": "Greater Boston Chamber of Commerce",
+        "Grant Amount": "$75,000.00",
+        "grant_amount_number": "75,000.00",
+        "Amount (Fund-Coding)": "37,500.00",
+        "program_areas": "Sector Effectiveness",
+        "strategies": "Decision Making",
+        "Grant Purpose": "To support its Greater Boston Chamber of Commerce City Awake Delegates program for next-generation civic discourse and leadership",
+        "Award Date": "8/31/2016",
+        "grant_details": [
+            {
+                "Request Number": "6700--1",
+                "Amount (Fund-Coding)": "37,500.00",
+                "program_areas": "Sector Effectiveness",
+                "strategies": "Decision Making"
+            },
+            {
+                "Request Number": "6700--2",
+                "Amount (Fund-Coding)": "37,500.00",
+                "program_areas": "Sector Effectiveness",
+                "strategies": "Leadership"
+            }
+        ]
+    },
+    {
+        "Request Number": "16-01402",
+        "Docket Record Name": "16-01402 - Innovation Network for Communities",
+        "Organization Name": "Innovation Network for Communities",
+        "Grant Amount": "$1,400,000.00",
+        "grant_amount_number": "1,400,000.00",
+        "Amount (Fund-Coding)": "700,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support core operations of the Green Ribbon Commission and its working groups",
+        "Award Date": "3/8/2017",
+        "grant_details": [
+            {
+                "Request Number": "16-01402--1",
+                "Amount (Fund-Coding)": "700,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "16-01402--2",
+                "Amount (Fund-Coding)": "700,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "16-01431",
+        "Docket Record Name": "16-01431 - Environmental Grantmakers Association",
+        "Organization Name": "Environmental Grantmakers Association",
+        "Grant Amount": "$80,000.00",
+        "grant_amount_number": "80,000.00",
+        "Amount (Fund-Coding)": "40,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support the EGA Environmental Fellowship Program and the placement of four fellows in Barr grantee organizations",
+        "Award Date": "11/30/2016",
+        "grant_details": [
+            {
+                "Request Number": "16-01431--1",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "16-01431--2",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06412",
+        "Docket Record Name": "17-06412 - Union of Concerned Scientists, Inc.",
+        "Organization Name": "Union of Concerned Scientists, Inc.",
+        "Grant Amount": "$600,000.00",
+        "grant_amount_number": "600,000.00",
+        "Amount (Fund-Coding)": "300,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to support analysis, outreach, and policy education on climate change impacts",
+        "Award Date": "9/27/2017",
+        "grant_details": [
+            {
+                "Request Number": "17-06412--1",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "17-06412--2",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06436",
+        "Docket Record Name": "17-06436 - Greater Worcester Community Foundation, Inc.",
+        "Organization Name": "Greater Worcester Community Foundation, Inc.",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "125,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Spanning Sectors",
+        "Grant Purpose": "To support the Creative Arts Grant and Community Convening Initiative",
+        "Award Date": "12/5/2017",
+        "grant_details": [
+            {
+                "Request Number": "17-06436--1",
+                "Amount (Fund-Coding)": "125,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Spanning Sectors"
+            },
+            {
+                "Request Number": "17-06436--2",
+                "Amount (Fund-Coding)": "375,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06438",
+        "Docket Record Name": "17-06438 - Community Foundation of Southeastern Massachusetts, Inc.",
+        "Organization Name": "Community Foundation of Southeastern Massachusetts, Inc.",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "200,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Spanning Sectors",
+        "Grant Purpose": "To support the Arts, Culture, and Creativity: What's Next? Initiative",
+        "Award Date": "12/5/2017",
+        "grant_details": [
+            {
+                "Request Number": "17-06438--1",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Spanning Sectors"
+            },
+            {
+                "Request Number": "17-06438--2",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06439",
+        "Docket Record Name": "17-06439 - Essex County Community Foundation, Inc.",
+        "Organization Name": "Essex County Community Foundation, Inc.",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "150,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Adapting Boldly",
+        "Grant Purpose": "To support the Creative County Initiative",
+        "Award Date": "12/5/2017",
+        "grant_details": [
+            {
+                "Request Number": "17-06439--1",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            },
+            {
+                "Request Number": "17-06439--2",
+                "Amount (Fund-Coding)": "350,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Spanning Sectors"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06440",
+        "Docket Record Name": "17-06440 - The Berkshire Taconic Community Foundation, Inc.",
+        "Organization Name": "The Berkshire Taconic Community Foundation, Inc.",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "150,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Spanning Sectors",
+        "Grant Purpose": "To pilot the Berkshire Arts and Creativity Initiative to increase access to the arts for Berkshire County residents",
+        "Award Date": "12/5/2017",
+        "grant_details": [
+            {
+                "Request Number": "17-06440--1",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Spanning Sectors"
+            },
+            {
+                "Request Number": "17-06440--2",
+                "Amount (Fund-Coding)": "350,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06451",
+        "Docket Record Name": "17-06451 - The Trust for Public Land",
+        "Organization Name": "The Trust for Public Land",
+        "Grant Amount": "$290,000.00",
+        "grant_amount_number": "290,000.00",
+        "Amount (Fund-Coding)": "145,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support green infrastructure in the Metro Mayors?\u00c4\u00f4 Coalition region",
+        "Award Date": "8/1/2017",
+        "grant_details": [
+            {
+                "Request Number": "17-06451--1",
+                "Amount (Fund-Coding)": "145,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "17-06451--2",
+                "Amount (Fund-Coding)": "145,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06627",
+        "Docket Record Name": "17-06627 - Environmental Grantmakers Association",
+        "Organization Name": "Environmental Grantmakers Association",
+        "Grant Amount": "$80,000.00",
+        "grant_amount_number": "80,000.00",
+        "Amount (Fund-Coding)": "40,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support the EGA Environmental Fellows Program and the placement of four fellows in Barr grantee organizations",
+        "Award Date": "11/21/2017",
+        "grant_details": [
+            {
+                "Request Number": "17-06627--1",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "17-06627--2",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "17-06661",
+        "Docket Record Name": "17-06661 - Boston Harbor Now, Inc.",
+        "Organization Name": "Boston Harbor Now, Inc.",
+        "Grant Amount": "$900,000.00",
+        "grant_amount_number": "900,000.00",
+        "Amount (Fund-Coding)": "270,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To provide core support",
+        "Award Date": "3/22/2018",
+        "grant_details": [
+            {
+                "Request Number": "17-06661--1",
+                "Amount (Fund-Coding)": "270,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "17-06661--2",
+                "Amount (Fund-Coding)": "630,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Waterfront Initiative"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-06891",
+        "Docket Record Name": "18-06891 - Enterprise Community Partners, Inc.",
+        "Organization Name": "Enterprise Community Partners, Inc.",
+        "Grant Amount": "$1,050,000.00",
+        "grant_amount_number": "1,050,000.00",
+        "Amount (Fund-Coding)": "525,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to support the design of equitable, sustainable, and connected communities and the placement of Rose Fellows",
+        "Award Date": "6/20/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-06891--1",
+                "Amount (Fund-Coding)": "525,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-06891--2",
+                "Amount (Fund-Coding)": "525,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-06967",
+        "Docket Record Name": "18-06967 - Alternatives for Community and Environment, Inc.",
+        "Organization Name": "Alternatives for Community and Environment, Inc.",
+        "Grant Amount": "$225,000.00",
+        "grant_amount_number": "225,000.00",
+        "Amount (Fund-Coding)": "112,500.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "to provide general operating and capacity-building support",
+        "Award Date": "9/19/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-06967--1",
+                "Amount (Fund-Coding)": "112,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "18-06967--2",
+                "Amount (Fund-Coding)": "112,500.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-06968",
+        "Docket Record Name": "18-06968 - The Hideo Sasaki Foundation",
+        "Organization Name": "The Hideo Sasaki Foundation",
+        "Grant Amount": "$55,000.00",
+        "grant_amount_number": "55,000.00",
+        "Amount (Fund-Coding)": "18,700.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to support strategic planning and workplan development for mobility and resilience",
+        "Award Date": "4/27/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-06968--1",
+                "Amount (Fund-Coding)": "18,700.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-06968--2",
+                "Amount (Fund-Coding)": "36,300.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-06969",
+        "Docket Record Name": "18-06969 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$2,000,000.00",
+        "grant_amount_number": "2,000,000.00",
+        "Amount (Fund-Coding)": "1,000,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To develop a long-range regional plan for the MAPC region",
+        "Award Date": "9/19/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-06969--1",
+                "Amount (Fund-Coding)": "1,000,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-06969--2",
+                "Amount (Fund-Coding)": "1,000,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07078",
+        "Docket Record Name": "18-07078 - The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Organization Name": "The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Grant Amount": "$1,200,000.00",
+        "grant_amount_number": "1,200,000.00",
+        "Amount (Fund-Coding)": "240,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To advance transit-oriented development in Gateway Cities",
+        "Award Date": "9/19/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-07078--1",
+                "Amount (Fund-Coding)": "240,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-07078--2",
+                "Amount (Fund-Coding)": "960,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07089",
+        "Docket Record Name": "18-07089 - Health Care Without Harm",
+        "Organization Name": "Health Care Without Harm",
+        "Grant Amount": "$900,000.00",
+        "grant_amount_number": "900,000.00",
+        "Amount (Fund-Coding)": "360,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to support Massachusetts health care sector leadership on climate action",
+        "Award Date": "12/4/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-07089--1",
+                "Amount (Fund-Coding)": "360,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-07089--2",
+                "Amount (Fund-Coding)": "540,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07093",
+        "Docket Record Name": "18-07093 - Environmental Grantmakers Association",
+        "Organization Name": "Environmental Grantmakers Association",
+        "Grant Amount": "$160,000.00",
+        "grant_amount_number": "160,000.00",
+        "Amount (Fund-Coding)": "80,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "to support the Environmental Fellows Program evaluation and alumni engagement efforts",
+        "Award Date": "10/31/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-07093--1",
+                "Amount (Fund-Coding)": "80,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "18-07093--2",
+                "Amount (Fund-Coding)": "80,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07101",
+        "Docket Record Name": "18-07101 - City of Boston",
+        "Organization Name": "City of Boston",
+        "Grant Amount": "$25,000.00",
+        "grant_amount_number": "25,000.00",
+        "Amount (Fund-Coding)": "12,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to provide additional support for scope expansion related to district resilience in South Boston/Fort Point",
+        "Award Date": "4/27/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-07101--1",
+                "Amount (Fund-Coding)": "12,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-07101--2",
+                "Amount (Fund-Coding)": "12,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07198",
+        "Docket Record Name": "18-07198 - Conservation Law Foundation, Inc.",
+        "Organization Name": "Conservation Law Foundation, Inc.",
+        "Grant Amount": "$2,400,000.00",
+        "grant_amount_number": "2,400,000.00",
+        "Amount (Fund-Coding)": "1,200,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To inform climate policies and practices in the region",
+        "Award Date": "9/19/2018",
+        "grant_details": [
+            {
+                "Request Number": "18-07198--1",
+                "Amount (Fund-Coding)": "1,200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "18-07198--2",
+                "Amount (Fund-Coding)": "1,200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07490",
+        "Docket Record Name": "18-07490 - Clean Energy Group, Inc.",
+        "Organization Name": "Clean Energy Group, Inc.",
+        "Grant Amount": "$300,000.00",
+        "grant_amount_number": "300,000.00",
+        "Amount (Fund-Coding)": "210,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support energy storage deployment in Massachusetts and collaborative efforts in the region",
+        "Award Date": "2/28/2019",
+        "grant_details": [
+            {
+                "Request Number": "18-07490--1",
+                "Amount (Fund-Coding)": "210,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "18-07490--2",
+                "Amount (Fund-Coding)": "90,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07494",
+        "Docket Record Name": "18-07494 - Innovation Network for Communities",
+        "Organization Name": "Innovation Network for Communities",
+        "Grant Amount": "$725,000.00",
+        "grant_amount_number": "725,000.00",
+        "Amount (Fund-Coding)": "362,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support core operations of the Green Ribbon Commission and its working groups",
+        "Award Date": "3/27/2019",
+        "grant_details": [
+            {
+                "Request Number": "18-07494--1",
+                "Amount (Fund-Coding)": "362,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-07494--2",
+                "Amount (Fund-Coding)": "362,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07498",
+        "Docket Record Name": "18-07498 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$3,000,000.00",
+        "grant_amount_number": "3,000,000.00",
+        "Amount (Fund-Coding)": "600,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to support mobility, clean energy, and climate resiliency planning",
+        "Award Date": "3/27/2019",
+        "grant_details": [
+            {
+                "Request Number": "18-07498--1",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-07498--2",
+                "Amount (Fund-Coding)": "900,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "18-07498--3",
+                "Amount (Fund-Coding)": "1,500,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07511",
+        "Docket Record Name": "18-07511 - The Trust for Public Land",
+        "Organization Name": "The Trust for Public Land",
+        "Grant Amount": "$450,000.00",
+        "grant_amount_number": "450,000.00",
+        "Amount (Fund-Coding)": "25,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support education, engagement, and training to expand green infrastructure solutions in Metro Boston",
+        "Award Date": "8/29/2019",
+        "grant_details": [
+            {
+                "Request Number": "18-07511--1",
+                "Amount (Fund-Coding)": "25,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "18-07511--2",
+                "Amount (Fund-Coding)": "425,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07590",
+        "Docket Record Name": "18-07590 - Community Labor United, Inc.",
+        "Organization Name": "Community Labor United, Inc.",
+        "Grant Amount": "$750,000.00",
+        "grant_amount_number": "750,000.00",
+        "Amount (Fund-Coding)": "150,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support and coordinate the Green Justice Coalition?\u00c4\u00f4s Boston and statewide clean energy efforts",
+        "Award Date": "9/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "18-07590--1",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "18-07590--2",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "18-07605",
+        "Docket Record Name": "18-07605 - Alternatives for Community and Environment, Inc.",
+        "Organization Name": "Alternatives for Community and Environment, Inc.",
+        "Grant Amount": "$600,000.00",
+        "grant_amount_number": "600,000.00",
+        "Amount (Fund-Coding)": "300,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "to provide clean energy and mobility program support",
+        "Award Date": "6/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "18-07605--1",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "18-07605--2",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07732",
+        "Docket Record Name": "19-07732 - Greater Worcester Community Foundation, Inc.",
+        "Organization Name": "Greater Worcester Community Foundation, Inc.",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "500,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Activating Public Support",
+        "Grant Purpose": "To support grantmaking, capacity-building activities, donor cultivation, and implementation of Worcester?\u00c4\u00f4s Cultural Plan, including serving as lead coordinator of the annual public plan review process",
+        "Award Date": "9/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07732--1",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Activating Public Support"
+            },
+            {
+                "Request Number": "19-07732--2",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07733",
+        "Docket Record Name": "19-07733 - The Berkshire Taconic Community Foundation, Inc.",
+        "Organization Name": "The Berkshire Taconic Community Foundation, Inc.",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "500,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Activating Public Support",
+        "Grant Purpose": "To support quick-turnaround grantmaking, nonprofit capacity and network building, donor engagement, and evaluation to increase community connection and civic engagement through arts participation",
+        "Award Date": "9/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07733--1",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Activating Public Support"
+            },
+            {
+                "Request Number": "19-07733--2",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07734",
+        "Docket Record Name": "19-07734 - Essex County Community Foundation, Inc.",
+        "Organization Name": "Essex County Community Foundation, Inc.",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "500,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Activating Public Support",
+        "Grant Purpose": "To support cross-sector grantmaking, municipal and regional cultural planning efforts, training, and community convenings on emergent arts topics",
+        "Award Date": "9/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07734--1",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Activating Public Support"
+            },
+            {
+                "Request Number": "19-07734--2",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07737",
+        "Docket Record Name": "19-07737 - Community Foundation of Western Massachusetts",
+        "Organization Name": "Community Foundation of Western Massachusetts",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "500,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Activating Public Support",
+        "Grant Purpose": "To implement the ValleyCreates Initiative, which will promote better connections among artists and arts organizations through collaborative grantmaking, organizational effectiveness training, and strategies to promote diversity, equity, and inclusion (DEI)",
+        "Award Date": "9/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07737--1",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Activating Public Support"
+            },
+            {
+                "Request Number": "19-07737--2",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07739",
+        "Docket Record Name": "19-07739 - SouthCoast Community Foundation, Inc.",
+        "Organization Name": "SouthCoast Community Foundation, Inc.",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "500,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Adapting Boldly",
+        "Grant Purpose": "To support capacity building for small, culturally diverse/immigrant cultural organizations, and strengthen the foundation's own capacity in equity strategies, marketing, and donor relations",
+        "Award Date": "9/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07739--1",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Adapting Boldly"
+            },
+            {
+                "Request Number": "19-07739--2",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Activating Public Support"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07764",
+        "Docket Record Name": "19-07764 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$700,000.00",
+        "grant_amount_number": "700,000.00",
+        "Amount (Fund-Coding)": "470,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support climate resilience, greenways and waterfront activities",
+        "Award Date": "6/18/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07764--1",
+                "Amount (Fund-Coding)": "470,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "19-07764--2",
+                "Amount (Fund-Coding)": "230,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Waterfront Initiative"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07898",
+        "Docket Record Name": "19-07898 - Solutions Journalism Network, Inc.",
+        "Organization Name": "Solutions Journalism Network, Inc.",
+        "Grant Amount": "$120,000.00",
+        "grant_amount_number": "120,000.00",
+        "Amount (Fund-Coding)": "30,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To conduct a community and news media audit, pilot solutions journalism projects, and develop a plan for the next phase",
+        "Award Date": "7/1/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07898--1",
+                "Amount (Fund-Coding)": "30,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "19-07898--2",
+                "Amount (Fund-Coding)": "30,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "19-07898--3",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Education",
+                "strategies": "Build Public Will"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07928",
+        "Docket Record Name": "19-07928 - Smart Growth America",
+        "Organization Name": "Smart Growth America",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "750,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To inform transportation and smart growth policy at national, state, and local levels",
+        "Award Date": "12/4/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07928--1",
+                "Amount (Fund-Coding)": "750,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "19-07928--2",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-07931",
+        "Docket Record Name": "19-07931 - University of Massachusetts Foundation, Inc.",
+        "Organization Name": "University of Massachusetts Foundation, Inc.",
+        "Grant Amount": "$290,000.00",
+        "grant_amount_number": "290,000.00",
+        "Amount (Fund-Coding)": "260,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support Massachusetts business leaders?\u00c4\u00f4 participation in a series of convenings accompanied by a study trip to northern Europe that will increase their understanding of and ability to communicate with other stakeholders about the economic benefits of clean energy and resilience",
+        "Award Date": "10/1/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-07931--1",
+                "Amount (Fund-Coding)": "260,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "19-07931--2",
+                "Amount (Fund-Coding)": "30,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-08198",
+        "Docket Record Name": "19-08198 - Neighbor to Neighbor Massachusetts Education Fund, Inc.",
+        "Organization Name": "Neighbor to Neighbor Massachusetts Education Fund, Inc.",
+        "Grant Amount": "$190,000.00",
+        "grant_amount_number": "190,000.00",
+        "Amount (Fund-Coding)": "125,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To develop a Clean Energy Transition Plan for Holyoke that centers community leadership",
+        "Award Date": "12/3/2019",
+        "grant_details": [
+            {
+                "Request Number": "19-08198--1",
+                "Amount (Fund-Coding)": "125,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "19-08198--2",
+                "Amount (Fund-Coding)": "65,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-08295",
+        "Docket Record Name": "19-08295 - YouthBuild USA, Inc.",
+        "Organization Name": "YouthBuild USA, Inc.",
+        "Grant Amount": "$150,000.00",
+        "grant_amount_number": "150,000.00",
+        "Amount (Fund-Coding)": "100,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support youth grassroots efforts on climate, clean energy, and transit in Massachusetts",
+        "Award Date": "1/29/2020",
+        "grant_details": [
+            {
+                "Request Number": "19-08295--1",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "19-08295--2",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-08401",
+        "Docket Record Name": "19-08401 - Innovation Network for Communities",
+        "Organization Name": "Innovation Network for Communities",
+        "Grant Amount": "$900,000.00",
+        "grant_amount_number": "900,000.00",
+        "Amount (Fund-Coding)": "450,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support core operations of the Green Ribbon Commission and its working groups",
+        "Award Date": "3/25/2020",
+        "grant_details": [
+            {
+                "Request Number": "19-08401--1",
+                "Amount (Fund-Coding)": "450,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "19-08401--2",
+                "Amount (Fund-Coding)": "450,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-08434",
+        "Docket Record Name": "19-08434 - Boston Harbor Now, Inc.",
+        "Organization Name": "Boston Harbor Now, Inc.",
+        "Grant Amount": "$1,250,000.00",
+        "grant_amount_number": "1,250,000.00",
+        "Amount (Fund-Coding)": "300,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to provide core support",
+        "Award Date": "3/25/2020",
+        "grant_details": [
+            {
+                "Request Number": "19-08434--1",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "19-08434--2",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "19-08434--3",
+                "Amount (Fund-Coding)": "890,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Waterfront Initiative"
+            }
+        ]
+    },
+    {
+        "Request Number": "19-08473",
+        "Docket Record Name": "19-08473 - Next Generation Learning Challenges",
+        "Organization Name": "Next Generation Learning Challenges",
+        "Grant Amount": "$1,900,000.00",
+        "grant_amount_number": "1,900,000.00",
+        "Amount (Fund-Coding)": "1,000,000.00",
+        "program_areas": "Education",
+        "strategies": "Catalyze New Models",
+        "Grant Purpose": "to support New England learning excursions to exemplary school models",
+        "Award Date": "3/26/2020",
+        "grant_details": [
+            {
+                "Request Number": "19-08473--1",
+                "Amount (Fund-Coding)": "1,000,000.00",
+                "program_areas": "Education",
+                "strategies": "Catalyze New Models"
+            },
+            {
+                "Request Number": "19-08473--2",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Education",
+                "strategies": "Invest in Educators"
+            },
+            {
+                "Request Number": "19-08473--3",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Education",
+                "strategies": "Build Public Will"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-08490",
+        "Docket Record Name": "20-08490 - The Years Project, Inc.",
+        "Organization Name": "The Years Project, Inc.",
+        "Grant Amount": "$450,000.00",
+        "grant_amount_number": "450,000.00",
+        "Amount (Fund-Coding)": "225,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To provide general support for Years of Living Dangerously",
+        "Award Date": "6/30/2020",
+        "grant_details": [
+            {
+                "Request Number": "20-08490--1",
+                "Amount (Fund-Coding)": "225,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "20-08490--2",
+                "Amount (Fund-Coding)": "225,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-08529",
+        "Docket Record Name": "20-08529 - The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Organization Name": "The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Grant Amount": "$470,000.00",
+        "grant_amount_number": "470,000.00",
+        "Amount (Fund-Coding)": "420,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support polling and focus groups for mobility and climate",
+        "Award Date": "3/31/2020",
+        "grant_details": [
+            {
+                "Request Number": "20-08529--1",
+                "Amount (Fund-Coding)": "420,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "20-08529--2",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-08675",
+        "Docket Record Name": "20-08675 - New World Foundation",
+        "Organization Name": "New World Foundation",
+        "Grant Amount": "$170,000.00",
+        "grant_amount_number": "170,000.00",
+        "Amount (Fund-Coding)": "127,500.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support stabilizing environmental justice and equity-focused organizations impacted by COVID-19",
+        "Award Date": "4/30/2020",
+        "grant_details": [
+            {
+                "Request Number": "20-08675--1",
+                "Amount (Fund-Coding)": "127,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "20-08675--2",
+                "Amount (Fund-Coding)": "21,250.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "20-08675--3",
+                "Amount (Fund-Coding)": "21,250.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-08778",
+        "Docket Record Name": "20-08778 - Boston Foundation, Inc.",
+        "Organization Name": "Boston Foundation, Inc.",
+        "Grant Amount": "$50,000.00",
+        "grant_amount_number": "50,000.00",
+        "Amount (Fund-Coding)": "10,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "to support mobility and other related research for the COVID Community Data Lab",
+        "Award Date": "6/30/2020",
+        "grant_details": [
+            {
+                "Request Number": "20-08778--1",
+                "Amount (Fund-Coding)": "10,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "20-08778--2",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-08799",
+        "Docket Record Name": "20-08799 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$350,000.00",
+        "grant_amount_number": "350,000.00",
+        "Amount (Fund-Coding)": "210,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to jointly manage an Extreme Heat Task Force to implement COVID-safe cooling strategies in the most COVID-impacted communities of Greater Boston",
+        "Award Date": "6/30/2020",
+        "grant_details": [
+            {
+                "Request Number": "20-08799--1",
+                "Amount (Fund-Coding)": "210,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "20-08799--2",
+                "Amount (Fund-Coding)": "140,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-08802",
+        "Docket Record Name": "20-08802 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$350,000.00",
+        "grant_amount_number": "350,000.00",
+        "Amount (Fund-Coding)": "140,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "to jointly manage an Extreme Heat Task Force to implement COVID-safe cooling strategies in the most COVID-impacted communities of Greater Boston",
+        "Award Date": "6/30/2020",
+        "grant_details": [
+            {
+                "Request Number": "20-08802--1",
+                "Amount (Fund-Coding)": "140,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "20-08802--2",
+                "Amount (Fund-Coding)": "210,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-08914",
+        "Docket Record Name": "20-08914 - University of Washington Foundation",
+        "Organization Name": "University of Washington Foundation",
+        "Grant Amount": "$740,000.00",
+        "grant_amount_number": "740,000.00",
+        "Amount (Fund-Coding)": "390,000.00",
+        "program_areas": "Education",
+        "strategies": "Catalyze New Models",
+        "Grant Purpose": "To support the University of Washington's CRPE project to conduct and coordinate research on the impact of COVID-19 on New England public high schools",
+        "Award Date": "9/29/2020",
+        "grant_details": [
+            {
+                "Request Number": "20-08914--1",
+                "Amount (Fund-Coding)": "390,000.00",
+                "program_areas": "Education",
+                "strategies": "Catalyze New Models"
+            },
+            {
+                "Request Number": "20-08914--2",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Education",
+                "strategies": "Invest in Educators"
+            },
+            {
+                "Request Number": "20-08914--3",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Education",
+                "strategies": "Build Public Will"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-09024",
+        "Docket Record Name": "20-09024 - TransitMatters, Inc.",
+        "Organization Name": "TransitMatters, Inc.",
+        "Grant Amount": "$600,000.00",
+        "grant_amount_number": "600,000.00",
+        "Amount (Fund-Coding)": "50,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To provide support for its TransitMatters program",
+        "Award Date": "3/31/2021",
+        "grant_details": [
+            {
+                "Request Number": "20-09024--1",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "20-09024--2",
+                "Amount (Fund-Coding)": "550,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-09030",
+        "Docket Record Name": "20-09030 - Sierra Club Foundation",
+        "Organization Name": "Sierra Club Foundation",
+        "Grant Amount": "$160,000.00",
+        "grant_amount_number": "160,000.00",
+        "Amount (Fund-Coding)": "10,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support grass roots efforts to advance equitable clean energy policies in Massachusetts",
+        "Award Date": "1/27/2021",
+        "grant_details": [
+            {
+                "Request Number": "20-09030--1",
+                "Amount (Fund-Coding)": "10,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "20-09030--2",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-09033",
+        "Docket Record Name": "20-09033 - Clean Energy Group, Inc.",
+        "Organization Name": "Clean Energy Group, Inc.",
+        "Grant Amount": "$300,000.00",
+        "grant_amount_number": "300,000.00",
+        "Amount (Fund-Coding)": "90,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support equitable deployment of energy storage in New England",
+        "Award Date": "2/24/2021",
+        "grant_details": [
+            {
+                "Request Number": "20-09033--1",
+                "Amount (Fund-Coding)": "90,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "20-09033--2",
+                "Amount (Fund-Coding)": "210,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "20-09040",
+        "Docket Record Name": "20-09040 - NECEC Institute, Inc.",
+        "Organization Name": "NECEC Institute, Inc.",
+        "Grant Amount": "$270,000.00",
+        "grant_amount_number": "270,000.00",
+        "Amount (Fund-Coding)": "250,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To expand clean energy in New England by informing policy and regulatory development",
+        "Award Date": "3/31/2021",
+        "grant_details": [
+            {
+                "Request Number": "20-09040--1",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "20-09040--2",
+                "Amount (Fund-Coding)": "20,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "20-09111",
+        "Docket Record Name": "20-09111 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$400,000.00",
+        "grant_amount_number": "400,000.00",
+        "Amount (Fund-Coding)": "200,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support COVID-safe strategies for protecting communities from extreme weather",
+        "Award Date": "2/24/2021",
+        "grant_details": [
+            {
+                "Request Number": "20-09111--1",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "20-09111--2",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09201",
+        "Docket Record Name": "21-09201 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$400,000.00",
+        "grant_amount_number": "400,000.00",
+        "Amount (Fund-Coding)": "200,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support COVID-safe strategies for protecting communities from extreme weather",
+        "Award Date": "2/24/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09201--1",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09201--2",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09217",
+        "Docket Record Name": "21-09217 - Design Studio for Social Intervention",
+        "Organization Name": "Design Studio for Social Intervention",
+        "Grant Amount": "$270,000.00",
+        "grant_amount_number": "270,000.00",
+        "Amount (Fund-Coding)": "135,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Spanning Sectors",
+        "Grant Purpose": "To provide strategic planning and core support for its Design Studio for Social Intervention program",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09217--1",
+                "Amount (Fund-Coding)": "135,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Spanning Sectors"
+            },
+            {
+                "Request Number": "21-09217--2",
+                "Amount (Fund-Coding)": "135,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09234",
+        "Docket Record Name": "21-09234 - Livable Streets Transportation Alliance of Boston, Inc.",
+        "Organization Name": "Livable Streets Transportation Alliance of Boston, Inc.",
+        "Grant Amount": "$900,000.00",
+        "grant_amount_number": "900,000.00",
+        "Amount (Fund-Coding)": "630,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "5/19/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09234--1",
+                "Amount (Fund-Coding)": "630,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09234--2",
+                "Amount (Fund-Coding)": "270,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09235",
+        "Docket Record Name": "21-09235 - Community Labor United, Inc.",
+        "Organization Name": "Community Labor United, Inc.",
+        "Grant Amount": "$550,000.00",
+        "grant_amount_number": "550,000.00",
+        "Amount (Fund-Coding)": "50,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09235--1",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "21-09235--2",
+                "Amount (Fund-Coding)": "750,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09276",
+        "Docket Record Name": "21-09276 - Allston Brighton Health Collaborative",
+        "Organization Name": "Allston Brighton Health Collaborative",
+        "Grant Amount": "$60,000.00",
+        "grant_amount_number": "60,000.00",
+        "Amount (Fund-Coding)": "40,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support the Allston Brighton Health Collaborative's transportation advocacy and community engagement",
+        "Award Date": "5/19/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09276--1",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09276--2",
+                "Amount (Fund-Coding)": "10,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09276--3",
+                "Amount (Fund-Coding)": "10,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09284",
+        "Docket Record Name": "21-09284 - Innovation Network for Communities",
+        "Organization Name": "Innovation Network for Communities",
+        "Grant Amount": "$100,000.00",
+        "grant_amount_number": "100,000.00",
+        "Amount (Fund-Coding)": "80,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To create a climate justice plan for the Green Ribbon Commission",
+        "Award Date": "4/27/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09284--1",
+                "Amount (Fund-Coding)": "80,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09284--2",
+                "Amount (Fund-Coding)": "20,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09322",
+        "Docket Record Name": "21-09322 - Neighbor to Neighbor Massachusetts Education Fund, Inc.",
+        "Organization Name": "Neighbor to Neighbor Massachusetts Education Fund, Inc.",
+        "Grant Amount": "$700,000.00",
+        "grant_amount_number": "700,000.00",
+        "Amount (Fund-Coding)": "325,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09322--1",
+                "Amount (Fund-Coding)": "325,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09322--2",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09322--3",
+                "Amount (Fund-Coding)": "125,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09327",
+        "Docket Record Name": "21-09327 - Enterprise Community Partners, Inc.",
+        "Organization Name": "Enterprise Community Partners, Inc.",
+        "Grant Amount": "$310,000.00",
+        "grant_amount_number": "310,000.00",
+        "Amount (Fund-Coding)": "50,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support the Rose Fellowship Program and Spatial Justice Exhibit",
+        "Award Date": "7/28/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09327--1",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09327--2",
+                "Amount (Fund-Coding)": "240,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09327--3",
+                "Amount (Fund-Coding)": "20,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09342",
+        "Docket Record Name": "21-09342 - Conservation Law Foundation, Inc.",
+        "Organization Name": "Conservation Law Foundation, Inc.",
+        "Grant Amount": "$2,650,000.00",
+        "grant_amount_number": "2,650,000.00",
+        "Amount (Fund-Coding)": "250,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "9/15/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09342--1",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09342--2",
+                "Amount (Fund-Coding)": "1,200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09342--3",
+                "Amount (Fund-Coding)": "1,200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09343",
+        "Docket Record Name": "21-09343 - Alliance for Business Leadership, Inc.",
+        "Organization Name": "Alliance for Business Leadership, Inc.",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "52,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "11/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09343--1",
+                "Amount (Fund-Coding)": "52,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09343--2",
+                "Amount (Fund-Coding)": "292,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09343--3",
+                "Amount (Fund-Coding)": "156,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09344",
+        "Docket Record Name": "21-09344 - Health Care Without Harm",
+        "Organization Name": "Health Care Without Harm",
+        "Grant Amount": "$900,000.00",
+        "grant_amount_number": "900,000.00",
+        "Amount (Fund-Coding)": "360,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support Massachusetts health care sector leadership on climate action",
+        "Award Date": "11/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09344--1",
+                "Amount (Fund-Coding)": "360,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09344--2",
+                "Amount (Fund-Coding)": "540,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09350",
+        "Docket Record Name": "21-09350 - The Funders Network, Inc.",
+        "Organization Name": "The Funders Network, Inc.",
+        "Grant Amount": "$65,000.00",
+        "grant_amount_number": "65,000.00",
+        "Amount (Fund-Coding)": "25,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support the Mobility and Access Collaborative and TFN?\u00c4\u00f4s racial equity action plan",
+        "Award Date": "7/27/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09350--1",
+                "Amount (Fund-Coding)": "25,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09350--2",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09351",
+        "Docket Record Name": "21-09351 - The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Organization Name": "The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Grant Amount": "$750,000.00",
+        "grant_amount_number": "750,000.00",
+        "Amount (Fund-Coding)": "350,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support equitable, low-carbon Gateway City hubs",
+        "Award Date": "9/29/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09351--1",
+                "Amount (Fund-Coding)": "350,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09351--2",
+                "Amount (Fund-Coding)": "400,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09360",
+        "Docket Record Name": "21-09360 - Chinatown People Progressive Association, Inc. d/b/a Chinese Progress",
+        "Organization Name": "Chinatown People Progressive Association, Inc. d/b/a Chinese Progress",
+        "Grant Amount": "$200,000.00",
+        "grant_amount_number": "200,000.00",
+        "Amount (Fund-Coding)": "50,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09360--1",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "21-09360--2",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09361",
+        "Docket Record Name": "21-09361 - Coalition for Social Justice-Education Fund Inc.",
+        "Organization Name": "Coalition for Social Justice-Education Fund Inc.",
+        "Grant Amount": "$200,000.00",
+        "grant_amount_number": "200,000.00",
+        "Amount (Fund-Coding)": "50,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09361--1",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "21-09361--2",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09362",
+        "Docket Record Name": "21-09362 - GreenRoots, Inc.",
+        "Organization Name": "GreenRoots, Inc.",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "125,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09362--1",
+                "Amount (Fund-Coding)": "125,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09362--2",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09362--3",
+                "Amount (Fund-Coding)": "125,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09363",
+        "Docket Record Name": "21-09363 - Massachusetts Senior Action Council, Inc.",
+        "Organization Name": "Massachusetts Senior Action Council, Inc.",
+        "Grant Amount": "$200,000.00",
+        "grant_amount_number": "200,000.00",
+        "Amount (Fund-Coding)": "150,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09363--1",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09363--2",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09371",
+        "Docket Record Name": "21-09371 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$950,000.00",
+        "grant_amount_number": "950,000.00",
+        "Amount (Fund-Coding)": "636,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support climate resilience, greenways, and waterfront activities",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09371--1",
+                "Amount (Fund-Coding)": "636,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09371--2",
+                "Amount (Fund-Coding)": "313,500.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Waterfront Initiative"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09530",
+        "Docket Record Name": "21-09530 - Franklin W. Olin College of Engineering, Inc.",
+        "Organization Name": "Franklin W. Olin College of Engineering, Inc.",
+        "Grant Amount": "$715,000.00",
+        "grant_amount_number": "715,000.00",
+        "Amount (Fund-Coding)": "115,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support community-driven air pollution reduction in Roxbury",
+        "Award Date": "7/28/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09530--1",
+                "Amount (Fund-Coding)": "115,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "21-09530--2",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09530--3",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09541",
+        "Docket Record Name": "21-09541 - Boston Foundation, Inc.",
+        "Organization Name": "Boston Foundation, Inc.",
+        "Grant Amount": "$50,000.00",
+        "grant_amount_number": "50,000.00",
+        "Amount (Fund-Coding)": "10,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support mobility and other related research for the COVID Community Data Lab",
+        "Award Date": "7/27/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09541--1",
+                "Amount (Fund-Coding)": "10,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "21-09541--2",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09706",
+        "Docket Record Name": "21-09706 - New World Foundation",
+        "Organization Name": "New World Foundation",
+        "Grant Amount": "$450,000.00",
+        "grant_amount_number": "450,000.00",
+        "Amount (Fund-Coding)": "404,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support equitable climate and clean energy grassroots efforts in Massachusetts",
+        "Award Date": "11/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-09706--1",
+                "Amount (Fund-Coding)": "404,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "21-09706--2",
+                "Amount (Fund-Coding)": "46,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09773",
+        "Docket Record Name": "21-09773 - Alternatives for Community and Environment, Inc.",
+        "Organization Name": "Alternatives for Community and Environment, Inc.",
+        "Grant Amount": "$1,800,000.00",
+        "grant_amount_number": "1,800,000.00",
+        "Amount (Fund-Coding)": "600,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "3/9/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09773--1",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09773--2",
+                "Amount (Fund-Coding)": "1,000,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09773--3",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09775",
+        "Docket Record Name": "21-09775 - Streetsblog MASS",
+        "Organization Name": "Streetsblog MASS",
+        "Grant Amount": "$180,000.00",
+        "grant_amount_number": "180,000.00",
+        "Amount (Fund-Coding)": "120,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support Streetsblog MASS",
+        "Award Date": "2/1/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09775--1",
+                "Amount (Fund-Coding)": "120,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09775--2",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09776",
+        "Docket Record Name": "21-09776 - Better Future Project, Inc.",
+        "Organization Name": "Better Future Project, Inc.",
+        "Grant Amount": "$360,000.00",
+        "grant_amount_number": "360,000.00",
+        "Amount (Fund-Coding)": "240,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To provide program support to build grassroots leadership to advance clean energy and climate resilience",
+        "Award Date": "1/4/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09776--1",
+                "Amount (Fund-Coding)": "240,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09776--2",
+                "Amount (Fund-Coding)": "120,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09778",
+        "Docket Record Name": "21-09778 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$3,000,000.00",
+        "grant_amount_number": "3,000,000.00",
+        "Amount (Fund-Coding)": "900,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support mobility, clean energy, and climate resiliency planning",
+        "Award Date": "3/9/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09778--1",
+                "Amount (Fund-Coding)": "900,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09778--2",
+                "Amount (Fund-Coding)": "1,500,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09778--3",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09781",
+        "Docket Record Name": "21-09781 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$625,000.00",
+        "grant_amount_number": "625,000.00",
+        "Amount (Fund-Coding)": "312,500.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To jointly manage an Extreme Heat Task Force to implement COVID-safe cooling strategies in the most COVID impacted communities of Greater Boston",
+        "Award Date": "2/1/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09781--1",
+                "Amount (Fund-Coding)": "312,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "21-09781--2",
+                "Amount (Fund-Coding)": "312,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09782",
+        "Docket Record Name": "21-09782 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$415,000.00",
+        "grant_amount_number": "415,000.00",
+        "Amount (Fund-Coding)": "207,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To jointly manage an Extreme Heat Task Force to implement COVID-safe cooling strategies in the most COVID-impacted communities of Greater Boston",
+        "Award Date": "2/1/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09782--1",
+                "Amount (Fund-Coding)": "207,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09782--2",
+                "Amount (Fund-Coding)": "207,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09792",
+        "Docket Record Name": "21-09792 - Innovation Network for Communities",
+        "Organization Name": "Innovation Network for Communities",
+        "Grant Amount": "$1,350,000.00",
+        "grant_amount_number": "1,350,000.00",
+        "Amount (Fund-Coding)": "675,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support core operations of the Green Ribbon Commission and its working groups",
+        "Award Date": "6/15/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09792--1",
+                "Amount (Fund-Coding)": "675,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09792--2",
+                "Amount (Fund-Coding)": "675,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-09925",
+        "Docket Record Name": "21-09925 - Boston Harbor Now, Inc.",
+        "Organization Name": "Boston Harbor Now, Inc.",
+        "Grant Amount": "$1,160,000.00",
+        "grant_amount_number": "1,160,000.00",
+        "Amount (Fund-Coding)": "60,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "3/9/2022",
+        "grant_details": [
+            {
+                "Request Number": "21-09925--1",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-09925--2",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "21-09925--3",
+                "Amount (Fund-Coding)": "800,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Waterfront Initiative"
+            }
+        ]
+    },
+    {
+        "Request Number": "21-36073",
+        "Docket Record Name": "21-36073 - Community Labor United, Inc.",
+        "Organization Name": "Community Labor United, Inc.",
+        "Grant Amount": "$250,000.00",
+        "grant_amount_number": "250,000.00",
+        "Amount (Fund-Coding)": "234,375.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To provide core support to Community Labor United",
+        "Award Date": "6/30/2021",
+        "grant_details": [
+            {
+                "Request Number": "21-36073--1",
+                "Amount (Fund-Coding)": "234,375.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "21-36073--2",
+                "Amount (Fund-Coding)": "15,625.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "22-34673",
+        "Docket Record Name": "22-34673 - A Better City Initiative, Inc.",
+        "Organization Name": "A Better City Initiative, Inc.",
+        "Grant Amount": "$360,000.00",
+        "grant_amount_number": "360,000.00",
+        "Amount (Fund-Coding)": "160,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support informing mobility and clean energy policy efforts",
+        "Award Date": "5/2/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-34673--1",
+                "Amount (Fund-Coding)": "160,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "22-34673--2",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-34689",
+        "Docket Record Name": "22-34689 - City of Boston",
+        "Organization Name": "City of Boston",
+        "Grant Amount": "$870,000.00",
+        "grant_amount_number": "870,000.00",
+        "Amount (Fund-Coding)": "150,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support implementation of Climate Ready Boston initiatives",
+        "Award Date": "11/29/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-34689--1",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "22-34689--2",
+                "Amount (Fund-Coding)": "720,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-34888",
+        "Docket Record Name": "22-34888 - Third Sector New England, Inc.",
+        "Organization Name": "Third Sector New England, Inc.",
+        "Grant Amount": "$1,750,000.00",
+        "grant_amount_number": "1,750,000.00",
+        "Amount (Fund-Coding)": "500,000.00",
+        "program_areas": "Arts & Creativity",
+        "strategies": "Spanning Sectors",
+        "Grant Purpose": "To support core operations and implementation of strategic growth plan for Design Studio for Social Intervention",
+        "Award Date": "12/7/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-34888--1",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": "Spanning Sectors"
+            },
+            {
+                "Request Number": "22-34888--2",
+                "Amount (Fund-Coding)": "1,250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-34908",
+        "Docket Record Name": "22-34908 - The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Organization Name": "The Massachusetts Institute for a New Commonwealth, Inc.",
+        "Grant Amount": "$600,000.00",
+        "grant_amount_number": "600,000.00",
+        "Amount (Fund-Coding)": "450,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support polling and focus groups on transportation and climate",
+        "Award Date": "6/27/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-34908--1",
+                "Amount (Fund-Coding)": "450,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "22-34908--2",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "22-34933",
+        "Docket Record Name": "22-34933 - Massachusetts Senior Action Council, Inc.",
+        "Organization Name": "Massachusetts Senior Action Council, Inc.",
+        "Grant Amount": "$225,000.00",
+        "grant_amount_number": "225,000.00",
+        "Amount (Fund-Coding)": "150,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support organizational capacity building",
+        "Award Date": "6/27/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-34933--1",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "22-34933--2",
+                "Amount (Fund-Coding)": "75,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-34934",
+        "Docket Record Name": "22-34934 - Coalition for Social Justice-Education Fund Inc.",
+        "Organization Name": "Coalition for Social Justice-Education Fund Inc.",
+        "Grant Amount": "$170,000.00",
+        "grant_amount_number": "170,000.00",
+        "Amount (Fund-Coding)": "100,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support a Grassroots Coordinator to work on transit-initiatives in the South Shore",
+        "Award Date": "6/27/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-34934--1",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "22-34934--2",
+                "Amount (Fund-Coding)": "70,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-34976",
+        "Docket Record Name": "22-34976 - Trustees of Boston University",
+        "Organization Name": "Trustees of Boston University",
+        "Grant Amount": "$600,000.00",
+        "grant_amount_number": "600,000.00",
+        "Amount (Fund-Coding)": "540,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support research on extreme heat impacts and interventions in Chelsea and East Boston",
+        "Award Date": "8/29/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-34976--1",
+                "Amount (Fund-Coding)": "540,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "22-34976--2",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35052",
+        "Docket Record Name": "22-35052 - GreenRoots, Inc.",
+        "Organization Name": "GreenRoots, Inc.",
+        "Grant Amount": "$340,000.00",
+        "grant_amount_number": "340,000.00",
+        "Amount (Fund-Coding)": "27,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support organizational capacity building",
+        "Award Date": "8/29/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-35052--1",
+                "Amount (Fund-Coding)": "27,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "22-35052--2",
+                "Amount (Fund-Coding)": "27,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "22-35052--3",
+                "Amount (Fund-Coding)": "285,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35053",
+        "Docket Record Name": "22-35053 - New England United for Justice",
+        "Organization Name": "New England United for Justice",
+        "Grant Amount": "$260,000.00",
+        "grant_amount_number": "260,000.00",
+        "Amount (Fund-Coding)": "130,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "To support New England United 4 Justice?s climate and mobility activities",
+        "Award Date": "8/29/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-35053--1",
+                "Amount (Fund-Coding)": "130,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "22-35053--2",
+                "Amount (Fund-Coding)": "130,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35071",
+        "Docket Record Name": "22-35071 - The Trust for Public Land",
+        "Organization Name": "The Trust for Public Land",
+        "Grant Amount": "$500,000.00",
+        "grant_amount_number": "500,000.00",
+        "Amount (Fund-Coding)": "475,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to support education, engagement, and training to expand green infrastructure solutions in Metro Boston",
+        "Award Date": "9/28/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-35071--1",
+                "Amount (Fund-Coding)": "475,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "22-35071--2",
+                "Amount (Fund-Coding)": "25,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35082",
+        "Docket Record Name": "22-35082 - Local Initiatives Support Corporation",
+        "Organization Name": "Local Initiatives Support Corporation",
+        "Grant Amount": "$200,000.00",
+        "grant_amount_number": "200,000.00",
+        "Amount (Fund-Coding)": "100,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support the DASH coalition?s efforts to strengthen climate-focused affordable housing policies and programs",
+        "Award Date": "9/27/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-35082--1",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "22-35082--2",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35092",
+        "Docket Record Name": "22-35092 - Massachusetts Climate Action Network",
+        "Organization Name": "Massachusetts Climate Action Network",
+        "Grant Amount": "$65,000.00",
+        "grant_amount_number": "65,000.00",
+        "Amount (Fund-Coding)": "30,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support MCAN?s leadership transition and equity-centered strategic plan",
+        "Award Date": "9/27/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-35092--1",
+                "Amount (Fund-Coding)": "30,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "22-35092--2",
+                "Amount (Fund-Coding)": "35,000.00",
+                "program_areas": "Arts & Creativity",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35101",
+        "Docket Record Name": "22-35101 - Chinatown People Progressive Association, Inc. d/b/a Chinese Proge...",
+        "Organization Name": "Chinatown People Progressive Association, Inc. d/b/a Chinese Proge...",
+        "Grant Amount": "$200,000.00",
+        "grant_amount_number": "200,000.00",
+        "Amount (Fund-Coding)": "100,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support organizational capacity building for climate organizing",
+        "Award Date": "9/28/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-35101--1",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "22-35101--2",
+                "Amount (Fund-Coding)": "100,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35109",
+        "Docket Record Name": "22-35109 - Community Labor United, Inc.",
+        "Organization Name": "Community Labor United, Inc.",
+        "Grant Amount": "$275,000.00",
+        "grant_amount_number": "275,000.00",
+        "Amount (Fund-Coding)": "50,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "To support Community Labor United's work on climate resilience, clean energy, and economic inclusion in Massachusetts",
+        "Award Date": "11/1/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-35109--1",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "22-35109--2",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "22-35109--3",
+                "Amount (Fund-Coding)": "75,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-35286",
+        "Docket Record Name": "22-35286 - Clean Energy Group, Inc.",
+        "Organization Name": "Clean Energy Group, Inc.",
+        "Grant Amount": "$400,000.00",
+        "grant_amount_number": "400,000.00",
+        "Amount (Fund-Coding)": "310,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "to support equitable deployment of energy storage and fossil peaker plant decomissioning in New England",
+        "Award Date": "2/28/2023",
+        "grant_details": [
+            {
+                "Request Number": "22-35286--1",
+                "Amount (Fund-Coding)": "310,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "22-35286--2",
+                "Amount (Fund-Coding)": "90,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "22-36067",
+        "Docket Record Name": "22-36067 - Community Labor United, Inc.",
+        "Organization Name": "Community Labor United, Inc.",
+        "Grant Amount": "$275,000.00",
+        "grant_amount_number": "275,000.00",
+        "Amount (Fund-Coding)": "150,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To provide core support for Community Labor United's work on climate resilience, clean energy, and economic inclusion in Massachusetts",
+        "Award Date": "11/1/2022",
+        "grant_details": [
+            {
+                "Request Number": "22-36067--1",
+                "Amount (Fund-Coding)": "150,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "22-36067--2",
+                "Amount (Fund-Coding)": "75,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "22-36067--3",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35460",
+        "Docket Record Name": "23-35460 - Boston Climate Action Network",
+        "Organization Name": "Boston Climate Action Network",
+        "Grant Amount": "$100,000.00",
+        "grant_amount_number": "100,000.00",
+        "Amount (Fund-Coding)": "60,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support research on experiences with Mass Save and capacity building within Boston-based community organizations",
+        "Award Date": "7/21/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35460--1",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "23-35460--2",
+                "Amount (Fund-Coding)": "40,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35480",
+        "Docket Record Name": "23-35480 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$2,250,000.00",
+        "grant_amount_number": "2,250,000.00",
+        "Amount (Fund-Coding)": "1,950,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support projects and efforts to develop climate resilience, greenways, and waterfront access",
+        "Award Date": "6/13/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35480--1",
+                "Amount (Fund-Coding)": "1,950,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "23-35480--2",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Waterfront Initiative"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35485",
+        "Docket Record Name": "23-35485 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$400,000.00",
+        "grant_amount_number": "400,000.00",
+        "Amount (Fund-Coding)": "200,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "to jointly manage an Extreme Heat Task Force to implement cooling strategies in the most COVID impacted communities of Greater Boston",
+        "Award Date": "5/2/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35485--1",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "23-35485--2",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35517",
+        "Docket Record Name": "23-35517 - Allston Brighton Health Collaborative",
+        "Organization Name": "Allston Brighton Health Collaborative",
+        "Grant Amount": "$260,000.00",
+        "grant_amount_number": "260,000.00",
+        "Amount (Fund-Coding)": "130,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "to support organizing and advocacy for mobility and climate resilience in Allston and Brighton",
+        "Award Date": "6/7/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35517--1",
+                "Amount (Fund-Coding)": "130,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "23-35517--2",
+                "Amount (Fund-Coding)": "55,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "23-35517--3",
+                "Amount (Fund-Coding)": "75,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35597",
+        "Docket Record Name": "23-35597 - The Latina Circle, Inc. dba Amplify Latinx",
+        "Organization Name": "The Latina Circle, Inc. dba Amplify Latinx",
+        "Grant Amount": "$375,000.00",
+        "grant_amount_number": "375,000.00",
+        "Amount (Fund-Coding)": "75,000.00",
+        "program_areas": "Special Initiatives",
+        "strategies": "Racial Wealth Equity Initiative",
+        "Grant Purpose": "To provide continued program, capacity building, and one-time organizational development support",
+        "Award Date": "8/30/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35597--1",
+                "Amount (Fund-Coding)": "75,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Racial Wealth Equity Initiative"
+            },
+            {
+                "Request Number": "23-35597--2",
+                "Amount (Fund-Coding)": "300,000.00",
+                "program_areas": "Sector Effectiveness",
+                "strategies": "Leadership"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35617",
+        "Docket Record Name": "23-35617 - Our Climate Education Fund",
+        "Organization Name": "Our Climate Education Fund",
+        "Grant Amount": "$120,000.00",
+        "grant_amount_number": "120,000.00",
+        "Amount (Fund-Coding)": "60,000.00",
+        "program_areas": "Climate",
+        "strategies": "",
+        "Grant Purpose": "to support youth leadership and development in the climate movement in Massachusetts",
+        "Award Date": "8/30/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35617--1",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            },
+            {
+                "Request Number": "23-35617--2",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35691",
+        "Docket Record Name": "23-35691 - New England United for Justice",
+        "Organization Name": "New England United for Justice",
+        "Grant Amount": "$1,350,000.00",
+        "grant_amount_number": "1,350,000.00",
+        "Amount (Fund-Coding)": "675,000.00",
+        "program_areas": "Climate",
+        "strategies": "Mobility",
+        "Grant Purpose": "to support New England United for Justice?s mobility and climate work",
+        "Award Date": "9/13/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35691--1",
+                "Amount (Fund-Coding)": "675,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "23-35691--2",
+                "Amount (Fund-Coding)": "675,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35700",
+        "Docket Record Name": "23-35700 - Arise, Inc.",
+        "Organization Name": "Arise, Inc.",
+        "Grant Amount": "$900,000.00",
+        "grant_amount_number": "900,000.00",
+        "Amount (Fund-Coding)": "500,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "to provide general operating support",
+        "Award Date": "8/30/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35700--1",
+                "Amount (Fund-Coding)": "500,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "23-35700--2",
+                "Amount (Fund-Coding)": "400,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35717",
+        "Docket Record Name": "23-35717 - Climable",
+        "Organization Name": "Climable",
+        "Grant Amount": "$100,000.00",
+        "grant_amount_number": "100,000.00",
+        "Amount (Fund-Coding)": "50,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To provide technical assistance on microgrids and resilience hubs in Massachusetts and Rhode Island",
+        "Award Date": "10/31/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35717--1",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "23-35717--2",
+                "Amount (Fund-Coding)": "50,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35735",
+        "Docket Record Name": "23-35735 - Metropolitan Area Planning Council",
+        "Organization Name": "Metropolitan Area Planning Council",
+        "Grant Amount": "$205,000.00",
+        "grant_amount_number": "205,000.00",
+        "Amount (Fund-Coding)": "102,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support the design of a revised COVID-safe cooling program",
+        "Award Date": "9/26/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35735--1",
+                "Amount (Fund-Coding)": "102,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "23-35735--2",
+                "Amount (Fund-Coding)": "102,500.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35865",
+        "Docket Record Name": "23-35865 - Mystic River Watershed Association, Inc.",
+        "Organization Name": "Mystic River Watershed Association, Inc.",
+        "Grant Amount": "$33,000.00",
+        "grant_amount_number": "33,000.00",
+        "Amount (Fund-Coding)": "30,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "To support the equity in organizational decision-making peer learning group's engagement with the Interaction Institute for Social Change",
+        "Award Date": "11/28/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35865--1",
+                "Amount (Fund-Coding)": "30,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "23-35865--2",
+                "Amount (Fund-Coding)": "3,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35886",
+        "Docket Record Name": "23-35886 - Dudley Street Neighborhood Initiative, Inc.",
+        "Organization Name": "Dudley Street Neighborhood Initiative, Inc.",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "250,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To support the exploration of a Resilience Hub and other resiliency activities and to provide capacity building for its Greater Boston Community Land Trust Network program",
+        "Award Date": "11/29/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35886--1",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "23-35886--2",
+                "Amount (Fund-Coding)": "750,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Racial Wealth Equity Initiative"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35900",
+        "Docket Record Name": "23-35900 - New World Foundation",
+        "Organization Name": "New World Foundation",
+        "Grant Amount": "$650,000.00",
+        "grant_amount_number": "650,000.00",
+        "Amount (Fund-Coding)": "450,000.00",
+        "program_areas": "Climate",
+        "strategies": "Clean Energy",
+        "Grant Purpose": "to support equitable climate and clean energy grassroots efforts in Massachusetts and Rhode Island",
+        "Award Date": "11/29/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35900--1",
+                "Amount (Fund-Coding)": "450,000.00",
+                "program_areas": "Climate",
+                "strategies": "Clean Energy"
+            },
+            {
+                "Request Number": "23-35900--2",
+                "Amount (Fund-Coding)": "200,000.00",
+                "program_areas": "Climate",
+                "strategies": ""
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35906",
+        "Docket Record Name": "23-35906 - Third Sector New England, Inc.",
+        "Organization Name": "Third Sector New England, Inc.",
+        "Grant Amount": "$1,000,000.00",
+        "grant_amount_number": "1,000,000.00",
+        "Amount (Fund-Coding)": "600,000.00",
+        "program_areas": "Special Initiatives",
+        "strategies": "Racial Wealth Equity Initiative",
+        "Grant Purpose": "To provide project support for the TSNE Shared Services launch",
+        "Award Date": "11/29/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35906--1",
+                "Amount (Fund-Coding)": "600,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Racial Wealth Equity Initiative"
+            },
+            {
+                "Request Number": "23-35906--2",
+                "Amount (Fund-Coding)": "400,000.00",
+                "program_areas": "Sector Effectiveness",
+                "strategies": "Infrastructure"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-35921",
+        "Docket Record Name": "23-35921 - Massachusetts Coalition for Occupational Safety and Health, Inc.",
+        "Organization Name": "Massachusetts Coalition for Occupational Safety and Health, Inc.",
+        "Grant Amount": "$375,000.00",
+        "grant_amount_number": "375,000.00",
+        "Amount (Fund-Coding)": "187,500.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To develop and expand strategies to protect workers and students in Massachusetts from increased health and safety risks resulting from climate change",
+        "Award Date": "11/29/2023",
+        "grant_details": [
+            {
+                "Request Number": "23-35921--1",
+                "Amount (Fund-Coding)": "187,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "23-35921--2",
+                "Amount (Fund-Coding)": "187,500.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            }
+        ]
+    },
+    {
+        "Request Number": "23-36064",
+        "Docket Record Name": "23-36064 - Boston Harbor Now, Inc.",
+        "Organization Name": "Boston Harbor Now, Inc.",
+        "Grant Amount": "$1,060,000.00",
+        "grant_amount_number": "1,060,000.00",
+        "Amount (Fund-Coding)": "250,000.00",
+        "program_areas": "Climate",
+        "strategies": "Climate Resilience",
+        "Grant Purpose": "To provide general operating support",
+        "Award Date": "3/7/2024",
+        "grant_details": [
+            {
+                "Request Number": "23-36064--1",
+                "Amount (Fund-Coding)": "250,000.00",
+                "program_areas": "Climate",
+                "strategies": "Climate Resilience"
+            },
+            {
+                "Request Number": "23-36064--2",
+                "Amount (Fund-Coding)": "60,000.00",
+                "program_areas": "Climate",
+                "strategies": "Mobility"
+            },
+            {
+                "Request Number": "23-36064--3",
+                "Amount (Fund-Coding)": "750,000.00",
+                "program_areas": "Special Initiatives",
+                "strategies": "Waterfront Initiative"
+            }
+        ]
+    }
+]

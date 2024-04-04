@@ -1,4 +1,4 @@
-dateModified: 1710885926
+dateModified: 1712257091
 elementSources:
   craft\elements\Asset:
     -
@@ -458,6 +458,7 @@ meta:
     0a0fbbb0-ab8f-4950-afab-87e4e5f44c47: 'Asset: Image' # Asset: Image
     0a924836-f3f5-452c-86dd-92df3cc0ad85: 'Text: Preheading' # Text: Preheading
     0ac7255b-4b9d-49e0-948d-10bef69479d4: 'Action: Entry or URL' # Action: Entry or URL
+    0af5caf4-e6fd-45a6-a110-4ebc009b396f: 'Tags: Program Areas' # Tags: Program Areas
     0b05b130-5829-4e77-a3f7-ed99ae219ce7: 'Text: Amount' # Text: Amount
     0b12ba92-d669-4feb-9241-037faa9b352b: 'Highlight: Multi-Event Timeline' # Highlight: Multi-Event Timeline
     0b20ecdf-4270-4334-a697-b9ad36c32962: 'Card: Latest News' # Card: Latest News
@@ -681,6 +682,7 @@ meta:
     475f568b-a770-42cd-9d7c-161f41124bfb: Feed # Feed
     493bc4b8-cb08-43a2-938d-4c1b76790dd4: 'Contact: Facebook' # Contact: Facebook
     514d9158-60cc-42b6-b659-01d01be03c21: Title # Title
+    515d7a98-90c9-4611-8c70-2f1a61931d76: 'Split Grant Details' # Split Grant Details
     515f8abd-ef70-46c7-bbd7-cc9957f75831: Landing # Landing
     531e0b1a-3fa8-4379-80b6-e96b1a34de5d: Default # Default
     550b4087-0556-49ad-b210-9d66461f75b1: 'Attribution: Entry or Text' # Attribution: Entry or Text
@@ -720,6 +722,7 @@ meta:
     5858abd5-d9a7-4e0d-9afb-546475012ee1: 'Number of Cards' # Number of Cards
     5971d473-bc24-4c7d-86e9-99f40d205dc3: 'Record Type' # Record Type
     6240c976-c45c-49e0-9b18-04c2bd1b9024: __blank__ # __blank__
+    6250cbd0-d7d2-4ac8-85a5-70094e3de5fa: 'Number: Amount' # Number: Amount
     6774ebb3-1a46-4eca-8e7d-724ba7cf1e16: 'Asset: Image' # Asset: Image
     6836bf9e-a016-4a06-8686-ffc0d6821a49: 'Entry: Blog Post, News Item, or Grantee' # Entry: Blog Post, News Item, or Grantee
     6878d12c-9640-418d-b0a8-b40cb368e41d: Action # Action
@@ -864,6 +867,7 @@ meta:
     c56d3c2d-9817-48cc-ad2b-e04cc44fb403: 'Text: Plain Heading' # Text: Plain Heading
     c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Card: Feature' # Card: Feature
     c80dff18-6eeb-4474-8278-fdfc55a4630c: 'Text: Supporting' # Text: Supporting
+    c274cba3-ea76-4159-a2c3-2f21123ce281: 'Tags: Strategies' # Tags: Strategies
     c954d828-974b-402e-92e2-3057b737e6ed: 'Primary Menu' # Primary Menu
     c984ca15-0cae-4c1d-9b3c-14e9d29347f7: 'Page Builder: All (Do not Delete)' # Page Builder: All (Do not Delete)
     c4298a25-8850-4817-a1a1-014ba04d9e07: Blocks # Blocks
@@ -967,6 +971,7 @@ meta:
     fe4eaace-d373-4052-9652-85f1ffe01dca: 'Tags: Changelog Types' # Tags: Changelog Types
     fe5d0c67-9025-4800-afaf-48ab29540919: 'Text: Heading' # Text: Heading
     feef3b5a-d098-4cfd-8b7c-463099748f8a: 'Cards: Manual' # Cards: Manual
+    ffc34cd8-791b-4c68-a09f-8541e3a71c9b: 'Split Grant Details' # Split Grant Details
     ffd93142-6600-426b-8c4f-a5a5f9d318d9: 'Asset: Image' # Asset: Image
     fff7d153-2526-49e3-a5fa-98017a4eeb42: 'Highlight: Quote' # Highlight: Quote
 plugins:
