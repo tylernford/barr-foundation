@@ -52,7 +52,16 @@ News & Insights Interior template
         } %}
 
         <section class="blog-post">
-            {{ modules.default(config) }}
+            {# {{ modules.default(config) }} #}
+            <div class="blockBody">
+                <div class="blockBody__intro">
+                    {{ entry.textDescription }}
+                </div>
+
+                <div class="blockBody__paragraph">
+                    {{ entry.textPostImport|raw }}
+                </div>
+            </div>
         </section>
     {% endif %}
 {% endblock %}
