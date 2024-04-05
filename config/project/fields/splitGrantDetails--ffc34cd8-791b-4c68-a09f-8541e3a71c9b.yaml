@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 99a0a64e-82ac-4b42-92b5-697513e02b7b # Grants
+handle: splitGrantDetails
+instructions: null
+name: 'Split Grant Details'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_splitgrantdetails}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
