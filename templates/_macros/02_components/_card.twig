@@ -408,11 +408,20 @@
         <article class="cardItem cardItem--generic">
             <div class="cardItem__inner">
                 {# Image #}
-                {% if image %}
-                    <div class="cardItem__media">
+                <div class="cardItem__media">
+                    {% if image %}
                         {{ images.image(image, '1280', '16/9', '', false) }}
-                    </div>
-                {% endif %}
+                    {% else %}
+                        <picture class="image">
+                            <source sizes="100vw" srcset="
+                                {{ siteUrl }}build/images/fallback-images/news2--600.png 600w,
+                                {{ siteUrl }}build/images/fallback-images/news2--1000.png 1000w,
+                            " type="image/png">
+          
+                            <img src="{{ siteUrl }}build/images/fallback-images/news2--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1024" height="576">
+                        </picture>
+                    {% endif %}
+                </div>
 
                 <div class="cardItem__wrapper">
                     {# Header #}
@@ -590,11 +599,20 @@
     <article class="cardItem cardItem--generic">
         <div class="cardItem__inner">
             {# Image #}
-            {% if image %}
-                <div class="cardItem__media">
+            <div class="cardItem__media">
+                {% if image %}
                     {{ images.image(image, '1280', '16/9', '', false) }}
-                </div>
-            {% endif %}
+                {% else %}
+                    <picture class="image">
+                        <source sizes="100vw" srcset="
+                            {{ siteUrl }}build/images/fallback-images/blog--600.png 600w,
+                            {{ siteUrl }}build/images/fallback-images/blog--1000.png 1000w,
+                        " type="image/png">
+          
+                        <img src="{{ siteUrl }}build/images/fallback-images/blog--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1024" height="576">
+                    </picture>
+                {% endif %}
+            </div>
 
             <div class="cardItem__wrapper">
                 {# Header #}
