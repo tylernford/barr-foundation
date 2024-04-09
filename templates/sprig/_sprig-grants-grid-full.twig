@@ -1,0 +1,84 @@
+{% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/02_components/_card' as cards %}
+
+{% set page = page ?? 1 %}
+
+{# ---  Set order by  --- #}
+{% set sort = sort ?? 'desc' %}
+{% set orderBy =
+  sort == 'asc' ? 'postDate ASC' :
+  'postDate DESC'
+%}
+
+{# ---  Sort  --- #}
+{% set sortFilters = [
+  { value: 'desc', label: 'Most Recent First'},
+  { value: 'asc', label: 'Oldest First'},
+] %}
+
+{# ---  Set View  --- #}
+{% set viewAs = viewAs ?? 'grid' %}
+
+{% set feedQuery = craft.entries().section('grants').orderBy(orderBy).limit(limit) %}
+
+{# Paginates the entry query given the current page #}
+{% set pageInfo = sprig.paginate(feedQuery, page) %}
+{% set feed = pageInfo.pageResults %}
+
+{# {% do sprig.pushUrl('?' ~ {sort:sort,viewAs:viewAs}|url_encode) %} #}
+{% do sprig.pushUrl('?' ~ {sort:sort}|url_encode) %}
+
+
+
+
+<div class="feed-page">
+  {# Filters #}
+  <div class="feed-filters" data-variant="standard" data-is-reversed="true">
+    <div class="filters__group">
+      {% include '_partials/_filtering/_sort-by' with {
+        dropdownTitle: 'Sort By',
+        dropdownFiltersHandle: 'sort',
+        defaultFilters: sortFilters,
+        dropdownFiltersActive: sort
+      } %}
+    </div>
+
+    {% include '_partials/_filtering/_view-as' with {
+      activeView: viewAs,
+      viewHandle: 'viewAs',
+      views: ['grid','list']
+    } %}
+  </div>
+
+  {# Page background #}
+  <div class="page-wrapper">
+    <div class="angle">
+      {{ angles.topLarge() }}
+    </div>
+  </div>
+
+  {# Feed #}
+  <div class="grants-grid">
+    <div class="grants-grid__inner" data-columns="3" data-grid-style="{{ viewAs }}">
+      {% for feedItem in feed %}
+        {% set grant = feedItem %}
+        {% set grantee = grant.entriesOrganization.one %}
+
+        {% set config = {
+          'variant': 'list',
+          'content': {
+            'grantee': grantee,
+            'grant': grant
+          }
+        }%}
+        
+        {{ cards.grant(config) }}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# Pagination #}
+  {% if feed %}
+    {% include '_partials/_filtering/_pagination' %}
+  {% endif %}
+</div>

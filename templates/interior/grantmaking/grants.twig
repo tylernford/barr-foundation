@@ -13,7 +13,8 @@
 
 {% set introLarge = entry.textRichLink %}
 {% set intro      = entry.textIntro %}
-{% set grantsList = craft.entries().section('grants').limit(3) %}
+{# {% set grantsList = craft.entries().section('grants').limit(3) %} #}
+{% set grantsList = craft.entries().section('grants') %}
 
 <div class="page-grantmaking">
     {# <div class="page-background">
@@ -51,32 +52,5 @@
     </{{ introLarge or intro ? 'section' : 'div' }}>
 
 
-    {# NOTE: the following elements will likely need to consolidated into a _sprig template #}
-    <section class="grants-grid">
-        {# GRANTEE CARDS: List or Grid View #}
-        <div class="grants-grid__inner _is-{{ layout }}" data-columns="3">
-            {% if grantsList|length %}
-                {% for grant in grantsList %}
-                    {# Retrieve current award year's grant associated with grantee #}
-                    {# {% set grant = craft.entries({
-                        section: "grants",
-                        postDate: ["and", ">= #{awardYear}"],
-                        entriesOrganization: grantee
-                    }).one() %} #}
-
-                    {% set grantee = grant.entriesOrganization.one %}
-
-                    {% set config = {
-                        'variant': layout == 'grid' ? 'grid' : 'list',
-                        'content': {
-                            'grantee': grantee,
-                            'grant': grant
-                        }
-                    }%}
-
-                    {{ cards.grant(config) }}
-                {% endfor %}
-            {% endif %}
-        </div>
-    </section>
+    {{ sprig('sprig/_sprig-grants-grid-full', { limit: 16 }) }}
 </div>

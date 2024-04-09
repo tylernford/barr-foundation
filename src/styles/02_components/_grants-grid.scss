@@ -36,5 +36,9 @@
         }
       }
     }
+
+    &[data-grid-style="list"] {
+      grid-template-columns: 1fr;
+    }
   }
 }
