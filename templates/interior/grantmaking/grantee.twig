@@ -43,49 +43,37 @@
 
 
 {# Intro #}
-<{{ introLarge or intro ? 'section' : 'div' }} class="grantmaking-intro">
-    <div class="angle">
-        {{ angles.topLarge() }}
-    </div>
-    
-    {% if introLarge or intro %}
-        <div class="grants-intro__copy">
-            {% if introLarge %}
-                <div class="copy__large">
-                    {{ introLarge }}
-                </div>
-            {% endif %}
+{% if introLarge or intro %}
+    <{{ introLarge or intro ? 'section' : 'div' }} class="grantmaking-intro">
+        {% if grantList|length %}
+        {% else %}
+            <div class="angle">
+                {{ angles.topLarge() }}
+            </div>
+        {% endif %}
+        
+        {% if introLarge or intro %}
+            <div class="grants-intro__copy">
+                {% if introLarge %}
+                    <div class="copy__large">
+                        {{ introLarge }}
+                    </div>
+                {% endif %}
 
-            {% if intro %}
-                <div class="copy__standard">
-                    {{ intro }}
-                </div>
-            {% endif %}
-        </div>
-    {% endif %}
-</{{ introLarge or intro ? 'section' : 'div' }}>
+                {% if intro %}
+                    <div class="copy__standard">
+                        {{ intro }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </{{ introLarge or intro ? 'section' : 'div' }}>
+{% endif %}
 
 
 {# Grants #}
 {% if grantList|length %}
-    <section class="grants-grid">
-        {# FILTERS GO HERE #}
-        {# <div class="blockGeneric">
-            Filters
-        </div> #}
-
-        <div class="grants-grid__inner" data-columns="2">
-            {% for grant in grantList %}
-                {% set config = {
-                    'variant': layout == 'grid' ? 'grid' : 'list',
-                    'content': {
-                        'grant': grant
-                    }
-                }%}
-                {{ cards.grant(config) }}
-            {% endfor %}
-        </div>
-    </section>
+    {{ sprig('sprig/_sprig-grants-grid', { grantee: entry.id, limit: 10 }) }}
 {% endif %}
 
 
