@@ -8,7 +8,7 @@
 .grants-grid {
   .grants-grid__inner {
     @include container-inner;
-    padding-block: var(--base-9) var(--base-12);
+    padding-block-end: var(--base-12);
     display: grid;
     
     @for $i from 1 through 10 {
