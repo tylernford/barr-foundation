@@ -30,6 +30,20 @@
 }
 
 .blockBody {
+  color: var(--color-body--primary);
+  
+  a:not([class]) {
+    color: var(--color-body--secondary);
+    transition: color var(--transition) ease-in;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color-body--primary);
+        transition: color var(--transition-intermediate) ease-out;
+      }
+    }
+  }
+
   // Intro
   .blockBody__intro {
     @include container-inner;
