@@ -479,7 +479,6 @@
 
   // Videos
   .u-fluid-iframe-inner {
-    margin-inline-start: -46px;
     padding-bottom: 56.25%;
     height: 0;
     position: relative;
@@ -648,16 +647,6 @@
     ol {
       margin-inline-end: 4em;
     }
-
-    .u-fluid-iframe-inner {
-      margin-inline-start: -52px;
-    }
-  }
-
-  @include breakpoint(sm-md) {
-    .u-fluid-iframe-inner {
-      margin-inline-start: -66px;
-    }
   }
 
   @include breakpoint(md) {
@@ -689,11 +678,7 @@
         max-width: 740px;
       }
     }
-
-    .u-fluid-iframe-inner {
-      margin-inline-start: -72px;
-    }
-
+    
     .DoughnutChart {  
       .DoughnutChart-sliceContent {
         grid-template-columns: 1fr 1fr;
