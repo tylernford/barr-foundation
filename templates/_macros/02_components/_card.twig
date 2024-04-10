@@ -379,8 +379,10 @@
         {% set type  = card.type == 'externalNews' ? 'external' : 'post' %}
         {% set image =
             card.assetImage.one ? card.assetImage.one :
-            card.assetOpenerImage.one ? card.assetOpenerImage.one
+            card.assetOpenerImage|length ? card.assetOpenerImage.one :
+            null
         %}
+        {% set fallbackImage = siteUrl ~ 'build/images/fallback-images/news' %}
         {% set label = type == 'external' ? 'In the News' : 'Barr News' %}
         {% set publication = card.textPublication %}
         {% set title = card.title %}
@@ -414,11 +416,11 @@
                     {% else %}
                         <picture class="image">
                             <source sizes="100vw" srcset="
-                                {{ siteUrl }}build/images/fallback-images/news--600.png 600w,
-                                {{ siteUrl }}build/images/fallback-images/news--1000.png 1000w,
-                            " type="image/png">
+                                {{ fallbackImage }}--600.png 600w,
+                                {{ fallbackImage }}--1000.png 1000w"
+                                type="image/png">
           
-                            <img src="{{ siteUrl }}build/images/fallback-images/news--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1024" height="576">
+                            <img src="{{ fallbackImage }}--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1000" height="1250">
                         </picture>
                     {% endif %}
                 </div>
@@ -574,6 +576,7 @@
         post.assetImage.one ? post.assetImage.one :
         post.assetOpenerImage.one ? post.assetOpenerImage.one
     %}
+    {% set fallbackImage = siteUrl ~ 'build/images/fallback-images/blog' %}
     {% set title = post.title %}
 
     {# Set published date #}
@@ -605,12 +608,12 @@
                 {% else %}
                     <picture class="image">
                         <source sizes="100vw" srcset="
-                            {{ siteUrl }}build/images/fallback-images/blog--600.png 600w,
-                            {{ siteUrl }}build/images/fallback-images/blog--1000.png 1000w,
-                        " type="image/png">
+                            {{ fallbackImage }}--600.png 600w,
+                            {{ fallbackImage }}--1000.png 1000w"
+                            type="image/png">
           
-                        <img src="{{ siteUrl }}build/images/fallback-images/blog--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1024" height="576">
-                    </picture>
+                            <img src="{{ fallbackImage }}--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1000" height="1250">
+                        </picture>
                 {% endif %}
             </div>
 
