@@ -635,6 +635,14 @@
     }
   }
 
+  // HR
+  hr {
+    margin: 1.75em 0;
+    max-width: 840px;
+    border-top: 1px solid gray;
+    color: transparent;
+  }
+
 
   // Hide
   .EmailSignup {
@@ -678,7 +686,7 @@
         max-width: 740px;
       }
     }
-    
+
     .DoughnutChart {  
       .DoughnutChart-sliceContent {
         grid-template-columns: 1fr 1fr;
