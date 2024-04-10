@@ -645,8 +645,9 @@
 
 
   // Hide
-  .EmailSignup {
-    display: none;
+  .EmailSignup,
+  .twitter-tweet {
+    display: none!important;
   }
 
 
