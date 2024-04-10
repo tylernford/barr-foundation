@@ -17,40 +17,31 @@
 {% set grantsList = craft.entries().section('grants') %}
 
 <div class="page-grantmaking">
-    {# <div class="page-background">
-        <div class="angle">
-            {{ angles.topLarge() }}
-        </div>
-        
-        {% if introLarge or intro %}
-            <div class="background">
-                <div class="background__inner"></div>
+    {# Intro #}
+    {% if introLarge or intro %}
+        <{{ introLarge or intro ? 'section' : 'div' }} class="grantmaking-intro">
+            <div class="angle">
+                {{ angles.topLarge() }}
             </div>
-        {% endif %}
-    </div> #}
 
-    <{{ introLarge or intro ? 'section' : 'div' }} class="grantmaking-intro">
-        <div class="angle">
-            {{ angles.topLarge() }}
-        </div>
+            {% if introLarge or intro %}
+                <div class="grants-intro__copy">
+                    {% if introLarge %}
+                        <div class="copy__large">
+                            {{ introLarge }}
+                        </div>
+                    {% endif %}
 
-        {% if introLarge or intro %}
-            <div class="grants-intro__copy">
-                {% if introLarge %}
-                    <div class="copy__large">
-                        {{ introLarge }}
-                    </div>
-                {% endif %}
-
-                {% if intro %}
-                    <div class="copy__standard">
-                        {{ intro }}
-                    </div>
-                {% endif %}
-            </div>
-        {% endif %}
-    </{{ introLarge or intro ? 'section' : 'div' }}>
+                    {% if intro %}
+                        <div class="copy__standard">
+                            {{ intro }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </{{ introLarge or intro ? 'section' : 'div' }}>
+    {% endif %}
 
 
-    {{ sprig('sprig/_sprig-grants-grid-full', { limit: 16 }) }}
+    {{ sprig('sprig/_sprig-grants-grid-full', { limit: 15 }) }}
 </div>

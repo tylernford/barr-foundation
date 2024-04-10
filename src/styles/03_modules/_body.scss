@@ -475,8 +475,21 @@
   }
 
   // Videos
-  .player {
-    width: 100%!important;
+  .u-fluid-iframe-inner {
+    margin-inline-start: -46px;
+    padding-bottom: 56.25%;
+    height: 0;
+    position: relative;
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   // Buttons
@@ -514,6 +527,7 @@
       transition: var(--transition-action-out);
 
       svg {
+        display: none;
         margin-top: -3px;
       }
 
@@ -631,6 +645,16 @@
     ol {
       margin-inline-end: 4em;
     }
+
+    .u-fluid-iframe-inner {
+      margin-inline-start: -52px;
+    }
+  }
+
+  @include breakpoint(sm-md) {
+    .u-fluid-iframe-inner {
+      margin-inline-start: -66px;
+    }
   }
 
   @include breakpoint(md) {
@@ -648,13 +672,23 @@
     }
 
     .Media {
-      display: grid;
-      grid-template-columns: 1.75fr 1fr;
-      gap: var(--base-5);
-
-      .Media-caption {
-        margin: 0;
+      &:not(.-full) {
+        display: grid;
+        grid-template-columns: 1.75fr 1fr;
+        gap: var(--base-5);
+        
+        .Media-caption {
+          margin: 0;
+        }
       }
+
+      &.-full {
+        max-width: 740px;
+      }
+    }
+
+    .u-fluid-iframe-inner {
+      margin-inline-start: -72px;
     }
 
     .DoughnutChart {  

@@ -696,7 +696,7 @@
       .cardItem__description {
         @include getType('caption-axiforma');
         
-        &:first-letter {
+        p:first-letter {
           text-transform: uppercase;
         }
       }
