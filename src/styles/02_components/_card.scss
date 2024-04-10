@@ -716,8 +716,14 @@
         border-top: 1px solid var(--color-card--tertiary);
 
         &.table-item__tr--tags {
-          padding-block-end: var(--base-4);
           display: block;
+          padding-block-end: var(--base-4);
+        }
+
+        &:last-of-type {
+          &.table-item__tr--tags {
+            padding-block-end: var(--base-2);
+          }
         }
       }
 
@@ -1165,11 +1171,11 @@
 // Master Grants List
 [data-grid-style="list"] {
   .cardItem.cardItem--grant {
-    padding-block-start: 0;
+    padding-block-end: var(--base-3);
     box-shadow: none;
 
     .cardItem__inner {
-      padding-block-start: var(--base-7);
+      padding-block-start: var(--base-5);
       border-top: 1px solid var(--color-grey-50);
     }
 
@@ -1179,15 +1185,62 @@
       }
     }
 
-    .cardItem__table {
-      display: flex;
-      gap: var(--base-8);
-      flex-wrap: wrap;
-      justify-content: space-between;
+    @include breakpoint(sm) {
+      padding-block: var(--base-9) 0!important;
 
-      .table-item__tr {
-        display: block;
-        border-top: none;
+      .cardItem__inner {
+        padding-block-start: var(--base-7);
+      }
+
+      .cardItem__table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--base-6);
+        row-gap: var(--base-5);
+
+        .table-item__tr {
+          padding: 0;
+          display: block;
+          border-top: none;
+        }
+
+        .table-item__td {
+            padding-top: var(--base-2);
+        }
+      }
+
+      .cardItem__actions {
+        margin-block-start: var(--base-4);
+      }
+    }
+
+    @include breakpoint(sm-md) {
+      .cardItem__table {
+        grid-template-columns: repeat(3,1fr);
+      }
+    }
+
+    @include breakpoint(md) {
+      padding-inline: var(--base-9);
+    }
+
+    @include breakpoint(lg) {
+      padding-inline: var(--base-12);
+
+      .cardItem__table {
+        grid-template-columns: repeat(4,1fr);
+      }
+
+      .cardItem__actions {
+        margin-block-start: var(--base);
+      }
+    }
+
+    @include breakpoint(xl) {
+      padding-inline: var(--base-14);
+
+      .cardItem__table {
+        grid-template-columns: repeat(6,1fr);
       }
     }
   }

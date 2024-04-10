@@ -59,7 +59,7 @@
 
   {# Feed #}
   <div class="grants-grid">
-    <div class="grants-grid__inner" data-columns="3" data-grid-style="{{ viewAs }}">
+    <div class="grants-grid__inner"{{ viewAs == 'grid' ? ' data-columns=3' }} data-grid-style="{{ viewAs }}">
       {% for feedItem in feed %}
         {% set grant = feedItem %}
         {% set grantee = grant.entriesOrganization.one %}
