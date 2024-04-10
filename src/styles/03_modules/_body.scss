@@ -570,6 +570,7 @@
       fill: currentColor;
     }
 
+    &.-small,
     &.-medium,
     &.-large {
       padding: var(--base-4) var(--base-6); // 16px 24px
@@ -599,11 +600,6 @@
         color: var(--color-action-secondary-hover);
         transition: var(--transition-action-in);
       }
-    }
-
-    &:not(.-medium),
-    &:not(.-large) {
-      // border: 5px solid red!important;
     }
   }
 
