@@ -184,13 +184,13 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a06fd4ab-835d-4487-ab3d-7db24b84ace8 # Text: Body
-            instructions: null
+            fieldUid: 0d357d0b-c5e8-40b2-b64e-db3936f20bfd # Text: Post Import
+            instructions: 'Imported content only.'
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9acd3fb1-f061-493d-b89a-8a0edf1ae19f
+            uid: 77627934-26e4-4ba0-959b-4c877d14cca3
             userCondition: null
             warning: null
             width: 100
