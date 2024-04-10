@@ -725,7 +725,7 @@
     .Media {
       &:not(.-full) {
         display: grid;
-        grid-template-columns: 1.75fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
         gap: var(--base-5);
         
         .Media-caption {
