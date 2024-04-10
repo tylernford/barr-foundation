@@ -453,6 +453,10 @@
     color: var(--color-grey-150);
     @include getType('caption-axiforma');
 
+    .Media-imageWrapper {
+      position: relative;
+    }
+
     img {
       width: 100%;
     }
@@ -472,11 +476,56 @@
         font-style: italic;
       }
     }
+
+    .FancyAttribution {
+      inset: auto 0 0 0;
+      padding: var(--base-6);
+      position: absolute;
+      background-color: hsla(174, 97%, 13%, .5);
+
+      // Decorative triangle in top left corner
+      &::after {
+        content: '';
+        top: 0;
+        left: 0;
+        width: var(--base-6);
+        height: var(--base-6);
+        position: absolute;
+        background: linear-gradient(to bottom right, var(--color-teal-100) 0%, var(--color-teal-100) 50%, transparent 50%, transparent 100%);
+      }
+
+      // Caption
+      p {
+        max-width: 40em;
+        display: block;
+        color: var(--color-grey-25);
+        @include getType('detail-axiforma');
+        font-size: 12px;
+
+        a {
+          color: inherit;
+          transition: text-decoration-color var(--transition) ease-in;
+
+          @media (hover: hover) {
+            &:hover {
+              text-decoration-color: transparent;
+              transition: text-decoration-color var(--transition-intermediate) ease-out;
+            }
+          }
+          
+          &:focus-visible {
+            outline: 0;
+            outline: var(--outline-width) solid var(--color-focus);
+            outline-offset: var(--outline-offset);
+            transition: text-decoration-color var(--transition-intermediate) ease-out;
+          }
+        }
+      }
+    }
   }
 
   // Videos
   .u-fluid-iframe-inner {
-    margin-inline-start: -46px;
     padding-bottom: 56.25%;
     height: 0;
     position: relative;
@@ -633,10 +682,19 @@
     }
   }
 
+  // HR
+  hr {
+    margin: 1.75em 0;
+    max-width: 840px;
+    border-top: 1px solid gray;
+    color: transparent;
+  }
+
 
   // Hide
-  .EmailSignup {
-    display: none;
+  .EmailSignup,
+  .twitter-tweet {
+    display: none!important;
   }
 
 
@@ -644,16 +702,6 @@
     ul,
     ol {
       margin-inline-end: 4em;
-    }
-
-    .u-fluid-iframe-inner {
-      margin-inline-start: -52px;
-    }
-  }
-
-  @include breakpoint(sm-md) {
-    .u-fluid-iframe-inner {
-      margin-inline-start: -66px;
     }
   }
 
@@ -674,7 +722,7 @@
     .Media {
       &:not(.-full) {
         display: grid;
-        grid-template-columns: 1.75fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
         gap: var(--base-5);
         
         .Media-caption {
@@ -685,10 +733,6 @@
       &.-full {
         max-width: 740px;
       }
-    }
-
-    .u-fluid-iframe-inner {
-      margin-inline-start: -72px;
     }
 
     .DoughnutChart {  
