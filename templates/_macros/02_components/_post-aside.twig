@@ -16,6 +16,7 @@
         {% set authorImage = postAuthor.assetImage.one %}
         {% set authorName  = postAuthor.title %}
         {% set authorJob   = postAuthor.textJob %}
+        {% set authorOrg   = postAuthor.textOrganization %}
         {% set email       = postAuthor.contactEmail %}
         {% set linkedin    = postAuthor.contactLinkedIn %}
     
@@ -35,11 +36,14 @@
         <li class="post-aside__author">
           <a class="author__info" href="{{ authorUrl }}">
             {% if authorImage|length %}
-              {{ images.image(authorImage, '240', '1/1', '', false) }}
+              {{ images.image(authorImage, '480', '1/1', '', false) }}
             {% endif %}
-            {{ postAuthor }}
-            {% if authorJob|length %}
-              <span>{{ authorJob }}</span>
+            <span class="author__name">{{ postAuthor }}</span>
+            {% if authorJob|length or authorOrg|length %}
+              <span class="author__job">
+                {{ authorJob }}
+                {{ authorOrg|length ? '<br>' }}{{ authorOrg }}
+              </span>
             {% endif %}
           </a>
 
