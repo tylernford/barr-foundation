@@ -1,0 +1,125 @@
+{# =======================================
+  Macro: Post Aside Component
+==========================================
+  Params:
+    - postAuthors (required)
+======================================= #}
+
+{% macro aside(postAuthors) %}
+  {% import '_macros/01_elements/_actions' as actions %}
+  {% import '_macros/01_elements/_image' as images %}
+
+  <aside class="post-aside">
+    <ul class="post-aside__authors">
+      {% for postAuthor in postAuthors %}
+        {% set authorUrl   = postAuthor.url %}
+        {% set authorImage = postAuthor.assetImage.one %}
+        {% set authorName  = postAuthor.title %}
+        {% set authorJob   = postAuthor.textJob %}
+        {% set email       = postAuthor.contactEmail %}
+        {% set linkedin    = postAuthor.contactLinkedIn %}
+    
+        {% set twitter     = postAuthor.contactTwitter %}
+        {% set instagram   = postAuthor.contactInstagram %}
+        {% set facebook    = postAuthor.contactFacebook %}
+        {% set website     = postAuthor.contactWebsite %}
+        {% set social    =
+          linkedin|length ? true :
+          twitter|length ? true :
+          instagram|length ? true :
+          facebook|length ? true :
+          website|length ? true :
+          false
+        %}
+
+        <li class="post-aside__author">
+          <a class="author__info" href="{{ authorUrl }}">
+            {% if authorImage|length %}
+              {{ images.image(authorImage, '240', '1/1', '', false) }}
+            {% endif %}
+            {{ postAuthor }}
+            {% if authorJob|length %}
+              <span>{{ authorJob }}</span>
+            {% endif %}
+          </a>
+
+          {% if email|length or social %}
+            <ul class="author__contact">
+              {# Email #}
+              {% if email|length %}
+                <li class="contact__link">
+                  {% set emailAttributes = {
+                    type: 'author-contact', isReversed: false,
+                    icon: 'email', iconOnly: false,
+                    text: 'Email', url: 'mailto:' ~ email,
+                    linkType: 'external', target: '_blank'
+                  } %}
+                  {{ actions.action(emailAttributes) }}
+                </li>
+              {% endif %}
+
+              {# Social #}
+              {% if social %}
+                {% if linkedin|length %}
+                  <li class="contact__link">
+                    {% set emailAttributes = {
+                      type: 'author-contact', isReversed: false,
+                      icon: 'social-linkedin', iconOnly: false,
+                      text: 'LinkedIn', url: linkedin,
+                      linkType: 'external', target: '_blank'
+                    } %}
+                    {{ actions.action(emailAttributes) }}
+                  </li>
+                {% endif %}
+                {% if twitter|length %}
+                  <li class="contact__link">
+                    {% set emailAttributes = {
+                      type: 'author-contact', isReversed: false,
+                      icon: 'social-twitter', iconOnly: false,
+                      text: 'Twitter', url: twitter,
+                      linkType: 'external', target: '_blank'
+                    } %}
+                    {{ actions.action(emailAttributes) }}
+                  </li>
+                {% endif %}
+                {% if instagram|length %}
+                  <li class="contact__link">
+                    {% set emailAttributes = {
+                      type: 'author-contact', isReversed: false,
+                      icon: 'social-instagram', iconOnly: false,
+                      text: 'Instagram', url: instagram,
+                      linkType: 'external', target: '_blank'
+                    } %}
+                    {{ actions.action(emailAttributes) }}
+                  </li>
+                {% endif %}
+                {% if facebook|length %}
+                  <li class="contact__link">
+                    {% set emailAttributes = {
+                      type: 'author-contact', isReversed: false,
+                      icon: 'social-facebook', iconOnly: false,
+                      text: 'Facebook', url: facebook,
+                      linkType: 'external', target: '_blank'
+                    } %}
+                    {{ actions.action(emailAttributes) }}
+                  </li>
+                {% endif %}
+                {% if website|length %}
+                  <li class="contact__link">
+                    {% set emailAttributes = {
+                      type: 'author-contact', isReversed: false,
+                      icon: 'link-out', iconOnly: false,
+                      text: 'Website', url: website, linkType:
+                      'external', target: '_blank'
+                    } %}
+                    {{ actions.action(emailAttributes) }}
+                  </li>
+                {% endif %}
+              {% endif %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+{% endmacro %}
