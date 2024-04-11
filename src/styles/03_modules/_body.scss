@@ -397,6 +397,43 @@
   h4 + blockquote {
     margin-block-start: 1em;
   }
+
+  // Inline Tweet
+  .InlineTweet {
+    .InlineTweet-content {
+      background-color: var(--color-teal-25-35);
+    }
+
+    .InlineTweet-cta {
+      margin-inline-start: var(--base);
+      padding: 2px 10px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: var(--radius-action);
+      @include getType('detail-axiforma');
+      background-color: var(--color-teal-100);
+      color: var(--color-grey-25);
+      text-decoration: none;
+      transition: all var(--transition) ease-in;
+      
+      svg {
+        margin-inline-end: var(--base-2);
+        width: var(--icon-size-m);
+        height: var(--icon-size-m);
+        color: inherit;
+        fill: currentColor;
+      }
+
+      @media (hover: hover){
+        &:hover {
+          box-shadow: var(--shadow-action);
+          background-color: var(--color-citrus-100);
+          color: var(--color-navy-100);
+          transition: all var(--transition-intermediate) ease-out;
+        }
+      }
+    }
+  }
   
   // Blockquote
   blockquote {
@@ -451,7 +488,7 @@
   
   // Images
   .Media {
-    padding-block: var(--base-9) var(--base-16);
+    margin-block: var(--base-12);
     max-width: 100%;
     color: var(--color-grey-150);
     @include getType('caption-axiforma');
@@ -541,6 +578,26 @@
       width: 100%;
       display: block;
       margin: 0 auto;
+    }
+  }
+  div[style*="padding:56.25% 0 0 0;"] {
+    width: 100%;
+    max-width: 740px;
+    padding: 0 0 45.66% 0!important;
+    height: 0;
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @include breakpoint(xl) {
+      padding-bottom: 33.7% !important;
     }
   }
 
@@ -692,7 +749,9 @@
 
   // Hide
   .EmailSignup,
-  .twitter-tweet {
+  .twitter-tweet,
+  ul .Media,
+  ol .Media {
     display: none!important;
   }
 
@@ -752,15 +811,16 @@
 // Media Grid
 .post-body .MediaGrid,
 .MediaGrid {
-  margin: 0;
-  padding-block: var(--base-9) var(--base-16);
-  max-width: 840px;
   display: grid;
   grid-template-columns: 1fr;
   list-style: none;
 
   .MediaGrid-item {
     margin: 0;
+
+    .Modal {
+      display: none;
+    }
   }
 
   .MediaGrid-link {
@@ -829,8 +889,25 @@
   }
 
   @include breakpoint(lg) {
+    grid-template-columns: 400px 400px;
+
     .MediaGrid-link {
       padding: var(--base-9);
     }
   }
+}
+
+.MediaGrid {
+  margin-block: var(--neg-base-6) var(--base-12);
+  @include container-inner;
+
+  @include breakpoint(lg) {
+    grid-template-columns: 400px 400px;
+  }
+}
+
+.post-body .MediaGrid {
+  margin: 0;
+  padding: var(--base-9) 0 var(--base-16) 0;
+  max-width: 840px;
 }
