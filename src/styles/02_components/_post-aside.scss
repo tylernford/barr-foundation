@@ -1,0 +1,57 @@
+/* _post-aside.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Post Aside
+------------------------------------------------------------------------ */
+
+.post-aside {
+  padding-block-start: var(--base-9);
+  width: 250px;
+
+  .post-aside__authors {
+    margin: 0;
+    display: grid;
+    gap: var(--base-8);
+
+    .author__info {
+      width: 200px;
+      display: block;
+      color: var(--color-teal-100);
+      @include getType('caption-axiforma');
+      text-decoration-color: transparent;
+      
+      span {
+        display: block;
+        color: var(--color-navy-50);
+        @include getType('detail-axiforma');
+      }
+    }
+
+    .image {
+      margin: 0 0 var(--base-2) 0;
+      // width: 176px;
+      width: 200px;
+      aspect-ratio: 1 / 1;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+  
+      img {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+
+    .author__contact {
+      margin-block-start: var(--base);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--base-3);
+    }
+  }
+}

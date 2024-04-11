@@ -267,6 +267,71 @@
             }
         }
     }
+
+
+    /* ---------------------------------------------------------------------
+    Author Contact
+    ------------------------------------------------------------------------ */
+    &--author-contact {
+        padding: var(--base) 0;
+        position: relative;
+        color: var(--color-action-primary);
+        font-size: 10px;
+        transition: var(--transition-action-out);
+
+        &::after {
+            content: '';
+            inset: auto 0 0 0;
+            height: 1px;
+            position: absolute;
+            background-color: transparent;
+            transition: var(--transition-action-out);
+        }
+
+        > * {
+            position: relative;
+        }
+
+        .action__icon {
+            margin: -1px 0 0 4px;
+            width: 14px;
+            height: 14px;
+        }
+
+        @media (hover: hover){
+            &:hover {
+                color: var(--color-action-secondary-hover);
+                transition: var(--transition-action-in);
+                
+                &::after {
+                    background-color: var(--color-action-secondary-hover);
+                    transition: var(--transition-action-in);
+                }
+
+                // Without text
+                &[data-icon-only=true] {
+                    color: var(--color-action-secondary);
+                    
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &:focus-visible {
+            color: var(--color-action-secondary-hover);
+            outline: 0;
+            outline: var(--outline-width) solid var(--color-focus);
+            outline-offset: var(--outline-offset);
+            transition: var(--transition-action-in);
+
+            &::after {
+                background-color: var(--color-action-secondary-hover);
+                transition: var(--transition-action-in);
+            }
+        }
+    }
 }
 
 @mixin showAudioIcon {

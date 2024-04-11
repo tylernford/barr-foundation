@@ -8,6 +8,7 @@ News & Insights Interior template
 {% extends '_layouts/_base' %}
 
 {% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/02_components/_post-aside' as postAside %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
 {% import "_macros/03_modules/_text.twig" as modules %}
@@ -46,27 +47,45 @@ News & Insights Interior template
         {{ sprig('sprig/_sprig-news-grid', { newsType: source, limit: 12 }) }}
 
     {% else %}
+        {# Set authors #}
+        {% set authors = entry.entriesTeam %}
+        {% set postAuthors = [] %}
+        {% for author in authors %}
+            {% set postAuthors = postAuthors|merge([author]) %}
+        {% endfor %}
+        {% set authorDetails = [] %}
+
         {% set config  = {
             'content': entry,
             'variant': 'body'
         } %}
-        <section class="blog-post">
-            {# CMS Post #}
-            {% if entry.blockBody|length %}
-                {{ modules.default(config) }}
-
-            {# Imported post #}
-            {% else %}
-                <div class="blockBody">
-                    <div class="blockBody__intro">
-                        {{ entry.textDescription }}
-                    </div>
-                </div>
-            
-                <div class="post-body">
-                    {{ entry.textPostImport|raw }}
-                </div>
+        <section class="blog-post"{{ postAuthors|length ? ' data-authors=true' }}>
+            {# Authors Aside #}
+            {% if postAuthors|length %}
+                {{ postAside.aside(postAuthors) }}
             {% endif %}
+
+            {# Body #}
+            <div>
+                {# CMS Post #}
+                {% if entry.blockBody|length %}
+                    {{ modules.default(config) }}
+
+                {# Imported post #}
+                {% else %}
+                    <div class="blockBody">
+                        <div class="blockBody__intro">
+                            {{ entry.textDescription }}
+                        </div>
+                    </div>
+                
+                    <div class="post-body">
+                        {{ entry.textPostImport|raw }}
+                    </div>
+                {% endif %}
+            </div>
+
+
         </section>
     {% endif %}
 {% endblock %}
