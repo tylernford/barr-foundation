@@ -15,7 +15,8 @@
   &[data-authors="true"] {
     @include container-inner;
     padding-inline: 0!important;
-    display: grid;
+    display: flex;
+    flex-direction: column-reverse;
 
 
     @include breakpoint(lg) {
