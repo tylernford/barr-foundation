@@ -44,20 +44,27 @@
     }
   }
 
-  // Intro
-  .blockBody__intro {
+  // Intro & Paragraph
+  .blockBody__intro,
+  .blockBody__paragraph {
     @include container-inner;
     padding-block: var(--base-6);
+
+    h3 {
+      &:not(:first-child) {
+        margin-block-start: 2em;
+      }
+
+      @include getType('h5-axiforma');
+      line-height: 1.55;
+    }
+  }
+  // Intro
+  .blockBody__intro {
     @include getType('body');
     
     h3 {
       margin-block-end: .25em;
-
-      &:not(:first-child) {
-        margin-block-start: 2em;
-      }
-      
-      @include getType('h5-axiforma');
     }
 
     p {
@@ -79,8 +86,6 @@
 
   // Paragraph
   .blockBody__paragraph {
-    @include container-inner;
-    padding-block: var(--base-6);
     @include getType('caption-messina');
     font-weight: 300;
 
@@ -90,14 +95,6 @@
     
     > * {
       max-width: 37em;
-    }
-
-    h3 {
-      &:not(:first-child) {
-        margin-block-start: 2em;
-      }
-
-      @include getType('h5-axiforma');
     }
 
     h3 + ul,
