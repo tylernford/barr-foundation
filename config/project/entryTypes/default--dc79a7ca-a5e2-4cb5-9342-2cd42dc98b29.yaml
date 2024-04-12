@@ -5,6 +5,26 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            elementCondition: null
+            fieldUid: 90142623-6069-4dfa-8701-8e8eb2de1caf # ID: Blog Post
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb37d0ea-bdb6-4612-87bd-7ec08295239c
+            userCondition:
+              class: craft\elements\conditions\users\UserCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\users\AdminConditionRule
+                  uid: 456fdf7a-99a6-468f-87da-5cf456efe973
+                  value: true
+              elementType: craft\elements\User
+              fieldContext: global
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -30,27 +50,7 @@ fieldLayouts:
             uid: 7023afbd-85ac-4c95-9c4c-d0eb403603b9
             userCondition: null
             warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 90142623-6069-4dfa-8701-8e8eb2de1caf # ID: Blog Post
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: fb37d0ea-bdb6-4612-87bd-7ec08295239c
-            userCondition:
-              class: craft\elements\conditions\users\UserCondition
-              conditionRules:
-                -
-                  class: craft\elements\conditions\users\AdminConditionRule
-                  uid: 456fdf7a-99a6-468f-87da-5cf456efe973
-                  value: true
-              elementType: craft\elements\User
-              fieldContext: global
-            warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
             fieldUid: d65ee27b-0934-4348-92aa-2a30b9a64e84 # Featured
