@@ -33,6 +33,18 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
+            fieldUid: d65ee27b-0934-4348-92aa-2a30b9a64e84 # Featured
+            instructions: 'Toggle if this Grantee should appear in the Featured Grantees carousel on the Process & Inquires page.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4983a46f-eea9-43eb-8ee9-16520f50d094
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
             fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
             instructions: null
             label: null
@@ -42,7 +54,7 @@ fieldLayouts:
             uid: 6eab2348-3a49-45b4-8b75-80350d63467d
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             elementCondition: null
             fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description

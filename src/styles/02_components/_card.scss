@@ -594,6 +594,12 @@
 
   // Grantee
   &.cardItem--grantee {
+    .cardItem__wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
     .cardItem__label {
       color: var(--color-card-text--tertiary);
     }
@@ -637,6 +643,77 @@
       @include breakpoint(md) {
         .cardItem__heading {
           @include getType('h3-axiforma');
+        }
+
+        .cardItem__summary {
+          @include getType('body');
+        }
+      }
+    }
+
+    // Featured
+    &[data-variant="featured"] {
+      @include breakpoint(md) {
+        padding: 0;
+  
+        .cardItem__inner {
+          flex-direction: row-reverse;
+        }
+  
+        .cardItem__media {
+          margin-block-end: 0;
+          width: 50%;
+  
+          .image {
+            inset: 0;
+            aspect-ratio: auto;
+            position: absolute;
+          }
+        }
+  
+        .cardItem__wrapper {
+          padding: var(--base-7) var(--base-6);
+          width: 100%;
+        }
+
+        .cardItem__media + .cardItem__wrapper {
+          width: 50%;
+        }
+
+        .cardItem__summary {
+          margin-block-end: var(--base-7);
+        }
+      }
+  
+      @include breakpoint(lg) {
+        .cardItem__wrapper {
+          padding: var(--base-11) var(--base-10);
+        }
+
+        .cardItem__heading {
+          @include getType('h4-axiforma');
+        }
+
+        .cardItem__details {
+          margin-block-end: var(--base-7);
+        }
+
+        .cardItem__summary {
+          margin-block-end: var(--base-7);
+        }
+      }
+
+      @include breakpoint(xl) {
+        .cardItem__wrapper {
+          padding: var(--base-12) var(--base-16) var(--base-14) var(--base-12);
+        }
+
+        .cardItem__heading {
+          @include getType('h3-axiforma');
+        }
+
+        .cardItem__label {
+          margin-block-end: var(--base-5);
         }
 
         .cardItem__summary {
@@ -874,6 +951,7 @@
       color: var(--color-card-text--quaternary);
       @include getType('caption-axiforma');
     }
+
     .details {
       margin-block-start: 0;
     }
@@ -913,6 +991,82 @@
 
       .cardItem__summary {
         margin-block-end: var(--base-8);
+      }
+    }
+
+    &[data-variant="featured"] {
+      width: 100%;
+      
+      .cardItem__published-date,
+      .cardItem__tags {
+        display: none;
+      }
+
+      .cardItem__actions {
+        .cardItem__action {
+          margin-block-start: 0;
+        }
+      }
+
+
+      @include breakpoint(md) {
+        padding: 0;
+  
+        .cardItem__inner {
+          flex-direction: row-reverse;
+        }
+  
+        .cardItem__media {
+          margin-block-end: 0;
+          width: 50%;
+  
+          .image {
+            inset: 0;
+            aspect-ratio: auto;
+            position: absolute;
+          }
+        }
+  
+        .cardItem__wrapper {
+          padding: var(--base-7) var(--base-6);
+          width: 50%;
+        }
+      }
+  
+      @include breakpoint(lg) {
+        .cardItem__wrapper {
+          padding: var(--base-11) var(--base-10);
+        }
+
+        .cardItem__heading {
+          @include getType('h4-axiforma');
+        }
+
+        .cardItem__details {
+          margin-block-end: var(--base-7);
+        }
+
+        .cardItem__summary {
+          margin-block-end: var(--base-7);
+        }
+      }
+
+      @include breakpoint(xl) {
+        .cardItem__wrapper {
+          padding: var(--base-12) var(--base-16) var(--base-14) var(--base-12);
+        }
+
+        .cardItem__heading {
+          @include getType('h3-axiforma');
+        }
+
+        .cardItem__label {
+          margin-block-end: var(--base-5);
+        }
+
+        .cardItem__summary {
+          @include getType('body');
+        }
       }
     }
   }
@@ -1101,6 +1255,7 @@
     }
   }
 }
+
 .cardRow[data-columns="3"] {
   .cardItem {
     &.cardItem--grantee,

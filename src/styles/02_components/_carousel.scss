@@ -81,7 +81,7 @@
       background-color: transparent;
       color: var(--color-carousel--primary);
       cursor: pointer;
-      transition: all color var(--transition) ease-in;
+      transition: var(--transition-out);
 
       span {
         @include visuallyHide;
@@ -104,7 +104,7 @@
           background-color: var(--color-carousel--hover-background);
           color: var(--color-carousel--hover);
           box-shadow: var(--shadow-action);
-          transition: all var(--transition-intermediate) ease-out;
+          transition: var(--transition-in);
         }
       }
 

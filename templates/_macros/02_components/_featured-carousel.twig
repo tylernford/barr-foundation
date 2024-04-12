@@ -1,0 +1,62 @@
+{# _macros/02_components/_featured_carousel.twig #}
+{% macro carousel(type, isReversed) %}
+    {% set featuredCards = craft.entries().section(type).featured(true) %}
+
+    {% if featuredCards|length %}
+        <section class="featured-carousel" data-is-reversed="{{ isReversed == true ? 'true' : 'false' }}">
+            {% if featuredCards|length > 1 %}
+                <div class="carousel" data-variant="featured">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            {{ _self.cards(featuredCards, type)}}
+                        </div>
+
+                        {# ---  Controls  --- #}
+                        <div class="carousel__controls">
+                            {# Previous #}
+                            <button class="controls__button controls__prev | swiper-button-prev">
+                                <span>Previous slide</span>
+                                <svg>
+                                    <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+                                </svg>
+                            </button>
+
+                            {# Pagination #}
+                            <div class="controls__pagination"></div>
+
+                            {# Next #}
+                            <button class="controls__button controls__next | swiper-button-next">
+                                <span>Next slide</span>
+                                <svg>
+                                    <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                {{ _self.cards(featuredCards, type)}}
+            {% endif %}
+        </section>
+    {% endif %}
+
+
+    {% macro cards(featuredCards, type) %}
+        {% import '_macros/02_components/_card' as cards %}
+
+        {% for featuredCard in featuredCards %}
+            <div class="slide | swiper-slide">
+                {% if type == 'blog' %}
+                    {{ cards.post(featuredCard, 'featured') }}
+                {% elseif type == 'grantees' %}
+                    {% set granteeCardConfig = {
+                        'grantee': featuredCard,
+                        'variant': 'featured',
+                        'label': 'Featured Grantee'
+                    } %}
+                    {{ cards.grantee(granteeCardConfig) }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% endmacro %}
+{% endmacro %}

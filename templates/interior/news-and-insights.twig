@@ -8,6 +8,7 @@ News & Insights Interior template
 {% extends '_layouts/_base' %}
 
 {% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/02_components/_featured-carousel' as featuredCarousel %}
 {% import '_macros/02_components/_post-aside' as postAside %}
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
@@ -43,7 +44,11 @@ News & Insights Interior template
 
     {% elseif entry.title == 'Blog' or entry.title == 'Newsroom' %}
         {% set source = entry.title == 'Blog' ? 'blog' : 'newsroom' %}
+
+        {# Featured Carousel #}
+        {{ featuredCarousel.carousel(source, true) }}
         
+        {# Posts Grid #}
         {{ sprig('sprig/_sprig-news-grid', { newsType: source, limit: 12 }) }}
 
     {% else %}

@@ -1,0 +1,77 @@
+/* _featured-carousel.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Featured Carousel
+  See templates/_macros/02_components/_featured-carousel.twig for markup
+------------------------------------------------------------------------ */
+
+.featured-carousel {
+  @include container;
+  padding-block-end: var(--base-12);
+  position: relative;
+
+  > * {
+    position: relative;
+  }
+
+  @include breakpoint(md) {
+    padding-inline: 0;
+  }
+
+  @include breakpoint(lg) {
+		padding-inline: var(--base-12);
+	}
+
+	@include breakpoint(xl) {
+		padding-inline: var(--base-18);
+	}
+
+  .carousel {
+    padding: 0;
+  
+    .swiper {
+      padding-block-end: var(--base-3);
+      overflow: hidden;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .slide {
+      .cardItem {
+        border: none;
+      }
+    }
+  }
+
+  &[data-is-reversed="true"] {
+    --color-carousel--primary: var(--color-teal-150);
+
+    &::before {
+      content: '';
+      inset: 0 0 0 -50vw;
+      width: 200vw;
+      position: absolute;
+      background-color: var(--color-carousel--primary);
+    }
+
+    .carousel {
+      --color-carousel--secondary: var(--color-grey-25);
+
+      .carousel__controls {
+        .controls__button {
+          color: var(--color-carousel--secondary);
+    
+          // Hover
+          @media (hover: hover) {
+            &:hover {
+              color: var(--color-carousel--hover);
+            }
+          }
+        }
+      }
+    }
+  }
+}

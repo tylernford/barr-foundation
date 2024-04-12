@@ -7,6 +7,7 @@ Grantmaking nterior template
 {% extends '_layouts/_base' %}
 
 {% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/02_components/_featured-carousel' as featuredCarousel %}
 {% import '_macros/03_modules/_opener' as openers %}
 
 {% block content %}
@@ -30,12 +31,19 @@ Grantmaking nterior template
     {% set builder = entry.builderCommon ?? null %}
 
     {% if builder %}
+        {% set isOurProcess = entry.id == 1309 ? true : false %}
+
         <div class="page-wrapper">
             <div class="angle">
                 {{ angles.topLarge() }}
             </div>
                 
             <div class="background"></div>
+
+            {# Featured Carousel #}
+            {% if isOurProcess %}
+                {{ featuredCarousel.carousel('grantees', false) }}
+            {% endif %}
 
             {% include '_partials/_builder-common.twig' with {'builder': builder} %}
         </div>
