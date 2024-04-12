@@ -8,6 +8,7 @@ Homepage template
 {% extends '_layouts/_base' %}
 
 {% import '_macros/02_components/_assets' as assets %}
+{% import '_macros/02_components/_sitemap' as sitemap %}
 {% import '_macros/03_modules/_opener' as openers %}
 
 {% block content %}
@@ -15,11 +16,14 @@ Homepage template
   {% set opener = homepage.openerHomepage %}
   {% set builder = homepage.builderHome %}
 
-  {# HOMEPAGE OPENER #}
+  {# Opener #}
   {{ openers.home(opener) }}
 
-  {# HOMEPAGE BUILDER #}
+  {# Builder #}
   {% if builder %}
     {% include '_partials/_builder-homepage.twig' with {'builder': builder} %}
   {% endif %}
+
+  {# Sitemap #}
+  {{ sitemap.sitemap() }}
 {% endblock %}
