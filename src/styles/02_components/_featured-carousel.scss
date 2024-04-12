@@ -7,19 +7,9 @@
 ------------------------------------------------------------------------ */
 
 .featured-carousel {
-  --color-carousel--primary: var(--color-teal-150);
-
-  padding-block-end: var(--base-12);
   @include container;
+  padding-block-end: var(--base-12);
   position: relative;
-
-  &::before {
-    content: '';
-    inset: 0 0 0 -50vw;
-    width: 200vw;
-    position: absolute;
-    background-color: var(--color-carousel--primary);
-  }
 
   > * {
     position: relative;
@@ -34,7 +24,54 @@
 	}
 
 	@include breakpoint(xl) {
-    padding-block-end: var(--base-14);
 		padding-inline: var(--base-18);
 	}
+
+  .carousel {
+    padding: 0;
+  
+    .swiper {
+      padding-block-end: var(--base-3);
+      overflow: hidden;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .slide {
+      .cardItem {
+        border: none;
+      }
+    }
+  }
+
+  &[data-is-reversed="true"] {
+    --color-carousel--primary: var(--color-teal-150);
+
+    &::before {
+      content: '';
+      inset: 0 0 0 -50vw;
+      width: 200vw;
+      position: absolute;
+      background-color: var(--color-carousel--primary);
+    }
+
+    .carousel {
+      --color-carousel--secondary: var(--color-grey-25);
+
+      .carousel__controls {
+        .controls__button {
+          color: var(--color-carousel--secondary);
+    
+          // Hover
+          @media (hover: hover) {
+            &:hover {
+              color: var(--color-carousel--hover);
+            }
+          }
+        }
+      }
+    }
+  }
 }

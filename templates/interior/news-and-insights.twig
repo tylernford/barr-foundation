@@ -46,7 +46,7 @@ News & Insights Interior template
         {% set source = entry.title == 'Blog' ? 'blog' : 'newsroom' %}
 
         {# Featured Carousel #}
-        {{ featuredCarousel.carousel(source) }}
+        {{ featuredCarousel.carousel(source, true) }}
         
         {# Posts Grid #}
         {{ sprig('sprig/_sprig-news-grid', { newsType: source, limit: 12 }) }}

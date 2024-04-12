@@ -216,48 +216,6 @@
       }
     }
   }
-
-  &[data-variant="featured"] {
-    --color-carousel--secondary: var(--color-grey-25);
-    --color-carousel--background: var(--color-teal-150);
-
-    padding: 0;
-
-    .swiper {
-      &::before {
-        inset: -1px auto var(--neg-base) -100vw;
-        background-color: var(--color-carousel--background);
-      }
-
-      &::after {
-        content: '';
-        inset: -1px 0 var(--neg-base) 100%;
-        width: 100vw;
-        position: absolute;
-        background-color: var(--color-carousel--background);
-        z-index: 10;
-      }
-    }
-
-    .slide {
-      .cardItem {
-        border: none;
-      }
-    }
-
-    .carousel__controls {
-      .controls__button {
-        color: var(--color-carousel--secondary);
-
-        // Hover
-        @media (hover: hover) {
-          &:hover {
-            color: var(--color-carousel--hover);
-          }
-        }
-      }
-    }
-  }
 }
 
 .carousel + .cardItem--action {
