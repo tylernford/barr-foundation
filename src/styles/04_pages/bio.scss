@@ -64,20 +64,24 @@ body[data-theme-color="marigold"] {
       inset: 0 auto 0 auto;
       inset: 0;
       margin: 0 auto;
-      width: calc(100vw - var(--base-10));
+      width: calc(100vw - var(--base-14));
       max-width: 1368px;
       position: absolute;
       background-color: var(--color-grey-25);
   
       @include breakpoint(md) {
-        width: calc(100vw - var(--base-18));
+        width: calc(100vw - var(--base-22));
       }
   
       @include breakpoint(lg) {
-        width: calc(100vw - var(--base-24));
+        width: calc(100vw - var(--base-28));
+      }
+
+      @include breakpoint(xl) {
+        width: calc(100vw - var(--base-40));
       }
   
-      @include breakpoint(xl) {
+      @include breakpoint(xxl) {
         width: calc(100vw - var(--base-36));
       }
     }
