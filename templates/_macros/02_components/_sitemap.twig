@@ -1,0 +1,97 @@
+{% macro sitemap() %}
+    <section class="sitemap">
+        <div class="sitemap__inner">
+            <h2 class="sitemap__heading">Sitemap</h2>
+            <div class="sitemap__link-groups"> 
+                <div class="sitemap__link-group"> 
+                    <h3 class="link-group__heading">Program Areas</h3>
+                    <ul class="link-group__menu">
+                        <li>
+                            <a class="link-group__action" href="#">Arts &amp; Creativity</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Climate</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Education</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Sector Effectiveness</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Barr Fellowship</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Special Initiatives</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Archived Programs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sitemap__link-group"> 
+                    <h3 class="link-group__heading">Grantmaking</h3>
+                    <ul class="link-group__menu">
+                        <li>
+                            <a class="link-group__action" href="#">Grantmaking Process</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Grantee Database</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sitemap__link-group"> 
+                    <h3 class="link-group__heading">About Us</h3>
+                    <ul class="link-group__menu">
+                        <li>
+                            <a class="link-group__action" href="#">Our Approach</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">People</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Racial Equity</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sitemap__link-group"> 
+                    <h3 class="link-group__heading">Impact</h3>
+                    <ul class="link-group__menu">
+                        <li>
+                            <a class="link-group__action" href="#">Learning &amp; Evaluation</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sitemap__link-group"> 
+                    <h3 class="link-group__heading">News &amp; Insights</h3>
+                    <ul class="link-group__menu"> 
+                        <li>
+                            <a class="link-group__action" href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Newsroom</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">Research</a>
+                        </li>
+                        <li>
+                            <a class="link-group__action" href="#">
+                                Knowledge Center
+                                <svg class="action__icon">
+                                    <use xlink:href="{{ alias('@icon') }}link-out-20"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endmacro %}
