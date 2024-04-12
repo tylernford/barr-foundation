@@ -216,7 +216,6 @@
     {% import '_macros/01_elements/_image' as images %}
 
     {% set variant = 'variant' in config|keys ? config.variant : '' %}
-    {% set variant = variant == 'featured' ? 'large' : variant %}
 
     {% set card     = config.grantee %}
     {% set reversed = 'reversed' in config|keys ? config.reversed : false %}
@@ -240,54 +239,56 @@
                 </div>
             {% endif %}
 
-            {# Header #}
-            <header class="cardItem__header">
-                <h3 class="cardItem__heading">{{ name }}</h3>
-                {% if label %}
-                    <span class="cardItem__label">{{ label }}</span>
-                {% endif %}
-            </header>
+            <div class="cardItem__wrapper">
+                {# Header #}
+                <header class="cardItem__header">
+                    <h3 class="cardItem__heading">{{ name }}</h3>
+                    {% if label %}
+                        <span class="cardItem__label">{{ label }}</span>
+                    {% endif %}
+                </header>
 
-            {# Content #}
-            <div class="cardItem__content">
-                {# Summary #}
-                {% if summary %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
-                    </div>
-                {% endif %}
-
-                <div class="cardItem__secondary">
-                    {# Location #}
-                    {% if location|length %}
-                        {{ details.detail('location', false, location) }}
+                {# Content #}
+                <div class="cardItem__content">
+                    {# Summary #}
+                    {% if summary %}
+                        <div class="cardItem__summary">
+                            {{ summary }}
+                        </div>
                     {% endif %}
 
-                    {# Tags #}
-                    {{ tagLogic.tags(grantList)}}
-
-                    {# Actions #}
-                    <div class="cardItem__actions">
-                        {% set profileActionAttributes = {
-                            type: 'button', isReversed: reversed,
-                            icon: '', iconOnly: false,
-                            text: 'Profile', url: profile,
-                            linkType: 'entry', target: ''
-                        } %}
-                        {% set websiteActionAttributes = {
-                            type: 'link', isReversed: reversed,
-                            icon: 'link-out', iconOnly: false,
-                            text: 'Website', url: website,
-                            linkType: 'url', target: '_blank'
-                        } %}
-                        
-                        {# Profile #}
-                        {{ actions.action(profileActionAttributes) }}
-
-                        {# Website #}
-                        {% if website|length %}
-                            {{ actions.action(websiteActionAttributes) }}
+                    <div class="cardItem__secondary">
+                        {# Location #}
+                        {% if location|length %}
+                            {{ details.detail('location', false, location) }}
                         {% endif %}
+
+                        {# Tags #}
+                        {{ tagLogic.tags(grantList)}}
+
+                        {# Actions #}
+                        <div class="cardItem__actions">
+                            {% set profileActionAttributes = {
+                                type: 'button', isReversed: reversed,
+                                icon: '', iconOnly: false,
+                                text: 'Profile', url: profile,
+                                linkType: 'entry', target: ''
+                            } %}
+                            {% set websiteActionAttributes = {
+                                type: 'link', isReversed: reversed,
+                                icon: 'link-out', iconOnly: false,
+                                text: 'Website', url: website,
+                                linkType: 'url', target: '_blank'
+                            } %}
+                            
+                            {# Profile #}
+                            {{ actions.action(profileActionAttributes) }}
+
+                            {# Website #}
+                            {% if website|length %}
+                                {{ actions.action(websiteActionAttributes) }}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
