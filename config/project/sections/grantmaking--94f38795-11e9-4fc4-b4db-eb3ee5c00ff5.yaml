@@ -19,8 +19,8 @@ siteSettings:
   915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
     enabledByDefault: true
     hasUrls: true
-    template: interior/index.twig
-    uriFormat: 'grantmaking/{slug}'
+    template: interior/grantmaking.twig
+    uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null
   uid: f5489c1b-e0d5-4528-8d7e-c1ba46b923a4

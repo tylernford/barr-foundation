@@ -1,0 +1,47 @@
+fieldLayouts:
+  296992e4-affd-4bfa-b9c1-3f3d373a7317:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 36f978a7-1942-4d72-8354-0d0a24414a1e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5607450f-0564-4b66-af12-997a210cccd7
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07 # Categories: Directory Teams
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

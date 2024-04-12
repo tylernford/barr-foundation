@@ -1,0 +1,58 @@
+{# {% import '_macros/01_elements/_filtering-dropdown' as filteringDropdown %} #}
+{% import '_macros/02_components/_card' as cards %}
+
+{% set personType = craft.entries.id(personType).one() %}
+{# ---  Set filters  --- #}
+{% set teamFilters = craft.entries().section('directoryTeamsCategories') %}
+
+{% set team = team ?? 'AllTeams' %}
+
+{# {% set relatedToTeam = team|join('|') %} #}
+{% set relatedToTeam = team %}
+
+
+{% set relatedToTeamIds = [] %}
+{% for teamFilter in teamFilters %}
+  {% if teamFilter|replace(' ') in relatedToTeam %}
+    {% set relatedToTeamIds = relatedToTeamIds|merge([teamFilter.id]) %}
+  {% endif %}
+{% endfor %}
+
+{% set filterParameters = ['and'] %}
+{% set filterParameters = relatedToTeamIds ? filterParameters|merge([relatedToTeamIds]) : filterParameters %}
+{% set filterParameters = filterParameters|merge([personType]) %}
+
+{# ---  Set View  --- #}
+{% set staffViewAs = staffViewAs ?? 'grid' %}
+
+{# {% do sprig.pushUrl('?' ~ {team:relatedToTeam,staffViewAs:staffViewAs}|url_encode) %} #}
+
+{% set feed = craft.entries().section('directory').relatedTo(filterParameters).orderBy('title') %}
+
+<div class="feed-filters" data-variant="simple">
+  {% include '_partials/_filtering/_dropdown' with {
+    dropdownTitle: 'Filter by Team',
+    dropdownFiltersHandle: 'team',
+    defaultFilters: teamFilters,
+    dropdownFiltersActive: team,
+    defaultFilter: {
+      id: '',
+      title: 'All Teams',
+      value: ''
+    }
+  } %}
+
+  {% include '_partials/_filtering/_view-as' with {
+    activeView: staffViewAs,
+    viewHandle: 'staffViewAs',
+    views: ['grid','list']
+  } %}
+</div>
+
+<div class="feed">
+  <div class="feed__grid" data-grid-style="{{ staffViewAs }}">
+    {% for feedItem in feed %}
+      {{ cards.bio(feedItem) }}
+    {% endfor %}
+  </div>
+</div>

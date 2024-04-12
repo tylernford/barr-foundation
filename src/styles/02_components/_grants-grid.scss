@@ -7,8 +7,8 @@
 
 .grants-grid {
   .grants-grid__inner {
-    @include container-narrow;
-    padding-block: var(--base-9) var(--base-12);
+    @include container-inner;
+    padding-block-end: var(--base-12);
     display: grid;
     
     @for $i from 1 through 10 {
@@ -36,34 +36,9 @@
         }
       }
     }
-  }
 
-  &[data-background="true"] {
-    position: relative;
-
-    .angle {
-      inset: 0 0 auto 0;
-      position: absolute;
-      &::before {
-        content: '';
-        inset: 0 0 auto 0;
-        height: var(--base-40);
-        position: absolute;
-        background-color: var(--color-teal-150);
-      }
-  
-      svg {
-        margin-block-start: var(--base-40);
-        width: 100%;
-        height: auto;
-        display: block;
-        color: var(--color-teal-150);
-        transform: rotateY(180deg);
-      }
-    }
-
-    .grants-grid__inner {
-      position: relative;
+    &[data-grid-style="list"] {
+      grid-template-columns: 1fr;
     }
   }
 }

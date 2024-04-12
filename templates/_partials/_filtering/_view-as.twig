@@ -1,0 +1,25 @@
+{# =======================================
+  Macro: View As
+======================================= #}
+
+<fieldset class="feed-filters__fieldset">
+  <div>
+    <legend class="fieldset__legend">View As</legend>
+
+    <div class="view">
+      {% for view in views %}
+        <div class="radio">
+          <input
+            id="view--{{ view }}"
+            name="{{ viewHandle }}"
+            type="radio"
+            value="{{ view }}"
+            sprig{{ activeView == view ? ' checked' }}
+            s-swap="innerHTML show:top"
+          >
+          <label for="view--{{ view }}">{{ view|capitalize }}</label>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</fieldset>

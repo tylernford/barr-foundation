@@ -56,13 +56,6 @@
                         {{ image ? '</div>' }}
                     </div>
                 </article>
-
-            {% default %}
-                <div class="blockGeneric">
-                    <h2 class="blockGeneric-heading">This is my default card block</h2>
-                    {{ content|keys|json_encode }}
-                </div>
-
         {% endswitch %}
     {% endif %}
 {% endmacro %}
@@ -101,6 +94,8 @@
     {% set name = person.title %}
     {% set pronouns = person.textPronouns %}
     {% set jobTitle = person.textJob %}
+    {% set organization = person.textOrganization %}
+
     {% set linkAttributes = {
         type: 'link', isReversed: false,
         icon: 'arrow', iconOnly: false,
@@ -135,6 +130,7 @@
                             <p class="details__pronouns">{{ pronouns }}</p>
                         {% endif %}
                         {% if jobTitle|length %}
+                            {% set jobTitle = jobTitle ~ '<br>' ~ organization %}
                             {{ details.detail('job-title', false, jobTitle) }}
                         {% endif %}
                     </div>
@@ -175,36 +171,38 @@
                 </div>
             {% endif %}
 
-            {# Header #}
-            <header class="cardItem__header">
-                <h3 class="cardItem__heading">{{ title }}</h3>
-                {% if label|length %}
-                    <span class="cardItem__label">{{ label }}</span>
-                {% endif %}
-            </header>
+            <div class="cardItem__wrapper">
+                {# Header #}
+                <header class="cardItem__header">
+                    <h3 class="cardItem__heading">{{ title }}</h3>
+                    {% if label|length %}
+                        <span class="cardItem__label">{{ label }}</span>
+                    {% endif %}
+                </header>
 
-            {# Content #}
-            <div class="cardItem__content">
-                {# Summary #}
-                {% if summary|length %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
-                    </div>
-                {% endif %}
+                {# Content #}
+                <div class="cardItem__content">
+                    {# Summary #}
+                    {% if summary|length %}
+                        <div class="cardItem__summary">
+                            {{ summary }}
+                        </div>
+                    {% endif %}
 
-                {# Action #}
-                {% if action.url|length %}
-                    <div class="cardItem__actions">
-                        {% set actionAttributes = {
-                            type: 'button', isReversed: false,
-                            icon: 'linkType', iconOnly: false,
-                            text: action.text, url: action,
-                            linkType: action.type, target: action.target
-                        } %}
+                    {# Action #}
+                    {% if action.url|length %}
+                        <div class="cardItem__actions">
+                            {% set actionAttributes = {
+                                type: 'button', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: action.text, url: action,
+                                linkType: action.type, target: action.target
+                            } %}
 
-                        {{ actions.action(actionAttributes) }}
-                    </div>
-                {% endif %}
+                            {{ actions.action(actionAttributes) }}
+                        </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </article>
@@ -227,7 +225,6 @@
     {% set label    = 'label' in config|keys ? config.label : null %}
     {% set summary  = card.textDescription ?? card.textDescription %}
     {% set location = card.textLocation %}
-    {% set region   = 'Placeholder Region' %}
     {% set profile  = card.url %}
     {% set website  = card.contactWebsite %}
 
@@ -261,7 +258,7 @@
                 {% endif %}
 
                 <div class="cardItem__secondary">
-                    {# Location/Region #}
+                    {# Location #}
                     {% if location|length %}
                         {{ details.detail('location', false, location) }}
                     {% endif %}
@@ -378,94 +375,192 @@
     {% import '_macros/01_elements/_details' as details %}
     {% import '_macros/01_elements/_image' as images %}
 
-    {% set image = card.assetImage.one %}
-    {% set label = '' %}
-    {% set publication = card.textPublication %}
-    {% set title = card.title %}
+    {% if card.type != 'research' %}
+        {% set type  = card.type == 'externalNews' ? 'external' : 'post' %}
+        {% set image =
+            card.assetImage.one ? card.assetImage.one :
+            card.assetOpenerImage|length ? card.assetOpenerImage.one :
+            null
+        %}
+        {% set fallbackImage = siteUrl ~ 'build/images/fallback-images/news' %}
+        {% set label = type == 'external' ? 'In the News' : 'Barr News' %}
+        {% set publication = card.textPublication %}
+        {% set title = card.title %}
 
-    {# Set published date #}
-    {% set publishedDate = card.dateOnly %}
+        {# Set published date #}
+        {% set publishedDate = card.postDate %}
 
-    {# Set authors #}
-    {% set authors = card.textName %}
+        {# Set authors #}
+        {% set authors = card.entriesTeam ? card.entriesTeam : null %}
+        {% set postAuthors = [] %}
+        {% for author in authors %}
+            {% set postAuthors = postAuthors|merge([author]) %}
+        {% endfor %}
+        {% set authorDetails = [] %}
 
-    {# Set tags #}
-    {% set tagsList = [card] %}
+        {# Set tags #}
+        {% set tagsList = [card] %}
 
-    {# Set summary #}
-    {% set summary = card.textDescription %}
+        {# Set summary #}
+        {% set summary = card.textDescription %}
 
-    {# Set action #}
-    {% set action = card.actionLink %}
+        {# Set action #}
+        {% set action = card.actionLink ? card.actionLink : card %}
 
-    <article class="cardItem cardItem--generic">
-        <div class="cardItem__inner">
-            {# Image #}
-            {% if image %}
+        <article class="cardItem cardItem--generic">
+            <div class="cardItem__inner">
+                {# Image #}
                 <div class="cardItem__media">
-                    {{ images.image(image, '912', '16/9', '', false) }}
-                </div>
-            {% endif %}
-
-            {# Header #}
-            <header class="cardItem__header">
-                {% if publication|length %}                    
-                    <div>
-                        <h3 class="cardItem__publication">{{ publication }}</h3>
-                        <h4 class="cardItem__heading">{{ title }}</h4>
-                    </div>
-                {% else %}
-                    <h3 class="cardItem__heading">{{ title }}</h3>
-                {% endif %}
-                <span class="cardItem__label">In the News</span>
-            </header>
-
-            {# Content #}
-            <div class="cardItem__content">
-                {# Details #}
-                <div class="cardItem__details">
-                    {# Published date #}
-                    <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
-
-                    {# Authors #}
-                    {% if authors|length %}                    
-                        <p class="cardItem__authors">{{ authors }}</p>
+                    {% if image %}
+                        {{ images.image(image, '1280', '16/9', '', false) }}
+                    {% else %}
+                        <picture class="image">
+                            <source sizes="100vw" srcset="
+                                {{ fallbackImage }}--600.png 600w,
+                                {{ fallbackImage }}--1000.png 1000w"
+                                type="image/png">
+          
+                            <img src="{{ fallbackImage }}--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1000" height="1250">
+                        </picture>
                     {% endif %}
                 </div>
 
-                {# Summary #}
-                {% if summary|length %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
+                <div class="cardItem__wrapper">
+                    {# Header #}
+                    <header class="cardItem__header">
+                        {% if publication|length %}                    
+                            <div>
+                                <h3 class="cardItem__publication">{{ publication }}</h3>
+                                <h4 class="cardItem__heading">{{ title }}</h4>
+                            </div>
+                        {% else %}
+                            <h3 class="cardItem__heading">{{ title }}</h3>
+                        {% endif %}
+                        <span class="cardItem__label">{{ label }}</span>
+                    </header>
+
+                    {# Content #}
+                    <div class="cardItem__content">
+                        {# Details #}
+                        <div class="cardItem__details">
+                            {# Published date #}
+                            <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+
+                            {# Authors #}
+                            {% if authors|length %}                    
+                                {% for postAuthor in postAuthors %}
+                                    {# Set author details #}
+                                    {% set authorUrl = postAuthor.url %}
+                                    {% set authorImage = postAuthor.assetImage.one %}
+                                    {% set authorName = postAuthor.title %}
+
+                                    {% set authorDetails = authorDetails|merge([{
+                                        'url': authorUrl,
+                                        'img': authorImage,
+                                        'name': authorName
+                                    }]) %}
+                                {% endfor %}
+                                {{ details.detail('byline', false, authorDetails) }}
+                            {% endif %}
+                        </div>
+
+                        {# Summary #}
+                        {% if summary|length %}
+                            <div class="cardItem__summary">
+                                {{ summary }}
+                            </div>
+                        {% endif %}
+
+                        {# Actions #}
+                        <div class="cardItem__actions">
+                            {# Tags #}
+                            {% if tagsList|length %}
+                                <div class="cardItem__tags">
+                                    {{ tagLogic.tags(tagsList)}}
+                                </div>
+                            {% endif %}
+
+                            {# Action #}
+                            {% if action.url|length %}
+                                <div class="cardItem__action">
+                                    {% if type == 'external' %}
+                                        {% set actionAttributes = {
+                                            type: 'button', isReversed: false,
+                                            icon: 'linkType', iconOnly: false,
+                                            text: action.text, url: action,
+                                            linkType: action.type, target: action.target
+                                        } %}
+
+                                        {{ actions.action(actionAttributes) }}
+                                    {% elseif type == 'post' %}
+                                        {% set actionAttributes = {
+                                            type: 'button', isReversed: false,
+                                            icon: 'linkType', iconOnly: false,
+                                            text: 'Read More', url: action.url,
+                                            linkType: 'entry', target: ''
+                                        } %}
+
+                                        {{ actions.action(actionAttributes) }}
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
                     </div>
-                {% endif %}
-
-                {# Actions #}
-                <div class="cardItem__actions">
-                    {# Tags #}
-                    {% if tagsList|length %}
-                        <div class="cardItem__tags">
-                            {{ tagLogic.tags(tagsList)}}
-                        </div>
-                    {% endif %}
-
-                    {# Action #}
-                    {% if action.url|length %}
-                        <div class="cardItem__action">
-                            {% set actionAttributes = {
-                                type: 'button', isReversed: false,
-                                icon: 'linkType', iconOnly: false,
-                                text: action.text, url: action,
-                                linkType: action.type, target: action.target
-                            } %}
-
-                            {{ actions.action(actionAttributes) }}
-                        </div>
-                    {% endif %}
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
+    {% else %}
+        {% set title = card.title %}
+        {% set image = card.cardPost.assetImage.one %}
+        {% set summary = card.cardPost.textSupporting %}
+        {% set action = card.cardPost.actionLink %}
+
+        <article class="cardItem cardItem--generic">
+            <div class="cardItem__inner">
+                {# Image #}
+                {% if image %}
+                    <div class="cardItem__media">
+                        {{ images.image(image, '912', '16/9', '', false) }}
+                    </div>
+                {% endif %}
+
+                <div class="cardItem__wrapper">
+                    {# Header #}
+                    <header class="cardItem__header">
+                        <h3 class="cardItem__heading">{{ title }}</h3>
+                        <span class="cardItem__label">Research</span>
+                    </header>
+
+                    {# Content #}
+                    <div class="cardItem__content">
+                        {# Summary #}
+                        {% if summary|length %}
+                            <div class="cardItem__summary">
+                                {{ summary }}
+                            </div>
+                        {% endif %}
+
+                        {# Actions #}
+                        <div class="cardItem__actions">
+                            {# Action #}
+                            {% if action.url|length %}
+                                <div class="cardItem__action">
+                                    {% set actionAttributes = {
+                                        type: 'button', isReversed: false,
+                                        icon: 'linkType', iconOnly: false,
+                                        text: action.text, url: action,
+                                        linkType: action.type, target: action.target
+                                    } %}
+
+                                    {{ actions.action(actionAttributes) }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    {% endif %}
 {% endmacro %}
 
 
@@ -478,11 +573,15 @@
 
     {% set variant = variant ?? variant %}
     {% set url   = post.url %}
-    {% set image = post.assetImage.one %}
+    {% set image =
+        post.assetImage.one ? post.assetImage.one :
+        post.assetOpenerImage.one ? post.assetOpenerImage.one
+    %}
+    {% set fallbackImage = siteUrl ~ 'build/images/fallback-images/blog' %}
     {% set title = post.title %}
 
     {# Set published date #}
-    {% set publishedDate = post.dateOnly %}
+    {% set publishedDate = post.postDate %}
 
     {# Set authors #}
     {% set authors = post.entriesTeam %}
@@ -504,68 +603,80 @@
     <article class="cardItem cardItem--generic"{{ variant == 'large' ? ' data-variant=large'}}>
         <div class="cardItem__inner">
             {# Image #}
-            {% if image %}
-                <div class="cardItem__media">
-                    {{ images.image(image, '912', '16/9', '', false) }}
-                </div>
-            {% endif %}
-
-            {# Header #}
-            <header class="cardItem__header">
-                <h3 class="cardItem__heading">{{ title }}</h3>
-                <span class="cardItem__label">{{ variant == 'large' ? 'Featured' : 'Blog' }} Post</span>
-            </header>
-
-            {# Content #}
-            <div class="cardItem__content">
-                {# Details #}
-                <div class="cardItem__details">
-                    {# Published date #}
-                    <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
-
-                    {# Authors #}
-                    {% if postAuthors|length %}                    
-                        {% for postAuthor in postAuthors %}
-                            {# Set author image #}
-                            {% set authorImage = postAuthor.assetImage.one %}
-
-                            {# Set name #}
-                            {% set authorName = postAuthor.title %}
-
-                            {% set authorDetails = authorDetails|merge([
-                                { 'img': authorImage, 'name': authorName }
-                            ]) %}
-                        {% endfor %}
-                        {{ details.detail('byline', false, authorDetails) }}
-                    {% endif %}
-                </div>
-
-                {# Summary #}
-                {% if summary|length %}
-                    <div class="cardItem__summary">
-                        {{ summary }}
-                    </div>
+            <div class="cardItem__media">
+                {% if image %}
+                    {{ images.image(image, '1280', '16/9', '', false) }}
+                {% else %}
+                    <picture class="image">
+                        <source sizes="100vw" srcset="
+                            {{ fallbackImage }}--600.png 600w,
+                            {{ fallbackImage }}--1000.png 1000w"
+                            type="image/png">
+          
+                            <img src="{{ fallbackImage }}--480.png" alt="" loading="lazy" style="content-visibility: auto" decoding="async" width="1000" height="1250">
+                        </picture>
                 {% endif %}
+            </div>
 
-                {# Actions #}
-                <div class="cardItem__actions">
-                    {# Tags #}
-                    {% if tagsList|length %}
-                        <div class="cardItem__tags">
-                            {{ tagLogic.tags(tagsList)}}
+            <div class="cardItem__wrapper">
+                {# Header #}
+                <header class="cardItem__header">
+                    <h3 class="cardItem__heading">{{ title }}</h3>
+                    <span class="cardItem__label">Blog Post</span>
+                </header>
+
+                {# Content #}
+                <div class="cardItem__content">
+                    {# Details #}
+                    <div class="cardItem__details">
+                        {# Published date #}
+                        <time class="cardItem__published-date" datetime="{{ publishedDate|date('Y-m-d') }}">{{ publishedDate|date("M d, Y") }}</time>
+
+                        {# Authors #}
+                        {% if postAuthors|length %}                    
+                            {% for postAuthor in postAuthors %}
+                                {# Set author details #}
+                                {% set authorUrl   = postAuthor.url %}
+                                {% set authorImage = postAuthor.assetImage.one %}
+                                {% set authorName  = postAuthor.title %}
+
+                                {% set authorDetails = authorDetails|merge([{
+                                    'url': authorUrl,
+                                    'img': authorImage,
+                                    'name': authorName
+                                }]) %}
+                            {% endfor %}
+                            {{ details.detail('byline', false, authorDetails) }}
+                        {% endif %}
+                    </div>
+
+                    {# Summary #}
+                    {% if summary|length %}
+                        <div class="cardItem__summary">
+                            {{ summary }}
                         </div>
                     {% endif %}
 
-                    {# Action #}
-                    <div class="cardItem__action">
-                        {% set actionAttributes = {
-                            type: 'button', isReversed: false,
-                            icon: 'linkType', iconOnly: false,
-                            text: 'Read More', url: url,
-                            linkType: 'entry', target: ''
-                        } %}
+                    {# Actions #}
+                    <div class="cardItem__actions">
+                        {# Tags #}
+                        {% if tagsList|length %}
+                            <div class="cardItem__tags">
+                                {{ tagLogic.tags(tagsList)}}
+                            </div>
+                        {% endif %}
 
-                        {{ actions.action(actionAttributes) }}
+                        {# Action #}
+                        <div class="cardItem__action">
+                            {% set actionAttributes = {
+                                type: 'button', isReversed: false,
+                                icon: 'linkType', iconOnly: false,
+                                text: 'Read More', url: url,
+                                linkType: 'entry', target: ''
+                            } %}
+
+                            {{ actions.action(actionAttributes) }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -598,14 +709,25 @@
         {# Grant Detail Object #}
         {% set detailObj = {
             'Fiscal Sponsor': grant ? grant.textName,
-            'Award Date': grant ? grant.dateOnly|date("m/d/Y"),
+            'Award Date': grant ? grant.postDate|date("m/d/Y"),
             'Amount': grant ? grant.textAmount,
             'Term': grant ? grant.textTerm,
             'Program(s)': grant ? grant.tagsProgramAreas.all(),
             'Strategies': grant ? grant.tagsStrategies.all()
         }%}
 
-        <article class="cardItem cardItem--grant">
+        {# Theme color #}
+        {% set programArea = grant ? grant.tagsProgramAreas.one() %}
+        {% set areaColor = 'teal' %}
+        {% if programArea %}
+            {% set areaColor =
+                programArea.title == 'Arts & Creativity' ? 'green' :
+                programArea.title == 'Climate' ? 'plum' :
+                programArea.title == 'Education' ? 'marigold'
+            %}
+        {% endif %}
+
+        <article class="cardItem cardItem--grant" data-theme-color="{{ areaColor }}">
             <div class="cardItem__inner">
                 {# Header #}
                 <header class="cardItem__header">
@@ -615,28 +737,31 @@
                 
                     {# Summary #}
                     {% if description|length %}
-                        <p class="cardItem__description">
-                            {{ description }}
-                        </p>
+                        <div class="cardItem__description">
+                            <p>{{ description }}</p>
+                        </div>
                     {% endif %}
                 </header>
 
                 {# Content #}
                 <div class="cardItem__table">
                     {% for label, detail in detailObj %}
-                        <div class="table-item__tr{{ detail is iterable and detail|length ? ' table-item__tr--tags' }}">
-                            <h4 class="table-item__th">{{ label }}</h4>
-                            <div class="table-item__td">
-                                {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
-                                    N/A
-                                {% elseif detail is iterable %}
-                                    {# Tags #}
-                                    {{ details.detail('tags', false, detail) }}
-                                {% else %}
-                                    {{ detail }}{{ label == 'Term' ? ' mo.' }}
-                                {% endif %}
+                        {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                        {% else %}
+                            <div class="table-item__tr{{ detail is iterable and detail|length ? ' table-item__tr--tags' }}">
+                                <h4 class="table-item__th">{{ label }}</h4>
+                                <div class="table-item__td">
+                                    {% if detail == '' or (detail is iterable and detail|length == 0 ) %}
+                                        N/A
+                                    {% elseif detail is iterable %}
+                                        {# Tags #}
+                                        {{ details.detail('tags', false, detail) }}
+                                    {% else %}
+                                        {{ detail }}{{ label == 'Term' ? ' mo.' }}
+                                    {% endif %}
+                                </div>
                             </div>
-                        </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
 

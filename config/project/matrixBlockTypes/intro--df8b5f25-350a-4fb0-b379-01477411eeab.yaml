@@ -32,7 +32,7 @@ fields:
     settings:
       availableTransforms: ''
       availableVolumes: '*'
-      ckeConfig: bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91 # Text: Basic
+      ckeConfig: bda46391-1729-4498-a371-3870073db448 # Text: Minimal Body
       columnType: text
       defaultTransform: null
       enableSourceEditingForNonAdmins: true

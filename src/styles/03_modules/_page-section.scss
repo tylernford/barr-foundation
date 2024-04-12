@@ -4,28 +4,28 @@
 .pageSection {
   > *:first-child {
     &.blockBody {
-      margin-block-start: var(--base-12);
+      padding-block-start: var(--base-12);
 
       > *:first-child {
         &.blockBody__media {
-          margin-block-start: var(--base-20);
+          padding-block-start: var(--base-20);
         }
       }
 
       @include breakpoint(md) {
         > *:first-child {
           &.blockBody__media {
-            margin-block-start: var(--base-23);
+            padding-block-start: var(--base-23);
           }
         }
       }
   
       @include breakpoint(lg) {
-        margin-block-start: var(--base-16);
+        padding-block-start: var(--base-16);
 
         > *:first-child {
           &.blockBody__media {
-            margin-block-start: var(--base-27);
+            padding-block-start: var(--base-27);
           }
         }
       }

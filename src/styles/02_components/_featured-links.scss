@@ -39,7 +39,7 @@
 
 .featuredLinks {
   // Layout
-  @include container-narrow;
+  @include container-inner;
   padding-block: var(--base-6);
   display: grid;
   gap: 0 var(--base-5);
@@ -51,6 +51,10 @@
 
   @include breakpoint(lg) {
     gap: 0 var(--base-6);
+  }
+
+  &[data-inline="true"] {
+    padding-inline: 0;
   }
 
   // Trigger

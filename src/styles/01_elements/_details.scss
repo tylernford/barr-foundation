@@ -96,28 +96,28 @@
         }
 
         // Hover & Focus
-        @media (hover: hover) {
-          &:hover {
-            box-shadow: var(--shadow-action);
-            background-color: var(--color-details-primary);
-            color: var(--color-details-tertiary);
-            transition: all var(--transition-intermediate) ease-out;
+        // @media (hover: hover) {
+        //   &:hover {
+        //     box-shadow: var(--shadow-action);
+        //     background-color: var(--color-details-primary);
+        //     color: var(--color-details-tertiary);
+        //     transition: all var(--transition-intermediate) ease-out;
 
-            &::after {
-              border-color: transparent;
-              transition: border-color var(--transition-intermediate) ease-out;
-            }
-          }
-        }
+        //     &::after {
+        //       border-color: transparent;
+        //       transition: border-color var(--transition-intermediate) ease-out;
+        //     }
+        //   }
+        // }
 
-        // Focus
-        &:focus-visible {
-          outline: var(--outline-width) solid var(--color-focus);
-          outline-offset: var(--outline-offset);
-          background-color: var(--color-details-primary);
-          color: var(--color-details-tertiary);
-          transition: all var(--transition-intermediate) ease-out;
-        }
+        // // Focus
+        // &:focus-visible {
+        //   outline: var(--outline-width) solid var(--color-focus);
+        //   outline-offset: var(--outline-offset);
+        //   background-color: var(--color-details-primary);
+        //   color: var(--color-details-tertiary);
+        //   transition: all var(--transition-intermediate) ease-out;
+        // }
 
         &[data-program-color="green"] {
           --program-color: var(--color-program-green-100);
@@ -140,18 +140,18 @@
           }
 
           // Hover & Focus
-          @media (hover: hover) {
-            &:hover {
-              background-color: var(--program-color);
-              color: var(--color-details-tertiary);
-            }
-          }
+          // @media (hover: hover) {
+          //   &:hover {
+          //     background-color: var(--program-color);
+          //     color: var(--color-details-tertiary);
+          //   }
+          // }
 
-          // Focus
-          &:focus-visible {
-            background-color: var(--program-color);
-            color: var(--color-details-tertiary);
-          }
+          // // Focus
+          // &:focus-visible {
+          //   background-color: var(--program-color);
+          //   color: var(--color-details-tertiary);
+          // }
         }
       }
     }
@@ -165,23 +165,43 @@
       margin: var(--base-2) var(--base-6) 0 0;
       display: inline-flex;
       align-items: center;
+    }
 
-      .image {
-        margin-inline-end: var(--base-3);
-        width: 2rem; // 32px
-        aspect-ratio: 1 / 1;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        border-radius: 2px;
-    
-        img {
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          object-fit: cover;
+    a {
+      display: inline-flex;
+      align-items: flex-start;
+      color: var(--color-details-secondary);
+      text-decoration-color: transparent;
+      transition: var(--transition-out);
+
+      span {
+        margin-block-start: 6px;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-details-secondary);
+          text-decoration-color: inherit;
+          transition: var(--transition-in);
         }
+      }
+    }
+
+    .image {
+      margin-inline-end: var(--base-3);
+      width: 2rem; // 32px
+      aspect-ratio: 1 / 1;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+  
+      img {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
       }
     }
   }

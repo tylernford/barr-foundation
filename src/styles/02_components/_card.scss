@@ -152,7 +152,7 @@
       @include getType('h5-messina');
 
       strong {
-        font-weight: 400;
+        font-weight: 600;
       }
 
       i {
@@ -252,6 +252,7 @@
 
 
     // General styles
+    background-color: transparent;
     color: var(--color-card-text--secondary);
     
     .cardItem__heading {
@@ -265,7 +266,7 @@
       }
 
       strong {
-        font-weight: 400;
+        font-weight: 600;
       }
 
       i {
@@ -647,9 +648,20 @@
 
 
   &.cardItem--grant {
+    --color-card--primary: var(--color-teal-100);
     --color-card--secondary: var(--color-grey-150);
     --color-card--tertiary: var(--color-grey-50);
     --color-card-background: var(--color-grey-25);
+
+    &[data-theme-color="green"] {
+      --color-card--primary: var(--color-program-green-100);
+    }
+    &[data-theme-color="plum"] {
+      --color-card--primary: var(--color-program-plum-100);
+    }
+    &[data-theme-color="marigold"] {
+      --color-card--primary: var(--color-program-marigold-100);
+    }
 
     box-shadow: var(--shadow-shallow--light);
     padding: var(--base-6);
@@ -663,11 +675,17 @@
       padding: var(--base-9);
     }
 
+    .cardItem__inner {
+      display: flex;
+      flex-direction: column;
+    }
+    
     // Header
     .cardItem__header {
       margin-block-end: var(--base-6);
 
       .cardItem__heading {
+        color: var(--color-card--primary);
         @include getType('h5-axiforma');
 
         &._is-hidden {
@@ -676,16 +694,15 @@
       }
 
       .cardItem__description {
-        @include getType('caption-messina');
+        @include getType('caption-axiforma');
         
-        &:first-letter {
+        p:first-letter {
           text-transform: uppercase;
         }
       }
 
       .cardItem__heading + .cardItem__description {
         margin-block-start: var(--base);
-        @include getType('detail-messina');
       }
     }
 
@@ -699,8 +716,14 @@
         border-top: 1px solid var(--color-card--tertiary);
 
         &.table-item__tr--tags {
-          padding-block-end: var(--base-4);
           display: block;
+          padding-block-end: var(--base-4);
+        }
+
+        &:last-of-type {
+          &.table-item__tr--tags {
+            padding-block-end: var(--base-2);
+          }
         }
       }
 
@@ -717,17 +740,11 @@
 
     // Actions
     .cardItem__actions {
+      margin-block-start: auto;
+
       .action {
         &:first-child {
           margin-inline-end: var(--base-4);
-        }
-      }
-    }
-
-    @include breakpoint(md) {
-      .cardItem__header {
-        .cardItem__heading + .cardItem__description {
-          @include getType('caption-messina');
         }
       }
     }
@@ -821,6 +838,12 @@
 
   // Generic
   &.cardItem--generic {
+    .cardItem__wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
     .cardItem__label {
       color: var(--color-card-text--tertiary);
     }
@@ -855,6 +878,16 @@
       margin-block-start: 0;
     }
 
+    // Summary
+    .cardItem__summary {
+      strong {
+        font-weight: 600;
+      }
+      i {
+        font-style: italic;
+      }
+    }
+
     // Actions {
     .cardItem__actions {
       margin-block-start: auto;
@@ -886,7 +919,7 @@
 }
 
 // Grantee Variant
-:not([data-grid-style="list"]) {
+[data-grid-style="grid"] {
   .cardItem.cardItem--bio {
     padding: var(--base-6);
     display: flex;
@@ -943,6 +976,14 @@
       }
     }
 
+    .cardItem__media + .cardItem__content {
+      margin-inline-start: 0;
+    }
+
+    .cardItem__content {
+      margin-inline-start: var(--base-16);
+    }
+
     .cardItem__details {
       .details__pronouns {
         @include getType('caption-messina');
@@ -972,6 +1013,7 @@
       }
 
       .cardItem__content {
+        margin-inline-start: var(--base-30);
         align-items: center;
       }
 
@@ -992,10 +1034,55 @@
         width: 150px;
       }
 
+      .cardItem__content {
+        margin-inline-start: 178px;
+      }
+
       .cardItem__details {
         .details__pronouns {
           @include getType('body');
         }
+      }
+    }
+  }
+
+  .cardItem.cardItem--generic {
+    @include breakpoint(md) {
+      padding: 0;
+
+      .cardItem__inner {
+        flex-direction: row;
+      }
+
+      .cardItem__media {
+        margin-block-end: 0;
+        width: 50%;
+
+        .image {
+          inset: 0;
+          aspect-ratio: auto;
+          position: absolute;
+        }
+      }
+
+      .cardItem__media + .cardItem__wrapper {
+        padding: var(--base-6) 0 var(--base-6) var(--base-6);
+        width: 50%;
+      }
+
+      .cardItem__wrapper {
+        padding: var(--base-6);
+        width: 100%;
+      }
+    }
+
+    @include breakpoint(lg) {
+      .cardItem__media + .cardItem__wrapper {
+        padding: var(--base-9) 0 var(--base-9) var(--base-9);
+      }
+
+      .cardItem__wrapper {
+        padding: var(--base-9);
       }
     }
   }
@@ -1038,6 +1125,7 @@
     }
   }
 }
+
 .cardRow[data-columns="4"] {
   @include breakpoint(xxl) {
     .cardItem {
@@ -1047,6 +1135,112 @@
             aspect-ratio: 10 / 9;
           }
         }
+      }
+    }
+  }
+}
+
+.feed__grid[data-columns="4"] {
+  &:not([data-grid-style="list"]) {
+    @include breakpoint(xxl) {
+      .cardItem {
+        &.cardItem--bio {
+          .cardItem__media {
+            .image {
+              aspect-ratio: 10 / 9;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+[data-columns="2"] {
+  .cardItem.cardItem--grant {
+    @include breakpoint(xl) {
+      padding: var(--base-14) var(--base-16) var(--base-10) var(--base-16);
+    }
+
+    @include breakpoint(xxl) {
+      padding: var(--base-20) var(--base-20) var(--base-16) var(--base-20);
+    }
+  }
+}
+
+// Master Grants List
+[data-grid-style="list"] {
+  .cardItem.cardItem--grant {
+    padding-block-end: var(--base-3);
+    box-shadow: none;
+
+    .cardItem__inner {
+      padding-block-start: var(--base-5);
+      border-top: 1px solid var(--color-grey-50);
+    }
+
+    .cardItem__description {
+      p {
+        max-width: 44em;
+      }
+    }
+
+    @include breakpoint(sm) {
+      padding-block: var(--base-9) 0!important;
+
+      .cardItem__inner {
+        padding-block-start: var(--base-7);
+      }
+
+      .cardItem__table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--base-6);
+        row-gap: var(--base-5);
+
+        .table-item__tr {
+          padding: 0;
+          display: block;
+          border-top: none;
+        }
+
+        .table-item__td {
+            padding-top: var(--base-2);
+        }
+      }
+
+      .cardItem__actions {
+        margin-block-start: var(--base-4);
+      }
+    }
+
+    @include breakpoint(sm-md) {
+      .cardItem__table {
+        grid-template-columns: repeat(3,1fr);
+      }
+    }
+
+    @include breakpoint(md) {
+      padding-inline: var(--base-9);
+    }
+
+    @include breakpoint(lg) {
+      padding-inline: var(--base-12);
+
+      .cardItem__table {
+        grid-template-columns: repeat(4,1fr);
+      }
+
+      .cardItem__actions {
+        margin-block-start: var(--base);
+      }
+    }
+
+    @include breakpoint(xl) {
+      padding-inline: var(--base-14);
+
+      .cardItem__table {
+        grid-template-columns: repeat(6,1fr);
       }
     }
   }

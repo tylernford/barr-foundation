@@ -15,7 +15,6 @@
   .siteHeader__brand {
     width: 181px;
     height: 25px;
-    // flex-shrink: 0;
     position: relative;
 
     svg {
@@ -42,7 +41,10 @@
     p {
       max-width: 30em;
 
-      strong,
+      strong {
+        font-weight: 600;
+      }
+      
       i {
         font-style: italic;
       }
@@ -181,6 +183,13 @@
       @include getType('caption-messina');
     }
 
+    // Submenu heading
+    .submenu__menu {
+      .submenu__heading {
+        display: none;
+      }
+    }
+    
     // Submenu item
     .submenu__item {
       padding-block: var(--base-3);
@@ -332,6 +341,10 @@
           grid-template-rows: 0fr;
           transition: grid-template-rows var(--transition-intermediate) ease-in;
 
+          > div {
+            overflow: hidden;
+          }
+
           // Active
           &.-is-active {
             padding-block-end: var(--base-6);
@@ -396,10 +409,24 @@
     }
   }
 
+  @include breakpoint('sm') {
+    .siteHeader__brand {
+      width: 206px;
+      height: 28px;
+    }
+  }
+
   @include breakpoint('md') {
     .siteHeader__brand {
       width: 232px;
       height: 32px;
+    }
+  }
+
+  @include breakpoint('lg') {
+    .siteHeader__brand {
+      width: 292px;
+      height: 40px;
     }
   }
 
@@ -440,6 +467,21 @@
           &::before {
             background-color: var(--color-navy-100);
             transition: var(--transition-in);
+          }
+        }
+      }
+
+      &[data-is-active="true"] {
+        &::before {
+          top: calc(0 - var(--site-header-height));
+          background-color: var(--color-citrus-100);
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            &::before {
+              background-color: var(--color-citrus-50);
+            }
           }
         }
       }
@@ -497,6 +539,7 @@
           padding-inline-end: var(--base-14);
           width: 50%;
           @include getType('h3-messina');
+          line-height: 1.4;
         }
 
         // Submenu menu
@@ -520,20 +563,22 @@
 
         // Animation
         .submenu__overlay {
+          min-height: var(--base-156);
           opacity: 0;
-          // transform: translate(1.5rem, -.5rem);
-          // transition: opacity 350ms ease-in,
-                      // transform 350ms ease-in;
-          transition: opacity 350ms ease-in;
+          box-shadow: var(--shadow-deep--light);
         }
 
         @media (hover: hover) {
           &:hover {
             .submenu__overlay {
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+
               display: flex;
-              opacity: 1;
-              transition: opacity 350ms ease-out;
-              // transition-delay: 250ms;
+              animation: fadeIn 350ms ease-out;
+              animation-fill-mode: forwards;
             }
           }
         }

@@ -105,7 +105,7 @@ body[data-theme-color="marigold"] {
       }
 
       strong {
-        font-weight: 400;
+        font-weight: 600;
       }
     }
   }
@@ -153,6 +153,26 @@ body[data-theme-color="marigold"] {
       color: var(--color-grey-25);
       @include getType('detail-axiforma');
       font-size: 12px;
+
+      a {
+        color: inherit;
+        transition: text-decoration-color var(--transition) ease-in;
+        --transition-link-in: text-decoration-color var(--transition-intermediate) ease-out;
+
+        @media (hover: hover) {
+          &:hover {
+            text-decoration-color: transparent;
+            transition: var(--transition-link-in);
+          }
+        }
+        
+        &:focus-visible {
+          outline: 0;
+          outline: var(--outline-width) solid var(--color-focus);
+          outline-offset: var(--outline-offset);
+          transition: var(--transition-link-in);
+        }
+      }
     }
   }
 
@@ -289,8 +309,15 @@ body[data-theme-color="marigold"] {
 
     // Media
     .blockOpener__media {
-      margin-inline: var(--neg-base-5);
       position: relative;
+
+      &::before {
+        content: '';
+        inset: 0 0 0 -50%;
+        width: 200vw;
+        position: absolute;
+        background-color: var(--theme-color-primary);
+      }
 
       .image {
         aspect-ratio: 4 / 3;
@@ -329,7 +356,9 @@ body[data-theme-color="marigold"] {
         gap: var(--base-5);
 
         .primary__wrapper {
-          grid-template-columns: 1fr 1fr;
+          &[data-columns="2"] {
+            grid-template-columns: 1fr 1fr;
+          }
           gap: var(--base-6);
         }
 
@@ -660,6 +689,12 @@ body[data-theme-color="marigold"] {
           .pattern {
             display: none;
           }
+
+          &[data-caption="false"] {
+            .caption__background {
+              display: none;
+            }
+          }
         }
       }
 
@@ -777,6 +812,14 @@ body[data-theme-color="marigold"] {
                 position: absolute;
                 width: var(--base-12);
                 background: linear-gradient(to bottom right, var(--color-grey-25) 0%, var(--color-grey-25) 50%, transparent 50%, transparent 100%);
+              }
+            }
+
+            .media__caption {
+              &[data-caption="false"] {
+                &::before {
+                  display: none;
+                }
               }
             }
           }

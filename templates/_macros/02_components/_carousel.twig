@@ -34,10 +34,8 @@
                 {# Auto #}
                 {% elseif carouselType == 'carouselAuto' %}
                     {% set carousel = content.children.one.carouselAuto.one %}
-                    {% set autoFeed = carousel.sources %}
-                    {% set numberOfCards = carousel.numberOfCards %}
 
-                    {{ _self.carouselAutoLogic(autoFeed, numberOfCards) }}
+                    {{ _self.carouselAutoLogic(carousel) }}
                 {% endif %}
             </div>
 
@@ -156,13 +154,39 @@
     {% endmacro %}
 
     {# Auto #}
-    {% macro carouselAutoLogic(autoFeed, limit) %}
-        {% set sources = [] %}
-        {% for source in autoFeed %}
-            {% set sources = sources|merge([source.value]) %}
+    {% macro carouselAutoLogic(carousel) %}
+        {% set sources      = carousel.sources %}
+        {% set limit        = carousel.numberOfCards %}
+        {% set programAreas = carousel.tagsProgramAreas %}
+        {% set categories   = carousel.tagsCategories %}
+        {% set randomize    = carousel.randomize %}
+
+        {# Merge selected sources (Blog, Newsroom, Grants, and/or Grantees) #}
+        {% set sections = [] %}
+        {% for section in sources %}
+            {% set sections = sections|merge([section.value]) %}
         {% endfor %}
 
-        {% set autoCards = craft.entries().section(sources).limit(limit) %}
+        {# Merge selected sources (Blog, Newsroom, Grants, and/or Grantees) #}
+        {% set sections = [] %}
+        {% for section in sources %}
+            {% set sections = sections|merge([section.value]) %}
+        {% endfor %}
+
+        {# Merge selected Program Areas and Categories #}
+        {% set filterParameters = programAreas|length or categories|length ? ['and'] : '' %}
+        {% set filterParameters = programAreas|length ? filterParameters|merge([programAreas]) : filterParameters %}
+        {% set filterParameters = categories|length ? filterParameters|merge([categories]) : filterParameters %}
+
+        {# Check if sources are only Grants or Grantees #}
+        {% set orderBy = 'postDate DESC' %}
+        {% if 'blog' not in sources %}
+            {% if 'newsroom' not in sources %}
+                {% set orderBy = randomize == true ? 'RAND()' : orderBy %}
+            {% endif %}
+        {% endif %}
+
+        {% set autoCards = craft.entries().section(sections).type('not research').relatedTo(filterParameters).orderBy(orderBy).limit(limit) %}
 
         {{ _self.cards(autoCards) }}
     {% endmacro %}
@@ -238,16 +262,16 @@
                     </div>
                     
                 {% elseif cardVariant == 'grants' %}
+                    {% set grantCardConfig = {
+                        'variant': 'grid',
+                        'content': {
+                            'grantee': card.entriesOrganization.one,
+                            'grant': card
+                        }
+                    }%}
                     {# ---  Slide  --- #}
                     <div class="slide | swiper-slide">
-                        <article class="cardItem cardItem--grant">
-                            <div class="cardItem__inner">
-                                {# Header #}
-                                <header class="cardItem__header">
-                                    <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
-                                </header>
-                            </div>
-                        </article>
+                        {{ cards.grant(grantCardConfig) }}
                     </div>
                 {% endif %}
             {% endif %}

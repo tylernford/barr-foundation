@@ -13,7 +13,7 @@ permissions:
   - 'createentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
   - 'createentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'createentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'createentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'createentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'createentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'createentries:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'createentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -38,7 +38,7 @@ permissions:
   - 'deleteentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
   - 'deleteentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'deleteentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'deleteentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'deleteentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'deleteentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'deleteentries:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'deleteentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -60,7 +60,7 @@ permissions:
   - 'deletepeerentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
   - 'deletepeerentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'deletepeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'deletepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'deletepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'deletepeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'deletepeerentries:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'deletepeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -82,7 +82,7 @@ permissions:
   - 'deletepeerentrydrafts:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
   - 'deletepeerentrydrafts:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'deletepeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'deletepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'deletepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'deletepeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'deletepeerentrydrafts:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'deletepeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -281,7 +281,7 @@ permissions:
   - 'saveentries:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
   - 'saveentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'saveentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'saveentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'saveentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'saveentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'saveentries:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'saveentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -305,7 +305,7 @@ permissions:
   - 'savepeerentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
   - 'savepeerentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'savepeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'savepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'savepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'savepeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'savepeerentries:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'savepeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -327,7 +327,7 @@ permissions:
   - 'savepeerentrydrafts:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
   - 'savepeerentrydrafts:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'savepeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'savepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'savepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'savepeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'savepeerentrydrafts:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'savepeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -398,7 +398,7 @@ permissions:
   - 'viewentries:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
   - 'viewentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'viewentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'viewentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'viewentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'viewentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'viewentries:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'viewentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -422,7 +422,7 @@ permissions:
   - 'viewpeerentries:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
   - 'viewpeerentries:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'viewpeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'viewpeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'viewpeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'viewpeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'viewpeerentries:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'viewpeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
@@ -444,7 +444,7 @@ permissions:
   - 'viewpeerentrydrafts:4af5ef3d-2c87-48a7-9d3b-c568f714e378' # Footer
   - 'viewpeerentrydrafts:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
   - 'viewpeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
-  - 'viewpeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+  - 'viewpeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'viewpeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
   - 'viewpeerentrydrafts:759ac17b-a8d1-41f3-828e-4dbdc5405492' # Grant Categories
   - 'viewpeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board

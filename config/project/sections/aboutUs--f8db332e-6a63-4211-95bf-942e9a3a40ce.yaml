@@ -19,8 +19,8 @@ siteSettings:
   915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
     enabledByDefault: true
     hasUrls: true
-    template: interior/index.twig
-    uriFormat: 'about-us/{slug}'
+    template: interior/about-us.twig
+    uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null
   uid: 632484c2-5fe1-4c00-afb9-29da7f5e7597

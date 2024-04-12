@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 handle: newsInsights
-name: 'News + Insights'
+name: 'News & Insights'
 previewTargets:
   -
     __assoc__:
@@ -19,8 +19,8 @@ siteSettings:
   915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
     enabledByDefault: true
     hasUrls: true
-    template: interior/index.twig
-    uriFormat: 'news-and-insights/{slug}'
+    template: interior/news-and-insights.twig
+    uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null
   uid: 7f9b1aa8-c43b-4c19-85a2-cb68c471d342

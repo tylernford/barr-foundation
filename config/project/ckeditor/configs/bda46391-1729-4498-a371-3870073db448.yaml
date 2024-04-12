@@ -1,0 +1,10 @@
+headingLevels:
+  - 3
+listPlugin: List
+name: 'Text: Minimal Body'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - link

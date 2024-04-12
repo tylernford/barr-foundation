@@ -17,21 +17,12 @@
             {{ grantees.granteesGrid(config) }}
 
         {% case 'bio' %}
-
             {% set personType = content.cardPersonType.one() %}
-            {% set cards = craft.entries().section('directory').limit(8) %}
-
-            <div class="cardRow" data-columns="4">
-                {% for card in cards %}
-                    {{ cards.bio(card) }}
-                {% endfor %}
-            </div>
+            {{ sprig('sprig/_sprig-paginated-grid', { personType: personType.id, limit: 8 }) }}
 
         {% case 'cards' %}
             {# Set manualFeed #}
             {% set manualFeed = content.children.one.cardsFeedManual %}
-            {# Set autoFeed #}
-            {% set autoFeed = content.children.one.cardsFeedAuto ? content.children.one.cardsFeedAuto.one.sources %}
             {# Set empty feedCards array #}
             {% set feedCards = [] %}
 
@@ -51,13 +42,33 @@
             
             {# Auto cards #}
             {% else %}
-                {% set sources = [] %}
+                {# Tags #}
+                {% set sources = content.children.one.cardsFeedAuto.one.sources %}
+                {% set programAreas = content.children.one.cardsFeedAuto.one.tagsProgramAreas %}
+                {% set categories = content.children.one.cardsFeedAuto.one.tagsCategories %}
+                {% set randomize = content.children.one.cardsFeedAuto.one.randomize %}
 
-                {% for source in autoFeed %}
-                    {% set sources = sources|merge([source.value]) %}
+                {# Merge selected sources (Blog, Newsroom, Grants, and/or Grantees) #}
+                {% set sections = [] %}
+                {% for section in sources %}
+                    {% set sections = sections|merge([section.value]) %}
                 {% endfor %}
 
-                {% set autoCards = craft.entries().section(sources).limit(3) %}
+                {# Merge selected Program Areas and Categories #}
+                {% set filterParameters = programAreas|length or categories|length ? ['and'] : '' %}
+                {% set filterParameters = programAreas|length ? filterParameters|merge([programAreas]) : filterParameters %}
+                {% set filterParameters = categories|length ? filterParameters|merge([categories]) : filterParameters %}
+
+                {# Check if sources are only Grants or Grantees #}
+                {% set orderBy = 'postDate DESC' %}
+                {% if 'blog' not in sources %}
+                    {% if 'newsroom' not in sources %}
+                        {% set orderBy = randomize == true ? 'RAND()' : orderBy %}
+                    {% endif %}
+                {% endif %}
+
+                {% set autoCards = craft.entries().section(sections).type('not research').relatedTo(filterParameters).orderBy(orderBy).limit(3) %}
+
                 {% for card in autoCards %}
                     {% set feedCards = feedCards|merge([card]) %}
                 {% endfor %}
@@ -112,14 +123,14 @@
                             {{ cards.news(card) }}
                             
                         {% elseif cardVariant == 'grants' %}
-                            <article class="cardItem cardItem--grant">
-                                <div class="cardItem__inner">
-                                    {# Header #}
-                                    <header class="cardItem__header">
-                                        <h3 class="cardItem__heading">Grant Placeholder Card: {{ card.title }}</h3>
-                                    </header>
-                                </div>
-                            </article>
+                            {% set grantCardConfig = {
+                                'variant': 'grid',
+                                'content': {
+                                    'grantee': card.entriesOrganization.one,
+                                    'grant': card
+                                }
+                            }%}
+                            {{ cards.grant(grantCardConfig) }}
                         {% endif %}
                     {% endif %}
                 {% endfor %}

@@ -1,0 +1,309 @@
+/* wireframe/_builder.scss */
+@use "../utils/_utils" as *;
+
+// Grayscale
+// --color-grey-200
+// --color-grey-150
+// --color-grey-100
+// --color-grey-50
+// --color-grey-25
+
+@mixin block() {
+    margin: 2em;
+    padding: 2em;
+    background: var(--color-grey-50);
+    font-size: 1rem;
+}
+
+@mixin preheading() {
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+@mixin heading() {
+    margin-bottom: 1em;
+    font-size: 2em;
+
+    &._is-hidden {
+        @include visuallyHide;
+    }
+}
+
+@mixin support() {
+    font-size: 1.5em;
+}
+
+@mixin cardImage() {
+    flex-basis: 50%;
+}
+
+@mixin button($color: null) {
+    $bg-color: if($color,$color, var(--color-grey-25));
+    $text-color: if($color == 'null', var(--color-grey-50),var(--color-grey-25));
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 1em;
+    background: $bg-color;
+    color: var(--color-grey-25);
+    text-decoration: none;
+}
+
+@mixin explore() {
+    margin-top: 3em;
+    text-align: center;
+
+    &--right {
+        text-align: right;
+    }
+
+    &-support {
+        @include support;
+        margin-bottom: 2em;
+    }
+
+    &-button {
+        @include button(var(--color-program-green-100));
+    }
+}
+
+@mixin cta() {
+    display: inline-block;
+    color: var(--color-program-green-100);
+    text-transform: uppercase;
+    text-underline-offset: 15.5px;
+    text-decoration-thickness: 1px;
+}
+
+.blockOpener {
+    &--homepage {
+        @include block;
+        display: flex;
+        
+        .blockOpener-text {
+            padding: 2em;
+        }
+    
+        .blockOpener-heading {
+            @include heading;
+        }
+    
+        .blockOpener-description {
+    
+        }
+    }    
+}
+
+.blockSimple {
+    $card: &;
+    @include block;
+    display: flex;
+
+    > * {
+        flex: 0 1 50%;
+    }
+
+    &-body {
+        align-content: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+
+        #{$card}--right & {
+            order: 1;
+        }
+    }
+
+    &-heading, &-support {
+        width: 100%;
+    }
+
+    &-heading {
+        @include heading;
+    }
+
+    &-support {
+        @include support;
+    }
+
+    &-button {
+        @include button(var(--color-program-green-100));
+    }
+
+    &-asset {
+        @include cardImage();
+    }
+
+}
+
+.blockCards {
+    @include block;
+
+    &-heading {
+        @include heading;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -1em;
+    }
+
+    &-item {
+        flex: 1;
+        margin: 0 1em 2em 1em;
+        background: var(--color-grey-25);
+
+        &:first-child {
+            flex-basis: 100%;
+        }
+    
+        &:not(:first-child) {
+            flex: 1;
+        }
+    }
+}
+
+.cardItem {
+    &.cardItem--wireframe {
+        @extend .blockCards-item;
+        padding: 1em;
+        
+        .cardItem-preheading {
+            @include preheading;
+        }
+        
+        .cardItem-heading {
+            @include heading;
+        }
+        
+        .cardItem-button {
+            @include button(var(--color-program-green-100));
+        }
+        
+        .cardItem-duration {
+            display: block;
+        }
+        
+        .cardItem-properties {
+            
+        }
+    }
+
+}
+
+.blockGeneric {
+    @include block;
+
+    &-heading {
+        @include heading;
+    }
+
+}
+
+.blockFeed {
+    @include block;
+    $feed: &;
+
+    &._is-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: space-between;
+    }
+
+    &-item {
+
+        @include breakpoint(lg) {
+
+            #{$feed}._is-grid & {
+                flex: 0 1 auto;
+            }
+
+            #{$feed}--twin._is-grid & {
+                flex-basis: calc(50% - 1em);
+            }
+
+            #{$feed}--triplet._is-grid & {
+                flex-basis: calc(33% - 1em);
+            }
+
+        }
+
+    }
+
+}
+
+.feedItem {
+    $grid: '._is-grid';
+    $list: '._is-list';
+
+    @extend .blockFeed-item;
+    display: flex;
+    flex-flow: column;
+    padding: 2em;
+    background: #FFF;
+
+    #{$list} & {
+        border-top: 1px solid var(--color-grey-200);
+        margin-bottom: 2em;
+    }   
+
+    &-heading {
+        @include heading;
+    }
+
+    &-support {
+        @include support;
+    }
+
+    &-table {
+        margin: 2em 0;
+
+        #{$list} & {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            gap: 1em;
+        }
+    }
+
+    &-tr {
+        #{$grid} & {
+            display: flex;
+            flex-flow: row wrap;
+            border-top: 1px solid var(--color-grey-200);
+        }
+    }
+
+    &-th,
+    &-td {
+        #{$grid} & {
+            display: inline-flex;
+            padding: 1em 0;
+            width: 50%;
+        }
+    }
+
+    &-th {
+        text-transform: uppercase;
+
+        #{$list} & {
+            margin-bottom: 1em;
+        }
+
+    }
+
+    &-footer {
+        margin-top: auto;
+    }
+
+    &-cta {
+        @include cta();
+        margin-right: 2em;
+    }
+
+}

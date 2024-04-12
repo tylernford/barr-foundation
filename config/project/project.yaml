@@ -1,8 +1,19 @@
-dateModified: 1710444645
+dateModified: 1712874066
 elementSources:
   craft\elements\Asset:
     -
+      defaultSort:
+        - dateCreated
+        - desc
+      disabled: false
       key: 'volume:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
+      tableAttributes:
+        - 'field:9e396f17-1a9c-4df2-b743-640fe0cc0294' # Asset: ID
+        - filename
+        - size
+        - dateModified
+        - uploader
+        - link
       type: native
     -
       key: 'volume:8e01f9c0-5b32-400f-af60-ee3cf5e92d49' # Documents
@@ -21,7 +32,10 @@ elementSources:
         - location
       type: native
     -
-      key: 'folder:337517db-6915-47f4-b80d-3c399c474dbd'
+      heading: ''
+      type: heading
+    -
+      key: 'folder:a51070d2-314d-42c2-9479-f9130566dc1d'
       type: native
   craft\elements\Entry:
     -
@@ -154,7 +168,7 @@ elementSources:
         - structure
         - asc
       disabled: false
-      key: 'section:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News + Insights
+      key: 'section:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
       tableAttributes:
         - link
         - section
@@ -171,13 +185,12 @@ elementSources:
       disabled: false
       key: 'section:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
       tableAttributes:
-        - link
         - 'field:b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400' # Entries: Team
-        - 'field:25949bb9-af67-45e6-9adb-fc8c568dba48' # Date: Date Only
-        - postDate
-        - 'field:d65ee27b-0934-4348-92aa-2a30b9a64e84' # Featured
         - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
         - 'field:f291a098-6829-4193-9d10-5757e239bef3' # Tags: Strategies
+        - 'field:9b8006bb-071b-4d03-9d1f-f7bdbdc27d52' # Tags: Categories
+        - postDate
+        - link
       type: native
     -
       defaultSort:
@@ -186,10 +199,13 @@ elementSources:
       disabled: false
       key: 'section:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
       tableAttributes:
-        - link
-        - section
-        - slug
+        - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
+        - 'field:f291a098-6829-4193-9d10-5757e239bef3' # Tags: Strategies
+        - 'field:9b8006bb-071b-4d03-9d1f-f7bdbdc27d52' # Tags: Categories
+        - 'field:b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400' # Entries: Team
         - postDate
+        - type
+        - link
       type: native
     -
       defaultSort:
@@ -212,8 +228,8 @@ elementSources:
       disabled: false
       key: 'section:45040e4a-50f0-43a4-a280-c21a86946d88' # Directory
       tableAttributes:
-        - section
         - 'field:329ee082-81cc-492f-bc61-0230f4a009b4' # Entries: Person Type
+        - 'field:2abdf5dd-0d2a-4af1-a1cc-f8027bf84fc5' # Tags: Directory Teams
         - revisionCreator
         - link
       type: native
@@ -236,11 +252,12 @@ elementSources:
       disabled: false
       key: 'section:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
       tableAttributes:
-        - link
-        - section
-        - 'field:735baf07-fdce-44c2-8433-02997cd29674' # Department: Import
-        - 'field:ab12a67b-9af1-4f2c-bc53-cbedda60dbd1' # Budget/Strategy/Portfolio: Import
+        - 'field:22f973cc-427c-4e70-8bb8-6624479ab025' # Entries: Organization
         - 'field:1b2cb00a-9926-4731-ba73-26cd45fd7e44' # Geo: Region
+        - postDate
+        - 'field:25949bb9-af67-45e6-9adb-fc8c568dba48' # Date: Date Only
+        - 'field:4217f7b3-ec24-454d-87f2-1998f0a0baae' # Tags: Program Areas
+        - 'field:f291a098-6829-4193-9d10-5757e239bef3' # Tags: Strategies
       type: native
     -
       defaultSort:
@@ -307,7 +324,10 @@ elementSources:
       key: 'section:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
       tableAttributes:
         - slug
-        - parent
+        - 'field:0e00ff94-ac0c-4383-a7f4-7523a59e99ae' # Tags: Available
+      type: native
+    -
+      key: 'section:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
       type: native
     -
       defaultSort:
@@ -442,13 +462,16 @@ fs:
 meta:
   __names__:
     0a0fbbb0-ab8f-4950-afab-87e4e5f44c47: 'Asset: Image' # Asset: Image
+    0a8588be-140d-488f-befc-be18efe0639d: 'News Post' # News Post
     0a924836-f3f5-452c-86dd-92df3cc0ad85: 'Text: Preheading' # Text: Preheading
     0ac7255b-4b9d-49e0-948d-10bef69479d4: 'Action: Entry or URL' # Action: Entry or URL
     0b05b130-5829-4e77-a3f7-ed99ae219ce7: 'Text: Amount' # Text: Amount
     0b12ba92-d669-4feb-9241-037faa9b352b: 'Highlight: Multi-Event Timeline' # Highlight: Multi-Event Timeline
     0b20ecdf-4270-4334-a697-b9ad36c32962: 'Card: Latest News' # Card: Latest News
+    00bd633b-23be-4c76-97dd-edf6554ce500: Default # Default
     0c504d15-eff5-4c67-a859-9cef6adcd964: Footer # Footer
-    0e1c35ac-38d0-4e66-8b22-bb3d543366d7: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
+    0d357d0b-c5e8-40b2-b64e-db3936f20bfd: 'Text: Post Import' # Text: Post Import
+    0e00ff94-ac0c-4383-a7f4-7523a59e99ae: 'Tags: Available' # Tags: Available
     0f725806-1cbe-40c2-91a6-cfc9a70879c2: 'Text: Heading' # Text: Heading
     1a788826-fcfe-45be-b8ec-68bafc7d3790: 'Carousel: Quotes' # Carousel: Quotes
     1ae99391-4060-478a-b225-fc7156964232: 'Feed: Team' # Feed: Team
@@ -460,23 +483,27 @@ meta:
     1dd219bb-2f7d-40a7-8f37-ef31fed81c34: 'Asset: Image' # Asset: Image
     1dec4392-4c5c-4dc8-9e4d-3ef5b7f91715: 'Audio Snippet' # Audio Snippet
     1e6b65f1-8163-4538-888b-aefdcd932c14: Entry # Entry
+    1ec16a24-9acf-48cf-8a0b-7b5300256e6f: Title # Title
     01ed592e-1014-45e1-8104-59aa9110f849: Media # Media
     1f5fcf40-1dac-4aa2-aa30-1e7d5467b651: 'External Person' # External Person
     1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02: 'Opener: Homepage' # Opener: Homepage
     2a1e413c-907d-4522-94f8-878e06c010a9: Entry # Entry
     2a4eb614-dbfd-488e-922b-eeb885fc1e63: Default # Default
+    2abdf5dd-0d2a-4af1-a1cc-f8027bf84fc5: 'Tags: Directory Teams' # Tags: Directory Teams
     2ae46801-59a1-4cf5-a238-a8ba9317eed9: Organization # Organization
     2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23: Images # Images
     02b15980-0b09-401f-8c50-1d153038e69d: Release # Release
     2c4256df-30bd-463f-aa51-5edff678315e: 'Asset: Image' # Asset: Image
     2c464958-58a2-42c3-9fa5-7d0c3130ac13: Media # Media
     2ce7a3bf-415b-4528-81af-ded77fc241fc: 'Contact: LinkedIn' # Contact: LinkedIn
+    2d4b8507-0192-47c2-8c4a-b829f2afd2bb: 'Video URL' # Video URL
     2d68d05d-95ee-4cf8-a1e6-3b302f6ba8cc: Action # Action
     2d85d472-1f81-45ee-9294-8af027894cdd: 'Section Bookmark (Optional)' # Section Bookmark (Optional)
     2dec7473-aaa1-473a-a853-156a05b52a14: Target # Target
     2e2725ce-270b-4758-a1ed-0e602dcda53b: 'Action: Entry or URL' # Action: Entry or URL
     2f4e1404-f866-4cdc-924e-3c5930d9dd76: 'Opener: Landing' # Opener: Landing
     2f97f0f3-397f-4a92-a0af-4685f47a52f6: 'Divider: Subsection' # Divider: Subsection
+    3a1ed16d-1e16-4c7f-ab56-fbfc11d81c9d: 'Blog Post, News Item, Grantee, or Grant' # Blog Post, News Item, Grantee, or Grant
     3a2f39b7-ed74-4fe2-aa22-685cdd11a644: 'Text: First Name' # Text: First Name
     3a4a814b-362f-42e4-9d92-2cf83e4c0e5d: 'Filterable Feed: Bio' # Filterable Feed: Bio
     3abc1228-09cd-44a3-960e-ef3d3b0ea302: 'Media: Audio' # Media: Audio
@@ -489,18 +516,23 @@ meta:
     03b97c7f-5861-488a-9875-0738f0246281: Accordion # Accordion
     3b585310-81d5-451e-8ed6-030062c40e94: 'Form: Wildcard' # Form: Wildcard
     3da8a9db-c68d-4f61-a9ab-5645cc1f1c07: Menu # Menu
+    3e9d76d7-a49f-4057-a6ed-c790c1307136: 'Tags: Categories' # Tags: Categories
+    3eecd09f-5fc5-4287-9eda-0530ec2708bd: 'Text: Organization URL' # Text: Organization URL
     03f8a74f-3d28-4a13-b76b-92af6c801a16: 'Text: Supporting' # Text: Supporting
     3f87cd19-1003-4802-9f60-9fb8d5062700: Body # Body
     4af5ef3d-2c87-48a7-9d3b-c568f714e378: Footer # Footer
     4d548d8e-1537-4c78-9207-048346c5eda8: Research # Research
     4d753cb0-1ca4-4b73-aecc-957826dee5de: 'Card: Group' # Card: Group
     4d994633-7c38-4213-bd35-2b0d8966dff5: 'Page Builder: People' # Page Builder: People
+    4dad4ca0-bad0-464f-8bd0-65023dc18709: 'Text: Organization' # Text: Organization
     4e8fafb9-e2ba-4649-a18a-44ead87a1af2: Image # Image
+    4e51173f-d019-4fe6-a86d-d87e1841f4d0: 'Tags: Program Areas' # Tags: Program Areas
     4e139296-f9eb-4d48-8374-42a79d46413b: 'Tags: Import Primary' # Tags: Import Primary
     4eb30fbf-3647-444f-ba73-29ebb5b12477: 'Card: Team' # Card: Team
     04fbe62b-bcae-44dd-8023-e56efe203cb3: 'Action: URL' # Action: URL
-    5a3ec662-f801-451b-97a6-8d2d40b08a5d: 'News + Insights' # News + Insights
+    5a3ec662-f801-451b-97a6-8d2d40b08a5d: 'News & Insights' # News & Insights
     5a6a9a3c-05f9-42d5-9b4f-41ffc03f3f4d: 'Card: Latest News' # Card: Latest News
+    5a55c106-7c32-44da-aeb2-33479bd76b65: Action # Action
     5a492adc-7baf-4f6f-a0b1-5a528df2c28a: 'Carousel: Manual' # Carousel: Manual
     5a2816d1-111d-44df-933d-9fe33d93acdb: 'Text: Quote' # Text: Quote
     5ab6cb61-c125-4e89-a57e-dce918706bb6: Organization # Organization
@@ -514,6 +546,7 @@ meta:
     5ef09b80-b3aa-4b57-99dc-4bb324d63fd0: 'Internal Page' # Internal Page
     5f1ebbf5-e779-432a-bee5-8ee4e399d0e9: 'Card: Action' # Card: Action
     6aba2b9f-3c08-4c50-8b7f-bb848f592b20: 'Asset: Video' # Asset: Video
+    6bc3e5f2-3e88-4273-80aa-05eeee93d010: 'Text: Intro' # Text: Intro
     6c068a13-02e2-4531-bfe1-f9082911ec87: Label # Label
     6c8d2fba-5672-4d44-aa02-7f576e6ca673: 'Flag: Fiscal Sponsor' # Flag: Fiscal Sponsor
     6cc3b73a-f6dd-45e3-89fd-4c871ad53903: 'Is secondary?' # Is secondary?
@@ -522,6 +555,7 @@ meta:
     6dcc5d97-ed8b-42a8-bd03-0eb7f61f584c: Icon # Icon
     6df94cb1-5ae8-4f28-902c-2e221075c124: Action # Action
     6dfb099a-3f70-4263-8930-a2a018c83ada: 'Text: Publication' # Text: Publication
+    06e5af72-3b9f-4d67-bf09-d74b980bbe71: 'Tags: Categories' # Tags: Categories
     6e8ba94e-310e-4db0-a093-204c204e876f: Title # Title
     6e809373-5f71-4565-9be1-b179b89dd23e: 'Highlight: Quote' # Highlight: Quote
     6eab3484-4a8a-459d-b34c-6f48332b75d5: __blank__ # __blank__
@@ -557,6 +591,7 @@ meta:
     9b4fc30f-02b9-4305-a6d9-5106b6b0ca10: Label # Label
     9b5d6e14-e157-4607-9bcb-aadca4a1863c: About # About
     9b6c92eb-d488-4fd4-a3fe-e55aec516915: 'Style: Width' # Style: Width
+    9b8006bb-071b-4d03-9d1f-f7bdbdc27d52: 'Tags: Categories' # Tags: Categories
     9bbc3e1f-5360-4365-9a75-6d521a5160cb: 'Card: Feature' # Card: Feature
     9bdf93bb-bbb6-4791-a90b-ee8f56915270: Developer # Developer
     9c15fd9a-81a5-4c31-bd58-95cc257be3fd: 'Text: Rich (Basic)' # Text: Rich (Basic)
@@ -566,6 +601,7 @@ meta:
     9db66fd5-d2b8-4de8-b376-dff8110ce3e9: Label # Label
     9dcca88a-e7c6-43f3-add7-8776def89b97: 'White Rabbit Team' # White Rabbit Team
     9e65ef79-1f80-4724-997d-ea1035b737c7: 'Highlight: Stats' # Highlight: Stats
+    9e396f17-1a9c-4df2-b743-640fe0cc0294: 'Asset: ID' # Asset: ID
     9e812e15-e3ff-49e7-b422-5a263a6034ce: 'Tabs: Program Finder' # Tabs: Program Finder
     9ed3f26f-fbe9-4b33-81ed-22a2fae9ea52: 'Geo: Code' # Geo: Code
     9ef42825-0500-4b36-a674-6baeb3ab244d: 'Block: Body' # Block: Body
@@ -578,7 +614,6 @@ meta:
     14d1fc6e-b42d-464e-8b7b-46441714b8d8: Image # Image
     16eaffdc-74b9-4eb1-9116-df58967173dc: 'Featured Strategy and Cards' # Featured Strategy and Cards
     17a9de48-5e07-4524-9f6e-8de470709982: Target # Target
-    19bcf750-aecc-4f9c-b4fb-50e6d96af2eb: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
     21b12e0a-7afe-477a-9f64-f2902cd9078a: Carousel # Carousel
     21dad0a7-2d67-433c-b04f-da4773293880: 'Developer: Release' # Developer: Release
     22f973cc-427c-4e70-8bb8-6624479ab025: 'Entries: Organization' # Entries: Organization
@@ -615,7 +650,7 @@ meta:
     66e0f455-1a4d-4b7b-8bb2-7a247cf9f655: Imports # Imports
     66f36432-924e-4595-914f-17cb32843c88: Changelog # Changelog
     69d6dd81-6c23-41bb-a33d-7ac17917886e: Default # Default
-    70d8712d-2a67-493a-a1a0-7ed698a9ee5d: 'Date: Published' # Date: Published
+    069e9d52-32e9-4eb2-8111-8af0c8611564: Summary # Summary
     70dd6f0e-8aa3-4520-b68c-48cbb2f3b70b: 'Nested Menu' # Nested Menu
     70f8f4e5-9348-45f1-ab46-504aad878946: Action # Action
     071f0627-4d57-45f3-be3b-2d686513516e: 'Contact: Instagram' # Contact: Instagram
@@ -636,6 +671,7 @@ meta:
     92b819ef-229c-4a42-beff-bc6edc8a0f66: 'Asset: Image' # Asset: Image
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
     94f38795-11e9-4fc4-b4db-eb3ee5c00ff5: Grantmaking # Grantmaking
+    98a27781-2b61-4d95-b8e5-b5cca67504a8: 'Asset: Opener Image' # Asset: Opener Image
     98affe9f-0fef-4624-ae74-d15517033824: 'Secondary Menu' # Secondary Menu
     99a0a64e-82ac-4b42-92b5-697513e02b7b: Grants # Grants
     106b6b15-a646-4dff-b250-ffd57c00f21a: Milestone # Milestone
@@ -643,6 +679,7 @@ meta:
     133f1f83-cfbf-4f4a-a072-26d6ec33cf9f: 'Page Builder: Inquiry Form' # Page Builder: Inquiry Form
     135f1b4e-27cb-4cda-be94-52607d445f75: 'Asset: Image' # Asset: Image
     157d31f9-69c2-4ae1-a4b4-0e6b6f253467: Text # Text
+    159dc8e6-aa01-4c9b-bb40-e8152276a990: 'Text: Link' # Text: Link
     163c23d6-9166-4610-a4fc-efb969562853: 'Audio Snippet' # Audio Snippet
     164e396c-5108-4979-b8fd-d4dbd523d790: 'Card: Wildcard' # Card: Wildcard
     0202bad0-be1f-4afa-96db-a840700c3d74: 'Entry: News' # Entry: News
@@ -657,6 +694,7 @@ meta:
     346d78ba-f05e-40ac-9b21-8c466b2f000b: 'Number of Cards' # Number of Cards
     362b51a9-9bf6-4ac2-99a7-9d6b35dc6e19: Carousel # Carousel
     403cc98b-bbd0-4d37-8a79-1141c41ba1b4: 'Longform Text' # Longform Text
+    412d6ed3-17fd-4ea5-989c-3de39c275974: 'Number: Amount' # Number: Amount
     414ac9d1-bac7-4be8-bd82-d652ae58a395: 'Asset: Image' # Asset: Image
     0426fb2a-6010-410d-abe9-2cf75ab3f5f9: Target # Target
     469acf2e-4d4a-4fa1-9fd1-b5342ea60c76: 'Asset: Media' # Asset: Media
@@ -664,15 +702,15 @@ meta:
     493bc4b8-cb08-43a2-938d-4c1b76790dd4: 'Contact: Facebook' # Contact: Facebook
     514d9158-60cc-42b6-b659-01d01be03c21: Title # Title
     515f8abd-ef70-46c7-bbd7-cc9957f75831: Landing # Landing
+    517b6a6e-0fcd-47d1-bf1a-9915a93d3e0d: Link # Link
     531e0b1a-3fa8-4379-80b6-e96b1a34de5d: Default # Default
     550b4087-0556-49ad-b210-9d66461f75b1: 'Attribution: Entry or Text' # Attribution: Entry or Text
     569e24f0-c7e8-441f-9d14-9ec278514ac0: Milestones # Milestones
     575df6b0-a62f-45c7-9fe2-aadbec000452: 'Tabs: Program Finder' # Tabs: Program Finder
     589a1bd0-570d-4dc1-a454-d5034a1b9bba: Default # Default
     600bb22c-f62f-458d-ad51-432956f869ae: 'Program Areas' # Program Areas
+    627e51e8-b9fd-4b79-b8fa-98cbdfbdb02f: 'Text: Featured Links' # Text: Featured Links
     633a6cc7-36f9-47b9-9948-e569afd25265: 'Builder: Changelog' # Builder: Changelog
-    690e3ae6-6702-4e43-9fa7-5293eb17523f: 'Tags: Categories or Program Areas' # Tags: Categories or Program Areas
-    735baf07-fdce-44c2-8433-02997cd29674: 'Department: Import' # Department: Import
     747ce413-c373-42ad-92b4-bff1e0c3ab13: Item # Item
     759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
     766d1cbd-4251-4b9d-9378-bf9d345ae492: Openers # Openers
@@ -680,13 +718,16 @@ meta:
     806d46aa-3ff9-4b94-8bcf-4e14599e638d: Content # Content
     0814b33a-e40d-4c64-8fa1-aabdfe035850: 'Navigation: Footer' # Navigation: Footer
     860aed13-393e-4e8d-8611-411a1699f13f: 'Page Builder' # Page Builder
+    862a6b36-4d91-4420-a7db-800f6d19f1f8: Action # Action
     863f5463-c410-4c19-9ef5-d257ba1721a6: 'Card: Action' # Card: Action
     890d73b0-e871-4780-aea2-81e638b832a5: 'Entry: Blog or Newsroom' # Entry: Blog or Newsroom
     914c6a3c-f48a-422f-ba86-dec3f3932b9f: Label # Label
     915b78de-ea87-43f6-bd0e-f9dd749a57b5: 'Barr Foundation' # Barr Foundation
     0955e7e8-11cb-46b2-8093-77101f7bd6d6: 'External Person' # External Person
     962d1b17-ec75-47e8-a297-39b0b971c535: Item # Item
+    994ad9e8-e7fd-4245-a5e8-08d2494d8535: Title # Title
     1033d65e-45fe-47b1-9dea-dbcd29f977db: 'Sponsored Organization Background' # Sponsored Organization Background
+    1412b7f1-5ae4-4783-87c3-f45489cf3c5b: 'Media: Video' # Media: Video
     1571afe9-73ff-49cf-b780-0bf0699a1f00: 'Text: Featured Links' # Text: Featured Links
     1610d4b7-514a-4e32-9da1-5faae34038d0: __blank__ # __blank__
     1621efc6-0c8e-4e6d-a2a1-b1c6f3609609: Video # Video
@@ -708,6 +749,7 @@ meta:
     7177fc66-4936-40e7-9fc8-2cc7f5c69739: 'Text: Preheading' # Text: Preheading
     7617be4a-e651-4c54-8aa0-7ec58f5fc81f: Target # Target
     7641cb7f-d1d2-444e-ba5d-e21e2386d119: 'Action: URL' # Action: URL
+    8079aafd-5009-4db3-8b75-b5b13de4bfb7: Link # Link
     8231b9f6-69c4-4c30-b883-eaaabbdf19fc: 'Block: Accordion' # Block: Accordion
     8927ac01-af8a-4422-87c4-913f25e2dd3f: 'Flag: Border' # Flag: Border
     9005a3a9-eed5-4c78-ac53-0a99897df1ec: 'Page Builder: Common' # Page Builder: Common
@@ -726,6 +768,7 @@ meta:
     37348ab3-b1bb-48dc-b0f2-6fa4b4e8f8ad: Label # Label
     42951b71-5983-4843-89d8-861b145d1f6f: 'Text: Transcript' # Text: Transcript
     45040e4a-50f0-43a4-a280-c21a86946d88: Directory # Directory
+    45526c8e-ba1e-445a-82a7-bd23f3585877: 'Entry: Blog Post, News Item, or Grantee' # Entry: Blog Post, News Item, or Grantee
     46027ca9-2439-4af3-8620-4af52fe9e7c6: 'Tabs: Program Finder' # Tabs: Program Finder
     46145c57-f9fd-4619-87db-2eaa3726cfb8: 'Text: Basic + Headings' # Text: Basic + Headings
     48805fe6-16d1-443a-ab57-04fb3264ea7f: Title # Title
@@ -747,6 +790,7 @@ meta:
     265453d5-2d22-4578-9119-b2b7b0e35bf9: Default # Default
     0394538d-48b7-4ac8-bcd6-5866934254f1: 'Card: Grantees' # Card: Grantees
     453424c1-d719-473d-859b-b57b862aa56c: 'Highlight: Timeline (Multiple)' # Highlight: Timeline (Multiple)
+    484160c1-8352-47bb-a090-e3e81c4b41d3: 'ID: Directory' # ID: Directory
     526592df-8835-48ec-80a2-b149d57b3e57: Carousels # Carousels
     625571b0-68f3-4147-b8d6-9cc70d2f47a2: 'Text: Quote' # Text: Quote
     734086c2-3e6c-4bd0-ada5-9d448a5abb03: 'Feed: Grantees' # Feed: Grantees
@@ -759,6 +803,7 @@ meta:
     2652042d-326e-45ff-b0bd-45f95f9e2507: Header # Header
     3060677b-b2ac-4ff3-8d37-8eee1d339e16: 'Authors: Import List' # Authors: Import List
     3971631c-d366-4346-8684-4ed22c16ade1: 'Inquiry Form' # Inquiry Form
+    5196574d-5703-4e7f-b944-14ea32c1ea2c: Label # Label
     5228976f-4dcc-4fa3-84ba-dda5b8d22d86: Label # Label
     5691662c-4e40-4575-83b4-edd124f56d7d: 'Geo: Location' # Geo: Location
     6217344e-6a7d-4c0f-9ec2-14e37f417f31: 'Flag: Import' # Flag: Import
@@ -768,7 +813,7 @@ meta:
     25795634-7ff4-4fba-b0d1-affd9a0587c0: 'Divider: Subsection' # Divider: Subsection
     37082998-9c7f-4b58-b151-fab3894c1021: 'Media: Audio' # Media: Audio
     39247735-ed77-47ee-a626-e60b8b135046: Event # Event
-    48214827-a863-4fd5-a0c8-40ef46f89489: Default # Default
+    48214827-a863-4fd5-a0c8-40ef46f89489: 'External News' # External News
     59639062-b610-4a0d-b1e4-e855ca711cb2: 'Entries: Blog' # Entries: Blog
     76928083-2a29-4679-8fdf-e811209fb268: 'Card: Grants' # Card: Grants
     84062355-43e5-4645-80bd-6ed12c82ebb8: Media # Media
@@ -796,13 +841,14 @@ meta:
     a503838a-1e79-4547-832d-fac03888dc26: 'Feed: Manual' # Feed: Manual
     a9191718-46f6-4d6a-8c04-8218d3361f05: 'Geo: Area' # Geo: Area
     aa3227ec-0bd2-4d61-80db-dd6c6e3a331a: 'Text: Job Title' # Text: Job Title
-    ab12a67b-9af1-4f2c-bc53-cbedda60dbd1: 'Budget/Strategy/Portfolio: Import' # Budget/Strategy/Portfolio: Import
     ab769ba5-f97c-40d6-9066-c07ddfd56a2f: Action # Action
+    ac700c0d-4822-4b26-b200-60e6fe390746: Summary # Summary
     ace08f06-16e5-477e-b91c-f28e50048f67: Eyebrow # Eyebrow
     ad21cdac-d8ba-49d3-85ec-248e39058216: 'Media Assets' # Media Assets
     ae2b1b26-277c-4619-ab71-b564ec89459b: 'Text: Supporting' # Text: Supporting
     af76ec93-a5f2-4f9b-8b96-eb3fbf19baef: 'Text: Body Options' # Text: Body Options
     af92063c-95db-47dd-ae5d-748042ee737a: Randomize # Randomize
+    b0ae96ca-7604-4f33-a2c6-4d31a39677d4: 'Asset: Cover Image' # Asset: Cover Image
     b1d50c66-833c-483e-97be-54b627a13e87: 'Text: Heading' # Text: Heading
     b6b3c2b7-197a-4c87-aad4-909d7e3eec79: Lesson # Lesson
     b6d8fb04-3837-4826-abf5-2ff06409e686: 'Text: Label' # Text: Label
@@ -810,7 +856,6 @@ meta:
     b7c24e4c-586b-4a34-9bdc-39a13aac1488: Contact # Contact
     b7dd5fbb-8c4b-4cd0-9bb6-04e1f3462400: 'Entries: Team' # Entries: Team
     b8d4ea4e-74b0-46b4-9a80-39170eb76c27: 'Highlight: Stats' # Highlight: Stats
-    b50dc00d-971b-4a33-a1f2-de240fbc64c6: 'Entries: Authors' # Entries: Authors
     b68fa7d0-ea0f-4788-841c-bbce45e4344a: 'Text: Notes' # Text: Notes
     b75b1db0-3847-487e-a95f-30047f42b5ad: 'Contact Form' # Contact Form
     b79ce34d-ad66-4028-8d7b-c171c4c8cc40: 'Geo Regions' # Geo Regions
@@ -818,6 +863,7 @@ meta:
     b89b9ceb-1d0c-48ec-a0d7-0c392eb011af: 'Entries: Grantee' # Entries: Grantee
     b665bd32-c8e5-4f37-931c-27fd44e7b732: Program # Program
     b781cb75-0a89-4222-89eb-380d328015c3: Summary # Summary
+    b4765cdd-5c89-4353-911c-f78387e776cf: Title # Title
     b23283d0-0432-492a-85a7-16c74858b6cc: Default # Default
     b326726c-ead3-430d-b2b8-9ec83a64c3ab: Summary # Summary
     b563972b-64ed-4a88-b6c2-92284d00d1cb: 'Text: Body' # Text: Body
@@ -825,18 +871,24 @@ meta:
     b5772510-16ec-45a7-932b-e6d3aff11a84: 'Action: Download' # Action: Download
     b7144153-576b-4c7c-ba80-b202ae9c78c5: 'Entry: Blog Post, News Item, or Grantee' # Entry: Blog Post, News Item, or Grantee
     bb2bec9e-b4d9-415f-af34-e16a1b9c2500: Default # Default
+    bbe3fe3e-be9e-4309-86f2-3f58047602de: 'Asset: Image' # Asset: Image
     bc7d1acd-9ec4-482a-bc6d-0017ab0b1f91: 'Text: Basic' # Text: Basic
     bc27fcd0-4c7f-4fa1-bdac-ce9d3d3e42a6: 'Blog Post, News Item' # Blog Post, News Item
     bcf0f106-ae8e-4b7f-a6a2-c0c241588bac: Description # Description
     bd681dfd-af4d-42fa-9b3d-405bb72ab5d7: Newsroom # Newsroom
     bda6181d-ab1e-4267-8e8d-9ebe9749d6c8: Directory # Directory
+    bda46391-1729-4498-a371-3870073db448: 'Text: Minimal Body' # Text: Minimal Body
     bde1031a-b7c0-498e-94e4-792ff7cf269f: __blank__ # __blank__
     be780dcf-a746-4d47-ab45-5d3ab50366e7: 'Style: Alignment' # Style: Alignment
+    be795e4c-65da-45f5-9320-13213acf7b06: 'Tags: Program Areas' # Tags: Program Areas
+    bf1e2277-07c6-4671-a057-ba5e27856caf: 'Audio Snippet' # Audio Snippet
     bf120ab6-d32a-4470-b0df-a0aa86834445: 'Text: Heading' # Text: Heading
     bf1977eb-0974-47fb-804c-cc8eb50760d9: Caption # Caption
+    bfdd8bee-afed-42b4-bdeb-bd96623321b5: 'Media: Audio' # Media: Audio
     bffbfe7e-eb55-4525-aafd-4b156d04715d: Image # Image
     c0b3adea-77f8-4182-b17d-7209cb415314: Description # Description
     c0e1ceb5-9d4c-496a-93ad-3adf77924687: Randomize # Randomize
+    c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07: 'Categories: Directory Teams' # Categories: Directory Teams
     c1f9543f-7b4c-4544-803c-a1a02aa27a1f: 'Text: Name' # Text: Name
     c2ff6d2c-f979-4a50-88dd-c960f6aa9e0b: __blank__ # __blank__
     c5b0dd4c-0674-4747-adf3-2fa7a9bcea40: 'Contact: YouTube' # Contact: YouTube
@@ -846,13 +898,16 @@ meta:
     c56d3c2d-9817-48cc-ad2b-e04cc44fb403: 'Text: Plain Heading' # Text: Plain Heading
     c73fc6c0-bf38-4b14-a7b6-ce6c40fc7edf: 'Card: Feature' # Card: Feature
     c80dff18-6eeb-4474-8278-fdfc55a4630c: 'Text: Supporting' # Text: Supporting
+    c771a65a-610c-4c42-bf01-baaa97ef766d: Label # Label
     c954d828-974b-402e-92e2-3057b737e6ed: 'Primary Menu' # Primary Menu
     c984ca15-0cae-4c1d-9b3c-14e9d29347f7: 'Page Builder: All (Do not Delete)' # Page Builder: All (Do not Delete)
+    c1936a97-9e6a-486b-82b6-8c7278da771e: Research # Research
     c4298a25-8850-4817-a1a1-014ba04d9e07: Blocks # Blocks
     c5338cc4-1c12-47a4-bf3b-ecd79f2164e3: 'Text: Italic' # Text: Italic
     c9146e39-188a-4125-acd5-353460088b1f: Label # Label
     c89239e9-9e5b-4f38-b61c-4eb6791244c3: 'Carousel: Auto' # Carousel: Auto
     c949843f-26a2-4fb0-a464-3fcbb1a0f5d1: 'Internal Person' # Internal Person
+    c1630228-743c-4078-9eb7-fff94b5d3825: SEO # SEO
     ca86b174-5e19-4ff8-9f7a-a5185330d56d: Homepage # Homepage
     cb1a13a4-f53a-4aa3-a568-1c10abd30a4e: Action # Action
     cb18e454-7f9b-4477-ab6b-e5c900f0c4e4: 'Text: Middle initial' # Text: Middle initial
@@ -879,12 +934,15 @@ meta:
     d38be497-85d5-48f4-af5f-d88b0fbcc0f5: 'Record Id' # Record Id
     d38d5b2f-c00b-46b1-a1b7-2e88f27d88de: Actions # Actions
     d44a4308-4627-45f3-8867-96f5d98fcefa: 'Card: Latest News (Manual)' # Card: Latest News (Manual)
-    d65ee27b-0934-4348-92aa-2a30b9a64e84: Featured # Featured
+    d59de2e1-216a-4da5-a481-776b806f2b39: Summary # Summary
     d82a1a8b-d1ee-434f-9583-06eb498d2c9c: 'Style: Button or Text' # Style: Button or Text
+    d82c20eb-ce47-406d-8255-fc7f6c009a19: 'Feed: Related Content' # Feed: Related Content
     d95defeb-86a9-41c1-b9c1-2c644240afb7: 'Asset: Cover Image' # Asset: Cover Image
+    d74937c4-46b0-4bf7-948f-d59524fa6fa0: Action # Action
     d1599614-0216-46ee-8a6d-d945d7d0bd1b: 'Action: Entry or URL' # Action: Entry or URL
     da0f3c86-0adc-4639-95b7-f71a2afe7cd0: Email # Email
     da3a7987-a4a2-4942-9663-9bad7a165bf5: 'Text: Body' # Text: Body
+    da9306eb-ac89-4668-8c10-ee33a34c6df8: Label # Label
     db8c1ab8-72a9-4372-8764-2fa0cec42651: __blank__ # __blank__
     db600239-720e-403b-b894-d8ef369fc205: 'Highlight: Quote' # Highlight: Quote
     dc79a7ca-a5e2-4cb5-9342-2cd42dc98b29: Default # Default
@@ -918,6 +976,7 @@ meta:
     e4496b2d-7e4a-4e86-855a-f5168e2399b5: 'Kitchen Sink' # Kitchen Sink
     e4877e61-528c-470a-bfb5-5548ec0153d5: 'Text: Heading' # Text: Heading
     e32751f4-2535-48d4-a6fa-3eab79737ccf: 'Geo: Parent Hierarchy' # Geo: Parent Hierarchy
+    e49497aa-7d1e-407b-9451-852b6b99eb57: 'Asset: Alt' # Asset: Alt
     e80011d9-6840-4ef0-862e-d5b1ef15bc9b: 'Navigation: Social' # Navigation: Social
     eaa5d22c-f0eb-4f12-befb-57e850041769: 'Carousel: Auto' # Carousel: Auto
     eaf269e1-7746-41ed-9136-dc532a61e2f7: 'Text: Description' # Text: Description
@@ -928,6 +987,7 @@ meta:
     f04ce99a-aa20-4ed0-9e83-40f232197b48: Item # Item
     f07f866b-e6db-4264-a715-8d9e684e6488: 'Entry Hunt' # Entry Hunt
     f1e1b4db-27c9-486f-8ecf-0f64ac74b825: Byline # Byline
+    f3e4b30a-8bba-426e-8b4c-dc9f998ab562: 'Asset: Image' # Asset: Image
     f4adca94-3a26-4dd3-a3d4-c816fe8e5580: Grantees # Grantees
     f4cef7c4-9c10-4b2d-aecc-afe52d207d0d: 'Section Anchor' # Section Anchor
     f6ff4743-d865-4cd9-ae5b-b5028a431852: Sub-Page # Sub-Page
@@ -935,6 +995,7 @@ meta:
     f8db332e-6a63-4211-95bf-942e9a3a40ce: 'About Us' # About Us
     f8f1ed84-0e9d-4487-906c-0b01afb56973: Default # Default
     f8feae9d-8a86-4158-a990-b8b80467dd78: Summary # Summary
+    f75cd0f2-a598-4ff2-9255-3e19d2b7e456: Generic # Generic
     f136e846-3b5c-4faf-b330-046ab13fa887: 'Card: Latest News (Manual)' # Card: Latest News (Manual)
     f291a098-6829-4193-9d10-5757e239bef3: 'Tags: Strategies' # Tags: Strategies
     f652cdb9-c34e-4c73-9b55-ebe3ffe040f6: Label # Label
@@ -942,6 +1003,7 @@ meta:
     f7459d43-df4c-47f2-b96c-a7f4e09c3d7e: 'Highlight: Timeline (Single)' # Highlight: Timeline (Single)
     f92088de-03ff-4081-a955-e890fbc18c96: 'Cards: Auto' # Cards: Auto
     fbb4714a-4260-498d-b73b-2f62a22c4b99: 'Attribution: Entry or Text' # Attribution: Entry or Text
+    fc3e56bc-3148-4bd1-a42c-6b47670dbc41: Summary # Summary
     fc425932-ae63-45a0-9158-1b6d5d4ce1c2: 'Card: News / Media' # Card: News / Media
     fd5c6fe0-c1b3-4832-baf6-a1bb5e54bc0d: Source(s) # Source(s)
     fda066ec-ba55-4d1a-aea5-12402640c646: 'Divider: Section' # Divider: Section

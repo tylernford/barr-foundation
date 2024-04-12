@@ -7,16 +7,18 @@
 
 {% macro bio(person) %}
     {% import '_macros/01_elements/_actions' as actions %}
+    {% import '_macros/02_components/_featured-links' as featuredLinks %}
     {% import '_macros/03_modules/_feed' as feeds %}
 
-    {% set name      = person.title %}
-    {% set bio       = person.textBody %}
-    {% set email     = person.contactEmail %}
-    {% set linkedin  = person.contactLinkedIn %}
-    {% set twitter   = person.contactTwitter %}
-    {% set instagram = person.contactInstagram %}
-    {% set facebook  = person.contactFacebook %}
-    {% set website   = person.contactWebsite %}
+    {% set name          = person.textFirst %}
+    {% set bio           = person.textBody %}
+    {% set featuredLinks = person.textFeaturedLinks.all() %}
+    {% set email         = person.contactEmail %}
+    {% set linkedin      = person.contactLinkedIn %}
+    {% set twitter       = person.contactTwitter %}
+    {% set instagram     = person.contactInstagram %}
+    {% set facebook      = person.contactFacebook %}
+    {% set website       = person.contactWebsite %}
     {% set social =
         linkedin|length ? true :
         twitter|length ? true :
@@ -25,7 +27,6 @@
         website|length ? true :
         false
     %}
-    {% set recentPosts = craft.entries().section('blog').relatedTo(person).limit(3) %}
 
 
     {# Bio #}
@@ -39,6 +40,11 @@
             <div class="bio__content">
                 {{ bio }}
             </div>
+
+            {# Featured Links #}
+            {% if featuredLinks|length %}
+                {{ featuredLinks.featuredLinks(featuredLinks, 'inline') }}
+            {% endif %}
         </div>
 
         {# Contact #}
@@ -131,16 +137,13 @@
         {% endif %}
     </section>
 
-    {# Posts #}
-    {% if recentPosts|length %}
-        {% set title = 'Posts by ' ~ name %}
-        {% set feedConfig = {
-            'title': title,
-            'titleVariant': 'small',
-            'feed': recentPosts,
-            'gridVariant': 'grid',
-            'cardVariant': 'post'
-        } %}
-        {{ feeds.feed(feedConfig) }}
-    {% endif %}
+
+    {# Related Posts #}
+    {% set title = 'Posts by ' ~ name %}
+
+    {{ sprig('sprig/_sprig-related-content-grid', {
+        title: title,
+        section: ['blog','newsroom'],
+        relatedTo: person.id
+    }) }}
 {% endmacro %}

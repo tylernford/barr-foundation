@@ -1,0 +1,64 @@
+fieldLayouts:
+  bd8d7d04-acb9-420a-88e9-930b0444ec98:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f33a116a-a4fb-494c-9ad5-d1c71d26dc89
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 34d1db09-2522-47e1-a917-8f37d0ab24be
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 29942c87-1bd3-4690-ae98-ba104b5589a2 # Card: Post
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 626680fe-3996-4589-a72d-812858790fa6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f0f03907-7411-4688-9a1d-30d3ce7c5a84
+        userCondition: null
+handle: research
+hasTitleField: true
+name: Research
+section: bd681dfd-af4d-42fa-9b3d-405bb72ab5d7 # Newsroom
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 2
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

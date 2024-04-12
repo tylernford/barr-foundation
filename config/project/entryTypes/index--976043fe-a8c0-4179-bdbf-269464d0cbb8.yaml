@@ -63,10 +63,28 @@ fieldLayouts:
         name: Opener
         uid: 6e9730d7-f117-4332-a781-92ceaf9810e2
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65da1947-b5ab-4a4d-9c80-963eae56aef9
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 0c45c54c-7f1a-49cf-aee4-faeaa9607699
+        userCondition: null
 handle: index
 hasTitleField: true
 name: Index
-section: 5a3ec662-f801-451b-97a6-8d2d40b08a5d # News + Insights
+section: 5a3ec662-f801-451b-97a6-8d2d40b08a5d # News & Insights
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

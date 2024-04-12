@@ -60,7 +60,7 @@
                                     <h3 class="news__preheading">Latest in {{ programTitle }}</h3>
                                     <div>
                                         <a class="news__heading" href="{{ programNews.url }}">{{ programNews.title }}</a>
-                                        <time class="news__date" datetime="{{ programNews.dateOnly|date|format('Y-mm-dd') }}">{{ programNews.dateOnly|date|format('M dd, Y') }}</time>
+                                        <time class="news__date" datetime="{{ programNews.postDate|date|format('Y-mm-dd') }}">{{ programNews.postDate|date|format('M dd, Y') }}</time>
                                     </div>
                                 </div>
                             {% endif %}

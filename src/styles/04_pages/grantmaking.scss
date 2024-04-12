@@ -1,0 +1,126 @@
+@use "../utils/_utils" as *;
+
+.grantmaking-intro {
+  position: relative;
+  background-color: var(--color-teal-150);
+
+  .angle {
+    inset: 0;
+    position: absolute;
+    transform: translateY(100%);
+    z-index: -1;
+    
+    &::before {
+      content: '';
+      inset: 0 0 auto 0;
+      height: var(--base-40);
+      position: absolute;
+      background-color: var(--color-teal-150);
+    }
+    
+    svg {
+      margin-block-start: var(--base-40);
+      width: 100%;
+      height: auto;
+      display: block;
+      color: var(--color-teal-150);
+    }
+  }
+
+  .grants-intro__copy {
+    margin-right: auto;
+	  margin-left: auto;
+	  padding: var(--base-10);
+	  width: 100%;
+    max-width: 70rem; // 1120px
+    color: var(--color-grey-25);
+  }
+
+  a {
+    color: inherit;
+    text-decoration-color: inherit;
+    transition: text-decoration-color var(--transition) ease-in;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration-color: transparent;
+        transition: text-decoration-color var(--transition-intermediate) ease-out;
+      }
+    }
+  }
+
+  .copy__large {
+    @include getType('body');
+    
+    p {
+      max-width: 35em;
+
+      &:not(:last-child) {
+        margin-block-end: 1em;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      i {
+        font-style: italic;
+      }
+    }
+  }
+
+  .copy__large + .copy__standard {
+    margin-block-start: var(--base-6);
+  }
+
+  .copy__standard {
+    @include getType('caption-messina');
+    font-weight: 300;
+
+    p {
+      max-width: 37em;
+
+      &:not(:last-child) {
+        margin-block-end: 1.33em;
+      }
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    i {
+      font-style: italic;
+    }
+  }
+
+  @include breakpoint(sm) {
+    .grants-intro__copy {
+      padding-block-start: var(--base-12);
+    }
+  }
+
+  @include breakpoint(md) {
+    .grants-intro__copy {
+      padding-inline: var(--base-18);
+    }
+
+    .copy__large {
+      @include getType('subhead');
+    }
+
+    .copy__large + .copy__standard {
+      margin-block-start: var(--base-9);
+    }
+  
+    .copy__standard {
+      @include getType('body');
+    }
+  }
+
+  @include breakpoint(lg) {
+    .grants-intro__copy {
+      padding: var(--base-14) var(--base-28) var(--base-10) var(--base-28);
+    }
+  }
+}

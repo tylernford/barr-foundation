@@ -1,0 +1,169 @@
+{# ===========================================================
+Template: interior/index.twig
+URL: /
+===========================================================
+Interior template
+=========================================================== #}
+
+{% extends '_layouts/_base' %}
+
+{% import '_macros/01_elements/_actions' as actions %}
+{% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/02_components/_featured-links' as featuredLinks %}
+{% import '_macros/03_modules/_feed' as feeds %}
+{% import '_macros/03_modules/_opener' as openers %}
+
+{% set name          = entry.textFirst %}
+{% set bio           = entry.textBody %}
+{% set featuredLinks = entry.textFeaturedLinks.all() %}
+{% set email         = entry.contactEmail %}
+{% set linkedin      = entry.contactLinkedIn %}
+{% set twitter       = entry.contactTwitter %}
+{% set instagram     = entry.contactInstagram %}
+{% set facebook      = entry.contactFacebook %}
+{% set website       = entry.contactWebsite %}
+{% set social =
+  linkedin|length ? true :
+  twitter|length ? true :
+  instagram|length ? true :
+  facebook|length ? true :
+  website|length ? true :
+  false
+%}
+
+{% block content %}
+  {# Opener #}
+  {{ openers.bio(entry) }}
+
+  {# Page #}
+  <div class="page-wrapper">
+    <div class="angle"{{ bio|length ? '' : ' data-no-angle=true' }}>
+        {{ angles.topLarge() }}
+    </div>
+
+    <div class="background"></div>
+
+
+    {# Bio #}
+    {% if bio|length or email|length or social %}
+        <section class="bio"{{ bio|length ? ' data-columns=2'}}>
+            {# Primary #}
+            {% if bio|length %}
+                <div class="bio__primary">
+                    {# Heading #}
+                    <h2 class="bio__heading">About {{ name }}</h2>
+
+                    {# Content #}
+                    <div class="bio__content">
+                        {{ bio }}
+                    </div>
+
+                    {# Featured Links #}
+                    {% if featuredLinks|length %}
+                        {{ featuredLinks.featuredLinks(featuredLinks, 'inline') }}
+                    {% endif %}
+                </div>
+            {% endif %}
+
+            {# Contact #}
+            {% if email|length or social %}
+                <div class="bio__secondary">
+                    {# Email #}
+                    {% if email|length %}
+                        <div class="bio__contact-item">
+                            <h3 class="contact-item__heading">Contact</h3>
+
+                            {% set emailAttributes = {
+                                type: 'link', isReversed: false,
+                                icon: 'email', iconOnly: false,
+                                text: 'Email', url: 'mailto:' ~ email,
+                                linkType: 'external', target: '_blank'
+                            } %}
+                            {{ actions.action(emailAttributes) }}
+                        </div>
+                    {% endif %}
+
+                    {# Social #}
+                    {% if social %}
+                        <div class="bio__contact-item">
+                            <h3 class="contact-item__heading">Social</h3>
+
+                            <ul class="contact-item__list">
+                                {% if linkedin|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-linkedin', iconOnly: false,
+                                            text: 'LinkedIn', url: linkedin,
+                                            linkType: 'external', target: '_blank'
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if twitter|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-twitter', iconOnly: false,
+                                            text: 'Twitter', url: twitter,
+                                            linkType: 'external', target: '_blank'
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if instagram|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-instagram', iconOnly: false,
+                                            text: 'Instagram', url: instagram,
+                                            linkType: 'external', target: '_blank'
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if facebook|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'social-facebook', iconOnly: false,
+                                            text: 'Facebook', url: facebook,
+                                            linkType: 'external', target: '_blank'
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+
+                                {% if website|length %}
+                                    <li>
+                                        {% set emailAttributes = {
+                                            type: 'link', isReversed: false,
+                                            icon: 'link-out', iconOnly: false,
+                                            text: 'Website', url: website,
+                                            linkType: 'external', target: '_blank'
+                                        } %}
+                                        {{ actions.action(emailAttributes) }}
+                                    </li>
+                                {% endif %}
+                            <ul>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </section>
+    {% endif %}
+
+
+    {# Related Posts #}
+    {% set title = 'Posts by ' ~ name %}
+
+    {{ sprig('sprig/_sprig-related-content-grid', {
+        title: title,
+        section: ['blog','newsroom'],
+        relatedTo: entry.id
+    }) }}
+  </div>
+{% endblock %}

@@ -19,6 +19,6 @@ siteSettings:
   915b78de-ea87-43f6-bd0e-f9dd749a57b5: # Barr Foundation
     enabledByDefault: true
     hasUrls: true
-    template: interior/index.twig
-    uriFormat: 'about-us/people/{slug}'
+    template: interior/about-us/bio.twig
+    uriFormat: 'people/{slug}'
 type: channel

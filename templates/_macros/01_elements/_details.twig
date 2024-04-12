@@ -26,14 +26,15 @@
     
     {# Single #}
     {% else %}
+      {# <a class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}" href="{{ detail.url }}"> #}
       <span class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       {% for detail in details %}
-        <span>
+        {% if detail.url is defined %}<a href="{{ detail.url }}">{% else %}<span>{% endif %}
           {% if detail.img|length %}
             {{ images.image(detail.img, '240', '1/1', '', false) }}
           {% endif %}
-          {{ detail.name }}
-        </span>
+          <span>{{ detail.name }}</span>
+        {% if detail.url is defined %}</a>{% else %}</span>{% endif %}
       {% endfor %}
       </span>
     {% endif %}
@@ -56,7 +57,7 @@
         <title>{{ title }}</title>
         <use xlink:href="{{ alias('@icon') }}{{ icon }}-20"></use>
       </svg>
-      {{ details }}
+      {{ details|raw }}
     </p>
   {% endif %}
 
@@ -64,12 +65,13 @@
   {% macro list(variant, isReversed, details) %}
     {% import '_macros/01_elements/_image' as images %}
 
-    {% set programAreas =  craft.entries().section('programAreasCategories') %}
-    {% set programArea = '' %}
-    {% set areaColor = '' %}
+    {% set programAreas = craft.entries().section('programAreasCategories') %}
 
     <ul class="details" data-variant="{{ variant }}" data-is-reversed="{{ isReversed == false ? 'false' : 'true' }}">
       {% for detail in details %}
+        {% set programArea = '' %}
+        {% set areaColor = '' %}
+
         <li>
           {% if variant == 'tags' %}
 
@@ -94,10 +96,12 @@
             {# <a{{ areaColor|length ? ' data-program-color=' ~ areaColor }} href="{{ detail.url }}">{{ detail.title }}</a> #}
             <span{{ areaColor|length ? ' data-program-color=' ~ areaColor }}>{{ detail.title }}</span>
           {% elseif variant == 'byline' %}
-            {% if detail.img|length %}
-              {{ images.image(detail.img, '240', '1/1', '', false) }}
-            {% endif %}
-            {{ detail.name }}
+            {% if detail.url %}<a href="{{ detail.url }}">{% endif %}
+              {% if detail.img|length %}
+                {{ images.image(detail.img, '240', '1/1', '', false) }}
+              {% endif %}
+              <span>{{ detail.name }}</span>
+            {% if detail.url %}</a>{% endif %}
           {% endif %}
         </li>
       {% endfor %}

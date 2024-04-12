@@ -1,0 +1,51 @@
+{# ===========================================================
+Template: interior/grantmaking.twig
+===========================================================
+Grantmaking nterior template
+=========================================================== #}
+
+{% extends '_layouts/_base' %}
+
+{% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/03_modules/_opener' as openers %}
+
+{% block content %}
+
+    {# INTERIOR OPENER #}
+    {% set entrySection = entry.section.handle %}
+    {% if entrySection == 'grantmaking' %}
+        {% set opener = entry.openerLanding %}
+        {{ openers.landing(opener, entry) }}
+    {% elseif entrySection == 'grantees' %}
+        {{ openers.grantee(entry) }}
+    {% endif %}
+
+
+    {# INTERIOR BUILDER: #}
+    {# 1. People is a unique builder
+    2. Program Areas landing is a unique builder
+    3. Grantee Database is builder-less
+    4. Default to common builder for everything else
+    #}
+    {% set builder = entry.builderCommon ?? null %}
+
+    {% if builder %}
+        <div class="page-wrapper">
+            <div class="angle">
+                {{ angles.topLarge() }}
+            </div>
+                
+            <div class="background"></div>
+
+            {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+        </div>
+
+    {# Grantee DB #}
+    {% elseif entry.slug == 'grants-grantees' %}
+        {% include 'interior/grantmaking/grants.twig' %}
+
+    {# Grantee Entry #}
+    {% elseif entrySection == 'grantees' %}
+        {% include 'interior/grantmaking/grantee.twig' with { 'entry': entry } %}
+    {% endif %}
+{% endblock %}

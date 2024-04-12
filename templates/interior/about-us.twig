@@ -1,0 +1,53 @@
+{# ===========================================================
+Template: interior/about-us.twig
+URL: /
+===========================================================
+About Us Interior template
+=========================================================== #}
+
+{% extends '_layouts/_base' %}
+{% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/03_modules/_feed' as feeds %}
+{% import '_macros/03_modules/_opener' as openers %}
+
+{% set entrySection = entry.section.handle %}
+{% set opener = entry.openerLanding %}
+{% set builder = entry.builderCommon ?? entry.builderPeople %}
+
+
+{% block content %}
+
+    {# Opener #}
+    {{ openers.landing(opener, entry) }}
+
+
+    {# Page #}
+    <div class="page-wrapper">
+    <div class="angle">
+        {{ angles.topLarge() }}
+    </div>
+
+    <div class="background"></div>
+    {% if entrySection == 'aboutUs' and entry.type == 'directory' %}
+        {% include '_partials/_builder-people.twig' with {'builder': builder} %}
+    {% else %}
+        {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+    {% endif %}
+
+
+    {# Interior Pre-Footer #}
+    {% set teamFeed = entry.feedTeam ?? entry.feedTeam %}
+    {% if teamFeed|length %}
+      {% set title = teamFeed.one.teamTitle %}
+      {% set feed  = teamFeed.one.team %}
+      {% set feedConfig = {
+        'title': title,
+        'titleVariant': '',
+        'feed': feed,
+        'gridVariant': 'grid',
+        'cardVariant': 'bio'
+      } %}
+
+      {{ feeds.feed(feedConfig) }}
+    {% endif %}
+{% endblock %}

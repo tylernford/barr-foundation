@@ -30,12 +30,36 @@ fieldLayouts:
             uid: 027d3f60-3fac-408a-99e1-3a6cfd86c8e3
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 484160c1-8352-47bb-a090-e3e81c4b41d3 # ID: Directory
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b075e36-233c-4996-bcd5-05e4efe2131d
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 89018b53-2891-452a-b5b3-64715ddab024
             userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 3a2f39b7-ed74-4fe2-aa22-685cdd11a644 # Text: First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c834e1ec-1a64-49c6-9c26-986e51d33f32
+            userCondition: null
+            warning: null
+            width: 50
           -
             elementCondition: null
             fieldUid: b79fbb2a-3495-4126-aec7-ef3eea56e1a1 # Text: Pronouns
@@ -62,13 +86,61 @@ fieldLayouts:
             width: 50
           -
             elementCondition: null
-            fieldUid: 65ee2a7e-b332-47b7-88bf-63aa41aaa155 # Tags: Categories or Program Areas
-            instructions: Deprecated.
+            fieldUid: 4dad4ca0-bad0-464f-8bd0-65023dc18709 # Text: Organization
+            instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9ecae88f-f550-4e14-8eb8-3aa61d39ab8a
+            uid: 0f152f36-a230-41ba-9191-b794b8cf033c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 3eecd09f-5fc5-4287-9eda-0530ec2708bd # Text: Organization URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 437f5ff7-3218-460e-a0c2-4038ff9d83ef
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d453d55f-cf91-4609-9902-ae1370bdbc6d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8797d2b7-0618-41a9-9981-6a75d957809a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 2abdf5dd-0d2a-4af1-a1cc-f8027bf84fc5 # Tags: Directory Teams
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5982ff0b-5aec-420c-8ad5-5e9c5f4c4662
             userCondition: null
             warning: null
             width: 50
@@ -93,30 +165,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 59261354-c989-4cd3-bc09-b10d7835cba9
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 329ee082-81cc-492f-bc61-0230f4a009b4 # Entries: Person Type
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8797d2b7-0618-41a9-9981-6a75d957809a
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            elementCondition: null
-            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d453d55f-cf91-4609-9902-ae1370bdbc6d
             userCondition: null
             warning: null
             width: 50
@@ -147,6 +195,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 30162140-1fa2-4c06-873e-c39573555373
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 627e51e8-b9fd-4b79-b8fa-98cbdfbdb02f # Text: Featured Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 921ca9ac-f78b-45ff-a565-e0d546b6a332
             userCondition: null
             warning: null
             width: 100
@@ -236,6 +296,24 @@ fieldLayouts:
             width: 100
         name: Description
         uid: d2615e6e-e628-417f-9479-8b2dc28f3ebd
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ce34bfb-d5f2-4f64-9b55-16fba7003565
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 01cc3f66-ccb5-450e-a32f-ec2b75c5d358
         userCondition: null
 handle: default
 hasTitleField: true

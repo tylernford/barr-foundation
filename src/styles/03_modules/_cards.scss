@@ -36,7 +36,7 @@
   }
   
   .cards-grid__inner {
-    @include container-narrow;
+    @include container-inner;
   }
 
   // Without featured grantee

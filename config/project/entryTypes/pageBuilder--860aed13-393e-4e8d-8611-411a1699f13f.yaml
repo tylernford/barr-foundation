@@ -81,10 +81,28 @@ fieldLayouts:
         name: Content
         uid: a0bdc223-e18d-4f0c-8ad4-7eb48156b82b
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: c1630228-743c-4078-9eb7-fff94b5d3825 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d978ca3-e82b-421e-961a-2da2eb96e738
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: d9d80157-f450-48fa-82f0-b8a9c379215b
+        userCondition: null
 handle: pageBuilder
 hasTitleField: true
 name: 'Page Builder'
-section: 5a3ec662-f801-451b-97a6-8d2d40b08a5d # News + Insights
+section: 5a3ec662-f801-451b-97a6-8d2d40b08a5d # News & Insights
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

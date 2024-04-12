@@ -1,0 +1,135 @@
+{% set neighbours = 3 %}
+
+
+{% if pageInfo is defined and pageInfo.totalPages > 1 %}
+  <div class="pagination">
+    {# First + previous buttons #}
+    <div class="pagination__button-group">
+      {# First #}
+      <button
+        class="pagination__button pagination__button--first"
+        {{ page == 1 ? 'disabled' }}
+        sprig
+        s-val:page="1"
+        s-push-url="?page=1"
+        s-swap="innerHTML show:top"
+      >
+        <span>First</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
+        </svg>
+      </button>
+
+      {# Decrements `page` by 1 and pushes the new value into the URL on click #}
+      <button
+        class="pagination__button pagination__button--previous"
+        {{ page == 1 ? 'disabled' }}
+        sprig
+        s-val:page="{{ page - 1 }}"
+        s-push-url="?page={{ page - 1 }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Previous</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+        </svg>
+      </button>
+    </div>
+
+    <p class="pagination__mobile-indicator">
+      {{ page }} of {{ pageInfo.totalPages }}
+    </p>
+
+    <ol class="pagination__numbers">
+      {% import _self as self %}
+        
+      {# first #}
+      {% if pageInfo.currentPage - neighbours > 1  %}
+        {{ self.paginationItem(pageInfo.firstUrl, '1') }}
+      {% endif %}
+
+      {# ellipsis before current #}
+      {% if pageInfo.currentPage - neighbours > 2 %}
+        <span class="numbers__inactive">&hellip;</span>
+      {% endif %}
+
+      {# links before current #}
+      {% for page, url in pageInfo.getPrevUrls(neighbours) %}
+        {{ self.paginationItem(url, page) }}
+      {% endfor %}
+
+      {# current #}
+      {{ self.paginationItem('', pageInfo.currentPage, true) }}
+
+      {# links after current #}
+      {% for page, url in pageInfo.getNextUrls(neighbours) %}
+        {{ self.paginationItem(url, page) }}
+      {% endfor %}
+
+      {# ellipsis after current #}
+      {% if pageInfo.totalPages - pageInfo.currentPage > neighbours + 1 %}
+        <span class="numbers__inactive">&hellip;</span>
+      {% endif %}
+
+      {# last #}
+      {% if pageInfo.currentPage + neighbours < pageInfo.totalPages %}
+        {{ self.paginationItem(pageInfo.lastUrl, pageInfo.totalPages) }}
+      {% endif %}
+    </ol>
+
+    {# Last + next buttons #}
+    <div class="pagination__button-group">
+      {# Increments `page` by 1 and pushes the new value into the URL on click #}
+      <button
+        class="pagination__button pagination__button--next"
+        {{ page == pageInfo.totalPages ? 'disabled' }}
+        sprig s-val:page="{{ page + 1 }}"
+        s-push-url="?page={{ page + 1 }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Next</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-20"></use>
+        </svg>
+      </button>
+
+      {# Last #}
+      <button
+        class="pagination__button pagination__button--last"
+        {{ page == pageInfo.totalPages ? 'disabled' }}
+        sprig
+        s-val:page="{{ pageInfo.totalPages }}"
+        s-push-url="?page={{ pageInfo.totalPages }}"
+        s-swap="innerHTML show:top"
+      >
+        <span>Last</span>
+        <svg>
+          <use xlink:href="{{ alias('@icon') }}arrow-stop-20"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+{% endif %}
+
+
+{# single numeric link #}
+{% macro paginationItem(url, number, current) %}
+  {% if current == 'is-current' %}
+    <li>
+      <span data-number="{{number}}" class="numbers__current" aria-label="Current page" aria-current="page">{{ number }}</span>
+    </li>
+  {% else %}
+    <li>
+      <a
+        class="numbers__active"
+        href="{{url}}"
+        data-number="{{number}}"
+        aria-label="{{ 'Go to page'|t ~ ' ' ~ number }}"
+        sprig
+        s-val:page="{{ number }}"
+        s-push-url="?page={{ number }}"
+        s-swap="innerHTML show:top"
+      >{{number}}</a>
+    </li>
+  {% endif %}
+{% endmacro %}

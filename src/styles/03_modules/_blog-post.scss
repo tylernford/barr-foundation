@@ -11,4 +11,23 @@
   @include breakpoint(md) {
     padding-block: var(--base-12) var(--base-18);
   }
+
+  &[data-authors="true"] {
+    @include container-inner;
+    padding-inline: 0!important;
+    display: flex;
+    flex-direction: column-reverse;
+
+
+    @include breakpoint(lg) {
+      padding-inline-end: var(--base-24)!important;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(xl) {
+      padding-inline-end: var(--base-32)!important;
+    }
+  }
 }

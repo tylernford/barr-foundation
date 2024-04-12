@@ -1,0 +1,173 @@
+{# _partials/_entry-grants-org.twig 
+
+{# =======================================
+  Interior: Grantee Organization
+========================================== #}
+
+{% import '_macros/01_elements/_angles' as angles %}
+{% import '_macros/01_elements/_section-title' as sectionTitles %}
+{% import '_macros/02_components/_card.twig' as cards %}
+{% import '_macros/03_modules/_feed' as feeds %}
+
+{# Set Grant Year (previous year). 
+    NOTE: 
+    1. This might need to be adjusted depending on biz reqs 
+    2. Can a grantee receive multiple grants per year?
+#}
+
+{% set layout = layout ?? 'grid' %}
+
+{% set introLarge = entry.textRichLink %}
+{% set intro      = entry.textIntro %}
+
+{# Retrieve all grants associated with grantee #}
+{% set grantList = craft.entries().section('grants').entriesOrganization(entry).all() %}
+
+{# Capture tags from Grantee' grants #}
+{% set granteeTags = [] %}
+{% for grant in grantList %}
+    {% for programArea in grant.tagsProgramAreas %}
+        {% if programArea.title in granteeTags %}
+        {% else %}
+            {% set granteeTags = granteeTags|merge([programArea.id]) %}
+        {% endif %}
+    {% endfor %}
+
+    {% for strategy in grant.tagsStrategies %}
+        {% if strategy.title in granteeTags %}
+        {% else %}
+            {% set granteeTags = granteeTags|merge([strategy.id]) %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+
+{# Intro #}
+{% if introLarge or intro %}
+    <{{ introLarge or intro ? 'section' : 'div' }} class="grantmaking-intro">
+        {% if grantList|length %}
+        {% else %}
+            <div class="angle">
+                {{ angles.topLarge() }}
+            </div>
+        {% endif %}
+        
+        {% if introLarge or intro %}
+            <div class="grants-intro__copy">
+                {% if introLarge %}
+                    <div class="copy__large">
+                        {{ introLarge }}
+                    </div>
+                {% endif %}
+
+                {% if intro %}
+                    <div class="copy__standard">
+                        {{ intro }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </{{ introLarge or intro ? 'section' : 'div' }}>
+{% endif %}
+
+
+{# Grants #}
+{% if grantList|length %}
+    {{ sprig('sprig/_sprig-grants-grid', { grantee: entry.id, limit: 10 }) }}
+{% endif %}
+
+
+{# Related Content #}
+{% set relatedCards = entry.cardsFeedRelatedContent %}
+
+{% if relatedCards|length %}
+    {# Set manualFeed #}
+    {% set manualFeed = relatedCards %}
+    {# Set empty feedCards array #}
+    {% set feedCards = [] %}
+
+    {# If manual card selection #}
+    {% if manualFeed|length %}
+        {# For manually selected card #}
+        {% for item in manualFeed %}
+            {# If generic or media card #}
+            {% if item.type == 'generic' or item.type == 'audio' or item.type == 'video' %}
+                {% set feedCards = feedCards|merge([item]) %}
+                    
+            {# If entry card #}
+            {% else %}
+                {% set feedCards = feedCards|merge([item.blogPostNewsItemGranteeOrGrant.one]) %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+            
+    <section class="feed">
+        {# Section Title #}
+        {% set sectionTitleAttributes = {
+            level: 'h2',
+            title: 'Related Content',
+            variant: 'small', border: true
+        } %}
+        {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
+
+        {# Feed #}
+        <div class="cardRow" data-columns="{{ feedCards|length }}">
+                {% for card in feedCards %}
+                    {% if card.type == 'generic' %}
+                        {% set cardConfig  = {
+                            'variant': card.type,
+                            'image': card.assetImage.one(),
+                            'label': card.label,
+                            'title': card.cardTitle,
+                            'summary': card.summary,
+                            'action': card.actionLink
+                        } %}
+                        {{ cards.generic(cardConfig) }}
+                    {% elseif card.type == 'audio' or card.type == 'video' %}
+                        {% set cardConfig  = {
+                            'variant': card.type,
+                            'image': card.assetImage.one(),
+                            'videoUrl': card.type == 'video' ? card.videoUrl : null,
+                            'label': card.label,
+                            'title': card.cardTitle,
+                            'summary': card.summary,
+                            'action': card.actionLink,
+                            'audioSnippet': card.type == 'audio' ? card.audioSnippet.one : null
+                        } %}
+                        {{ cards.media(cardConfig) }}
+                    {% else %}
+                        {% set cardVariant =
+                            card.section.handle == 'blog' ? 'post' :
+                            card.section.handle == 'newsroom' ? 'news'
+                            : card.section.handle
+                        %}
+
+                        {% if cardVariant == 'grantees' %}
+                            {% set grantee = card %}
+                            {% set granteeCardConfig = {
+                                'grantee': grantee
+                            } %}
+
+                            {{ cards.grantee(granteeCardConfig) }}
+                            
+                        {% elseif cardVariant == 'post' %}
+                            {{ cards.post(card) }}
+
+                        {% elseif cardVariant == 'news' %}
+                            {{ cards.news(card) }}
+                            
+                        {% elseif cardVariant == 'grants' %}
+                            {% set grantCardConfig = {
+                                'variant': 'grid',
+                                'content': {
+                                    'grantee': card.entriesOrganization.one,
+                                    'grant': card
+                                }
+                            }%}
+                            {{ cards.grant(grantCardConfig) }}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+    </section>
+{% endif %}

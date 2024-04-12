@@ -1,0 +1,38 @@
+{% import '_macros/02_components/_card' as cards %}
+
+{% set personType = craft.entries.id(personType).one() %}
+{% set page = page ?? 1 %}
+
+{% set filterParameters = personType %}
+
+{# ---  Set View  --- #}
+{% set guestAuthorViewAs = guestAuthorViewAs ?? 'grid' %}
+
+{# {% do sprig.pushUrl('?' ~ {guestAuthorViewAs:guestAuthorViewAs}|url_encode) %} #}
+
+{% set feedQuery = craft.entries().section('directory').relatedTo(filterParameters).orderBy('title').limit(limit) %}
+
+{# Paginates the entry query given the current page #}
+{% set pageInfo = sprig.paginate(feedQuery, page) %}
+{% set feed = pageInfo.pageResults %}
+
+
+<div class="feed-filters" data-variant="simple">
+  {% include '_partials/_filtering/_view-as' with {
+    activeView: guestAuthorViewAs,
+    viewHandle: 'guestAuthorViewAs',
+    views: ['grid','list']
+  } %}
+</div>
+
+<div class="feed">
+  <div class="feed__grid" data-grid-style="{{ guestAuthorViewAs }}" data-columns="4">
+    {% for feedItem in feed %}
+      {{ cards.bio(feedItem) }}
+    {% endfor %}
+  </div>
+</div>
+
+{% if feed %}
+  {% include '_partials/_filtering/_pagination' %}
+{% endif %}

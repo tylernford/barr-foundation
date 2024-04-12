@@ -1,0 +1,141 @@
+fieldLayouts:
+  2f45ee23-8b65-42b7-9c35-e7588e3a38ef:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: 'Title of the article.'
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5ad9b16c-808c-4044-9be0-5d0c0a6da75d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 029a8e86-09e9-4637-8c45-3a7613e8e259
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 6dfb099a-3f70-4263-8930-a2a018c83ada # Text: Publication
+            instructions: 'Name of the publication source.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b7a26747-4fbf-424a-ac17-ec9cbc039d1d
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 4217f7b3-ec24-454d-87f2-1998f0a0baae # Tags: Program Areas
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d79fabb-665d-430a-995c-93deb227c71a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: f291a098-6829-4193-9d10-5757e239bef3 # Tags: Strategies
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e027790b-6973-4f27-a263-ba0681a0e88c
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 9b8006bb-071b-4d03-9d1f-f7bdbdc27d52 # Tags: Categories
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27810e33-d9c6-4781-a9a1-a1cd19dde2fa
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: a5b4b888-c895-4b79-a927-917f0e4837d2
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 9901ad2a-d15c-4337-8b16-5f395d71a734 # Asset: Image
+            instructions: 'Asset: Feature Image'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b96f03e6-1438-4949-9287-9192f3e7fce3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
+            instructions: 'Brief excerpt or supporting text for the article.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8cd63180-a18e-462a-9e27-a7b6c13977d0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
+            instructions: 'Link to the internal or external article.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eaf529b2-3ba3-4fa7-93d9-de6d65b61fab
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 95886ab3-b76a-4da7-98fc-cb01fb61b156
+        userCondition: null
+handle: externalNews
+hasTitleField: true
+name: 'External News'
+section: bd681dfd-af4d-42fa-9b3d-405bb72ab5d7 # Newsroom
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
