@@ -1,0 +1,92 @@
+changedFieldIndicator: 918530054
+field: d4311bbe-0342-49e9-8a34-c11f74f1cff5 # Menu
+fieldLayouts:
+  d41cf7a4-2ab0-4d9d-82d5-d82240328274:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f77c7060-3e3e-4f5e-a18b-ffeb70942bc8 # Item
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e1fbbcef-6d68-46d2-9e77-70303d5fed92
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 48570009-afd8-4ef0-9eb4-8acfe4a21c68
+        userCondition: null
+fields:
+  f77c7060-3e3e-4f5e-a18b-ffeb70942bc8: # Item
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: navTarget
+    instructions: null
+    name: Item
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources:
+            - 'section:4d548d8e-1537-4c78-9207-048346c5eda8' # Research
+            - 'section:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
+            - 'section:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
+            - 'section:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
+            - 'section:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
