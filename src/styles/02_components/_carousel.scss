@@ -81,7 +81,7 @@
       background-color: transparent;
       color: var(--color-carousel--primary);
       cursor: pointer;
-      transition: all color var(--transition) ease-in;
+      transition: var(--transition-out);
 
       span {
         @include visuallyHide;
@@ -104,7 +104,7 @@
           background-color: var(--color-carousel--hover-background);
           color: var(--color-carousel--hover);
           box-shadow: var(--shadow-action);
-          transition: all var(--transition-intermediate) ease-out;
+          transition: var(--transition-in);
         }
       }
 
@@ -213,6 +213,48 @@
 
       @include breakpoint(xl) {
         padding-block: var(--base-12) var(--base-9);
+      }
+    }
+  }
+
+  &[data-variant="featured"] {
+    --color-carousel--secondary: var(--color-grey-25);
+    --color-carousel--background: var(--color-teal-150);
+
+    padding: 0;
+
+    .swiper {
+      &::before {
+        inset: -1px auto var(--neg-base) -100vw;
+        background-color: var(--color-carousel--background);
+      }
+
+      &::after {
+        content: '';
+        inset: -1px 0 var(--neg-base) 100%;
+        width: 100vw;
+        position: absolute;
+        background-color: var(--color-carousel--background);
+        z-index: 10;
+      }
+    }
+
+    .slide {
+      .cardItem {
+        border: none;
+      }
+    }
+
+    .carousel__controls {
+      .controls__button {
+        color: var(--color-carousel--secondary);
+
+        // Hover
+        @media (hover: hover) {
+          &:hover {
+            color: var(--color-carousel--hover);
+          }
+        }
       }
     }
   }

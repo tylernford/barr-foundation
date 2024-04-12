@@ -600,7 +600,7 @@
     {# Set action #}
     {% set action = post.actionLink %}
 
-    <article class="cardItem cardItem--generic"{{ variant == 'large' ? ' data-variant=large'}}>
+    <article class="cardItem cardItem--generic"{{ variant|length ? ' data-variant=' ~ variant }}>
         <div class="cardItem__inner">
             {# Image #}
             <div class="cardItem__media">
@@ -622,7 +622,7 @@
                 {# Header #}
                 <header class="cardItem__header">
                     <h3 class="cardItem__heading">{{ title }}</h3>
-                    <span class="cardItem__label">Blog Post</span>
+                    <span class="cardItem__label">{{ variant == 'featured' ? 'Featured' : 'Blog' }} Post</span>
                 </header>
 
                 {# Content #}

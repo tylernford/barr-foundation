@@ -7,4 +7,34 @@
 ------------------------------------------------------------------------ */
 
 .featured-carousel {
+  --color-carousel--primary: var(--color-teal-150);
+
+  padding-block-end: var(--base-12);
+  @include container;
+  position: relative;
+
+  &::before {
+    content: '';
+    inset: 0 0 0 -50vw;
+    width: 200vw;
+    position: absolute;
+    background-color: var(--color-carousel--primary);
+  }
+
+  > * {
+    position: relative;
+  }
+
+  @include breakpoint(md) {
+    padding-inline: 0;
+  }
+
+  @include breakpoint(lg) {
+		padding-inline: var(--base-12);
+	}
+
+	@include breakpoint(xl) {
+    padding-block-end: var(--base-14);
+		padding-inline: var(--base-18);
+	}
 }
