@@ -915,6 +915,16 @@
 
   // Generic
   &.cardItem--generic {
+    &[data-theme-color="green"] {
+      --color-card-text--primary: var(--color-program-green-100);
+    }
+    &[data-theme-color="plum"] {
+      --color-card-text--primary: var(--color-program-plum-100);
+    }
+    &[data-theme-color="marigold"] {
+      --color-card-text--primary: var(--color-program-marigold-100);
+    }
+
     .cardItem__wrapper {
       height: 100%;
       display: flex;
@@ -1220,7 +1230,6 @@
       }
 
       .cardItem__media + .cardItem__wrapper {
-        padding: var(--base-6) 0 var(--base-6) var(--base-6);
         width: 50%;
       }
 
@@ -1231,10 +1240,6 @@
     }
 
     @include breakpoint(lg) {
-      .cardItem__media + .cardItem__wrapper {
-        padding: var(--base-9) 0 var(--base-9) var(--base-9);
-      }
-
       .cardItem__wrapper {
         padding: var(--base-9);
       }

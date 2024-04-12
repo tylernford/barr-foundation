@@ -408,7 +408,18 @@
         {# Set action #}
         {% set action = card.actionLink ? card.actionLink : card %}
 
-        <article class="cardItem cardItem--generic">
+        {# Theme color #}
+        {% set programArea = card.tagsProgramAreas.one() %}
+        {% set areaColor = 'teal' %}
+        {% if programArea %}
+            {% set areaColor =
+                programArea.title == 'Arts & Creativity' ? 'green' :
+                programArea.title == 'Climate' ? 'plum' :
+                programArea.title == 'Education' ? 'marigold'
+            %}
+        {% endif %}
+
+        <article class="cardItem cardItem--generic" data-theme-color="{{ areaColor }}">
             <div class="cardItem__inner">
                 {# Image #}
                 <div class="cardItem__media">
@@ -601,7 +612,18 @@
     {# Set action #}
     {% set action = post.actionLink %}
 
-    <article class="cardItem cardItem--generic"{{ variant|length ? ' data-variant=' ~ variant }}>
+    {# Theme color #}
+    {% set programArea = post.tagsProgramAreas.one() %}
+    {% set areaColor = 'teal' %}
+    {% if programArea %}
+        {% set areaColor =
+            programArea.title == 'Arts & Creativity' ? 'green' :
+            programArea.title == 'Climate' ? 'plum' :
+            programArea.title == 'Education' ? 'marigold'
+        %}
+    {% endif %}
+
+    <article class="cardItem cardItem--generic" data-theme-color="{{ areaColor }}"{{ variant|length ? ' data-variant=' ~ variant }}>
         <div class="cardItem__inner">
             {# Image #}
             <div class="cardItem__media">
