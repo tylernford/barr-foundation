@@ -883,7 +883,7 @@ $('#loading').hide(); // Hide it initially
   //Plotly javascript 
 	TESTER = document.getElementById('tester');
   {% cache %}
-      {% set allData = craft.entries().section('grants').dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).all() %}
+      {% set allData = craft.entries({with: ['splitGrantDetail'],}).section('grants').dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).all() %}
 
     {% set programAreaArray = [] %}
     {% set StrategiesArray = [] %}
@@ -895,30 +895,30 @@ $('#loading').hide(); // Hide it initially
         {% set StrategiesArray = StrategiesArray|merge([strat.title]) %}
         {% set programAreaArray = programAreaArray|merge([strat.parent.title]) %}
     {% endfor %}
-    {% set sampleData = [] %}
+    {# {% set sampleData = [] %} #}
     {# Loop through all entries #}
-    {% for entry in allData %}
+    {# {% for entry in allData %} #}
         {# Check if the entry has tagsProgramAreas defined and it's not null #}
-        {% if entry.tagsProgramAreas is not null and entry.tagsProgramAreas|length %}
-          {% if entry.tagsStrategies is not null and entry.tagsStrategies|length %}
+        {# {% if entry.tagsProgramAreas is not null and entry.tagsProgramAreas|length %}
+          {% if entry.tagsStrategies is not null and entry.tagsStrategies|length %} #}
             {# Get the first tag from tagsProgramAreas #}
-            {% set firstTag = entry.tagsProgramAreas|first %}
+            {# {% set firstTag = entry.tagsProgramAreas|first %}
             {% if firstTag.title is not null %}
                 {% set sampleData = sampleData|merge([firstTag.title]) %}
-            {% endif %}
+            {% endif %} #}
             {# Loop through tagsProgramAreas and add titles to programAreaArray #}
             {# Get the first tag from tagsProgramAreas #}
-            {% set firstTag = entry.tagsStrategies|first %}
+            {# {% set firstTag = entry.tagsStrategies|first %}
             {% if firstTag.title is not null %}
                 {% set sampleData = sampleData|merge([firstTag.title]) %}
             {% endif %}
           {% endif %}
         {% endif %}
-    {% endfor %}
-    {% set counts = StrategiesArray|map(value => sampleData|filter(item => item == value)|length) %}
+    {% endfor %} #}
+    {# {% set counts = StrategiesArray|map(value => sampleData|filter(item => item == value)|length) %} #}
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
-    var CountsArray=[1,...{{ counts|json_encode|raw }}];
+    {# var CountsArray=[1,...{{ counts|json_encode|raw }}]; #}
     //console.log(programAreaArray);
     console.log(StrategiesArray);
     {# console.log({{ sampleData|json_encode|raw }}); #}
@@ -954,23 +954,15 @@ var updatedValue = 0;
 
         {% for splitGrantDetail in entry.splitGrantDetails %}
 
-          {# {{ loop.index }} - {{ splitGrantDetail.numberAmount }} - {{ splitGrantDetail.tagsProgramAreas|first }}/{{ splitGrantDetail.tagsStrategies|first }} || #}
-
           {% for count in range(1, StrategiesArray|length) %}
 
               {% set currentIndex = loop.index0 %}
 
               {% if StrategiesArray[currentIndex] == splitGrantDetail.tagsProgramAreas|first %}
 
-                  {# {% set currentValue = amountValues[currentIndex] ?? 0 %} #}
-
-                  {# {% set updatedValue = currentValue + splitGrantDetail.numberAmount %} #}
-
                   currentValue = amountValues[{{ currentIndex }}];
 
                   updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
-
-                  {# {% set amountValues = amountValues|merge({(currentIndex): updatedValue}) %} #}
 
                   amountValues[{{ currentIndex }}] = updatedValue;
 
@@ -979,8 +971,6 @@ var updatedValue = 0;
                   currentValue = amountValues[{{ currentIndex }}];
 
                   updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
-
-                  {# {% set amountValues = amountValues|merge({(currentIndex): updatedValue}) %} #}
 
                   amountValues[{{ currentIndex }}] = updatedValue;
 
