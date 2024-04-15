@@ -1069,16 +1069,6 @@ dialog.modal .accordion .accordion__item .accordion__content {
     max-height: 18.75rem;
   }
 }
-@media screen and (min-width:950px) {
-  dialog.modal .accordion.accordion--4col .accordion__item {
-    width: calc(25% - 0.0625rem);
-  }
-}
-@media screen and (min-width:950px) {
-  dialog.modal .accordion.accordion--4col .accordion__item.accordion__item--large {
-    width: calc(75% - 0.0625rem);
-  }
-}
 
 .pagination-section {
   display: flex;
