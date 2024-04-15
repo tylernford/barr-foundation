@@ -1,19 +1,70 @@
-const blockOpener = document.querySelector(`.blockOpener`);
-const blockTabs = document.querySelector(`.blockTabs`)
-const programAreaTriggers = document.querySelectorAll(`.blockTabs__item`);
+const programTabs = document.querySelector(`.program-tabs`)
 
-// ---------------------------------------------------------------------------
-// Reveal sub menus on trigger click
-programAreaTriggers.forEach(programAreaTrigger => {
-  programAreaTrigger.addEventListener(`mouseenter`, function(){
-    const color = programAreaTrigger.getAttribute('data-theme-color');
 
-    blockOpener.setAttribute(`data-theme-color`, color);
-    blockTabs.setAttribute(`data-theme-color`, color);
-  });
+function triggerProgramTabs(){
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  const blockOpener = document.querySelector(`.blockOpener`);
+  const programAreaTriggers = document.querySelectorAll(`.program-tabs__item`);
+  const programAreaCards = document.querySelectorAll(`.program-tabs__card`);
+  const programAreaCardsDesktop = document.querySelectorAll(`.program-tabs__card`);
+  const tabsIntro = document.querySelector(`.program-tabs__intro`);
 
-  programAreaTrigger.addEventListener(`mouseleave`, function(){
+  if (viewportWidth > 767) {
     blockOpener.setAttribute(`data-theme-color`, `teal`);
-    blockTabs.setAttribute(`data-theme-color`, `teal`);
-  });
-});
+    programTabs.setAttribute(`data-theme-color`, `teal`);
+    tabsIntro.classList.remove(`_is-hidden`);
+    programAreaCardsDesktop.forEach(programAreaCard => {
+      programAreaCard.classList.remove(`_is-active`);
+    });
+
+    programAreaTriggers.forEach(programAreaTrigger => {
+      const color = programAreaTrigger.getAttribute(`data-theme-color`);
+      const target = programAreaTrigger.getAttribute(`data-target`);
+      const targetCardAttr = `[data-card-desktop="` + target + `"]`;
+      const targetCard = document.querySelector(targetCardAttr);
+
+      programAreaTrigger.addEventListener(`mouseenter`, function(){
+        blockOpener.setAttribute(`data-theme-color`, color);
+        programTabs.setAttribute(`data-theme-color`, color);
+      });
+    
+      programAreaTrigger.addEventListener(`mouseleave`, function(){
+        blockOpener.setAttribute(`data-theme-color`, `teal`);
+        programTabs.setAttribute(`data-theme-color`, `teal`);
+      });
+    });
+    
+  } else {
+    programAreaTriggers.forEach(programAreaTrigger => {
+      const color = programAreaTrigger.getAttribute(`data-theme-color`);
+      const target = programAreaTrigger.getAttribute(`data-target`);
+      const targetCardAttr = `[data-card="` + target + `"]`;
+      const targetCard = document.querySelector(targetCardAttr);
+
+      programAreaCardsDesktop.forEach(programAreaCard => {
+        programAreaCard.classList.remove(`_is-active`);
+      });
+
+      programAreaTrigger.addEventListener(`click`, function(){    
+        blockOpener.setAttribute(`data-theme-color`, color);
+        programTabs.setAttribute(`data-theme-color`, color);
+
+        tabsIntro.classList.add(`_is-hidden`);
+    
+        programAreaCards.forEach(programAreaCard => {
+          programAreaCard.classList.remove(`_is-active`);
+        });
+    
+        targetCard.classList.add(`_is-active`);
+      });
+    });
+  }
+}
+
+if (programTabs) {
+  triggerProgramTabs();
+  
+  window.addEventListener(`resize`, function () {
+    triggerProgramTabs();
+  }, false);
+}
