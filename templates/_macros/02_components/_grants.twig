@@ -188,47 +188,92 @@ $(document).ready(function() {
         {% set StrategiesArray = StrategiesArray|merge([strat.title]) %}
         {% set programAreaArray = programAreaArray|merge([strat.parent.title]) %}
     {% endfor %}
-    {% set sampleData = [] %}
+    {# {% set sampleData = [] %} #}
     {# Loop through all entries #}
-    {% for entry in allData %}
+    {# {% for entry in allData %} #}
         {# Check if the entry has tagsProgramAreas defined and it's not null #}
-        {% if entry.tagsProgramAreas is not null and entry.tagsProgramAreas|length %}
-          {% if entry.tagsStrategies is not null and entry.tagsStrategies|length %}
+        {# {% if entry.tagsProgramAreas is not null and entry.tagsProgramAreas|length %}
+          {% if entry.tagsStrategies is not null and entry.tagsStrategies|length %} #}
             {# Get the first tag from tagsProgramAreas #}
-            {% set firstTag = entry.tagsProgramAreas|first %}
+            {# {% set firstTag = entry.tagsProgramAreas|first %}
             {% if firstTag.title is not null %}
                 {% set sampleData = sampleData|merge([firstTag.title]) %}
-            {% endif %}
+            {% endif %} #}
             {# Loop through tagsProgramAreas and add titles to programAreaArray #}
             {# Get the first tag from tagsProgramAreas #}
-            {% set firstTag = entry.tagsStrategies|first %}
+            {# {% set firstTag = entry.tagsStrategies|first %}
             {% if firstTag.title is not null %}
                 {% set sampleData = sampleData|merge([firstTag.title]) %}
             {% endif %}
           {% endif %}
         {% endif %}
-    {% endfor %}
-    {% set counts = StrategiesArray|map(value => sampleData|filter(item => item == value)|length) %}
+    {% endfor %} #}
+    {# {% set counts = StrategiesArray|map(value => sampleData|filter(item => item == value)|length) %} #}
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
-    var CountsArray=[1,...{{ counts|json_encode|raw }}];
+    {# var CountsArray=[2,...{{ counts|json_encode|raw }}]; #}
     //console.log(programAreaArray);
     console.log(StrategiesArray);
     {# console.log({{ sampleData|json_encode|raw }}); #}
-    //console.log(CountsArray);
+    {# console.log(CountsArray); #}
+
+    {# {{ programAreaArray|json_encode|raw }} #}
+{# {{ StrategiesArray|json_encode|raw }}<br> #}
+{% set amountValues = [] %}
+{% for count in range(1,StrategiesArray|length) %}
+  {% set amountValues = amountValues|merge([0]) %}
+{% endfor %}
+var amountValues = [...{{ amountValues|json_encode|raw }}];
+var currentValue = 0;
+var updatedValue = 0;
+{# {{ amountValues|json_encode|raw }}<br> #}
+{# {% set tempArray = amountValues|merge({'2': 4}) %} #}
+{# {% set amountValues = tempArray %} #}
+{# {{ amountValues|json_encode|raw }}<br> #}
+{% for entry in allData %}
+        {% for splitGrantDetail in entry.splitGrantDetails %}
+          {# {{ loop.index }} - {{ splitGrantDetail.numberAmount }} - {{ splitGrantDetail.tagsProgramAreas|first }}/{{ splitGrantDetail.tagsStrategies|first }} || #}
+          {% for count in range(1, StrategiesArray|length) %}
+              {% set currentIndex = loop.index0 %}
+              {% if StrategiesArray[currentIndex] == splitGrantDetail.tagsProgramAreas|first %}
+                  {# {% set currentValue = amountValues[currentIndex] ?? 0 %} #}
+                  {# {% set updatedValue = currentValue + splitGrantDetail.numberAmount %} #}
+                  currentValue = amountValues[{{ currentIndex }}];
+                  updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
+                  {# {% set amountValues = amountValues|merge({(currentIndex): updatedValue}) %} #}
+                  amountValues[{{ currentIndex }}] = updatedValue;
+              {% elseif StrategiesArray[currentIndex] == splitGrantDetail.tagsStrategies|first %}
+                  currentValue = amountValues[{{ currentIndex }}];
+                  updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
+                  {# {% set amountValues = amountValues|merge({(currentIndex): updatedValue}) %} #}
+                  amountValues[{{ currentIndex }}] = updatedValue;
+              {% endif %}
+          {% endfor %}
+        {% endfor %}
+{% endfor %}
+{# {{ amountValues|json_encode|raw }}<br> #}
+{# {{ amountValues|length }} #}
+amountValues = [1,...amountValues];
+console.log(amountValues);
 
     //Plotly graph builder
   data = [{
       type: "treemap",
       labels: StrategiesArray,
+      branchvalues: "total",
       parents: programAreaArray,
-      values: CountsArray,
+      values: amountValues,
       maxdepth: 2,
       tiling: {pad: 0},
-      textinfo: "label+percent entry",
-      outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma"},
-      insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f","#007E46","#007E46","#007E46","#881857","#881857","#881857","#BF6914","#BF6914","#BF6914","#507f7f","#507f7f","#507f7f","#507f7f","#507f7f"],"family": "Axiforma"  },
-      marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F","#2F5535","#2F5535","#2F5535","#5A3044","#5A3044","#5A3044","#E78B23","#E78B23","#E78B23","#01564F","#01564F","#01564F","#01564F","#01564F"]}
+      textinfo: 'label+percent parent+text',
+      textfont: { "size": 20, "overflow": "clip" },
+      hovertemplate: '<b>%{label}</b><br>' +
+                   'Value: $%{value}<br>' +
+                   'Percentage: %{percentRoot:.1%}',
+      pathbar: {"textfont": {"size": 20 } },
+      outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma" , "minsize": 20, "overflow": "clip"},
+      insidetextfont: {"size": 20,"family": "Axiforma" ,"minsize": 20, "overflow": "clip" },
+      marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F","#01564F", "#01564F","#2F5535","#2F5535","#2F5535","#5A3044","#5A3044","#5A3044","#E78B23","#E78B23","#E78B23","#01564F","#01564F","#01564F","#01564F","#01564F"]}
 }];
 
 var layout = {
@@ -236,6 +281,9 @@ var layout = {
     height: 600, // Set the desired height in pixels
     width: 800,  // Set the desired width in pixels
     paper_bgcolor: '#f5f5f5',
+    uniformtext: {
+        minsize: 20,
+    },
     // You can also include other layout properties here if needed
 };
 
@@ -339,6 +387,7 @@ $('#loading').hide(); // Hide it initially
 {# Initialse twig variables #}
 
 {% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
+{% set currYear = currYear ?? awardYear %} 
 {% set sortOption = sortOption ?? 'Most Recent First' %}
 {% set programAreaOption = programAreaOption ?? "" %}
 {% set strategyOption = strategyOption ?? "" %}
@@ -423,7 +472,26 @@ $('#loading').hide(); // Hide it initially
                         </svg>
                       </button>
                     </div>
+                    
                     <div class="modal__cnt"> 
+                      <div class="modal__year-filter"> 
+                    <ul role="list">
+                      {% set initialYear = 2018 %}
+                      {% set finalYear = 2024 %}
+                      {% set year = initialYear %}
+                      {% for year in range(initialYear, finalYear) %}
+                          <li class="modal__year" role="listitem">
+                              <div class="bf input-wrapper">
+                                  <div class="radio-button radio-button--check">
+                                      <label for="{{ year }}">
+                                          <input class="radio-group" type="radio" id="{{ year }}" value="{{ year }}" name="currYear" {{ currYear == year ? 'checked' : '' }}><span class="radio-checkmark"></span><span class="radio-label">{{ year }}</span>
+                                      </label>
+                                  </div>
+                              </div>
+                          </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
                       <ul class="accordion" role="list">
                         <li class="accordion__item" role="listitem">
                           <div class="accordion__title">
@@ -447,13 +515,13 @@ $('#loading').hide(); // Hide it initially
                           </div>
                           <div class="accordion__content" aria-hidden="true" id="Category-2">
                             {% for category in strategies %}
-                              <div class="bf input-wrapper">
-                                <div class="radio-button radio-button--check">
-                                  <label for="{{ category.title }}"> 
-                                    <input class="radio-group strategy-group" type="radio" value="{{ category.title }}" id="{{ category.title }}" name="strategyOption" {{ category.title in strategyOption ? 'checked' : '' }}><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
-                                  </label>
+                                <div class="bf input-wrapper">
+                                  <div class="radio-button radio-button--check">
+                                    <label for="{{ category.title }}"> 
+                                      <input class="radio-group strategy-group" type="radio" value="{{ category.title }}" id="{{ category.title }}" name="strategyOption" {{ category.title in strategyOption ? 'checked' : '' }}><span class="radio-checkmark"></span><span class="radio-label">{{ category.title }}</span>
+                                    </label>
+                                  </div>
                                 </div>
-                              </div>
                             {% endfor %}
                           </div>
                         </li>
@@ -490,6 +558,13 @@ $('#loading').hide(); // Hide it initially
                   </label>
                 </div>
               </div>
+              <div class="bf input-wrapper">
+                <div class="radio-button">
+                  <label for="directory"> 
+                    <input sprig s-trigger="change"  type="radio" name="layout" value="directory" id="directory" s-val="layout" {% if layout == "directory" %}checked="checked"{% endif %}><span class="radio-checkmark"></span><span class="radio-label">Grantee Directory</span>
+                  </label>
+                </div>
+              </div>
               {# <div class="bf input-wrapper">
                 <div class="radio-button">
                   <label for="Infographic"> 
@@ -497,14 +572,6 @@ $('#loading').hide(); // Hide it initially
                   </label>
                 </div>
               </div> #}
-              
-              <div class="bf input-wrapper">
-                <div class="radio-button">
-                  <label for="map"> 
-                    <input class="radio-group" type="radio" id="map" name="view as"><span class="radio-checkmark"></span><span class="radio-label">Grantee Directory</span>
-                  </label>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -512,70 +579,162 @@ $('#loading').hide(); // Hide it initially
 </section>
 
 {# Fetch data based on sort option #}
-{% if sortOption == 'Most Recent First' %}
-    {% if optionOfProgramArea|json_encode|length > 7 %}
-      {% set granteeList = craft.entries()
+{% set currYear1 = currYear + 1 %}
+{# {% if layout == "grid" or layout == "list" %} #}
+  {% if sortOption == 'Most Recent First' %}
+      {% if optionOfProgramArea|json_encode|length > 7 %}
+        {% set granteeList = craft.entries()
+            .section({
+                section: "grants",
+            })
+            .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
+            .entriesOrganization([':notempty:'])
+            .search(query)
+            .orderBy("dateOnly DESC")
+            .limit(12)
+            .relatedTo(optionOfProgramArea) %}
+      {% else %}
+        {% set granteeList = craft.entries()
           .section({
               section: "grants",
           })
-          .dateOnly(["and", ">= #{awardYear}"])
+          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
           .entriesOrganization([':notempty:'])
           .search(query)
           .orderBy("dateOnly DESC")
-          .limit(12)
-          .relatedTo(optionOfProgramArea) %}
-    {% else %}
-      {% set granteeList = craft.entries()
-        .section({
-            section: "grants",
-        })
-        .dateOnly(["and", ">= #{awardYear}"])
-        .entriesOrganization([':notempty:'])
-        .search(query)
-        .orderBy("dateOnly DESC")
-        .limit(12) %}
-    {% endif %}
-{% elseif sortOption == 'Older First' %}
-    {% if optionOfProgramArea|json_encode|length > 7 %}
-      {% set granteeList = craft.entries()
+          .limit(12) %}
+      {% endif %}
+  {% elseif sortOption == 'Older First' %}
+      {% if optionOfProgramArea|json_encode|length > 7 %}
+        {% set granteeList = craft.entries()
+            .section({
+                section: "grants",
+            })
+            .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
+            .entriesOrganization([':notempty:'])
+            .search(query)
+            .orderBy("dateOnly ASC")
+            .limit(12)
+            .relatedTo(optionOfProgramArea) %}
+      {% else %}
+        {% set granteeList = craft.entries()
           .section({
               section: "grants",
           })
-          .dateOnly(["and", ">= #{awardYear}"])
+          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
           .entriesOrganization([':notempty:'])
           .search(query)
           .orderBy("dateOnly ASC")
-          .limit(12)
-          .relatedTo(optionOfProgramArea) %}
-    {% else %}
-      {% set granteeList = craft.entries()
-        .section({
-            section: "grants",
-        })
-        .dateOnly(["and", ">= #{awardYear}"])
-        .entriesOrganization([':notempty:'])
-        .search(query)
-        .orderBy("dateOnly ASC")
-        .limit(12) %}
-    {% endif %}
-{% elseif sortOption == 'Highest Amount' %}
-    {% set granteeList = craft.entries().section({
-            section: "grants",
-        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("").limit(12) %}
-{% elseif sortOption == 'Lowest Amount' %}
-    {% set granteeList = craft.entries().section({
-            section: "grants",
-        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("textAmount ASC").limit(12) %}
-{% else %}
-    {% set granteeList = craft.entries().section({
-            section: "grants"
-        }).dateOnly (["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC").limit(12) %}
+          .limit(12) %}
+      {% endif %}
+  {% elseif sortOption == 'Highest Amount' %}
+      {% set granteeList = craft.entries().section({
+              section: "grants",
+          }).dateOnly (["and", ">= " ~ currYear, "<" ~ currYear1 ]).entriesOrganization([':notempty:']).search(query).orderBy("").limit(12) %}
+  {% elseif sortOption == 'Lowest Amount' %}
+      {% set granteeList = craft.entries().section({
+              section: "grants",
+          }).dateOnly (["and", ">= " ~ currYear, "<" ~ currYear1 ]).entriesOrganization([':notempty:']).search(query).orderBy("textAmount ASC").limit(12) %}
+  {% else %}
+      {% set granteeList = craft.entries().section({
+              section: "grants"
+          }).dateOnly (["and", ">= " ~ currYear, "<" ~ currYear1 ]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC").limit(12) %}
+  {% endif %}
+{# {% endif %} #}
+
+{% if layout == "directory" %}
+    {# Grants entries query #}
+    {% set grantsDatasss = craft.entries().section('grants') %}
+
+    {# Set empty grantsIds array #}
+    {% set grantsIds = [] %}
+
+    {# Loop grants from query #}
+    {% for grant in grantsDatasss %}
+      {# Merge grant id into grantsIds array #}
+      {% set grantsIds = grantsIds|merge([grant.id]) %}
+    {% endfor %}
+
+    {# Grantees entries query related to grants #}
+    {% set granteeListss = craft.entries().section('grantees').relatedTo(grantsIds).limit(12) %}
+     {# {% if sortOption == 'Most Recent First' %}
+      {% if optionOfProgramArea|json_encode|length > 7 %}
+        {% set granteeList = craft.entries()
+            .section({
+                section: "grantees",
+            })
+            .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
+            .entriesOrganization([':notempty:'])
+            .search(query)
+            .orderBy("dateOnly DESC")
+            .limit(12)
+            .relatedTo(optionOfProgramArea) %}
+      {% else %}
+        {% set granteeList = craft.entries()
+          .section({
+              section: "grants",
+          })
+          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
+          .entriesOrganization([':notempty:'])
+          .search(query)
+          .orderBy("dateOnly DESC")
+          .limit(12) %}
+      {% endif %}
+  {% elseif sortOption == 'Older First' %}
+      {% if optionOfProgramArea|json_encode|length > 7 %}
+        {% set granteeList = craft.entries()
+            .section({
+                section: "grants",
+            })
+            .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
+            .entriesOrganization([':notempty:'])
+            .search(query)
+            .orderBy("dateOnly ASC")
+            .limit(12)
+            .relatedTo(optionOfProgramArea) %}
+      {% else %}
+        {% set granteeList = craft.entries()
+          .section({
+              section: "grants",
+          })
+          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
+          .entriesOrganization([':notempty:'])
+          .search(query)
+          .orderBy("dateOnly ASC")
+          .limit(12) %}
+      {% endif %}
+  {% endif %} #}
+  {# {% for grantee in granteeListss %}
+        <h2>{{ grantee.title }}</h2>
+        {% for fieldHandle, fieldValue in grantee %}
+            {% if fieldValue is instance of('DateTime') %}
+                <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
+            {% else %}
+                <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}  #}
 {% endif %}
+
 
 {% set pageInfo = sprig.paginate(granteeList, page) %}
     {% set pageEntries = pageInfo.pageResults %}
 
+    {# {% for grantee in pageEntries %}
+        <h2>{{ grantee.title }}</h2>
+        {% for fieldHandle, fieldValue in grantee %}
+            {% if fieldValue is instance of('DateTime') %}
+                <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
+            {% else %}
+                <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}  #}
+
 {% set end = pageInfo.totalPages %}
+{% if layout == "directory" %}
+  {% set layout = "list" %}
+{% endif %}
 {% if layout == "grid" or layout == "list" %}
 
 {# Grid and List view Section #}
@@ -615,7 +774,9 @@ $('#loading').hide(); // Hide it initially
                         </div>
                         <div class="grantee-card__row"> 
                           <h4>Term</h4>
-                          <div class="grantee-card__value">{{ grants.textTerm }}{% if 'mos' not in grants.textTerm or 'month' not in grants.textTerm %} mos{% endif %}</div>
+                          <div class="grantee-card__value">{% if grants.textTerm %}
+                          {{ grants.textTerm }}{% if 'mos' not in grants.textTerm or 'month' not in grants.textTerm %} mos{% endif %}{% else %}
+                           N/A {% endif %}</div>
                         </div>
                         <div class="grantee-card__row grantee-card__row--rev">
                           <h4>Program(s)</h4>
@@ -860,4 +1021,41 @@ $('#loading').hide(); // Hide it initially
     //console.log(selectedStrategy);
     // You can send this array to a backend, store it in localStorage, etc.
   });
+</script>
+
+<script>
+
+document.getElementById('clearFilters').addEventListener('click', function (e) {
+    console.log("Clear filters clicked");
+    e.preventDefault();
+    // Clear all selected program area inputs
+    var programAreaInputs = document.querySelectorAll('.radio-group.programArea-group');
+    programAreaInputs.forEach(function(programAreaInput) {
+        programAreaInput.checked = false;
+    });
+    // Clear all selected strategy inputs
+    var strategyInputs = document.querySelectorAll('.radio-group.strategy-group');
+    strategyInputs.forEach(function(strategyInput) {
+        strategyInput.checked = false;
+    });
+});
+
+
+{% for category in strategies %}
+    var radioInputs{{ loop.index }} = document.querySelectorAll('.radio-group.programArea-group');
+    radioInputs{{ loop.index }}.forEach(function(input) {
+        input.addEventListener('click', function () {
+            var strategiesInputs = document.querySelectorAll('.radio-group.strategy-group');
+            strategiesInputs.forEach(function(strategyInput) {
+                strategyInput.checked = false;
+            });
+            var parentInputWrapper = document.getElementById('{{ category.title|raw }}').closest('.input-wrapper');
+            if (document.getElementById('{{ category.parent|raw }}').checked) {
+                parentInputWrapper.classList.remove("input--disabled");
+            } else {
+                parentInputWrapper.classList.add("input--disabled");
+            }
+        });
+    });
+{% endfor %}
 </script>
