@@ -255,12 +255,13 @@
 
   @include breakpoint(md) {
     .program-tabs__inner {
+      min-height: 700px;
       grid-template-columns: 1fr 1fr;
     }
 
     .program-tabs__intro {
       padding-inline-end: 56px;
-      height: 408px;
+      height: 370px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -281,6 +282,10 @@
     }
 
     .program-tabs__card {
+      .card__inner {
+        min-height: 370px;
+      }
+
       .card__support {
         @include getType('h5-messina');
       }
@@ -364,7 +369,21 @@
 
   @include breakpoint(lg) {
     .program-tabs__inner {
-      min-height: 850px;
+      min-height: 800px;
+    }
+
+    .program-tabs__intro {
+      height: 427px;
+    }
+
+    .program-tabs__label {
+      &.program-tabs__label--primary {
+        font-size: 44px;
+      }
+
+      &.program-tabs__label--secondary {
+        @include getType('h4-axiforma');
+      }
     }
 
     .program-tabs__support {
@@ -377,6 +396,12 @@
 
       .program-tabs__card {
         width: calc(50% - ((var(--base-6) - 1px)));
+      }
+    }
+
+    .program-tabs__card {
+      .card__inner {
+        min-height: 427px;
       }
     }
   }
@@ -407,8 +432,12 @@
   }
 
   @include breakpoint(xxl) {
+    .program-tabs__inner {
+      min-height: 900px;
+    }
+
     .program-tabs__intro {
-      height: 450px;
+      height: 454px;
     }
 
     .program-tabs__support {
@@ -419,14 +448,12 @@
       &.program-tabs__label--primary {
         @include getType('h2-axiforma');
       }
-      &.program-tabs__label--secondary {
-        @include getType('h4-axiforma');
-      }
     }
 
     .program-tabs__card {
       .card__inner {
         padding: 0 var(--base-14) var(--base-14) var(--base-14);
+        min-height: 454px;
       }
 
       .card__support {
