@@ -216,19 +216,102 @@ $(document).ready(function() {
     console.log(StrategiesArray);
     {# console.log({{ sampleData|json_encode|raw }}); #}
     //console.log(CountsArray);
+       {# console.log(CountsArray); #}
+    {# {{ programAreaArray|json_encode|raw }} #}
+
+{# {{ StrategiesArray|json_encode|raw }}<br> #}
+
+{% set amountValues = [] %}
+
+{% for count in range(1,StrategiesArray|length) %}
+
+  {% set amountValues = amountValues|merge([0]) %}
+
+{% endfor %}
+
+var amountValues = [...{{ amountValues|json_encode|raw }}];
+
+var currentValue = 0;
+
+var updatedValue = 0;
+
+{# {{ amountValues|json_encode|raw }}<br> #}
+
+{# {% set tempArray = amountValues|merge({'2': 4}) %} #}
+
+{# {% set amountValues = tempArray %} #}
+
+{# {{ amountValues|json_encode|raw }}<br> #}
+
+{% for entry in allData %}
+
+        {% for splitGrantDetail in entry.splitGrantDetails %}
+
+          {# {{ loop.index }} - {{ splitGrantDetail.numberAmount }} - {{ splitGrantDetail.tagsProgramAreas|first }}/{{ splitGrantDetail.tagsStrategies|first }} || #}
+
+          {% for count in range(1, StrategiesArray|length) %}
+
+              {% set currentIndex = loop.index0 %}
+
+              {% if StrategiesArray[currentIndex] == splitGrantDetail.tagsProgramAreas|first %}
+
+                  {# {% set currentValue = amountValues[currentIndex] ?? 0 %} #}
+
+                  {# {% set updatedValue = currentValue + splitGrantDetail.numberAmount %} #}
+
+                  currentValue = amountValues[{{ currentIndex }}];
+
+                  updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
+
+                  {# {% set amountValues = amountValues|merge({(currentIndex): updatedValue}) %} #}
+
+                  amountValues[{{ currentIndex }}] = updatedValue;
+
+              {% elseif StrategiesArray[currentIndex] == splitGrantDetail.tagsStrategies|first %}
+
+                  currentValue = amountValues[{{ currentIndex }}];
+
+                  updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
+
+                  {# {% set amountValues = amountValues|merge({(currentIndex): updatedValue}) %} #}
+
+                  amountValues[{{ currentIndex }}] = updatedValue;
+
+              {% endif %}
+
+          {% endfor %}
+
+        {% endfor %}
+
+{% endfor %}
+
+{# {{ amountValues|json_encode|raw }}<br> #}
+
+{# {{ amountValues|length }} #}
+
+amountValues = [1,...amountValues];
+
+console.log(amountValues);
 
     //Plotly graph builder
   data = [{
       type: "treemap",
       labels: StrategiesArray,
       parents: programAreaArray,
-      values: CountsArray,
+      values: amountValues,
       maxdepth: 2,
       tiling: {pad: 0},
-      textinfo: "label+percent entry",
-      outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma"},
-      insidetextfont: {"size": 20, "color": ["#f5f5f5","#007E46", "#881857", "#BF6914", "#507f7f", "#507f7f","#007E46","#007E46","#007E46","#881857","#881857","#881857","#BF6914","#BF6914","#BF6914","#507f7f","#507f7f","#507f7f","#507f7f","#507f7f"],"family": "Axiforma"  },
-      marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F", "#01564F","#2F5535","#2F5535","#2F5535","#5A3044","#5A3044","#5A3044","#E78B23","#E78B23","#E78B23","#01564F","#01564F","#01564F","#01564F","#01564F"]}
+      textinfo: 'label+percent parent+text',
+      textfont: { "size": 20, "overflow": "clip" },
+      hovertemplate: '<b>%{label}</b><br>' +
+                   'Value: $%{value}<br>' +
+                   'Percentage: %{percentRoot:.1%} <extra></extra> ',
+      pathbar: {"textfont": {"size": 20 } },
+      outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma" , "minsize": 20, "overflow": "clip"},
+      insidetextfont: {"size": 20,"family": "Axiforma" ,"minsize": 20, "overflow": "clip" },
+      marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F","#01564F", "#01564F","#2F5535","#2F5535","#2F5535","#5A3044","#5A3044","#5A3044","#E78B23","#E78B23","#E78B23","#01564F","#01564F","#01564F","#01564F","#01564F"]}
+
+
 }];
 
 var layout = {
@@ -236,6 +319,9 @@ var layout = {
     height: 600, // Set the desired height in pixels
     width: 800,  // Set the desired width in pixels
     paper_bgcolor: '#f5f5f5',
+    uniformtext: {
+        minsize: 20,
+    },
     // You can also include other layout properties here if needed
 };
 
@@ -339,6 +425,7 @@ $('#loading').hide(); // Hide it initially
 {# Initialse twig variables #}
 
 {% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
+{% set currYear = currYear ?? awardYear %} 
 {% set sortOption = sortOption ?? 'Most Recent First' %}
 {% set programAreaOption = programAreaOption ?? "" %}
 {% set strategyOption = strategyOption ?? "" %}

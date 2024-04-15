@@ -483,8 +483,11 @@
   font-family: "Messina Serif Trial";
   font-weight: 400;
   color: #262053;
-  margin-bottom: 1.25rem;
-  margin-top: auto;
+  margin-bottom: auto;
+  margin-top: 0;
+}
+.bf.grantee-card .grantee-card__table {
+  margin-top: 1rem;
 }
 .bf.grantee-card .grantee-card__row {
   display: flex;
@@ -493,6 +496,9 @@
   text-align: left;
   padding: 1rem 0;
   border-top: 0.0625rem solid #C7C9CA;
+}
+.bf.grantee-card .grantee-card__row:first-child {
+  min-height: 4.6875rem;
 }
 .bf.grantee-card .grantee-card__row.grantee-card__row--rev {
   display: block;
@@ -600,16 +606,24 @@
   .bf.grantee.grantee--list .grantee-card h4 {
     margin-bottom: 1rem;
   }
+  .bf.grantee.grantee--list .grantee-card .grantee-card__cnt {
+    margin-top: auto;
+    margin-bottom: 1.25rem;
+  }
   .bf.grantee.grantee--list .grantee-card .grantee-card__table {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-top: 0;
   }
   .bf.grantee.grantee--list .grantee-card .grantee-card__table .grantee-card__row {
     display: block;
     border: none;
     flex: 0 0 14.4375rem;
     padding-right: 0.5rem;
+  }
+  .bf.grantee.grantee--list .grantee-card .grantee-card__table .grantee-card__row:first-child {
+    min-height: unset;
   }
   .bf.grantee.grantee--list .grantee-card .grantee-card__table .grantee-card__row:nth-child(n+2):nth-child(-n+4) {
     flex-basis: 10rem;
@@ -826,6 +840,11 @@
   display: inline-block;
   flex: 1;
 }
+.bf.input-wrapper.input--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 dialog.modal {
   --max-width: rem(1200);
@@ -903,6 +922,20 @@ dialog.modal .modal__close:hover {
 dialog.modal .modal__close svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+dialog.modal .modal__year-filter {
+  margin-bottom: 2rem;
+}
+dialog.modal .modal__year-filter ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5rem 1rem;
+}
+dialog.modal .modal__year-filter ul li {
+  display: inline-block;
 }
 dialog.modal .modal__cnt,
 dialog.modal .modal__footer {
