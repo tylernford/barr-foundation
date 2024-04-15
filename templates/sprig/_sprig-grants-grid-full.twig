@@ -19,7 +19,7 @@
 {# ---  Set View  --- #}
 {% set viewAs = viewAs ?? 'grid' %}
 
-{% set feedQuery = craft.entries().section('grants').orderBy(orderBy).limit(limit) %}
+{% set feedQuery = craft.entries().section('grants').orderBy(orderBy).limit(limit).cache() %}
 
 {# Paginates the entry query given the current page #}
 {% set pageInfo = sprig.paginate(feedQuery, page) %}
