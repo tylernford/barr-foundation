@@ -10,6 +10,7 @@ sprig.action('navigate', ({ target }) => {
 });
 
 </script> #}
+{% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
 
 {% set programAreas = craft.entries().section("programAreasCategories").level(1).all() %}
 {% set strategies = craft.entries().section("programAreasCategories").level(2).all() %}
@@ -269,10 +270,10 @@ console.log(amountValues);
       textfont: { "size": 20, "overflow": "clip" },
       hovertemplate: '<b>%{label}</b><br>' +
                    'Value: $%{value}<br>' +
-                   'Percentage: %{percentRoot:.1%}',
+                   'Percentage: %{percentParent:.1%} <extra></extra> ',
       pathbar: {"textfont": {"size": 20 } },
       outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma" , "minsize": 20, "overflow": "clip"},
-      insidetextfont: {"size": 20,"family": "Axiforma" ,"minsize": 20, "overflow": "clip" },
+      insidetextfont: {"size": 20,"color": "#FFFFFF","family": "Axiforma" ,"minsize": 20, "overflow": "clip" },
       marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F","#01564F", "#01564F","#2F5535","#2F5535","#2F5535","#5A3044","#5A3044","#5A3044","#E78B23","#E78B23","#E78B23","#01564F","#01564F","#01564F","#01564F","#01564F"]}
 }];
 
@@ -386,7 +387,6 @@ $('#loading').hide(); // Hide it initially
 
 {# Initialse twig variables #}
 
-{% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
 {% set currYear = currYear ?? awardYear %} 
 {% set sortOption = sortOption ?? 'Most Recent First' %}
 {% set programAreaOption = programAreaOption ?? "" %}
@@ -492,7 +492,7 @@ $('#loading').hide(); // Hide it initially
                       {% endfor %}
                     </ul>
                   </div>
-                      <ul class="accordion" role="list">
+                      <ul class="accordion accordion--4col" role="list">
                         <li class="accordion__item" role="listitem">
                           <div class="accordion__title">
                             <button type="button" aria-expanded="false" aria-controls="Category-1">Program Areas</button>
@@ -732,15 +732,12 @@ $('#loading').hide(); // Hide it initially
     {% endfor %}  #}
 
 {% set end = pageInfo.totalPages %}
-{% if layout == "directory" %}
-  {% set layout = "list" %}
-{% endif %}
-{% if layout == "grid" or layout == "list" %}
+{% if layout == "grid" or layout == "list" or layout == "directory" %}
 
 {# Grid and List view Section #}
 <section id="grantData" class="section section--grantee section--granteecards"> 
         <div class="container">
-          <div class="bf grantee grantee--{{ layout }}"> 
+          <div class="bf grantee grantee--{% if layout == "directory" %}list{% else %}{{ layout }}{% endif %}"> 
           {% set i = 1 %}
             {% if pageEntries|length %}
               {% for grants in pageEntries %}
