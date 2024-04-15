@@ -176,7 +176,10 @@ $(document).ready(function() {
 
   //Plotly javascript 
 	TESTER = document.getElementById('tester');
-  {% set allData = craft.entries().section('grants').dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).all() %}
+  {% cache %}
+    {% cache %}
+      {% set allData = craft.entries().section('grants').dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).all() %}
+    {% endcache %}
 
     {% set programAreaArray = [] %}
     {% set StrategiesArray = [] %}
@@ -290,7 +293,7 @@ var updatedValue = 0;
 {# {{ amountValues|length }} #}
 
 amountValues = [1,...amountValues];
-
+{% endcache %}
 console.log(amountValues);
 
     //Plotly graph builder
