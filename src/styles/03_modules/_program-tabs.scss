@@ -105,101 +105,107 @@
     grid-row-start: 1;
     grid-column-start: 1;
     align-items: flex-start;
+  }
 
-    .program-tabs__card {
-      grid-row-start: 1;
-      grid-column-start: 1;
-      display: grid;
-      grid-template-rows: 0fr;
-      text-align: center;
-      pointer-events: none;
+  .program-tabs__card {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    display: grid;
+    grid-template-rows: 0fr;
+    text-align: center;
+    pointer-events: none;
+    z-index: 5;
 
-      .card__wrapper {
-        padding-block-start: var(--base-6);
-        overflow: hidden;
-      }
+    .card__wrapper {
+      padding-block-start: var(--base-6);
+      overflow: hidden;
+    }
+
+    .card__inner {
+      padding: 0 var(--base-6) var(--base-6) var(--base-6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      background: var(--color-grey-25);
+    }
+
+    &._is-active {
+      grid-template-rows: 1fr;
+      pointer-events: auto;
+      transition: grid-template-rows 250ms ease-out;
 
       .card__inner {
-        padding: 0 var(--base-6) var(--base-6) var(--base-6);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        background: var(--color-grey-25);
-      }
-  
-      &._is-active {
-        grid-template-rows: 1fr;
-        transition: grid-template-rows 250ms ease-out;
-
-        .card__inner {
-          opacity: 1;
-          transition: opacity var(--transition-slow) ease-out;
-          transition-delay: 250ms;
-          transition-property: opacity;
-        }
-      }
-  
-      .image {
-        margin-block: var(--neg-base-6) var(--base-7);
-        width: 100%;
-        aspect-ratio: 2 / 1;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        box-shadow: var(--shadow-deep--light);
-    
-        img {
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          object-fit: cover;
-        }
-      }
-  
-      .card__support {
-        max-width: 20em;
-        color: var(--color-navy-100);
-        @include getType('h3-messina');
-      }
-  
-      .action {
-        margin-top: var(--base-4);
-      }
-  
-      .card__news {
-        margin-block-start: var(--base-11);
-  
-        .news__preheading {
-          margin-block-end: var(--base);
-          color: var(--color-grey-150);
-          @include getType('label');
-        }
-  
-        .news__heading {
-          margin-block-end: var(--base-2);
-          display: block;
-          color: var(--color-tabs--highlight);
-          @include getType('h4-axiforma');
-          text-decoration-color: transparent;
-          transition: var(--transition-tabs--out);
-          
-          @media (hover: hover) {
-            &:hover {
-              text-decoration-color: inherit;
-              transition: var(--transition-tabs--in);
-            }
-          }
-        }
-  
-        .news__date {
-          color: var(--color-grey-150);
-          @include getType('detail-axiforma');
-        }
+        opacity: 1;
+        transition: opacity var(--transition-slow) ease-out;
+        transition-delay: 250ms;
+        transition-property: opacity;
       }
     }
+
+    .image {
+      margin-block: var(--neg-base-6) var(--base-7);
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-deep--light);
+  
+      img {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+
+    .card__support {
+      max-width: 20em;
+      color: var(--color-navy-100);
+      @include getType('h3-messina');
+    }
+
+    .action {
+      margin-top: var(--base-4);
+    }
+
+    .card__news {
+      margin-block-start: var(--base-11);
+
+      .news__preheading {
+        margin-block-end: var(--base);
+        color: var(--color-grey-150);
+        @include getType('label');
+      }
+
+      .news__heading {
+        margin-block-end: var(--base-2);
+        display: block;
+        color: var(--color-tabs--highlight);
+        @include getType('h4-axiforma');
+        text-decoration-color: transparent;
+        transition: var(--transition-tabs--out);
+        
+        @media (hover: hover) {
+          &:hover {
+            text-decoration-color: inherit;
+            transition: var(--transition-tabs--in);
+          }
+        }
+      }
+
+      .news__date {
+        color: var(--color-grey-150);
+        @include getType('detail-axiforma');
+      }
+    }
+  }
+
+  .program-tabs__card--desktop {
+    display: none;
   }
 
   // Nav
@@ -211,21 +217,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &:hover {
-      .program-tabs__label {
-        &::before {
-          opacity: 1;
-          transition: var(--transition-tabs--in);
-        }
-      }
-
-      .program-tabs__card {
-        opacity: 1;
-        transition: opacity var(--transition-intermediate) ease-out;
-        pointer-events: auto;
-      }
-    }
   }
   
   .program-tabs__label {
@@ -239,11 +230,6 @@
     
       &._is-hidden {
         @include visuallyHide;
-      }
-
-      &::before {
-        content: '';
-        inset: -10px auto -6px -55px;
       }
     }
 
@@ -259,11 +245,9 @@
     }
   }
 
-
-  // Cards
-  .program-tabs__cards {
-    // inset: 0 0 auto 0;
-    // position: absolute;
+  // Angle
+  .angle {
+    margin-block-start: -1px;
   }
 
 
@@ -285,18 +269,20 @@
       @include getType('h3-messina');
     }
 
-    .program-tabs__card { 
-      inset: 118px auto auto calc(var(--base-12) + 2px);
-      padding-inline: var(--base-12);
-      width: calc(50% - var(--base-12));
-      position: absolute;
+    .program-tabs__cards {
+      position: relative;
+      z-index: 5;
 
-      .image {
-        margin-block-start: var(--neg-base-5);
+      .program-tabs__card {
+        display: none;
       }
     }
 
     .program-tabs__nav {
+      padding-block-start: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       border-left: 1px solid var(--color-tabs--primary);
     }
 
@@ -309,7 +295,7 @@
   
       &::before {
         content: '';
-        inset: -6px auto -2px -55px;
+        inset: -6px auto -2px var(--neg-base-14);
         width: var(--base-5);
         position: absolute;
         background-color: var(--color-grey-25);
@@ -323,7 +309,42 @@
     }
 
     .program-tabs__item {
+      display: inline-block;
       padding-inline-start: var(--base-14);
+
+      .program-tabs__card {
+        inset: 0;
+        margin-block-start: var(--neg-base-6);
+        width: calc(50% - (var(--base-4) + 1px));
+        display: grid;
+        grid-template-rows: 1fr;
+        position: absolute;
+        
+        .image {
+          margin-block-start: var(--neg-base-5);
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          .program-tabs__label {
+            &::before {
+              opacity: 1;
+              transition: opacity var(--transition-slow) ease-out;
+            }
+          }
+
+          .program-tabs__card {
+            pointer-events: auto;
+            z-index: 5;
+
+            .card__inner {
+              opacity: 1;
+              transition: opacity var(--transition-slow) ease-out;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -331,14 +352,26 @@
     .program-tabs__inner {
       min-height: 850px;
     }
-  }
 
-  @include breakpoint(xl) {
-    .program-tabs__card { 
-      inset: 118px auto auto calc(var(--base-18) + 2px);
-      width: calc(50% - var(--base-18));
+    .program-tabs__item {
+      display: inline-block;
+      padding-inline-start: var(--base-14);
+
+      .program-tabs__card {
+        width: calc(50% - ((var(--base-6) - 1px)));
+      }
     }
   }
+
+
+  @include breakpoint(xl) {
+    .program-tabs__item {
+      .program-tabs__card {
+        width: calc(50% - ((var(--base-9) - 1px)));
+      }
+    }
+  }
+
   @include breakpoint(xxl) {
     .program-tabs__intro {
       height: 450px;
@@ -363,19 +396,6 @@
   .program-tabs__label {
     transition: color var(--transition) ease-in;
   }
-  // .angle {
-  //   svg {
-  //     // color: var(--color-tabs--background);
-  //     transition: color var(--transition) ease-in;
-  //   }
-  // }
-
-  // .program-tabs__inner {
-  //   &::before {
-  //     // background-color: var(--color-tabs--background);
-  //     transition: background-color var(--transition) ease-in;
-  //   }
-  // }
 }
 
 

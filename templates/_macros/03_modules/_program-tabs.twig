@@ -22,7 +22,7 @@
                 {# Tabs content #}
                 <div class="program-tabs__cards">
                     {% for program in programs %}
-                        {{ _self.tabCard(program) }}
+                        {{ _self.tabCard(program, 'mobile') }}
                     {% endfor %}
                 </div>
             </div>
@@ -44,9 +44,12 @@
                     %}
 
                     <div class="program-tabs__item {{ isPrimary ? 'program-tabs__item--primary' : 'program-tabs__item--secondary' }}" data-target="{{ programTitle|slugify }}" data-theme-color={{ themeColor }}>
+                        {# Nav item #}
                         <h2 class="program-tabs__label {{ isPrimary ? 'program-tabs__label--primary' : 'program-tabs__label--secondary' }}">
                             {{ programTitle }}
                         </h2>
+                        {# Card #}
+                        {{ _self.tabCard(program, 'desktop') }}
                     </div>
                 {% endfor %}
             </div>
@@ -58,7 +61,7 @@
     </section>
 
 
-    {% macro tabCard(program) %}
+    {% macro tabCard(program, variant) %}
         {% import '_macros/01_elements/_actions' as actions %}
         {% import '_macros/01_elements/_image' as images %}
 
@@ -69,7 +72,7 @@
         {% set programSupport = program.textSupporting %}
         {% set programNews = program.entryNews.one() ?? null %}
 
-        <div class="program-tabs__card" data-card="{{ programTitle|slugify }}">
+        <div class="program-tabs__card program-tabs__card--{{ variant }}" data-card{{ variant == 'desktop' ? '-desktop' }}="{{ programTitle|slugify }}">
             <div class="card__wrapper">
                 <div class="card__inner">
                     {# Image #}
