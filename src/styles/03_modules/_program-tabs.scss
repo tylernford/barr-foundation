@@ -6,7 +6,7 @@
   See templates/_macros/03_modules/_program-tabs.twig for markup
 ------------------------------------------------------------------------ */
 
-.blockTabs {
+.program-tabs {
   --color-tabs--primary: var(--color-teal-25);
   --color-tabs--secondary: var(--color-grey-25);
   
@@ -34,7 +34,7 @@
   }
 }
 
-.blockTabs {
+.program-tabs {
   --transition-tabs--in: all var(--transition-intermediate) ease-out;
   --transition-tabs--out: all var(--transition) ease-in;
 
@@ -50,11 +50,10 @@
     }
   }
 
-  .blockTabs__inner {
+  .program-tabs__inner {
     @include container;
-    padding-block-start: var(--base-32);
+    padding-block: var(--base-32) var(--base-12);
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: flex-start;
     position: relative;
 
@@ -66,58 +65,172 @@
       background: var(--color-tabs--background);
       z-index: -1;
     }
-
-    @include breakpoint(lg) {
-      min-height: 850px; 
-    }
   }
 
-  .blockTabs__intro {
-    padding-inline-end: 56px;
-    height: 408px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  // Primary
+  .program-tabs__primary {
+    padding-block-end: var(--base-14);
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  // Intro
+  .program-tabs__intro {
+    grid-row-start: 1;
+    grid-column-start: 1;
     color: var(--color-tabs--secondary);
     text-align: center;
   }
 
-  .blockTabs__preheading {
+  .program-tabs__preheading {
     margin-block-end: var(--base-4);
     @include getType('label');
   }
 
-  .blockTabs__support {
-    @include getType('h3-messina');
+  .program-tabs__support {
+    margin: 0 auto;
+    max-width: 30em;
+    @include getType('h5-messina');
   }
 
-  .blockTabs__content {
-    border-left: 1px solid var(--color-tabs--primary);
+  // Cards
+  .program-tabs__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    align-items: flex-start;
+
+    .program-tabs__card {
+      grid-row-start: 1;
+      grid-column-start: 1;
+      display: grid;
+      grid-template-rows: 0fr;
+      text-align: center;
+      pointer-events: none;
+
+      .card__wrapper {
+        padding-block-start: var(--base-6);
+        overflow: hidden;
+      }
+
+      .card__inner {
+        padding: 0 var(--base-6) var(--base-6) var(--base-6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        background: var(--color-grey-25);
+      }
+  
+      &._is-active {
+        grid-template-rows: 1fr;
+        transition: grid-template-rows 250ms ease-out;
+
+        .card__inner {
+          opacity: 1;
+          transition: opacity var(--transition-slow) ease-out;
+          transition-delay: 250ms;
+          transition-property: opacity;
+        }
+      }
+  
+      .image {
+        margin-block: var(--neg-base-6) var(--base-7);
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--shadow-deep--light);
+    
+        img {
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+  
+      .card__support {
+        max-width: 20em;
+        color: var(--color-navy-100);
+        @include getType('h3-messina');
+      }
+  
+      .action {
+        margin-top: var(--base-4);
+      }
+  
+      .card__news {
+        margin-block-start: var(--base-11);
+  
+        .news__preheading {
+          margin-block-end: var(--base);
+          color: var(--color-grey-150);
+          @include getType('label');
+        }
+  
+        .news__heading {
+          margin-block-end: var(--base-2);
+          display: block;
+          color: var(--color-tabs--highlight);
+          @include getType('h4-axiforma');
+          text-decoration-color: transparent;
+          transition: var(--transition-tabs--out);
+          
+          @media (hover: hover) {
+            &:hover {
+              text-decoration-color: inherit;
+              transition: var(--transition-tabs--in);
+            }
+          }
+        }
+  
+        .news__date {
+          color: var(--color-grey-150);
+          @include getType('detail-axiforma');
+        }
+      }
+    }
   }
 
-  .blockTabs__item--primary + .blockTabs__item--secondary {
-    margin-block-start: var(--base-16);
+  // Nav
+  .program-tabs__item--primary + .program-tabs__item--secondary {
+    margin-block-start: var(--base-6);
+  }
+
+  .program-tabs__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      .program-tabs__label {
+        &::before {
+          opacity: 1;
+          transition: var(--transition-tabs--in);
+        }
+      }
+
+      .program-tabs__card {
+        opacity: 1;
+        transition: opacity var(--transition-intermediate) ease-out;
+        pointer-events: auto;
+      }
+    }
   }
   
-  .blockTabs__label {
+  .program-tabs__label {
     margin-block-end: var(--base-4);
     display: inline-block;
     color: var(--color-tabs--primary);
-    position: relative;
+    text-align: center;
 
-    &::before {
-      content: '';
-      inset: -6px auto -2px -55px;
-      width: var(--base-5);
-      position: absolute;
-      background-color: var(--color-grey-25);
-      opacity: 0;
-      transition: var(--transition-tabs--out);
-    }
-
-    &.blockTabs__label--primary {
-      @include getType('h3-axiforma');
+    &.program-tabs__label--primary {
+      @include getType('h4-axiforma');
     
       &._is-hidden {
         @include visuallyHide;
@@ -129,7 +242,7 @@
       }
     }
 
-    &.blockTabs__label--secondary {
+    &.program-tabs__label--secondary {
       @include getType('h5-axiforma');
       font-weight: 400;
     }
@@ -141,126 +254,100 @@
     }
   }
 
-  .blockTabs__card { 
-    // @include visuallyHide;
-    // visibility: hidden;
-    opacity: 0;
-    inset: 118px auto auto calc(var(--base-12) + 2px);
-    padding-block-end: var(--base-12);
-    padding-inline: var(--base-12);
-    width: calc(50% - var(--base-12));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background: var(--color-grey-25);
-    text-align: center;
-    transition: opacity var(--transition) ease-in;
-    pointer-events: none;
 
-    .image {
-      margin-block: var(--neg-base-5) var(--base-7);
-      width: 100%;
-      background-color: salmon;
-      aspect-ratio: 2 / 1;
-      display: block;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-deep--light);
-  
-      img {
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        object-fit: cover;
-      }
+  // Cards
+  .program-tabs__cards {
+    // inset: 0 0 auto 0;
+    // position: absolute;
+  }
+
+
+  @include breakpoint(md) {
+    .program-tabs__inner {
+      grid-template-columns: 1fr 1fr;
     }
 
-    .card__support {
-      max-width: 20em;
-      color: var(--color-navy-100);
+    .program-tabs__intro {
+      padding-inline-end: 56px;
+      height: 408px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .program-tabs__support {
       @include getType('h3-messina');
     }
 
-    .action {
-      margin-top: var(--base-4);
+    .program-tabs__card { 
+      inset: 118px auto auto calc(var(--base-12) + 2px);
+      padding-inline: var(--base-12);
+      width: calc(50% - var(--base-12));
+      position: absolute;
+
+      .image {
+        margin-block-start: var(--neg-base-5);
+      }
     }
 
-    .card__news {
-      margin-block-start: var(--base-11);
+    .program-tabs__nav {
+      border-left: 1px solid var(--color-tabs--primary);
+    }
 
-      .news__preheading {
-        margin-block-end: var(--base);
-        color: var(--color-grey-150);
-        @include getType('label');
-      }
+    .program-tabs__item--primary + .program-tabs__item--secondary {
+      margin-block-start: var(--base-16);
+    }
 
-      .news__heading {
-        margin-block-end: var(--base-2);
-        display: block;
-        color: var(--color-tabs--highlight);
-        @include getType('h4-axiforma');
-        text-decoration-color: transparent;
+    .program-tabs__label {
+      position: relative;
+  
+      &::before {
+        content: '';
+        inset: -6px auto -2px -55px;
+        width: var(--base-5);
+        position: absolute;
+        background-color: var(--color-grey-25);
+        opacity: 0;
         transition: var(--transition-tabs--out);
-        
-        @media (hover: hover) {
-          &:hover {
-            text-decoration-color: inherit;
-            transition: var(--transition-tabs--in);
-          }
-        }
       }
 
-      .news__date {
-        color: var(--color-grey-150);
-        @include getType('detail-axiforma');
+      &.program-tabs__label--primary {
+        @include getType('h3-axiforma');
       }
+    }
+
+    .program-tabs__item {
+      padding-inline-start: var(--base-14);
     }
   }
 
-  .blockTabs__item {
-    padding-inline-start: 56px;
-
-    &:hover {
-      .blockTabs__label {
-        &::before {
-          opacity: 1;
-          transition: var(--transition-tabs--in);
-        }
-      }
-
-      .blockTabs__card {
-        // @include visuallyShow;
-        // visibility: visible;
-        opacity: 1;
-        transition: opacity var(--transition-intermediate) ease-out;
-        pointer-events: auto;
-      }
+  @include breakpoint(lg) {
+    .program-tabs__inner {
+      min-height: 850px;
     }
   }
 
   @include breakpoint(xl) {
-    .blockTabs__card { 
+    .program-tabs__card { 
       inset: 118px auto auto calc(var(--base-18) + 2px);
       width: calc(50% - var(--base-18));
     }
   }
   @include breakpoint(xxl) {
-    .blockTabs__intro {
+    .program-tabs__intro {
       height: 450px;
     }
 
-    .blockTabs__support {
+    .program-tabs__support {
       font-size: 44px;
     }
 
-    .blockTabs__label {
-      &.blockTabs__label--primary {
+    .program-tabs__label {
+      &.program-tabs__label--primary {
         @include getType('h2-axiforma');
       }
-      &.blockTabs__label--secondary {
+      &.program-tabs__label--secondary {
         @include getType('h4-axiforma');
       }
     }
@@ -268,7 +355,7 @@
 
 
 
-  .blockTabs__label {
+  .program-tabs__label {
     transition: color var(--transition) ease-in;
   }
   // .angle {
@@ -278,7 +365,7 @@
   //   }
   // }
 
-  // .blockTabs__inner {
+  // .program-tabs__inner {
   //   &::before {
   //     // background-color: var(--color-tabs--background);
   //     transition: background-color var(--transition) ease-in;

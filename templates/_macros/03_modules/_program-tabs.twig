@@ -6,27 +6,32 @@
 ======================================= #}
 
 {% macro programTabs(module) %}
-    {% import '_macros/01_elements/_actions' as actions %}
     {% import '_macros/01_elements/_angles' as angles %}
-    {% import '_macros/01_elements/_image' as images %}
 
-    <section class="blockTabs" data-theme-color="teal">
-        <div class="blockTabs__inner">
-            <div class="blockTabs__intro">
-                <h1 class="blockTabs__preheading">{{  module.textPreheading }}</h1>
-                <div class="blockTabs__support">{{  module.textRichBasic }}</div>
+    {% set programs = module.tabsProgram %}
+
+    <section class="program-tabs" data-theme-color="teal">
+        <div class="program-tabs__inner">
+            <div class="program-tabs__primary">
+                {# Primary intro #}
+                <div class="program-tabs__intro">
+                    <h1 class="program-tabs__preheading">{{  module.textPreheading }}</h1>
+                    <div class="program-tabs__support">{{  module.textRichBasic }}</div>
+                </div>
+
+                {# Tabs content #}
+                <div class="program-tabs__cards">
+                    {% for program in programs %}
+                        {{ _self.tabCard(program) }}
+                    {% endfor %}
+                </div>
             </div>
 
-            {% set programs = module.tabsProgram %}
-            <div class="blockTabs__content">
-                {% for p in programs %}
-                    {% set programEntry = p.entryProgramArea.one() %}
+            <div class="program-tabs__nav">
+                {% for program in programs %}
+                    {% set programEntry = program.entryProgramArea.one() %}
                     {% set programTitle = programEntry.title %}
-                    {% set programLink = programEntry.uri %}
-                    {% set isPrimary = p.flagPrimary %}
-                    {% set programImg = p.assetImage.one() %}
-                    {% set programSupport = p.textSupporting %}
-                    {% set programNews = p.entryNews.one() ?? null %}
+                    {% set isPrimary = program.flagPrimary %}
 
                     {% set themeColor =
                         programEntry.title == 'Arts & Creativity' ? 'green' :
@@ -37,34 +42,11 @@
                         programEntry.ancestors.one == 'Education' ? 'marigold' :
                         'teal'
                     %}
-                    
-                    <div class="blockTabs__item {{ isPrimary ? 'blockTabs__item--primary' : 'blockTabs__item--secondary' }}" data-theme-color={{ themeColor }}>
-                        <h2 class="blockTabs__label {{ isPrimary ? 'blockTabs__label--primary' : 'blockTabs__label--secondary' }}">{{ programTitle }}
+
+                    <div class="program-tabs__item {{ isPrimary ? 'program-tabs__item--primary' : 'program-tabs__item--secondary' }}" data-target="{{ programTitle|slugify }}" data-theme-color={{ themeColor }}>
+                        <h2 class="program-tabs__label {{ isPrimary ? 'program-tabs__label--primary' : 'program-tabs__label--secondary' }}">
+                            {{ programTitle }}
                         </h2>
-                                
-                        <div class="blockTabs__card">
-                            {{ images.image(programImg, '912', '2/1', '', false) }}
-
-                            <div class="card__support">{{ programSupport }}</div>
-                            
-                            {% set actionAttributes = {
-                                type: 'button', isReversed: false,
-                                icon: 'linkType', iconOnly: false,
-                                text: 'Learn More', url: programLink,
-                                linkType: 'entry', target: ''
-                            } %}
-                            {{ actions.action(actionAttributes) }}
-
-                            {% if programNews %}
-                                <div class="card__news">
-                                    <h3 class="news__preheading">Latest in {{ programTitle }}</h3>
-                                    <div>
-                                        <a class="news__heading" href="{{ programNews.url }}">{{ programNews.title }}</a>
-                                        <time class="news__date" datetime="{{ programNews.postDate|date|format('Y-mm-dd') }}">{{ programNews.postDate|date|format('M dd, Y') }}</time>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -74,4 +56,51 @@
             {{ angles.top() }}
         </div>
     </section>
+
+
+    {% macro tabCard(program) %}
+        {% import '_macros/01_elements/_actions' as actions %}
+        {% import '_macros/01_elements/_image' as images %}
+
+        {% set programEntry = program.entryProgramArea.one() %}
+        {% set programTitle = programEntry.title %}
+        {% set programLink = programEntry.uri %}
+        {% set programImg = program.assetImage.one() %}
+        {% set programSupport = program.textSupporting %}
+        {% set programNews = program.entryNews.one() ?? null %}
+
+        <div class="program-tabs__card" data-card="{{ programTitle|slugify }}">
+            <div class="card__wrapper">
+                <div class="card__inner">
+                    {# Image #}
+                    {{ images.image(programImg, '912', '2/1', '', false) }}
+
+                    {# Support text #}            
+                    <div class="card__support">
+                        {{ programSupport }}
+                    </div>
+
+                    {# Action #}
+                    {% set actionAttributes = {
+                        type: 'button', isReversed: false,
+                        icon: 'linkType', iconOnly: false,
+                        text: 'Learn More', url: programLink,
+                        linkType: 'entry', target: ''
+                    } %}
+                    {{ actions.action(actionAttributes) }}
+
+                    {# News item #}
+                    {% if programNews %}
+                        <div class="card__news">
+                            <h3 class="news__preheading">Latest in {{ programTitle }}</h3>
+                            <div>
+                                <a class="news__heading" href="{{ programNews.url }}">{{ programNews.title }}</a>
+                                <time class="news__date" datetime="{{ programNews.postDate|date|format('Y-mm-dd') }}">{{ programNews.postDate|date|format('M dd, Y') }}</time>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endmacro %}
 {% endmacro %}
