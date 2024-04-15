@@ -15,6 +15,7 @@ sprig.action('navigate', ({ target }) => {
 {% set strategies = craft.entries().section("programAreasCategories").level(2).all() %}
 {% set programAreasCategories = craft.entries().section("programAreasCategories").all() %}
 {% set awardYear = "now"|date("Y") - 1 %}
+{% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
 
 {% js %}
     htmx.on('htmx:afterSwap', function(event) {
@@ -171,7 +172,7 @@ $(document).ready(function() {
 });
 
 
-
+{% if layout == "infographic" %}
 //call the function 
 
   //Plotly javascript 
@@ -362,7 +363,7 @@ Plotly.newPlot(TESTER, data, layout, config);
             window.location.href = "?query=&programAreaOption=" + encodeURIComponent(point.parent) + "&strategyOption=" + encodeURIComponent(point.label) + "&layout=list&page=1";
         }
     });
-
+{% endif %}
     // Add event listener to Apply filters button
   document.getElementById('applyFilters').addEventListener('click', function() {
     // Initialize an empty array to store selected checkboxes
@@ -425,7 +426,7 @@ $('#loading').hide(); // Hide it initially
 
 {# Initialse twig variables #}
 
-{% set layout = layout ?? 'grid' %} {# grid or list or infographic or map #}
+
 {% set currYear = currYear ?? awardYear %} 
 {% set sortOption = sortOption ?? 'Most Recent First' %}
 {% set programAreaOption = programAreaOption ?? "" %}
