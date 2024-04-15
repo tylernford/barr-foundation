@@ -80,6 +80,11 @@
     grid-column-start: 1;
     color: var(--color-tabs--secondary);
     text-align: center;
+
+    &._is-hidden {
+      opacity: 0;
+      transition: opacity var(--transition) ease-out;
+    }
   }
 
   .program-tabs__preheading {

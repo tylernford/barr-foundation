@@ -1,13 +1,16 @@
-const blockOpener = document.querySelector(`.blockOpener`);
 const programTabs = document.querySelector(`.program-tabs`)
-const programAreaTriggers = document.querySelectorAll(`.program-tabs__item`);
-const programAreaCards = document.querySelectorAll(`.program-tabs__card`);
 
 
 function triggerProgramTabs(){
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  const blockOpener = document.querySelector(`.blockOpener`);
+  const programAreaTriggers = document.querySelectorAll(`.program-tabs__item`);
+  const programAreaCards = document.querySelectorAll(`.program-tabs__card`);
+  const tabsIntro = document.querySelector(`.program-tabs__intro`);
 
-  if (viewportWidth > 1280) {
+  if (viewportWidth > 767) {
+    tabsIntro.classList.remove(`_is-hidden`);
+
     programAreaTriggers.forEach(programAreaTrigger => {
       programAreaTrigger.addEventListener(`mouseenter`, function(){
         const color = programAreaTrigger.getAttribute(`data-theme-color`);
@@ -25,7 +28,6 @@ function triggerProgramTabs(){
       });
     });
   } else {
-    console.log(`mobile`);
     programAreaTriggers.forEach(programAreaTrigger => {
       programAreaTrigger.addEventListener(`click`, function(){
         const color = programAreaTrigger.getAttribute(`data-theme-color`);
@@ -35,6 +37,8 @@ function triggerProgramTabs(){
     
         blockOpener.setAttribute(`data-theme-color`, color);
         programTabs.setAttribute(`data-theme-color`, color);
+
+        tabsIntro.classList.add(`_is-hidden`);
     
         programAreaCards.forEach(programAreaCard => {
           programAreaCard.classList.remove(`_is-active`);
@@ -46,8 +50,10 @@ function triggerProgramTabs(){
   }
 }
 
-triggerProgramTabs();
-
-window.addEventListener(`resize`, function () {
+if (programTabs) {
   triggerProgramTabs();
-}, false);
+  
+  window.addEventListener(`resize`, function () {
+    triggerProgramTabs();
+  }, false);
+}
