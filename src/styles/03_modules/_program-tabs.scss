@@ -126,9 +126,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       opacity: 0;
       background: var(--color-grey-25);
+
+      > * {
+        max-width: calc(100% - var(--base-4));
+      }
     }
 
     &._is-active {
@@ -147,6 +150,7 @@
     .image {
       margin-block: var(--neg-base-6) var(--base-7);
       width: 100%;
+      max-width: 100%;
       aspect-ratio: 2 / 1;
       display: block;
       position: relative;
@@ -163,10 +167,12 @@
     }
 
     .card__support {
-      max-width: 20em;
       color: var(--color-navy-100);
-      @include getType('h3-messina');
       @include getType('h4-messina');
+
+      p {
+        max-width: 20em;
+      }
     }
 
     .action {
