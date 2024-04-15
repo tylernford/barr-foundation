@@ -41,10 +41,6 @@ function triggerProgramTabs(){
       const targetCardAttr = `[data-card="` + target + `"]`;
       const targetCard = document.querySelector(targetCardAttr);
 
-      programAreaCardsDesktop.forEach(programAreaCard => {
-        programAreaCard.classList.remove(`_is-active`);
-      });
-
       programAreaTrigger.addEventListener(`click`, function(){    
         blockOpener.setAttribute(`data-theme-color`, color);
         programTabs.setAttribute(`data-theme-color`, color);
