@@ -1,15 +1,6 @@
 
 {% import '_macros/02_components/_card.twig' as cards %}
-{# <script>
-import { createSprig } from '@sprig/core';
 
-const sprig = createSprig();
-
-sprig.action('navigate', ({ target }) => {
-    sprig.load(target.href, { replace: true });
-});
-
-</script> #}
 
 {% set programAreas = craft.entries().section("programAreasCategories").level(1).all() %}
 {% set strategies = craft.entries().section("programAreasCategories").level(2).all() %}
@@ -434,7 +425,7 @@ $('#loading').hide(); // Hide it initially
 
 {# Fetch data based on sort option #}
 {% set currYear1 = currYear + 1 %}
-{# {% if layout == "grid" or layout == "list" %} #}
+{% if layout == "grid" or layout == "list" %}
   {% if sortOption == 'Most Recent First' %}
       {% if optionOfProgramArea|json_encode|length > 7 %}
         {% set granteeList = craft.entries()
@@ -494,11 +485,26 @@ $('#loading').hide(); // Hide it initially
               section: "grants"
           }).dateOnly (["and", ">= " ~ currYear, "<" ~ currYear1 ]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC").limit(12) %}
   {% endif %}
-{# {% endif %} #}
+{% endif %}
 
 {% if layout == "directory" %}
     {# Grants entries query #}
-    {% set grantsDatasss = craft.entries().section('grants') %}
+{# {% set grants = craft.entries().section('grants') %} #}
+
+{# Set empty grantsIds array #}
+{# {% set grantsIds = [] %} #}
+
+{# Loop grants from query #}
+{# {% for grant in grants %} #}
+  {# Merge grant id into grantsIds array #}
+  {# {% set grantsIds = grantsIds|merge([grant.id]) %} #}
+{# {% endfor %} #}
+{# Grantees entries query related to grants #}
+{# {% set grantees = craft.entries().section('grantees').relatedTo(grantsIds).limit(12) %} #}
+
+    {# Grants entries query #}
+    {% set grantsDatasss = craft.entries().section('grants').cache() %}
+    {# {% set grantsDatasss = craft.entries().section('grants').cache().all() %} #}
 
     {# Set empty grantsIds array #}
     {% set grantsIds = [] %}
@@ -509,56 +515,33 @@ $('#loading').hide(); // Hide it initially
       {% set grantsIds = grantsIds|merge([grant.id]) %}
     {% endfor %}
 
+
     {# Grantees entries query related to grants #}
-    {% set granteeListss = craft.entries().section('grantees').relatedTo(grantsIds).limit(12) %}
-     {# {% if sortOption == 'Most Recent First' %}
-      {% if optionOfProgramArea|json_encode|length > 7 %}
-        {% set granteeList = craft.entries()
-            .section({
-                section: "grantees",
-            })
-            .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
-            .entriesOrganization([':notempty:'])
-            .search(query)
-            .orderBy("dateOnly DESC")
-            .limit(12)
-            .relatedTo(optionOfProgramArea) %}
-      {% else %}
-        {% set granteeList = craft.entries()
-          .section({
-              section: "grants",
-          })
-          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
-          .entriesOrganization([':notempty:'])
-          .search(query)
-          .orderBy("dateOnly DESC")
-          .limit(12) %}
-      {% endif %}
-  {% elseif sortOption == 'Older First' %}
-      {% if optionOfProgramArea|json_encode|length > 7 %}
-        {% set granteeList = craft.entries()
-            .section({
-                section: "grants",
-            })
-            .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
-            .entriesOrganization([':notempty:'])
-            .search(query)
-            .orderBy("dateOnly ASC")
-            .limit(12)
-            .relatedTo(optionOfProgramArea) %}
-      {% else %}
-        {% set granteeList = craft.entries()
-          .section({
-              section: "grants",
-          })
-          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
-          .entriesOrganization([':notempty:'])
-          .search(query)
-          .orderBy("dateOnly ASC")
-          .limit(12) %}
-      {% endif %}
-  {% endif %} #}
-  {# {% for grantee in granteeListss %}
+    {# {% set granteeList = craft.entries().section('grantees').relatedTo(grantsIds).orderBy("title ASC").cache().limit(12) %} #}
+    
+    {% set granteeList = craft.entries()
+    .section('grants')
+    .with(['entriesOrganization']) 
+    .entriesOrganization(':notempty:')
+    .search(query)
+    .orderBy(expression('SUBSTRING(title, LOCATE("-", title) + 1)'), 'asc')
+    .groupBy(expression('SUBSTRING(title, LOCATE("-", title) + 1)'))
+    .having(expression('COUNT(*) > 0'))
+    .distinct()
+    .limit(12)
+    %}
+    {# {% set granteeList = craft.entries()
+    .section('grants')
+    .with(['entriesOrganization'])
+    .entriesOrganization(':notempty:')
+    .search(query)
+    .select(expression('["DISTINCT SUBSTRING(title, LOCATE("-", title) + 1) AS unique_title"]'))
+    .orderBy(expression('unique_title'), 'asc')
+    .limit(12)
+    .all() %} #}
+
+
+    {# {% for grantee in granteeList %}
         <h2>{{ grantee.title }}</h2>
         {% for fieldHandle, fieldValue in grantee %}
             {% if fieldValue is instance of('DateTime') %}
@@ -586,9 +569,6 @@ $('#loading').hide(); // Hide it initially
     {% endfor %}  #}
 
 {% set end = pageInfo.totalPages %}
-{% if layout == "directory" %}
-  {% set layout = "list" %}
-{% endif %}
 {% if layout == "grid" or layout == "list" or layout == "directory" %}
 
 {# Grid and List view Section #}
@@ -598,10 +578,13 @@ $('#loading').hide(); // Hide it initially
           {% set i = 1 %}
             {% if pageEntries|length %}
               {% for grants in pageEntries %}
+                    {% set tagValue = "" %}
+                    {# {% if layout != "directory" %} #}
                     {% set tagValue = "Special Initiatives" %}
                     {% for tag in grants.tagsProgramAreas.all() %}
                               {% set tagValue = tag %}
                     {% endfor %}
+                    {# {% endif %} #}
                     <article class="bf grantee-card" style="--var-grantee-color:{% if tagValue == "Special Initiatives" %}#01564F{% elseif tagValue == "Sector Effectiveness" %}#01564F{% elseif tagValue == "Arts & Creativity" %}#2F5535{% elseif tagValue == "Education" %}#E78B23{% elseif tagValue == "Climate" %}#5A3044{% endif %}">
 
                       {# <h3>{{ grants.title }}</h3> #}
@@ -611,44 +594,46 @@ $('#loading').hide(); // Hide it initially
                         {% else %}
                           {{ grants.title }}
                         {% endif %}</h3>
-                      <div class="grantee-card__cnt">{{ grants.textDescription }}</div>
-                      <div class="grantee-card__table"> 
-                        <div class="grantee-card__row"> 
-                          <h4>Fiscal Sponsor</h4>
-                          <div class="grantee-card__value">{% if grants.textName %}{{ grants.textName }}{% else %}
+                      {% if layout != "directory" %}
+                        <div class="grantee-card__cnt">{{ grants.textDescription }}</div>
+                        <div class="grantee-card__table"> 
+                          <div class="grantee-card__row"> 
+                            <h4>Fiscal Sponsor</h4>
+                            <div class="grantee-card__value">{% if grants.textName %}{{ grants.textName }}{% else %}
+                              N/A {% endif %}</div>
+                          </div>
+                          <div class="grantee-card__row"> 
+                            <h4>Award Date</h4>
+                            <div class="grantee-card__value">{{ grants.dateOnly|date("m/d/Y") }}</div>
+                          </div>
+                          <div class="grantee-card__row"> 
+                            <h4>Amount</h4>
+                            <div class="grantee-card__value">{{ grants.textAmount }}</div>
+                          </div>
+                          <div class="grantee-card__row"> 
+                            <h4>Term</h4>
+                            <div class="grantee-card__value">{% if grants.textTerm %}
+                            {{ grants.textTerm }}{% if 'mos' not in grants.textTerm or 'month' not in grants.textTerm %} mos{% endif %}{% else %}
                             N/A {% endif %}</div>
+                          </div>
+                          <div class="grantee-card__row grantee-card__row--rev">
+                            <h4>Program(s)</h4>
+                            <ul class="grantee-card__tag" role="list">
+                              {% for tag in grants.tagsProgramAreas.all() %}
+                                <li role="listitem">{{ tag }}</li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          <div class="grantee-card__row grantee-card__row--rev">
+                            <h4>Strategies</h4>
+                            <ul class="grantee-card__tag" role="list">
+                              {% for tags in grants.tagsStrategies.all() %}
+                                <li role="listitem">{{ tags }}</li>
+                              {% endfor %}
+                            </ul>
+                          </div>
                         </div>
-                        <div class="grantee-card__row"> 
-                          <h4>Award Date</h4>
-                          <div class="grantee-card__value">{{ grants.dateOnly|date("m/d/Y") }}</div>
-                        </div>
-                        <div class="grantee-card__row"> 
-                          <h4>Amount</h4>
-                          <div class="grantee-card__value">{{ grants.textAmount }}</div>
-                        </div>
-                        <div class="grantee-card__row"> 
-                          <h4>Term</h4>
-                          <div class="grantee-card__value">{% if grants.textTerm %}
-                          {{ grants.textTerm }}{% if 'mos' not in grants.textTerm or 'month' not in grants.textTerm %} mos{% endif %}{% else %}
-                           N/A {% endif %}</div>
-                        </div>
-                        <div class="grantee-card__row grantee-card__row--rev">
-                          <h4>Program(s)</h4>
-                          <ul class="grantee-card__tag" role="list">
-                            {% for tag in grants.tagsProgramAreas.all() %}
-                              <li role="listitem">{{ tag }}</li>
-                            {% endfor %}
-                          </ul>
-                        </div>
-                        <div class="grantee-card__row grantee-card__row--rev">
-                          <h4>Strategies</h4>
-                          <ul class="grantee-card__tag" role="list">
-                            {% for tags in grants.tagsStrategies.all() %}
-                              <li role="listitem">{{ tags }}</li>
-                            {% endfor %}
-                          </ul>
-                        </div>
-                      </div>
+                      {% endif %}
                       {% set linkValue = "/#" %}
                       {% if grants.entriesOrganization.count() > 0 %}
                         {% set organizationData = grants.entriesOrganization[0].contactWebsite %}
@@ -666,7 +651,7 @@ $('#loading').hide(); // Hide it initially
                           {# {% if organizationWebsite %}
                             {% set linkValue = organizationWebsite[0]['linkValue'] %}
                           {% endif %}  #}
-                      {% endif %}
+                      {# {% endif %} #}
                       
                       <div class="grantee-card__footer"> <a href="/{% if grants.entriesOrganization.count() > 0 %}{{ grants.entriesOrganization[0].uri }}{% endif %}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
                       {% if grants.entriesOrganization.count() > 0 %}
@@ -676,6 +661,7 @@ $('#loading').hide(); // Hide it initially
                             </svg></span></a>
                       {% endif %}
                         </div>
+                        {% endif %}
                     </article>
               {% endfor %}
             {% else %}
@@ -849,41 +835,13 @@ $('#loading').hide(); // Hide it initially
 {% endif %}
 
 <script>
-  // Add event listener to Apply filters button
-  document.getElementById('applyFilters').addEventListener('click', function() {
-    // Initialize an empty array to store selected checkboxes
-    var selectedProgramArea = [];
-    var selectedStrategy = [];
-    // Get all checkboxes with class 'checkbox-group'
-    var programAreasFiltered = document.querySelectorAll('.programArea-group');
-    var strategyFiltered = document.querySelectorAll('.strategy-group');
-    // Loop through each checkbox
-    programAreasFiltered.forEach(function(programArea) {
-      // If checkbox is checked, add its value to the selectedFilters array
-      if (programArea.checked) {
-        selectedProgramArea.push(programArea.value);
-      }
-    });
-    strategyFiltered.forEach(function(strategy) {
-      // If checkbox is checked, add its value to the selectedFilters array
-      if (strategy.checked) {
-        selectedStrategy.push(strategy.value);
-      }
-    });
-    // Do whatever you want with the selected filters array here
-    //console.log(selectedProgramArea);
-    //console.log(selectedStrategy);
-    // You can send this array to a backend, store it in localStorage, etc.
-  });
-</script>
-<script>
 {% if layout == "infographic" %}
 //call the function 
 
   //Plotly javascript 
 	TESTER = document.getElementById('tester');
   {% cache %}
-      {% set allData = craft.entries({with: ['splitGrantDetail'],}).section('grants').dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).all() %}
+      {% set allData = craft.entries().section('grants').with(['splitGrantDetail',]).dateOnly(["and", ">= #{awardYear}"]).entriesOrganization([':notempty:']).cache().all() %}
 
     {% set programAreaArray = [] %}
     {% set StrategiesArray = [] %}
@@ -895,38 +853,9 @@ $('#loading').hide(); // Hide it initially
         {% set StrategiesArray = StrategiesArray|merge([strat.title]) %}
         {% set programAreaArray = programAreaArray|merge([strat.parent.title]) %}
     {% endfor %}
-    {# {% set sampleData = [] %} #}
-    {# Loop through all entries #}
-    {# {% for entry in allData %} #}
-        {# Check if the entry has tagsProgramAreas defined and it's not null #}
-        {# {% if entry.tagsProgramAreas is not null and entry.tagsProgramAreas|length %}
-          {% if entry.tagsStrategies is not null and entry.tagsStrategies|length %} #}
-            {# Get the first tag from tagsProgramAreas #}
-            {# {% set firstTag = entry.tagsProgramAreas|first %}
-            {% if firstTag.title is not null %}
-                {% set sampleData = sampleData|merge([firstTag.title]) %}
-            {% endif %} #}
-            {# Loop through tagsProgramAreas and add titles to programAreaArray #}
-            {# Get the first tag from tagsProgramAreas #}
-            {# {% set firstTag = entry.tagsStrategies|first %}
-            {% if firstTag.title is not null %}
-                {% set sampleData = sampleData|merge([firstTag.title]) %}
-            {% endif %}
-          {% endif %}
-        {% endif %}
-    {% endfor %} #}
-    {# {% set counts = StrategiesArray|map(value => sampleData|filter(item => item == value)|length) %} #}
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
-    {# var CountsArray=[1,...{{ counts|json_encode|raw }}]; #}
-    //console.log(programAreaArray);
     console.log(StrategiesArray);
-    {# console.log({{ sampleData|json_encode|raw }}); #}
-    //console.log(CountsArray);
-       {# console.log(CountsArray); #}
-    {# {{ programAreaArray|json_encode|raw }} #}
-
-{# {{ StrategiesArray|json_encode|raw }}<br> #}
 
 {% set amountValues = [] %}
 
@@ -936,19 +865,18 @@ $('#loading').hide(); // Hide it initially
 
 {% endfor %}
 
+{% set temp = [] %}
+{% set temp0 = [] %}
+
+{% for key , value in amountValues %}
+  {% set temp= temp|merge({(key~'_'):value}) %}
+{% endfor %}
+
 var amountValues = [...{{ amountValues|json_encode|raw }}];
 
 var currentValue = 0;
 
 var updatedValue = 0;
-
-{# {{ amountValues|json_encode|raw }}<br> #}
-
-{# {% set tempArray = amountValues|merge({'2': 4}) %} #}
-
-{# {% set amountValues = tempArray %} #}
-
-{# {{ amountValues|json_encode|raw }}<br> #}
 
 {% for entry in allData %}
 
@@ -959,20 +887,14 @@ var updatedValue = 0;
               {% set currentIndex = loop.index0 %}
 
               {% if StrategiesArray[currentIndex] == splitGrantDetail.tagsProgramAreas|first %}
-
-                  currentValue = amountValues[{{ currentIndex }}];
-
-                  updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
-
-                  amountValues[{{ currentIndex }}] = updatedValue;
+                  {% set currentValue = temp[currentIndex~"_"] ?? 0 %}
+                  {% set updatedValue = currentValue + splitGrantDetail.numberAmount %}
+                  {% set temp = temp|merge({(currentIndex~"_"): updatedValue}) %}
 
               {% elseif StrategiesArray[currentIndex] == splitGrantDetail.tagsStrategies|first %}
-
-                  currentValue = amountValues[{{ currentIndex }}];
-
-                  updatedValue = currentValue + {{ splitGrantDetail.numberAmount }};
-
-                  amountValues[{{ currentIndex }}] = updatedValue;
+                  {% set currentValue = temp[currentIndex~"_"] ?? 0 %}
+                  {% set updatedValue = currentValue + splitGrantDetail.numberAmount %}
+                  {% set temp = temp|merge({(currentIndex~"_"): updatedValue}) %}
 
               {% endif %}
 
@@ -982,11 +904,13 @@ var updatedValue = 0;
 
 {% endfor %}
 
-{# {{ amountValues|json_encode|raw }}<br> #}
+{% for key , value in temp %}
+  {% set temp0= temp0|merge({(loop.index0):value}) %}
+{% endfor %}
+  {% set amountValues = [] %}
+  {% set amountValues = amountValues|merge(temp0) %}
 
-{# {{ amountValues|length }} #}
-
-amountValues = [1,...amountValues];
+amountValues = [1,...{{ amountValues|json_encode|raw }}];
 {% endcache %}
 console.log(amountValues);
 
@@ -995,6 +919,7 @@ console.log(amountValues);
       type: "treemap",
       labels: StrategiesArray,
       parents: programAreaArray,
+      branchvalues: "total",
       values: amountValues,
       maxdepth: 2,
       tiling: {pad: 0},
@@ -1064,39 +989,39 @@ Plotly.newPlot(TESTER, data, layout, config);
 
 
 <script>
-{% cache %}
-document.getElementById('clearFilters').addEventListener('click', function (e) {
-    console.log("Clear filters clicked");
-    e.preventDefault();
-    // Clear all selected program area inputs
-    var programAreaInputs = document.querySelectorAll('.radio-group.programArea-group');
-    programAreaInputs.forEach(function(programAreaInput) {
-        programAreaInput.checked = false;
-    });
-    // Clear all selected strategy inputs
-    var strategyInputs = document.querySelectorAll('.radio-group.strategy-group');
-    strategyInputs.forEach(function(strategyInput) {
-        strategyInput.checked = false;
-    });
-});
+      {% cache %}
+      document.getElementById('clearFilters').addEventListener('click', function (e) {
+          console.log("Clear filters clicked");
+          e.preventDefault();
+          // Clear all selected program area inputs
+          var programAreaInputs = document.querySelectorAll('.radio-group.programArea-group');
+          programAreaInputs.forEach(function(programAreaInput) {
+              programAreaInput.checked = false;
+          });
+          // Clear all selected strategy inputs
+          var strategyInputs = document.querySelectorAll('.radio-group.strategy-group');
+          strategyInputs.forEach(function(strategyInput) {
+              strategyInput.checked = false;
+          });
+      });
 
 
-{% for category in strategies %}
-    var radioInputs{{ loop.index }} = document.querySelectorAll('.radio-group.programArea-group');
-    radioInputs{{ loop.index }}.forEach(function(input) {
-        input.addEventListener('click', function () {
-            var strategiesInputs = document.querySelectorAll('.radio-group.strategy-group');
-            strategiesInputs.forEach(function(strategyInput) {
-                strategyInput.checked = false;
-            });
-            var parentInputWrapper = document.getElementById('{{ category.title|raw }}').closest('.input-wrapper');
-            if (document.getElementById('{{ category.parent|raw }}').checked) {
-                parentInputWrapper.classList.remove("input--disabled");
-            } else {
-                parentInputWrapper.classList.add("input--disabled");
-            }
-        });
-    });
-{% endfor %}
-{% endcache %}
+      {% for category in strategies %}
+          var radioInputs{{ loop.index }} = document.querySelectorAll('.radio-group.programArea-group');
+          radioInputs{{ loop.index }}.forEach(function(input) {
+              input.addEventListener('click', function () {
+                  var strategiesInputs = document.querySelectorAll('.radio-group.strategy-group');
+                  strategiesInputs.forEach(function(strategyInput) {
+                      strategyInput.checked = false;
+                  });
+                  var parentInputWrapper = document.getElementById('{{ category.title|raw }}').closest('.input-wrapper');
+                  if (document.getElementById('{{ category.parent|raw }}').checked) {
+                      parentInputWrapper.classList.remove("input--disabled");
+                  } else {
+                      parentInputWrapper.classList.add("input--disabled");
+                  }
+              });
+          });
+      {% endfor %}
+    {% endcache %}
 </script>
