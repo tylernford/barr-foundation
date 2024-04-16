@@ -2,12 +2,29 @@
 @use "../utils/_utils" as *;
 
 .form {
-    --color-form-primary: var(--color-grey-25);
-    --color-form-secondary: var(--color-grey-25-65);
+    --color-form-primary: var(--color-navy-100);
+    --color-form-secondary: var(--color-navy-100);
     --color-form-tertiary: var(--color-navy-100);
     --color-form-quaternary: var(--color-citrus-100);
     --color-form-focus: var(--color-teal-25);
     --color-form-error: var(--color-citrus-100);
+
+    &.form--light {
+        --color-form-primary: var(--color-grey-25);
+        --color-form-secondary: var(--color-grey-25-65);
+        --color-form-tertiary: var(--color-navy-100);
+        --color-form-quaternary: var(--color-citrus-100);
+        --color-form-focus: var(--color-teal-25);
+    }
+
+    &.form--full {
+        @include container-inner;
+        padding-block: var(--base-9);
+
+        > div {
+            max-width: 856px;
+        }
+    }
 
     // Focus
     @mixin formFocus {
@@ -16,44 +33,134 @@
         transition: var(--transition-in);
     }
 
-    // Field wrapper
+    > div > div > div {
+        display: grid;
+        gap: var(--base-16);
+    }
+
     .field-wrapper {
-        &:not(:last-child) {
-            margin-block-end: var(--base-4);
-        }
-    }
-
-    // Field group
-    .input-group {
-        display: flex;
-        flex-direction: column;
-        gap: var(--base-3);
-
         legend {
-            @include visuallyHide;
-        }
-
-        @include breakpoint(md) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--base-6);
+            margin-block-end: var(--base-2);
+            @include getType('h5-axiforma');
         }
     }
+
+    .input-group {
+        fieldset {
+            // Group paragraph
+            > div {
+                display: grid;
+                gap: var(--base-6);
+
+                &[id] {
+                    margin-block-end: var(--base-4);
+                    display: block;
+                    @include getType('caption-messina');
+                }
+            }
+
+            > div > div {
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: var(--base-6);
+            }
+
+            @include breakpoint(md) {
+                > div[id] {
+                    @include getType('body');
+                }
+
+                > div > div {
+                    margin-inline: var(--neg-base-3);
+
+                    &:has(> div:nth-child(n + 2)) {
+                        .input {
+                            width: 50%;
+                        }
+                    }
+                }
+    
+                .input {
+                    padding-inline: var(--base-3);
+                    height: var(--base-13);
+                    transition: height var(--transition) ease-in;
+
+                    &.fui-error {
+                        height: var(--base-21);
+                        transition: height var(--transition) ease-out
+                    }
+
+                    .field-error {
+                        opacity: 0;
+                        animation: fadeIn var(--transition) ease-out;
+                        animation-delay: var(--transition-short);
+                        animation-fill-mode: forwards;
+                    }
+
+                    @keyframes fadeIn {
+                        from { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+
+                    &.input--select {
+                        padding: 0;
+                    }
+                }
+            }
+
+            @include breakpoint(lg) {
+                > div > div {
+                    &:has(> div:nth-child(n + 3)) {
+                        .input {
+                            width: 33.3333333333%;
+                        }
+                    }
+                    > div:nth-child(n + 3) {
+                            // background-color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    // // Field wrapper
+    // .field-wrapper {
+    //     &:not(:last-child) {
+    //         margin-block-end: var(--base-4);
+    //     }
+    // }
+
+    // // Field group
+    // .input-group {
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: var(--base-3);
+
+    //     legend {
+    //         @include visuallyHide;
+    //     }
+
+    //     @include breakpoint(md) {
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr;
+    //         gap: var(--base-6);
+    //     }
+    // }
 
     // Input
     .input {
         width: 100%;
-        height: 3.25rem;
         position: relative;
 
         // Label
         label {
-            inset: 0 auto auto var(--base-4);
+            inset: var(--base-4) auto auto var(--base-4);
             position: absolute;
             color: var(--color-form-primary);
             @include getType('detail-axiforma');
             pointer-events: none;
             transition: var(--transition-out);
+            z-index: 1;
         }
 
         // Input
@@ -93,11 +200,6 @@
                 }
             }
 
-            // Unfocused/Unfilled
-            &:placeholder-shown + label {
-                top: 0.875rem;
-            }
-
             // Hover
             @media (hover: hover) {
                 &:hover {
@@ -127,9 +229,91 @@
                 color: var(--color-form-tertiary);
 
                 + label {
-                    top: .25rem;
                     color: var(--color-form-tertiary);
                 }
+            }
+        }
+
+        // Select
+        select {
+            appearance: none;
+            padding-inline: 14px;
+            width: 100%;
+            height: 3.25rem;
+            // position: relative;
+            border: 1px solid var(--color-form-primary);
+            border-radius: var(--radius-input);
+            background-color: transparent;
+            color: var(--color-form-primary);
+            @include getType('detail-axiforma');
+            transition: var(--transition-in);
+            
+            // Hover
+            @media (hover: hover) {
+                &:hover {
+                    padding-inline: var(--base-3);
+                    border: 3px solid;
+                    transition: var(--transition-out);
+                }
+            }
+
+            // Focus
+            &:focus-visible {
+                @include formFocus;
+                padding-inline: var(--base-3);
+                border: 3px solid var(--color-form-secondary);
+                background-color: var(--color-form-focus);
+                color: var(--color-form-tertiary);
+            }
+        }
+ 
+
+        // Adjust label left due to Formie wrapping div
+        div:has(input) {
+            + label {
+                left: var(--base-7);
+            }
+        }
+
+        div:has(select) {
+            position: relative;
+
+            &::after {
+                content: '';
+                right: 1.5rem; // 24px
+                bottom: 1.125rem; // 18px
+                width: var(--icon-size);
+                height: var(--icon-size);
+                position: absolute;
+                background-image: url(#{$svg-path}icon--caret-20--navy.svg);
+                pointer-events: none;
+            }
+
+            + label {
+                display: none;
+            }
+        }
+
+        // Adjust label required due to
+        // Formie wrapping div
+        div:has(input:required) {
+            + label {
+                &::after {
+                    content: '*';
+                    inset: 0 -.5em auto auto;
+                    position: absolute;
+                    font-size: 16px;
+                }
+            }
+        }
+
+
+        // When input doesn't have placeholder or
+        // input is focused due to Formie wrapping div
+        div:has(input:not(:placeholder-shown)),
+        div:has(input:focus-visible) {       
+            + label {
+                top: 0.25rem;
             }
         }
     }

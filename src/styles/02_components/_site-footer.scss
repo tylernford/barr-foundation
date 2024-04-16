@@ -276,6 +276,32 @@
           transition: var(--transition-in);
         }
       }
+
+      .form {
+        // Field wrapper
+        .field-wrapper {
+          &:not(:last-child) {
+            margin-block-end: var(--base-4);
+          }
+        }
+
+        // Field group
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          gap: var(--base-3);
+
+          legend {
+            @include visuallyHide;
+          }
+
+          @include breakpoint(md) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--base-6);
+          }
+        }
+      }
     }
   }
 
