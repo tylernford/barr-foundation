@@ -3699,11 +3699,11 @@
         },
         {
             "name": "nystudio107/craft-retour",
-            "version": "4.1.14",
+            "version": "4.1.16",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/013176e944cdc17da2991ecb9b34e3ef0a1fa060",
-                "reference": "013176e944cdc17da2991ecb9b34e3ef0a1fa060",
+                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/61a6c4821ea3708bd7c9db9b828fbfde74f463fa",
+                "reference": "61a6c4821ea3708bd7c9db9b828fbfde74f463fa",
                 "shasum": ""
             },
             "require": {
@@ -3746,7 +3746,7 @@
                 "issues": "https://nystudio107.com/plugins/retour/support",
                 "source": "https://github.com/nystudio107/craft-retour"
             },
-            "time": "2023-10-26T20:48:44+00:00"
+            "time": "2024-03-25T13:54:15+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
