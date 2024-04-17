@@ -306,8 +306,10 @@
           }
         }
 
-        .input.fui-error {
-          height: auto;
+        .input {
+          &.fui-error {
+            height: auto;
+          }
 
           label {
             left: var(--base-4);
