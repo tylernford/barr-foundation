@@ -39,7 +39,6 @@ var accordionButtons = $(".accordion .accordion__title button");
 function accordionToggle() {
   $(".accordion .accordion__title button").on("click", function (e) {
     $control = $(this);
-    console.log("accordion clicked");
     accordionContent = $control.attr("aria-controls");
     checkOthers($control[0]);
 
@@ -135,7 +134,6 @@ function triggerModal() {
 //Redirect on clear filter
 document.getElementById('clearFilters').addEventListener('click', function() {
     // Redirect to /grantmaking/grants-grantees
-    console.log("Clear Click")
     window.location.href = '/grantmaking/grants-grantees';
 });
 
@@ -185,8 +183,6 @@ $(document).ready(function() {
       }
     });
     // Do whatever you want with the selected filters array here
-    console.log(selectedProgramArea);
-    console.log(selectedStrategy);
 
     {# sprig.load('', {
         filterOption: selectedProgramArea
@@ -798,7 +794,6 @@ $('#loading').hide(); // Hide it initially
     {% endfor %}
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
-    console.log(StrategiesArray);
 
     {% set amountValues = [] %}
 
@@ -843,7 +838,6 @@ $('#loading').hide(); // Hide it initially
 
     amountValues = [1,...{{ amountValues|json_encode|raw }}];
   {% endcache %}
-  console.log(amountValues);
 
     //Plotly graph builder
     data = [{
@@ -888,25 +882,18 @@ $('#loading').hide(); // Hide it initially
       //Redirection to list page when startegy is clicked
       // Add event listener for click events on the plot
       TESTER.on('plotly_click', function(data){
-          console.log("Treemap Clicked!!");
           // Get the clicked point
           var point = data.points[0];
-          console.log(" depth:", point.currentPath.length);
 
           // Check if the clicked treemap node is of depth 3
           if (point.currentPath.length > 13 ) { // Change 3 to the appropriate depth
               // Log the values of the first and second depth
-              console.log("First depth:", point.parent);
-              console.log("Second depth:", point.label);
 
               var loader = document.getElementById("loadingOverlay");
               if(loader){
                   loader.classList.add("htmx-request");
-                  console.log('Class added');
               } else {
-                  console.log('Element with id loadingOverlay not found');
               }
-                  console.log('Element with id loadingOverlay not found');
               
               // Redirect to the desired URL
               window.location.href = "?query=&programAreaOption=" + encodeURIComponent(point.parent) + "&strategyOption=" + encodeURIComponent(point.label) + "&layout=list&page=1";
@@ -920,7 +907,6 @@ $('#loading').hide(); // Hide it initially
 <script>
     {% cache %}
       document.getElementById('clearFilters').addEventListener('click', function (e) {
-          console.log("Clear filters clicked");
           e.preventDefault();
           // Clear all selected program area inputs
           var programAreaInputs = document.querySelectorAll('.radio-group.programArea-group');
