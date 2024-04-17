@@ -944,21 +944,27 @@ $('#loading').hide(); // Hide it initially
                   }
               });
           });
-          // Check if any radio input in .radio-group.programArea-group is checked
-          var programAreaInputs = document.querySelectorAll('.radio-group.programArea-group input[type="radio"]');
-          var isAnyProgramAreaChecked = Array.from(programAreaInputs).some(function(input) {
-              return input.checked;
-          });
+          var filterButton = document.querySelector('.filter__button');
+            filterButton.addEventListener('click', function () {
+                console.log("clicked");
 
-          if (isAnyProgramAreaChecked) {
-              // Execute your logic here
-              var parentInputWrapper = document.getElementById('{{ category.title|raw }}').closest('.input-wrapper');
-              if (document.getElementById('{{ category.parent|raw }}').checked) {
-                  parentInputWrapper.classList.remove("input--disabled");
-              } else {
-                  parentInputWrapper.classList.add("input--disabled");
-              }
-          }
+                // Check if any radio input in .radio-group.programArea-group is checked
+                var programAreaInputs = document.querySelectorAll('.radio-group.programArea-group');
+                var isAnyProgramAreaChecked = Array.from(programAreaInputs).some(function(input) {
+                    return input.checked;
+                });
+
+                if (isAnyProgramAreaChecked) {
+                    // Execute your logic here
+                    var parentInputWrapper = document.getElementById('{{ category.title|raw }}').closest('.input-wrapper');
+                    if (document.getElementById('{{ category.parent|raw }}').checked) {
+                        parentInputWrapper.classList.remove("input--disabled");
+                    } else {
+                        parentInputWrapper.classList.add("input--disabled");
+                    }
+                }
+            });
+
       {% endfor %}
     {% endcache %}
 </script>
