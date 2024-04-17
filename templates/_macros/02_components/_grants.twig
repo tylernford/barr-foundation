@@ -139,23 +139,11 @@ document.getElementById('clearFilters').addEventListener('click', function() {
 
 // form submit on Enter
 
-{# $(document).ready(function() {
-    $('#name').keypress(function(event) {
-        console.log("test");
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13') {
-            // Submit the form when Enter is pressed
-           $('button[type="submit"]').click();
-        }
-    });
-}); #}
-
 $(document).ready(function() {
     $('.section.section--grantee form').on('keypress', function(event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if(keycode == '13') {
             event.preventDefault(); // Prevent form submission
-            {# console.log("Enter clicked"); #}
             $('.section.section--grantee form button[type="submit"]').click(); // Trigger click event on the submit button
         }
     });
@@ -478,7 +466,9 @@ $('#loading').hide(); // Hide it initially
     {% endfor %}
 
     {# Grantees entries query related to grants #}
-    {% set granteeList = craft.entries().section('grantees').orderBy("title asc").limit(12) %}
+    {% set granteeList = craft.entries().section('grantees').relatedTo({
+    sourceElement: grants
+  }).orderBy("title asc").limit(12) %}
 
 {% endif %}
 
@@ -799,8 +789,7 @@ $('#loading').hide(); // Hide it initially
     {% endfor %}
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
-    var colorsArray=["#FFFFFF",...{{ colorsArray|json_encode|raw }}]
-    console.log(colorsArray);
+    var colorsArray=["#FFFFFF",...{{ colorsArray|json_encode|raw }}];
     {% set amountValues = [] %}
 
     {% for count in range(1,StrategiesArray|length) %}
@@ -946,7 +935,6 @@ $('#loading').hide(); // Hide it initially
           });
           var filterButton = document.querySelector('.filter__button');
             filterButton.addEventListener('click', function () {
-                console.log("clicked");
 
                 // Check if any radio input in .radio-group.programArea-group is checked
                 var programAreaInputs = document.querySelectorAll('.radio-group.programArea-group');
