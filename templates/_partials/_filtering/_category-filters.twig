@@ -27,8 +27,8 @@
               
               <div class="filters__groups">
                 {% for programAreasFilter in programAreasFilters %}
-                  {% if programAreasFilter.level == 1 %}
-                    {% set childFilters = programAreasFilter.children %}
+                  {% if programAreasFilter.level == 1 and programAreasFilter.excludeFromFilters == false %}
+                    {% set childFilters = programAreasFilter.children.excludeFromFilters(false) %}
 
                     <div class="groups__group">
                       {{ _self.checkbox(programAreasFilter, programAreas, 'programAreas', false) }}
