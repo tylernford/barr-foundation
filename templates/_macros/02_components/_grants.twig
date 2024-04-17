@@ -390,64 +390,37 @@ $('#loading').hide(); // Hide it initially
 {# Fetch data based on sort option #}
 {% set currYear1 = currYear + 1 %}
 {% if layout == "grid" or layout == "list" %}
-  {% if sortOption == 'Most Recent First' %}
-      {% if optionOfProgramArea|json_encode|length > 7 %}
-        {% set granteeList = craft.entries()
+  {% set baseQuery = craft.entries()
             .section({
                 section: "grants",
             })
             .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
             .entriesOrganization([':notempty:'])
-            .search(query)
+            .search(query) %}
+  {% if sortOption == 'Most Recent First' %}
+      {% if optionOfProgramArea|json_encode|length > 7 %}
+        {% set granteeList = baseQuery
             .orderBy("dateOnly DESC")
             .limit(12)
             .relatedTo(optionOfProgramArea) %}
       {% else %}
-        {% set granteeList = craft.entries()
-          .section({
-              section: "grants",
-          })
-          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
-          .entriesOrganization([':notempty:'])
-          .search(query)
+        {% set granteeList = baseQuery
           .orderBy("dateOnly DESC")
           .limit(12) %}
       {% endif %}
   {% elseif sortOption == 'Older First' %}
       {% if optionOfProgramArea|json_encode|length > 7 %}
-        {% set granteeList = craft.entries()
-            .section({
-                section: "grants",
-            })
-            .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
-            .entriesOrganization([':notempty:'])
-            .search(query)
+        {% set granteeList = baseQuery
             .orderBy("dateOnly ASC")
             .limit(12)
             .relatedTo(optionOfProgramArea) %}
       {% else %}
-        {% set granteeList = craft.entries()
-          .section({
-              section: "grants",
-          })
-          .dateOnly(["and", ">= " ~ currYear, "<" ~ currYear1 ])
-          .entriesOrganization([':notempty:'])
-          .search(query)
+        {% set granteeList = baseQuery
           .orderBy("dateOnly ASC")
           .limit(12) %}
       {% endif %}
-  {% elseif sortOption == 'Highest Amount' %}
-      {% set granteeList = craft.entries().section({
-              section: "grants",
-          }).dateOnly (["and", ">= " ~ currYear, "<" ~ currYear1 ]).entriesOrganization([':notempty:']).search(query).orderBy("").limit(12) %}
-  {% elseif sortOption == 'Lowest Amount' %}
-      {% set granteeList = craft.entries().section({
-              section: "grants",
-          }).dateOnly (["and", ">= " ~ currYear, "<" ~ currYear1 ]).entriesOrganization([':notempty:']).search(query).orderBy("textAmount ASC").limit(12) %}
   {% else %}
-      {% set granteeList = craft.entries().section({
-              section: "grants"
-          }).dateOnly (["and", ">= " ~ currYear, "<" ~ currYear1 ]).entriesOrganization([':notempty:']).search(query).orderBy("dateOnly DESC").limit(12) %}
+      {% set granteeList = baseQuery.orderBy("dateOnly DESC").limit(12) %}
   {% endif %}
 {% endif %}
 
