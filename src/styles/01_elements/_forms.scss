@@ -24,10 +24,18 @@
 
     &.form--full {
         @include container-inner;
-        padding-block: var(--base-9);
+        padding-block: var(--base-9) var(--base-15);
 
         > div {
             max-width: 856px;
+        }
+
+        @include breakpoint(md) {
+            padding-block-end: var(--base-20);
+        }
+
+        @include breakpoint(lg) {
+            padding-block-end: var(--base-22);
         }
     }
 
@@ -56,15 +64,16 @@
             > div {
                 display: grid;
                 gap: var(--base-6);
+            }
 
-                &[id] {
-                    margin-block-end: var(--base-4);
-                    display: block;
-                    @include getType('caption-messina');
+            div[id]:not(.field-error) {
+                margin-block-end: var(--base-4);
+                max-width: 40em;
+                display: block;
+                @include getType('caption-messina');
 
-                    p:not(:last-child) {
-                        margin-block-end: 1.4em;
-                    }
+                p:not(:last-child) {
+                    margin-block-end: 1.4em;
                 }
             }
 
@@ -76,24 +85,31 @@
 
             h6 {
                 margin-block-start: var(--neg-base);
-                padding-inline: var(--base-3);
                 max-width: 50em;
                 @include getType('detail-messina');
             }
 
             @include breakpoint(md) {
-                > div[id] {
+                div[id]:not(.field-error) {
                     @include getType('body');
                 }
 
                 > div > div {
                     margin-inline: var(--neg-base-3);
 
+                    .input {
+                        padding-inline: var(--base-3);
+                    }
+
                     &:has(> div:nth-child(n + 2)) {
                         .input {
                             width: 50%;
                         }
                     }
+                }
+
+                h6 {
+                    padding-inline: var(--base-3);
                 }
             }
 
@@ -139,7 +155,6 @@
 
     // Input
     .input {
-        padding-inline: var(--base-3);
         width: 100%;
         height: var(--base-13);
         position: relative;
@@ -380,7 +395,7 @@
                     height: var(--icon-size);
                     position: absolute;
                     opacity: 1;
-                    background-image: url(../svgs/icons/icon--upload-20--teal.svg);
+                    background-image: url(#{$svg-path}icon--upload-20--teal.svg);
                     background-repeat: no-repeat;
                     background-size: var(--icon-size);
                     transition: opacity var(--transition) ease-in;
@@ -425,7 +440,7 @@
         }
 
         textarea {
-            padding: var(--base-7) 0 0 var(--base-4);
+            padding: var(--base-2) var(--base-4);
             width: 100%;
             min-height: 260px;
             position: relative;
@@ -449,6 +464,14 @@
                         font-size: 16px;
                     }
                 }
+            }
+
+            &::placeholder {
+                opacity: 1;
+                color: var(--color-form-primary);
+                @include getType('detail-axiforma');
+                font-style: normal;
+                transition: var(--transition-out);
             }
 
             // When filled
@@ -475,6 +498,11 @@
                 background-color: var(--color-form-focus);
                 color: var(--color-form-tertiary);
 
+                &::placeholder {
+                    opacity: 0;
+                    transition: var(--transition-in);
+                }
+
                 + label {
                     top: .25rem;
                     color: var(--color-form-tertiary);
@@ -496,7 +524,7 @@
 
         div:has(textarea) {
             + label {
-                left: var(--base-7);
+                visibility: hidden;
             }
         }
 
@@ -563,6 +591,7 @@
                 inset: 0;
                 max-width: 35em;
                 position: static;
+                pointer-events: auto;
             }
         }
     }
@@ -701,14 +730,14 @@
             cursor: pointer;
             transition: var(--transition-out);
             
-            &::after {
+            &::before {
                 content: '';
                 right: 1.5rem; // 24px
-                bottom: 1.125rem; // 18px
+                bottom: 1.0625rem; // 17px
                 width: var(--icon-size);
                 height: var(--icon-size);
                 position: absolute;
-                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iIzI3MjE1NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMjAgMTBMOSA0VjlIMFYxMUg5VjE2TDIwIDEwWiIgLz4KPC9zdmc+Cg==);
+                background-image: url(#{$svg-path}icon--arrow-20--navy.svg);
                 pointer-events: none;
             }
 
@@ -724,6 +753,41 @@
             // Focus
             &:focus-visible {
                 @include formFocus;
+            }
+        }
+    }
+
+    &.form--full {
+        .submit {
+            margin-block-start: 0;
+
+            button {
+                background-color: var(--color-form-accent);
+                color: var(--color-grey-25);
+
+                &::after {
+                    content: '';
+                    right: 1.5rem; // 24px
+                    bottom: 1.0625rem; // 17px
+                    width: var(--icon-size);
+                    height: var(--icon-size);
+                    position: absolute;
+                    background-image: url(#{$svg-path}icon--arrow-20--grey.svg);
+                    pointer-events: none;
+                    transition: opacity var(--transition) ease-in;
+                }
+
+                @media (hover: hover){
+                    &:hover {
+                        background-color: var(--color-form-error);
+                        color: var(--color-form-primary);
+
+                        &::after {
+                            opacity: 0;
+                            transition: opacity var(--transition-intermediate) ease-out;
+                        }
+                    }
+                }
             }
         }
     }
@@ -752,7 +816,7 @@
         .input {
             div:has(> input[type="file"]) {
                 + label::after {
-                    background-image: url('../svgs/icons/icon--upload-20--green.svg');
+                    background-image: url(#{$svg-path}icon--upload-20--green.svg);
                 }
             }
         }
@@ -766,7 +830,7 @@
         .input {
             div:has(> input[type="file"]) {
                 + label::after {
-                    background-image: url('../svgs/icons/icon--upload-20--plum.svg');
+                    background-image: url(#{$svg-path}icon--upload-20--plum.svg);
                 }
             }
         }
@@ -780,7 +844,26 @@
         .input {
             div:has(> input[type="file"]) {
                 + label::after {
-                    background-image: url('../svgs/icons/icon--upload-20--marigold.svg');
+                    background-image: url(#{$svg-path}icon--upload-20--marigold.svg);
+                }
+            }
+        }
+
+        &.form--full {
+            .submit {
+                button {
+                    background-color: var(--color-program-marigold-50);
+                    color: var(--color-form-primary);
+
+                    &::after {
+                        display: none;
+                    }
+
+                    @media (hover: hover){
+                        &:hover {
+                            background-color: var(--color-form-error);
+                        }
+                    }
                 }
             }
         }
@@ -798,6 +881,34 @@
     font-weight: 400!important;
     letter-spacing: 0.015em!important;
     line-height: 1.4285714286!important;
+
+    // Full forms
+    &.fui-alert-top-form {
+        margin: 0 40px!important;
+        max-width: 856px;
+        background-color: var(--color-citrus-100);
+        color: var(--color-navy-100);
+
+        @include breakpoint(md) {
+            margin: 0 72px!important;    
+        }
+
+        @include breakpoint(lg) {
+            margin: 0 96px!important;    
+        }
+
+        @include breakpoint(xl) {
+            margin: 0 128px!important;    
+        }
+
+        @include breakpoint(xxl) {
+            margin: 0 auto !important;
+            transform: translateX(-200px);
+        }
+
+        // left: 50%;
+//   transform: translate(-50%);
+    }
 }
 
 .fui-alert + form {
