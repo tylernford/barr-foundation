@@ -72,6 +72,13 @@
     padding-block-end: var(--base-14);
     display: grid;
     grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  // Scroll Anchor
+  .program-tabs__scroll-anchor {
+    inset: var(--neg-base-10) auto auto 0;
+    position: absolute;
   }
 
   // Intro
