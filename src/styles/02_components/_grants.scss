@@ -1285,3 +1285,11 @@ dialog.modal .accordion .accordion__item .accordion__content {
 .htmx-request{
   display: block !important;
 }
+
+.bg.filter .filter__button,.bf.accordion .accordion__item .accordion__content{
+  cursor: pointer;
+}
+
+.bg.filter .button-disable{
+  cursor: not-allowed !important;
+}

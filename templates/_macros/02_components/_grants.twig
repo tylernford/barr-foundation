@@ -247,11 +247,11 @@ $('#loading').hide(); // Hide it initially
             <div class="filter__top"> </div>
             <h3>Subsection Name Dolor Sit Amet</h3>
             <div class="filter__inputs"> 
-              <button sprig-ignore class="filter__button modal__open"> <span>Add / Modify Filters  </span><span>({{ optionOfProgramArea|length - 1 }} applied)</span></button>
+              <button sprig-ignore class="filter__button modal__open {% if layout == "directory" %}button-disable{% endif %}" {% if layout == "directory" %}disabled{% endif %}> <span>Add / Modify Filters  </span><span>({{ optionOfProgramArea|length - 1 }} applied)</span></button>
               <div class="bf accordion">
                 <div class="accordion__item">
                   <div class="accordion__title">
-                    <button type="button" aria-expanded="false" aria-controls="content-1"> <span>Sort by : </span><span class="cnt">{{ sortOption }}</span></button>
+                    <button type="button" aria-expanded="false" aria-controls="content-1" class="{% if layout == "directory" %}button-disable{% endif %}" {% if layout == "directory" %}disabled{% endif %}> <span>Sort by : </span><span class="cnt">{{ sortOption }}</span></button>
                     <input type="hidden" name="sortOption" value="{{ sortOption }}" />
                   </div><span class="accordion__logo">
                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -468,7 +468,7 @@ $('#loading').hide(); // Hide it initially
     {# Grantees entries query related to grants #}
     {% set granteeList = craft.entries().section('grantees').relatedTo({
     sourceElement: grants
-  }).orderBy("title asc").limit(12) %}
+  }).search(query).orderBy("title asc").limit(12) %}
 
 {% endif %}
 
