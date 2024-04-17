@@ -4,7 +4,7 @@ const programTabs = document.querySelector(`.program-tabs`)
 function triggerProgramTabs(){
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   const blockOpener = document.querySelector(`.blockOpener`);
-  const tabsComponent = document.querySelector(`.program-tabs`);
+  const tabsScrollAnchor = document.querySelector(`.program-tabs__scroll-anchor`);
   const programAreaTriggers = document.querySelectorAll(`.program-tabs__item`);
   const programAreaCards = document.querySelectorAll(`.program-tabs__card`);
   const programAreaCardsDesktop = document.querySelectorAll(`.program-tabs__card`);
@@ -55,8 +55,8 @@ function triggerProgramTabs(){
         targetCard.classList.add(`_is-active`);
 
         setTimeout(() => {
-          tabsComponent.scrollIntoView();
-        }, "500ms");
+          tabsScrollAnchor.scrollIntoView();
+        }, "500ms");f
       });
     });
   }

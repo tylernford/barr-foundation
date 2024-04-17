@@ -72,6 +72,13 @@
     padding-block-end: var(--base-14);
     display: grid;
     grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  // Scroll Anchor
+  .program-tabs__scroll-anchor {
+    inset: var(--neg-base-10) auto auto 0;
+    position: absolute;
   }
 
   // Intro
@@ -115,8 +122,6 @@
     text-align: center;
     pointer-events: none;
     z-index: 5;
-    transition: grid-template-rows var(--transition-slow) ease-in;
-    transition-delay: 350ms;
 
     .card__wrapper {
       padding-block-start: var(--base-6);
@@ -139,7 +144,6 @@
     &._is-active {
       grid-template-rows: 1fr;
       pointer-events: auto;
-      transition: grid-template-rows 250ms ease-out;
 
       .card__inner {
         opacity: 1;
