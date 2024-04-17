@@ -784,17 +784,23 @@ $('#loading').hide(); // Hide it initially
     {# structuring parent and children for plotly treemap #}
     {% set programAreaArray = [] %}
     {% set StrategiesArray = [] %}
+    {% set colorsArray = [] %}
     {% for programArea in programAreas %}
         {% set StrategiesArray = StrategiesArray|merge([programArea.title]) %}
         {% set programAreaArray = programAreaArray|merge(["Program Area"]) %}
+        {% if programArea.title == "Special Initiatives" %}{% set color = "#01564F" %}{% elseif programArea.title == "Sector Effectiveness" %}{% set color = "#01564F" %}{% elseif programArea.title == "Arts & Creativity" %}{% set color = "#2F5535" %}{% elseif programArea.title == "Education" %}{% set color = "#E78B23" %}{% elseif programArea.title == "Climate" %}{% set color = "#5A3044" %}{% else %}{% set color = "#5A3044" %}{% endif %}
+        {% set colorsArray = colorsArray|merge([color]) %}
     {% endfor %}
     {% for strat in strategies %}
         {% set StrategiesArray = StrategiesArray|merge([strat.title]) %}
         {% set programAreaArray = programAreaArray|merge([strat.parent.title]) %}
+        {% if strat.parent.title == "Special Initiatives" %}{% set color = "#01564F" %}{% elseif strat.parent.title == "Sector Effectiveness" %}{% set color = "#01564F" %}{% elseif strat.parent.title == "Arts & Creativity" %}{% set color = "#2F5535" %}{% elseif strat.parent.title == "Education" %}{% set color = "#E78B23" %}{% elseif strat.parent.title == "Climate" %}{% set color = "#5A3044" %}{% else %}{% set color = "#5A3044" %}{% endif %}
+        {% set colorsArray = colorsArray|merge([color]) %}
     {% endfor %}
     var programAreaArray=["Program Areas",...{{ programAreaArray|json_encode|raw }}];
     var StrategiesArray=["",...{{ StrategiesArray|json_encode|raw }}];
-
+    var colorsArray=["#FFFFFF",...{{ colorsArray|json_encode|raw }}]
+    console.log(colorsArray);
     {% set amountValues = [] %}
 
     {% for count in range(1,StrategiesArray|length) %}
@@ -852,11 +858,12 @@ $('#loading').hide(); // Hide it initially
         textfont: { "size": 20, "overflow": "clip" },
         hovertemplate: '<b>%{label}</b><br>' +
                     'Value: $%{value}<br>' +
-                    'Percentage: %{percentRoot:.1%} <extra></extra> ',
+                    'Percentage: %{percentParent:.1%} <extra></extra> ',
         pathbar: {"textfont": {"size": 20 } },
         outsidetextfont: {"size": 20, "color": "#377eb8","family": "Axiforma" , "minsize": 20, "overflow": "clip"},
         insidetextfont: {"size": 20,"color": "#FFFFFF","family": "Axiforma" ,"minsize": 20, "overflow": "clip" },
-        marker: {"line": {"width": 2},"colors": ["#f5f5f5","#2F5535", "#5A3044", "#E78B23", "#01564F","#01564F", "#01564F","#2F5535","#2F5535","#2F5535","#5A3044","#5A3044","#5A3044","#E78B23","#E78B23","#E78B23","#01564F","#01564F","#01564F","#01564F","#01564F"]}
+        marker: {"line": {"width": 2},"colors": colorsArray},
+        hoverinfo: "none"
   }];
 
   var layout = {
@@ -936,6 +943,16 @@ $('#loading').hide(); // Hide it initially
                       parentInputWrapper.classList.add("input--disabled");
                   }
               });
+          });
+          var filterButton = document.querySelector('.filter__button');
+          filterButton.addEventListener('click', function () {
+            console.log("clicked");
+            var parentInputWrapper = document.getElementById('{{ category.title|raw }}').closest('.input-wrapper');
+                  if (document.getElementById('{{ category.parent|raw }}').checked) {
+                      parentInputWrapper.classList.remove("input--disabled");
+                  } else {
+                      parentInputWrapper.classList.add("input--disabled");
+                  }
           });
       {% endfor %}
     {% endcache %}
