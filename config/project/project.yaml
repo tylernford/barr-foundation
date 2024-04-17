@@ -1,4 +1,4 @@
-dateModified: 1713218712
+dateModified: 1713377589
 elementSources:
   craft\elements\Asset:
     -
@@ -340,6 +340,7 @@ elementSources:
       tableAttributes:
         - slug
         - parent
+        - 'field:d68f3f76-b4ad-44d8-9c71-90350b964c71' # Exclude from filters
       type: native
     -
       heading: Feeds
@@ -943,6 +944,7 @@ meta:
     d44a4308-4627-45f3-8867-96f5d98fcefa: 'Card: Latest News (Manual)' # Card: Latest News (Manual)
     d59de2e1-216a-4da5-a481-776b806f2b39: Summary # Summary
     d65ee27b-0934-4348-92aa-2a30b9a64e84: Featured # Featured
+    d68f3f76-b4ad-44d8-9c71-90350b964c71: 'Exclude from filters' # Exclude from filters
     d82a1a8b-d1ee-434f-9583-06eb498d2c9c: 'Style: Button or Text' # Style: Button or Text
     d82c20eb-ce47-406d-8255-fc7f6c009a19: 'Feed: Related Content' # Feed: Related Content
     d95defeb-86a9-41c1-b9c1-2c644240afb7: 'Asset: Cover Image' # Asset: Cover Image
