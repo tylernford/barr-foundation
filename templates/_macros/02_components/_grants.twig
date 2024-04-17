@@ -224,8 +224,6 @@ $('#loading').hide(); // Hide it initially
 {% endjs %}
 
 {# Initialse twig variables #}
-
-
 {% set currYear = currYear ?? awardYear %} 
 {% set sortOption = sortOption ?? 'Most Recent First' %}
 {% set programAreaOption = programAreaOption ?? "" %}
@@ -233,7 +231,7 @@ $('#loading').hide(); // Hide it initially
 
 {% set query = query ?? '' %}
 {# {% set granteeList = craft.entries().section('grants').search(query).cache().limit(12) %} #}
-{# {% set granteeListTotal = craft.entries().section('grants').search(query).all() %} #}
+{% set granteeListTotal = craft.entries().section('grants').search(query).all() %}
 
 {# Paginates the entry query given the current page #}
     {% set page = page ?? 1 %}
@@ -259,7 +257,7 @@ $('#loading').hide(); // Hide it initially
 
 {# Search Sort Filter Section #}
 <section class="section section--grantee"> 
-      <form sprig s-val:page="{{ page }}" data-hx-indicator="#loadingOverlay">
+      <form sprig s-val:page="{% if granteeListTotal|length <= page * 12 %}1{% else %}{{ page }}{% endif %}" data-hx-indicator="#loadingOverlay">
         <div class="container"> 
           <div class="bg filter"> 
             <div class="filter__top"> </div>
@@ -486,16 +484,6 @@ $('#loading').hide(); // Hide it initially
     {# Grantees entries query related to grants #}
     {% set granteeList = craft.entries().section('grantees').orderBy("title asc").limit(12) %}
 
-    {# {% for grantee in granteeList  %}
-        <h2>{{ grantee.title }}</h2>
-        {% for fieldHandle, fieldValue in grantee %}
-            {% if fieldValue is instance of('DateTime') %}
-                <p>{{ fieldHandle ~ '' }}: {{ fieldValue|date('Y-m-d H:i:s') }}</p>
-            {% else %}
-                <p>{{ fieldHandle ~ '' }}: {{ fieldValue }}</p>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}  #}
 {% endif %}
 
 {% if layout == "grid" or layout == "list" or layout == "directory" %}
