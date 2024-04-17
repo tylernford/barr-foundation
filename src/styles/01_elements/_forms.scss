@@ -872,9 +872,10 @@
 
 // Alert
 .fui-alert {
-    margin: 0!important;
+    margin: var(--base-10) var(--base-10) 0 var(--base-10)!important;
+    max-width: 856px;
     border-radius: 5px;
-    background-color: var(--color-grey-25-65);
+    background-color: var(--color-citrus-100);
     color: var(--color-navy-100);
     font-family: var(--ff-axiforma)!important;
     font-size: var(--type-14)!important;
@@ -882,35 +883,20 @@
     letter-spacing: 0.015em!important;
     line-height: 1.4285714286!important;
 
-    // Full forms
-    &.fui-alert-top-form {
-        margin: 0 40px!important;
-        max-width: 856px;
-        background-color: var(--color-citrus-100);
-        color: var(--color-navy-100);
-
-        @include breakpoint(md) {
-            margin: 0 72px!important;    
-        }
-
-        @include breakpoint(lg) {
-            margin: 0 96px!important;    
-        }
-
-        @include breakpoint(xl) {
-            margin: 0 128px!important;    
-        }
-
-        @include breakpoint(xxl) {
-            margin: 0 auto !important;
-            transform: translateX(-200px);
-        }
-
-        // left: 50%;
-//   transform: translate(-50%);
+    @include breakpoint(md) {
+        margin-inline: 72px!important;    
     }
-}
 
-.fui-alert + form {
-    margin-top: var(--base-4)
+    @include breakpoint(lg) {
+        margin-inline: 96px!important;    
+    }
+
+    @include breakpoint(xl) {
+        margin-inline: 128px!important;    
+    }
+
+    @include breakpoint(xxl) {
+        margin-inline: auto !important;
+        transform: translateX(-200px);
+    }
 }

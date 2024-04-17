@@ -262,8 +262,12 @@
       // Inner
       .form__inner {
         padding-inline: var(--base-4);
-        overflow: hidden;
+        overflow-y: hidden;
         transition: var(--transition-out);
+
+        @include breakpoint(md) {
+          overflow: visible;
+        }
       }
 
       // Active
@@ -281,7 +285,7 @@
         // Field wrapper
         .field-wrapper {
           &:not(:last-child) {
-            margin-block-end: var(--base-4);
+            margin-block-end: var(--neg-base-12);
           }
         }
 
@@ -300,6 +304,24 @@
             grid-template-columns: 1fr 1fr;
             gap: var(--base-6);
           }
+        }
+
+        .input.fui-error {
+          height: auto;
+
+          label {
+            left: var(--base-4);
+          }
+        }
+      }
+
+      .fui-alert {
+        margin: 0!important;
+        background-color: var(--color-grey-25-65);
+        transform: none!important;
+
+        + form {
+          margin-top: var(--base-4)
         }
       }
     }
