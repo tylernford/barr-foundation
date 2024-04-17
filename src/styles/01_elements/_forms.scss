@@ -872,10 +872,10 @@
 
 // Alert
 .fui-alert {
-    margin: var(--base-10) var(--base-10) 0 var(--base-10)!important;
+    margin: var(--base-10) var(--base-10) var(--base-15) var(--base-10)!important;
     max-width: 856px;
     border-radius: 5px;
-    background-color: var(--color-citrus-100);
+    background-color: var(--color-grey-50);
     color: var(--color-navy-100);
     font-family: var(--ff-axiforma)!important;
     font-size: var(--type-14)!important;
@@ -883,20 +883,34 @@
     letter-spacing: 0.015em!important;
     line-height: 1.4285714286!important;
 
+    + .form {
+        margin-block-start: var(--neg-base-15);
+    }
+    
     @include breakpoint(md) {
-        margin-inline: 72px!important;    
+        margin-block-end: var(--base-20)!important;
+        margin-inline: var(--base-18)!important;
+
+        + .form {
+            margin-block-start: var(--neg-base-20);
+        }
     }
 
     @include breakpoint(lg) {
-        margin-inline: 96px!important;    
+        margin-block-end: var(--base-22)!important;
+        margin-inline: var(--base-24)!important;
+
+        + .form {
+            margin-block-start: var(--neg-base-22);
+        }
     }
 
     @include breakpoint(xl) {
-        margin-inline: 128px!important;    
+        margin-inline: var(--base-32)!important;    
     }
 
     @include breakpoint(xxl) {
-        margin-inline: auto !important;
+        margin-inline: auto!important;
         transform: translateX(-200px);
     }
 }
