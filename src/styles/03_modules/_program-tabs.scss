@@ -115,6 +115,8 @@
     text-align: center;
     pointer-events: none;
     z-index: 5;
+    transition: grid-template-rows var(--transition-slow) ease-in;
+    transition-delay: 350ms;
 
     .card__wrapper {
       padding-block-start: var(--base-6);
