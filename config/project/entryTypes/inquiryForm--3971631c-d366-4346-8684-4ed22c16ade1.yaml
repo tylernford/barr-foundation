@@ -70,7 +70,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 133f1f83-cfbf-4f4a-a072-26d6ec33cf9f # Page Builder: Inquiry Form
             instructions: null
-            label: 'Page Builder'
+            label: 'Form Intro'
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -80,44 +80,15 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 11af9927-ac55-456c-a763-0767d3c1e79f
-            userCondition: null
-          -
-            elementCondition: null
             heading: Form
             type: craft\fieldlayoutelements\Heading
             uid: 6d8774b3-2a61-4248-a104-85c244479cce
             userCondition: null
           -
             elementCondition: null
-            fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 82ffe931-7364-4fe0-9dcf-91360700391e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 5de2e8df-6dad-4364-bf23-2d48496f0f1d # Text: Description
-            instructions: null
-            label: null
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9544434b-48a9-4dab-a87c-21fdf6378907
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 3b585310-81d5-451e-8ed6-030062c40e94 # Form: Wildcard
             instructions: null
-            label: null
+            label: Form
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

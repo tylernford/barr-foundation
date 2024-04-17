@@ -13,7 +13,6 @@ Interior template
 {% import '_macros/03_modules/_feed' as feeds %}
 {% import '_macros/03_modules/_opener' as openers %}
 
-{% set entrySection = entry.section.handle %}
 {% set opener = entry.openerLanding %}
 {% set builder =
     entry.builderCommon ??
@@ -28,7 +27,7 @@ Interior template
 
 
     {# Page #}
-    {% if entrySection == 'programAreas' and entry.type == 'landing' %}
+    {% if entry.type == 'landing' %}
         {% include '_partials/_builder-program-areas.twig' with {'builder': builder} %}
     {% else %}
         <div class="page-wrapper">
@@ -39,11 +38,45 @@ Interior template
             <div class="background"></div>
 
 
-            {% include '_partials/_builder-common.twig' with {'builder': builder} %}
-            {% if entry.title == "Inquiry Form" %}
-                <div class="container-narrow" style="padding-block-end:var(--base-18)">
-                    <img src="{{ siteUrl }}build/images/ac-inquiry-form.png">
-                </div>
+            {% if entry.type == 'subPage' %}
+                {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+
+            {% elseif entry.type == 'inquiryForm' %}
+                {% include '_partials/_builder-common.twig' with {'builder': builder} %}
+                {% set inquiryForm = entry.formWildcard.one %}
+
+                {% if inquiryForm|length %}
+                    {{ craft.formie.renderForm(inquiryForm, {
+                        themeConfig: {
+                            formWrapper: false,
+                            resetClasses: true,
+                            
+                            form: {
+                                attributes: {
+                                    class: 'form form--full',
+                                },
+                            },
+                            
+                            row: {
+                                attributes: {
+                                    class: 'field-wrapper',
+                                },
+                            },
+
+                            nestedFieldRows: false,
+                            nestedFieldContainer: false,
+
+
+                            fieldRequired: false,
+
+                            fieldError: {
+                                attributes: {
+                                    class: 'field-error',
+                                },
+                            }
+                        }
+                    }) }}
+                {% endif %}
             {% endif %}
 
 
@@ -63,30 +96,11 @@ Interior template
                 {{ feeds.feed(feedConfig) }}
             {% endif %}
 
+
             {% if entry.textPlainHeading or entry.textDescription %}
                 {% if entry.type == 'inquiryForm' %}
-                    <section class="prefooterForm">
-                        {% if entry.textPlainHeading %}
-                            {# Section Title #}
-                            {% set sectionTitleAttributes = {
-                                level: 'h2',
-                                title: entry.textPlainHeading,
-                                variant: '', border: true
-                            } %}
-                            {{ sectionTitles.sectionTitle(sectionTitleAttributes) }}
-                        {% endif %}
-                        {% if entry.textDescription %}
-                            <div class="prefooterForm__description">
-                                {{ entry.textDescription }}
-                            </div>
-
-                            <div class="blockGeneric">
-                                <h2 class="blockGeneric-heading">Inquiry form will appear here.</h2>
-                            </div>
-                        {% endif %}
-                    </section>
                 {% else %}
-                    <section class="prefooterInquiry">
+                    {# <section class="prefooterInquiry">
                         {% set action = entry.actionAll %}
 
                         {% if entry.textPlainHeading %}
@@ -107,7 +121,7 @@ Interior template
                             } %}
                             {{ actions.action(actionAttributes) }}
                         {% endif %}
-                    </section>
+                    </section> #}
                 {% endif %}
             {% endif %}
         </div>
