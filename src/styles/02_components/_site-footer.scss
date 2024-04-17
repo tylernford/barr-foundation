@@ -8,7 +8,7 @@
   --color-footer-tertiary: var(--color-citrus-100);
   --color-footer-background: var(--color-navy-100);
 
-  padding-block: var(--base-16) var(--base-18);
+  padding-block-start: var(--base-16);
   background-color: var(--color-footer-background);
   color: var(--color-footer-primary);
   @include getType('caption-axiforma');
