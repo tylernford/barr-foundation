@@ -12,13 +12,13 @@ childBlocks:
   - timelineSingle
   - timelineMultiple
   - jobListings
-  - form
+  - formWildcard
 conditions: null
 description: ''
 enabled: true
 field: 9005a3a9-eed5-4c78-ac53-0a99897df1ec # Page Builder: Common
 fieldLayouts:
-  bad5bbf8-be56-4451-8670-49e0ce4cb325:
+  0fa7127b-c38c-4838-b884-b9163031fd88:
     tabs:
       -
         elementCondition: null

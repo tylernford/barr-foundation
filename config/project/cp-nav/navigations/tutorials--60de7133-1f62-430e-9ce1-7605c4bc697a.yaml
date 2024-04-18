@@ -1,6 +1,6 @@
 currLabel: Tutorials
 customIcon: null
-enabled: true
+enabled: false
 handle: tutorials
 icon: view
 layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default

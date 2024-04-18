@@ -1,6 +1,6 @@
 currLabel: GraphQL
 customIcon: null
-enabled: true
+enabled: false
 handle: graphql
 icon: '@appicons/graphql.svg'
 layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default
@@ -11,7 +11,7 @@ prevLabel: GraphQL
 prevLevel: 1
 prevParent: null
 prevUrl: graphql
-sortOrder: 20
+sortOrder: 26
 subnavBehaviour: null
 type: craft
 url: graphql
