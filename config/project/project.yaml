@@ -1,4 +1,4 @@
-dateModified: 1713451006
+dateModified: 1713461944
 elementSources:
   craft\elements\Asset:
     -
@@ -1048,6 +1048,59 @@ plugins:
     enabled: true
     licenseKey: 9JKRARXY1NJV1OMGB0A4ALBM
     schemaVersion: 2.0.12
+    settings:
+      ajaxTimeout: 10
+      alertEmails: null
+      defaultDateDisplayType: calendar
+      defaultDateTime: null
+      defaultDateValueOption: ''
+      defaultEmailTemplate: ''
+      defaultFileUploadVolume: ''
+      defaultFormTemplate: ''
+      defaultInstructionsPosition: verbb\formie\positions\AboveInput
+      defaultLabelPosition: verbb\formie\positions\BelowInput
+      defaultPage: submissions
+      disabledFields:
+        - verbb\formie\fields\formfields\Calculations
+        - verbb\formie\fields\formfields\Categories
+        - verbb\formie\fields\formfields\Entries
+        - verbb\formie\fields\formfields\Hidden
+        - verbb\formie\fields\formfields\Html
+        - verbb\formie\fields\formfields\Payment
+        - verbb\formie\fields\formfields\Password
+        - verbb\formie\fields\formfields\Recipients
+        - verbb\formie\fields\formfields\Repeater
+        - verbb\formie\fields\formfields\Section
+        - verbb\formie\fields\formfields\Signature
+        - verbb\formie\fields\formfields\Summary
+        - verbb\formie\fields\formfields\Table
+        - verbb\formie\fields\formfields\Tags
+        - verbb\formie\fields\formfields\Users
+      emptyValuePlaceholder: 'No response.'
+      enableBackSubmission: true
+      enableCsrfValidationForGuests: true
+      enableLargeFieldStorage: false
+      enableUnloadWarning: true
+      includeDraftElementUsage: false
+      includeRevisionElementUsage: false
+      maxIncompleteSubmissionAge: 30
+      maxSentNotificationsAge: 30
+      pdfPaperOrientation: portrait
+      pdfPaperSize: letter
+      pluginName: Forms
+      queuePriority: null
+      saveSpam: false
+      sendEmailAlerts: false
+      sentNotifications: true
+      setOnlyCurrentPagePayload: false
+      spamBehaviour: showSuccess
+      spamBehaviourMessage: ''
+      spamEmailNotifications: false
+      spamKeywords: ''
+      spamLimit: 500
+      useQueueForIntegrations: true
+      useQueueForNotifications: true
+      validateCustomTemplates: true
   hyper:
     edition: standard
     enabled: true
