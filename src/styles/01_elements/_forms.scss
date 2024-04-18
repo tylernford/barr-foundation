@@ -12,6 +12,7 @@
     --color-form-error: var(--color-citrus-100);
     --color-form-accent: var(--color-teal-150);
     --color-form-accent-light: var(--color-grey-150);
+    --color-form-required: var(--color-roses-100);
 
 
     &.form--light {
@@ -66,7 +67,7 @@
                 }
             }
         }
-        
+
         fieldset {
             // Group paragraph
             > div {
@@ -209,7 +210,6 @@
             background-color: transparent;
             color: var(--color-form-primary);
             @include getType('body');
-            font-style: italic;
             transition: var(--transition-out);
 
             // Required
@@ -219,6 +219,7 @@
                         content: '*';
                         inset: 0 -.5em auto auto;
                         position: absolute;
+                        color: var(--color-form-required);
                         font-size: 16px;
                     }
                 }
@@ -282,6 +283,7 @@
                     content: '*';
                     inset: 0 -.5em auto auto;
                     position: absolute;
+                    color: var(--color-form-required);
                     font-size: 16px;
                 }
             }
@@ -300,6 +302,21 @@
         // Select
         &.input--select {
             height: auto;
+
+            &[data-is-required="true"] {
+                div[id]:not(.field-error) {
+                    padding-inline-start: var(--base-3);
+                    position: relative;
+
+                    &::before {
+                        content: "*";
+                        inset: 2px auto auto 0;
+                        position: absolute;
+                        font-size: 18px;
+                        color: var(--color-form-required);
+                    }
+                }
+            }
         }
 
         select {
@@ -331,15 +348,20 @@
                 background-color: var(--color-form-focus);
                 color: var(--color-form-tertiary);
             }
+
+            // Error
+            &.fui-error {
+                background-color: var(--color-form-error);
+            }
         }
 
-        div:has(select) {
+        div:has(> select) {
             position: relative;
 
             &::after {
                 content: '';
                 right: 1.5rem; // 24px
-                bottom: 1.125rem; // 18px
+                bottom: 0.9375rem; // 15px
                 width: var(--icon-size);
                 height: var(--icon-size);
                 position: absolute;
@@ -356,14 +378,52 @@
         &.input--file {
             height: auto;
 
+            &[data-is-required="true"] {
+                div[id]:not(.field-error) {
+                    padding-inline-start: var(--base-3);
+                    position: relative;
+
+                    &::before {
+                        content: "*";
+                        inset: 2px auto auto 0;
+                        position: absolute;
+                        font-size: 18px;
+                        color: var(--color-form-required);
+                    }
+                }
+            }
+
             > div {
                 display: flex;
-                flex-direction: row-reverse;
-                justify-content: flex-end;
+                flex-wrap: wrap;
                 align-items: flex-start;
 
-                > div {
+                label {
+                    order: 2;
+                }
+
+                > div:not([id]) {
+                    order: 3;
                     margin: var(--base-4) 0 0 var(--base-4);
+                    min-width: 35%;
+                }
+
+                .field-error {
+                    margin-block-start: var(--base-3);
+                    order: 4;
+                    flex-shrink: 0;
+                }
+
+                @include breakpoint(sm) {
+                    > div:not([id]) {
+                        min-width: 60%;
+                    } 
+                }
+
+                @include breakpoint(md) {
+                    > div:not([id]) {
+                        min-width: 70%;
+                    } 
                 }
             }
         }
@@ -455,6 +515,21 @@
                     min-height: var(--base-20);
                 }
             }
+
+            &[data-is-required="true"] {
+                div[id]:not(.field-error) {
+                    padding-inline-start: var(--base-3);
+                    position: relative;
+
+                    &::before {
+                        content: "*";
+                        inset: 2px auto auto 0;
+                        position: absolute;
+                        font-size: 18px;
+                        color: var(--color-form-required);
+                    }
+                }
+            }
         }
 
         textarea {
@@ -469,7 +544,6 @@
             background-color: transparent;
             color: var(--color-form-primary);
             @include getType('body');
-            font-style: italic;
             transition: var(--transition-out);
 
             // Required
@@ -479,6 +553,7 @@
                         content: '*';
                         inset: 0 -.5em auto auto;
                         position: absolute;
+                        color: var(--color-form-required);
                         font-size: 16px;
                     }
                 }
@@ -602,6 +677,20 @@
                 &:focus-visible {
                     @include formFocus;
                 }
+
+                // Error
+                &.fui-error {
+                    background-color: var(--color-form-primary);
+                }
+
+                // Required
+                &:required {
+                    + label {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
             }
 
             label {
@@ -611,11 +700,41 @@
                 position: static;
                 pointer-events: auto;
             }
+
+            &[data-is-required="true"] {
+                div[id]:not(.field-error) {
+                    padding-inline-start: var(--base-3);
+                    position: relative;
+
+                    &::before {
+                        content: "*";
+                        inset: 2px auto auto 0;
+                        position: absolute;
+                        font-size: 18px;
+                        color: var(--color-form-required);
+                    }
+                }
+            }
         }
 
         // Radio
         &.input--radio {
             height: auto;
+
+            &[data-is-required="true"] {
+                div[id] {
+                    padding-inline-start: var(--base-3);
+                    position: relative;
+
+                    &::before {
+                        content: "*";
+                        inset: 2px auto auto 0;
+                        position: absolute;
+                        font-size: 18px;
+                        color: var(--color-form-required);
+                    }
+                }
+            }
 
             legend {
                 display: none;
@@ -700,6 +819,18 @@
                 // Focus
                 &:focus-visible {
                     @include formFocus;
+                }
+
+                &.fui-error {
+                    background-color: var(--color-form-primary);
+                }
+
+                &:required {
+                    + label {
+                        &::after {
+                            display: none;
+                        }
+                    }
                 }
             }
 
