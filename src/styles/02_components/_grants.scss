@@ -1297,3 +1297,8 @@ dialog.modal .accordion .accordion__item .accordion__content {
 .bf.grantee.grantee--list .grantee-card{
   width: 100%;
 }
+
+svg.main-svg,
+svg.main-svg * {
+    overflow: visible !important;
+}
