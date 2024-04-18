@@ -553,7 +553,7 @@ $('#loading').hide(); // Hide it initially
                           {% else %}
                             {% set linkValue = grants.contactWebsite %} 
                           {% endif %}
-                          <div class="grantee-card__footer"> <a href="/{% if grants.url %}{{ grants.url }}{% endif %}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
+                          <div class="grantee-card__footer"> <a href="{% if grants.url %}{{ grants.url }}{% endif %}" title="Go to Grantee Name Lorem Ipsum"> <span>profile </span></a>
                               {% if linkValue  %}
                                 <a target="_blank" href="{% if "https://" in linkValue or "http://" in linkValue or  "https//" in linkValue %}{{ linkValue }}{% else %}https://{{ linkValue }}{% endif %}" title="Go to {{ linkValue }}"> <span>website</span><span class="grantee-card__footer-logo"> 
                                 <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
