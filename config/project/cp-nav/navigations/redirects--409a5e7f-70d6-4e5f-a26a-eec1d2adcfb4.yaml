@@ -6,10 +6,10 @@ icon: null
 layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default
 level: 2
 newWindow: false
-parent: cb221d14-8bc0-48b1-ae9a-6f97df49c385
+parent: 8bd56cce-c1b7-435b-8f98-d892f675f567
 prevLabel: Redirects
 prevLevel: 2
-prevParent: cb221d14-8bc0-48b1-ae9a-6f97df49c385
+prevParent: 8bd56cce-c1b7-435b-8f98-d892f675f567
 prevUrl: retour/redirects
 sortOrder: 31
 subnavBehaviour: null

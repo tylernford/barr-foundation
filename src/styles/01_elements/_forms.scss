@@ -59,6 +59,14 @@
     }
 
     .input-group {
+        &.input-group--hide-legend {
+            > fieldset {
+                > legend {
+                    @include visuallyHide;
+                }
+            }
+        }
+        
         fieldset {
             // Group paragraph
             > div {
@@ -290,6 +298,10 @@
         }
 
         // Select
+        &.input--select {
+            height: auto;
+        }
+
         select {
             appearance: none;
             padding-inline: 14px;
@@ -437,6 +449,12 @@
         // Textarea
         &.input--textarea {
             height: auto;
+
+            &.input--textarea-short {
+                textarea {
+                    min-height: var(--base-20);
+                }
+            }
         }
 
         textarea {
@@ -592,6 +610,111 @@
                 max-width: 35em;
                 position: static;
                 pointer-events: auto;
+            }
+        }
+
+        // Radio
+        &.input--radio {
+            height: auto;
+
+            legend {
+                display: none;
+            }
+
+            fieldset {
+                > div > div {
+                    row-gap: var(--base-3);
+                    column-gap: var(--base-6);
+
+                    @include breakpoint(md) {
+                        margin-inline: 0;
+                    }
+
+                    > div {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+            input {
+                margin: 0;
+                width: var(--base-6);
+                height: var(--base-6);
+                position: relative;
+                appearance: none;
+                border: none!important;
+                border-radius: 1000px;
+                background-color: var(--color-form-primary);
+                flex-shrink: 0;
+                transition: var(--transition-out);
+
+                &::before {
+                    content: '';
+                    inset: 1px;
+                    position: absolute;
+                    border-radius: 1000px;
+                    background-color: var(--color-grey-25);
+                    transform: scale(100%);
+                    transition: var(--transition-out);
+                }
+    
+                &::after {
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: var(--base-4);
+                    height: var(--base-4);
+                    display: block;
+                    position: absolute;
+                    border-radius: 1000px;
+                    background-color: transparent;
+                    transition: var(--transition-out);
+                }
+    
+                // Checked
+                &:checked {
+                    &::before {
+                        transform: scale(0.9090909091);
+                        transition: var(--transition-in);
+                    }
+    
+                    &::after {
+                        background-color: var(--color-form-secondary);
+                    }
+                }
+    
+                // Hover
+                @media (hover: hover) {
+                    &:hover {
+                        &:not(:checked) {
+                            &::before {
+                                transform: scale(0.94);
+                                transition: var(--transition-in);
+                            }
+                        }
+                    }
+                }
+
+                // Focus
+                &:focus-visible {
+                    @include formFocus;
+                }
+            }
+
+            label {
+                inset: 0;
+                margin: 2px 0 0 var(--base-2);
+                max-width: 35em;
+                position: static;
+                pointer-events: auto;
+            }
+        }
+
+        &.input--hide-legend {
+            legend {
+                @include visuallyHide;
             }
         }
     }
