@@ -11,7 +11,7 @@ prevLabel: 'Sent Notifications'
 prevLevel: 2
 prevParent: 102b1751-2b64-4974-b41e-fa6e4bfa24e2
 prevUrl: formie/sent-notifications
-sortOrder: 10
+sortOrder: 9
 subnavBehaviour: null
 type: plugin
 url: formie/sent-notifications

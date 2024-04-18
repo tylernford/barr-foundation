@@ -1,6 +1,6 @@
 currLabel: 'Plugin Store'
 customIcon: null
-enabled: true
+enabled: false
 handle: plugin-store
 icon: plugin
 layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default
@@ -11,7 +11,7 @@ prevLabel: 'Plugin Store'
 prevLevel: 1
 prevParent: null
 prevUrl: plugin-store
-sortOrder: 26
+sortOrder: 32
 subnavBehaviour: null
 type: craft
 url: plugin-store
