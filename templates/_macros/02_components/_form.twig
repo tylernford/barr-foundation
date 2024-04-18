@@ -1,0 +1,40 @@
+{# =======================================
+  Macro: Form
+==========================================
+  Params:
+    - form (required)
+======================================= #}
+
+{% macro form(config) %}
+  {% set formHandle = config.content.formWildcard.one.handle %}
+
+  {{ craft.formie.renderForm(formHandle, {
+    themeConfig: {
+      formWrapper: false,
+      resetClasses: true,
+                            
+      form: {
+        attributes: {
+          class: 'form form--full',
+        },
+      },
+                            
+      row: {
+        attributes: {
+          class: 'field-wrapper',
+        },
+      },
+
+      nestedFieldRows: false,
+      nestedFieldContainer: false,
+
+      fieldRequired: false,
+
+      fieldError: {
+        attributes: {
+          class: 'field-error',
+        },
+      }
+    }
+  }) }}
+{% endmacro %}
