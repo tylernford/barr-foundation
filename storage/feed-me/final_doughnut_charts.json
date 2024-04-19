@@ -1,0 +1,1806 @@
+[
+  {
+     "title":"New Grants – December, 2017",
+     "display_amount":"$23,800,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all 2017 grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Arts & Creativity",
+           "color":"#ee2737",
+           "amount":"12200000",
+           "display_amount":"$12,200,000",
+           "description":"In Arts & Creativity, Barr awarded fifteen grants totaling over $12 million.",
+           "cta_text":"View all 2017 Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Cross-Program Initiatives",
+           "color":"#0a3074",
+           "amount":"3900000",
+           "display_amount":"$3,900,000",
+           "description":"In Cross-Program Initiatives, Barr awarded sixteen grants totaling $3.9 million.",
+           "cta_text":"View all 2017 Cross-Program Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=cross_program_initiatives&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#33cc99",
+           "amount":"2900000",
+           "display_amount":"$2,900,000",
+           "description":"In Education, Barr awarded eight grants totaling $2.9 million.",
+           "cta_text":"View all 2017 Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=education&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f2a900",
+           "amount":"2600000",
+           "display_amount":"$2,600,000",
+           "description":"Through its Special Initiatives program, Barr has awarded six grants totaling $2,600,000.",
+           "cta_text":"View all 2017 Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#78be20",
+           "amount":"2100000",
+           "display_amount":"$2,100,000",
+           "description":"In Climate, Barr awarded ten grants totaling nearly $2.1 million.",
+           "cta_text":"View all 2017 Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#0081c6",
+           "amount":"59000",
+           "display_amount":"$59,000",
+           "description":"This category includes employee gift matching and memberships & sponsorships."
+        }
+     ]
+  },
+  {
+     "title":"Fourth Quarter 2019 Grants",
+     "display_amount":"$25,000,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#33cc99",
+           "amount":"3900000",
+           "display_amount":"$3,900,000",
+           "description":"In Sector Effectiveness, Barr awarded twenty-four grants totaling $3,900,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#0a3074 ",
+           "amount":"10800000",
+           "display_amount":"$10,800,000",
+           "description":"In Education, Barr awarded twenty-one grants totaling $10.8 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"4800000",
+           "display_amount":"$4,800,000",
+           "description":"In Climate, Barr awarded twenty-four grants totaling $6.5 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#ee2737 ",
+           "amount":"182000",
+           "display_amount":"$182,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0081c6",
+           "amount":"3400000",
+           "display_amount":"$3,400,000",
+           "description":"In Arts & Creativity, Barr awarded eight grants totaling over $3.4 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f1d934",
+           "amount":"2300000",
+           "display_amount":"$2,300,000",
+           "description":"Through its Special Initiatives program, Barr awarded two grants totaling $2.3 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Total",
+     "display_amount":"$79,263,000.00",
+     "description":"This year, Barr awarded over $79 million in grants to advance our priority areas of Arts & Creativity, Climate, and Education.",
+     "cta_text":"Explore our 2017 grants",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Arts & Creativity",
+           "color":"#ee2737",
+           "amount":"14044000",
+           "display_amount":"$14,044,000",
+           "description":"In Arts & Creativity, Barr awarded over $14 million.",
+           "cta_text":"View all 2017 Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#f2a900",
+           "amount":"24760000",
+           "display_amount":"$24,760,000",
+           "description":"This year, Barr awarded over $24 million in Education grants.",
+           "cta_text":"View all 2017 Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#78be20",
+           "amount":"23360000",
+           "display_amount":"$23,360,000",
+           "description":"This year, Barr awarded over $23 million in Clean Energy and Mobility grants.",
+           "cta_text":"View all 2017 Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity&program_areas%5B%5D=climate&program_areas%5B%5D=cross_program_initiatives&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Cross-Programs Initiatives",
+           "color":"#33cc99",
+           "amount":"6155000",
+           "display_amount":"$6,155,000",
+           "description":"This year, Barr awarded over $6 million in Cross-Program Initiatives grants.",
+           "cta_text":"View all 2017 Cross-Program Initiatives grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity&program_areas%5B%5D=cross_program_initiatives&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#001e62",
+           "amount":"6835000",
+           "display_amount":"$6,835,000",
+           "description":"This year, Barr awarded over $6.8 million in Special Initiatives grants.",
+           "cta_text":"View all 2017 Special Initiatives grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity&program_areas%5B%5D=climate&program_areas%5B%5D=cross_program_initiatives&program_areas%5B%5D=special_initiatives&years%5B%5D=2017#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#0081c6",
+           "amount":"4183000",
+           "display_amount":"$4,183,000",
+           "description":"This category includes direct charitable expenses, organizational development, memberships & sponsorships, and employee gift matching."
+        }
+     ]
+  },
+  {
+     "title":"First Quarter 2020 Grants",
+     "display_amount":"$24,600,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#33cc99",
+           "amount":"1500000",
+           "display_amount":"$1,500,000",
+           "description":"In Sector Effectiveness, Barr awarded two grants totaling $1,500,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#0a3074 ",
+           "amount":"8100000",
+           "display_amount":"$8,100,000",
+           "description":"In Education, Barr awarded twelve grants totaling $8.1 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"10800000",
+           "display_amount":"$10,800,000",
+           "description":"In Climate, Barr awarded twenty-five grants totaling $10.8 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#ee2737 ",
+           "amount":"500000",
+           "display_amount":"$500,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0081c6",
+           "amount":"2600000",
+           "display_amount":"$2,600,000",
+           "description":"In Arts & Creativity, Barr awarded five grants totaling over $2.6 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f1d934",
+           "amount":"1000000",
+           "display_amount":"$1,000,000",
+           "description":"Through its Special Initiatives program, Barr awarded two grants totaling $1 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Second Quarter 2020",
+     "display_amount":"$12,000,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#33cc99",
+           "amount":"1500000",
+           "display_amount":"$1,500,000",
+           "description":"In Sector Effectiveness, Barr awarded ten grants totaling $1,500,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#0a3074 ",
+           "amount":"1700000",
+           "display_amount":"$1,700,000",
+           "description":"In Education, Barr awarded nine grants totaling $1.7 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"1600000",
+           "display_amount":"$1,600,000",
+           "description":"In Climate, Barr awarded seventeen grants totaling $1.6 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#ee2737 ",
+           "amount":"141800",
+           "display_amount":"$141,800",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0081c6",
+           "amount":"2500000",
+           "display_amount":"$2,500,000",
+           "description":"In Arts & Creativity, Barr awarded nine grants totaling $2.5 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f1d934",
+           "amount":"4600000",
+           "display_amount":"$4,600,000",
+           "description":"Through its Special Initiatives program, Barr awarded thirty-six grants totaling $4.6 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"First Quarter Grants of 2018",
+     "display_amount":"$24,000,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Arts & Creativity",
+           "color":"#ee2737",
+           "amount":"6800000",
+           "display_amount":"$6,800,000",
+           "description":"In Arts & Creativity, Barr awarded eight grants totaling over $6.8 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Cross-Program Initiatives",
+           "color":"#0a3074",
+           "amount":"595000",
+           "display_amount":"$595,000",
+           "description":"In Cross-Program Initiatives, Barr awarded four grants totaling $595,000.",
+           "cta_text":"View all Cross-Program Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=cross_program_initiatives#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#33cc99",
+           "amount":"6700000",
+           "display_amount":"$6,700,000",
+           "description":"In Education, Barr awarded fourteen grants totaling $6.7 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f2a900",
+           "amount":"2300000",
+           "display_amount":"$2,300,000",
+           "description":"Through its Special Initiatives program, Barr awarded three grants totaling $2.3 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#78be20",
+           "amount":"7100000",
+           "display_amount":"$7,100,000",
+           "description":"In Climate, Barr awarded seventeen grants totaling nearly $7.1 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#0081c6",
+           "amount":"423000",
+           "display_amount":"$423,000",
+           "description":"This category includes organizational development, Memberships & Sponsorships, and employee gift matching."
+        }
+     ]
+  },
+  {
+     "title":"Second Quarter Grants of 2018",
+     "display_amount":"$15,600,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#0a3074",
+           "amount":"1500000",
+           "display_amount":"$1,500,000",
+           "description":"In Sector Effectiveness, Barr awarded six grants totaling $1,500,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#ee2737",
+           "amount":"9460000",
+           "display_amount":"$9,500,000",
+           "description":"In Education, Barr awarded twenty-four grants totaling nearly $9.5 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"4272000",
+           "display_amount":"$4,300,000",
+           "description":"In Climate, Barr awarded seventeen grants totaling nearly $4.3 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#0081c6",
+           "amount":"343060",
+           "display_amount":"$343,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        }
+     ]
+  },
+  {
+     "title":"Third Quarter 2020",
+     "display_amount":"$18,500,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"175000",
+           "display_amount":"$175,000",
+           "description":"In Sector Effectiveness, Barr awarded three grants totaling $175,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"7500000",
+           "display_amount":"$7,500,000",
+           "description":"In Education, Barr awarded twenty-six grants totaling $7.5 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"6900000",
+           "display_amount":"$6,900,000",
+           "description":"In Climate, Barr awarded twenty-five grants totaling $6.9 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"110000",
+           "display_amount":"$110,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"2000000",
+           "display_amount":"$2,000,000",
+           "description":"In Arts & Creativity, Barr awarded eight grants totaling nearly $2 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"1800000",
+           "display_amount":"$1,800,000",
+           "description":"Through its Special Initiatives program, Barr awarded twenty-four grants totaling $1.8 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Third Quarter Grants of 2018",
+     "display_amount":"$25,800,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#0a3074",
+           "amount":"580000",
+           "display_amount":"$580,000",
+           "description":"In Sector Effectiveness, Barr awarded three grants totaling $580,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#ee2737",
+           "amount":"4400000",
+           "display_amount":"$4,400,000",
+           "description":"In Education, Barr awarded sixteen grants totaling nearly $4.4 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"10500000",
+           "display_amount":"$10,500,000",
+           "description":"In Climate, Barr awarded seventeen grants totaling nearly $10.5 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#0081c6",
+           "amount":"173400",
+           "display_amount":"$173,400",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0a3074",
+           "amount":"6000000",
+           "display_amount":"$6,000,000",
+           "description":"In Arts & Creativity, Barr awarded thirty-five grants totaling nearly $6 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#33cc99",
+           "amount":"4200000",
+           "display_amount":"$4,200,000",
+           "description":"In Special Initiatives, Barr awarded twenty-eight grants totaling $4.2 million.",
+           "cta_text":"View all Special Initiatives grants",
+           "cta_url":"https://www.barrfoundation.org/special-initiatives/strengthening-civil-rights-and-democracy#grantmaking"
+        }
+     ]
+  },
+  {
+     "title":"Fourth Quarter 2020",
+     "display_amount":"$24,700,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"550500",
+           "display_amount":"$550,500",
+           "description":"In Sector Effectiveness, Barr awarded four grants totaling $550,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"5400000",
+           "display_amount":"$5,400,000",
+           "description":"In Education, Barr awarded twenty-one grants totaling $5.4 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"6900000",
+           "display_amount":"$6,900,000",
+           "description":"In Climate, Barr awarded twenty-two grants totaling $6.9 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"110950",
+           "display_amount":"$110,950",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"9600000",
+           "display_amount":"$9,600,000",
+           "description":"In Arts & Creativity, Barr awarded sixteen grants totaling $9.6 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"2200000",
+           "display_amount":"$2,200,000",
+           "description":"Through its Special Initiatives program, Barr awarded three grants totaling $2.2 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"First Quarter 2021",
+     "display_amount":"$13,900,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"900000",
+           "display_amount":"$900,000",
+           "description":"In Sector Effectiveness, Barr awarded five grants totaling $900,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"2700000",
+           "display_amount":"$2,700,000",
+           "description":"In Education, Barr awarded 12 grants totaling $2.7 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"7000000",
+           "display_amount":"$7,000,000",
+           "description":"In Climate, Barr awarded 12 grants totaling $7 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"482140",
+           "display_amount":"$480,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"1400000",
+           "display_amount":"$1,400,000",
+           "description":"In Arts & Creativity, Barr awarded ten grants totaling $1.4 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"1500000",
+           "display_amount":"$1,500,000",
+           "description":"Through its Special Initiatives program, Barr awarded seven grants totaling $1.5 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Second Quarter 2021",
+     "display_amount":"$20,700,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"600000",
+           "display_amount":"$600,000",
+           "description":"In Sector Effectiveness, Barr awarded five grants totaling $600,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"6300000",
+           "display_amount":"$6,300,000",
+           "description":"In Education, Barr awarded 21 grants totaling $6.3 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"4800000",
+           "display_amount":"$4,800,000",
+           "description":"In Climate, Barr awarded 29 grants totaling $4.8 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"100000",
+           "display_amount":"$100,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"5800000",
+           "display_amount":"$5,800,000",
+           "description":"In Arts & Creativity, Barr awarded six grants totaling $5.8 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"3000000",
+           "display_amount":"$3,000,000",
+           "description":"Through its Special Initiatives program, Barr awarded 14 grants totaling $3 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Fourth Quarter 2018 Grants",
+     "display_amount":"$13,700,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#0a3074",
+           "amount":"585000",
+           "display_amount":"$585,000",
+           "description":"In Sector Effectiveness, Barr awarded three grants totaling $585,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#ee2737",
+           "amount":"5900000",
+           "display_amount":"$5,900,000",
+           "description":"In Education, Barr awarded fourteen grants totaling $5.9 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"5200000",
+           "display_amount":"$5,200,000",
+           "description":"In Climate, Barr awarded fourteen grants totaling $5.2 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#0a3074 ",
+           "amount":"153000",
+           "display_amount":"$153,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0081c6",
+           "amount":"925000",
+           "display_amount":"$925,000",
+           "description":"In Arts & Creativity, Barr awarded four grants totaling $925,000.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#33cc99",
+           "amount":"1000000",
+           "display_amount":"$1,000,000",
+           "description":"In Special Initiatives, Barr awarded six grants totaling nearly $1 million.",
+           "cta_text":"View all Special Initiatives grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"First Quarter Grants 2019",
+     "display_amount":"$16,000,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"draft",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#33cc99",
+           "amount":"250000",
+           "display_amount":"$250,000",
+           "description":"In Sector Effectiveness, Barr awarded two grants totaling $250,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#0a3074 ",
+           "amount":"2300000",
+           "display_amount":"$2,300,000",
+           "description":"In Education, Barr awarded twelve grants totaling $2.3 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"9300000",
+           "display_amount":"$9,300,000",
+           "description":"In Climate, Barr awarded twelve grants totaling $9.3 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#ee2737 ",
+           "amount":"620000",
+           "display_amount":"$620,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0081c6",
+           "amount":"2900000",
+           "display_amount":"$2,900,000",
+           "description":"In Arts & Creativity, Barr awarded seven grants totaling $2.9 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f1d934",
+           "amount":"550000",
+           "display_amount":"$550,000",
+           "description":"In Special Initiatives, Barr awarded two grants totaling nearly $550,000.",
+           "cta_text":"View all Special Initiatives grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Second Quarter Grants 2019",
+     "display_amount":"$17,000,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"draft",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#33cc99",
+           "amount":"98500",
+           "display_amount":"$98,500",
+           "description":"In Sector Effectiveness, Barr awarded two grants totaling $98,500.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#0a3074 ",
+           "amount":"8000000",
+           "display_amount":"$8,000,000",
+           "description":"In Education, Barr awarded twenty-three grants totaling $8 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"7300000",
+           "display_amount":"$7,300,000",
+           "description":"In Climate, Barr awarded fifteen grants totaling $7.3 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#ee2737 ",
+           "amount":"360000",
+           "display_amount":"$360,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0081c6",
+           "amount":"1100000",
+           "display_amount":"$1,100,000",
+           "description":"In Arts & Creativity, Barr awarded seven grants totaling $1.1 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f1d934",
+           "amount":"900000",
+           "display_amount":"$900,000",
+           "description":"In Special Initiatives, Barr awarded two grants totaling $900,000.",
+           "cta_text":"View all Special Initiatives grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Third Quarter 2019 Grants",
+     "display_amount":"$26,800,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#33cc99",
+           "amount":"600000",
+           "display_amount":"$600,000",
+           "description":"In Sector Effectiveness, Barr awarded four grants totaling $600,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#0a3074 ",
+           "amount":"8800000",
+           "display_amount":"$8,800,000",
+           "description":"In Education, Barr awarded twenty-one grants totaling $8.8 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#f2a900",
+           "amount":"6500000",
+           "display_amount":"$6,500,000",
+           "description":"In Climate, Barr awarded twenty-four grants totaling $6.5 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#ee2737 ",
+           "amount":"176000",
+           "display_amount":"$176,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#0081c6",
+           "amount":"10000000",
+           "display_amount":"$10,000,000",
+           "description":"In Arts & Creativity, Barr awarded twenty-four grants totaling over $10 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#f1d934",
+           "amount":"650000",
+           "display_amount":"$650,000",
+           "description":"Through its Special Initiatives program, Barr awarded three grants totaling $650,000.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Third Quarter of 2021",
+     "display_amount":"$30,900,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"3000000",
+           "display_amount":"$3,000,000",
+           "description":"In Sector Effectiveness, Barr awarded 23 grants totaling $3,000,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"11300000",
+           "display_amount":"$11,300,000",
+           "description":"In Education, Barr awarded 26 grants totaling $11.3 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"13500000",
+           "display_amount":"$13,500,000",
+           "description":"In Climate, Barr awarded 50 grants totaling $13.5 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"45900",
+           "display_amount":"$45,900",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"1000000",
+           "display_amount":"$1,000,000",
+           "description":"In Arts & Creativity, Barr awarded six grants totaling $1 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"3100000",
+           "display_amount":"$3,100,000",
+           "description":"Through its Special Initiatives program, Barr awarded six grants totaling $3 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Fourth Quarter of 2021",
+     "display_amount":"$43,200,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"2600000",
+           "display_amount":"$2,600,000",
+           "description":"In Sector Effectiveness, Barr awarded 8 grants totaling $2,600,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"12300000",
+           "display_amount":"$12,300,000",
+           "description":"In Education, Barr awarded 35 grants totaling $12.3 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"5000000",
+           "display_amount":"$5,000,000",
+           "description":"In Climate, Barr awarded 30 grants totaling $5 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"134000",
+           "display_amount":"$134,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"20400000",
+           "display_amount":"$20,400,000",
+           "description":"In Arts & Creativity, Barr awarded 40 grants totaling $20.4 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"2700000",
+           "display_amount":"$2,700,000",
+           "description":"Through its Special Initiatives program, Barr awarded 12 grants totaling $2.7 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"First Quarter of 2022",
+     "display_amount":"$27,100,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"1300000",
+           "display_amount":"$1,300,000",
+           "description":"In Sector Effectiveness, Barr awarded 16 grants totaling $1,300,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"4000000",
+           "display_amount":"$4,000,000",
+           "description":"In Education, Barr awarded 13 grants totaling $4 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"14300000",
+           "display_amount":"$14,300,000",
+           "description":"In Climate, Barr awarded 19 grants totaling $14.3 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"315740",
+           "display_amount":"$315,740",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"2900000",
+           "display_amount":"$2,900,000",
+           "description":"In Arts & Creativity, Barr awarded 8 grants totaling $2.9 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"4300000",
+           "display_amount":"$4,300,000",
+           "description":"Through its Special Initiatives program, Barr awarded 7 grants totaling $4.3 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Racial Wealth Gap Initiative Grants",
+     "display_amount":"$6,750,000.00",
+     "description":"To date, Barr has awarded $6.75 million in grants to the following organizations:",
+     "cta_text":"Visit our Grants Database",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"draft",
+     "slices":[
+        {
+           "label":"Foundation for Business Equity",
+           "color":"#2B7BBB",
+           "amount":"1500000",
+           "display_amount":"$1,500,000",
+           "description":""
+        },
+        {
+           "label":"Black Economic Council of Massachusetts",
+           "color":"#DA2453",
+           "amount":"1500000",
+           "display_amount":"$1,500,000",
+           "description":""
+        },
+        {
+           "label":"Boston Impact Initiative Fund",
+           "color":"#F26C7B",
+           "amount":"1000000",
+           "display_amount":"$1,000,000",
+           "description":""
+        },
+        {
+           "label":"King Boston",
+           "color":"#008F7F",
+           "amount":"1000000",
+           "display_amount":"$1,000,000",
+           "description":""
+        },
+        {
+           "label":"Visible Hands",
+           "color":"#015750",
+           "amount":"1000000",
+           "display_amount":"$1,000,000",
+           "description":""
+        },
+        {
+           "label":"Lawyers for Civil Rights",
+           "color":"#E0E257",
+           "amount":"750000",
+           "display_amount":"$750,000",
+           "description":""
+        }
+     ]
+  },
+  {
+     "title":"Second Quarter of 2022",
+     "display_amount":"$17,200,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"550000",
+           "display_amount":"$550,000",
+           "description":"In Sector Effectiveness, Barr awarded three grants totaling $550,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"3700000",
+           "display_amount":"$3,900,000",
+           "description":"In Education, Barr awarded 11 grants totaling $3.9 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"7700000",
+           "display_amount":"$7,700,000",
+           "description":"In Climate, Barr awarded 17 grants totaling $7.7 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"120000",
+           "display_amount":"$120,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"400000",
+           "display_amount":"$400,000",
+           "description":"In Arts & Creativity, Barr awarded three grants totaling $400,000.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"4700000",
+           "display_amount":"$4,700,000",
+           "description":"Through its Special Initiatives program, Barr awarded 25 grants totaling $4.7 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Third Quarter of 2022",
+     "display_amount":"$50,300,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"805000",
+           "display_amount":"$805,000",
+           "description":"In Sector Effectiveness, Barr awarded six grants totaling $805,000.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"19200000",
+           "display_amount":"$19,200,000",
+           "description":"In Education, Barr awarded 39 grants totaling $19.2 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"3000000",
+           "display_amount":"$3,000,000",
+           "description":"In Climate, Barr awarded 17 grants totaling $3 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"340000",
+           "display_amount":"$340,000",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"16100000",
+           "display_amount":"$16,100,000",
+           "description":"In Arts & Creativity, Barr awarded 23 grants totaling $16.1 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"11000000",
+           "display_amount":"$11,000,000",
+           "description":"Through its Special Initiatives program, Barr awarded 26 grants totaling $11 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"Fourth Quarter of 2022",
+     "display_amount":"$35,700,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"draft",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"2400000",
+           "display_amount":"$2,400,000",
+           "description":"In Sector Effectiveness, Barr awarded four grants totaling $2.4 million.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"8000000",
+           "display_amount":"$8,000,000",
+           "description":"In Education, Barr awarded 18 grants totaling $8 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"6970000",
+           "display_amount":"$6,970,000",
+           "description":"In Climate, Barr awarded 32 grants totaling $6.97 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"252375",
+           "display_amount":"$252,375",
+           "description":"This category includes organizational development grants, dues for Memberships & Sponsorships, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"11900000",
+           "display_amount":"$11,900,000",
+           "description":"In Arts & Creativity, Barr awarded 13 grants totaling $11.9 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"6400000",
+           "display_amount":"$6,400,000",
+           "description":"Through its Special Initiatives program, Barr awarded eight grants totaling $6.4 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        }
+     ]
+  },
+  {
+     "title":"2022 Giving",
+     "display_amount":"$140,000,000.00",
+     "description":"In 2022, Barr provided nearly $140 million in support, through $130 million in grants and $10.2 million in direct charitable expenses.",
+     "cta_text":"Visit our Grants Database",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"30600000",
+           "display_amount":"$30,600,000",
+           "description":"In 2022, Arts & Creativity had a total grantmaking budget of $30.6 million. Of this, $29.2 million supported grantmaking and $1.4 million supported direct charitable expenses."
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"35800000",
+           "display_amount":"$35,800,000",
+           "description":"In 2022, Climate had a total grantmaking budget of $35.8 million. Of this, $33.2 million supported grantmaking and $1.6 million supported direct charitable expenses."
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"40000000",
+           "display_amount":"$40,000,000",
+           "description":"In 2021, Education had a total grantmaking budget of nearly $40 million. Of this, $33.6 million supported grantmaking and $6.5 million supported direct charitable expenses."
+        },
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"6500000",
+           "display_amount":"$6,500,000",
+           "description":"In 2022, Sector Effectiveness had a total grantmaking budget of $6.5 million. Of this, $6 million supported grantmaking and $417,072 supported direct charitable expenses."
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"25600000",
+           "display_amount":"$25,600,000",
+           "description":"In 2022, Special Initiatives had a total grantmaking budget of $25.6 million. Of this, $25.3 million supported grantmaking and $281,958 supported direct charitable expenses."
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"1000000",
+           "display_amount":"$1,000,000",
+           "description":"In 2022, Barr awarded $1,000,000 for organizational development, matching gifts, and membership/sponsorship grants. "
+        }
+     ]
+  },
+  {
+     "title":"First Quarter of 2023",
+     "display_amount":"$20,900,000.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"2200000",
+           "display_amount":"$2,200,000",
+           "description":"In Sector Effectiveness, Barr awarded seven grants totaling $2.2 million.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"4600000",
+           "display_amount":"$4,600,000",
+           "description":"In Education, Barr awarded 10 grants totaling $4.6 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"9000000",
+           "display_amount":"$9,000,000",
+           "description":"In Climate, Barr awarded 17 grants totaling nearly $9 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"376888",
+           "display_amount":"$376,888",
+           "description":"This category includes dues for Memberships & Sponsorships, honorariums, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"3300000",
+           "display_amount":"$3,300,000",
+           "description":"In Arts & Creativity, Barr awarded eight grants totaling $3.3 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F ",
+           "amount":"1400000",
+           "display_amount":"$1,400,000",
+           "description":"Through its Special Initiatives program, Barr awarded five grants totaling $1.4 million."
+        }
+     ]
+  },
+  {
+     "title":"Grants Awarded in Fourth Quarter of 2023",
+     "display_amount":"$36,694,130.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grants data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"draft",
+     "slices":[
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"11408000",
+           "display_amount":"$11,408,000",
+           "description":"In Education, Barr awarded $11.4 million through 21 grants.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"7510000",
+           "display_amount":"$7,510,000",
+           "description":"The Climate Program awarded 24 grants totaling $7.5 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"8585000",
+           "display_amount":"$8,585,000",
+           "description":"In Arts & Creativity, Barr awarded 34 grants totaling nearly $8.6 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F",
+           "amount":"7475000",
+           "display_amount":"$7,475,000",
+           "description":"Through its Special Initiatives, Barr awarded seven grants totaling approximately $7.5 million."
+        },
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"1625000",
+           "display_amount":"$1,625,000",
+           "description":"In Sector Effectiveness, Barr awarded seven grants totaling approximately $1.6 million.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"91130",
+           "display_amount":"$91,130",
+           "description":"This category includes dues for Memberships & Sponsorships, honorariums, and employee gift matching."
+        }
+     ]
+  },
+  {
+     "title":"Grants Awarded in Second Quarter of 2023",
+     "display_amount":"$13,724,155.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"draft",
+     "slices":[
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"1600000",
+           "display_amount":"$1,600,000",
+           "description":"In Sector Effectiveness, Barr awarded three grants totaling $1.6 million.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"1350000",
+           "display_amount":"$1,350,000",
+           "description":"In Education, Barr awarded 11 grants totaling approximately $1.4 million.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"5727000",
+           "display_amount":"$5,727,000",
+           "description":"In Climate, Barr awarded 17 grants totaling $5.7 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"138655",
+           "display_amount":"$138,655",
+           "description":"This category includes dues for Memberships & Sponsorships, honorariums, and employee gift matching."
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"4481500",
+           "display_amount":"$4,481,500",
+           "description":"In Arts & Creativity, Barr awarded five grants totaling $4.5 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F",
+           "amount":"427000",
+           "display_amount":"$427,000",
+           "description":"Through its Special Initiatives, Barr awarded three grants totaling $427,000."
+        }
+     ]
+  },
+  {
+     "title":"Grants Awarded in Third Quarter of 2023",
+     "display_amount":"$32,747,730.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grant data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"9705000",
+           "display_amount":"$9,705,000",
+           "description":"In Education, Barr awarded $9.7 million through 27 grants.",
+           "cta_text":"View all Education grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"13455000",
+           "display_amount":"$13,455,000",
+           "description":"The Climate Program awarded 27 grants totaling $13.5 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"6300000",
+           "display_amount":"$6,300,000",
+           "description":"In Arts & Creativity, Barr awarded 10 grants totaling $6.3 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F",
+           "amount":"1150000",
+           "display_amount":"$1,150,000",
+           "description":"Through its Special Initiatives, Barr awarded four grants totaling approximately $1.2 million."
+        },
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"2085000",
+           "display_amount":"$2,085,000",
+           "description":"In Sector Effectiveness, Barr awarded 11 grants totaling approximately $2.1 million.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"52730",
+           "display_amount":"$52,730",
+           "description":"This category includes dues for Memberships & Sponsorships, honorariums, and employee gift matching."
+        }
+     ]
+  },
+  {
+     "title":"Racial and Ethnic Diversity",
+     "display_amount":"52 Board and Staff Respondents",
+     "description":"We value diversity and inclusion in our workplace. Learn more about our board and staff identities by visiting our <a href=\"https://www.guidestar.org/profile/04-6579815\">Candid profile</a>.",
+     "cta_text":"",
+     "cta_uri":"delete",
+     "status":"published",
+     "slices":[
+        {
+           "label":"Asian or Asian American (11.5%)",
+           "color":"#2B7BBB",
+           "amount":"6",
+           "display_amount":"6",
+           "description":"Board and staff members who identify as Asian or Asian American."
+        },
+        {
+           "label":"Black or African American (25%)",
+           "color":"#AAB600",
+           "amount":"13",
+           "display_amount":"13",
+           "description":"Board and staff members who identify as Black or African American."
+        },
+        {
+           "label":"Hispanic or Latinx (11.5%)",
+           "color":"#DA2453",
+           "amount":"6",
+           "display_amount":"6",
+           "description":"Board and staff members who identify as Hispanic or Latinx."
+        },
+        {
+           "label":"Multi-racial or Multi-ethnic (7.7%)",
+           "color":"#008F7F",
+           "amount":"4",
+           "display_amount":"4",
+           "description":"Board and staff members who identify as Multi-racial or Multi-ethnic."
+        },
+        {
+           "label":"White (57.7%)",
+           "color":"#262053",
+           "amount":"30",
+           "display_amount":"30",
+           "description":"Board and staff members who identify as white."
+        },
+        {
+           "label":"Middle Eastern or North African (3.8%)",
+           "color":"#015750",
+           "amount":"2",
+           "display_amount":"2",
+           "description":"Board and staff members who identify as Middle Eastern or North African."
+        }
+     ]
+  },
+  {
+     "title":"Grants Awarded in First Quarter of 2024",
+     "display_amount":"$34,857,870.00",
+     "description":"Click on the diagram sections for information specific to each of our program areas listed below.",
+     "cta_text":"View all grants data",
+     "cta_uri":"https://www.barrfoundation.org/grants-grantees",
+     "status":"draft",
+     "slices":[
+        {
+           "label":"Education",
+           "color":"#E68922",
+           "amount":"8184500",
+           "display_amount":"$8,184,500",
+           "description":"In Education, Barr awarded $8.2 million through 24 grants.",
+           "cta_text":"View all Education Grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate&program_areas%5B%5D=education#Grants"
+        },
+        {
+           "label":"Climate",
+           "color":"#881857",
+           "amount":"8188000",
+           "display_amount":"$8,188,000",
+           "description":"The Climate Program awarded 20 grants totaling $8.2 million.",
+           "cta_text":"View all Climate grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=climate#Grants"
+        },
+        {
+           "label":"Arts & Creativity",
+           "color":"#007E46",
+           "amount":"9035000",
+           "display_amount":"$9,035,000 ",
+           "description":"In Arts & Creativity, Barr awarded 28 grants totaling nearly $9 million.",
+           "cta_text":"View all Arts & Creativity grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=arts_creativity#Grants"
+        },
+        {
+           "label":"Special Initiatives",
+           "color":"#008F7F",
+           "amount":"8220000",
+           "display_amount":"$8,670,800",
+           "description":"Through its Special Initiatives, Barr awarded 16 grants totaling $8.7 million.",
+           "cta_text":"View all Special Initiative grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=special_initiatives#Grants"
+        },
+        {
+           "label":"Sector Effectiveness",
+           "color":"#262053",
+           "amount":"401500",
+           "display_amount":"$401,500",
+           "description":"In Sector Effectiveness, Barr awarded 6 grants totaling $401,500.",
+           "cta_text":"View all Sector Effectiveness grants",
+           "cta_url":"https://www.barrfoundation.org/grantmaking/grants?query=&program_areas%5B%5D=sector_effectiveness#Grants"
+        },
+        {
+           "label":"Other",
+           "color":"#DA2453",
+           "amount":"378070",
+           "display_amount":"$378,070",
+           "description":"This category includes dues for Memberships & Sponsorships and employee gift matching."
+        }
+     ]
+  }
+]

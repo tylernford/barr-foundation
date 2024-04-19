@@ -1,4 +1,4 @@
-dateModified: 1713547525
+dateModified: 1713563427
 elementSources:
   craft\elements\Asset:
     -
@@ -382,6 +382,12 @@ elementSources:
         - slug
       type: native
     -
+      heading: Charts
+      type: heading
+    -
+      key: 'section:755bcce5-866c-4b72-847d-6a422c9f1ea4' # Doughnut Charts
+      type: native
+    -
       heading: Developers
       type: heading
     -
@@ -488,6 +494,7 @@ meta:
     1e6b65f1-8163-4538-888b-aefdcd932c14: Entry # Entry
     1ec16a24-9acf-48cf-8a0b-7b5300256e6f: Title # Title
     01ed592e-1014-45e1-8104-59aa9110f849: Media # Media
+    1f01d8f5-40a7-4334-9dcb-950246e477ae: Chart # Chart
     1f5fcf40-1dac-4aa2-aa30-1e7d5467b651: 'External Person' # External Person
     1fb90c4e-4c2a-4fe2-bcf9-b8be7f55cc02: 'Opener: Homepage' # Opener: Homepage
     2a1e413c-907d-4522-94f8-878e06c010a9: Entry # Entry
@@ -532,6 +539,7 @@ meta:
     4e51173f-d019-4fe6-a86d-d87e1841f4d0: 'Tags: Program Areas' # Tags: Program Areas
     4e139296-f9eb-4d48-8374-42a79d46413b: 'Tags: Import Primary' # Tags: Import Primary
     4eb30fbf-3647-444f-ba73-29ebb5b12477: 'Card: Team' # Card: Team
+    4ef9cb4b-8334-43e5-9158-f4ed2f3b6083: 'Display Amount' # Display Amount
     04fbe62b-bcae-44dd-8023-e56efe203cb3: 'Action: URL' # Action: URL
     5a3ec662-f801-451b-97a6-8d2d40b08a5d: 'News & Insights' # News & Insights
     5a6a9a3c-05f9-42d5-9b4f-41ffc03f3f4d: 'Card: Latest News' # Card: Latest News
@@ -602,6 +610,7 @@ meta:
     09c7181f-8326-4e53-afce-769191917ab0: Summary # Summary
     9ca97f1f-7cb5-42af-b0fb-f46920dcf0ba: Year # Year
     9cd35cb7-52cf-48dc-b474-f49d9839e2a1: 'Contact: Twitter' # Contact: Twitter
+    9d3ffb73-d8fd-4035-a67f-b57fa9333aec: 'Doughnut Chart Slices' # Doughnut Chart Slices
     9db66fd5-d2b8-4de8-b376-dff8110ce3e9: Label # Label
     9dcca88a-e7c6-43f3-add7-8776def89b97: 'White Rabbit Team' # White Rabbit Team
     9e65ef79-1f80-4724-997d-ea1035b737c7: 'Highlight: Stats' # Highlight: Stats
@@ -623,6 +632,7 @@ meta:
     21dad0a7-2d67-433c-b04f-da4773293880: 'Developer: Release' # Developer: Release
     22f973cc-427c-4e70-8bb8-6624479ab025: 'Entries: Organization' # Entries: Organization
     24c92902-e46c-423d-b80a-15d697d098ec: Heading # Heading
+    24f014ec-f27b-4a42-bfde-c12dcb82e60d: Amount # Amount
     24fee298-5f42-4afd-bacd-dd8179f4046a: 'Section Block' # Section Block
     25c1632d-7030-46c9-b5df-bc85790df664: Title # Title
     26d3b496-a8ba-491c-a3c3-a640399e5875: 'Text: Byline' # Text: Byline
@@ -674,6 +684,7 @@ meta:
     88ccc0b1-fc3e-494d-b872-9a04899c4103: Link # Link
     088fda8b-75ad-412f-9c85-e5611a8287a7: 'Text: Raw' # Text: Raw
     89c4c995-3705-4593-a789-14b55d172d15: 'Entry: Blog, Directory or News' # Entry: Blog, Directory or News
+    89e83038-67c7-4a72-b94f-365cb7e484fa: CTA # CTA
     90ba97a8-3a0e-4559-ab6b-86981c8530b3: 'Full Name' # Full Name
     92b819ef-229c-4a42-beff-bc6edc8a0f66: 'Asset: Image' # Asset: Image
     93f4b572-78ad-4df6-becd-ce66595ff60e: 'Nested Menu' # Nested Menu
@@ -700,6 +711,7 @@ meta:
     329ee082-81cc-492f-bc61-0230f4a009b4: 'Entries: Person Type' # Entries: Person Type
     346d78ba-f05e-40ac-9b21-8c466b2f000b: 'Number of Cards' # Number of Cards
     362b51a9-9bf6-4ac2-99a7-9d6b35dc6e19: Carousel # Carousel
+    372b2534-6f39-47fc-954d-77f6853a226c: Color # Color
     403cc98b-bbd0-4d37-8a79-1141c41ba1b4: 'Longform Text' # Longform Text
     412d6ed3-17fd-4ea5-989c-3de39c275974: 'Number: Amount' # Number: Amount
     414ac9d1-bac7-4be8-bd82-d652ae58a395: 'Asset: Image' # Asset: Image
@@ -720,6 +732,7 @@ meta:
     627e51e8-b9fd-4b79-b8fa-98cbdfbdb02f: 'Text: Featured Links' # Text: Featured Links
     633a6cc7-36f9-47b9-9948-e569afd25265: 'Builder: Changelog' # Builder: Changelog
     747ce413-c373-42ad-92b4-bff1e0c3ab13: Item # Item
+    755bcce5-866c-4b72-847d-6a422c9f1ea4: 'Doughnut Charts' # Doughnut Charts
     759ac17b-a8d1-41f3-828e-4dbdc5405492: 'Grant Categories' # Grant Categories
     766d1cbd-4251-4b9d-9378-bf9d345ae492: Openers # Openers
     774e3528-0a43-48b1-8c84-e3e8158bc0c2: 'Asset: Image(s) or Video(s)' # Asset: Image(s) or Video(s)
@@ -791,6 +804,7 @@ meta:
     86125ca1-5070-4d71-91cf-ef53ea2337cb: Menu # Menu
     88778e50-4f0a-405e-ad81-55383a2ba560: 'Highlight: Stat' # Highlight: Stat
     90045d2b-740a-4664-be15-670b6497ced6: Target # Target
+    93347d1d-0485-4c0b-bbc8-4886f6c458b6: Description # Description
     97519fc9-2167-4425-b2bb-19f4eaf7c3c7: 'Tags: Import Secondary' # Tags: Import Secondary
     125122fd-5de1-4d94-93a2-ac947d442451: 'Text: Last Name' # Text: Last Name
     160232b4-cd20-44fc-af28-7044b5a98a86: 'Trustee Intro' # Trustee Intro
@@ -803,6 +817,7 @@ meta:
     625571b0-68f3-4147-b8d6-9cc70d2f47a2: 'Text: Quote' # Text: Quote
     734086c2-3e6c-4bd0-ada5-9d448a5abb03: 'Feed: Grantees' # Feed: Grantees
     752595b1-5891-42b2-9b26-2bf61fa1a512: Tutorials # Tutorials
+    798770a9-b44c-44a0-aa8a-921f3c23df7d: Slice # Slice
     858957f6-d821-4537-bec3-fb62684c9531: 'Video Cover' # Video Cover
     959502d0-4843-41a5-b295-1ff5b9f3c643: 'Person Type' # Person Type
     976043fe-a8c0-4179-bdbf-269464d0cbb8: Index # Index
@@ -873,6 +888,7 @@ meta:
     b781cb75-0a89-4222-89eb-380d328015c3: Summary # Summary
     b4765cdd-5c89-4353-911c-f78387e776cf: Title # Title
     b23283d0-0432-492a-85a7-16c74858b6cc: Default # Default
+    b97576af-400a-4127-8011-6a3bc5be9da2: Label # Label
     b326726c-ead3-430d-b2b8-9ec83a64c3ab: Summary # Summary
     b563972b-64ed-4a88-b6c2-92284d00d1cb: 'Text: Body' # Text: Body
     b3143993-b6d1-4f71-b577-74bf41f94320: Video # Video
