@@ -13,7 +13,6 @@ permissions:
   - 'createentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'createentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'createentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'createentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'createentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'createentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'createentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -21,7 +20,6 @@ permissions:
   - 'createentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
   - 'createentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'createentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'createentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'createentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'createentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'createfolders:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
@@ -35,7 +33,6 @@ permissions:
   - 'deleteentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'deleteentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'deleteentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'deleteentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'deleteentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'deleteentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'deleteentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -43,7 +40,6 @@ permissions:
   - 'deleteentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
   - 'deleteentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'deleteentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'deleteentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'deleteentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'deleteentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'deletepeerassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
@@ -54,7 +50,6 @@ permissions:
   - 'deletepeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'deletepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'deletepeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'deletepeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'deletepeerentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'deletepeerentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'deletepeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -62,7 +57,6 @@ permissions:
   - 'deletepeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
   - 'deletepeerentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'deletepeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'deletepeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'deletepeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'deletepeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'deletepeerentrydrafts:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
@@ -72,7 +66,6 @@ permissions:
   - 'deletepeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'deletepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'deletepeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'deletepeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'deletepeerentrydrafts:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'deletepeerentrydrafts:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'deletepeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -82,7 +75,6 @@ permissions:
   - 'deletepeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'deletepeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'deletepeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'deletepeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'deletepeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'deletepeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'editimages:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
@@ -119,7 +111,6 @@ permissions:
   - 'saveentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'saveentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'saveentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'saveentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'saveentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'saveentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'saveentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -129,7 +120,6 @@ permissions:
   - 'saveentries:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'saveentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'saveentries:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'saveentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'saveentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'saveentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'savepeerassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
@@ -140,7 +130,6 @@ permissions:
   - 'savepeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'savepeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'savepeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'savepeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'savepeerentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'savepeerentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'savepeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -148,7 +137,6 @@ permissions:
   - 'savepeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
   - 'savepeerentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'savepeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'savepeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'savepeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'savepeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'savepeerentrydrafts:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
@@ -158,7 +146,6 @@ permissions:
   - 'savepeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'savepeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'savepeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'savepeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'savepeerentrydrafts:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'savepeerentrydrafts:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'savepeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -168,7 +155,6 @@ permissions:
   - 'savepeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'savepeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'savepeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'savepeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'savepeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'savepeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'seomatic:content-meta'
@@ -213,8 +199,6 @@ permissions:
   - 'viewentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'viewentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'viewentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'viewentries:6fb16efc-efc4-4dbb-af30-c21b060c6350' # Tutorials
-  - 'viewentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'viewentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'viewentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'viewentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -225,7 +209,6 @@ permissions:
   - 'viewentries:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'viewentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'viewentries:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'viewentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'viewentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'viewentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'viewpeerassets:2b1a0e39-28ce-44b5-a6ad-44cc14b0eb23' # Images
@@ -236,8 +219,6 @@ permissions:
   - 'viewpeerentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'viewpeerentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'viewpeerentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'viewpeerentries:6fb16efc-efc4-4dbb-af30-c21b060c6350' # Tutorials
-  - 'viewpeerentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'viewpeerentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'viewpeerentries:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'viewpeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -245,7 +226,6 @@ permissions:
   - 'viewpeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
   - 'viewpeerentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'viewpeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'viewpeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'viewpeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'viewpeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
   - 'viewpeerentrydrafts:2652042d-326e-45ff-b0bd-45f95f9e2507' # Header
@@ -255,7 +235,6 @@ permissions:
   - 'viewpeerentrydrafts:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'viewpeerentrydrafts:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'viewpeerentrydrafts:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'viewpeerentrydrafts:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'viewpeerentrydrafts:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
   - 'viewpeerentrydrafts:7d7a4006-0ce8-41dc-be3c-acbd528d6077' # Grants
   - 'viewpeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
@@ -265,6 +244,5 @@ permissions:
   - 'viewpeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'viewpeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'viewpeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'viewpeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'viewpeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'viewpeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
