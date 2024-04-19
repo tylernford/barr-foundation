@@ -6,12 +6,12 @@ icon: null
 layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default
 level: 2
 newWindow: false
-parent: a83066f5-a88d-49fb-aa81-c2f618c1381e
+parent: 8139b97c-4191-4aa7-bc31-c13b12b03b26
 prevLabel: 'Short Links'
 prevLevel: 2
-prevParent: a83066f5-a88d-49fb-aa81-c2f618c1381e
+prevParent: 8139b97c-4191-4aa7-bc31-c13b12b03b26
 prevUrl: retour/shortlinks
-sortOrder: 31
+sortOrder: 36
 subnavBehaviour: null
 type: plugin
 url: retour/shortlinks

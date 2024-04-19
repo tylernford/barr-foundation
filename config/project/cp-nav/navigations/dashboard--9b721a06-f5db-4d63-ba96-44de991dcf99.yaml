@@ -6,12 +6,12 @@ icon: null
 layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default
 level: 2
 newWindow: false
-parent: a83066f5-a88d-49fb-aa81-c2f618c1381e
+parent: 8139b97c-4191-4aa7-bc31-c13b12b03b26
 prevLabel: Dashboard
 prevLevel: 2
-prevParent: a83066f5-a88d-49fb-aa81-c2f618c1381e
+prevParent: 8139b97c-4191-4aa7-bc31-c13b12b03b26
 prevUrl: retour/dashboard
-sortOrder: 29
+sortOrder: 34
 subnavBehaviour: null
 type: plugin
 url: retour/dashboard

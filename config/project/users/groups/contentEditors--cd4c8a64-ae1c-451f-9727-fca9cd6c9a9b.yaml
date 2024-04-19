@@ -19,8 +19,8 @@ permissions:
   - 'createentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'createentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'createentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'createentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'createentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'createentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'createentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'createentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'createentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -41,8 +41,8 @@ permissions:
   - 'deleteentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'deleteentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'deleteentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'deleteentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'deleteentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'deleteentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'deleteentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'deleteentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'deleteentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -60,8 +60,8 @@ permissions:
   - 'deletepeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'deletepeerentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'deletepeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'deletepeerentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'deletepeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'deletepeerentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'deletepeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'deletepeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'deletepeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -78,10 +78,10 @@ permissions:
   - 'deletepeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'deletepeerentrydrafts:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'deletepeerentrydrafts:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'deletepeerentrydrafts:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'deletepeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'deletepeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'deletepeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'deletepeerentrydrafts:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'deletepeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'deletepeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'deletepeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -125,10 +125,10 @@ permissions:
   - 'saveentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'saveentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'saveentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'saveentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'saveentries:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'saveentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'saveentries:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'saveentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'saveentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'saveentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'saveentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -146,8 +146,8 @@ permissions:
   - 'savepeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'savepeerentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'savepeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'savepeerentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'savepeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'savepeerentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'savepeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'savepeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'savepeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -164,10 +164,10 @@ permissions:
   - 'savepeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'savepeerentrydrafts:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'savepeerentrydrafts:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'savepeerentrydrafts:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'savepeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'savepeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'savepeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'savepeerentrydrafts:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'savepeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'savepeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'savepeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -213,7 +213,6 @@ permissions:
   - 'viewentries:569e24f0-c7e8-441f-9d14-9ec278514ac0' # Milestones
   - 'viewentries:5a3ec662-f801-451b-97a6-8d2d40b08a5d' # News & Insights
   - 'viewentries:600bb22c-f62f-458d-ad51-432956f869ae' # Program Areas
-  - 'viewentries:66f36432-924e-4595-914f-17cb32843c88' # Changelog
   - 'viewentries:6fb16efc-efc4-4dbb-af30-c21b060c6350' # Tutorials
   - 'viewentries:7ab5ee46-bcab-45a8-8db3-a8737add580a' # Jobs Board
   - 'viewentries:7c4618eb-5889-426c-a0ac-a88ebbaa4f21' # Blog
@@ -221,10 +220,11 @@ permissions:
   - 'viewentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'viewentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'viewentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'viewentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
+  - 'viewentries:c5ff63d6-ea19-4873-a127-52e78a525a16' # Categories: Program Areas
   - 'viewentries:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'viewentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'viewentries:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'viewentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'viewentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'viewentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'viewentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -243,8 +243,8 @@ permissions:
   - 'viewpeerentries:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'viewpeerentries:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'viewpeerentries:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'viewpeerentries:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'viewpeerentries:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
-  - 'viewpeerentries:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'viewpeerentries:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'viewpeerentries:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'viewpeerentries:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
@@ -261,10 +261,10 @@ permissions:
   - 'viewpeerentrydrafts:94f38795-11e9-4fc4-b4db-eb3ee5c00ff5' # Grantmaking
   - 'viewpeerentrydrafts:959502d0-4843-41a5-b295-1ff5b9f3c643' # Person Type
   - 'viewpeerentrydrafts:bd681dfd-af4d-42fa-9b3d-405bb72ab5d7' # Newsroom
+  - 'viewpeerentrydrafts:c0205cf5-e39b-4d92-87f0-3fdf5d0dfd07' # Categories: Directory Teams
   - 'viewpeerentrydrafts:ca86b174-5e19-4ff8-9f7a-a5185330d56d' # Homepage
   - 'viewpeerentrydrafts:d7f2330b-e2ea-43de-bfcd-641190e6a5fc' # Categories
   - 'viewpeerentrydrafts:e6d0fb6c-83de-4e6b-b2b0-ca04df252285' # Social
-  - 'viewpeerentrydrafts:e6dda9b3-62b5-4a1b-b563-2939fab68f38' # Geocodes
   - 'viewpeerentrydrafts:f1998fc1-bb1b-41a0-91e1-37bd2431e262' # Jobs
   - 'viewpeerentrydrafts:f4adca94-3a26-4dd3-a3d4-c816fe8e5580' # Grantees
   - 'viewpeerentrydrafts:f8db332e-6a63-4211-95bf-942e9a3a40ce' # About Us
