@@ -1,0 +1,250 @@
+field: 9d3ffb73-d8fd-4035-a67f-b57fa9333aec # Doughnut Chart Slices
+fieldLayouts:
+  5ab6fb66-e0c4-472b-8a86-b8f5c03f030f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b97576af-400a-4127-8011-6a3bc5be9da2 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 987f5b44-686e-4fe3-9a37-652213082287
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 372b2534-6f39-47fc-954d-77f6853a226c # Color
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a59fd3d8-740a-4341-a212-f91af8241b64
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 24f014ec-f27b-4a42-bfde-c12dcb82e60d # Amount
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b3fd652-6bfc-4b43-9090-f7d1c03b91ae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4ef9cb4b-8334-43e5-9158-f4ed2f3b6083 # Display Amount
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b996eab-32ee-414e-bda9-3038a2158d06
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 93347d1d-0485-4c0b-bbc8-4886f6c458b6 # Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 313176eb-c8dc-491b-bcd4-f7b8f3ebeb7c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 89e83038-67c7-4a72-b94f-365cb7e484fa # CTA
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f485eaa-5a96-4de5-ba24-8431c34910fc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 871f37e3-28e8-4fe6-a380-e77a74c33bac
+        userCondition: null
+fields:
+  4ef9cb4b-8334-43e5-9158-f4ed2f3b6083: # Display Amount
+    columnSuffix: rzmdmbvq
+    contentColumnType: text
+    fieldGroup: null
+    handle: displayAmount
+    instructions: null
+    name: 'Display Amount'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  24f014ec-f27b-4a42-bfde-c12dcb82e60d: # Amount
+    columnSuffix: vtsfiadz
+    contentColumnType: integer(10)
+    fieldGroup: null
+    handle: amount
+    instructions: null
+    name: Amount
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: 0
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  89e83038-67c7-4a72-b94f-365cb7e484fa: # CTA
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: cta
+    instructions: null
+    name: CTA
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: true
+      customTextMaxLength: 0
+      customTextRequired: true
+      defaultLinkName: url
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  372b2534-6f39-47fc-954d-77f6853a226c: # Color
+    columnSuffix: zwrcwdfn
+    contentColumnType: text
+    fieldGroup: null
+    handle: color
+    instructions: null
+    name: Color
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  93347d1d-0485-4c0b-bbc8-4886f6c458b6: # Description
+    columnSuffix: irktncru
+    contentColumnType: text
+    fieldGroup: null
+    handle: description
+    instructions: null
+    name: Description
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 1
+      multiline: true
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b97576af-400a-4127-8011-6a3bc5be9da2: # Label
+    columnSuffix: wyrmjzdw
+    contentColumnType: text
+    fieldGroup: null
+    handle: label
+    instructions: null
+    name: Label
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: slice
+name: Slice
+sortOrder: 1

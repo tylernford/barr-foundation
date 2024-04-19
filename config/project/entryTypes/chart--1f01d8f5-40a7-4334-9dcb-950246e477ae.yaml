@@ -1,0 +1,101 @@
+fieldLayouts:
+  2d42f0b0-e9ec-407f-a603-1c6c02bfe95a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a0b5f7e0-260b-48cc-bd3a-1599203765cd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c56d3c2d-9817-48cc-ad2b-e04cc44fb403 # Text: Plain Heading
+            instructions: null
+            label: 'Text: Measurement'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1fe09ad3-3f10-49e2-b4aa-9782abff5d25
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 21576a79-7338-423c-8ac1-2313ba9441d1 # Text: Rich (+Link)
+            instructions: null
+            label: 'Text: Description'
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 80788f2f-305e-499d-b1b5-67510c4dc59b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1599614-0216-46ee-8a6d-d945d7d0bd1b # Action: Entry or URL
+            instructions: null
+            label: 'Action: CTA'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7c5b66c-5235-4399-9a51-a857685f27a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: Slices
+            type: craft\fieldlayoutelements\Heading
+            uid: 9c07e6b5-bb16-4040-9980-b3abb8d9cb7c
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 9d3ffb73-d8fd-4035-a67f-b57fa9333aec # Doughnut Chart Slices
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 109bc3b8-7d72-4f71-a86c-5164db5b56aa
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c8481c45-25c1-408d-8133-1a9750585f74
+        userCondition: null
+handle: chart
+hasTitleField: true
+name: Chart
+section: 755bcce5-866c-4b72-847d-6a422c9f1ea4 # Doughnut Charts
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
