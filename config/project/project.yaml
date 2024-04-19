@@ -1,4 +1,4 @@
-dateModified: 1713475607
+dateModified: 1713484829
 elementSources:
   craft\elements\Asset:
     -
@@ -1031,6 +1031,17 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  cleantalk:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      apiKey: $CLEANTALK_API_KEY
+      enableBotDetector: true
+      enableComments: true
+      enableFirewall: true
+      enableForms: true
+      enableUserRegistration: true
   cp-nav:
     edition: standard
     enabled: true
