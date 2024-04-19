@@ -1,6 +1,6 @@
 currLabel: Retour
 customIcon: null
-enabled: true
+enabled: false
 handle: retour
 icon: /var/www/html/vendor/nystudio107/craft-retour/src/icon-mask.svg
 layout: 7dc417e2-47ec-4614-bc30-8743dcff5d40 # Default
