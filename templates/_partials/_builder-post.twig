@@ -2,6 +2,7 @@
     Builder: Post
 ======================================= #}
 
+{% import "_macros/02_components/_doughnut-chart.twig" as doughnutChart %}
 {% import "_macros/03_modules/_text.twig" as text %}
 
 {% for block in builder.all() %}
@@ -13,5 +14,9 @@
                 'variant': 'body'
             } %}
             {{ text.default(config) }}
+
+        {% case 'blockDoughnutChart' %}
+            {% set chart = block.entriesDoughnutChart.one %}
+            {{ doughnutChart.chart(chart) }}
     {% endswitch %}
 {% endfor %}

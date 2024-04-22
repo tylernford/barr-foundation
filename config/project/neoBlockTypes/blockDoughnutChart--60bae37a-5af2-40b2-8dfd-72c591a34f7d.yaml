@@ -1,0 +1,40 @@
+childBlocks: null
+conditions: null
+description: ''
+enabled: true
+field: 24ef8b36-7f2e-4052-bfa5-94341457c008 # Page Builder: Post
+fieldLayouts:
+  8c9457b7-4a3b-4040-b98d-f278874716d6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 69fd963c-cd40-494a-ba80-fd24a3b6ef4f # Entries: Doughnut Chart
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eacaead4-2059-4077-81d8-ec88b7b220b5
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Block: Doughnut Chart'
+        uid: 62aea9c9-2403-428b-a1bb-f1c7cb8f5aa2
+        userCondition: null
+group: null
+groupChildBlockTypes: true
+handle: blockDoughnutChart
+icon: null
+iconFilename: ''
+ignorePermissions: true
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+minBlocks: 0
+minChildBlocks: 0
+minSiblingBlocks: 0
+name: 'Block: Doughnut Chart'
+topLevel: true
