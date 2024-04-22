@@ -184,13 +184,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 9ef42825-0500-4b36-a674-6baeb3ab244d # Block: Body
+            fieldUid: 24ef8b36-7f2e-4052-bfa5-94341457c008 # Page Builder: Post
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 39aa6210-4da8-49b5-b2f8-b624a89ffc79
+            uid: 186f2771-2bcd-46c3-af86-e7ca6c75a743
             userCondition: null
             warning: null
             width: 100

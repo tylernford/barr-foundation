@@ -1,0 +1,181 @@
+/* _doughnut-chart.scss */
+@use "../utils/_utils" as *;
+
+/* ---------------------------------------------------------------------
+  Component: Doughnut Chart
+  See templates/_macros/02_components/_doughnut-chart.twig for markup
+------------------------------------------------------------------------ */
+
+// Theme
+.doughnut-chart {
+  padding-block: var(--base-9);
+  @include container-inner;
+  display: grid;
+  gap: var(--base-10);
+
+  .doughnut-chart__view,
+  .doughnut-chart__controls {
+    max-width: 856px;
+  }
+
+  // View
+  .doughnut-chart__view {
+    display: grid;
+    gap: var(--base-4);
+  }
+
+  .doughnut-chart__chart {
+    margin: 0 auto;
+    inline-size: 300px;
+  }
+
+  .chart__inner {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 1000px;
+    background-color: var(--color-grey-50);
+
+    &::after {
+      content: '';
+      inline-size: 50%;
+      block-size: 50%;
+      position: absolute;
+      border-radius: 1000px;
+      background-color: var(--color-grey-25);
+      inset: 50% auto auto 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .doughnut-chart__description {
+    padding-block-start: var(--base-2);
+    max-width: 448px;
+
+    a {
+      color: var(--color-teal-100);
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color var(--transition) ease-in;
+
+      @media (hover: hover) {
+        &:hover {
+          text-decoration-color: inherit;
+          transition: text-decoration-color var(--transition-intermediate) ease-out;
+        }
+      }
+    }
+  }
+
+  .description__title {
+    margin-block-end: var(--base-6);
+    padding-block-end: var(--base-2);
+    border-bottom: 1px solid var(--color-grey-50);
+    color: var(--color-grey-150);
+    @include getType('h5-axiforma');
+  }
+
+  .description__items {
+    display: grid;
+    align-items: flex-start;
+  }
+
+  .description__item {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+
+    &[data-is-active="true"] {
+      grid-template-rows: 1fr;
+      opacity: 1;
+      transition: opacity var(--transition-slow) ease-out;
+    }
+
+    .item__inner {
+      overflow: hidden;
+    }
+  }
+
+  .description__label {
+    margin-block-end: var(--base-2);
+    color: var(--color-teal-100);
+    @include getType('label');
+  }
+
+  .description__copy {
+    color: var(--color-grey-150);
+    @include getType('caption-axiforma');
+  }
+
+
+  // Controls
+  .doughnut-chart__controls {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--base-5);
+    row-gap: var(--base-3);
+  }
+
+  .controls__button {
+    padding: 0 0 0 var(--base-6);
+    position: relative;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    color: var(--color-grey-150);
+    @include getType('detail-axiforma');
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color var(--transition) ease-in;
+
+    &::before {
+      content: '';
+      inset: 2px auto auto 0;
+      inline-size: var(--base-4);
+      block-size: var(--base-4);
+      position: absolute;
+      background-color: var(--slice-color);
+    }
+
+    // Hover
+    @media (hover: hover) {
+      &:hover {
+        text-decoration-color: var(--color-grey-200);
+        transition: text-decoration-color var(--transition-intermediate) ease-out;
+      }
+    }
+  }
+
+
+  @include breakpoint(md) {
+    padding-block: var(--base-12);
+
+    .doughnut-chart__view {
+      display: flex;
+      gap: var(--base-12);
+    }
+
+    .doughnut-chart__chart {
+      margin: 0;
+      flex-shrink: 0;
+      inline-size: 248px;
+    }
+  }
+
+  @include breakpoint(lg) {
+    .doughnut-chart__chart {
+      inline-size: 300px;
+    }
+
+    .description__title {
+      @include getType('h4-axiforma');
+    }
+
+    .doughnut-chart__controls {
+      column-gap: var(--base-6);
+    }
+  }
+
+  @include breakpoint(xl) {
+    padding-block: var(--base-16);
+  }
+}
