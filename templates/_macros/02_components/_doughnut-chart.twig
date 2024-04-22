@@ -1,0 +1,83 @@
+{# =======================================
+  Macro: Doughnut Chart Component
+==========================================
+  Params:
+    - chart (required)
+======================================= #}
+
+{% macro chart(chart) %}
+  {% set title       = chart.title %}
+  {% set measurement = chart.textPlainHeading %}
+  {% set description = chart.textRichLink %}
+  {% set cta         = chart.actionLink %}
+  {% set slices      = chart.doughnutChartSlices %}
+
+  <div class="doughnut-chart">
+    {# View #}
+    <div class="doughnut-chart__view">
+      {# Chart #}
+      <div class="doughnut-chart__chart">
+        <div class="chart__inner">
+        </div>
+      </div>
+      {# Description #}
+      <div class="doughnut-chart__description">
+        {# Title #}
+        <h2 class="description__title">{{ title }}</h2>
+
+        <div class="description__items">
+          {# Overview #}
+          <div class="description__item" data-is-active="true">
+            <div class="item__inner">
+              {# Measurement #}
+              <h3 class="description__label">{{ measurement }}</h3>
+
+              {# Description #}
+              <div class="description__copy">
+                {{ description }}
+              </div>
+
+              {# CTA #}
+            </div>
+          </div>
+
+          {# Slices #}
+          {% for slice in slices %}
+            {% set label       = slice.label %}
+            {% set description = slice.description %}
+
+            <div class="description__item" data-slice="{{ label|kebab }}">
+              <div class="item__inner">
+                {# Label #}
+                <h3 class="description__label">{{ label }}</h3>
+
+                {# Description #}
+                <div class="description__copy">
+                  {{ description }}
+                </div>
+
+              {# CTA #}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {# Controls #}    
+    <ul class="doughnut-chart__controls">
+      {% for slice in slices %}
+        {% set label = slice.label %}
+        {% set color = slice.color %}
+        {% set targetSlice = label|kebab %}
+
+        <li class="controls__item">
+          <button class="controls__button" style="--slice-color: {{ color }}" data-slice="{{ targetSlice }}">
+            {{ label }}
+          </button>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endmacro %}
