@@ -60,10 +60,8 @@ News & Insights Interior template
         {% endfor %}
         {% set authorDetails = [] %}
 
-        {% set config  = {
-            'content': entry,
-            'variant': 'body'
-        } %}
+        {% set builder = entry.pageBuilderPost %}
+
         <section class="blog-post"{{ postAuthors|length ? ' data-authors=true' }}>
             {# Authors Aside #}
             {% if postAuthors|length %}
@@ -86,8 +84,8 @@ News & Insights Interior template
                 {% endif %}
 
                 {# CMS Post #}
-                {% if entry.blockBody|length %}
-                    {{ modules.default(config) }}
+                {% if builder|length %}
+                    {% include '_partials/_builder-post.twig' with { 'builder': builder } %}
                 {% endif %}
             </div>
 

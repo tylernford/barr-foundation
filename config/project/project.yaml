@@ -1,4 +1,4 @@
-dateModified: 1713750980
+dateModified: 1713798055
 elementSources:
   craft\elements\Asset:
     -
@@ -639,6 +639,7 @@ meta:
     21dad0a7-2d67-433c-b04f-da4773293880: 'Developer: Release' # Developer: Release
     22f973cc-427c-4e70-8bb8-6624479ab025: 'Entries: Organization' # Entries: Organization
     24c92902-e46c-423d-b80a-15d697d098ec: Heading # Heading
+    24ef8b36-7f2e-4052-bfa5-94341457c008: 'Page Builder: Post' # Page Builder: Post
     24f014ec-f27b-4a42-bfde-c12dcb82e60d: Amount # Amount
     24fee298-5f42-4afd-bacd-dd8179f4046a: 'Section Block' # Section Block
     25c1632d-7030-46c9-b5df-bc85790df664: Title # Title
@@ -873,6 +874,7 @@ meta:
     aa3227ec-0bd2-4d61-80db-dd6c6e3a331a: 'Text: Job Title' # Text: Job Title
     ab769ba5-f97c-40d6-9066-c07ddfd56a2f: Action # Action
     ac700c0d-4822-4b26-b200-60e6fe390746: Summary # Summary
+    acc246b6-193e-467a-82d1-dd9505d6f68b: 'Block: Body' # Block: Body
     ace08f06-16e5-477e-b91c-f28e50048f67: Eyebrow # Eyebrow
     ad21cdac-d8ba-49d3-85ec-248e39058216: 'Media Assets' # Media Assets
     ae2b1b26-277c-4619-ab71-b564ec89459b: 'Text: Supporting' # Text: Supporting

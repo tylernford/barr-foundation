@@ -1,0 +1,17 @@
+{# =======================================
+    Builder: Post
+======================================= #}
+
+{% import "_macros/03_modules/_text.twig" as text %}
+
+{% for block in builder.all() %}
+
+    {% switch block.type %}
+        {% case 'blockBody' %}
+            {% set config  = {
+                'content': block,
+                'variant': 'body'
+            } %}
+            {{ text.default(config) }}
+    {% endswitch %}
+{% endfor %}
