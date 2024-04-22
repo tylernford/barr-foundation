@@ -1,4 +1,4 @@
-dateModified: 1713563427
+dateModified: 1713750980
 elementSources:
   craft\elements\Asset:
     -
@@ -385,7 +385,14 @@ elementSources:
       heading: Charts
       type: heading
     -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
       key: 'section:755bcce5-866c-4b72-847d-6a422c9f1ea4' # Doughnut Charts
+      tableAttributes:
+        - postDate
+        - author
       type: native
     -
       heading: Developers
