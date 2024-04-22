@@ -72,12 +72,8 @@ News & Insights Interior template
 
             {# Body #}
             <div>
-                {# CMS Post #}
-                {% if entry.blockBody|length %}
-                    {{ modules.default(config) }}
-
                 {# Imported post #}
-                {% else %}
+                {% if entry.textPostImport|length %}
                     <div class="blockBody">
                         <div class="blockBody__intro">
                             {{ entry.textDescription }}
@@ -87,6 +83,11 @@ News & Insights Interior template
                     <div class="post-body">
                         {{ entry.textPostImport|raw }}
                     </div>
+                {% endif %}
+
+                {# CMS Post #}
+                {% if entry.blockBody|length %}
+                    {{ modules.default(config) }}
                 {% endif %}
             </div>
 
