@@ -6,6 +6,8 @@
 ======================================= #}
 
 {% macro chart(chart) %}
+  {% import '_macros/01_elements/_actions' as actions %}
+
   {% set title       = chart.title %}
   {% set measurement = chart.textPlainHeading %}
   {% set description = chart.textRichLink %}
@@ -15,25 +17,26 @@
   <div class="doughnut-chart">
     {# View #}
     <div class="doughnut-chart__view">
-      {# Chart #}
-      <div class="doughnut-chart__chart">
-        <div class="chart__inner">
+      {# Figure #}
+      <div class="doughnut-chart__figure">
+        <div class="figure__inner">
         </div>
       </div>
+
       {# Description #}
       <div class="doughnut-chart__description">
         {# Title #}
         <h2 class="description__title">{{ title }}</h2>
 
-        <div class="description__items">
+        <div class="description__panels">
           {# Overview #}
-          <div class="description__item" data-is-active="true">
-            <div class="item__inner">
+          <div class="description__panel" data-is-active="true">
+            <div class="panel__inner">
               {# Measurement #}
-              <h3 class="description__label">{{ measurement }}</h3>
+              <h3 class="panel__label">{{ measurement }}</h3>
 
               {# Description #}
-              <div class="description__copy">
+              <div class="panel__copy">
                 {{ description }}
               </div>
 
@@ -41,22 +44,39 @@
             </div>
           </div>
 
-          {# Slices #}
-          {% for slice in slices %}
-            {% set label       = slice.label %}
-            {% set description = slice.description %}
+          {# Panels #}
+          {% for panel in slices %}
+            {% set label  = panel.label %}
+            {% set amount = panel.displayAmount %}
+            {% set copy   = panel.description %}
+            {% set cta    = panel.cta %}
 
-            <div class="description__item" data-slice="{{ label|kebab }}">
-              <div class="item__inner">
+            <div class="description__panel" data-slice="{{ label|kebab }}">
+              <div class="panel__inner">
                 {# Label #}
-                <h3 class="description__label">{{ label }}</h3>
+                <h3 class="panel__label">{{ label }}</h3>
 
-                {# Description #}
-                <div class="description__copy">
-                  {{ description }}
+                {# Amount #}
+                {% if amount|length %}
+                  <h4 class="panel__amount">{{ amount }}</h4>
+                {% endif %}
+
+                {# Copy #}
+                <div class="panel__copy">
+                  {{ copy }}
                 </div>
 
-              {# CTA #}
+                {# CTA #}
+                {% if cta.url|length %}
+                  {% set actionAttributes = {
+                    type: 'link', isReversed: false,
+                    icon: 'linkType', iconOnly: false,
+                    text: cta.text, url: cta.url,
+                    linkType: 'url', target: ''
+                  } %}
+
+                  {{ actions.action(actionAttributes) }}
+                {% endif %}
               </div>
             </div>
           {% endfor %}
