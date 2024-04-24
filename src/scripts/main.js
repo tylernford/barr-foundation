@@ -1,8 +1,6 @@
 import './components/accordion'
 import './components/audio'
 import './components/carousel'
-import './components/doughnutChart'
-import './components/fileUpload'
 import './components/footerForm'
 import './components/navigation'
 import './components/programTabs'
